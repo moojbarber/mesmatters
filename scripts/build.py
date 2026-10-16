@@ -153,8 +153,24 @@ def jsonld(obj):
 
 
 # ------------------------------------------------------------------ build
-def build(base):
-    base = base.rstrip("/")
+def relativise(page_html, rel):
+    """Rewrite root-relative links for a static preview with no server rewrites."""
+    depth = rel.count("/")
+    prefix = "." if depth == 0 else "/".join([".."] * depth)
+    def fix(m):
+        attr, path, tail = m.group(1), m.group(2), m.group(3)
+        if not path:
+            path = "index.html"
+        elif "." not in path.rsplit("/", 1)[-1]:
+            path = path.rstrip("/") + ".html"
+        return f'{attr}="{prefix}/{path}{tail}"'
+    page_html = re.sub(r'(href|src)="@REL@/([^"#?]*)([^"]*)"', fix, page_html)
+    page_html = page_html.replace('"@REL@"', f'"{prefix}/index.html"')
+    return page_html
+
+
+def build(base, relative=False):
+    base = "@REL@" if relative else base.rstrip("/")
     if DIST.exists():
         shutil.rmtree(DIST)
     shutil.copytree(ROOT / "public", DIST, ignore=shutil.ignore_patterns("legacy"))
@@ -187,7 +203,10 @@ def build(base):
         out.parent.mkdir(parents=True, exist_ok=True)
         data = {**common, **ctx}
         data.setdefault("og_image", f"{SITE}/images/og/home.png")
-        out.write_text(env.get_template(tpl).render(**data), encoding="utf-8")
+        page = env.get_template(tpl).render(**data)
+        if relative:
+            page = relativise(page, rel)
+        out.write_text(page, encoding="utf-8")
 
     from markupsafe import Markup
 
@@ -282,7 +301,10 @@ def build(base):
     for old, new in REDIRECTS.items():
         out = DIST / f"{old}.html"
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(env.get_template("redirect.html").render(target=f"{base}{new}", canonical=f"{SITE}{new}"), encoding="utf-8")
+        page = env.get_template("redirect.html").render(target=f"{base}{new}", canonical=f"{SITE}{new}")
+        if relative:
+            page = relativise(page, f"{old}.html").replace('"@REL@/', '"' + ("/".join([".."] * old.count("/")) or ".") + "/").replace(new + '"', new + '.html"')
+        out.write_text(page, encoding="utf-8")
 
     # sitemap, robots, rss, favicon
     urls = [(f"{SITE}/", posts[0]["updated"]), (f"{SITE}/articles", posts[0]["updated"]), (f"{SITE}/about", None)]
@@ -306,11 +328,18 @@ def build(base):
         f"<description>Practical guides to MES, MOM and smart manufacturing</description><language>en-gb</language>{items}</channel></rss>\n",
         encoding="utf-8")
     (DIST / ".nojekyll").write_text("")
+    if relative:
+        for f in DIST.rglob("*.html"):
+            depth = len(f.relative_to(DIST).parts) - 1
+            t = f.read_text(encoding="utf-8")
+            if "@REL@" in t:
+                f.write_text(t.replace("@REL@", "/".join([".."] * depth) or "."), encoding="utf-8")
     print(f"Built {len(posts)} posts into {DIST} (base='{base}')")
 
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--base", default="")
+    ap.add_argument("--relative", action="store_true", help="relative .html links, for previewing as static files")
     args = ap.parse_args()
-    build(args.base)
+    build(args.base, args.relative)
