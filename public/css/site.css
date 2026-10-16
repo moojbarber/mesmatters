@@ -342,3 +342,4 @@ h2.label:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var
   *,*:before,*:after{animation:none !important;transition:none !important;scroll-behavior:auto !important}
   .js .rv{opacity:1;transform:none}
 }
+.grid>.card.lead:only-child{grid-column:1/-1}
