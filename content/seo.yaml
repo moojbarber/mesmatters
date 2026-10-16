@@ -1,0 +1,162 @@
+# Per-article overrides layered on top of each post's front matter.
+# title: on-page H1 + <title> (slug/URL never changes)
+# description: meta description and kicker, aim for 120-155 characters
+# category: education | advice | thought-leadership
+# art: motif used for the generated hero illustration
+# series / order: groups the MES Functionality guides
+
+what-is-mes-and-why-is-it-important-in-manufacturing:
+  title: "What is MES? A complete guide to Manufacturing Execution Systems"
+  short: "What is MES?"
+  description: "What an MES actually does, how it differs from MOM and ERP, and why it sits at the heart of every smart factory. The place to start."
+  category: education
+  art: hexcore
+  start: 1
+
+what-is-the-isa-95-model-and-where-does-mes-fit:
+  title: "The ISA-95 model explained, and where MES fits"
+  short: "ISA-95 explained"
+  description: "The ISA-95 levels in plain English: what lives at each layer, how ERP, MES and automation talk to each other, and why the standard still matters."
+  category: education
+  art: stack
+  start: 2
+
+who-are-mesa-and-how-do-they-define-mes:
+  title: "Who are MESA, and how do they define MES?"
+  short: "MESA's definition of MES"
+  description: "MESA's model of MES, its core functions and how to use it as a common language when you scope an MES or MOM project."
+  category: education
+  art: wheel
+  start: 3
+
+what-is-oee-overall-equipment-effectiveness:
+  title: "What is OEE? How to calculate Overall Equipment Effectiveness"
+  short: "What is OEE?"
+  description: "The OEE formula with worked examples: availability, performance and quality, why the bottleneck is all that counts, and what a realistic target looks like."
+  category: education
+  art: rings
+  start: 4
+
+the-history-of-mes-and-digitalisation-in-manufacturing:
+  title: "The history of MES and digitalisation in manufacturing"
+  short: "A history of MES"
+  description: "From clipboards to cloud: how factory systems evolved into MES and MOM, and what each step tells us about where the shopfloor goes next."
+  category: education
+  art: timeline
+
+introduction-to-mes-and-smart-manufacturing:
+  title: "MES: the overlooked foundation of smart manufacturing"
+  short: "MES and smart manufacturing"
+  description: "Everyone talks about AI, IIoT and smart manufacturing. Few talk about the MES underneath that makes them work. A short primer on why it matters."
+  category: education
+  art: hexgrid
+
+mes-functionality-production-monitoring:
+  title: "MES functionality: production monitoring"
+  short: "Production monitoring"
+  description: "How an MES runs and monitors production orders in real time: order context, machine integration, downtime, counts and the data behind every KPI."
+  category: education
+  art: signal
+  series: functionality
+  order: 1
+
+mes-basics-production-scheduling:
+  title: "MES functionality: production scheduling"
+  short: "Production scheduling"
+  description: "What ERP schedules, what MES fine-tunes, and how sequencing, capacity and changeovers turn a plan into something the shopfloor can actually run."
+  category: education
+  art: gantt
+  series: functionality
+  order: 2
+
+mes-functionality-quality-operations:
+  title: "MES functionality: quality operations"
+  short: "Quality operations"
+  description: "In-process quality in MES: inspection plans, SPC and control charts, non-conformance and holds, and how quality data ties back to every order."
+  category: education
+  art: spc
+  series: functionality
+  order: 3
+
+mes-functionality-inventory-management:
+  title: "MES functionality: inventory management"
+  short: "Inventory management"
+  description: "Raw, semi-finished and finished stock in MES: lots, containers, consumption, genealogy and traceability, and why it beats tracking WIP in ERP."
+  category: education
+  art: bins
+  series: functionality
+  order: 4
+
+mes-functionality-logistics-warehousing:
+  title: "MES functionality: warehouse management and logistics"
+  short: "Warehouse and logistics"
+  description: "Receiving, putaway, picking, supermarkets and line-side replenishment: how MES manages material flow from goods-in to the line and back out again."
+  category: education
+  art: flow
+  series: functionality
+  order: 5
+
+mes-functionality-inventory-logistics-overview:
+  title: "MES functionality: inventory and logistics overview"
+  short: "Inventory and logistics overview"
+  description: "A quick map of how inventory management and logistics fit together in MES, with links to the detailed guides on each."
+  category: education
+  art: flow2
+  series: functionality
+  order: 6
+
+implementing-kaizen-principles-with-mes-for-lean-manufacturing-success:
+  title: "Kaizen and MES: using data to drive continuous improvement"
+  short: "Kaizen and MES"
+  description: "Kaizen needs facts, not opinions. How MES data feeds lean and continuous improvement teams, and the practical routines that make it stick."
+  category: advice
+  art: steps
+
+who-benefits-from-an-mes:
+  title: "Who benefits from an MES? Every role, from operator to CFO"
+  short: "Who benefits from MES?"
+  description: "Operators, supervisors, quality, maintenance, planners and leadership: what each role gets from an MES, and why that matters for your business case."
+  category: advice
+  art: orbits
+
+can-mes-improve-your-bottom-line:
+  title: "Can MES improve your bottom line? Where the ROI really comes from"
+  short: "MES and the bottom line"
+  description: "Scrap, downtime, labour, inventory and compliance: the places an MES moves the P&L, and how to build an honest ROI case before you buy."
+  category: advice
+  art: growth
+
+implementing-mes-can-simplify-your-erp:
+  title: "MES vs ERP: how an MES takes complexity out of your ERP"
+  short: "MES vs ERP"
+  description: "ERP was never built to run a shopfloor. Where the line between MES and ERP should sit, and how moving execution into MES simplifies both."
+  category: advice
+  art: bridge
+
+building-a-winning-team-for-mes-implementation-navigating-challenges-and-ensuring-success:
+  title: "Building the right team for an MES implementation"
+  short: "Your MES project team"
+  description: "Most MES projects fail on people, not software. The roles, decision makers and ways of working you need in place before the first workshop."
+  category: advice
+  art: network
+
+an-overview-of-the-mes-market:
+  title: "An overview of the MES market"
+  short: "The MES market"
+  description: "Why the MES market is growing, how the vendor landscape is shaped, and the trends changing how manufacturers buy shopfloor software."
+  category: thought-leadership
+  art: bars
+
+the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence:
+  title: "The future of smart manufacturing: MES intelligence and AI"
+  short: "MES, AI and the future"
+  description: "MES already sits on the richest data in the factory. How AI and analytics turn that data into decisions, and what you need in place first."
+  category: thought-leadership
+  art: mesh
+
+food-beverage-industry-challenges:
+  title: "The biggest challenges in food and beverage manufacturing"
+  short: "Food and beverage challenges"
+  description: "Food safety, traceability, short shelf lives, recipe variability and labour: the pressures on F&B manufacturers and where shopfloor systems help."
+  category: thought-leadership
+  art: tanks

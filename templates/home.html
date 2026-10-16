@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% from "macros.html" import card, hero_bg, cta %}
+{% block main %}
+<section class="hero home-hero">
+  {{ hero_bg() }}
+  <div class="wide">
+    <div>
+      <span class="tag">MES <i>/</i> MOM <i>/</i> Smart manufacturing</span>
+      <h1>Straight talk on MES and the smart factory</h1>
+      <p class="kicker">Practical guides to Manufacturing Execution Systems, MOM and shopfloor AI. Written by someone who has spent his career building them, selling them and making them work.</p>
+      <div class="actions">
+        <a class="btn" href="{{ base }}/post/{{ start[0].slug }}">Start with the basics →</a>
+        <a class="btn ghost" href="{{ base }}/articles">Browse all {{ posts|length }} articles</a>
+      </div>
+    </div>
+    <a class="feature-card" href="{{ base }}/post/{{ start[0].slug }}">
+      <img src="{{ base }}/images/art/{{ start[0].slug }}.svg" alt="" width="1600" height="900">
+      <div class="fc-body">
+        <span class="micro">Start here · {{ start[0].read_time }} min read</span>
+        <h3>{{ start[0].short }}</h3>
+        <p>{{ start[0].description }}</p>
+      </div>
+      <span class="go" aria-hidden="true">→</span>
+    </a>
+  </div>
+</section>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><b>{{ posts|length }}</b><span>in-depth articles</span></div>
+    <div class="stat"><b>{{ total_words_k }}k</b><span>words on MES and MOM</span></div>
+    <div class="stat"><b>{{ series|length }}</b><span>part functionality series</span></div>
+    <div class="stat"><b>11k+</b><span>followers on LinkedIn</span></div>
+  </div>
+
+  <section class="section">
+    <h2 class="label">Start here</h2>
+    <div class="section-head">
+      <div><h3>New to MES? Read these four, in this order.</h3><p>The foundations everything else builds on. About {{ start_minutes }} minutes in total.</p></div>
+    </div>
+    <div class="steps">
+      {% for p in start %}
+      <a class="step rv" href="{{ base }}/post/{{ p.slug }}">
+        <span class="n">{{ '%02d' % loop.index }}</span>
+        <div><h4>{{ p.short }}</h4><p>{{ p.description }}</p></div>
+        <span class="rt">{{ p.read_time }} min<b>→</b></span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="label">The MES Functionality series</h2>
+    <div class="section-head">
+      <div><h3>What an MES actually does, one function at a time</h3><p>{{ series|length }} detailed guides, from monitoring a production order to getting material to the line.</p></div>
+      <a class="more" href="{{ base }}/mes-education">All education articles →</a>
+    </div>
+    <div class="grid" style="--min:290px">
+      {% for p in series %}{{ card(p, base, num='%02d' % loop.index) }}{% endfor %}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="big-wrap rv">
+      <p class="big">MES is the <em>foundation</em> of smart manufacturing. Most people skip straight to the <em>AI</em>.</p>
+      <cite>Why this site exists</cite>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="label">Latest thinking</h2>
+    <div class="grid" style="--min:300px">
+      {{ card(latest[0], base, lead=True) }}
+      {% for p in latest[1:5] %}{{ card(p, base) }}{% endfor %}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="label">Explore by topic</h2>
+    <div class="topics">
+      {% for c in categories %}
+      <a class="topic rv" href="{{ base }}/{{ c.slug }}">
+        <img src="{{ base }}/images/art/page-{{ c.art }}.svg" alt="" loading="lazy">
+        <span class="count">{{ c.posts|length }} articles</span>
+        <span class="micro">{{ c.eyebrow }}</span>
+        <h3>{{ c.name }}</h3>
+        <p>{{ c.blurb }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="label">Who writes this</h2>
+    <div class="author rv">
+      <div class="avatar"><img src="{{ base }}/images/matt-barber.jpg" alt="Matt Barber" width="400" height="400" loading="lazy"></div>
+      <div>
+        <span class="micro">Matt Barber</span>
+        <h3>From MES developer to running a global MES business</h3>
+        <p>I started out writing code and integrations for MES projects, moved into project delivery and solution design, then ran product. Today I'm VP &amp; General Manager for MES at Infor. MES Matters is where I write about the real-world side of it: what works, what doesn't, and why.</p>
+        <div class="links"><a class="btn sm" href="{{ base }}/about">More about me</a><a class="btn ghost sm" href="{{ linkedin }}" target="_blank" rel="me noopener">LinkedIn</a></div>
+      </div>
+    </div>
+  </section>
+
+  {{ cta(base, linkedin) }}
+</div>
+{% endblock %}

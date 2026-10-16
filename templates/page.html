@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% from "macros.html" import hero_bg, cta %}
+{% block main %}
+<section class="hero page-hero">
+  {{ hero_bg() }}
+  <div class="wrap">
+    <span class="tag">{{ eyebrow }}</span>
+    <h1>{{ heading }}</h1>
+    {% if kicker %}<p class="kicker">{{ kicker }}</p>{% endif %}
+    {% if actions %}<div class="actions">{{ actions }}</div>{% endif %}
+  </div>
+</section>
+<div class="wrap">
+  {{ content }}
+  {% if show_cta %}{{ cta(base, linkedin) }}{% endif %}
+</div>
+{% endblock %}

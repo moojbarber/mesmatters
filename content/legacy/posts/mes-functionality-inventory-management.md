@@ -96,7 +96,7 @@ Inventory is delivered by the Logistics team to the correct location on the shop
 
 A supermarket (sometimes referred to as a "Shopfloor-Warehouse") is a location on the shopfloor that is kept stocked by the logistics team with fast moving materials, and with materials planned to be used on upcoming production orders. Typically supermarkets have many locations, often one location per material. It is common for materials to be selected from a supermarket in FIFO (First-In-First-Out) sequence. Supermarkets are often loaded from the back, and picked from the front ensuring the materials are taken in correct order.
 
-![](/images/legacy/b75fc5_f42dadfc0409497987af47d4e47221fa-mv2.png)
+::block supermarket-flow
 
 By moving inventory from a warehouse to a supermarket in the production area, the lead times for moving inventory to the consuming machine are reduced. Materials required at the machine are replenished from the supermarket, which is closer to production. This also reduces the quantity of materials stored in a line-side location, keeping the shopfloor clean and tidy.
 

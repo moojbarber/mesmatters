@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{{ seo_title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="{{ canonical }}">
+<meta name="theme-color" content="#0a0820">
+<meta name="author" content="Matt Barber">
+<meta property="og:site_name" content="MES Matters">
+<meta property="og:type" content="{{ og_type|default('website') }}">
+<meta property="og:title" content="{{ og_title|default(seo_title) }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ og_image }}">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ og_title|default(seo_title) }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ og_image }}">
+{% if noindex %}<meta name="robots" content="noindex">{% endif %}
+<link rel="icon" href="{{ base }}/favicon.svg" type="image/svg+xml">
+<link rel="alternate" type="application/rss+xml" title="MES Matters" href="{{ base }}/feed.xml">
+<link rel="preload" href="{{ base }}/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ base }}/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ base }}/css/site.css?v={{ version }}">
+{% for ld in jsonld %}<script type="application/ld+json">{{ ld }}</script>
+{% endfor %}
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar">
+  <div class="wide">
+    <a class="brand" href="{{ base }}/" aria-label="MES Matters home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b6cff"/><stop offset="1" stop-color="#33d4e0"/></linearGradient></defs><polygon points="16,2 28.1,9 28.1,23 16,30 3.9,23 3.9,9" fill="rgba(139,108,255,.18)" stroke="url(#lg)" stroke-width="2"/><polygon points="16,9.5 21.6,12.75 21.6,19.25 16,22.5 10.4,19.25 10.4,12.75" fill="none" stroke="#33d4e0" stroke-width="1.4" opacity=".7"/><circle cx="16" cy="16" r="2.6" fill="#33d4e0"/></svg>
+      <b>MES Matters</b>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      {% for item in nav %}<a href="{{ base }}{{ item.href }}"{% if item.key == active %} aria-current="page"{% endif %}>{{ item.label }}</a>
+      {% endfor %}<a class="btn sm" href="{{ linkedin }}" rel="me noopener" target="_blank">Follow on LinkedIn</a>
+    </nav>
+    <button class="burger" aria-label="Menu" aria-controls="nav" aria-expanded="false"><span></span></button>
+  </div>
+  {% if progress %}<div class="progress" aria-hidden="true"></div>{% endif %}
+</header>
+<main id="main">
+{% block main %}{% endblock %}
+</main>
+<footer class="foot">
+  <div class="wide">
+    <div class="cols">
+      <div>
+        <a class="brand" href="{{ base }}/"><svg viewBox="0 0 32 32" aria-hidden="true"><polygon points="16,2 28.1,9 28.1,23 16,30 3.9,23 3.9,9" fill="rgba(139,108,255,.18)" stroke="#33d4e0" stroke-width="2"/><circle cx="16" cy="16" r="2.6" fill="#33d4e0"/></svg><b>MES Matters</b></a>
+        <p style="max-width:42ch;margin:16px 0 0;color:var(--mut)">Straight talk on MES, MOM and the smart factory. Practical guides for people who have to make it work on a real shopfloor.</p>
+      </div>
+      <div>
+        <h4>Read</h4>
+        <ul>
+          <li><a href="{{ base }}/articles">All articles</a></li>
+          <li><a href="{{ base }}/mes-education">MES Education</a></li>
+          <li><a href="{{ base }}/mes-advice">MES Advice</a></li>
+          <li><a href="{{ base }}/thought-leadership">Thought Leadership</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="{{ base }}/about">About Matt</a></li>
+          <li><a href="{{ base }}/contact">Contact</a></li>
+          <li><a href="{{ linkedin }}" rel="me noopener" target="_blank">LinkedIn</a></li>
+          <li><a href="{{ base }}/feed.xml">RSS feed</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="disc">
+      <p>The opinions on this site are my own and don't represent the views of any current or past employer. Everything here is general information, not professional advice.</p>
+      <p>© {{ year }} Matt Barber · MES Matters</p>
+    </div>
+  </div>
+</footer>
+<script src="{{ base }}/js/site.js?v={{ version }}" defer></script>
+</body>
+</html>

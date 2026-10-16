@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% from "macros.html" import card, hero_bg, cta %}
+{% block main %}
+<section class="hero page-hero">
+  {{ hero_bg() }}
+  <div class="wrap">
+    <span class="tag">{{ eyebrow }}</span>
+    <h1>{{ heading }}</h1>
+    <p class="kicker">{{ kicker }}</p>
+    <nav class="filters" aria-label="Topics">
+      <a class="chip" href="{{ base }}/articles"{% if active == 'articles' %} aria-current="page"{% endif %}>All<span>{{ all_count }}</span></a>
+      {% for c in categories %}<a class="chip" href="{{ base }}/{{ c.slug }}"{% if active == c.slug %} aria-current="page"{% endif %}>{{ c.name }}<span>{{ c.posts|length }}</span></a>{% endfor %}
+    </nav>
+  </div>
+</section>
+<div class="wrap">
+  {% if featured %}
+  <section class="section tight">
+    <div class="grid" style="--min:300px">
+      {{ card(featured, base, lead=True) }}
+    </div>
+  </section>
+  {% endif %}
+  {% for group in groups %}
+  <section class="section{% if loop.first and not featured %} tight{% endif %}">
+    {% if group.label %}<h2 class="label">{{ group.label }}</h2>{% endif %}
+    <div class="grid" style="--min:290px">
+      {% for p in group.posts %}{{ card(p, base, num=('%02d' % loop.index) if group.numbered else None) }}{% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+  {{ cta(base, linkedin) }}
+</div>
+{% endblock %}

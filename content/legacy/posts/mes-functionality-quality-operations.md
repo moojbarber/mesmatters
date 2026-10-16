@@ -53,7 +53,7 @@ When logging defects it's important to specify whether you are counting defects,
 
 This is important as it determines the attribute chart to use when reviewing SPC (statistical process control). This is covered in more detail in a future article, but for now the important thing to know is that there are four attribute charts:
 
-![](/images/legacy/b75fc5_821107e59460435c88c97f718ef441f9-mv2.png)
+::block spc-chart-types
 
 Some more advanced MES systems provide a graphical user interface for the person doing the quality check so that defects can be drawn by the user onto a picture of the product. This means the location of the defect is also logged.
 

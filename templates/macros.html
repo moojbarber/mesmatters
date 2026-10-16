@@ -1,0 +1,28 @@
+{% macro card(p, base, num=None, lead=False) -%}
+<a class="card{% if lead %} lead{% endif %} rv" href="{{ base }}/post/{{ p.slug }}">
+  <div class="thumb"><img src="{{ base }}/images/art/{{ p.slug }}.svg" alt="" loading="lazy" width="1600" height="900">{% if num %}<span class="num">{{ num }}</span>{% endif %}</div>
+  <div class="body">
+    <span class="micro">{{ p.category_label }}</span>
+    <h3>{{ p.title }}</h3>
+    <p>{{ p.description }}</p>
+    <div class="meta"><span>{{ p.date_short }}</span><span class="dotsep"></span><span>{{ p.read_time }} min read</span></div>
+  </div>
+</a>
+{%- endmacro %}
+{% macro hero_bg() -%}<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>{%- endmacro %}
+{% macro cta(base, linkedin) -%}
+<section class="cta rv">
+  <div>
+    <span class="micro">Keep learning</span>
+    <h3>New articles land on <em class="g">LinkedIn</em> first</h3>
+    <p>Follow along for MES and MOM deep dives, shopfloor AI and the lessons I wish someone had told me before my first implementation.</p>
+    <div class="actions"><a class="btn" href="{{ linkedin }}" target="_blank" rel="me noopener">Follow Matt on LinkedIn →</a><a class="btn ghost" href="{{ base }}/feed.xml">RSS</a></div>
+  </div>
+  <ul>
+    <li>Vendor-neutral, practical guidance</li>
+    <li>Written from real implementations, not brochures</li>
+    <li>MES, MOM, OEE, ISA-95 and smart manufacturing</li>
+    <li>No fluff, no buzzword bingo</li>
+  </ul>
+</section>
+{%- endmacro %}

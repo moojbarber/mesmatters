@@ -31,7 +31,7 @@ All of these layers communicate, allowing data to flow between the different sys
 
 This model is often depicted as a pyramid. For the purposes of MES we can consolidate levels 0, 1, and 2 together and consider them to be an output that MES can connect to in order to take real-time readings about the production process.
 
-![](/images/legacy/b75fc5_2c0de4c542a34751afd80635fdfde8f2-mv2.png)
+::block isa95-stack
 
 ## Communication between systems
 
