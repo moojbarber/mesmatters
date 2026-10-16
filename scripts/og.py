@@ -35,6 +35,9 @@ def cards():
     seo = yaml.safe_load((ROOT / "content" / "seo.yaml").read_text())
     for slug, m in seo.items():
         yield slug, slug, CATS[m["category"]], m["title"]
+    for p in sorted((ROOT / "content" / "posts").glob("*.md")):
+        fm = yaml.safe_load(p.read_text().split("---")[1])
+        yield fm.get("slug", p.stem), fm.get("slug", p.stem), CATS[fm["category"]], fm["title"]
     yield "home", "page-home", "Smart factory · Shopfloor AI", "Building the smart factory, from the shopfloor up"
     yield "page-about", "page-about", "About", "Hi, I'm Matt Barber"
     yield "page-education", "page-education", "Foundations", "The systems underneath the smart factory"

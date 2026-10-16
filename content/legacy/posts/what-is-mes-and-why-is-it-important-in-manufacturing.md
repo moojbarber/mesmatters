@@ -1,184 +1,132 @@
 ---
-title: "Getting started with MES: A complete overview to Manufacturing Execution Systems"
+title: "What is MES/MOM? A complete guide to Manufacturing Execution Systems and Manufacturing Operations Management"
 slug: "what-is-mes-and-why-is-it-important-in-manufacturing"
 legacyUrl: "https://www.mesmatters.com/post/what-is-mes-and-why-is-it-important-in-manufacturing"
-description: "IntroductionWelcome to MES Matters. You have landed on the first ever blog post which provides an overview of MES. I hope you find this and the rest of the blog enlightening and interesting. It's time to get stuck in.First things first, let's align on some terminology. The most popular term \"MES\" stands for Manufacturing Execution System, this is still most used and recognised. More recently, people have also started to use \"MOM\" (Manufacturing Operations Management). This new name tries to enca"
 published: "2022-08-01T21:43:05.220Z"
-updated: "2023-11-04T16:31:08.320Z"
+updated: "2026-10-16T09:00:00.000Z"
 author: "Matthew Barber"
-categories: ["MES Education"]
-heroImage: "/images/legacy/b75fc5_b6ae7d5b61b54c74a656aada893d08fe-mv2.jpg"
-wordCount: 2229
 ---
 
-## Introduction
+MES and MOM get used as if they mean the same thing. I've done it myself for years.
 
-Welcome to MES Matters. You have landed on the first ever blog post which provides an overview of MES. I hope you find this and the rest of the blog enlightening and interesting. It's time to get stuck in.
+They don't. And the difference matters most at the point where it costs you money: when you decide what to buy.
 
-First things first, let's align on some terminology. The most popular term "MES" stands for Manufacturing Execution System, this is still most used and recognised.
+So let's align on some terminology, then get into why it matters.
 
-More recently, people have also started to use "MOM" (Manufacturing Operations Management). This new name tries to encapsulate the growing scope of traditional MES, which was seen primarily as a production system. As the scope of MES grew to cover all manufacturing operations (inventory, quality, maintenance) some in the industry thought the name didn't accurately reflect the capabilities of the application.
+## MES: the production pillar
 
-MOM is a more accurate and descriptive name, but it's unfortunate that this divergence has evolved, because now there are two interchangeable terms, which introduces confusion.
+MES stands for Manufacturing Execution System. It's the original term, and still the one most people search for.
 
-Going forward, it's possible there will be a lot more emphasis on smart factory, and smart manufacturing, and perhaps the MES/MOM terms will eventually subside. Time will tell, but for now both MES and MOM are here to stay.
+At its core, MES is about **production execution**. Getting the right order onto the right line, then recording what actually happened. In practice that means:
 
-On this blog, I'll use the original MES term as it is still the most popular.
+- Receiving the production schedule from ERP, and fine-tuning the sequence on the shopfloor
+- Starting and stopping production orders, including changeovers and setup
+- Recording good counts, scrap and downtime, ideally straight from the equipment
+- Calculating [OEE](/post/what-is-oee-overall-equipment-effectiveness) and the other KPIs that sit underneath it
+- Guiding operators with digital work instructions
+- Sending confirmations back to ERP, with actuals rather than estimates
 
-## Overview
+That's valuable. If you're running on paper travellers and end-of-shift spreadsheets today, real-time production data on its own will change how your factory runs. Most people see their micro-stops for the first time and are genuinely surprised.
 
-MES applications manage all factory operations, including:
+But it's one pillar. Production is not the whole factory.
 
-- [**Production Operations**](https://www.mesmatters.com/post/mes-functionality-production-monitoring)**:** manufacturing process on the shop floor.
-- [**Quality Operations**](https://www.mesmatters.com/post/mes-functionality-quality-operations)**:** quality of the products being produced.
-- [**Inventory Operations**](https://www.mesmatters.com/post/mes-functionality-inventory-logistics-overview)**:** inventory and traceability on the shop floor, and management of stock throughout the factory.
-- **Maintenance Operations:** asset care of equipment in the factory.
+## MOM: the whole operation
 
-MES is the foundation of Smart Manufacturing, Industry 4.0, and the Digital Factory.
+MOM stands for Manufacturing Operations Management. The term exists because the scope grew. Operations aren't just production, so the application shouldn't be either.
 
-#### Life Before MES
+ISA-95, the international standard for how enterprise and shopfloor systems fit together, splits manufacturing operations into four areas. MOM covers all four:
 
-Before MES, manufacturing companies relied on a patchwork of disparate systems to manage different aspects of their manufacturing operations. In some cases these systems would have been software applications, but the processes could have been managed using paperwork and spreadsheets.
+- **[Production](/post/mes-functionality-production-monitoring)**: executing orders, counts, scrap, downtime, OEE.
+- **[Quality](/post/mes-functionality-quality-operations)**: inspection plans, in-line checks, SPC, non-conformance and holds.
+- **[Inventory](/post/mes-functionality-inventory-management)**: consumption, creation, labelling, WIP, [logistics](/post/mes-functionality-logistics-warehousing) and full traceability.
+- **Maintenance**: asset care, autonomous maintenance by operators, planned and condition-based work.
 
-Using this approach results in siloed data with limited communication between departments, making it difficult to get a complete picture of what is happening on the shop floor. Ultimately this leads to a lack of visibility, poor data management, inefficient communication, and increased risk of errors.
+The broadest applications go further still, into tooling, energy, labour and skills, and connected worker capabilities such as checklists and shift handover.
 
-Manufacturing departments have a degree of overlap in the data that is relevant to them. For example both Production and Maintenance are interested in machine downtime, but if there are two different systems trying to give the same data there could be a conflict. This approach hinders the ability to make data-driven decisions and respond in an agile way.
+| | MES | MOM |
+| --- | --- | --- |
+| Scope | Production execution | Production, quality, inventory and maintenance |
+| Main users | Operators and production supervisors | Everyone in operations: production, quality, logistics, maintenance, planning |
+| Answers | What did we make, how much and how well? | What's happening across the whole operation, and why? |
+| Data | Counts, scrap, downtime, OEE | The same, connected to inspections, material, traceability and asset condition |
 
-If connection between applications and systems is important, then integrations between those solutions need to be built to share the data. Integrating solutions is common place, but takes time, and incurs cost. Integrations should be carefully considered to ensure data is moved between systems with an appropriate frequency and granularity of data.
+If a vendor tells you their MES covers "everything", ask them which of those four pillars it actually handles, and how deep it goes in each. You'll get some interesting answers.
 
-#### Life with MES
+## Why MOM matters: everyone works from the same data
 
-With the emergence of MES, these disparate operational systems can be replaced with a single, integrated platform that connects all aspects of manufacturing operations. A single platform for all operations management means:
+Here's the real reason I care about this distinction. It isn't about acronyms. It's about **every operational person in the factory working from the same data**.
 
-- Operators, who are at the heart of the process have access to information they need from all departments.
-- All users have access to a single-source of truth for all data.
-- Powerful cross-departmental functionality can be realised.
-- All operations users only need to be trained on one system.
-- Integration between systems isn't required, which can sometimes be costly, fragile. and data transfer can be delayed.
+Think about how much overlaps between departments.
 
-## MES Functions
+Production and maintenance both care about downtime. If production records stops in one system and maintenance logs faults in another, your morning meeting starts with an argument about whose numbers are right. I've sat in those meetings. Thirty minutes gone before anyone talks about fixing anything.
 
-MES covers all manufacturing operations. The scope of each individual MES application will vary, but broadly speaking you can expect to see functionality such as:
+Quality needs to know what's being made, on which machine, from which batch of raw material. Inventory needs to know whether that batch has passed inspection before it moves. Planning needs to know the line is down before the schedule goes stale.
 
-#### Production Scheduling
+And the operator sits in the middle of all of it. They run the order, perform the quality check, consume the material and do the autonomous maintenance. Often all within the same ten minutes.
 
-The production plan is typically downloaded from ERP. For complex scheduling requirements an Advanced Planning and Scheduling (APS) application may also be required.
+With MOM, all of that lives in one place:
 
-MES receives the production plan, allowing planners to further tweak the schedule (if required), then release orders to production to be executed on the shop floor. MES systems can take into account various factors, such as machine availability, labour capacity, availability of raw materials, and demand forecasts, to help production planners manage the schedule effectively.
+- The downtime that production sees is the downtime maintenance sees
+- Quality checks are triggered by what's actually being produced, with no re-keying of order or material details
+- Traceability links every lot to its inspection results, the tooling used and the process parameters at the time
+- The operator gets one login, one screen and one source of truth
 
-When the plan is released to production, operators are able to follow the plan in MES without the need for paper print outs. If the planners need to make real-time adjustments to the schedule, changes are reflected immediately in production without the need for further print outs, or direct communication.
+That shared, contextualised view is what turns a factory full of data into a factory that makes good decisions.
 
-For more information, please see: [Production Scheduling](https://www.mesmatters.com/post/mes-basics-production-scheduling)
+## The risk: four systems and the integrations between them
 
-#### Production Monitoring
+This is where I want to be direct, because it's the most expensive mistake I see.
 
-MES plays a crucial role in optimising manufacturing processes by providing real-time visibility and insights into key metrics such as production volumes, scrap counts, downtime, labour, and [OEE](https://www.mesmatters.com/post/what-is-oee-overall-equipment-effectiveness).
+Plenty of manufacturers build their operations stack one pillar at a time, with a different product for each. An OEE tool for production. A separate quality system. Inventory in ERP or a standalone WMS. A CMMS for maintenance. Then they integrate them.
 
-MES records key information about the manufacturing process to measure productivity and efficiency. Ideally production operation data is captured directly from plant equipment in real-time, but it can also be captured manually if the required signals aren't available.
+On paper it looks fine. In practice it carries real risk:
 
-MES systems allow manufacturers to gain a deep understanding of their production operations, make data-driven decisions, and take proactive measures to address issues that arise through continuous improvement activities. Manufacturers can reduce costs, increase productivity, and improve overall efficiency ([OEE](https://www.mesmatters.com/post/what-is-oee-overall-equipment-effectiveness)), helping manufacturers remain competitive and thrive in an increasingly complex and competitive marketplace.
+- **Context gets lost at every boundary.** You can't pass everything through an integration, so you pass a subset. The quality system doesn't know which order was running. The CMMS doesn't know the line was mid-changeover.
+- **Integrations are expensive and fragile.** They take time to build, they need testing every time either side upgrades, and they're usually the first thing to break.
+- **Operators juggle applications.** Logging in and out, switching screens, losing their place. They become human bridges between departments.
+- **You end up with several versions of the truth.** Which is exactly the problem you were trying to solve.
 
-For more information, please see: [Production Monitoring](https://www.mesmatters.com/post/mes-functionality-production-monitoring)
+I'm not saying a dedicated system is never right. A complex warehouse may genuinely need a WMS. A heavy asset business may need a full EAM. A regulated lab may need a LIMS. Those are deliberate decisions about depth, made with the boundaries drawn carefully.
 
-#### Quality Control
+What I'd urge you to avoid is drifting into four or five point solutions because each one solved a single problem quickly. Be wary of the cheap stop-gap. It's rarely cheap by the time you've integrated it.
 
-MES monitors and control the quality of products during the manufacturing process, using a range of techniques such as Statistical Process Control (SPC) and Six Sigma.
+## Where MES/MOM sits in the landscape
 
-Identifying and correcting quality issues early in the process, means manufacturers can reduce the number of defective products, improve customer satisfaction, and avoid costly recalls.
+MES/MOM sits at Level 3 of the [ISA-95 model](/post/what-is-the-isa-95-model-and-where-does-mes-fit). ERP sits above it, running the business: orders, finance, procurement, planning. The automation layer sits below it: PLCs, sensors and the machines themselves.
 
-MES has the context of the materials being produced on the line, and knows the quality control plan. With this information, a good MES system will prompt the operators to perform the correct inspections at the right time. Using a separate QMS (Quality Management System) means the context of the production order and material being produced is not available. This means the user needs to manually enter additional data every time an inspection is recorded, with MES this information is known automatically preventing the need to manually enter the data and saving time. MES is also able to ensure the correct specifications are always used.
+Data flows down as orders, schedules and master data. It flows back up as actual consumption, counts, scrap and quality results, aggregated to the level ERP needs.
 
-Some quality checks are performed in-line by the operator, but other checks might require lab equipment, or to be sent off-site for further examination. Samples taken from the line are usually labelled for further testing elsewhere.
+That's worth repeating, because it's widely misunderstood. MES/MOM doesn't compete with ERP. It [makes ERP better](/post/implementing-mes-can-simplify-your-erp), because ERP receives validated actuals rather than backflushed estimates. You'd never use an MES to do the job of an ERP, so why use an ERP to do the job of an MES?
 
-Measurements may be entered manually, but more advanced MES systems allow automated collection via metrology equipment such as scales and gauges. This could be through a direct connection from the MES to the equipment, or through a measurement file imported into MES. Automated files imported automatically by the MES reduce manual input from the operators, and to increase the accuracy of data.
+## Life before MES/MOM
 
-For more information, please see: [Quality Operations](https://www.mesmatters.com/post/mes-functionality-quality-operations)
+Most factories already have some form of MES/MOM. It's just not software.
 
-#### Inventory Management
+It's paper travellers and clipboards. Whiteboards. Excel, which is honestly the number one competitor to MES/MOM. A departmental database someone built years ago. ERP screens pushed onto the shopfloor where they were never designed to be.
 
-Inventory refers to any moveable quantity of material. For example:
+Each piece tries to manage part of the operation. None of them talk to each other. The knowledge that holds it together lives in people's heads, and those people are retiring.
 
-- A box of pieces
-- A bag of powder
-- A pallet of boxes
-- etc
+## What you get
 
-The inventory in the factory is referred to as "stock".
+- **Real-time visibility.** What's running and what's stopped across every line, now rather than at the end of the shift.
+- **Error-proofed processes.** MES/MOM doesn't just record what happened. It validates as it happens: the wrong material can't be consumed, a quarantined batch can't be used, a missed check gets flagged.
+- **Traceability and compliance.** Full forward and backward traceability, with the audit trail built in rather than assembled after a complaint.
+- **Better ERP data.** Actuals, not assumptions, synchronised at the right level of detail.
 
-Inventory usually has a label with a unique identifier (barcode), specifying the material, quantity, and other key information about the inventory. MES ensures that the right materials are available at the right time. By tracking inventory levels in real-time and taking into account production schedules and demand forecasts, MES can help to reduce inventory costs.
+## The foundation for AI
 
-MES tracks the consumption of materials into the manufacturing process, the creation of output materials, printing labels, and tracking Work In Progress (WIP). Most MES systems track traceability at a much finer granularity than ERP (be warned - many ERP specialists who have had limited exposure to MES will likely refute this point). People who really understand ERP, understand that ERP shouldn't be keeping a detailed record of shop floor transactions, and instead should be allowing MES to record this information, and send back key data to ERP. You can read more about this here: [MES removes complexity from ERP](https://www.mesmatters.com/post/implementing-mes-can-simplify-your-erp)
+Everyone wants AI on the shopfloor. Very few have the data to feed it.
 
-Logistical operations can also be managed in MES, moving Inventory around the factory, managing the state of inventory, putting inventory away into a warehouse, receiving deliveries into the factory, and picking and shipping outbound shipments. The decision of which system to use in the warehouse is a complex one, there isn't a one-size-fits-all approach that works here, think carefully about what works best for your organisation, or your customers.
+AI and machine learning need accurate, granular, contextualised data collected over time. A machine signal that says "stopped" is worthless on its own. MES/MOM turns it into "Line 7 stopped at 14:23 during order 4521, on night shift, for 12 minutes, because of a jam at station 2, for the third time in 48 hours." That's data a model can actually learn from.
 
-For more information, please see: [Inventory & Logistics](https://www.mesmatters.com/post/mes-functionality-inventory-logistics-overview)
+And here the MOM point comes back again. The broader the scope, the richer the context. Quality results connected to process parameters connected to maintenance history is the data set predictive quality and predictive maintenance are built on. Stitch it together from four systems and you lose much of that context before AI ever sees it.
 
-#### Maintenance Engineering
+## So which term should you use?
 
-MES monitors and manages the maintenance of equipment and machines, ensuring that they are functioning properly and that downtime is minimised. MES should provide alerts when equipment needs maintenance, and schedule maintenance activities during periods of low production to minimise the impact on operations.
+Honestly, use whichever your audience understands. MES is still the more common search term, and that's not changing soon.
 
-Asset care is increasingly becoming the responsibility of the operator, who are often expected to perform autonomous maintenance procedures such as safety checks and cleaning.
+On this site I'll be deliberate about it: **MES** when I mean production execution, **MOM** when I mean the whole operation, and **MES/MOM** when I mean the category.
 
-Through MES, Maintenance engineers and managers have access to real-time machine status and downtime information, as well as the production schedule.
+When you're buying, though, the words matter less than the scope. Ask whether you're getting the production pillar, or a platform that puts production, quality, inventory and maintenance on the same data.
 
-## MES Benefits
-
-MES is becoming increasingly important in modern manufacturing, it's easy to understand why when you consider some of the key benefits.
-
-#### Digitalisation and Automation
-
-MES is the foundation of Smart Manufacturing, which is currently a hot topic transforming the manufacturing industry. Digitalising the manufacturing process removes paperwork, improves communication, and reduces errors. Factory automation integrated with MES allows advanced processes and data capture, improving productivity and enforcing processes.
-
-#### Improved Visibility
-
-MES provides real-time visibility into all aspects of the manufacturing process, including equipment status, production progress, quality data, and more. This enables companies to make better-informed decisions and quickly identify and address issues as they arise.
-
-MES can provide increased visibility and traceability throughout the manufacturing process, from raw materials to finished products. This can help to identify the source of quality issues or defects, as well as to track and trace products to document full traceability of finished goods.
-
-#### Improved Efficiency and Productivity
-
-MES can help manufacturers to improve their efficiency and productivity by providing real-time information about the manufacturing process. This can help to identify bottlenecks, reduce waste, and optimise the use of resources, resulting in increased output and profitability. MES supports continuous improvement initiatives, enabling data-driven decision making.
-
-#### Better Quality Control
-
-MES can help to improve the quality of products by monitoring and controlling the manufacturing process in real-time. This can help to identify and correct quality issues before they become a problem, ensuring that products meet the required specifications.
-
-#### Compliance with Regulations
-
-Some MES systems can help manufacturers to comply with regulations and standards, such as:
-
-1. Food and Drug Administration (FDA 21CFR Part 11) regulations for pharmaceutical and medical devices.
-2. International Organisation for Standardisation (ISO) standards for quality management.
-
-By providing real-time data on the manufacturing process, MES helps manufacturers demonstrate compliance and avoid costly fines and penalties. Some MES solutions also generate Electronic Batch Records (EBRs).
-
-#### Data Analytics
-
-MES provides real-time data on all aspects of the manufacturing process, which can be used for analysis and optimisation. This can help companies identify opportunities for improvement and increase overall efficiency. A good MES system will have advanced built-in reporting and analytics, as well as being able to easily share data with other reporting tools, if required.
-
-MES data is rich, accurate, and interesting data set, perfect for AI (Artificial Intelligence) and ML (Machine Learning). These advanced capabilities are driven by algorithms which are only as good as the data they are built on top of.
-
-## Integration
-
-MES is typically not used as a stand-alone application. The ISA-95 model is a global standard that defines where MES sits in the customer landscape in terms of IT (Information Technology) and OT (Operational Technology).
-
-For more information, please see: [ISA-95](https://www.mesmatters.com/post/what-is-the-isa-95-model-and-where-does-mes-fit)
-
-MES may need to integrate with other applications (ERP, PLM, WMS) as well as factory equipment (machines, metrology equipment).
-
-It's important to consider the boundaries between MES and other systems carefully. Many factors will affect how and where to draw these touch points:
-
-- The functionality in the "other" system.
-- The functionality in the MES system.
-- The physical manufacturing processes.
-- The departmental processes.
-
-## Summary
-
-MES covers all manufacturing operations across the factory: Production, Quality, Inventory, and Maintenance. However, the scope of MES does vary by MES vendor.
-
-By replacing old departmental, or home grown applications, MES provides a single application for factory operations.
-
-As manufacturing continues to evolve, MES will play an increasingly important role in helping manufacturers to stay competitive and meet the demands of their customers.
-
-MES is an incredibly exciting space right now. If you want to learn more, please take a look around the rest of the MES Matters blog.
+Which one is your factory actually running on today?

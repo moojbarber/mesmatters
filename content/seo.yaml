@@ -6,9 +6,9 @@
 # series / order: groups the MES Functionality guides
 
 what-is-mes-and-why-is-it-important-in-manufacturing:
-  title: "What is MES? A complete guide to Manufacturing Execution Systems"
-  short: "What is MES?"
-  description: "What an MES actually does, how it differs from MOM and ERP, and why it sits at the heart of every smart factory. The place to start."
+  title: "What is MES/MOM? A complete guide to MES and Manufacturing Operations Management"
+  short: "What is MES/MOM?"
+  description: "MES runs production. MOM runs the whole operation: production, quality, inventory and maintenance on the same data. What each covers and why it matters."
   category: education
   art: hexcore
   start: 1

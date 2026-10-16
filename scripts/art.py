@@ -478,12 +478,54 @@ def m_tanks(a):
     a.node(xs[2] + 200, y, 8)
 
 
+def m_worker(a):
+    tiles = []
+    for i in range(6):
+        t = math.radians(-90 + i * 60 + 30)
+        tiles.append((CX + 470 * math.cos(t), CY + 250 * math.sin(t)))
+    for i, (x, y) in enumerate(tiles):
+        ang = math.atan2(y - CY, x - CX)
+        a.line(CX + 152 * math.cos(ang), CY + 152 * math.sin(ang), x, y, w=2 if i != 4 else 1.5, op=.7 if i != 4 else .5, dash=None if i != 4 else "4 8", stroke=PINK if i == 4 else "url(#g)")
+        a.dot((CX + x) / 2, (CY + y) / 2, 5, PINK if i == 4 else CYAN)
+    for i, (x, y) in enumerate(tiles):
+        hot = i in (0, 2)
+        a.rect(x - 95, y - 42, 190, 84, rx=16, fill="url(#hot)" if hot else "url(#glass)", stroke=PINK if i == 4 else "url(#g)", sw=2.4 if hot else 1.5, glow=hot)
+        a.rect(x - 72, y - 22, 26, 26, rx=7, fill="rgba(51,212,224,.18)" if i != 4 else "rgba(255,111,216,.15)", stroke=CYAN if i != 4 else PINK, sw=1.2)
+        a.line(x - 34, y - 14, x + 70, y - 14, w=4, stroke=VIOLET, op=.55)
+        a.line(x - 34, y + 2, x + 40, y + 2, w=4, stroke=VIOLET, op=.35)
+        a.line(x - 72, y + 22, x + 70, y + 22, w=2, stroke="rgba(255,255,255,.12)")
+    a.circle(CX, CY, 118, fill="url(#hot)", sw=3, glow=True)
+    a.circle(CX, CY, 150, stroke=CYAN, sw=1.2, op=.35)
+    a.person(CX, CY + 28, 3.4)
+
+
+def m_gates(a):
+    y = CY + 60
+    a.path(f"M{CX - 700},{y} L{CX + 700},{y}", w=4, glow=True)
+    xs = [CX - 450, CX - 150, CX + 150, CX + 450]
+    for i, x in enumerate(xs):
+        blocked = i == 1
+        c = PINK if blocked else "url(#g)"
+        a.rect(x - 50, y - 210, 100, 260, rx=18, fill="rgba(255,111,216,.10)" if blocked else ("url(#hot)" if i == 3 else "url(#glass)"), stroke=c, sw=2.4 if blocked or i == 3 else 1.5, glow=blocked or i == 3)
+        a.line(x - 50, y - 150, x + 50, y - 150, w=1.2, stroke=PINK if blocked else CYAN, op=.5)
+        a.node(x, y - 250, 7, PINK if blocked else CYAN)
+        if blocked:
+            a.line(x - 30, y - 120, x + 30, y - 60, w=4, stroke=PINK)
+            a.line(x + 30, y - 120, x - 30, y - 60, w=4, stroke=PINK)
+    # product units moving along the line, queuing before the blocked gate
+    for k, x in enumerate([CX - 660, CX - 600, CX - 330, CX - 282, CX - 234]):
+        a.rect(x - 18, y - 46, 36, 36, rx=8, fill="rgba(139,108,255,.25)", stroke=VIOLET, sw=1.5)
+    for x in (CX + 10, CX + 300, CX + 600):
+        a.rect(x - 18, y - 46, 36, 36, rx=8, fill="rgba(51,212,224,.22)", stroke=CYAN, sw=1.5, op=.9)
+
+
 MOTIFS = {
     "hexcore": m_hexcore, "hexgrid": m_hexgrid, "stack": m_stack, "wheel": m_wheel,
     "rings": m_rings, "timeline": m_timeline, "signal": m_signal, "gantt": m_gantt,
     "spc": m_spc, "bins": m_bins, "flow": m_flow, "flow2": lambda a: m_flow(a, True),
     "steps": m_steps, "orbits": m_orbits, "growth": m_growth, "bridge": m_bridge,
     "network": m_network, "bars": m_bars, "mesh": m_mesh, "tanks": m_tanks,
+    "worker": m_worker, "gates": m_gates,
 }
 
 
@@ -577,6 +619,10 @@ def main():
     for slug, meta in seo.items():
         render(slug, meta["art"])
         print(f"{meta['art']:9} {slug}")
+    for p in sorted((ROOT / "content" / "posts").glob("*.md")):
+        fm = yaml.safe_load(p.read_text().split("---")[1])
+        render(fm.get("slug", p.stem), fm.get("art", "hexgrid"))
+        print(f"{fm.get('art'):9} {p.stem}")
     # generic art for site pages
     for slug, motif in (("home", "hexgrid"), ("about", "network"), ("education", "wheel"), ("advice", "bridge"), ("thought-leadership", "bars")):
         render(f"page-{slug}", motif)

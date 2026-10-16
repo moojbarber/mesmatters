@@ -31,8 +31,8 @@ LINKEDIN = "https://www.linkedin.com/in/mattjbarber/"
 
 CATEGORIES = [
     {"key": "thought-leadership", "slug": "thought-leadership", "name": "Smart Factory & AI", "eyebrow": "Think", "art": "thought-leadership",
-     "blurb": "Shopfloor AI, the market and where manufacturing goes next.",
-     "kicker": "Where AI really adds value on the shopfloor, what it needs underneath, and the market and industry pressures shaping the factory of the next decade."},
+     "blurb": "Shopfloor AI, the connected worker and where manufacturing goes next.",
+     "kicker": "Where AI really adds value on the shopfloor, how connected worker changes the frontline, and what both need underneath."},
     {"key": "education", "slug": "mes-education", "name": "Foundations", "eyebrow": "Learn", "art": "education",
      "blurb": "MES, MOM, ISA-95 and OEE: the systems and standards every smart factory runs on.",
      "kicker": "The systems and standards underneath every smart factory: what MES and MOM actually do, how ISA-95 fits together, how OEE is measured, and a function-by-function tour of MES."},
