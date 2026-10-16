@@ -30,24 +30,24 @@ SITE = "https://www.mesmatters.com"
 LINKEDIN = "https://www.linkedin.com/in/mattjbarber/"
 
 CATEGORIES = [
-    {"key": "education", "slug": "mes-education", "name": "MES Education", "eyebrow": "Learn", "art": "education",
-     "blurb": "What MES is, what it does and the standards behind it.",
-     "kicker": "The fundamentals of Manufacturing Execution Systems: definitions, standards like ISA-95, KPIs like OEE, and a function-by-function tour of what an MES actually does."},
-    {"key": "advice", "slug": "mes-advice", "name": "MES Advice", "eyebrow": "Implement", "art": "advice",
-     "blurb": "Business cases, teams and getting projects over the line.",
-     "kicker": "Practical guidance for MES and MOM projects: building the business case, getting the team right and avoiding the mistakes that sink implementations."},
-    {"key": "thought-leadership", "slug": "thought-leadership", "name": "Thought Leadership", "eyebrow": "Think", "art": "thought-leadership",
-     "blurb": "The market, AI and where the shopfloor goes next.",
-     "kicker": "Where the MES market is heading, what AI really changes on the shopfloor, and the industry pressures shaping manufacturing systems."},
+    {"key": "thought-leadership", "slug": "thought-leadership", "name": "Smart Factory & AI", "eyebrow": "Think", "art": "thought-leadership",
+     "blurb": "Shopfloor AI, the market and where manufacturing goes next.",
+     "kicker": "Where AI really adds value on the shopfloor, what it needs underneath, and the market and industry pressures shaping the factory of the next decade."},
+    {"key": "education", "slug": "mes-education", "name": "Foundations", "eyebrow": "Learn", "art": "education",
+     "blurb": "MES, MOM, ISA-95 and OEE: the systems and standards every smart factory runs on.",
+     "kicker": "The systems and standards underneath every smart factory: what MES and MOM actually do, how ISA-95 fits together, how OEE is measured, and a function-by-function tour of MES."},
+    {"key": "advice", "slug": "mes-advice", "name": "Implementation", "eyebrow": "Make it work", "art": "advice",
+     "blurb": "Business cases, teams and getting shopfloor projects over the line.",
+     "kicker": "Practical guidance for getting shopfloor projects over the line: building an honest business case, getting the team right, and avoiding the mistakes that sink implementations."},
 ]
 CAT_BY_KEY = {c["key"]: c for c in CATEGORIES}
 
 NAV = [
     {"key": "start", "label": "Start here", "href": "/post/what-is-mes-and-why-is-it-important-in-manufacturing"},
     {"key": "articles", "label": "Articles", "href": "/articles"},
-    {"key": "mes-education", "label": "Education", "href": "/mes-education"},
-    {"key": "mes-advice", "label": "Advice", "href": "/mes-advice"},
-    {"key": "thought-leadership", "label": "Thought Leadership", "href": "/thought-leadership"},
+    {"key": "thought-leadership", "label": "Smart Factory & AI", "href": "/thought-leadership"},
+    {"key": "mes-education", "label": "Foundations", "href": "/mes-education"},
+    {"key": "mes-advice", "label": "Implementation", "href": "/mes-advice"},
     {"key": "about", "label": "About", "href": "/about"},
 ]
 
@@ -216,8 +216,8 @@ def build(base, relative=False):
 
     # home
     write("index.html", "home.html", active="home",
-          seo_title="MES Matters | Practical guides to MES, MOM and smart manufacturing",
-          description="Straight talk on Manufacturing Execution Systems, MOM and the smart factory. Practical, vendor-neutral guides by Matt Barber.",
+          seo_title="MES Matters | The smart factory, shopfloor AI and MES",
+          description="Practical, vendor-neutral writing on the smart factory and shopfloor AI, and the MES and MOM systems underneath them. By Matt Barber.",
           canonical=f"{SITE}/", posts=posts, series=series, start=start, latest=posts[:5],
           start_minutes=sum(p["read_time"] for p in start), total_words_k=round(total_words / 1000),
           jsonld=[jsonld({"@context": "https://schema.org", "@type": "WebSite", "name": "MES Matters", "url": SITE,
@@ -225,9 +225,9 @@ def build(base, relative=False):
 
     # all articles
     write("articles.html", "list.html", active="articles",
-          seo_title="All articles | MES Matters", description="Every MES Matters guide: MES fundamentals, the functionality series, implementation advice and thought leadership on MOM and smart manufacturing.",
+          seo_title="All articles | MES Matters", description="Every article on the smart factory, shopfloor AI, implementation and the MES and MOM foundations underneath them.",
           canonical=f"{SITE}/articles", eyebrow=f"Library / {len(posts)} articles", heading="Every article, in one place",
-          kicker="Guides, explainers and opinion on MES, MOM and the smart factory. Newest first.",
+          kicker="Guides, explainers and opinion on the smart factory, shopfloor AI and MES/MOM. Newest first.",
           all_count=len(posts), featured=posts[0], groups=[{"label": "Everything else", "posts": posts[1:]}])
 
     # categories (same URLs as the Wix site)
@@ -236,7 +236,7 @@ def build(base, relative=False):
         groups = []
         if c["key"] == "education":
             groups.append({"label": "Start here", "posts": start, "numbered": True})
-            groups.append({"label": "The MES Functionality series", "posts": series, "numbered": True})
+            groups.append({"label": "The MES functionality series", "posts": series, "numbered": True})
             rest = [p for p in cposts if p not in start and p not in series]
             if rest:
                 groups.append({"label": "More fundamentals", "posts": rest})
@@ -279,14 +279,14 @@ def build(base, relative=False):
     # about / contact / 404
     about = (ROOT / "content" / "pages" / "about.html").read_text(encoding="utf-8").replace("{{base}}", base)
     write("about.html", "page.html", active="about", seo_title="About Matt Barber | MES Matters",
-          description="Matt Barber went from writing MES code to running a global MES business. Why he writes MES Matters, and what you'll find here.",
+          description="Matt Barber went from writing MES code to running a global MES business. Why he writes about the smart factory and shopfloor AI.",
           canonical=f"{SITE}/about", eyebrow="About", heading="Hi, I'm Matt.",
-          kicker="I've spent my career on the shopfloor side of software. MES Matters is where I write down what I've learnt.",
+          kicker="I've spent my career on the shopfloor side of software. This is where I write down what I've learnt about making factories smarter.",
           content=Markup(about), show_cta=True, og_image=f"{SITE}/images/og/page-about.png",
           jsonld=[jsonld({"@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": person})])
     contact = (ROOT / "content" / "pages" / "contact.html").read_text(encoding="utf-8").replace("{{base}}", base).replace("{{linkedin}}", LINKEDIN)
     write("contact.html", "page.html", active="contact", seo_title="Contact | MES Matters",
-          description="Get in touch with Matt Barber about MES, MOM, smart manufacturing or something you've read on MES Matters.",
+          description="Get in touch with Matt Barber about the smart factory, shopfloor AI, MES and MOM, or something you've read here.",
           canonical=f"{SITE}/contact", eyebrow="Contact", heading="Let's talk shopfloor",
           kicker="The quickest way to reach me is a message on LinkedIn. I read everything, even if replies sometimes take a few days.",
           actions=Markup(f'<a class="btn" href="{LINKEDIN}" target="_blank" rel="me noopener">Message me on LinkedIn →</a>'),

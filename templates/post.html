@@ -8,7 +8,7 @@
     <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ base }}/">Home</a><span class="sep">/</span><a href="{{ base }}/articles">Articles</a><span class="sep">/</span><a href="{{ base }}/{{ p.category_slug }}">{{ p.category_label }}</a></nav>
     <div class="tags">
       <span class="tag">{{ p.category_label }}</span>
-      {% if p.series %}<span class="tag pink">Functionality series <i>/</i> {{ '%02d' % p.order }}</span>{% endif %}
+      {% if p.series %}<span class="tag pink">MES functionality <i>/</i> {{ '%02d' % p.order }}</span>{% endif %}
       {% if p.start %}<span class="tag pink">Start here <i>/</i> {{ '%02d' % p.start }}</span>{% endif %}
     </div>
     <h1>{{ p.title }}</h1>
@@ -32,7 +32,7 @@
     <div>
       {% if series_posts %}
       <nav class="series" aria-label="MES Functionality series">
-        <span class="micro">MES Functionality series</span>
+        <span class="micro">MES functionality series</span>
         <ol>{% for s in series_posts %}<li><a href="{{ base }}/post/{{ s.slug }}"{% if s.slug == p.slug %} aria-current="page"{% endif %}>{{ s.short }}</a></li>{% endfor %}</ol>
       </nav>
       {% endif %}
@@ -50,7 +50,7 @@
           <div>
             <span class="micro">Written by</span>
             <h3>Matt Barber</h3>
-            <p>VP &amp; General Manager for MES at Infor. Started as an MES developer, then ran projects, solution design and product. Writes about the practical side of MES, MOM and smart manufacturing.</p>
+            <p>VP &amp; General Manager for MES at Infor. Started as an MES developer, then ran projects, solution design and product. Writes about the smart factory, shopfloor AI and the MES/MOM foundations underneath them.</p>
             <div class="links"><a class="btn sm" href="{{ linkedin }}" target="_blank" rel="me noopener">Follow on LinkedIn</a><a class="btn ghost sm" href="{{ base }}/about">About</a></div>
           </div>
         </div>

@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "public" / "images" / "og"
 FONTS = (ROOT / "public" / "fonts").as_uri()
 ART = (ROOT / "public" / "images" / "art").as_uri()
-CATS = {"education": "MES Education", "advice": "MES Advice", "thought-leadership": "Thought Leadership"}
+CATS = {"education": "Foundations", "advice": "Implementation", "thought-leadership": "Smart Factory & AI"}
 
 TPL = """<!doctype html><html><head><style>
 @font-face{{font-family:SG;font-weight:700;src:url({fonts}/space-grotesk-latin-700-normal.woff2)}}
@@ -35,11 +35,11 @@ def cards():
     seo = yaml.safe_load((ROOT / "content" / "seo.yaml").read_text())
     for slug, m in seo.items():
         yield slug, slug, CATS[m["category"]], m["title"]
-    yield "home", "page-home", "MES · MOM · Smart manufacturing", "Straight talk on MES and the smart factory"
+    yield "home", "page-home", "Smart factory · Shopfloor AI", "Building the smart factory, from the shopfloor up"
     yield "page-about", "page-about", "About", "Hi, I'm Matt Barber"
-    yield "page-education", "page-education", "MES Education", "The fundamentals of MES"
-    yield "page-advice", "page-advice", "MES Advice", "Getting MES projects over the line"
-    yield "page-thought-leadership", "page-thought-leadership", "Thought Leadership", "Where the shopfloor goes next"
+    yield "page-education", "page-education", "Foundations", "The systems underneath the smart factory"
+    yield "page-advice", "page-advice", "Implementation", "Getting shopfloor projects over the line"
+    yield "page-thought-leadership", "page-thought-leadership", "Smart Factory & AI", "Shopfloor AI and the smart factory"
 
 
 def main():

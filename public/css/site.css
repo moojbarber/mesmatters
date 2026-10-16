@@ -100,7 +100,7 @@ h1{font:700 clamp(36px,6.4vw,68px)/1.02 var(--disp);letter-spacing:-.03em;margin
 .feature-card{position:relative;display:block;border-radius:22px;padding:10px;background:var(--card);border:1px solid var(--line);backdrop-filter:blur(8px);box-shadow:0 30px 80px -30px rgba(139,108,255,.55);transition:transform .3s,border-color .3s,box-shadow .3s}
 .feature-card:hover{transform:translateY(-4px);border-color:rgba(139,108,255,.6);box-shadow:0 30px 80px -24px rgba(51,212,224,.45)}
 .feature-card img{border-radius:14px;aspect-ratio:16/9;object-fit:cover;width:100%}
-.feature-card .fc-body{padding:20px 14px 12px}
+.feature-card .fc-body{padding:20px 72px 12px 14px}
 .feature-card h3{font:700 24px/1.2 var(--disp);letter-spacing:-.015em;margin:10px 0 6px}
 .feature-card p{margin:0;color:var(--mut);font-size:15px}
 .feature-card .go{position:absolute;right:22px;bottom:22px;width:42px;height:42px;border-radius:12px;background:var(--g);color:var(--bg);display:grid;place-items:center;font:700 20px var(--disp);box-shadow:0 0 22px -4px rgba(51,212,224,.7)}
