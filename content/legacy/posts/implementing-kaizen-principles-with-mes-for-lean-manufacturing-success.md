@@ -4,7 +4,7 @@ slug: "implementing-kaizen-principles-with-mes-for-lean-manufacturing-success"
 legacyUrl: "https://www.mesmatters.com/post/implementing-kaizen-principles-with-mes-for-lean-manufacturing-success"
 description: "What is Kaizen in manufacturing?Kaizen is a Japanese term that translates to \"change for the better\" or \"continuous improvement.\" In the context of manufacturing, it refers to activities that continually improve all functions and involve all employees from the CEO to the assembly line workers. This philosophy is a core pillar of the Toyota Production System, which has influenced manufacturing practices globally.Many factories nowadays have a continuous improvement (CI) team responsible for evalu"
 published: "2023-11-02T21:16:18.526Z"
-updated: "2023-11-02T21:16:18.526Z"
+updated: "2026-10-16T09:00:00.000Z"
 author: "Matthew Barber"
 categories: ["MES Education"]
 heroImage: "/images/legacy/b75fc5_5e79fbb1ebe54151a6ff1cb3af675de6-mv2.jpg"
@@ -93,6 +93,21 @@ Another challenge is maintaining momentum. It can be easy for companies to becom
 
 Implementing Kaizen requires a commitment of time and resources. While the long-term benefits can be significant, it can take time to see results. Companies must be willing to invest in the process and be patient as improvements are made.
 
+## The digital morning meeting
+
+Here's a practical example of Kaizen with MES/MOM.
+
+In most factories the morning meeting takes hours to prepare. Data from ERP, spreadsheets, separate reports and handwritten notes. And the first thirty minutes are spent arguing about whose numbers are right.
+
+The digital version: one screen, one source of truth, real-time data. OEE by line, top downtime reasons, quality issues, schedule adherence, maintenance status, inventory, health and safety. No preparation. No arguments. The meeting starts with facts.
+
+Actions are logged and tracked digitally, linked to the data that prompted them. Next week you can see whether they worked. That's PDCA (plan, do, check, act) running every single day.
+
 ## Conclusion
 
 Kaizen is a powerful philosophy that can drive significant improvements in manufacturing. While it requires a commitment to continuous improvement and can be challenging to implement, the potential benefits in terms of increased efficiency, improved product quality, and higher employee morale make it a worthwhile goal for many manufacturing companies. MES supports many Kaizen initiatives, making it easier to drive continuous improvement activities.
+
+## Related reading
+
+- [Go-live is the starting line](/post/mes-go-live)
+- [Manufacturing KPIs beyond OEE](/post/manufacturing-kpis-beyond-oee)

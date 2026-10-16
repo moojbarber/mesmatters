@@ -4,7 +4,7 @@ slug: "the-history-of-mes-and-digitalisation-in-manufacturing"
 legacyUrl: "https://www.mesmatters.com/post/the-history-of-mes-and-digitalisation-in-manufacturing"
 description: "History of manufacturing systemsManufacturing has come a long way since the early days of the Industrial Revolution, when production was done entirely by hand and relied on simple tools and machines. In the decades that followed, manufacturing processes became more sophisticated, with the introduction of new technologies and machinery that allowed for increased automation and efficiency. However, before the development of modern Manufacturing Execution Systems (MES), the manufacturing process wa"
 published: "2023-05-10T16:01:15.827Z"
-updated: "2023-11-05T20:42:19.664Z"
+updated: "2026-10-16T09:00:00.000Z"
 author: "Matthew Barber"
 categories: ["Thought Leadership"]
 heroImage: "/images/legacy/b75fc5_daba84016ed1414aa18ccc44397c39ba-mv2.png"
@@ -42,3 +42,9 @@ MES is the culmination of many advances im manufacturing over the decades, bring
 Manufacturing has come a long way, and progress has been rapid over recent years. A modern MES will continue to push the boundaries of future technologies, including Artificial Intelligence (AI), Machine Learning (ML), Internet of Things (IoTl, and big data and analytics.
 
 Unfortunately there are still many dated solutions on the market, with large customer bases and stale technology.
+
+## Where it goes next
+
+The history of MES is a story of scope growing: from recording production, to running the whole operation as MOM, and now towards AI-enabled, data-driven factories.
+
+But history also shows there are no shortcuts. Each step builds on the one before. Most factories today are somewhere between paper-based and partly digital, and the path to AI goes through reliable, contextualised data first. I explain the stages in [The smart manufacturing maturity model](/post/smart-manufacturing-maturity-model) and where AI fits in [AI won't fix your factory](/post/the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence).

@@ -519,6 +519,99 @@ def m_gates(a):
         a.rect(x - 18, y - 46, 36, 36, rx=8, fill="rgba(51,212,224,.22)", stroke=CYAN, sw=1.5, op=.9)
 
 
+def m_ladder(a):
+    # five rising maturity steps, the current one highlighted
+    for i in range(5):
+        x = CX - 560 + i * 240
+        h = 120 + i * 80
+        top = CY + 260 - h
+        hot = i == 2
+        a.rect(x - 90, top, 180, h, rx=16, fill="url(#hot)" if hot else "url(#glass)", sw=2.4 if hot else 1.5, glow=hot, op=1 if i <= 2 else .55)
+        a.node(x, top - 34, 8 if hot else 6, CYAN if i <= 2 else VIOLET)
+        a.line(x - 60, top + 30, x + 40, top + 30, w=4, stroke=VIOLET, op=.5)
+    pts = [(CX - 560 + i * 240, CY + 260 - (120 + i * 80) - 34) for i in range(5)]
+    a.path(smooth(pts), w=2, dash="6 10", op=.6)
+
+
+def m_handover(a):
+    # two shift panels with a glowing hand-off between
+    for i, x in enumerate((CX - 380, CX + 380)):
+        a.rect(x - 220, CY - 200, 440, 400, rx=24, fill="url(#hot)" if i else "url(#glass)", sw=2.2, glow=bool(i))
+        a.person(x, CY - 100, 2.4, PINK if i == 0 else CYAN)
+        for k in range(4):
+            a.line(x - 150, CY + 10 + k * 40, x + (150 if k % 2 else 90), CY + 10 + k * 40, w=4, stroke=VIOLET, op=.5)
+    a.path(f"M{CX - 150},{CY} C{CX - 60},{CY - 120} {CX + 60},{CY - 120} {CX + 150},{CY}", w=4, glow=True)
+    for k in range(3):
+        a.dot(CX - 60 + k * 60, CY - 88, 6, CYAN)
+
+
+def m_badge(a):
+    # a central skill badge, surrounded by gated stations
+    a.hexagon(CX, CY, 170, glow=True, fill="url(#hot)", sw=3)
+    a.path(f"M{CX - 60},{CY} L{CX - 15},{CY + 50} L{CX + 70},{CY - 50}", w=8, stroke=CYAN, glow=True)
+    for i in range(6):
+        t = math.radians(i * 60)
+        x, y = CX + 480 * math.cos(t), CY + 290 * math.sin(t)
+        ok = i != 2
+        a.line(CX + 190 * math.cos(t), CY + 190 * math.sin(t), x, y, w=1.6, op=.5, stroke=CYAN if ok else PINK, dash=None if ok else "4 8")
+        a.rect(x - 70, y - 45, 140, 90, rx=16, stroke=CYAN if ok else PINK, sw=1.8)
+        a.node(x, y, 7, CYAN if ok else PINK)
+
+
+def m_document(a):
+    # stacked digital work-instruction pages with steps
+    for i in range(3):
+        off = (2 - i) * 40
+        a.rect(CX - 260 + off, CY - 330 + off, 520, 620, rx=26, op=.4 + i * .3, fill="url(#hot)" if i == 2 else "url(#glass)", sw=2.2 if i == 2 else 1.4, glow=i == 2)
+    x0, y0 = CX - 180, CY - 220
+    a.rect(x0, y0, 360, 170, rx=14, fill="rgba(51,212,224,.12)", stroke=CYAN, sw=1.4)
+    a.path(f"M{x0 + 30},{y0 + 140} L{x0 + 130},{y0 + 60} L{x0 + 210},{y0 + 110} L{x0 + 330},{y0 + 30}", w=3, stroke=CYAN)
+    for k in range(4):
+        y = y0 + 230 + k * 70
+        a.circle(x0 + 16, y, 14, fill="#0a0820", stroke=CYAN if k < 2 else VIOLET, sw=2.2, glow=k < 2)
+        a.line(x0 + 50, y, x0 + (330 if k % 2 else 260), y, w=5, stroke=VIOLET, op=.5)
+
+
+def m_cloud(a):
+    d = (f"M{CX - 300},{CY + 60} C{CX - 420},{CY + 60} {CX - 420},{CY - 120} {CX - 290},{CY - 120} "
+         f"C{CX - 270},{CY - 260} {CX - 60},{CY - 290} {CX},{CY - 180} C{CX + 80},{CY - 290} {CX + 300},{CY - 230} {CX + 290},{CY - 100} "
+         f"C{CX + 420},{CY - 100} {CX + 420},{CY + 60} {CX + 300},{CY + 60} Z")
+    a.path(d, w=3, fill="url(#hot)", glow=True)
+    for i, x in enumerate((CX - 420, CX, CX + 420)):
+        a.line(x if i != 1 else CX, CY + 60 if i == 1 else CY + 40, x, CY + 230, w=2, dash="6 8", op=.7)
+        a.rect(x - 110, CY + 230, 220, 120, rx=16, sw=1.8, fill="url(#glass)", stroke=PINK if i == 0 else "url(#g)")
+        for k in range(2):
+            a.line(x - 70, CY + 270 + k * 40, x + 70, CY + 270 + k * 40, w=3, stroke=VIOLET, op=.5)
+        a.node(x, CY + 230, 6)
+
+
+def m_tiles(a):
+    for r in range(3):
+        for c in range(5):
+            x = CX - 600 + c * 300
+            y = CY - 250 + r * 200
+            hot = (r, c) in ((0, 1), (1, 3), (2, 0))
+            a.rect(x - 120, y - 70, 240, 140, rx=18, fill="url(#hot)" if hot else "url(#glass)", sw=2.2 if hot else 1.3, glow=hot, op=1 if hot else .75)
+            a.line(x - 90, y - 25, x + 20 + 30 * ((r + c) % 3), y - 25, w=6, stroke=CYAN if hot else VIOLET, op=.8 if hot else .45)
+            a.line(x - 90, y + 15, x + 70, y + 15, w=3, stroke="rgba(255,255,255,.18)")
+            a.line(x - 90, y + 40, x + 30, y + 40, w=3, stroke="rgba(255,255,255,.12)")
+
+
+def m_pipeline(a):
+    srcs = [(CX - 640, CY - 240 + i * 160) for i in range(4)]
+    hub = (CX, CY)
+    outs = [(CX + 600, CY - 180 + i * 180) for i in range(3)]
+    for i, (x, y) in enumerate(srcs):
+        a.path(smooth([(x + 80, y), (CX - 300, (y + CY) / 2), (hub[0] - 170, CY)]), w=2.5, op=.8, stroke=PINK if i == 3 else "url(#g)")
+        a.rect(x - 80, y - 40, 160, 80, rx=14, stroke=PINK if i == 3 else "url(#g)", sw=1.6)
+    for x, y in outs:
+        a.path(smooth([(hub[0] + 170, CY), (CX + 320, (y + CY) / 2), (x - 90, y)]), w=2.5, op=.8)
+        a.rect(x - 90, y - 45, 180, 90, rx=16, fill="url(#hot)", sw=2, glow=True)
+    a.rect(CX - 170, CY - 110, 340, 220, rx=28, fill="url(#hot)", sw=3, glow=True)
+    for k in range(3):
+        a.line(CX - 110, CY - 50 + k * 50, CX + 110, CY - 50 + k * 50, w=5, stroke=CYAN if k == 1 else VIOLET, op=.7)
+
+
 MOTIFS = {
     "hexcore": m_hexcore, "hexgrid": m_hexgrid, "stack": m_stack, "wheel": m_wheel,
     "rings": m_rings, "timeline": m_timeline, "signal": m_signal, "gantt": m_gantt,
@@ -526,6 +619,8 @@ MOTIFS = {
     "steps": m_steps, "orbits": m_orbits, "growth": m_growth, "bridge": m_bridge,
     "network": m_network, "bars": m_bars, "mesh": m_mesh, "tanks": m_tanks,
     "worker": m_worker, "gates": m_gates,
+    "ladder": m_ladder, "handover": m_handover, "badge": m_badge, "document": m_document,
+    "cloud": m_cloud, "tiles": m_tiles, "pipeline": m_pipeline,
 }
 
 

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img">
+
+<defs>
+  <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="200" y1="0" x2="1400" y2="0">
+    <stop offset="0" stop-color="#8b6cff"/><stop offset="1" stop-color="#33d4e0"/>
+  </linearGradient>
+  <linearGradient id="hot" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#8b6cff" stop-opacity=".38"/><stop offset="1" stop-color="#33d4e0" stop-opacity=".22"/>
+  </linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity=".07"/><stop offset="1" stop-color="#ffffff" stop-opacity=".025"/>
+  </linearGradient>
+  <linearGradient id="barfill" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8b6cff" stop-opacity=".3"/><stop offset="1" stop-color="#8b6cff" stop-opacity=".04"/>
+  </linearGradient>
+  <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#33d4e0" stop-opacity=".28"/><stop offset="1" stop-color="#8b6cff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="liquid" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#33d4e0" stop-opacity=".35"/><stop offset="1" stop-color="#8b6cff" stop-opacity=".2"/>
+  </linearGradient>
+  <linearGradient id="liquidp" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ff6fd8" stop-opacity=".3"/><stop offset="1" stop-color="#8b6cff" stop-opacity=".18"/>
+  </linearGradient>
+  <radialGradient id="bl-v"><stop offset="0" stop-color="#6a3df0" stop-opacity=".62"/><stop offset=".7" stop-color="#6a3df0" stop-opacity="0"/></radialGradient>
+  <radialGradient id="bl-t"><stop offset="0" stop-color="#12b5c9" stop-opacity=".5"/><stop offset=".7" stop-color="#12b5c9" stop-opacity="0"/></radialGradient>
+  <radialGradient id="bl-m"><stop offset="0" stop-color="#c53fb8" stop-opacity=".45"/><stop offset=".7" stop-color="#c53fb8" stop-opacity="0"/></radialGradient>
+  <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1.1" fill="#fff" fill-opacity=".13"/></pattern>
+  <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".9" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <mask id="dotmask"><rect width="1600" height="900" fill="url(#fade)"/></mask>
+  <radialGradient id="vignette" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#0a0820" stop-opacity="0"/><stop offset="1" stop-color="#0a0820" stop-opacity=".7"/></radialGradient>
+  <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="1600" height="900" fill="#0a0820"/>
+<circle cx="42.7" cy="68" r="521.2" fill="url(#bl-v)" opacity="0.95"/>
+<circle cx="1460.1" cy="172.7" r="496" fill="url(#bl-t)" opacity="0.8"/>
+<circle cx="925.9" cy="848.8" r="342.3" fill="url(#bl-m)" opacity="0.6"/>
+<rect width="1600" height="900" fill="url(#dots)" mask="url(#dotmask)"/>
+<path d="M-20,790.3 C15.2,793.9 122.1,803.5 190.9,811.5 C259.7,819.5 313.2,834.5 392.8,838.3 C472.4,842.1 586,834.4 668.6,834.2 C751.2,834 810.9,836 888.4,836.9 C965.8,837.9 1061.6,839.5 1133.3,840 C1205,840.5 1257.6,840 1318.6,840 C1379.5,840 1424.2,844.9 1498.9,840 C1573.7,835.1 1722.6,815.6 1767.3,810.7" fill="none" stroke="url(#g)" stroke-width="2.5" opacity=".55"/>
+<circle cx="888.4" cy="836.9" r="5" fill="#33d4e0" filter="url(#glow)" opacity=".8"/>
+<g>
+<line x1="800" y1="440" x2="1024.2" y2="440" stroke="url(#g)" stroke-width="1.5" opacity="0.5" stroke-linecap="round" stroke-dasharray="4 8"/>
+<line x1="800" y1="440" x2="912.1" y2="634.2" stroke="url(#g)" stroke-width="1.5" opacity="0.5" stroke-linecap="round" stroke-dasharray="4 8"/>
+<line x1="800" y1="440" x2="687.9" y2="634.2" stroke="url(#g)" stroke-width="1.5" opacity="0.5" stroke-linecap="round" stroke-dasharray="4 8"/>
+<line x1="800" y1="440" x2="575.8" y2="440" stroke="url(#g)" stroke-width="1.5" opacity="0.5" stroke-linecap="round" stroke-dasharray="4 8"/>
+<line x1="800" y1="440" x2="687.9" y2="245.8" stroke="url(#g)" stroke-width="1.5" opacity="0.5" stroke-linecap="round" stroke-dasharray="4 8"/>
+<line x1="800" y1="440" x2="912.1" y2="245.8" stroke="url(#g)" stroke-width="1.5" opacity="0.5" stroke-linecap="round" stroke-dasharray="4 8"/>
+<line x1="1024.2" y1="440" x2="1178.1" y2="617" stroke="url(#g)" stroke-width="1.2" opacity="0.3" stroke-linecap="round"/>
+<circle cx="1178.1" cy="617" r="4" fill="#33d4e0" stroke="none" stroke-width="2" opacity="0.7"/>
+<line x1="912.1" y1="634.2" x2="800" y2="794" stroke="url(#g)" stroke-width="1.2" opacity="0.3" stroke-linecap="round"/>
+<circle cx="800" cy="794" r="4" fill="#33d4e0" stroke="none" stroke-width="2" opacity="0.7"/>
+<line x1="687.9" y1="634.2" x2="421.9" y2="617" stroke="url(#g)" stroke-width="1.2" opacity="0.3" stroke-linecap="round"/>
+<circle cx="421.9" cy="617" r="4" fill="#33d4e0" stroke="none" stroke-width="2" opacity="0.7"/>
+<line x1="575.8" y1="440" x2="421.9" y2="263" stroke="url(#g)" stroke-width="1.2" opacity="0.3" stroke-linecap="round"/>
+<circle cx="421.9" cy="263" r="4" fill="#33d4e0" stroke="none" stroke-width="2" opacity="0.7"/>
+<line x1="687.9" y1="245.8" x2="800" y2="86" stroke="url(#g)" stroke-width="1.2" opacity="0.3" stroke-linecap="round"/>
+<circle cx="800" cy="86" r="4" fill="#33d4e0" stroke="none" stroke-width="2" opacity="0.7"/>
+<line x1="912.1" y1="245.8" x2="1178.1" y2="263" stroke="url(#g)" stroke-width="1.2" opacity="0.3" stroke-linecap="round"/>
+<circle cx="1178.1" cy="263" r="4" fill="#33d4e0" stroke="none" stroke-width="2" opacity="0.7"/>
+<polygon points="1103.9,394 1103.9,486 1024.2,532 944.5,486 944.5,394 1024.2,348" fill="url(#glass)" stroke="url(#g)" stroke-width="2" opacity="1"/>
+<polygon points="991.8,588.1 991.8,680.2 912.1,726.2 832.4,680.2 832.4,588.1 912.1,542.1" fill="url(#glass)" stroke="#ff6fd8" stroke-width="2" opacity="1"/>
+<polygon points="767.6,588.1 767.6,680.2 687.9,726.2 608.2,680.2 608.2,588.1 687.9,542.1" fill="url(#glass)" stroke="url(#g)" stroke-width="2" opacity="1"/>
+<polygon points="655.5,394 655.5,486 575.8,532 496.1,486 496.1,394 575.8,348" fill="url(#glass)" stroke="url(#g)" stroke-width="2" opacity="1"/>
+<polygon points="767.6,199.8 767.6,291.9 687.9,337.9 608.2,291.9 608.2,199.8 687.9,153.8" fill="url(#hot)" stroke="url(#g)" stroke-width="2" opacity="1" filter="url(#glow)"/>
+<polygon points="991.8,199.8 991.8,291.9 912.1,337.9 832.4,291.9 832.4,199.8 912.1,153.8" fill="url(#glass)" stroke="url(#g)" stroke-width="2" opacity="1"/>
+<polygon points="907.3,378.1 907.3,501.9 800,563.9 692.7,501.9 692.7,378 800,316.1" fill="url(#hot)" stroke="url(#g)" stroke-width="3" opacity="1" filter="url(#glow)"/>
+<polygon points="856.2,407.6 856.2,472.4 800,504.9 743.8,472.4 743.8,407.6 800,375.1" fill="none" stroke="#33d4e0" stroke-width="1.5" opacity="0.7"/>
+<circle cx="800" cy="440" r="23.4" fill="#33d4e0" stroke="none" stroke-width="2" opacity="0.18"/>
+<circle cx="800" cy="440" r="9" fill="#0a0820" stroke="#33d4e0" stroke-width="2.5" opacity="1" filter="url(#glow)"/>
+</g>
+<rect width="1600" height="900" fill="url(#vignette)"/>
+</svg>

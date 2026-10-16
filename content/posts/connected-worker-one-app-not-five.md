@@ -31,6 +31,8 @@ The workforce problem is not a future problem.
 
 **72% of industrial organisations** say frontline workforce issues have hurt their operational performance ([LNS Research, 2023](https://blog.lnsresearch.com/attract-and-retain-a-quality-workforce-with-future-of-industrial-work)). Your most experienced people are approaching retirement, and the knowledge that keeps your lines running lives in their heads, not in any system. Median tenure in US manufacturing is now 4.9 years ([USAFacts](https://usafacts.org/articles/how-long-do-americans-stay-at-their-jobs/)), so the people replacing them won't be around long enough to absorb it the old way.
 
+And the gap is getting wider. Deloitte and the Manufacturing Institute estimate US manufacturing could need as many as 3.8 million new employees between 2024 and 2033, and that 1.9 million of those jobs could go unfilled ([Manufacturing Institute, 2024](https://themanufacturinginstitute.org/manufacturers-need-as-many-as-3-8-million-new-employees-by-2033/)). In the same release, 65% of manufacturers named attracting and retaining talent as their primary business challenge.
+
 That changes the job of shopfloor software. It's no longer enough to record what happened. It has to guide a new starter through the process so they get it right on their second day, not their second year.
 
 Connected worker capabilities do exactly that. Which is why spending on them is growing fast, with Verdantix expecting the market to reach $3 billion by 2026, driven largely by labour shortages ([Verdantix](https://marketing.verdantix.com/blog/spending-on-connected-worker-solutions-market-set-to-reach-3-0-billion-by-2026-driven-by-the-need-to-tackle-labour-shortages-at-industrial-facilities)).

@@ -4,7 +4,7 @@ slug: "who-are-mesa-and-how-do-they-define-mes"
 legacyUrl: "https://www.mesmatters.com/post/who-are-mesa-and-how-do-they-define-mes"
 description: "MESAManufacturing Enterprise Solutions Association (MESA) is a not-for-profit trade association specialising in sharing MES best practices globally. The define themselves as: \"A global community of manufacturers, producers, industry leaders and solution providers who are focused on improving Operations Management capabilities through the effective application of technology solutions and best practices.\"The MESA definition of MES is a widely recognised definition that provides a consistent framew"
 published: "2023-05-10T20:02:53.568Z"
-updated: "2023-11-05T20:41:26.684Z"
+updated: "2026-10-16T09:00:00.000Z"
 author: "Matthew Barber"
 categories: ["Thought Leadership"]
 heroImage: "/images/legacy/b75fc5_d3bdf6e75aa7420981684173ce5578dd-mv2.png"
@@ -44,3 +44,9 @@ Overall, the MESA definition of MES provides a detailed explanation of the capab
 Having said that, one of the market trends over the last few years is an expectation from customers that MES systems are more configurable and "out-of-the-box". Customised solutions are difficult to implement and support. Very few MES systems are highly configurable and out-of-the-box. When looking for an MES, this should be a critical part of your evaluation process.
 
 If you want to learn more about MESA you can visit their website: <https://mesa.org/>
+
+## MES or MOM?
+
+MESA's model reflects how broad the scope has become: well beyond production execution into quality, inventory, maintenance and more. That breadth is what the term MOM describes. I explain the difference, and why it matters when you buy, in [MES vs MOM](/post/mes-vs-mom).
+
+One point MESA has made in recent years that I strongly agree with: MES systems should be configurable and largely out of the box. Heavy customisation makes them expensive to deploy and painful to upgrade. More in [Configure, don't customise](/post/configure-dont-customise).

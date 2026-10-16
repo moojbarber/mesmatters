@@ -7,9 +7,9 @@ updated: "2026-10-16T09:00:00.000Z"
 author: "Matthew Barber"
 ---
 
-MES and MOM get used as if they mean the same thing. I've done it myself for years.
+MES and MOM are sometimes used interchangeably. I've done it myself for years, and you'll see it all over vendor websites.
 
-They don't. And the difference matters most at the point where it costs you money: when you decide what to buy.
+But really they describe different scopes. And the difference matters most at the point where it costs you money: when you decide what to buy.
 
 So let's align on some terminology, then get into why it matters.
 

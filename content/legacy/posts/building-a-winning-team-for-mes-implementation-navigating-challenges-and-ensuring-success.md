@@ -4,7 +4,7 @@ slug: "building-a-winning-team-for-mes-implementation-navigating-challenges-and-
 legacyUrl: "https://www.mesmatters.com/post/building-a-winning-team-for-mes-implementation-navigating-challenges-and-ensuring-success"
 description: "IntroductionImplementing an MES is a complex and challenging process that requires a well-coordinated team effort. In order to be successful it is crucial to build a winning team with the right mix of skills, expertise, and a shared vision. This article will explore the key elements of assembling an MES team such as: • Identifying Key Stakeholders and Decision Makers • Selecting the right MES Project Manager • Leveraging Internal Expertise and Knowledge • Seeking External Expertise and Consultan"
 published: "2023-07-23T17:34:59.804Z"
-updated: "2023-11-03T17:54:59.230Z"
+updated: "2026-10-16T09:00:00.000Z"
 author: "Matthew Barber"
 categories: ["MES Advice"]
 heroImage: "/images/legacy/b75fc5_ef0611075bea4535b568d567fe1071de-mv2.jpg"
@@ -85,7 +85,7 @@ When selecting external consultants, ensure that they have a proven track record
 
 Collaborating with experienced consultants will complement the internal team's knowledge and provide valuable insights and guidance throughout the implementation process.
 
-The MES vendor will also provide a team to run the project on their side, be sure to leverage them and take their advice. They are the experts, and often significantly more skilled and knowledgeable than dedicated external consultants.
+The MES vendor will also provide a team to run the project on their side, make good use of them and take their advice. They are the experts, and often significantly more skilled and knowledgeable than dedicated external consultants.
 
 ## Defining Clear Roles and Responsibilities
 
@@ -101,6 +101,18 @@ Communicate the benefits of the MES implementation to the entire organisation, h
 
 Engage employees in the process by asking for their feedback, involving them in testing and piloting phases, and celebrating small wins along the way. By considering how to address resistance to change early-on, you can create a more receptive and engaged team that is eager to embrace the changes brought by the implementation.
 
+## What successful teams have in common
+
+Looking across successful projects, the same five things come up again and again:
+
+1. **They invest in change management from day one.** They treat MES/MOM as a business transformation, not a technology install.
+2. **They have clear KPIs and measurable objectives.** Before the project starts, they know what success looks like: reduce downtime by a set amount, improve OEE by a set amount.
+3. **They address master data quality early.** They don't assume their data is MES-ready. See [Your ERP master data isn't ready for MES](/post/erp-master-data-for-mes).
+4. **They build a strong team.** The right people, with autonomy, support and the right incentives, positioned properly in the business.
+5. **They have genuine executive sponsorship.** Someone at C-level who removes barriers, not just approves the budget.
+
+For multi-site manufacturers, that team often becomes a permanent centre of excellence. More in [Rolling out across sites](/post/mes-multi-site-rollout).
+
 ## Empowering Your MES Team for Success
 
 An empowered team is a successful team. Provide the necessary resources, tools, and support to enable your MES team to effectively carry out their responsibilities.
@@ -110,3 +122,8 @@ Encourage open communication, collaboration, and knowledge sharing among team me
 Recognise and celebrate the team's achievements, milestones, and successful outcomes. Empowering your MES team will not only boost motivation and morale but also enhance their commitment and dedication to achieving the project goals.
 
 Ultimately, for those people working on an MES project it can be a career defining opportunity. If the project succeeds, everyone wins.
+
+## Related reading
+
+- [Resistance to change is guaranteed. Plan for it.](/post/manufacturing-change-management)
+- [How long does an MES implementation take?](/post/how-long-does-mes-implementation-take)

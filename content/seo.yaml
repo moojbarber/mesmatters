@@ -97,13 +97,13 @@ mes-functionality-logistics-warehousing:
   order: 5
 
 mes-functionality-inventory-logistics-overview:
-  title: "MES functionality: inventory and logistics overview"
-  short: "Inventory and logistics overview"
-  description: "A quick map of how inventory management and logistics fit together in MES, with links to the detailed guides on each."
+  title: "MES functionality: the complete guide"
+  short: "MES functionality guide"
+  description: "What MES/MOM actually does, one function at a time: production, quality, inventory, maintenance, tooling, energy and connected worker, with links to every guide."
   category: education
   art: flow2
   series: functionality
-  order: 6
+  order: 0
 
 implementing-kaizen-principles-with-mes-for-lean-manufacturing-success:
   title: "Kaizen and MES: using data to drive continuous improvement"
@@ -120,9 +120,9 @@ who-benefits-from-an-mes:
   art: orbits
 
 can-mes-improve-your-bottom-line:
-  title: "Can MES improve your bottom line? Where the ROI really comes from"
-  short: "MES and the bottom line"
-  description: "Scrap, downtime, labour, inventory and compliance: the places an MES moves the P&L, and how to build an honest ROI case before you buy."
+  title: "Can MES/MOM improve your bottom line? Where the ROI really comes from"
+  short: "MES/MOM and the bottom line"
+  description: "Start with the 1% OEE question. Downtime, scrap, labour, inventory, recalls and energy: where MES/MOM moves the P&L, and how to turn it into a business case."
   category: advice
   art: growth
 
@@ -141,16 +141,16 @@ building-a-winning-team-for-mes-implementation-navigating-challenges-and-ensurin
   art: network
 
 an-overview-of-the-mes-market:
-  title: "An overview of the MES market"
-  short: "The MES market"
-  description: "Why the MES market is growing, how the vendor landscape is shaped, and the trends changing how manufacturers buy shopfloor software."
+  title: "The MES/MOM market: growth, three categories and what it means for buyers"
+  short: "The MES/MOM market"
+  description: "The MES market is growing fast and most manufacturers haven't started. Why demand is rising, how the vendor landscape is splitting in three, and the trends to watch."
   category: thought-leadership
   art: bars
 
 the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence:
-  title: "The future of smart manufacturing: MES intelligence and AI"
-  short: "MES, AI and the future"
-  description: "MES already sits on the richest data in the factory. How AI and analytics turn that data into decisions, and what you need in place first."
+  title: "AI won't fix your factory. Data will."
+  short: "AI on the shopfloor"
+  description: "Every leadership team wants AI. The ones getting value started with clean, contextualised shopfloor data. Where AI really fits in smart manufacturing, and what to do first."
   category: thought-leadership
   art: mesh
 

@@ -4,7 +4,7 @@ slug: "food-beverage-industry-challenges"
 legacyUrl: "https://www.mesmatters.com/post/food-beverage-industry-challenges"
 description: "Key Challenges in Food & Beverage Manufacturing: Staying Ahead in a Dynamic IndustryThe Food & Beverage (F&B) sector is a fascinating but incredibly demanding landscape. Beyond the constant innovation to create new, delicious products, F&B manufacturers are continually wrestling with a unique set of operational hurdles. To remain competitive, profitable, and ensure sustained growth, businesses must effectively manage several core challenges that directly impact their day-to-day operations and lo"
 published: "2025-07-10T20:13:38.331Z"
-updated: "2025-07-21T13:20:52.035Z"
+updated: "2026-10-16T09:00:00.000Z"
 author: "Matthew Barber"
 categories: ["Thought Leadership"]
 heroImage: "/images/legacy/b75fc5_237bd3fc874c4f01ac03306494e99e7a-mv2.jpg"
@@ -50,6 +50,14 @@ MES/MOM streamlines workflows, replacing cumbersome paper records with digital w
 MES/MOM systems are critical for achieving true end-to-end traceability. They capture detailed records of every ingredient, every process step, and every finished batch. This allows for instant forward and backward traceability, meaning if a quality issue arises, you can pinpoint affected products in minutes, not hours, dramatically reducing the scope and cost of potential recalls. The accuracy and level of detail means that fewer batches are recalled.
 
 These systems also provide valuable real-time data on inventory and production status, feeding into better supply chain planning and enabling rapid responses to unexpected disruptions.
+
+## Yield, give-away and recipe control
+
+In food and beverage, yield from raw materials is often the number one profit driver. Small improvements here can have a huge return.
+
+Manual processes introduce variability and waste: inconsistent weighing, over-filling to stay safe, recipes adjusted by experience rather than data. MES/MOM can control recipe execution, manage ingredient substitutions, enforce shelf-life and FIFO rules, and show give-away by line, shift and product in real time.
+
+If you're about to start a project, read [The biggest barriers to MES success in food manufacturing](/post/food-manufacturing-mes-barriers) first.
 
 ## Summary
 

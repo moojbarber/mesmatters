@@ -4,7 +4,7 @@ slug: "what-is-oee-overall-equipment-effectiveness"
 legacyUrl: "https://www.mesmatters.com/post/what-is-oee-overall-equipment-effectiveness"
 description: "What is OEEOverall Equipment Effectiveness (OEE) is a global standard used across all industries in manufacturing to measure the effectiveness of a production line. It takes into account how much good material was created on the production line, compared to the amount of good material that theoretically could have been created. Factors like scrap, downtime, and slow running equipment negatively affect the OEE figure, which can be used for continuous improvement activities, and to benchmark equip"
 published: "2023-06-08T15:40:10.900Z"
-updated: "2023-11-04T17:12:49.265Z"
+updated: "2026-10-16T09:00:00.000Z"
 author: "Matthew Barber"
 categories: ["MES Education"]
 heroImage: "/images/legacy/b75fc5_2367592c66354089963cc1ae2120014b-mv2.jpg"
@@ -133,6 +133,24 @@ Overall, the best you could have done in 1 hour is 60 (minutes) x 50 (words) = 3
 > Your OEE was 57% (75% x 80% x 95%) which is 1710 words.
 
 
+## Where you count changes where the losses show
+
+Here's a weird one. Move the sensor that counts production on a line, and your Performance and Quality figures can swing wildly while OEE stays exactly the same.
+
+It isn't a glitch. OEE is fundamentally (good units × target cycle time) / planned production time. If good units and planned time don't change, OEE doesn't either. But where you count shifts the blame between Availability, Performance and Quality.
+
+**Counting before the bottleneck**, the bottleneck looks like it's hitting its speed because it's being fed well, scrap inside the bottleneck is invisible, and downstream back-ups show up as idle time, making Availability look worse than it is.
+
+**Counting after the bottleneck** gives you reality: if the machine struggled to keep up, it shows as a speed loss, and Availability measures the time it was actually producing sellable parts.
+
+So be strategic about your data points:
+
+- **Downtime:** if you only monitor one machine, make it the bottleneck. Track the others to see whether it's being starved or blocked.
+- **Scrap:** ideally after every operation that can produce scrap. Prioritise where you can't do them all.
+- **Counts:** the more places the better, ideally an "in" and "out" for the line, so you can see losses by operation.
+
+And remember the micro-stops. Short stops of a few seconds are almost never recorded manually, but they add up, and they're often the real killer. Automatic data capture is usually the first time people see them.
+
 ## Benchmarking
 
 As mentioned earlier, OEE is always calculated based on a unit of "time". This means that benchmarking can be performed across different materials, manufacturing processes, manufacturing plants, and even across industries.
@@ -152,3 +170,9 @@ Manufacturers who manually collect data on the shopfloor, and then switch to an 
 ## Summary
 
 OEE is a measure of the productivity of production equipment. OEE is calculated by multiplying availability, performance, and quality rates. Availability is the percentage of time that equipment is available for production. Performance is the percentage of the maximum possible production rate achieved by equipment. Quality is the percentage of good units produced by equipment. MES systems provide real-time visibility into OEE, enabling manufacturers to monitor and optimise equipment productivity. By analysing OEE over time, manufacturers can identify trends and patterns in equipment performance, enabling them to take proactive measures to improve productivity and reduce costs. OEE is critical for monitoring production performance, benchmarking across processes and factories, and for continuous improvement activities.
+
+## Related reading
+
+- [Manufacturing KPIs beyond OEE](/post/manufacturing-kpis-beyond-oee)
+- [MES functionality: production monitoring](/post/mes-functionality-production-monitoring)
+- [Predictive maintenance needs data you probably aren't collecting yet](/post/predictive-maintenance-data)

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img">
+
+<defs>
+  <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="200" y1="0" x2="1400" y2="0">
+    <stop offset="0" stop-color="#8b6cff"/><stop offset="1" stop-color="#33d4e0"/>
+  </linearGradient>
+  <linearGradient id="hot" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#8b6cff" stop-opacity=".38"/><stop offset="1" stop-color="#33d4e0" stop-opacity=".22"/>
+  </linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity=".07"/><stop offset="1" stop-color="#ffffff" stop-opacity=".025"/>
+  </linearGradient>
+  <linearGradient id="barfill" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8b6cff" stop-opacity=".3"/><stop offset="1" stop-color="#8b6cff" stop-opacity=".04"/>
+  </linearGradient>
+  <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#33d4e0" stop-opacity=".28"/><stop offset="1" stop-color="#8b6cff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="liquid" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#33d4e0" stop-opacity=".35"/><stop offset="1" stop-color="#8b6cff" stop-opacity=".2"/>
+  </linearGradient>
+  <linearGradient id="liquidp" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ff6fd8" stop-opacity=".3"/><stop offset="1" stop-color="#8b6cff" stop-opacity=".18"/>
+  </linearGradient>
+  <radialGradient id="bl-v"><stop offset="0" stop-color="#6a3df0" stop-opacity=".62"/><stop offset=".7" stop-color="#6a3df0" stop-opacity="0"/></radialGradient>
+  <radialGradient id="bl-t"><stop offset="0" stop-color="#12b5c9" stop-opacity=".5"/><stop offset=".7" stop-color="#12b5c9" stop-opacity="0"/></radialGradient>
+  <radialGradient id="bl-m"><stop offset="0" stop-color="#c53fb8" stop-opacity=".45"/><stop offset=".7" stop-color="#c53fb8" stop-opacity="0"/></radialGradient>
+  <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1.1" fill="#fff" fill-opacity=".13"/></pattern>
+  <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".9" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <mask id="dotmask"><rect width="1600" height="900" fill="url(#fade)"/></mask>
+  <radialGradient id="vignette" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#0a0820" stop-opacity="0"/><stop offset="1" stop-color="#0a0820" stop-opacity=".7"/></radialGradient>
+  <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="1600" height="900" fill="#0a0820"/>
+<circle cx="177.7" cy="105.9" r="505.3" fill="url(#bl-v)" opacity="0.95"/>
+<circle cx="1540.9" cy="92.7" r="526.9" fill="url(#bl-t)" opacity="0.8"/>
+<circle cx="904.7" cy="851" r="376.1" fill="url(#bl-m)" opacity="0.6"/>
+<rect width="1600" height="900" fill="url(#dots)" mask="url(#dotmask)"/>
+<path d="M-20,748.8 C21.4,749 149.5,748.1 228.2,750 C306.9,752 370,761.5 452.2,760.5 C534.4,759.4 637.6,742.1 721.4,743.6 C805.3,745.1 870,764.4 955.3,769.7 C1040.6,775.1 1139.4,778.7 1233.4,775.7 C1327.4,772.8 1433.2,759.6 1519.2,751.9 C1605.3,744.3 1711.1,733.5 1749.5,729.8" fill="none" stroke="url(#g)" stroke-width="2.5" opacity=".55"/>
+<circle cx="955.3" cy="769.7" r="5" fill="#33d4e0" filter="url(#glow)" opacity=".8"/>
+<g>
+<rect x="150" y="210" width="360" height="460" rx="22" fill="url(#glass)" stroke="url(#g)" stroke-width="1.5" opacity="1"/>
+<line x1="190" y1="260" x2="364.6" y2="260" stroke="#8b6cff" stroke-width="6" opacity="0.45" stroke-linecap="round"/>
+<line x1="190" y1="318" x2="355.6" y2="318" stroke="#8b6cff" stroke-width="6" opacity="0.45" stroke-linecap="round"/>
+<line x1="190" y1="376" x2="437.2" y2="376" stroke="#8b6cff" stroke-width="6" opacity="0.45" stroke-linecap="round"/>
+<line x1="190" y1="434" x2="363.8" y2="434" stroke="#8b6cff" stroke-width="6" opacity="0.45" stroke-linecap="round"/>
+<line x1="190" y1="492" x2="415.2" y2="492" stroke="#8b6cff" stroke-width="6" opacity="0.45" stroke-linecap="round"/>
+<line x1="190" y1="550" x2="410.7" y2="550" stroke="#8b6cff" stroke-width="6" opacity="0.45" stroke-linecap="round"/>
+<line x1="190" y1="608" x2="453" y2="608" stroke="#8b6cff" stroke-width="6" opacity="0.45" stroke-linecap="round"/>
+<rect x="1090" y="210" width="360" height="460" rx="22" fill="url(#hot)" stroke="url(#g)" stroke-width="2.5" opacity="1" filter="url(#glow)"/>
+<rect x="1130" y="250" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<rect x="1228" y="250" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<rect x="1326" y="250" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<rect x="1130" y="348" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<rect x="1228" y="348" width="82" height="82" rx="12" fill="rgba(51,212,224,.2)" stroke="#33d4e0" stroke-width="1.4" opacity="1" filter="url(#glow)"/>
+<rect x="1326" y="348" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<rect x="1130" y="446" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<rect x="1228" y="446" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<rect x="1326" y="446" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<rect x="1130" y="544" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<rect x="1228" y="544" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<rect x="1326" y="544" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<path d="M510,280 C538.3,280 611.7,286 680,280 C748.3,274 851.7,250 920,244 C988.3,238 1061.7,244 1090,244" stroke="url(#g)" stroke-width="2" fill="none" opacity="0.85" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="757.8" cy="262" r="5" fill="#33d4e0" stroke="none" stroke-width="2" opacity="1"/>
+<path d="M510,360 C538.3,360 611.7,363 680,360 C748.3,357 851.7,345 920,342 C988.3,339 1061.7,342 1090,342" stroke="url(#g)" stroke-width="2" fill="none" opacity="0.85" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="723.9" cy="351" r="5" fill="#33d4e0" stroke="none" stroke-width="2" opacity="1"/>
+<path d="M510,440 C538.3,440 611.7,440 680,440 C748.3,440 851.7,440 920,440 C988.3,440 1061.7,440 1090,440" stroke="url(#g)" stroke-width="2" fill="none" opacity="0.85" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="906.2" cy="440" r="5" fill="#33d4e0" stroke="none" stroke-width="2" opacity="1"/>
+<path d="M510,520 C538.3,520 611.7,517 680,520 C748.3,523 851.7,535 920,538 C988.3,541 1061.7,538 1090,538" stroke="url(#g)" stroke-width="2" fill="none" opacity="0.85" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="738.6" cy="529" r="5" fill="#33d4e0" stroke="none" stroke-width="2" opacity="1"/>
+<path d="M510,600 C538.3,600 611.7,594 680,600 C748.3,606 851.7,630 920,636 C988.3,642 1061.7,636 1090,636" stroke="url(#g)" stroke-width="2" fill="none" opacity="0.85" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="875.7" cy="618" r="5" fill="#33d4e0" stroke="none" stroke-width="2" opacity="1"/>
+<circle cx="800" cy="440" r="20.8" fill="#33d4e0" stroke="none" stroke-width="2" opacity="0.18"/>
+<circle cx="800" cy="440" r="8" fill="#0a0820" stroke="#33d4e0" stroke-width="2.5" opacity="1" filter="url(#glow)"/>
+</g>
+<rect width="1600" height="900" fill="url(#vignette)"/>
+</svg>

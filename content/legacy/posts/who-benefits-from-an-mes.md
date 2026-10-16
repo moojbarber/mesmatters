@@ -4,7 +4,7 @@ slug: "who-benefits-from-an-mes"
 legacyUrl: "https://www.mesmatters.com/post/who-benefits-from-an-mes"
 description: "Well the short answer to the question is.......everyone!But let's delve in a little deeper and look at each user role related to manufacturing operations.We've broken this down into three key user groups:1. Operational users who work in in the factory. These users are typically performing transactions in MES and recording data, as well as viewing real-time information about operational performance. Operational users are usually reactive to events occurring in MES.2. Managers who are interested i"
 published: "2023-05-11T14:01:30.145Z"
-updated: "2023-11-04T16:34:08.716Z"
+updated: "2026-10-16T09:00:00.000Z"
 author: "Matthew Barber"
 categories: ["Thought Leadership"]
 heroImage: "/images/legacy/b75fc5_bbd386cb7e534af29dc17cf964e850b3-mv2.jpg"
@@ -113,8 +113,23 @@ The COO is responsible for the organisation's operations, including production, 
 
 The CEO uses the MES system to gain a high-level overview of the organisation's operations and performance. They can access key performance indicators, analyse trends, monitor production efficiency, ensure alignment with strategic goals, and make informed decisions based on real-time data. The MES system empowers CEOs to have a holistic view of the company's manufacturing operations, enabling them to drive growth, improve competitiveness, and maximize profitability.
 
+## The #1 reason to invest
+
+If I had to pick one reason to invest in MES/MOM, it wouldn't be the technology itself.
+
+It's giving your people the tools to make better decisions, faster.
+
+When I talk to manufacturers I see the same pattern. Operators scrambling for information. Supervisors chasing data. Managers making decisions on gut feel because they don't have real-time visibility. That's exhausting, and it costs more than you think.
+
+A proper MES/MOM puts the right information in front of the right people at the right time. Teams stop firefighting and start problem-solving. Nobody wants to feel like they're working blind.
+
 ## Summary
 
 These are some of the key users who interact with an MES system and the benefits they can derive from its implementation. The specific functionalities and features of the MES system may vary depending on the vendor and the organisation's requirements.
 
 Unfortunately, some MES vendors will not be able to deliver all of the benefits discussed in this article, so make sure you do your research.
+
+## Related reading
+
+- [Connected worker: why your operators need one app, not five](/post/connected-worker-one-app-not-five)
+- [How to build an MES business case leadership will sign](/post/mes-business-case)

@@ -4,7 +4,7 @@ slug: "mes-basics-production-scheduling"
 legacyUrl: "https://www.mesmatters.com/post/mes-basics-production-scheduling"
 description: "IntroductionProduction scheduling plays a crucial role in the efficient management of manufacturing operations. Manufacturing Execution Systems (MES) serve as a vital tool in this process, offering features that enhance visibility, control, and flexibility.The initial production order schedule is generated in Enterprise Resource Planning (ERP), which looks at the customer demand and existing stock levels to determine which semi-finished and finished goods need to be made. ERP typically does some"
 published: "2023-05-10T13:31:24.585Z"
-updated: "2023-11-04T17:23:32.611Z"
+updated: "2026-10-16T09:00:00.000Z"
 author: "Matthew Barber"
 categories: ["MES Education"]
 heroImage: "/images/legacy/b75fc5_9f9575759cec446896793fac345b5b53-mv2.png"
@@ -47,6 +47,16 @@ MES handles allocation of resources to production orders, such as equipment, per
 #### Production Order Release to Manufacturing
 Once the schedule is finalised, MES releases production orders to the shop floor, providing operators with clear visibility of their tasks, priorities, and any specific instructions associated with each order. This enables smooth execution and facilitates efficient workflow management. Communication is improved, and changes to the schedule can be seen by operators in real-time, without the need for new paperwork to be manually distributed.
 
+## ERP, APS and MES: who does what
+
+It helps to be clear about the roles:
+
+- **ERP** creates production orders from demand and stock levels, with an initial plan.
+- **APS** (advanced planning and scheduling) is needed when scheduling is complex: many constraints, shared resources, sequence-dependent changeovers.
+- **MES/MOM** executes the schedule on the shopfloor, allows last-minute adjustments, and feeds back real progress.
+
+The real value is a live schedule. A printed schedule is out of date before the ink is dry. When the schedule reflects what's actually happening, it adjusts when a machine goes down, and the planner knows immediately rather than at the end of the shift.
+
 ## Benefits of MES Production Scheduling
 Implementing MES production scheduling brings numerous benefits to manufacturing businesses.
 
@@ -64,6 +74,8 @@ MES equips manufacturing businesses with the agility to respond to changes in de
 
 ## Conclusion
 
-Production scheduling within MES enhances the way manufacturing businesses manage their operations. By serving as a link between ERP systems and the shopfloor, MES enables seamless data integration and alignment of resources with the production schedule. The real-time visibility and adjustment capabilities empower production schedulers to optimise efficiency and ensure timely order fulfilment.
+Production scheduling within MES enhances the way manufacturing businesses manage their operations. By serving as a link between ERP systems and the shopfloor, MES keeps data integrated and aligns of resources with the production schedule. The real-time visibility and adjustment capabilities empower production schedulers to optimise efficiency and ensure timely order fulfilment.
 
 Production scheduling functionality varies enormously between MES systems. Be careful, because some MES providers have a separate application for scheduling, rather than it being built into the core MES application. Other MES applications partner with 3rd party scheduling tools. In both of these cases, interfaces will be required to transfer schedule changes, which can impact the reactivity and real-time benefits MES can otherwise achieve.
+
+This article is part of the [MES functionality series](/post/mes-functionality-inventory-logistics-overview). Related: [The smart factory tech stack](/post/smart-factory-tech-stack).

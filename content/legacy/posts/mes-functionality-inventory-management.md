@@ -4,7 +4,7 @@ slug: "mes-functionality-inventory-management"
 legacyUrl: "https://www.mesmatters.com/post/mes-functionality-inventory-management"
 description: "TerminologyAs a general concept, inventory is the physical material that exists in the factory, this could be: • Raw materials - received into the factory from suppliers. • Semi-finished materials - created as part of the manufacturing process, with their own unique material number. The materials are not sold to customers, but are consumed into subsequent manufacturing processes. • Finished goods - the final material which is ready to be shipped.Inventory can be tracked and managed at several di"
 published: "2023-07-12T14:40:43.726Z"
-updated: "2023-11-04T17:24:33.683Z"
+updated: "2026-10-16T09:00:00.000Z"
 author: "Matthew Barber"
 categories: ["MES Education"]
 heroImage: "/images/legacy/b75fc5_ad26781dd6234a9c85bdd1a51126c7f8-mv2.png"
@@ -159,7 +159,7 @@ Sometimes this can lead to misunderstandings around where the ERP/MES boundaries
 
 You may hear people say things like "ERP is the master of Inventory, and should be responsible for all Inventory transactions, even on the shopfloor in ERP". I'd urge you to proceed with caution if you hear people say this, it probably means they are inexperienced with MES, remember MES is still a rapidly growing market, people are still learning, and best practices change quickly.
 
-You can read more about the decision making process around boundaries in [this article](https://www.mesmatters.com/post/mes-functionality-logistics-warehousing).
+You can read more about the decision making process around boundaries in [this article](/post/mes-functionality-logistics-warehousing).
 
 #### Creating Inventory
 
@@ -216,6 +216,10 @@ Of course, this isn't true for all MES systems, but in general MES is able to ca
 
 If complaints are raised by a customer, this will be tracked back to the inventory consumed into the process, validating quality check results, and the supplier batch information for raw materials.
 
+## Traceability goes further than genealogy
+
+Knowing which lots went into which products is only the start. The real value is the supplementary data captured alongside: the tooling used, quality results at every stage, the operator and machine, and the process parameters at the time. That's what turns a recall from days of investigation into minutes. More in [Your traceability probably isn't as good as you think](/post/manufacturing-traceability).
+
 ## Benefits
 
 Using MES to manage inventory functions enables a number of benefits when combined with other MES functions.
@@ -235,3 +239,5 @@ MES bring improved efficiency and reduces waste by printing labels on demand. Th
 ## Summary
 
 In conclusion, MES plays a critical role in managing and optimising inventory operations on the shopfloor. By providing real-time visibility into inventory levels and movements, MES enables manufacturers to make data-driven decisions that improve efficiency, reduce costs, and increase customer satisfaction. Key inventory processes such as warehouse management, replenishment to production lines, consumption of materials, creating WIP, creating inventory, printing labels, managing the state and location of inventory, receiving goods in, shipping, and picking customer orders are all important components of an MES system's inventory operations. By implementing an MES system for inventory operations, manufacturers can improve inventory accuracy, reduce costs, and increase customer satisfaction.
+
+This article is part of the [MES functionality series](/post/mes-functionality-inventory-logistics-overview).

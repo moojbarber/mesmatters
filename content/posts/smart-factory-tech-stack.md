@@ -1,0 +1,72 @@
+---
+title: "The smart factory tech stack, system by system"
+short: "The smart factory tech stack"
+description: "ERP, PLM, APS, MES/MOM, WMS, CMMS, LIMS, historians and data platforms. What each system does, where the boundaries sit, and how they fit together."
+published: 2026-10-16
+category: education
+art: stack
+---
+
+Your IT landscape isn't, and shouldn't be, a single system.
+
+A smart factory runs on several applications working together. The skill is knowing what each one is for, where the boundaries sit, and when you actually need it. Get that wrong and you either over-buy or stretch a system into a job it was never designed for.
+
+Here's the stack, layer by layer.
+
+## The enterprise layer
+
+**ERP (Enterprise Resource Planning)** runs the business. Finance, procurement, sales orders, costing, high-level planning and inventory valuation. It's where production orders are usually created, based on demand and stock.
+
+**PLM (Product Lifecycle Management)** holds the product definition. Engineering designs, specifications, bills of materials, changes and their approvals. It's the source of truth for what a product *is*.
+
+**APS (Advanced Planning and Scheduling)** produces detailed, constraint-based schedules when ERP's planning isn't enough. Useful where you have complex sequencing, shared resources or tight changeover constraints.
+
+## The operations layer
+
+**MES/MOM** runs the factory. It receives orders from ERP, executes them on the shopfloor, enforces quality checks, tracks inventory and traceability, supports maintenance, guides operators and sends actuals back. I explain the distinction between MES and MOM in [MES vs MOM](/post/mes-vs-mom).
+
+It sits at the heart of the stack, because it's the system that connects the business to the machines, and the departments to each other.
+
+Alongside it, depending on how much depth you need:
+
+- **WMS (Warehouse Management System)** for complex warehousing: optimised picking, storage strategies, automation, yard and dock management. Simple warehouses often don't need one.
+- **CMMS or EAM** for maintenance and asset management. A full EAM makes sense for asset-heavy operations with advanced needs. Otherwise MES/MOM with maintenance capability keeps production and maintenance on the same data.
+- **LIMS (Laboratory Information Management System)** for lab testing, sample management and certificates, especially in process and regulated industries.
+- **QMS (Quality Management System)** for enterprise quality processes: complaints, CAPA, audits, document control. Shopfloor quality checks and SPC usually belong in MES/MOM.
+
+## The connectivity layer
+
+Below the operations layer sit the machines, PLCs and sensors, and the connectivity that links them upwards: OPC UA, MQTT, IIoT platforms and, increasingly, a unified namespace. I explain those in [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
+
+The golden rule here: don't connect ERP directly to machines. ERP needs aggregated data at sensible intervals, not thousands of signals a second. That's MES/MOM's job.
+
+## The data layer
+
+**Historians** store high-frequency time-series data: every temperature reading, every pressure, every second.
+
+**Data warehouses, lakes and platforms** bring data together from MES/MOM, ERP, historians and other sources for reporting, analytics and AI.
+
+I go into those in [Historians, data lakes and data fabric](/post/manufacturing-data-platforms).
+
+## How it fits together
+
+Two ways of looking at it help.
+
+**Vertically**, it's the [ISA-95](/post/what-is-the-isa-95-model-and-where-does-mes-fit) stack. Orders, schedules and master data flow down from ERP. Actuals, consumption and quality results flow up from the shopfloor. Each layer works at the level of detail it needs.
+
+**Horizontally**, it's the flow of a customer order through the factory: from product design in PLM, to the order in ERP, the schedule in APS, execution and quality in MES/MOM, storage in WMS, and shipment back through ERP.
+
+## Questions to ask about each system
+
+For every system in your landscape, ask:
+
+- Is the functionality we already have enough for our requirements here?
+- If not, do we need more depth in an existing system, or a dedicated application?
+- Where exactly is the boundary, and what data crosses it, how often, at what level of detail?
+- Who uses it, and how many applications will they need to open to do their job?
+
+That last question is the one most people skip. Every boundary you add is an integration to build and maintain, and often another screen for an operator.
+
+It's not a one-size-fits-all approach. It changes with your processes, your scale and your budget. But it pays to make long-term, deliberate decisions and pick applications that will grow with you.
+
+Which system in your landscape is doing a job it was never designed for?

@@ -1,87 +1,75 @@
 ---
-title: "Can MES Improve Your Bottom Line?"
 slug: "can-mes-improve-your-bottom-line"
 legacyUrl: "https://www.mesmatters.com/post/can-mes-improve-your-bottom-line"
-description: "The Role of MES in ManufacturingManufacturing Execution Systems (MES) are continuing to gain popularity as manufacturers realise the value they bring. This value can often be indirect, but there is no getting away from the fact that an MES can have a direct positive impact on your bottom line.I've covered MES at length in other blog posts, but here I want to focus directly on the financial benefits of implementing MES. Return on Investment (ROI) is challenging to calculate accurately (especially"
 published: "2023-11-05T14:53:41.612Z"
-updated: "2023-11-05T14:53:41.612Z"
+updated: "2026-10-16T09:00:00.000Z"
 author: "Matthew Barber"
-categories: ["Thought Leadership"]
-heroImage: "/images/legacy/b75fc5_6aa31a9b6e704f3293633b1cdc6bdf81-mv2.jpg"
-wordCount: 834
 ---
 
-## The Role of MES in Manufacturing
+MES/MOM is continuing to gain popularity as manufacturers realise the value it brings. Some of that value is indirect. But there's no getting away from the fact that it can have a direct, measurable impact on your bottom line.
 
-Manufacturing Execution Systems (MES) are continuing to gain popularity as manufacturers realise the value they bring. This value can often be indirect, but there is no getting away from the fact that an MES can have a direct positive impact on your bottom line.
+ROI is hard to calculate accurately, especially upfront. There are a lot of indirect benefits, and the benefits grow over time as people adopt and understand the system. But here's where the money actually comes from.
 
-I've covered MES at length in other blog posts, but here I want to focus directly on the financial benefits of implementing MES. Return on Investment (ROI) is challenging to calculate accurately (especially up front), but hopefully this helps shine a light on some areas where MES generates higher profitability for manufacturers.
+## Start with the 1% question
 
-As a quick refresher to avoid you bouncing to another article...
+I always ask the same question: what would a 1% improvement in OEE mean for your business?
 
-The primary role of an MES is to manage and control the execution of all manufacturing operations in the factory. It does this by tracking, controlling, and documenting the transformation of raw materials into finished goods. This real-time data provides valuable insights that can be used to make informed decisions about production processes. MES covers all operational departments: Production, Quality, Inventory/Logistics, and Maintenance.
+Work it out for your bottleneck. More output from equipment you already own. Fewer overtime shifts. Perhaps a capital project you no longer need. For most manufacturers it's a very significant number.
 
-MES bridges the gap between the plant floor and the business applications (like ERP), providing a holistic view of production. This allows for better planning, scheduling, and control of manufacturing operations, leading to increased efficiency and productivity.
+Now consider that well-implemented MES/MOM often delivers double-digit improvements. In Deloitte's 2025 Smart Manufacturing Survey, large manufacturers reported average improvements of 10% to 20% in production output and 10% to 15% in unlocked capacity from smart manufacturing initiatives ([Deloitte, 2025](https://www.deloitte.com/us/en/insights/industry/manufacturing-industrial-products/2025-smart-manufacturing-survey.html)).
 
-## How MES Improves Your Bottom Line
+## Where the savings come from
 
-Now that we understand the role of MES in manufacturing, let's look at how it directly impacts your bottom line.
+### Less downtime, more output
 
-#### Improved Efficiency
+Downtime is usually the biggest loss in OEE. Automatic stop detection, accurate reasons and visibility of micro-stops show you exactly where capacity is going. Most people are genuinely surprised when they first see their short stops.
 
-By improving efficiency and productivity, MES reduces the cost of production. This is achieved through better planning and scheduling, reduced downtime, and elimination of waste (I'll cover these in more detail below). The result is a significant reduction in operational costs, directly improving the bottom line.
+### Less scrap and rework
 
+Real-time quality checks, SPC that catches drift before it becomes defects, and error-proofing that stops the wrong material being used. Every scrapped part also wastes the machine time, labour and energy that went into it.
 
-#### Real-Time Visibility of Issues
+### Less labour on admin
 
-One of the key benefits of MES is its ability to collect and analyse data in real-time. This allows for immediate identification and correction of problems, preventing costly delays and waste.
+Hours spent on paperwork, typing data into spreadsheets, building reports and chasing information. Digital data capture gives that time back to value-adding work.
 
-#### Increased OEE
+### Lower inventory and WIP
 
-By streamlining processes, providing better visibility into operations, and empowering workers with necessary information and worker instructions, MES can increase overall productivity, leading to higher output with the same or fewer resources.
+When you can trust real-time inventory and WIP data, you stop holding buffers to cover for not trusting it. That frees working capital.
 
-Downtime is often the single biggest contributor to [OEE](https://www.mesmatters.com/post/what-is-oee-overall-equipment-effectiveness), so getting a handle on this improves efficiency and boosts profitability.
+### Faster, narrower recalls
 
-> Imagine how valuable just a 1% improvement in your OEE would be for your business.
+With full traceability, you can identify exactly which products are affected and quarantine only those, instead of everything from a whole week. See [Your traceability probably isn't as good as you think](/post/manufacturing-traceability).
 
-#### Continuous Improvement
+### Better ERP data
 
-You can't improve something unless you measure it, and MES records all the relevant data for continuous improvement activities, in real-time.
+MES/MOM posts actual consumption, counts and scrap back to ERP rather than backflushed estimates. Better costing, better planning, fewer surprises at month end. More in [MES vs ERP](/post/implementing-mes-can-simplify-your-erp).
 
-By identifying inefficiencies and bottlenecks, businesses can make necessary adjustments to their processes, leading to increased productivity and reduced costs. Some manufacturers implement [Kaizen](https://www.mesmatters.com/post/implementing-kaizen-principles-with-mes-for-lean-manufacturing-success) to further aid continuous improvement activities.
+### Lower energy cost
 
-#### Improve Quality Control
+Linking energy to machines and orders exposes idle running and waste. See [MES functionality: energy](/post/mes-functionality-energy).
 
-MES plays a crucial role in quality control. It ensures that all products meet the required standards and specifications. This not only reduces the risk of defective products but also ensures compliance with industry regulations.
+## The benefits you can't easily put a number on
 
-Improved quality control leads to increased customer satisfaction, and reduced waste. Delivering high-quality products consistently means businesses can build a strong reputation in the market, leading to increased sales and profitability.
+Some of the biggest benefits are harder to quantify:
 
-#### Reduced Waste and Rework
+- **Happier customers**, from better quality and more reliable delivery
+- **Faster onboarding**, because the system guides new starters
+- **Fewer arguments**, because everyone works from the same data
+- **Less firefighting**, so people can work on improvement instead
+- **A foundation for AI**, which needs exactly the data MES/MOM creates
 
-Waste can be reduced in many ways.
+Don't leave these out of your business case. But don't rely on them either. Lead with the hard numbers.
 
-MES can help limit overproduction and reduce waste, cutting unnecessary costs associated with excess inventory and inefficient production practices.
+## The benefits grow over time
 
-Waste can be reduced through higher quality products, reducing the scrap created. MES can help drive operators to reduce waste through better worker instructions, and process validation preventing operators from doing the wrong thing.
+Think about your first smartphone. You bought it to make calls. Now calls are near the bottom of what you use it for.
 
-Rework is also costly, MES helps improve the First-Time-Through-Quality (FTTQ) figure.
+MES/MOM is similar. Manufacturers usually invest for one or two reasons: efficiency, compliance, visibility. Those who truly adopt it find more value every year, as they use more of the data and extend into new areas. Ask them what would happen if you took it away, and the answer is usually: it's unthinkable.
 
-#### Reduced Inventory Costs
+## Turn it into a business case
 
-MES helps in reducing inventory costs. By providing real-time visibility into the manufacturing process, it allows for better inventory management and reduced Work In Progress (WIP) inventory.
+I've seen companies pay for their MES in months rather than years, on tangible benefits alone. But you need your own numbers to prove it.
 
-This means less money tied up in inventory, reducing carrying costs and improving cash flow.
+Quantify your current costs: downtime, scrap, overtime, late deliveries, inventory. Estimate realistic improvements. Add implementation costs honestly, including your own people. I walk through it in [How to build an MES business case leadership will sign](/post/mes-business-case), and pull together the wider research in [What the research says about smart factory ROI](/post/smart-factory-roi-research).
 
-#### Optimised Scheduling
-
-MES helps in better planning and scheduling of production activities, reducing idle time, optimising machine utilisation, and facilitating just-in-time production. This optimised scheduling helps to lower costs associated with overtime or underutilisation of resources. Usually MES would provide relevant data to a 3rd party finite capacity scheduler to achieve this.
-
-#### Compliance and Regulatory Costs
-
-MES assists in maintaining compliance with industry regulations and standards, reducing the risk of non-compliance fines or penalties, which can negatively impact the bottom line.
-
-## Conclusion
-
-MES plays a crucial role in modern manufacturing. By providing real-time visibility into the manufacturing process, it enables businesses to optimise their operations, improve product quality, and reduce costs. The result is a significant improvement in the bottom line, making MES a worthwhile investment for any manufacturing business.
-
-So, if you're looking to improve your bottom line, it's time to consider implementing an MES in your manufacturing operations. The benefits are clear, and the potential for increased profitability is significant.
+So, what would a 1% improvement in OEE be worth to you?

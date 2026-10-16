@@ -4,7 +4,7 @@ slug: "mes-functionality-production-monitoring"
 legacyUrl: "https://www.mesmatters.com/post/mes-functionality-production-monitoring"
 description: "Production MonitoringPerhaps the most fundamental functionality of an MES system is to manage and monitor production operations. Once the production schedule has been released to production, operators are able to start and monitor production runs on production lines. An MES system can manage this process through direct communication with the shopfloor equipment. As a result of managing the process, vast quantities of useful data about the process are collected as a by-product.A production order"
 published: "2023-06-08T08:56:01.503Z"
-updated: "2023-11-04T17:27:59.315Z"
+updated: "2026-10-16T09:00:00.000Z"
 author: "Matthew Barber"
 categories: ["MES Education"]
 heroImage: "/images/legacy/b75fc5_a534adcd2fce408680b1a87dc1a3d1ab-mv2.png"
@@ -75,13 +75,23 @@ It's important to consider whether each user has their own account for the MES s
 
 OEE is a measure of the productivity of production equipment. OEE is calculated by multiplying availability, performance, and quality rates.
 
-It's such an important topic that it has it's own [OEE blog post.](https://www.mesmatters.com/post/what-is-oee-overall-equipment-effectiveness).
+It's such an important topic that it has it's own [OEE blog post.](/post/what-is-oee-overall-equipment-effectiveness).
 
 #### Executing Production Orders
 
 Executing production orders is a critical aspect of production operations. MES systems provide real-time visibility into production orders, enabling manufacturers to monitor and optimise production schedules. By tracking the progress of production orders, manufacturers can identify potential bottlenecks or issues that may impact production output. MES systems also provide tools for managing and scheduling production orders, enabling manufacturers to optimise resource allocation and ensure on-time delivery.
 
 For more information about production orders scheduling, see this article...HERE
+
+## Prevent, don't just record
+
+Some people think MES just records what happened. That's a limited view.
+
+A good MES prevents problems. It validates actions in real time, catches deviations as they happen and enforces a standard way of handling exceptions. The wrong material can't be consumed. An order can't start without its first-off check. A stop can't be closed without a reason.
+
+If your system isn't doing that, you're just documenting failures after the fact. Some manufacturers spend a lot on systems that do nothing more than create a digital paper trail.
+
+Production monitoring is the production pillar of MES/MOM. On its own it's valuable. Connected to quality, inventory and maintenance on the same data, it's far more powerful, which is the point I make in [MES vs MOM](/post/mes-vs-mom).
 
 ## Automated vs Manual Data Collection
 
@@ -132,3 +142,5 @@ Some of the primary reasons for investing in a production monitoring solution wh
 ## Conclusion
 
 MES production operations play a crucial role in optimising manufacturing processes by providing real-time visibility and insights into key metrics such as production counts, scrap counts, downtime, labour, OEE, and executing production orders. With the help of MES systems, manufacturers can gain a deep understanding of their production operations, make data-driven decisions, and take proactive measures to address issues that arise. By leveraging MES systems, manufacturers can reduce costs, increase productivity, and improve overall efficiency. Ultimately, integrating MES systems into production operations can help manufacturers remain competitive and thrive in an increasingly complex and competitive marketplace.
+
+This article is part of the [MES functionality series](/post/mes-functionality-inventory-logistics-overview). Related: [What is OEE?](/post/what-is-oee-overall-equipment-effectiveness) and [Manufacturing KPIs beyond OEE](/post/manufacturing-kpis-beyond-oee).

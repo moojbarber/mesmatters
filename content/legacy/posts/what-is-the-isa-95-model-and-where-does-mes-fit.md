@@ -2,9 +2,9 @@
 title: "What is the ISA-95 model, and where does MES fit?"
 slug: "what-is-the-isa-95-model-and-where-does-mes-fit"
 legacyUrl: "https://www.mesmatters.com/post/what-is-the-isa-95-model-and-where-does-mes-fit"
-description: "ISA-95 ModelThe ISA-95 model, also known as ANSI/ISA-95 or ISA-95, is a global standard for enterprise and control system integration. The model is designed to provide a consistent framework for integrating business and manufacturing processes, enabling seamless information exchange between enterprise and control systems on the shopfloor.  ISA-95 is widely recognised and accepted as the de-facto standard for manufacturing system integration and is used by many companies around the world. The mod"
+description: "ISA-95 ModelThe ISA-95 model, also known as ANSI/ISA-95 or ISA-95, is a global standard for enterprise and control system integration. The model is designed to provide a consistent framework for integrating business and manufacturing processes, enabling consistent information exchange between enterprise and control systems on the shopfloor.  ISA-95 is widely recognised and accepted as the de-facto standard for manufacturing system integration and is used by many companies around the world. The mod"
 published: "2023-05-10T19:34:48.706Z"
-updated: "2023-11-05T20:41:50.354Z"
+updated: "2026-10-16T09:00:00.000Z"
 author: "Matthew Barber"
 categories: ["Thought Leadership"]
 heroImage: "/images/legacy/b75fc5_b24ed85c25c24154aa252504f61df215-mv2.png"
@@ -13,7 +13,7 @@ wordCount: 953
 
 ## ISA-95 Model
 
-The ISA-95 model, also known as ANSI/ISA-95 or ISA-95, is a global standard for enterprise and control system integration. The model is designed to provide a consistent framework for integrating business and manufacturing processes, enabling seamless information exchange between enterprise and control systems on the shopfloor.
+The ISA-95 model, also known as ANSI/ISA-95 or ISA-95, is a global standard for enterprise and control system integration. The model is designed to provide a consistent framework for integrating business and manufacturing processes, enabling consistent information exchange between enterprise and control systems on the shopfloor.
 
 ISA-95 is widely recognised and accepted as the de-facto standard for manufacturing system integration and is used by many companies around the world.
 
@@ -64,7 +64,21 @@ The business planning and logistics layer (Level 4) includes the software system
 
 This layer is responsible for coordinating the manufacturing process with the overall business objectives.
 
-The ISA-95 model provides a standardised framework for integrating these different layers of the manufacturing system, enabling seamless information exchange between the different systems. This integration allows for real-time visibility into the manufacturing process, which can help to identify and resolve issues quickly, reduce downtime, and optimise the manufacturing process.
+The ISA-95 model provides a standardised framework for integrating these different layers of the manufacturing system, enabling consistent information exchange between the different systems. This integration allows for real-time visibility into the manufacturing process, which can help to identify and resolve issues quickly, reduce downtime, and optimise the manufacturing process.
+
+## Vertical and horizontal
+
+Two perspectives help make sense of how systems fit together.
+
+**Vertical** is the ISA-95 stack itself. Data flows up from equipment, through PLCs and sensors, into MES/MOM and on to ERP. Instructions flow down. A temperature reading becomes a process parameter in MES/MOM, which becomes part of an OEE figure, which becomes a line in a monthly report.
+
+**Horizontal** is the flow of work across departments and processes: a customer order moving from product design to planning, production, quality, warehousing and shipping. Each step may touch a different system.
+
+## Where IIoT and the unified namespace sit
+
+IIoT lives in the connectivity layer, Levels 1 and 2. It's how data gets from equipment into the systems above. A unified namespace is an architecture for publishing that data, and MES/MOM's contextualised data, in one structured place. Neither replaces Level 3. More in [IIoT doesn't replace MES](/post/iiot-vs-mes) and [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
+
+ISA-95 also defines the four areas of manufacturing operations management at Level 3: production, quality, inventory and maintenance. That's the scope of MOM, which I explain in [MES vs MOM](/post/mes-vs-mom).
 
 ## Benefits
 

@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Introduction to MES and Smart Manufacturing"
 slug: "introduction-to-mes-and-smart-manufacturing"
 legacyUrl: "https://www.mesmatters.com/post/introduction-to-mes-and-smart-manufacturing"
@@ -25,7 +26,7 @@ MES functionality covers all manufacturing operations (Production, Quality, Inve
 
 ## MES Capabilities
 
-The functional scope of MES has had various definitions and we sometimes hear of a second acronym, MOM (manufacturing operations management), which can be confusing. However, in 1997, [MESA (Manufacturing Enterprise Solutions Association)](https://www.mesmatters.com/post/who-are-mesa-and-how-do-they-define-mes) produced a definition of the core functions of a comprehensive MES, which is still widely considered the standard:
+The functional scope of MES has had various definitions and we sometimes hear of a second acronym, MOM (manufacturing operations management), which can be confusing. However, in 1997, [MESA (Manufacturing Enterprise Solutions Association)](/post/who-are-mesa-and-how-do-they-define-mes) produced a definition of the core functions of a comprehensive MES, which is still widely considered the standard:
 
 **Operations management and scheduling:** Planning and optimising the execution of work orders from your ERP based on priorities and availability of resources (i.e., labor, material, machines, tools).
 
@@ -49,7 +50,7 @@ The functional scope of MES has had various definitions and we sometimes hear of
 
 **Performance analysis:** Measuring performance with standard KPIs and provide insights in historical data to drive continuous improvement.
 
-One of the overlooked benefits of MES, is its ability to [remove complexity from ERP.](https://www.mesmatters.com/post/implementing-mes-can-simplify-your-erp) Historically ERP has encroached onto the shop floor to cover some manufacturing operations, introducing complexity and cost. Fortunately, the current thinking around composable enterprise applications is pushing back ERP to its core functions, allowing specialist applications (like MES) to do what they are designed to do on the shop floor and ERP and MES to work together as complementary applications, playing to their strengths.
+One of the overlooked benefits of MES, is its ability to [remove complexity from ERP.](/post/implementing-mes-can-simplify-your-erp) Historically ERP has encroached onto the shop floor to cover some manufacturing operations, introducing complexity and cost. Fortunately, the current thinking around composable enterprise applications is pushing back ERP to its core functions, allowing specialist applications (like MES) to do what they are designed to do on the shop floor and ERP and MES to work together as complementary applications, playing to their strengths.
 
 One of the key strengths of MES over ERP, is the focus on the operator. MES applications are usually designed with the operator in mind, keeping it simple, easy-to-use, and informative. MES guides operators through their process and helps them with their ever-increasing responsibilities.
 

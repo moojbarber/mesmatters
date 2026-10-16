@@ -59,6 +59,7 @@ REDIRECTS = {
     "copy-of-education": "/mes-advice",
     "blog": "/articles",
     "challenges": "/articles",
+    "post/introduction-to-mes-and-smart-manufacturing": "/post/what-is-a-smart-factory",
 }
 
 
