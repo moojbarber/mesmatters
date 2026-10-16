@@ -343,3 +343,25 @@ h2.label:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var
   .js .rv{opacity:1;transform:none}
 }
 .grid>.card.lead:only-child{grid-column:1/-1}
+/* newsletter sign-up */
+.signup{margin-top:24px;max-width:520px}
+.signup .row{display:flex;gap:10px;flex-wrap:wrap}
+.signup input[type=email]{flex:1 1 220px;min-width:0;padding:14px 18px;border-radius:14px;border:1px solid var(--line);background:rgba(10,8,32,.65);color:var(--tx);font:500 16px var(--body,inherit);outline:none;transition:border-color .2s,box-shadow .2s}
+.signup input[type=email]::placeholder{color:var(--dim)}
+.signup input[type=email]:focus{border-color:var(--b);box-shadow:0 0 0 4px rgba(51,212,224,.18)}
+.signup .btn{flex:none}
+.signup .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.signup .fine{margin:10px 0 0;font:400 13px/1.5 var(--body,system-ui);letter-spacing:0;color:var(--dim)}
+.signup .fine a{color:var(--mut)}
+.signup .msg{margin:10px 0 0;font-weight:600;min-height:0}
+.signup .msg:empty{display:none}
+.signup.ok .msg{color:var(--b)}
+.signup.err .msg{color:var(--c)}
+.signup.ok .row,.signup.ok .fine{display:none}
+.signup.big{max-width:620px;margin:8px 0 0;width:100%}
+.actions .signup.big{flex-basis:100%}
+.signup.big input[type=email]{padding:18px 22px;font-size:18px}
+.cta .alt{margin-top:18px;font-size:14px;color:var(--dim)}
+.cta .alt a{color:var(--mut)}
+form.signup p.msg{font:600 16px/1.5 var(--body);letter-spacing:0;margin:12px 0 0;max-width:none;background:none;-webkit-text-fill-color:currentColor}
+form.signup p.fine{font:400 13px/1.5 var(--body);letter-spacing:0;max-width:none}

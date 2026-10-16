@@ -38,7 +38,7 @@
     </a>
     <nav class="nav" id="nav" aria-label="Main">
       {% for item in nav %}<a href="{{ base }}{{ item.href }}"{% if item.key == active %} aria-current="page"{% endif %}>{{ item.label }}</a>
-      {% endfor %}<a class="btn sm" href="{{ linkedin }}" rel="me noopener" target="_blank">Follow on LinkedIn</a>
+      {% endfor %}<a class="btn sm" href="{{ base }}/subscribe">Subscribe</a>
     </nav>
     <button class="burger" aria-label="Menu" aria-controls="nav" aria-expanded="false"><span></span></button>
   </div>
@@ -67,6 +67,7 @@
         <h4>Connect</h4>
         <ul>
           <li><a href="{{ base }}/about">About Matt</a></li>
+          <li><a href="{{ base }}/subscribe">Newsletter</a></li>
           <li><a href="{{ base }}/contact">Contact</a></li>
           <li><a href="{{ linkedin }}" rel="me noopener" target="_blank">LinkedIn</a></li>
         </ul>
@@ -74,7 +75,7 @@
     </div>
     <div class="disc">
       <p>The opinions on this site are my own and don't represent the views of any current or past employer. Everything here is general information, not professional advice.</p>
-      <p>© {{ year }} Matt Barber · MES Matters</p>
+      <p>© {{ year }} Matt Barber · MES Matters · <a href="{{ base }}/privacy">Privacy</a></p>
     </div>
   </div>
 </footer>

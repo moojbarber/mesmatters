@@ -53,4 +53,22 @@
       });
     });
   }
+
+  // newsletter sign-up (Kit)
+  [].forEach.call(d.querySelectorAll('form.signup'), function (f) {
+    var msg = f.querySelector('.msg'), btn = f.querySelector('button'), em = f.querySelector('input[type=email]');
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      f.classList.remove('err', 'ok');
+      if (f.website && f.website.value) return;
+      if (!em.value || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value)) { f.classList.add('err'); msg.textContent = 'Please enter a valid email address.'; em.focus(); return; }
+      if (!f.dataset.form) { f.classList.add('ok'); msg.textContent = 'Thanks! The newsletter launches very soon. Follow me on LinkedIn in the meantime.'; return; }
+      btn.disabled = true; msg.textContent = 'Subscribing…';
+      var body = new FormData(); body.append('email_address', em.value);
+      fetch(f.action, { method: 'POST', body: body, headers: { Accept: 'application/json' } })
+        .then(function (r) { if (!r.ok) throw r; f.classList.add('ok'); msg.textContent = 'Nearly there. Check your inbox and click the link to confirm.'; })
+        .catch(function () { f.submit(); })
+        .then(function () { btn.disabled = false; });
+    });
+  });
 })();

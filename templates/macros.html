@@ -10,13 +10,26 @@
 </a>
 {%- endmacro %}
 {% macro hero_bg() -%}<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>{%- endmacro %}
-{% macro cta(base, linkedin) -%}
+{% macro signup(base, form, big=False) -%}
+<form class="signup{% if big %} big{% endif %}" {% if form %}action="https://app.kit.com/forms/{{ form }}/subscriptions" method="post"{% endif %} data-form="{{ form }}" novalidate>
+  <label class="sr" for="em-{{ 'b' if big else 's' }}">Email address</label>
+  <div class="row">
+    <input id="em-{{ 'b' if big else 's' }}" type="email" name="email_address" placeholder="you@company.com" autocomplete="email" required>
+    <button class="btn" type="submit">Subscribe →</button>
+  </div>
+  <div class="hp" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+  <p class="fine">Free. Unsubscribe in one click. I'll never share your email. <a href="{{ base }}/privacy">Privacy</a></p>
+  <p class="msg" role="status" aria-live="polite"></p>
+</form>
+{%- endmacro %}
+{% macro cta(base, linkedin, form="") -%}
 <section class="cta rv">
   <div>
-    <span class="micro">Keep learning</span>
-    <h3>New articles land on <em class="g">LinkedIn</em> first</h3>
-    <p>Follow along for shopfloor AI, smart factory strategy and the MES and MOM lessons I wish someone had told me before my first implementation.</p>
-    <div class="actions"><a class="btn" href="{{ linkedin }}" target="_blank" rel="me noopener">Follow Matt on LinkedIn →</a></div>
+    <span class="micro">The newsletter</span>
+    <h3>Get the next one in your <em class="g">inbox</em></h3>
+    <p>New articles on shopfloor AI, smart factory strategy and the MES/MOM lessons I wish someone had told me before my first implementation.</p>
+    {{ signup(base, form) }}
+    <p class="alt">Prefer LinkedIn? <a href="{{ linkedin }}" target="_blank" rel="me noopener">Follow me there →</a></p>
   </div>
   <ul>
     <li>Vendor-neutral, practical guidance</li>

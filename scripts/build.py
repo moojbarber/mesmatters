@@ -11,6 +11,7 @@ Content:
   content/blocks/*.html      reusable on-brand blocks, used in Markdown as `::block name`
 """
 import argparse
+import os
 import datetime as dt
 import html
 import json
@@ -28,6 +29,8 @@ ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / "dist"
 SITE = "https://www.mesmatters.com"
 LINKEDIN = "https://www.linkedin.com/in/mattjbarber/"
+# Kit (kit.com) form ID for the newsletter sign-up. Set the KIT_FORM_ID repo variable; empty = sign-ups not open yet.
+KIT_FORM_ID = os.environ.get("KIT_FORM_ID", "").strip()
 
 CATEGORIES = [
     {"key": "thought-leadership", "slug": "thought-leadership", "name": "Smart Factory & AI", "eyebrow": "Think", "art": "thought-leadership",
@@ -188,7 +191,7 @@ def build(base, relative=False):
 
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=True, trim_blocks=True, lstrip_blocks=True)
     version = dt.datetime.now().strftime("%Y%m%d%H%M")
-    common = {"base": base, "nav": NAV, "linkedin": LINKEDIN, "year": dt.date.today().year, "version": version,
+    common = {"base": base, "nav": NAV, "linkedin": LINKEDIN, "year": dt.date.today().year, "version": version, "kit_form": KIT_FORM_ID,
               "categories": [], "jsonld": []}
 
     for c in CATEGORIES:
@@ -292,6 +295,17 @@ def build(base, relative=False):
           kicker="The quickest way to reach me is a message on LinkedIn. I read everything, even if replies sometimes take a few days.",
           actions=Markup(f'<a class="btn" href="{LINKEDIN}" target="_blank" rel="me noopener">Message me on LinkedIn →</a>'),
           content=Markup(contact), show_cta=False)
+    write("subscribe.html", "page.html", active="subscribe", seo_title="Subscribe to the newsletter | MES Matters",
+          description="A practical newsletter on the smart factory, shopfloor AI and MES/MOM. New articles and lessons from real implementations, straight to your inbox.",
+          canonical=f"{SITE}/subscribe", eyebrow="Newsletter", heading="Smart factory thinking, in your inbox",
+          kicker="New articles and practical lessons on the smart factory, shopfloor AI and MES/MOM. Written from real implementations. No hype, no spam.",
+          actions=Markup(env.get_template("macros.html").module.signup(base, KIT_FORM_ID, big=True)),
+          content=Markup((ROOT / "content" / "pages" / "subscribe.html").read_text(encoding="utf-8")), show_cta=False)
+    privacy = (ROOT / "content" / "pages" / "privacy.html").read_text(encoding="utf-8").replace("{{base}}", base)
+    write("privacy.html", "page.html", active=None, seo_title="Privacy | MES Matters",
+          description="How MES Matters handles your data, including newsletter sign-ups.",
+          canonical=f"{SITE}/privacy", eyebrow="Privacy", heading="Your data, plainly",
+          kicker="What I collect, why, and how to get it removed.", content=Markup(privacy), show_cta=False)
     write("404.html", "page.html", active=None, seo_title="Page not found | MES Matters", description="This page doesn't exist.",
           canonical=f"{SITE}/404", eyebrow="404", heading="This line has stopped.", noindex=True,
           kicker="The page you were looking for isn't here. It may have moved when the site was rebuilt.",
@@ -308,7 +322,7 @@ def build(base, relative=False):
         out.write_text(page, encoding="utf-8")
 
     # sitemap, robots
-    urls = [(f"{SITE}/", posts[0]["updated"]), (f"{SITE}/articles", posts[0]["updated"]), (f"{SITE}/about", None)]
+    urls = [(f"{SITE}/", posts[0]["updated"]), (f"{SITE}/articles", posts[0]["updated"]), (f"{SITE}/about", None), (f"{SITE}/subscribe", None)]
     urls += [(f"{SITE}/{c['slug']}", None) for c in CATEGORIES]
     urls += [(p["canonical"], p["updated"]) for p in posts]
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']

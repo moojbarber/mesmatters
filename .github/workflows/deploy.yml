@@ -24,7 +24,9 @@ jobs:
           python-version: "3.12"
       - run: pip install markdown pyyaml jinja2
       # SITE_BASE is "/mesmatters" while previewing on github.io; set it to "" (empty) once the domain points here.
-      - run: python scripts/build.py --base "${{ vars.SITE_BASE != null && vars.SITE_BASE || '/mesmatters' }}"
+      - env:
+          KIT_FORM_ID: ${{ vars.KIT_FORM_ID }}
+        run: python scripts/build.py --base "${{ vars.SITE_BASE != null && vars.SITE_BASE || '/mesmatters' }}"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
