@@ -1,0 +1,50 @@
+# Weekly release schedule for new articles.
+#
+# Articles listed here go live one per week, in this order, starting on `start`
+# (then every 7 days). On release day the site rebuilds automatically and the
+# article is emailed to newsletter subscribers via Kit.
+#
+# To reorder, just move lines around. To publish something sooner, move it up.
+# Articles in content/posts that are NOT listed here are published straight away.
+start: 2026-10-27        # a Tuesday
+send_time: "08:00"       # UK time the email goes out
+weekly:
+  - ai-ml-genai-on-the-shopfloor
+  - smart-manufacturing-maturity-model
+  - digital-shift-handover
+  - smart-factory-tech-stack
+  - contextualised-manufacturing-data
+  - mes-business-case
+  - skills-enforcement-shopfloor
+  - practical-genai-for-the-shopfloor
+  - iiot-vs-mes
+  - configure-dont-customise
+  - digital-work-instructions
+  - predictive-maintenance-data
+  - manufacturing-traceability
+  - how-to-choose-an-mes
+  - ai-for-frontline-workers
+  - smart-manufacturing-myths
+  - mes-functionality-maintenance
+  - manufacturing-change-management
+  - agentic-ai-mcp-manufacturing
+  - manufacturing-kpis-beyond-oee
+  - smart-factory-technology-mistakes
+  - mes-is-a-digital-twin
+  - opc-ua-mqtt-uns-explained
+  - erp-master-data-for-mes
+  - esg-needs-shopfloor-data
+  - mes-functionality-tooling
+  - replacing-a-homegrown-mes
+  - smart-factory-roi-research
+  - cloud-vs-on-premises-mes
+  - how-long-does-mes-implementation-take
+  - paperless-manufacturing
+  - discrete-vs-process-manufacturing
+  - mes-functionality-energy
+  - manufacturing-process-mapping
+  - scada-vs-mes
+  - mes-multi-site-rollout
+  - manufacturing-data-platforms
+  - smart-factory-glossary
+  - mes-go-live

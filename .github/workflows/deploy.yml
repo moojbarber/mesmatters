@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Weekly release: rebuild every Tuesday morning so that week's scheduled article goes live
+  # (06:30 UTC = 07:30 UK in summer, 06:30 in winter), then email it to subscribers.
+  schedule:
+    - cron: "30 6 * * 2"
 
 permissions:
   contents: read
@@ -40,3 +44,20 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # Emails the article released today (if any) to Kit subscribers.
+  # Off until the repo variable NEWSLETTER_ENABLED is set to "true" and the KIT_API_KEY secret exists.
+  # Safe to re-run: it won't send the same article twice.
+  newsletter:
+    needs: deploy
+    if: vars.NEWSLETTER_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install markdown pyyaml jinja2
+      - env:
+          KIT_API_KEY: ${{ secrets.KIT_API_KEY }}
+        run: python scripts/newsletter.py

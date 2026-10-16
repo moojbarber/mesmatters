@@ -115,8 +115,33 @@ def render_body(md_text, base, blocks):
     return out, toc
 
 
-def load_posts(base, blocks, seo):
+def load_schedule():
+    """slug -> release date (UK) from content/schedule.yaml."""
+    path = ROOT / "content" / "schedule.yaml"
+    if not path.exists():
+        return {}
+    cfg = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    start = cfg.get("start")
+    if isinstance(start, str):
+        start = dt.date.fromisoformat(start)
+    return {slug: start + dt.timedelta(weeks=i) for i, slug in enumerate(cfg.get("weekly") or [])}
+
+
+def uk_today():
+    override = os.environ.get("BUILD_DATE")
+    if override:
+        return dt.date.fromisoformat(override)
+    try:
+        from zoneinfo import ZoneInfo
+        return dt.datetime.now(ZoneInfo("Europe/London")).date()
+    except Exception:
+        return dt.date.today()
+
+
+def load_posts(base, blocks, seo, include_scheduled=False):
     posts = []
+    schedule = load_schedule()
+    today = uk_today()
     sources = sorted((ROOT / "content" / "legacy" / "posts").glob("*.md")) + sorted((ROOT / "content" / "posts").glob("*.md"))
     seen = {}
     for path in sources:
@@ -125,6 +150,11 @@ def load_posts(base, blocks, seo):
             continue
         slug = fm.get("slug") or path.stem
         meta = {**fm, **seo.get(slug, {})}
+        if slug in schedule:
+            if schedule[slug] > today and not include_scheduled:
+                continue
+            meta["published"] = schedule[slug].isoformat()
+            meta.pop("updated", None)
         published = parse_date(meta.get("published"))
         updated = parse_date(meta.get("updated")) or published
         cat = CAT_BY_KEY[meta.get("category", "education")]
@@ -149,6 +179,11 @@ def load_posts(base, blocks, seo):
         }
         seen[slug] = p
     posts = sorted(seen.values(), key=lambda p: p["published"] or dt.datetime(2000, 1, 1), reverse=True)
+    # links to articles that aren't released yet become plain text until they are
+    live = set(seen)
+    pat = re.compile(r'<a href="' + re.escape(base) + r'/post/([\w-]+)"[^>]*>(.*?)</a>', re.S)
+    for p in posts:
+        p["body"] = pat.sub(lambda m: m.group(0) if m.group(1) in live else m.group(2), p["body"])
     return posts
 
 
@@ -173,7 +208,7 @@ def relativise(page_html, rel):
     return page_html
 
 
-def build(base, relative=False):
+def build(base, relative=False, include_scheduled=False):
     base = "@REL@" if relative else base.rstrip("/")
     if DIST.exists():
         shutil.rmtree(DIST)
@@ -181,7 +216,7 @@ def build(base, relative=False):
     # only ship legacy images that are actually referenced
     seo = yaml.safe_load((ROOT / "content" / "seo.yaml").read_text(encoding="utf-8")) or {}
     blocks = {p.stem: p.read_text(encoding="utf-8") for p in (ROOT / "content" / "blocks").glob("*.html")}
-    posts = load_posts(base, blocks, seo)
+    posts = load_posts(base, blocks, seo, include_scheduled)
     for p in posts:
         for img in re.findall(r'/images/legacy/([^"\')\s]+)', p["body"]):
             src = ROOT / "public" / "images" / "legacy" / img
@@ -346,5 +381,6 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--base", default="")
     ap.add_argument("--relative", action="store_true", help="relative .html links, for previewing as static files")
+    ap.add_argument("--all", action="store_true", help="include articles scheduled for future weeks")
     args = ap.parse_args()
-    build(args.base, args.relative)
+    build(args.base, args.relative, args.all)
