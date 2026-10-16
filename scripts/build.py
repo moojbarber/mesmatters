@@ -306,7 +306,7 @@ def build(base, relative=False):
             page = relativise(page, f"{old}.html").replace('"@REL@/', '"' + ("/".join([".."] * old.count("/")) or ".") + "/").replace(new + '"', new + '.html"')
         out.write_text(page, encoding="utf-8")
 
-    # sitemap, robots, rss, favicon
+    # sitemap, robots
     urls = [(f"{SITE}/", posts[0]["updated"]), (f"{SITE}/articles", posts[0]["updated"]), (f"{SITE}/about", None)]
     urls += [(f"{SITE}/{c['slug']}", None) for c in CATEGORIES]
     urls += [(p["canonical"], p["updated"]) for p in posts]
@@ -317,16 +317,6 @@ def build(base, relative=False):
     (DIST / "sitemap.xml").write_text("\n".join(sm) + "\n", encoding="utf-8")
     (DIST / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n", encoding="utf-8")
 
-    def rfc822(d):
-        return d.strftime("%a, %d %b %Y %H:%M:%S +0000")
-    items = "".join(
-        f"<item><title>{html.escape(p['title'])}</title><link>{p['canonical']}</link><guid>{p['canonical']}</guid>"
-        f"<pubDate>{rfc822(p['published'])}</pubDate><category>{html.escape(p['category_label'])}</category>"
-        f"<description>{html.escape(p['description'])}</description></item>" for p in posts if p["published"])
-    (DIST / "feed.xml").write_text(
-        f'<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>MES Matters</title><link>{SITE}/</link>'
-        f"<description>Practical guides to MES, MOM and smart manufacturing</description><language>en-gb</language>{items}</channel></rss>\n",
-        encoding="utf-8")
     (DIST / ".nojekyll").write_text("")
     if relative:
         for f in DIST.rglob("*.html"):
