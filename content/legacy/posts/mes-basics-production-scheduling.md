@@ -57,22 +57,7 @@ It helps to be clear about the roles:
 
 ## Do you need an APS?
 
-Often, no. For many manufacturers ERP plus MES/MOM is enough. ERP decides what to make and when it's due. MES/MOM sequences it on the lines and adjusts as reality happens.
-
-That usually holds when production is stable and repetitive, demand is predictable, capacity is rarely tight and changeovers don't really drive the sequence.
-
-An APS earns its place when building a feasible schedule becomes a job in its own right. The signs I look for:
-
-- **Shared bottlenecks.** Orders compete for the same finite resources, and capacity genuinely bites.
-- **Changeovers that decide the sequence.** Setup times depend on what ran before, so the order of jobs changes throughput.
-- **Constraints beyond the machine.** Material, labour, skills or tooling availability decide what can actually run.
-- **Volatility.** Alternative routings, a swinging product mix, frequent rush orders and priority changes.
-
-You'll see it most in high-mix, make-to-order and engineer-to-order environments: metal fabrication, electronics assembly, machinery and other custom production. And in process industries where sequence matters, such as food and beverage (allergen and colour sequencing), packaging and printing, and chemicals.
-
-The quickest test: watch your planner. If they export ERP data into a spreadsheet to build the real schedule, rebuild it by hand after every rush order, and can't quickly say what accepting a new order does to the rest of the week, an APS is worth a serious look.
-
-If you're not sure, start with MES/MOM. A live, accurate view of what's actually happening often shows whether you have a scheduling problem or a visibility problem.
+Often, no. For many manufacturers ERP plus MES/MOM is enough, especially where production is stable, demand is predictable and changeovers don't drive the sequence. An APS earns its place when sequencing itself becomes the hard problem: shared bottlenecks, sequence-dependent changeovers and lots of orders competing for the same resources. I go through the signs, and the options for connecting ERP, APS and MES/MOM, in [ERP, APS and MES scheduling: the plan versus the shift](/post/aps-vs-mes-scheduling).
 
 The real value is a live schedule. A printed schedule is out of date before the ink is dry. When the schedule reflects what's actually happening, it adjusts when a machine goes down, and the planner knows immediately rather than at the end of the shift.
 

@@ -4,7 +4,7 @@ slug: "mes-functionality-logistics-warehousing"
 legacyUrl: "https://www.mesmatters.com/post/mes-functionality-logistics-warehousing"
 description: "Inventory and logistics in warehousesTracking inventory movements in real-time allows manufacturers to optimise stock, reduce WIP (Work In Progress), and ensure that inventory is available when and where it is needed. Managing the flow of inventory in warehouses, between warehouses, and across the boundary into the production area is a crucial part of any inventory system. Logistics operations at a high level includes the following: • Receiving stock from suppliers and storing it in a warehouse."
 published: "2023-07-13T14:46:22.884Z"
-updated: "2026-10-16T09:00:00.000Z"
+updated: "2026-10-17T09:00:00.000Z"
 author: "Matthew Barber"
 categories: ["MES Education"]
 heroImage: "/images/legacy/b75fc5_dd7d8d21cc2b41deb5fe95aa20cd4580-mv2.png"
@@ -131,11 +131,7 @@ MES systems also provide tools for managing inventory transfers between warehous
 
 ## WMS or MES/MOM?
 
-Should warehouse operations run in a dedicated WMS, in ERP, or in MES/MOM? There's no one-size-fits-all answer.
-
-If your warehousing is simple, ERP or MES/MOM may be enough. If it's complex, with optimised picking, multiple storage strategies, high automation and complex yard or dock management, a dedicated WMS may be justified.
-
-What I'd avoid is splitting line-side logistics away from production. Material requests, supermarket replenishment and finished goods removal are tightly linked to what's running. Keeping them in MES/MOM means operators and logistics teams see the same picture. More in [The smart factory tech stack](/post/smart-factory-tech-stack).
+Should warehouse operations run in a dedicated WMS, in ERP, or in MES/MOM? There's no one-size-fits-all answer. What I'd avoid is splitting line-side logistics away from production, because replenishment and finished goods removal are tightly linked to what's running. I cover the boundaries and integration options in [WMS, MES and ERP: who owns inventory once it reaches the line?](/post/wms-vs-mes-inventory)
 
 ## Benefits
 

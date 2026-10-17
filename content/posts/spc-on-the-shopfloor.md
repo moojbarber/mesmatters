@@ -54,7 +54,7 @@ Capability compares your process spread with the specification.
 - **Cp** asks: if the process were perfectly centred, would it fit within the specification?
 - **Cpk** asks: given where the process actually sits, does it fit?
 
-A Cpk of 1.33 is a common minimum, and automotive customers often ask for 1.67 on critical characteristics. If your Cp is good but your Cpk is poor, you don't need a better machine. You need to centre the process.
+A Cpk of 1.33 is a common minimum for ongoing production. Automotive customers often ask for 1.67 on safety and critical characteristics, and for a Ppk of 1.67 in the initial study before production approval. Check your own customers' requirements; they vary. If your Cp is good but your Cpk is poor, you don't need a better machine. You need to centre the process.
 
 Capability only means something when the process is in control. Calculate it on a process that's all over the place and you'll get a number. It just won't mean anything.
 

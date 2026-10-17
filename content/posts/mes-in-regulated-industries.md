@@ -30,7 +30,7 @@ Validation is the big project overhead. Which brings me to a cautionary point: t
 
 ## Medical devices
 
-Device makers need a complete record of how each device or batch was built. In the US, the FDA's quality system rules for devices now align with **ISO 13485**, which most manufacturers outside the US already follow.
+Device makers need a complete record of how each device or batch was built. In the US, the FDA's Quality Management System Regulation (QMSR) has incorporated **ISO 13485** by reference since 2 February 2026, so the US now follows the same standard most manufacturers elsewhere already use.
 
 For MES/MOM, that means:
 

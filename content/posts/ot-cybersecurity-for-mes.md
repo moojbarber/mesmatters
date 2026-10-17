@@ -64,6 +64,6 @@ These are operations decisions, not just IT ones. Rehearse them, the same way yo
 
 ## Regulation is catching up
 
-In the EU, **NIS2** brings many manufacturers into scope for cybersecurity obligations, including incident reporting and management accountability. Other regions are moving the same way. If you sell into critical supply chains, your customers will increasingly ask how you secure your operations.
+In the EU, **NIS2** brings medium and large manufacturers in sectors such as machinery, electrical equipment, medical devices and vehicles into scope for cybersecurity obligations, including incident reporting and management accountability. The details depend on each country's implementing law. Other regions are moving the same way. If you sell into critical supply chains, your customers will increasingly ask how you secure your operations.
 
 So, here's a question for your next leadership meeting: if ransomware hit the plant tonight, who makes the call to isolate the shopfloor, and do they know it's them?

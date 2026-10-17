@@ -48,7 +48,7 @@ But it isn't the only option.
 
 ## When a direct PLM to MES link makes sense
 
-ERP is built to manage items, quantities and operations. It isn't built to carry a 400 MB 3D model, a 30-step illustrated work instruction or a list of 60 inspection characteristics with tolerances.
+ERP does its job well: items, quantities, operations, cost and the order itself. Carrying a 400 MB 3D model, a 30-step illustrated work instruction or a list of 60 inspection characteristics with tolerances is a different job, and it's one PLM is already doing.
 
 That's where some manufacturers add a direct link from PLM to MES/MOM, alongside the ERP path. ERP still sends the order, BOM and routing. PLM sends the engineering content the operator needs to build it right.
 
