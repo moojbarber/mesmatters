@@ -373,9 +373,9 @@ form.signup p.fine{font:400 13px/1.5 var(--body);letter-spacing:0;max-width:none
 @media(max-width:980px){.nav{background:#0d0a26;box-shadow:0 30px 60px rgba(0,0,0,.6);max-height:calc(100vh - 64px);overflow-y:auto}}
 
 /* brand: MES Matters logo */
-.brand svg{width:auto;height:36px}
-.brand .wm{display:flex;flex-direction:column;gap:3px;font:600 13px/1 Montserrat,var(--body);letter-spacing:.2em;text-transform:uppercase}
-.brand .wm b{font:inherit;background:none;-webkit-background-clip:initial;background-clip:initial}
-.brand .wm b:first-child{color:#a865c4}
-.brand .wm b:last-child{color:#c3b9e3;font-size:14.5px;letter-spacing:.16em}
-.foot .brand svg{height:40px}
+.brand svg{width:auto;height:40px;overflow:visible}
+.brand .wm1{font:700 14px/1 var(--disp);letter-spacing:.24em;text-transform:uppercase;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand .wm{display:flex;flex-direction:column;gap:4px;font:700 13px/1 var(--disp);letter-spacing:.26em;text-transform:uppercase}
+.brand .wm b{font:inherit;background:linear-gradient(120deg,#8b6cff,#a77bff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand .wm b:last-child{font-size:16px;letter-spacing:.2em;background:linear-gradient(120deg,#b9a9ff,#33d4e0);-webkit-background-clip:text;background-clip:text}
+.foot .brand svg{height:52px}
