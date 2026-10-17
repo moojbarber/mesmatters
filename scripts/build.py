@@ -46,12 +46,12 @@ CATEGORIES = [
 CAT_BY_KEY = {c["key"]: c for c in CATEGORIES}
 
 NAV = [
-    {"key": "start", "label": "Start here", "href": "/post/what-is-mes-and-why-is-it-important-in-manufacturing"},
-    {"key": "articles", "label": "Articles", "href": "/articles"},
-    {"key": "thought-leadership", "label": "Smart Factory & AI", "href": "/thought-leadership"},
-    {"key": "mes-education", "label": "Foundations", "href": "/mes-education"},
-    {"key": "mes-advice", "label": "Implementation", "href": "/mes-advice"},
-    {"key": "about", "label": "About", "href": "/about"},
+    {"key": "start", "label": "Start here", "desc": "What is MES/MOM? The essential guide", "href": "/post/what-is-mes-and-why-is-it-important-in-manufacturing"},
+    {"key": "articles", "label": "Articles", "desc": "Everything, newest first", "href": "/articles"},
+    {"key": "thought-leadership", "label": "Smart Factory & AI", "desc": "Strategy, shopfloor AI, connected worker", "href": "/thought-leadership"},
+    {"key": "mes-education", "label": "Foundations", "desc": "MES, MOM, OEE, ISA-95 explained", "href": "/mes-education"},
+    {"key": "mes-advice", "label": "Implementation", "desc": "Selecting, deploying and adopting MES", "href": "/mes-advice"},
+    {"key": "about", "label": "About", "desc": "Who I am and why I write this", "href": "/about"},
 ]
 
 # Old Wix URLs that should point somewhere new

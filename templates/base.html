@@ -38,10 +38,11 @@
       <span class="wm1">MES Matters</span>
     </a>
     <nav class="nav" id="nav" aria-label="Main">
-      {% for item in nav %}<a href="{{ base }}{{ item.href }}"{% if item.key == active %} aria-current="page"{% endif %}>{{ item.label }}</a>
+      {% for item in nav %}<a class="nl" href="{{ base }}{{ item.href }}"{% if item.key == active %} aria-current="page"{% endif %}><span class="t">{{ item.label }}</span><small>{{ item.desc }}</small></a>
       {% endfor %}<a class="btn sm" href="{{ base }}/subscribe">Subscribe</a>
+      <div class="nav-foot"><p>New articles every Tuesday. Free, no spam.</p><a href="{{ linkedin }}" target="_blank" rel="me noopener">Follow on LinkedIn →</a></div>
     </nav>
-    <button class="burger" aria-label="Menu" aria-controls="nav" aria-expanded="false"><span></span></button>
+    <button class="burger" aria-label="Open menu" aria-controls="nav" aria-expanded="false"><span></span></button>
   </div>
   {% if progress %}<div class="progress" aria-hidden="true"></div>{% endif %}
 </header>

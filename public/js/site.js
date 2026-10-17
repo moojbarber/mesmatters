@@ -5,12 +5,17 @@
   // mobile menu
   var burger = d.querySelector('.burger'), nav = d.getElementById('nav');
   if (burger && nav) {
-    burger.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
+    var setMenu = function (open) {
+      nav.classList.toggle('open', open);
+      root.classList.toggle('menu-open', open);
       burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
+      burger.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    };
+    burger.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
+    nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+    addEventListener('resize', function () { if (innerWidth > 980 && nav.classList.contains('open')) setMenu(false); });
     d.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && nav.classList.contains('open')) { nav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); burger.focus(); }
+      if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); burger.focus(); }
     });
   }
 
