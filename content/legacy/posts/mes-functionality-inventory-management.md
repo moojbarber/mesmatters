@@ -4,7 +4,7 @@ slug: "mes-functionality-inventory-management"
 legacyUrl: "https://www.mesmatters.com/post/mes-functionality-inventory-management"
 description: "TerminologyAs a general concept, inventory is the physical material that exists in the factory, this could be: • Raw materials - received into the factory from suppliers. • Semi-finished materials - created as part of the manufacturing process, with their own unique material number. The materials are not sold to customers, but are consumed into subsequent manufacturing processes. • Finished goods - the final material which is ready to be shipped.Inventory can be tracked and managed at several di"
 published: "2023-07-12T14:40:43.726Z"
-updated: "2026-10-16T09:00:00.000Z"
+updated: "2026-10-17T09:00:00.000Z"
 author: "Matthew Barber"
 categories: ["MES Education"]
 heroImage: "/images/legacy/b75fc5_ad26781dd6234a9c85bdd1a51126c7f8-mv2.png"
@@ -157,7 +157,11 @@ ERP is a mature market, and a lot of people know about ERP. MES is on a trajecto
 
 Sometimes this can lead to misunderstandings around where the ERP/MES boundaries can be drawn, even from experienced consultants.
 
-You may hear people say things like "ERP is the master of Inventory, and should be responsible for all Inventory transactions, even on the shopfloor in ERP". I'd urge you to proceed with caution if you hear people say this, it probably means they are inexperienced with MES, remember MES is still a rapidly growing market, people are still learning, and best practices change quickly.
+You may hear people say things like "ERP is the master of Inventory, and should be responsible for all Inventory transactions, even on the shopfloor in ERP". I'd urge some caution here.
+
+ERP can, and usually should, be the master of inventory at an aggregated level: stock by material and by warehouse, valued for the balance sheet. But the shopfloor needs a much finer level of detail. Individual lots and containers, exact locations, quality status, and what was consumed into which order and when. That level of detail is best captured and managed in real time by operational applications like MES/MOM or a WMS, which keep ERP updated with the totals it needs.
+
+Putting all of that detail into ERP bloats the system with high-volume transactions it was never designed for. Let each system work at the level of detail it's built for.
 
 You can read more about the decision making process around boundaries in [this article](/post/mes-functionality-logistics-warehousing).
 

@@ -2,7 +2,7 @@
 slug: "the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence"
 legacyUrl: "https://www.mesmatters.com/post/the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence"
 published: "2023-07-22T10:00:00.000Z"
-updated: "2026-10-16T09:00:00.000Z"
+updated: "2026-10-17T09:00:00.000Z"
 author: "Matthew Barber"
 ---
 
@@ -12,7 +12,11 @@ But only if you get the basics right first.
 
 I've sat through countless conferences where everyone is obsessed with AI. Then I ask about their MES/MOM strategy, or how they're collecting data from the shopfloor to feed those AI ambitions, and I get... nothing. Silence. A slide about a pilot.
 
-So let me put my position plainly. AI won't fix your factory. Your data foundation might. And then AI will make it much, much better.
+Think about ChatGPT, Claude or Gemini for a moment. The models are remarkable. But they learned from the internet: decades of text, data and knowledge that people put online. Take the internet away and the most advanced model in the world has nothing to learn from. It's redundant.
+
+Your factory works the same way. Shopfloor data is your factory's internet. AI is the technology that sits on top of it. Without the data, there's nothing for AI to work with.
+
+So let me put my position plainly. AI won't fix your factory. Your data foundation makes it possible. And then AI will make it much, much better.
 
 ## The slide everyone wants
 
@@ -63,7 +67,7 @@ Here's the part people forget. AI and machine learning have been in MES/MOM for 
 
 Statistical process control has spotted drifting processes for decades. Condition-based and predictive maintenance use algorithms to detect patterns that come before a failure. Neither is new. Both are proven.
 
-The newer applications need more maturity, but they're real:
+The newer applications are real too. The technology behind them is ready. What's lagging is the number of applications built to take advantage of it:
 
 - **Process parameter optimisation.** Using history to find the speeds, temperatures and pressures that minimise scrap for a given product and material.
 - **Predictive quality.** Predicting whether a part will pass inspection before it's inspected.

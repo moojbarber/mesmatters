@@ -1,7 +1,7 @@
 ---
 title: "What the research says about smart factory ROI"
 short: "Smart factory ROI research"
-description: "The headline numbers from Deloitte, IoT Analytics, LNS Research and the Manufacturing Institute, what they show about smart factory returns, and what they don't."
+description: "The headline numbers from Deloitte, MarketsandMarkets, IoT Analytics, LNS Research and the Manufacturing Institute, what they show about smart factory returns, and what they don't."
 published: 2026-10-16
 category: thought-leadership
 art: bars
@@ -36,7 +36,7 @@ To put capacity in context: what would just a 1% improvement in OEE mean for you
 
 ## Most manufacturers haven't started
 
-IoT Analytics puts the global MES market at $5.5 billion in 2024, growing to around $8.7 billion by 2031 ([IoT Analytics, 2025](https://iot-analytics.com/?p=224641)). And it reports that **54.4%** of small and medium-sized manufacturers still rely on manual methods (pen and paper or spreadsheets).
+MarketsandMarkets puts the global MES market, software and services together, at around $16 billion in 2025, growing to almost $26 billion by 2030 ([MarketsandMarkets](https://www.marketsandmarkets.com/Market-Reports/manufacturing-execution-systems-market-536.html)). Software-only estimates are lower: IoT Analytics puts MES software at $5.5 billion in 2024 ([IoT Analytics, 2025](https://iot-analytics.com/?p=224641)). IoT Analytics also reports that **54.4%** of small and medium-sized manufacturers still rely on manual methods (pen and paper or spreadsheets).
 
 That's the opportunity. If most of your competitors are still running on paper and Excel, investing now is a genuine competitive advantage, not just catching up.
 

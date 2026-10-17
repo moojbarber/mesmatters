@@ -2,7 +2,7 @@
 slug: "mes-functionality-inventory-logistics-overview"
 legacyUrl: "https://www.mesmatters.com/post/mes-functionality-inventory-logistics-overview"
 published: "2023-07-14T07:36:22.922Z"
-updated: "2026-10-16T09:00:00.000Z"
+updated: "2026-10-17T09:00:00.000Z"
 author: "Matthew Barber"
 ---
 
@@ -44,7 +44,7 @@ Inventory and logistics are closely tied. Inventory management is about the mate
 
 ## Why breadth matters
 
-Each of these functions overlaps with the others. A quality check depends on what's being produced. A material lot carries its inspection results. Downtime matters to production and maintenance alike. A tool's condition affects quality.
+Each of these functions overlaps with the others. A quality check depends on what's being produced. A material lot carries its inspection results. Downtime matters to both production and maintenance teams. A tool's condition affects quality.
 
 When they share one platform, that context is captured automatically. When they're separate systems integrated together, some of it is lost at every boundary, and operators end up switching between applications.
 

@@ -2,7 +2,7 @@
 slug: "an-overview-of-the-mes-market"
 legacyUrl: "https://www.mesmatters.com/post/an-overview-of-the-mes-market"
 published: "2023-04-11T22:53:18.611Z"
-updated: "2026-10-16T09:00:00.000Z"
+updated: "2026-10-17T09:00:00.000Z"
 author: "Matthew Barber"
 ---
 
@@ -12,7 +12,9 @@ Here's my current view of where it stands and where it's heading. It's an opinio
 
 ## The market is growing, and most of it is still untapped
 
-IoT Analytics puts the global MES market at $5.5 billion in 2024, forecast to reach around $8.7 billion by 2031, roughly 7% growth a year ([IoT Analytics, 2025](https://iot-analytics.com/?p=224641)).
+How big is it? That depends on who you ask and what they count. MarketsandMarkets puts the global MES market, software and services together, at around $16 billion in 2025, growing at about 10% a year to almost $26 billion by 2030 ([MarketsandMarkets](https://www.marketsandmarkets.com/Market-Reports/manufacturing-execution-systems-market-536.html)). Services are the larger share, which tells you how much implementation and integration work sits behind every project.
+
+Software-only estimates come in lower. IoT Analytics, for example, puts MES software at $5.5 billion in 2024 ([IoT Analytics, 2025](https://iot-analytics.com/?p=224641)). Either way, it's a big market that's growing fast.
 
 The more striking number is how many manufacturers haven't started. The same research reports that 54.4% of small and medium-sized manufacturers still rely on manual methods: pen and paper, or spreadsheets.
 

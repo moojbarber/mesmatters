@@ -4,7 +4,7 @@ slug: "mes-basics-production-scheduling"
 legacyUrl: "https://www.mesmatters.com/post/mes-basics-production-scheduling"
 description: "IntroductionProduction scheduling plays a crucial role in the efficient management of manufacturing operations. Manufacturing Execution Systems (MES) serve as a vital tool in this process, offering features that enhance visibility, control, and flexibility.The initial production order schedule is generated in Enterprise Resource Planning (ERP), which looks at the customer demand and existing stock levels to determine which semi-finished and finished goods need to be made. ERP typically does some"
 published: "2023-05-10T13:31:24.585Z"
-updated: "2026-10-16T09:00:00.000Z"
+updated: "2026-10-17T09:00:00.000Z"
 author: "Matthew Barber"
 categories: ["MES Education"]
 heroImage: "/images/legacy/b75fc5_9f9575759cec446896793fac345b5b53-mv2.png"
@@ -51,9 +51,28 @@ Once the schedule is finalised, MES releases production orders to the shop floor
 
 It helps to be clear about the roles:
 
-- **ERP** creates production orders from demand and stock levels, with an initial plan.
-- **APS** (advanced planning and scheduling) is needed when scheduling is complex: many constraints, shared resources, sequence-dependent changeovers.
-- **MES/MOM** executes the schedule on the shopfloor, allows last-minute adjustments, and feeds back real progress.
+- **ERP** creates production orders from demand and stock levels, with an initial plan that usually rests on simplified capacity assumptions.
+- **MES/MOM** sequences and executes that plan on the shopfloor, allows last-minute adjustments, and feeds back real progress.
+- **APS** (advanced planning and scheduling) adds detailed, constraint-based scheduling when the scheduling problem itself gets hard.
+
+## Do you need an APS?
+
+Often, no. For many manufacturers ERP plus MES/MOM is enough. ERP decides what to make and when it's due. MES/MOM sequences it on the lines and adjusts as reality happens.
+
+That usually holds when production is stable and repetitive, demand is predictable, capacity is rarely tight and changeovers don't really drive the sequence.
+
+An APS earns its place when building a feasible schedule becomes a job in its own right. The signs I look for:
+
+- **Shared bottlenecks.** Orders compete for the same finite resources, and capacity genuinely bites.
+- **Changeovers that decide the sequence.** Setup times depend on what ran before, so the order of jobs changes throughput.
+- **Constraints beyond the machine.** Material, labour, skills or tooling availability decide what can actually run.
+- **Volatility.** Alternative routings, a swinging product mix, frequent rush orders and priority changes.
+
+You'll see it most in high-mix, make-to-order and engineer-to-order environments: metal fabrication, electronics assembly, machinery and other custom production. And in process industries where sequence matters, such as food and beverage (allergen and colour sequencing), packaging and printing, and chemicals.
+
+The quickest test: watch your planner. If they export ERP data into a spreadsheet to build the real schedule, rebuild it by hand after every rush order, and can't quickly say what accepting a new order does to the rest of the week, an APS is worth a serious look.
+
+If you're not sure, start with MES/MOM. A live, accurate view of what's actually happening often shows whether you have a scheduling problem or a visibility problem.
 
 The real value is a live schedule. A printed schedule is out of date before the ink is dry. When the schedule reflects what's actually happening, it adjusts when a machine goes down, and the planner knows immediately rather than at the end of the shift.
 

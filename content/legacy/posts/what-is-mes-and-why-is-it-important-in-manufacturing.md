@@ -3,7 +3,7 @@ title: "What is MES/MOM? A complete guide to Manufacturing Execution Systems and
 slug: "what-is-mes-and-why-is-it-important-in-manufacturing"
 legacyUrl: "https://www.mesmatters.com/post/what-is-mes-and-why-is-it-important-in-manufacturing"
 published: "2022-08-01T21:43:05.220Z"
-updated: "2026-10-16T09:00:00.000Z"
+updated: "2026-10-17T09:00:00.000Z"
 author: "Matthew Barber"
 ---
 
@@ -82,7 +82,7 @@ Plenty of manufacturers build their operations stack one pillar at a time, with 
 On paper it looks fine. In practice it carries real risk:
 
 - **Context gets lost at every boundary.** You can't pass everything through an integration, so you pass a subset. The quality system doesn't know which order was running. The CMMS doesn't know the line was mid-changeover.
-- **Integrations are expensive and fragile.** They take time to build, they need testing every time either side upgrades, and they're usually the first thing to break.
+- **Integrations add cost and risk.** They take time to build, they need retesting whenever either side upgrades, and they can be fragile.
 - **Operators juggle applications.** Logging in and out, switching screens, losing their place. They become human bridges between departments.
 - **You end up with several versions of the truth.** Which is exactly the problem you were trying to solve.
 

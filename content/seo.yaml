@@ -22,9 +22,9 @@ what-is-the-isa-95-model-and-where-does-mes-fit:
   start: 2
 
 who-are-mesa-and-how-do-they-define-mes:
-  title: "Who are MESA, and how do they define MES?"
-  short: "MESA's definition of MES"
-  description: "MESA's model of MES, its core functions and how to use it as a common language when you scope an MES or MOM project."
+  title: "MESA, its MES models, and what ISA taking over means"
+  short: "MESA, MES and ISA"
+  description: "MESA closed in June 2026 and ISA took over its content. What MESA's MES models said, how they grew, and what the change means for MES/MOM."
   category: education
   art: wheel
   start: 3

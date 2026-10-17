@@ -2,9 +2,9 @@
 title: "What is the ISA-95 model, and where does MES fit?"
 slug: "what-is-the-isa-95-model-and-where-does-mes-fit"
 legacyUrl: "https://www.mesmatters.com/post/what-is-the-isa-95-model-and-where-does-mes-fit"
-description: "ISA-95 ModelThe ISA-95 model, also known as ANSI/ISA-95 or ISA-95, is a global standard for enterprise and control system integration. The model is designed to provide a consistent framework for integrating business and manufacturing processes, enabling consistent information exchange between enterprise and control systems on the shopfloor.  ISA-95 is widely recognised and accepted as the de-facto standard for manufacturing system integration and is used by many companies around the world. The mod"
+description: "ISA-95 ModelThe ISA-95 model, also known as ANSI/ISA-95 or IEC 62264, is a global standard for enterprise and control system integration. The model is designed to provide a consistent framework for integrating business and manufacturing processes, enabling consistent information exchange between enterprise and control systems on the shopfloor.  ISA-95 is widely recognised and accepted as the de-facto standard for manufacturing system integration and is used by many companies around the world. The mod"
 published: "2023-05-10T19:34:48.706Z"
-updated: "2026-10-16T09:00:00.000Z"
+updated: "2026-10-17T09:00:00.000Z"
 author: "Matthew Barber"
 categories: ["Thought Leadership"]
 heroImage: "/images/legacy/b75fc5_b24ed85c25c24154aa252504f61df215-mv2.png"
@@ -13,19 +13,19 @@ wordCount: 953
 
 ## ISA-95 Model
 
-The ISA-95 model, also known as ANSI/ISA-95 or ISA-95, is a global standard for enterprise and control system integration. The model is designed to provide a consistent framework for integrating business and manufacturing processes, enabling consistent information exchange between enterprise and control systems on the shopfloor.
+The ISA-95 model, also known as ANSI/ISA-95 or IEC 62264, is a global standard for enterprise and control system integration. The model is designed to provide a consistent framework for integrating business and manufacturing processes, enabling consistent information exchange between enterprise and control systems on the shopfloor.
 
 ISA-95 is widely recognised and accepted as the de-facto standard for manufacturing system integration and is used by many companies around the world.
 
-The model is developed and maintained by the International Society of Automation (ISA), a non-profit organisation that sets standards for industrial automation and control systems. The model was first published in 1995.
+The model is developed and maintained by the International Society of Automation (ISA), a non-profit organisation that sets standards for industrial automation and control systems. Work on the standard began in the mid-1990s under ISA's SP95 committee, and Part 1 was first published in 2000. It has since grown to eight parts, and the core parts are adopted internationally as IEC 62264 ([ISA](https://www.isa.org/standards-and-publications/isa-standards/isa-95-standard)). Its focus is mainly the boundary between Levels 3 and 4: the activities of manufacturing operations, and what ERP and MES/MOM exchange.
 
 It consists of five levels, each representing a different layer of the manufacturing system. These levels are:
 
-- **Level 0 -** Physical equipment layer such as the machines on the shopfloor.
-- **Level 1 -** Physical sensors on the equipment, such as PLCs to monitor processes.
-- **Level 2 -** Monitoring and supervising layer, such as the logic in PLCs to control and monitor the process.
-- **Level 3 -** Manufacturing operations management layer, managed by an MES application.
-- **Level 4 -** Enterprise business systems layer, managed by ERP.
+- **Level 0 -** The physical production process: the machines and equipment on the shopfloor.
+- **Level 1 -** Sensing and manipulating the process: sensors, actuators, valves and other field devices, working in milliseconds.
+- **Level 2 -** Monitoring and control: PLCs, DCS and usually SCADA, controlling and supervising the process in seconds.
+- **Level 3 -** Manufacturing operations management: MES/MOM, working in shifts, hours, minutes and seconds.
+- **Level 4 -** Business planning and logistics: ERP, working in months, weeks and days.
 
 All of these layers communicate, allowing data to flow between the different systems in the factory.
 
@@ -43,7 +43,7 @@ MES reads data directly from the OPC/PLC layer, typically through an OPC server.
 
 The physical equipment layer (Level 0) represents the manufacturing process, including the machines and other equipment in the production line. Physical sensors (Level 1) monitor the physical equipment layer, reading information about the process in real-time such as counts, machine stops, and process variables such as temperatures and speeds.
 
-The monitoring and supervising layer (Level 2) includes the control systems that operate and monitor the physical equipment, typically implemented on programmable logic controllers (PLCs) which are small high-speed computers used to read sensor data and perform logic. PLCs are programmed in "ladder logic" which are programs graphically coded in a similar way to an electrical wiring diagram. This layer could involve distributed control systems (DCS), and supervisory control and data acquisition (SCADA) systems.
+The monitoring and supervising layer (Level 2) includes the control systems that operate and monitor the physical equipment, typically implemented on programmable logic controllers (PLCs), which are small high-speed computers used to read sensor data and perform logic. PLCs are often programmed in "ladder logic", one of the IEC 61131-3 languages, which is coded graphically in a similar way to an electrical wiring diagram. This layer could involve distributed control systems (DCS), and supervisory control and data acquisition (SCADA) systems.
 
 The manufacturing operations management layer (Level 3) includes the software systems that manage the manufacturing process, such as manufacturing execution systems (MES). If an MES isn't in place, then a collection of other applications could fill this space, such as:
 
@@ -88,4 +88,4 @@ The model provides a standardised framework for data exchange. This framework ma
 
 ## Conclusion
 
-The ISA-95 model is a widely recognised and accepted standard for integrating business and manufacturing processes. By providing a standardised framework for integrating different layers of the manufacturing system, the ISA-95 model enables seamless information exchange between different systems. This integration can help to improve the efficiency and effectiveness of the manufacturing process, reducing downtime, and improving overall business performance.
+The ISA-95 model is a widely recognised and accepted standard for integrating business and manufacturing processes. By providing a standardised framework for integrating different layers of the manufacturing system, the ISA-95 model gives everyone a common language for how information moves between systems. This integration can help to improve the efficiency and effectiveness of the manufacturing process, reducing downtime, and improving overall business performance.

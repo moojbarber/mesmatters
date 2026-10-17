@@ -4,7 +4,7 @@ slug: "mes-functionality-quality-operations"
 legacyUrl: "https://www.mesmatters.com/post/mes-functionality-quality-operations"
 description: "IntroductionIt's critical for manufacturers to monitor the quality of the products they are producing to reduce waste, prevent rework, and avoid shipping low quality inventory to customers which could result in financial penalties, costly recalls, or loss of reputation and future business.Customers are also enforcing suppliers to adhere to new initiatives such as \"zero defects\", as well as reducing the acceptable tolerances on material quality.Poor quality product eats into profit margins, so it"
 published: "2023-06-29T19:46:35.481Z"
-updated: "2026-10-16T09:00:00.000Z"
+updated: "2026-10-17T09:00:00.000Z"
 author: "Matthew Barber"
 categories: ["MES Education"]
 heroImage: "/images/legacy/b75fc5_c3d7228a216f4dedb8860caa239d3334-mv2.png"
@@ -74,7 +74,7 @@ Quality functionality is heavily tied into a variety of other MES functions, thi
 
 Quality inspections on supplier materials received into the factory. These could be performed on serialised inventory, or against a batch of material.
 
-A dedicated QMS system doesn't have the context of the inventory in stock without this information being entered manually. When the raw material inventory is subsequently consumed into the process a good MES tracks the quality inspection as part of the traceability record. If issues are found later in the process (or worse found by a customer) the traceability report can look all the way back to the raw materials received by the supplier and the results of any inspections.
+A dedicated QMS system doesn't necessarily have the context of the inventory in stock without this information being entered manually. When the raw material inventory is subsequently consumed into the process a good MES tracks the quality inspection as part of the traceability record. If issues are found later in the process (or worse found by a customer) the traceability report can look all the way back to the raw materials received by the supplier and the results of any inspections.
 
 Poor quality materials may need to be sent back to the supplier. Alternatively, if the grade of material is still useable, but not within tolerance, or with minor defects this could result in a discount.
 

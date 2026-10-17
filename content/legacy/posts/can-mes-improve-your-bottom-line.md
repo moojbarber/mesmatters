@@ -2,7 +2,7 @@
 slug: "can-mes-improve-your-bottom-line"
 legacyUrl: "https://www.mesmatters.com/post/can-mes-improve-your-bottom-line"
 published: "2023-11-05T14:53:41.612Z"
-updated: "2026-10-16T09:00:00.000Z"
+updated: "2026-10-17T09:00:00.000Z"
 author: "Matthew Barber"
 ---
 
@@ -16,7 +16,7 @@ I always ask the same question: what would a 1% improvement in OEE mean for your
 
 Work it out for your bottleneck. More output from equipment you already own. Fewer overtime shifts. Perhaps a capital project you no longer need. For most manufacturers it's a very significant number.
 
-Now consider that well-implemented MES/MOM often delivers double-digit improvements. In Deloitte's 2025 Smart Manufacturing Survey, large manufacturers reported average improvements of 10% to 20% in production output and 10% to 15% in unlocked capacity from smart manufacturing initiatives ([Deloitte, 2025](https://www.deloitte.com/us/en/insights/industry/manufacturing-industrial-products/2025-smart-manufacturing-survey.html)).
+Now consider that well-implemented MES/MOM transformations often deliver double-digit improvements. In Deloitte's 2025 Smart Manufacturing Survey, large manufacturers reported average improvements of 10% to 20% in production output and 10% to 15% in unlocked capacity from smart manufacturing initiatives ([Deloitte, 2025](https://www.deloitte.com/us/en/insights/industry/manufacturing-industrial-products/2025-smart-manufacturing-survey.html)).
 
 ## Where the savings come from
 
