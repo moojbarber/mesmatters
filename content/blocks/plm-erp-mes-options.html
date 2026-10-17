@@ -1,0 +1,14 @@
+<figure class="blk paths" aria-label="Two common ways to connect PLM, ERP and MES/MOM">
+  <div class="path">
+    <span class="zl">Option A · Through ERP</span>
+    <div class="chain"><span class="node">PLM</span><span class="arw">→</span><span class="node">ERP</span><span class="arw">→</span><span class="node">MES/MOM</span></div>
+    <p>ERP turns the engineering BOM into the manufacturing BOM and routing, then releases orders, BOMs and routings to MES/MOM. MES/MOM never talks to PLM.</p>
+  </div>
+  <div class="path hot">
+    <span class="zl">Option B · Through ERP, plus a direct link</span>
+    <div class="chain"><span class="node">PLM</span><span class="arw">→</span><span class="node">ERP</span><span class="arw">→</span><span class="node">MES/MOM</span></div>
+    <div class="chain"><span class="node">PLM</span><span class="arw">→</span><span class="node">MES/MOM</span></div>
+    <p>Orders, BOMs and routings still flow through ERP. Drawings, 3D models, work instructions and inspection characteristics go straight from PLM to MES/MOM.</p>
+  </div>
+  <figcaption>Both are valid. Which one fits depends on how much engineering content your operators need at the point of work.</figcaption>
+</figure>

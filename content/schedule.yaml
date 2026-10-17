@@ -11,30 +11,43 @@ send_time: "08:00"       # UK time the email goes out
 weekly:
   - ai-ml-genai-on-the-shopfloor
   - smart-manufacturing-maturity-model
+  - plm-erp-mes-digital-thread
   - digital-shift-handover
   - smart-factory-tech-stack
+  - ebom-mbom-as-built
   - contextualised-manufacturing-data
   - mes-business-case
+  - cpq-to-shopfloor
   - skills-enforcement-shopfloor
   - practical-genai-for-the-shopfloor
+  - wms-vs-mes-inventory
   - iiot-vs-mes
   - configure-dont-customise
+  - aps-vs-mes-scheduling
   - digital-work-instructions
   - predictive-maintenance-data
+  - qms-and-mes-quality
   - manufacturing-traceability
   - how-to-choose-an-mes
+  - spc-on-the-shopfloor
   - ai-for-frontline-workers
   - smart-manufacturing-myths
+  - eam-cmms-and-mes
   - mes-functionality-maintenance
   - manufacturing-change-management
+  - lims-and-mes
   - agentic-ai-mcp-manufacturing
   - manufacturing-kpis-beyond-oee
+  - isa95-integration-patterns
   - smart-factory-technology-mistakes
   - mes-is-a-digital-twin
+  - ot-cybersecurity-for-mes
   - opc-ua-mqtt-uns-explained
   - erp-master-data-for-mes
+  - mes-in-regulated-industries
   - esg-needs-shopfloor-data
   - mes-functionality-tooling
+  - service-data-back-to-engineering
   - replacing-a-homegrown-mes
   - smart-factory-roi-research
   - cloud-vs-on-premises-mes
