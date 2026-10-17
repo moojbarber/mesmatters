@@ -4,7 +4,7 @@ slug: "building-a-winning-team-for-mes-implementation-navigating-challenges-and-
 legacyUrl: "https://www.mesmatters.com/post/building-a-winning-team-for-mes-implementation-navigating-challenges-and-ensuring-success"
 description: "IntroductionImplementing an MES is a complex and challenging process that requires a well-coordinated team effort. In order to be successful it is crucial to build a winning team with the right mix of skills, expertise, and a shared vision. This article will explore the key elements of assembling an MES team such as: • Identifying Key Stakeholders and Decision Makers • Selecting the right MES Project Manager • Leveraging Internal Expertise and Knowledge • Seeking External Expertise and Consultan"
 published: "2023-07-23T17:34:59.804Z"
-updated: "2026-10-16T09:00:00.000Z"
+updated: "2026-10-17T09:00:00.000Z"
 author: "Matthew Barber"
 categories: ["MES Advice"]
 heroImage: "/images/legacy/b75fc5_ef0611075bea4535b568d567fe1071de-mv2.jpg"
@@ -85,7 +85,7 @@ When selecting external consultants, ensure that they have a proven track record
 
 Collaborating with experienced consultants will complement the internal team's knowledge and provide valuable insights and guidance throughout the implementation process.
 
-The MES vendor will also provide a team to run the project on their side, make good use of them and take their advice. They are the experts, and often significantly more skilled and knowledgeable than dedicated external consultants.
+The MES vendor, or its systems integration partner, will also provide a team to run the project on their side. Make good use of them and take their advice. They've implemented the product many times before, and they'll usually spot the pitfalls before you reach them.
 
 ## Defining Clear Roles and Responsibilities
 

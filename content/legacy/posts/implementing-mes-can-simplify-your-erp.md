@@ -4,7 +4,7 @@ slug: "implementing-mes-can-simplify-your-erp"
 legacyUrl: "https://www.mesmatters.com/post/implementing-mes-can-simplify-your-erp"
 description: "Discover how implementing a Manufacturing Execution System (MES) can streamline and simplify your Enterprise Resource Planning (ERP) process"
 published: "2023-08-02T22:00:30.314Z"
-updated: "2026-10-16T09:00:00.000Z"
+updated: "2026-10-17T09:00:00.000Z"
 author: "Matthew Barber"
 categories: ["Thought Leadership"]
 heroImage: "/images/legacy/b75fc5_56f375213533473092a99f4955753e9a-mv2.jpg"
@@ -33,7 +33,7 @@ Traditionally, shop floor data was manually recorded and then entered into the E
 
 While ERP systems excel at managing business processes, they often fall short when it comes to capturing and analysing shop floor data. Traditional ERP systems lack the necessary granular level of detail required for effective shop floor management. Trying to force an ERP system to handle shop floor operations can result in complex and inefficient workarounds leading to custom ERP code.
 
-User experience also suffers, because ERP systems are not designed for operational users.
+User experience can suffer too, because most ERP systems are designed primarily for office users rather than operators on the shopfloor.
 
 On the other hand, MES is purpose-built for the shop floor. It allows for real-time monitoring of production lines, tracking of quality metrics, and visibility into machine status and performance. By implementing MES alongside ERP, companies get the strengths of each system and ensure that the right tools are in place for each aspect of their operations.
 
@@ -49,17 +49,17 @@ By implementing MES alongside ERP, companies can harness the strengths of each s
 
 I hear many people who are familiar with ERP, and just can't get their heads around the value an MES brings. But the value it brings is immeasurable. You'd never consider using an MES to do the job of an ERP, so why consider using an ERP to do the job of an MES?
 
-## Increasingly ERP is retracting back to its core functions
+## ERP is focusing on its core strengths
 
-Recently, market expectations have shifted and increasingly people expect ERP to retract back to its core functions. You may have heard Gartner talk about "Composable ERP", the idea here is that ERP should focus on providing a strong foundation for integrating various systems rather than trying to be a one-size-fits-all solution. That way, complimentary applications like MES can be strategically implemented to add value in the areas they specialise in.
+Market expectations have shifted, and more people now expect ERP to focus on its core strengths. You may have heard Gartner talk about "Composable ERP", the idea here is that ERP should focus on providing a strong foundation for integrating various systems rather than trying to be a one-size-fits-all solution. That way, complimentary applications like MES can be strategically implemented to add value in the areas they specialise in.
 
 This shift creates an opportunity for MES to take on a more prominent role in managing shop floor operations. By offloading manufacturing operation functions to MES, companies can simplify their ERP setup and reduce the complexity associated with maintaining and customising an all-encompassing ERP system.
 
 This has enormous benefits, such as simpler ERP deployments, roll-out, and a lower cost of ownership.
 
-One of the main reasons behind this shift is the increasing complexity of business processes. As companies grow and expand, their operations become more intricate and require specialised software solutions to handle specific tasks. ERP's, with their broad scope and all-encompassing nature, often struggle to keep up with these evolving needs. By focusing on their core functions, ERP systems can become more agile and flexible. They can adapt to changing business requirements more easily and focus more on user experience. This is particularly important in industries where agility and responsiveness are critical, such as manufacturing and supply chain management.
+One of the main reasons behind this shift is the increasing complexity of business processes. As companies grow and expand, their operations become more intricate and require specialised software solutions to handle specific tasks. ERP's broad scope is its great strength, but it's hard for any one system to go deep in every specialist area as those needs evolve. By focusing on their core functions, ERP systems can become more agile and flexible. They can adapt to changing business requirements more easily and focus more on user experience. This is particularly important in industries where agility and responsiveness are critical, such as manufacturing and supply chain management.
 
-This shift allows companies to take advantage of the best-of-breed approach. Instead of relying on a single ERP to handle all their business processes, companies can select the most suitable software solutions for each specific task. This not only improves overall efficiency but also allows for greater customisation and specialisation. Having said that, choosing to implement ERP and MES from the same vendor brings enormous benefits, not least standard integrations.
+This shift allows companies to take advantage of the best-of-breed approach. Instead of relying on a single ERP to handle all their business processes, companies can select the most suitable software solutions for each specific task. This not only improves overall efficiency but also allows for greater customisation and specialisation. Having said that, choosing to implement ERP and MES from the same vendor brings enormous benefits, not least standard integrations. Integrations often add complexity and risk. When one vendor owns both sides, they own the integration too. That typically costs less to implement and maintain, and it takes a lot of risk out of the project.
 
 The retraction of ERP to its core functions is a natural response to the increasing complexity of business processes and the increased prevalence of specialised software solutions.
 
