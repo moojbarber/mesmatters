@@ -60,7 +60,7 @@ I ask because the answer usually tells me more about a factory's data than its a
 
 Predictive maintenance needs failure history. Predictive quality needs results linked to process data. A GenAI assistant needs trusted, contextualised information to answer from. Plain-English reporting needs a clean data model underneath.
 
-Vote, then tell me in the comments what's stopping you.""",
+Tell me in the comments, and what's stopping you.""",
 li_poll=["Predictive maintenance","Predictive quality","GenAI for operators","Plain-English reporting"],
 x=["One AI project on your shopfloor next year. Which do you fund first?"],
 x_poll=["Predictive maintenance","Predictive quality","GenAI for operators","Plain-English reports"],

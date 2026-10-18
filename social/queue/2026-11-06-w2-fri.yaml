@@ -1,0 +1,50 @@
+id: w2-fri
+week: 2
+date: '2026-11-06'
+type: Story
+title: When you knew a factory was smart (or wasn't)
+approved: false
+article: https://www.mesmatters.com/post/what-is-a-smart-factory
+linkedin:
+  at: 08:15
+  text: '[Your story. Write 150–250 words from your own experience, using this prompt.]
+
+
+    Prompt: the moment you realised a factory was genuinely smart, or wasn''t.
+
+
+    - Set the scene in one line: a site visit, a project kick-off, a morning meeting.
+
+    - What gave it away? Live data on screens, or people chasing paper and arguing about whose numbers were right?
+
+    - The one detail that stuck with you.
+
+    - What it taught you about what "smart" really means.
+
+
+    End with: What''s the first thing you look for when you walk onto a shopfloor?
+
+
+    #SmartFactory #Manufacturing'
+  needs_text: true
+x:
+  at: 08:30
+  posts:
+  - '[Short version of your story: 2–3 posts.]
+
+
+    End with: What''s the first thing you look for when you walk onto a shopfloor?'
+  needs_text: true
+instagram:
+  at: '18:30'
+  kind: manual_reel
+  caption: 'You can tell a lot about a factory in the first five minutes. What''s the first thing you look for?
+
+
+    #smartfactory #smartmanufacturing #manufacturing #industry40 #MES #shopfloor #digitaltransformation #manufacturingexcellence'
+  script: 'Open (0–3s): "You can tell if a factory is smart in the first five minutes. Here''s how."
+
+    Middle (3–35s): tell the story from your LinkedIn post in three or four short beats. Keep it to one site and one moment.
+
+    Close (35–45s): "What''s the first thing you look for when you walk onto a shopfloor? Tell me below." '
+  needs_text: true

@@ -4,8 +4,10 @@ FONTS="/home/claude/mesmatters/public/fonts"
 LOGO="/home/claude/mesmatters/public/logo-mark.svg"
 ART="/home/claude/mesmatters/public/images/art"
 ARTSLUG=[None]
-OUT=os.path.join(os.path.dirname(os.path.abspath(__file__)),"carousels")
+OUT=os.environ.get("OUTDIR") or os.path.join(os.path.dirname(os.path.abspath(__file__)),"carousels")
 W,H=1080,1350
+REEL=os.environ.get('REEL')=='1'
+if REEL: H=1920
 def load(n):
     s=importlib.util.spec_from_file_location(n,f"{n}.py"); m=importlib.util.module_from_spec(s); s.loader.exec_module(m); return m.WEEK
 CSS=f"""
@@ -23,7 +25,7 @@ html,body{{margin:0;background:var(--bg);color:var(--tx);-webkit-font-smoothing:
 .strip{{position:absolute;top:0;height:100%}}
 .dots{{position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.11) 1.4px,transparent 1.4px);background-size:28px 28px;-webkit-mask-image:linear-gradient(#000 0%,rgba(0,0,0,.55) 55%,transparent 92%)}}
 .blob{{position:absolute;border-radius:50%}}
-.safe{{position:relative;z-index:2;height:100%;padding:110px 96px 120px;display:flex;flex-direction:column}}
+.safe{{position:relative;z-index:2;height:100%;padding:{'250px 96px 380px' if REEL else '110px 96px 120px'};display:flex;flex-direction:column}}
 .top{{display:flex;justify-content:space-between;align-items:center}}
 .tag{{display:inline-flex;align-items:center;gap:14px;font:700 20px/1 var(--disp);letter-spacing:.2em;text-transform:uppercase;color:var(--b);border:1px solid rgba(51,212,224,.4);background:rgba(51,212,224,.08);padding:12px 20px 12px 14px;border-radius:99px}}
 .tag img{{height:34px}}
@@ -116,9 +118,9 @@ def content(kind,a,b,i,n):
 def page(cid, slides, seed):
     n=len(slides); st=strip(n,seed); out=[]
     for i,(k,a,b) in enumerate(slides):
-        cnt=f'<div class="count"><b>{i+1:02d}</b> / {n:02d}</div>' if n>1 else ""
+        cnt=f'<div class="count"><b>{i+1:02d}</b> / {n:02d}</div>' if n>1 and not REEL else ""
         sw='<span class="swipe">Swipe →</span>' if i<n-1 else '<span class="swipe" style="color:var(--dim)">mesmatters.com</span>'
-        if n==1: sw=""
+        if n==1 or REEL: sw=""
         out.append(f'''<section class="slide"><div class="strip" style="width:{n*W}px;left:{-i*W}px">{st}</div><div class="safe">
 <div class="top"><span class="tag"><img src="file://{LOGO}">MES Matters</span>{cnt}</div>
 <div class="body">{content(k,a,b,i,n)}</div>
@@ -129,19 +131,19 @@ async def render(items):
         b=await p.chromium.launch(); pg=await b.new_page(viewport={"width":W,"height":H})
         for cid,slides,art in items:
             ARTSLUG[0]=art
-            d=os.path.join(OUT,cid); os.makedirs(d,exist_ok=True)
+            d=os.path.join(OUT,cid,'reel') if REEL else os.path.join(OUT,cid); os.makedirs(d,exist_ok=True)
             f=os.path.join(d,"_src.html"); open(f,"w").write(page(cid,slides,hash(cid)%9999))
             await pg.goto("file://"+f); await pg.wait_for_timeout(400)
             n=len(slides)
             for i in range(n):
                 el=(await pg.query_selector_all("section.slide"))[i]
                 await el.screenshot(path=os.path.join(d,f"{cid}-{i+1:02d}.png"))
-            if n>1: await pg.pdf(path=os.path.join(d,f"{cid}-linkedin.pdf"),width=f"{W}px",height=f"{H}px",print_background=True)
+            if n>1 and not REEL: await pg.pdf(path=os.path.join(d,f"{cid}-linkedin.pdf"),width=f"{W}px",height=f"{H}px",print_background=True)
             os.remove(f)
         await b.close()
 if __name__=="__main__":
     items=[]
     for w in sys.argv[1:]:
         for p in load(w)["posts"]:
-            if p.get("slides"): items.append((p["id"],p["slides"],load(w)["url"].rsplit('/',1)[1] if p["type"]=="Article" else None))
+            if p.get("slides") and (not os.environ.get("ONLY") or p["id"] in os.environ["ONLY"].split()): items.append((p["id"],p["slides"],load(w)["url"].rsplit('/',1)[1] if p["type"]=="Article" else None))
     asyncio.run(render(items)); print(len(items),"rendered")

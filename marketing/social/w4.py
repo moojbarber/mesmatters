@@ -78,7 +78,7 @@ Level 4: joined-up data across the business.
 
 (I've left Level 5 off on purpose.)
 
-Vote, then tell me in the comments what's blocking the next step.""",
+Tell me in the comments which level, and what's blocking the next step.""",
 li_poll=["1: Mostly paper","2: Spreadsheets & tools","3: Integrated systems","4: Joined-up data"],
 x=["Be honest: what maturity level is your factory at?"],
 x_poll=["1: Mostly paper","2: Spreadsheets","3: Integrated systems","4: Joined-up data"],

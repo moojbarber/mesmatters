@@ -1,0 +1,60 @@
+id: w2-mon
+week: 2
+date: '2026-11-02'
+type: Myth vs reality
+title: Full of robots, empty of people
+approved: false
+article: https://www.mesmatters.com/post/what-is-a-smart-factory
+linkedin:
+  at: 08:15
+  text: 'Myth: a smart factory is full of robots and empty of people.
+
+
+    Reality: the smart factories worth copying are full of people making better decisions.
+
+
+    Automation has its place. But when I think about what actually separates a smart factory from a struggling one, robots are rarely top of the list.
+
+
+    What matters more:
+
+
+    Defined processes, not "ask Dave, he knows how it works".
+
+    Planning connected to execution, so the schedule reflects reality.
+
+    The right information at the point of work.
+
+    People backed to make the call, instead of firefighting.
+
+
+    Only one of those is really about technology.
+
+
+    What''s the biggest misconception about smart factories you hear?
+
+
+    #SmartFactory #SmartManufacturing'
+  needs_text: false
+  document: marketing/social/weeks-01-04/w2-mon/w2-mon-linkedin.pdf
+  document_title: Full of robots, empty of people
+x:
+  at: 08:30
+  posts:
+  - 'Myth: a smart factory is full of robots and empty of people.
+
+
+    Reality: it''s full of people making better decisions, because the right information reaches them at the right time.'
+  needs_text: false
+instagram:
+  at: '18:30'
+  kind: reel
+  caption: 'Four smart factory myths I hear all the time, and what''s actually true.
+
+
+    Which one do you hear most?
+
+
+    #smartfactory #smartmanufacturing #manufacturing #industry40 #MES #shopfloor #digitaltransformation #manufacturingexcellence'
+  media:
+  - marketing/social/weeks-01-04/w2-mon/w2-mon-reel.mp4

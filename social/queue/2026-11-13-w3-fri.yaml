@@ -1,0 +1,48 @@
+id: w3-fri
+week: 3
+date: '2026-11-13'
+type: Contrarian
+title: An expensive guess
+approved: false
+article: https://www.mesmatters.com/post/ai-ml-genai-on-the-shopfloor
+linkedin:
+  at: 08:15
+  text: 'If your shopfloor data is typed in at the end of the shift, your AI project is a very expensive guess.
+
+
+    Models learn from what you feed them. Estimated scrap, rounded downtime, manual counts and backflushed consumption give you confident-looking predictions built on sand.
+
+
+    I understand the pressure. Every board wants an AI story. But the factories getting real value from AI started somewhere much less exciting: capturing data automatically, with context, as it happens.
+
+
+    Fix that first. The AI conversation gets a lot more productive afterwards.
+
+
+    Is your leadership asking for AI before the data is ready?
+
+
+    #ShopfloorAI #ManufacturingData'
+  needs_text: false
+  document: marketing/social/weeks-01-04/w3-fri/w3-fri-linkedin.pdf
+  document_title: An expensive guess
+x:
+  at: 08:30
+  posts:
+  - 'If your shopfloor data is typed in at the end of the shift, your AI project is a very expensive guess.
+
+
+    Fix data capture first. Then talk about models.'
+  needs_text: false
+instagram:
+  at: '18:30'
+  kind: reel
+  caption: 'Every board wants an AI story. The factories getting real value started with something much less exciting: good data.
+
+
+    Is your data ready?
+
+
+    #shopfloorAI #AIinmanufacturing #machinelearning #generativeAI #smartmanufacturing #manufacturing #MES #industry40'
+  media:
+  - marketing/social/weeks-01-04/w3-fri/w3-fri-reel.mp4

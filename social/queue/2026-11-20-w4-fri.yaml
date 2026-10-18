@@ -1,0 +1,45 @@
+id: w4-fri
+week: 4
+date: '2026-11-20'
+type: Contrarian
+title: A turbo on flat tyres
+approved: false
+article: https://www.mesmatters.com/post/smart-manufacturing-maturity-model
+linkedin:
+  at: 08:15
+  text: 'Buying AI before you''ve fixed your data is like fitting a turbo to a car with flat tyres.
+
+
+    It''s an impressive purchase. It just won''t get you anywhere faster.
+
+
+    Every level of maturity builds on the one before. Skip a level and you usually end up paying twice: once for the shiny thing, and again for the foundations it needed.
+
+
+    So the question I''d ask any leadership team is simple. Where would your money go further this year: the turbo, or the tyres?
+
+
+    #ShopfloorAI #SmartManufacturing'
+  needs_text: false
+  document: marketing/social/weeks-01-04/w4-fri/w4-fri-linkedin.pdf
+  document_title: A turbo on flat tyres
+x:
+  at: 08:30
+  posts:
+  - 'Buying AI before you''ve fixed your data is like fitting a turbo to a car with flat tyres.
+
+
+    Impressive purchase. Not much faster.'
+  needs_text: false
+instagram:
+  at: '18:30'
+  kind: reel
+  caption: 'A turbo on flat tyres is still an impressive purchase. It just won''t get you anywhere faster.
+
+
+    Where would your money go further: AI, or the data underneath it?
+
+
+    #smartmanufacturing #digitaltransformation #manufacturing #industry40 #MES #shopfloor #maturitymodel #shopfloorAI'
+  media:
+  - marketing/social/weeks-01-04/w4-fri/w4-fri-reel.mp4

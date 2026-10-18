@@ -1,0 +1,46 @@
+id: w3-thu
+week: 3
+date: '2026-11-12'
+type: Poll
+title: Which AI use case would you fund first?
+approved: false
+article: https://www.mesmatters.com/post/ai-ml-genai-on-the-shopfloor
+linkedin:
+  at: 08:15
+  text: 'If you had budget for one AI project on the shopfloor next year, which would it be?
+
+
+    I ask because the answer usually tells me more about a factory''s data than its ambitions.
+
+
+    Predictive maintenance needs failure history. Predictive quality needs results linked to process data. A GenAI assistant needs trusted, contextualised information to answer from. Plain-English reporting needs a clean data model underneath.
+
+
+    Tell me in the comments, and what''s stopping you.'
+  needs_text: false
+  poll:
+    question: Tell me in the comments, and what's stopping you.
+    options:
+    - Predictive maintenance
+    - Predictive quality
+    - GenAI for operators
+    - Plain-English reporting
+x:
+  at: 08:30
+  posts:
+  - One AI project on your shopfloor next year. Which do you fund first?
+  needs_text: false
+  poll:
+  - Predictive maintenance
+  - Predictive quality
+  - GenAI for operators
+  - Plain-English reports
+instagram:
+  at: '18:30'
+  kind: image
+  caption: 'If you could fund one AI project on the shopfloor next year, what would it be? Vote in my story and tell me what''s stopping you.
+
+
+    #shopfloorAI #AIinmanufacturing #machinelearning #generativeAI #smartmanufacturing #manufacturing #MES #industry40'
+  media:
+  - marketing/social/weeks-01-04/w3-thu/w3-thu-01.jpg

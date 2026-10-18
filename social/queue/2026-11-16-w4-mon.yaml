@@ -1,0 +1,66 @@
+id: w4-mon
+week: 4
+date: '2026-11-16'
+type: Checklist
+title: Four questions to find your real maturity level
+approved: false
+article: https://www.mesmatters.com/post/smart-manufacturing-maturity-model
+linkedin:
+  at: 08:15
+  text: 'Four questions to find your factory''s real maturity level. Not the one in the last board presentation.
+
+
+    1. Is production data captured automatically, or typed in later?
+
+
+    2. Do production, quality, inventory and maintenance work from the same data?
+
+
+    3. Could you trace a lot from raw material to customer in minutes?
+
+
+    4. Does the morning meeting start with real-time data, or someone reading out yesterday''s numbers?
+
+
+    If you answered "typed in", "no", "days" and "yesterday''s numbers", you''re at Level 1 or 2. That''s very common, and nothing to be embarrassed about.
+
+
+    The embarrassing bit is planning an AI programme without admitting it.
+
+
+    Tomorrow I''ll share the five levels in full, and where AI actually starts to pay back.
+
+
+    #SmartManufacturing #DigitalTransformation'
+  needs_text: false
+  document: marketing/social/weeks-01-04/w4-mon/w4-mon-linkedin.pdf
+  document_title: Four questions to find your real maturity level
+x:
+  at: 08:30
+  posts:
+  - 'Four questions to find your factory''s real maturity level:
+
+
+    1. Is data captured automatically?
+
+    2. Do all departments use the same data?
+
+    3. Can you trace a lot in minutes?
+
+    4. Does the morning meeting start with live data?
+
+
+    Be honest.'
+  needs_text: false
+instagram:
+  at: '18:30'
+  kind: reel
+  caption: 'Four questions to find your factory''s real maturity level. Not the one in the board presentation.
+
+
+    How did you score?
+
+
+    #smartmanufacturing #digitaltransformation #manufacturing #industry40 #MES #shopfloor #maturitymodel #shopfloorAI'
+  media:
+  - marketing/social/weeks-01-04/w4-mon/w4-mon-reel.mp4

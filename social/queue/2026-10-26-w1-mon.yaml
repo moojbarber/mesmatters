@@ -1,0 +1,57 @@
+id: w1-mon
+week: 1
+date: '2026-10-26'
+type: Stat
+title: 72% of industrial organisations
+approved: false
+article: https://www.mesmatters.com/post/connected-worker-one-app-not-five
+linkedin:
+  at: 08:15
+  text: '72% of industrial organisations say frontline workforce issues have hurt their operational performance.
+
+
+    That''s from LNS Research. No surprise to anyone who has spent time on a shopfloor.
+
+
+    The problem isn''t effort. Operators work hard. The problem is what we give them to work with.
+
+
+    Paper checklists. A whiteboard for handover. A skills matrix in a spreadsheet nobody checks. And a handful of apps that don''t talk to each other.
+
+
+    Meanwhile the experienced people who held it all together are retiring. Median tenure in US manufacturing is 4.9 years, so new starters won''t stay long enough to learn the job the old way.
+
+
+    That changes the job of shopfloor software. Recording what happened isn''t enough any more. It has to guide someone through the work on their second day, not their second year.
+
+
+    How many screens does an operator in your factory touch in a single shift?
+
+
+    #SmartManufacturing #ConnectedWorker'
+  needs_text: false
+  document: marketing/social/weeks-01-04/w1-mon/w1-mon-linkedin.pdf
+  document_title: 72% of industrial organisations
+x:
+  at: 08:30
+  posts:
+  - '72% of industrial organisations say frontline workforce issues have hurt operational performance (LNS Research).
+
+
+    The problem usually isn''t effort. It''s paper, and apps that don''t talk to each other.
+
+
+    How many screens does your operator touch in one shift?'
+  needs_text: false
+instagram:
+  at: '18:30'
+  kind: reel
+  caption: '72% of industrial organisations say frontline workforce issues have hurt their performance. The tools we give operators are a big part of the problem.
+
+
+    How many screens does your operator touch in one shift? Tell me in the comments.
+
+
+    #smartmanufacturing #manufacturing #MES #industry40 #connectedworker #shopfloor #digitaltransformation #operationalexcellence'
+  media:
+  - marketing/social/weeks-01-04/w1-mon/w1-mon-reel.mp4

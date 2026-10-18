@@ -87,7 +87,7 @@ slides=[("cover","What 600 manufacturers reported","Deloitte 2025 Smart Manufact
         ("point","Read the small print","Large companies, self-reported. Use it for context, then build your own case."),
         ("cta","Does this match what you've seen?","Source: Deloitte, 2025")],
 ig="What smart manufacturing actually delivered, according to 600 large manufacturers. Swipe for the numbers, and the small print.\n\n"+IGTAGS),
-dict(id="w2-fri",day="Fri 6 Nov",type="Story",title="Prompt: when you knew a factory was smart (or wasn't)",
+dict(id="w2-fri",day="Fri 6 Nov",type="Story",title="When you knew a factory was smart (or wasn't)",
 li="""[Your story. Write 150–250 words from your own experience, using this prompt.]
 
 Prompt: the moment you realised a factory was genuinely smart, or wasn't.

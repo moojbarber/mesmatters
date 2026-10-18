@@ -1,0 +1,77 @@
+id: w2-tue
+week: 2
+date: '2026-11-03'
+type: Article
+title: A smart factory doesn't need a version number
+approved: false
+article: https://www.mesmatters.com/post/what-is-a-smart-factory
+linkedin:
+  at: 08:15
+  text: 'I saw "Industry 6.0" on LinkedIn recently. It made my blood boil.
+
+
+    We shouldn''t need a version number to describe something''s value. We should be able to say what it actually does.
+
+
+    So here''s the definition I use:
+
+
+    A smart factory is a manufacturing environment where people, processes and technology work together, supported by data, to maximise efficiency, flexibility and quality.
+
+
+    No magic. The right information reaches the right person at the right time, and decisions are based on facts rather than gut feel.
+
+
+    In the article I break down the five things that define one. Notice that only one of the five is really about technology. That''s deliberate.
+
+
+    I also cover the bit most people miss. A smart factory doesn''t reduce complexity. It increases your capacity to handle it.
+
+
+    Full article in the first comment.
+
+
+    So, which of the five does your factory struggle with most?'
+  needs_text: false
+  comment: 'Full article: https://www.mesmatters.com/post/what-is-a-smart-factory?utm_source=linkedin&utm_medium=social'
+  document: marketing/social/weeks-01-04/w2-tue/w2-tue-linkedin.pdf
+  document_title: A smart factory doesn't need a version number
+x:
+  at: 08:30
+  posts:
+  - 'I saw "Industry 6.0" on LinkedIn recently.
+
+
+    We shouldn''t need a version number to describe a smart factory. Here''s what it actually is:'
+  - 'A smart factory is where people, processes and technology work together, supported by data.
+
+
+    The right information reaches the right person at the right time. Decisions run on facts, not gut feel.'
+  - 'Five things define it: defined processes, planning connected to execution, real-time data at the point of work, a single source of truth, and people backed to make the call.'
+  - Only one of those five is really about technology. That's deliberate.
+  - 'And it doesn''t make manufacturing simpler. The complexity is what it is.
+
+
+    A smart factory increases your capacity to handle it.'
+  - 'Full article: https://www.mesmatters.com/post/what-is-a-smart-factory?utm_source=x&utm_medium=social'
+  needs_text: false
+instagram:
+  at: '18:30'
+  kind: carousel
+  caption: 'Industry 4.0, 5.0, 6.0… A smart factory doesn''t need a version number. Here are the five things that actually define one.
+
+
+    Full article: link in bio.
+
+
+    #smartfactory #smartmanufacturing #manufacturing #industry40 #MES #shopfloor #digitaltransformation #manufacturingexcellence'
+  media:
+  - marketing/social/weeks-01-04/w2-tue/w2-tue-01.jpg
+  - marketing/social/weeks-01-04/w2-tue/w2-tue-02.jpg
+  - marketing/social/weeks-01-04/w2-tue/w2-tue-03.jpg
+  - marketing/social/weeks-01-04/w2-tue/w2-tue-04.jpg
+  - marketing/social/weeks-01-04/w2-tue/w2-tue-05.jpg
+  - marketing/social/weeks-01-04/w2-tue/w2-tue-06.jpg
+  - marketing/social/weeks-01-04/w2-tue/w2-tue-07.jpg
+  - marketing/social/weeks-01-04/w2-tue/w2-tue-08.jpg
+  - marketing/social/weeks-01-04/w2-tue/w2-tue-09.jpg

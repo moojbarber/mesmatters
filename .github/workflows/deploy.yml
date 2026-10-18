@@ -3,6 +3,9 @@ name: Build and deploy site
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - 'social/**'
+      - 'marketing/**'
   workflow_dispatch:
   # Weekly release: rebuild every Tuesday morning so that week's scheduled article goes live
   # (06:30 UTC = 07:30 UK in summer, 06:30 in winter), then email it to subscribers.
