@@ -1,22 +1,27 @@
-# Weekly release schedule for new articles.
+# Weekly newsletter feature order.
 #
-# Articles listed here go live one per week, in this order, starting on `start`
-# (then every 7 days). On release day the site rebuilds automatically and the
-# article is emailed to newsletter subscribers via Kit.
+# Every article is on the site from launch (publish_all_now: true). Each Tuesday,
+# starting on `start`, the next article in this list is emailed to newsletter
+# subscribers via Kit, and it's the article that week's social posts point to.
 #
-# To reorder, just move lines around. To publish something sooner, move it up.
-# Articles in content/posts that are NOT listed here are published straight away.
+# To reorder, just move lines around. Set publish_all_now to false to go back to
+# releasing one article a week on the site as well.
+publish_all_now: true
 start: 2026-10-27        # a Tuesday
 send_time: "08:00"       # UK time the email goes out
 weekly:
+  - connected-worker-one-app-not-five
+  - what-is-a-smart-factory
   - ai-ml-genai-on-the-shopfloor
   - smart-manufacturing-maturity-model
   - plm-erp-mes-digital-thread
   - digital-shift-handover
   - smart-factory-tech-stack
+  - mes-vs-mom
   - ebom-mbom-as-built
   - contextualised-manufacturing-data
   - mes-business-case
+  - food-manufacturing-mes-barriers
   - cpq-to-shopfloor
   - skills-enforcement-shopfloor
   - practical-genai-for-the-shopfloor

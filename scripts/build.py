@@ -127,6 +127,12 @@ def load_schedule():
     return {slug: start + dt.timedelta(weeks=i) for i, slug in enumerate(cfg.get("weekly") or [])}
 
 
+def publish_all_now():
+    path = ROOT / "content" / "schedule.yaml"
+    cfg = yaml.safe_load(path.read_text(encoding="utf-8")) or {} if path.exists() else {}
+    return bool(cfg.get("publish_all_now"))
+
+
 def uk_today():
     override = os.environ.get("BUILD_DATE")
     if override:
@@ -140,7 +146,7 @@ def uk_today():
 
 def load_posts(base, blocks, seo, include_scheduled=False):
     posts = []
-    schedule = load_schedule()
+    schedule = {} if publish_all_now() else load_schedule()
     today = uk_today()
     sources = sorted((ROOT / "content" / "legacy" / "posts").glob("*.md")) + sorted((ROOT / "content" / "posts").glob("*.md"))
     seen = {}
