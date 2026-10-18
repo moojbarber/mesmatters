@@ -1,6 +1,6 @@
-# mesmatters.com
+# shopfloormatters.com
 
-Source for the MES Matters website: a small static site built with Python and deployed to GitHub Pages.
+Source for the Shopfloor Matters website: a small static site built with Python and deployed to GitHub Pages.
 
 ## Writing a new article
 1. Add `content/posts/<slug>.md` with front matter:

@@ -1,4 +1,4 @@
-URL="https://www.mesmatters.com/post/what-is-a-smart-factory"
+URL="https://www.shopfloormatters.com/post/what-is-a-smart-factory"
 IGTAGS="#smartfactory #smartmanufacturing #manufacturing #industry40 #MES #shopfloor #digitaltransformation #manufacturingexcellence"
 WEEK={"n":2,"title":"Week 2 (2–6 Nov): what is a smart factory?","article":"What is a smart factory? No version number required","url":URL,"posts":[
 dict(id="w2-mon",day="Mon 2 Nov",type="Myth vs reality",title="Full of robots, empty of people",
@@ -27,7 +27,7 @@ slides=[("cover","Smart factory myths","And what's actually true"),
         ("myth","It's a technology project","Reality: process and people decide whether the technology works."),
         ("myth","It needs Industry 5.0 or 6.0","Reality: no version number required. Just good data, used well."),
         ("myth","It makes manufacturing simpler","Reality: it doesn't reduce complexity. It helps you handle it."),
-        ("cta","Which myth do you hear most?","mesmatters.com")],
+        ("cta","Which myth do you hear most?","shopfloormatters.com")],
 ig="Four smart factory myths I hear all the time, and what's actually true.\n\nWhich one do you hear most?\n\n"+IGTAGS),
 dict(id="w2-tue",day="Tue 3 Nov",type="Article",title="A smart factory doesn't need a version number",
 li="""I saw "Industry 6.0" on LinkedIn recently. It made my blood boil.
@@ -63,7 +63,7 @@ slides=[("cover","What is a smart factory?","No version number required."),
         ("num","4","One source of truth. The morning meeting starts with facts."),
         ("num","5","People backed to make the call. Less firefighting, more improving."),
         ("point","Only one of the five is really about technology","That's deliberate."),
-        ("cta","Read the full article","Link in bio · mesmatters.com")],
+        ("cta","Read the full article","Link in bio · shopfloormatters.com")],
 ig="Industry 4.0, 5.0, 6.0… A smart factory doesn't need a version number. Here are the five things that actually define one.\n\nFull article: link in bio.\n\n"+IGTAGS),
 dict(id="w2-thu",day="Thu 5 Nov",type="Stat",title="What 600 manufacturers reported",
 li="""Deloitte asked 600 large manufacturers what smart manufacturing has actually delivered.

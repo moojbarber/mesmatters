@@ -1,4 +1,4 @@
-URL="https://www.mesmatters.com/post/connected-worker-one-app-not-five"
+URL="https://www.shopfloormatters.com/post/connected-worker-one-app-not-five"
 IGTAGS="#smartmanufacturing #manufacturing #MES #industry40 #connectedworker #shopfloor #digitaltransformation #operationalexcellence"
 WEEK={"n":1,"title":"Week 1 (26–30 Oct): connected worker","article":"Connected worker: why your operators need one app, not five","url":URL,"posts":[
 dict(id="w1-mon",day="Mon 26 Oct",type="Stat",title="72% of industrial organisations",
@@ -41,7 +41,7 @@ Built into MES/MOM, the same capabilities know the context. Checklists appear be
 
 Connected worker is the front door. MOM is the house behind it. Make sure your door is attached to a house.
 
-The full article is on the new MES Matters site. Link in the first comment.
+The full article is on my new site, Shopfloor Matters (formerly MES Matters). Link in the first comment.
 
 Have you bought a standalone connected worker tool and then needed MES on top? How did that go?""",
 li_comment="Full article: "+URL+"?utm_source=linkedin&utm_medium=social",
@@ -59,7 +59,7 @@ slides=[("cover","Your operators don't need another app.","They need fewer."),
         ("point","Built in, it knows the context","Checklists appear by order. Quality checks fire when the material changes."),
         ("point","And skills are enforced","The wrong person can't start the wrong job. Handover comes from real data."),
         ("quote","Connected worker is the front door.","MOM is the house behind it."),
-        ("cta","Read the full article","Link in bio · mesmatters.com")],
+        ("cta","Read the full article","Link in bio · shopfloormatters.com")],
 ig="Connected worker is one of the most useful ideas in manufacturing right now. How you buy it decides whether your operators get one screen or five.\n\nFull article: link in bio.\n\n"+IGTAGS),
 dict(id="w1-thu",day="Thu 29 Oct",type="Poll",title="How many apps per shift?",
 li="""Quick one for anyone running a shopfloor.
@@ -74,7 +74,7 @@ x=["How many different apps does an operator use in a single shift in your facto
 x_poll=["1–2","3–4","5 or more","Never counted"],
 ig_format="Story poll, plus a quote graphic in the feed",
 ig_story="How many apps do your operators use per shift?  Options: 1–2 / 3 or more",
-slides=[("quote","Every app switch is a moment where context gets lost.","mesmatters.com")],
+slides=[("quote","Every app switch is a moment where context gets lost.","shopfloormatters.com")],
 ig="Every time an operator switches app, context gets lost. How many apps do yours use in a shift? Vote in my story.\n\n"+IGTAGS),
 dict(id="w1-fri",day="Fri 30 Oct",type="Contrarian",title="A new silo with a nicer UI",
 li="""A connected worker platform that duplicates your MES isn't digital transformation. It's a new silo with a nicer UI.

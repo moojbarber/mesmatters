@@ -1,4 +1,4 @@
-MES MATTERS — LOGO PACK
+SHOPFLOOR MATTERS — LOGO PACK
 =======================
 
 WHICH FILE FOR WHAT
@@ -6,11 +6,11 @@ WHICH FILE FOR WHAT
 - LinkedIn company page cover .... social/linkedin-company-cover-1128x191.png
 - LinkedIn company page logo ..... social/linkedin-company-logo-400x400.png
 - X / Twitter header ............. social/x-twitter-header-1500x500.png
-- Kit newsletter header .......... lockup-horizontal/mes-matters-horizontal-dark-bg-240px.png (on a dark email header)
+- Kit newsletter header .......... lockup-horizontal/shopfloor-matters-horizontal-dark-bg-240px.png (on a dark email header)
                                    or ...-light-bg-240px.png (on a white email)
 - Slides, documents (dark) ....... lockup-horizontal/...-dark-bg  or  lockup-stacked/...-dark-bg
 - Slides, documents (white) ...... lockup-horizontal/...-light-bg or  lockup-stacked/...-light-bg
-- Single colour on dark photo .... lockup-horizontal/mes-matters-horizontal-white
+- Single colour on dark photo .... lockup-horizontal/shopfloor-matters-horizontal-white
 - App / profile icon, favicon .... icons/  (square for most uses, rounded where a platform doesn't round it for you)
 - The mark on its own ............ mark/  (transparent background)
 

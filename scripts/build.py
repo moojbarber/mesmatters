@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build mesmatters.com into ./dist
+"""Build shopfloormatters.com into ./dist
 
     python scripts/build.py                    # production (served from the domain root)
     python scripts/build.py --base /mesmatters # preview on <user>.github.io/mesmatters
@@ -27,7 +27,7 @@ from jinja2 import Environment, FileSystemLoader
 
 ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / "dist"
-SITE = "https://www.mesmatters.com"
+SITE = "https://www.shopfloormatters.com"
 LINKEDIN = "https://www.linkedin.com/in/mattjbarber/"
 # Kit (kit.com) form ID for the newsletter sign-up. Set the KIT_FORM_ID repo variable; empty = sign-ups not open yet.
 KIT_FORM_ID = os.environ.get("KIT_FORM_ID", "").strip()
@@ -107,7 +107,7 @@ def render_body(md_text, base, blocks):
     out = conv.convert(md_text)
     toc = [{"id": t["id"], "name": html.unescape(t["name"])} for t in conv.toc_tokens]
     # internal links -> site-relative, external links open in new tab
-    out = re.sub(r'href="https?://(?:www\.)?mesmatters\.com(/[^"]*)?"', lambda m: f'href="{base}{m.group(1) or "/"}"', out)
+    out = re.sub(r'href="https?://(?:www\.)?(?:mesmatters|shopfloormatters)\.com(/[^"]*)?"', lambda m: f'href="{base}{m.group(1) or "/"}"', out)
     out = re.sub(r'<a href="(https?://[^"]+)"', r'<a href="\1" target="_blank" rel="noopener"', out)
     out = re.sub(r'(src|href)="/(?!/)', lambda m: f'{m.group(1)}="{base}/', out)
     out = re.sub(r"<table>", '<div class="table-wrap"><table>', out).replace("</table>", "</table></div>")
@@ -241,7 +241,7 @@ def build(base, relative=False, include_scheduled=False):
 
     person = {"@type": "Person", "name": "Matt Barber", "url": f"{SITE}/about", "sameAs": [LINKEDIN],
               "jobTitle": "VP & General Manager, MES", "image": f"{SITE}/images/matt-barber.jpg"}
-    org = {"@type": "Organization", "name": "MES Matters", "url": SITE, "logo": f"{SITE}/favicon.svg"}
+    org = {"@type": "Organization", "name": "Shopfloor Matters", "url": SITE, "logo": f"{SITE}/favicon.svg"}
 
     def write(rel, tpl, **ctx):
         out = DIST / rel
@@ -261,16 +261,16 @@ def build(base, relative=False, include_scheduled=False):
 
     # home
     write("index.html", "home.html", active="home",
-          seo_title="MES Matters | The smart factory, shopfloor AI and MES",
+          seo_title="Shopfloor Matters | The smart factory, shopfloor AI and MES",
           description="Practical, vendor-neutral writing on the smart factory and shopfloor AI, and the MES and MOM systems underneath them. By Matt Barber.",
           canonical=f"{SITE}/", posts=posts, series=series, start=start, latest=posts[:5],
           start_minutes=sum(p["read_time"] for p in start), total_words_k=round(total_words / 1000),
-          jsonld=[jsonld({"@context": "https://schema.org", "@type": "WebSite", "name": "MES Matters", "url": SITE,
+          jsonld=[jsonld({"@context": "https://schema.org", "@type": "WebSite", "name": "Shopfloor Matters", "url": SITE,
                           "description": "Practical guides to MES, MOM and smart manufacturing", "author": person, "publisher": org})])
 
     # all articles
     write("articles.html", "list.html", active="articles",
-          seo_title="All articles | MES Matters", description="Every article on the smart factory, shopfloor AI, implementation and the MES and MOM foundations underneath them.",
+          seo_title="All articles | Shopfloor Matters", description="Every article on the smart factory, shopfloor AI, implementation and the MES and MOM foundations underneath them.",
           canonical=f"{SITE}/articles", eyebrow=f"Library / {len(posts)} articles", heading="Every article, in one place",
           kicker="Guides, explainers and opinion on the smart factory, shopfloor AI and MES/MOM. Newest first.",
           all_count=len(posts), featured=posts[0], groups=[{"label": "Everything else", "posts": posts[1:]}])
@@ -288,7 +288,7 @@ def build(base, relative=False, include_scheduled=False):
         else:
             groups.append({"label": None, "posts": cposts})
         write(f"{c['slug']}.html", "list.html", active=c["slug"],
-              seo_title=f"{c['name']} | MES Matters", description=c["kicker"][:158],
+              seo_title=f"{c['name']} | Shopfloor Matters", description=c["kicker"][:158],
               canonical=f"{SITE}/{c['slug']}", eyebrow=f"{c['eyebrow']} / {len(cposts)} articles",
               heading=c["name"], kicker=c["kicker"], all_count=len(posts), featured=None, groups=groups,
               og_image=f"{SITE}/images/og/page-{c['art']}.png")
@@ -316,38 +316,38 @@ def build(base, relative=False, include_scheduled=False):
             {"@type": "ListItem", "position": 2, "name": p["category_label"], "item": f"{SITE}/{p['category_slug']}"},
             {"@type": "ListItem", "position": 3, "name": p["short"], "item": p["canonical"]}]}
         write(f"post/{p['slug']}.html", "post.html", active=p["category_slug"], progress=True,
-              seo_title=f"{p['title']} | MES Matters", og_title=p["title"], og_type="article",
+              seo_title=f"{p['title']} | Shopfloor Matters", og_title=p["title"], og_type="article",
               description=p["description"], canonical=p["canonical"], og_image=f"{SITE}/images/og/{p['slug']}.png",
               p=p, body=Markup(p["body"]), toc=p["toc"], series_posts=series if p["series"] else None,
               prev=prev, next=nxt, related=related, jsonld=[jsonld(ld), jsonld(crumbs)])
 
     # about / contact / 404
     about = (ROOT / "content" / "pages" / "about.html").read_text(encoding="utf-8").replace("{{base}}", base)
-    write("about.html", "page.html", active="about", seo_title="About Matt Barber | MES Matters",
+    write("about.html", "page.html", active="about", seo_title="About Matt Barber | Shopfloor Matters",
           description="Matt Barber went from writing MES code to running a global MES business. Why he writes about the smart factory and shopfloor AI.",
           canonical=f"{SITE}/about", eyebrow="About", heading="Hi, I'm Matt.",
           kicker="I've spent my career on the shopfloor side of software. This is where I write down what I've learnt about making factories smarter.",
           content=Markup(about), show_cta=True, og_image=f"{SITE}/images/og/page-about.png",
           jsonld=[jsonld({"@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": person})])
     contact = (ROOT / "content" / "pages" / "contact.html").read_text(encoding="utf-8").replace("{{base}}", base).replace("{{linkedin}}", LINKEDIN)
-    write("contact.html", "page.html", active="contact", seo_title="Contact | MES Matters",
+    write("contact.html", "page.html", active="contact", seo_title="Contact | Shopfloor Matters",
           description="Get in touch with Matt Barber about the smart factory, shopfloor AI, MES and MOM, or something you've read here.",
           canonical=f"{SITE}/contact", eyebrow="Contact", heading="Let's talk shopfloor",
           kicker="The quickest way to reach me is a message on LinkedIn. I read everything, even if replies sometimes take a few days.",
           actions=Markup(f'<a class="btn" href="{LINKEDIN}" target="_blank" rel="me noopener">Message me on LinkedIn →</a>'),
           content=Markup(contact), show_cta=False)
-    write("subscribe.html", "page.html", active="subscribe", seo_title="Subscribe to the newsletter | MES Matters",
+    write("subscribe.html", "page.html", active="subscribe", seo_title="Subscribe to the newsletter | Shopfloor Matters",
           description="A practical newsletter on the smart factory, shopfloor AI and MES/MOM. New articles and lessons from real implementations, straight to your inbox.",
           canonical=f"{SITE}/subscribe", eyebrow="Newsletter", heading="Smart factory thinking, in your inbox",
           kicker="New articles and practical lessons on the smart factory, shopfloor AI and MES/MOM. Written from real implementations. No hype, no spam.",
           actions=Markup(env.get_template("macros.html").module.signup(base, KIT_FORM_ID, big=True)),
           content=Markup((ROOT / "content" / "pages" / "subscribe.html").read_text(encoding="utf-8")), show_cta=False)
     privacy = (ROOT / "content" / "pages" / "privacy.html").read_text(encoding="utf-8").replace("{{base}}", base)
-    write("privacy.html", "page.html", active=None, seo_title="Privacy | MES Matters",
-          description="How MES Matters handles your data, including newsletter sign-ups.",
+    write("privacy.html", "page.html", active=None, seo_title="Privacy | Shopfloor Matters",
+          description="How Shopfloor Matters handles your data, including newsletter sign-ups.",
           canonical=f"{SITE}/privacy", eyebrow="Privacy", heading="Your data, plainly",
           kicker="What I collect, why, and how to get it removed.", content=Markup(privacy), show_cta=False)
-    write("404.html", "page.html", active=None, seo_title="Page not found | MES Matters", description="This page doesn't exist.",
+    write("404.html", "page.html", active=None, seo_title="Page not found | Shopfloor Matters", description="This page doesn't exist.",
           canonical=f"{SITE}/404", eyebrow="404", heading="This line has stopped.", noindex=True,
           kicker="The page you were looking for isn't here. It may have moved when the site was rebuilt.",
           actions=Markup(f'<a class="btn" href="{base}/articles">Browse all articles →</a><a class="btn ghost" href="{base}/">Home</a>'),

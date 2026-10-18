@@ -105,13 +105,13 @@ def content(kind,a,b,i,n):
         items="".join(f"<li>{esc(x)}</li>" for x in b.split("|"))
         return f'<h2 class="h2">{esc(a)}</h2><ul class="list">{items}</ul>'
     if kind=="quote":
-        return f'<div class="quote"><p class="q">{esc(a)}</p>'+(f'<p class="p" style="margin-top:34px;font-weight:500;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent">{esc(b)}</p>' if b and b!="mesmatters.com" else "")+'</div>'
+        return f'<div class="quote"><p class="q">{esc(a)}</p>'+(f'<p class="p" style="margin-top:34px;font-weight:500;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent">{esc(b)}</p>' if b and b!="shopfloormatters.com" else "")+'</div>'
     if kind=="myth":
         r=b[len("Reality: "):] if b.startswith("Reality: ") else b
         r=r[:1].upper()+r[1:]
         return f'<div class="panel they"><div class="lab">They say</div><p class="t">{esc(a)}</p></div><div class="panel real"><div class="lab">Reality</div><p class="t">{esc(r)}</p></div>'
     if kind=="cta":
-        sub="" if b=="mesmatters.com" else b
+        sub="" if b=="shopfloormatters.com" else b
         return f'<div class="turn"><div><div class="lab">{"Your turn" if "?" in a else "Next"}</div><h2 class="h2">{esc(a)}</h2>'+(f'<p class="p" style="color:var(--mut)">{esc(sub)}</p>' if sub else "")+'</div></div>'
     # point
     return f'<h2 class="h2">{esc(a)}</h2>'+(f'<p class="p">{esc(b)}</p>' if b else "")
@@ -119,12 +119,12 @@ def page(cid, slides, seed):
     n=len(slides); st=strip(n,seed); out=[]
     for i,(k,a,b) in enumerate(slides):
         cnt=f'<div class="count"><b>{i+1:02d}</b> / {n:02d}</div>' if n>1 and not REEL else ""
-        sw='<span class="swipe">Swipe →</span>' if i<n-1 else '<span class="swipe" style="color:var(--dim)">mesmatters.com</span>'
+        sw='<span class="swipe">Swipe →</span>' if i<n-1 else '<span class="swipe" style="color:var(--dim)">shopfloormatters.com</span>'
         if n==1 or REEL: sw=""
         out.append(f'''<section class="slide"><div class="strip" style="width:{n*W}px;left:{-i*W}px">{st}</div><div class="safe">
-<div class="top"><span class="tag"><img src="file://{LOGO}">MES Matters</span>{cnt}</div>
+<div class="top"><span class="tag"><img src="file://{LOGO}">Shopfloor Matters</span>{cnt}</div>
 <div class="body">{content(k,a,b,i,n)}</div>
-<div class="foot"><span>Matt Barber · mesmatters.com</span>{sw}</div></div></section>''')
+<div class="foot"><span>Matt Barber · shopfloormatters.com</span>{sw}</div></div></section>''')
     return f"<!doctype html><html lang='en-GB'><head><meta charset='utf-8'><style>{CSS}</style></head><body>{''.join(out)}</body></html>"
 async def render(items):
     async with async_playwright() as p:

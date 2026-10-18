@@ -1,4 +1,4 @@
-URL="https://www.mesmatters.com/post/ai-ml-genai-on-the-shopfloor"
+URL="https://www.shopfloormatters.com/post/ai-ml-genai-on-the-shopfloor"
 IGTAGS="#shopfloorAI #AIinmanufacturing #machinelearning #generativeAI #smartmanufacturing #manufacturing #MES #industry40"
 WEEK={"n":3,"title":"Week 3 (9–13 Nov): AI, ML and GenAI on the shopfloor","article":"AI, ML and GenAI on the shopfloor: what each one actually does","url":URL,"posts":[
 dict(id="w3-mon",day="Mon 9 Nov",type="Analogy",title="Machine learning is older than you think",
@@ -51,7 +51,7 @@ slides=[("cover","AI, ML and GenAI are not the same thing","What each one actual
         ("point","Agentic AI","Plans and carries out tasks through other software. The top of the maturity curve."),
         ("point","What they all need","Good, granular, contextualised data, collected over time."),
         ("quote","AI is the last step, not the first.",""),
-        ("cta","Read the full article","Link in bio · mesmatters.com")],
+        ("cta","Read the full article","Link in bio · shopfloormatters.com")],
 ig="AI, ML and GenAI get used as if they mean the same thing. They don't. Here's what each one does in a factory, and what all of them need first.\n\nFull article: link in bio.\n\n"+IGTAGS),
 dict(id="w3-thu",day="Thu 12 Nov",type="Poll",title="Which AI use case would you fund first?",
 li="""If you had budget for one AI project on the shopfloor next year, which would it be?
@@ -66,7 +66,7 @@ x=["One AI project on your shopfloor next year. Which do you fund first?"],
 x_poll=["Predictive maintenance","Predictive quality","GenAI for operators","Plain-English reports"],
 ig_format="Story poll, plus a quote graphic in the feed",
 ig_story="Which AI project would you fund first?  Options: Predictive maintenance / GenAI assistant",
-slides=[("quote","The AI project you choose says more about your data than your ambitions.","mesmatters.com")],
+slides=[("quote","The AI project you choose says more about your data than your ambitions.","shopfloormatters.com")],
 ig="If you could fund one AI project on the shopfloor next year, what would it be? Vote in my story and tell me what's stopping you.\n\n"+IGTAGS),
 dict(id="w3-fri",day="Fri 13 Nov",type="Contrarian",title="An expensive guess",
 li="""If your shopfloor data is typed in at the end of the shift, your AI project is a very expensive guess.
@@ -86,6 +86,6 @@ slides=[("cover","Typed-in shopfloor data + AI","= a very expensive guess"),
         ("point","Models learn from what you feed them","Estimated scrap and rounded downtime give confident-looking nonsense."),
         ("point","Every board wants an AI story","The factories getting value started somewhere less exciting."),
         ("point","Capture data automatically","With context, as it happens. Then the models have something to learn from."),
-        ("cta","Is your leadership asking for AI before the data is ready?","mesmatters.com")],
+        ("cta","Is your leadership asking for AI before the data is ready?","shopfloormatters.com")],
 ig="Every board wants an AI story. The factories getting real value started with something much less exciting: good data.\n\nIs your data ready?\n\n"+IGTAGS),
 ]}

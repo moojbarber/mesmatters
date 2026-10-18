@@ -1,4 +1,4 @@
-URL="https://www.mesmatters.com/post/smart-manufacturing-maturity-model"
+URL="https://www.shopfloormatters.com/post/smart-manufacturing-maturity-model"
 IGTAGS="#smartmanufacturing #digitaltransformation #manufacturing #industry40 #MES #shopfloor #maturitymodel #shopfloorAI"
 WEEK={"n":4,"title":"Week 4 (16–20 Nov): the smart manufacturing maturity model","article":"The smart manufacturing maturity model: you can't skip a level","url":URL,"posts":[
 dict(id="w4-mon",day="Mon 16 Nov",type="Checklist",title="Four questions to find your real maturity level",
@@ -27,7 +27,7 @@ slides=[("cover","Where is your factory really?","Four honest questions"),
         ("num","3","Could you trace a lot from raw material to customer in minutes?"),
         ("num","4","Does the morning meeting start with real-time data?"),
         ("point","Mostly no?","You're at Level 1 or 2. Very common. Nothing to be embarrassed about."),
-        ("cta","Admit it before you plan the AI programme","mesmatters.com")],
+        ("cta","Admit it before you plan the AI programme","shopfloormatters.com")],
 ig="Four questions to find your factory's real maturity level. Not the one in the board presentation.\n\nHow did you score?\n\n"+IGTAGS),
 dict(id="w4-tue",day="Tue 17 Nov",type="Article",title="You can't skip a level",
 li="""You can't skip a level of smart manufacturing maturity. Plenty of factories are trying to.
@@ -66,7 +66,7 @@ slides=[("cover","You can't skip a level","The smart manufacturing maturity mode
         ("level","5","Optimised. AI-enabled. Very few factories are really here."),
         ("point","Most factories are between 1 and 3","The jump from 2 to 3 is usually the biggest step in value."),
         ("quote","AI starts paying back at Level 3.","That's where it finally has trustworthy data to learn from."),
-        ("cta","Read the full article","Link in bio · mesmatters.com")],
+        ("cta","Read the full article","Link in bio · shopfloormatters.com")],
 ig="Five levels from paper to AI-enabled, and why there are no shortcuts. Where would you put your factory?\n\nFull article: link in bio.\n\n"+IGTAGS),
 dict(id="w4-thu",day="Thu 19 Nov",type="Poll",title="What level is your factory at?",
 li="""Be honest. What maturity level is your factory at today?
@@ -84,7 +84,7 @@ x=["Be honest: what maturity level is your factory at?"],
 x_poll=["1: Mostly paper","2: Spreadsheets","3: Integrated systems","4: Joined-up data"],
 ig_format="Story poll, plus a quote graphic in the feed",
 ig_story="Is your factory still mostly on paper and spreadsheets?  Options: Yes / No",
-slides=[("quote","You can't plan a route if you're lying to yourself about the starting point.","mesmatters.com")],
+slides=[("quote","You can't plan a route if you're lying to yourself about the starting point.","shopfloormatters.com")],
 ig="Be honest: what level is your factory at? Vote in my story.\n\n"+IGTAGS),
 dict(id="w4-fri",day="Fri 20 Nov",type="Contrarian",title="A turbo on flat tyres",
 li="""Buying AI before you've fixed your data is like fitting a turbo to a car with flat tyres.
@@ -102,6 +102,6 @@ slides=[("cover","Buying AI before fixing your data…","…is like fitting a tu
         ("point","Impressive purchase","It just won't get you anywhere faster."),
         ("point","Each level builds on the last","Skip one and you pay twice: for the shiny thing, then the foundations."),
         ("point","Fix the tyres first","Automatic data capture, with context. Then the turbo is worth having."),
-        ("cta","Where would your money go further this year?","mesmatters.com")],
+        ("cta","Where would your money go further this year?","shopfloormatters.com")],
 ig="A turbo on flat tyres is still an impressive purchase. It just won't get you anywhere faster.\n\nWhere would your money go further: AI, or the data underneath it?\n\n"+IGTAGS),
 ]}
