@@ -51,7 +51,6 @@ NAV = [
     {"key": "thought-leadership", "label": "Smart Factory & AI", "desc": "Strategy, shopfloor AI, connected worker", "href": "/thought-leadership"},
     {"key": "mes-education", "label": "Foundations", "desc": "MES, MOM, OEE, ISA-95 explained", "href": "/mes-education"},
     {"key": "mes-advice", "label": "Implementation", "desc": "Selecting, deploying and adopting MES", "href": "/mes-advice"},
-    {"key": "featured", "label": "Featured", "desc": "Podcasts, interviews and press", "href": "/featured"},
     {"key": "about", "label": "About", "desc": "Who I am and why I write this", "href": "/about"},
 ]
 
@@ -65,32 +64,6 @@ REDIRECTS = {
     "challenges": "/articles",
     "post/introduction-to-mes-and-smart-manufacturing": "/post/what-is-a-smart-factory",
 }
-
-
-PLATFORMS = {"youtube": ("Watch on", "YouTube"), "spotify": ("Listen on", "Spotify"), "apple": ("Listen on", "Apple Podcasts"),
-             "transcript": ("Read the", "Transcript"), "read": ("Read the", "Article"), "episode": ("Go to", "Episode page"),
-             "event": ("See the", "Event page")}
-TYPE_LABEL = {"podcast": "Podcast", "article": "Press", "webinar": "Webinar"}
-
-
-def load_featured():
-    data = yaml.safe_load((ROOT / "content" / "featured.yaml").read_text(encoding="utf-8"))
-    items = []
-    for it in data["items"]:
-        d = it["date"] if isinstance(it["date"], dt.date) else dt.date.fromisoformat(str(it["date"]))
-        it = dict(it, date_iso=d.isoformat(), date_text=it.get("date_label") or d.strftime("%B %Y"), type_label=TYPE_LABEL[it["type"]])
-        links = []
-        for l in it["links"]:
-            verb, name = PLATFORMS[l["kind"]]
-            if l.get("label"):
-                verb, name = "Read the", l["label"]
-            if l.get("show") and l["kind"] in ("spotify", "apple", "youtube"):
-                verb = verb + " (show)"
-            links.append(dict(l, verb=verb, name=name))
-        it["links"] = links
-        items.append(it)
-    items.sort(key=lambda i: i["date_iso"], reverse=True)
-    return {"outlets": data["outlets"], "items": items}
 
 
 # ------------------------------------------------------------------ helpers
@@ -286,9 +259,6 @@ def build(base, relative=False, include_scheduled=False):
     start = sorted([p for p in posts if p["start"]], key=lambda p: p["start"])
     total_words = sum(p["words"] for p in posts)
 
-    featured = load_featured()
-    common["featured_outlets"] = featured["outlets"]
-
     # home
     write("index.html", "home.html", active="home",
           seo_title="Shopfloor Matters | The smart factory, shopfloor AI and MES",
@@ -350,17 +320,6 @@ def build(base, relative=False, include_scheduled=False):
               description=p["description"], canonical=p["canonical"], og_image=f"{SITE}/images/og/{p['slug']}.png",
               p=p, body=Markup(p["body"]), toc=p["toc"], series_posts=series if p["series"] else None,
               prev=prev, next=nxt, related=related, jsonld=[jsonld(ld), jsonld(crumbs)])
-
-    # featured
-    kinds = [("podcast", "Podcasts", "podcast appearances"), ("article", "Articles", "articles and interviews"), ("webinar", "Webinars", "webinars and panels")]
-    counts = [{"key": k, "short": sh, "label": lab if sum(1 for i in featured["items"] if i["type"] == k) != 1 else lab.replace("appearances", "appearance").replace("articles and interviews", "article or interview").replace("webinars and panels", "webinar or panel"),
-               "n": sum(1 for i in featured["items"] if i["type"] == k)} for k, sh, lab in kinds]
-    write("featured.html", "featured.html", active="featured", seo_title="Podcasts, interviews and press | Shopfloor Matters",
-          description="Matt Barber on podcasts, webinars and in the trade press, talking MES, the smart factory and shopfloor AI. Watch, listen or read.",
-          canonical=f"{SITE}/featured", items=featured["items"], counts=[c for c in counts if c["n"]], og_image=f"{SITE}/images/og/page-about.png",
-          jsonld=[jsonld({"@context": "https://schema.org", "@type": "ItemList", "name": "Matt Barber in the media",
-                          "itemListElement": [{"@type": "ListItem", "position": n + 1, "url": i["links"][0]["url"], "name": f"{i['title']} ({i['outlet']})"}
-                                              for n, i in enumerate(featured["items"])]})])
 
     # about / contact / 404
     about = (ROOT / "content" / "pages" / "about.html").read_text(encoding="utf-8").replace("{{base}}", base)
