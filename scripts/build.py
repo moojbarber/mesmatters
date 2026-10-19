@@ -316,7 +316,7 @@ def build(base, relative=False, include_scheduled=False):
             {"@type": "ListItem", "position": 2, "name": p["category_label"], "item": f"{SITE}/{p['category_slug']}"},
             {"@type": "ListItem", "position": 3, "name": p["short"], "item": p["canonical"]}]}
         write(f"post/{p['slug']}.html", "post.html", active=p["category_slug"], progress=True,
-              seo_title=f"{p['title']} | Shopfloor Matters", og_title=p["title"], og_type="article",
+              seo_title=(p["title"] if len(p["title"]) > 42 else f"{p['title']} | Shopfloor Matters"), og_title=p["title"], og_type="article",
               description=p["description"], canonical=p["canonical"], og_image=f"{SITE}/images/og/{p['slug']}.png",
               p=p, body=Markup(p["body"]), toc=p["toc"], series_posts=series if p["series"] else None,
               prev=prev, next=nxt, related=related, jsonld=[jsonld(ld), jsonld(crumbs)])
