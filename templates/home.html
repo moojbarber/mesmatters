@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import card, hero_bg, cta %}
+{% from "macros.html" import card, hero_bg, cta, featured_strip %}
 {% block main %}
 <section class="hero home-hero">
   {{ hero_bg() }}
@@ -32,6 +32,8 @@
     <div class="stat"><b>{{ series|length }}</b><span>part MES functionality series</span></div>
     <div class="stat"><b>11k+</b><span>followers on LinkedIn</span></div>
   </div>
+
+  {{ featured_strip(base, featured_outlets) }}
 
   <section class="section">
     <div class="big-wrap rv">
@@ -98,7 +100,7 @@
         <span class="micro">Matt Barber</span>
         <h3>From MES developer to running a global MES business</h3>
         <p>I started out writing code and integrations for MES projects, moved into project delivery and solution design, then ran product. Today I'm VP &amp; General Manager for MES at Infor. This is where I write about what the smart factory and shopfloor AI really take, and why the foundations matter more than the hype.</p>
-        <div class="links"><a class="btn sm" href="{{ base }}/about">More about me</a><a class="btn ghost sm" href="{{ linkedin }}" target="_blank" rel="me noopener">LinkedIn</a></div>
+        <div class="links"><a class="btn sm" href="{{ base }}/about">More about me</a><a class="btn ghost sm" href="{{ base }}/featured">Podcasts and press</a><a class="btn ghost sm" href="{{ linkedin }}" target="_blank" rel="me noopener">LinkedIn</a></div>
       </div>
     </div>
   </section>
