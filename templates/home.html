@@ -32,17 +32,26 @@
     </div>
   </section>
 
-  <section class="section">
-    <h2 class="label">Start here</h2>
+  <section class="section lp-home">
     <div class="section-head">
-      <div><h3>New here? Start with the foundations.</h3><p>AI on the shopfloor is only as good as the systems and data underneath it. These four cover the basics, in order. About {{ start_minutes }} minutes.</p></div>
+      <div><h3>Choose your learning path</h3><p>Hand-picked articles in the right order, from first principles to go-live. Your progress is saved as you read.</p></div>
+      <a class="more" href="{{ base }}/paths/">See the line map →</a>
     </div>
-    <div class="steps">
-      {% for p in start %}
-      <a class="step rv" href="{{ base }}/post/{{ p.slug }}">
-        <span class="n">{{ '%02d' % loop.index }}</span>
-        <div><h4>{{ p.short }}</h4><p>{{ p.description }}</p></div>
-        <span class="rt">{{ p.read_time }} min<b>→</b></span>
+    <div class="lp-roles" role="group" aria-label="I'm">
+      <span>I'm</span>
+      {% for p in paths_home %}<button type="button" data-role="{{ p.id }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">{{ p.role }}</button>{% endfor %}
+    </div>
+    <div class="lp-cards">
+      {% for p in paths_home %}
+      <a class="lp-card{% if loop.first %} is-rec{% endif %}" href="{{ base }}/paths/{{ p.id }}" data-card="{{ p.id }}" style="--c:{{ p.color }};--rgb:{{ p.rgb }}">
+        <span class="lp-card-img"><img src="{{ base }}/images/art/{{ p.image }}.svg" alt="" width="1600" height="900" loading="lazy"><b>{{ p.n }}<small>stations</small></b><em>Start here</em></span>
+        <span class="lp-card-body">
+          <span class="lp-who">{{ p.who }}</span>
+          <span class="lp-card-title">{{ p.title }}</span>
+          <span class="lp-card-blurb">{{ p.blurb }}</span>
+          <span class="lp-mini" aria-hidden="true" data-mini="{{ p.id }}">{% for s in p.stations %}<i data-slug="{{ s.post.slug }}"></i>{% endfor %}</span>
+          <span class="lp-card-foot"><span>{{ p.minutes }} min</span><span data-card-status="{{ p.id }}">Start path</span></span>
+        </span>
       </a>
       {% endfor %}
     </div>

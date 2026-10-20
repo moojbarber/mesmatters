@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block main %}
+<section class="lp-hub">
+  <div class="lp-dots" aria-hidden="true"></div>
+  <div class="wide">
+    <div class="lp-head">
+      <div>
+        <h1>Pick a line.<br><span>Ride it to the end.</span></h1>
+        <p class="kicker">{{ paths|length }} learning paths through the site, each a line of articles in the right order. Every line starts at the same station. Choose where you want to end up.</p>
+      </div>
+      <div class="lp-welcome" hidden>
+        <p><b>Welcome back.</b> <span data-lp-welcome></span></p>
+        <a class="btn" data-lp-continue href="#">Continue</a>
+      </div>
+    </div>
+
+    <div class="lp-mapbox">
+      <div class="lp-map" role="group" aria-label="Learning path map">
+        {% for p in paths %}
+        <div class="lp-line" data-line="{{ p.id }}" style="--c:{{ p.color }};--rgb:{{ p.rgb }}">
+          {% for s in p.segs %}<span class="lp-seg" style="{{ s }}" aria-hidden="true"></span>{% endfor %}
+          <span class="lp-flow" style="{{ p.flow }}" aria-hidden="true"></span>
+          {% for s in p.stations %}
+          <a class="lp-stn" href="{{ base }}/post/{{ s.post.slug }}?path={{ p.id }}" data-slug="{{ s.post.slug }}" style="left:{{ s.x }}px;top:{{ s.y }}px" aria-label="{{ p.title }}, station {{ s.n }}: {{ s.post.short }}" tabindex="-1"><i></i><span>{{ s.post.short }}</span></a>
+          {% endfor %}
+          <button type="button" class="lp-tag" data-pick="{{ p.id }}" aria-pressed="false" style="left:{{ p.end + 140 }}px;top:{{ p.y - 25 }}px">
+            <i aria-hidden="true"></i><span><b>{{ p.title }}</b><small>{{ p.n }} stations, {{ p.minutes }} min</small></span>
+          </button>
+        </div>
+        {% endfor %}
+        <span class="lp-hub-ring" aria-hidden="true"></span>
+        <span class="lp-hub-core" aria-hidden="true">START</span>
+        <span class="lp-hub-cap">Every line starts here</span>
+      </div>
+    </div>
+
+    {% for p in paths %}
+    <div class="lp-detail" data-detail="{{ p.id }}" style="--c:{{ p.color }};--rgb:{{ p.rgb }}" {% if p.id != 'foundations' %}hidden{% endif %}>
+      <div>
+        <span class="lp-who">{{ p.who }}</span>
+        <h2>{{ p.title }}</h2>
+        <p>{{ p.blurb }}</p>
+        <div class="lp-go">
+          <a class="lp-btn" href="{{ base }}/paths/{{ p.id }}" data-path-cta="{{ p.id }}">Start this line</a>
+          <span>{{ p.n }} stations, about {{ p.minutes }} min</span>
+        </div>
+      </div>
+      <ol class="lp-list">
+        {% for s in p.stations %}<li data-slug="{{ s.post.slug }}"><span class="n">{{ s.n }}</span><a href="{{ base }}/post/{{ s.post.slug }}?path={{ p.id }}">{{ s.post.short }}</a></li>{% endfor %}
+      </ol>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

@@ -34,6 +34,12 @@ Alongside it, depending on how much depth you need:
 - **LIMS (Laboratory Information Management System)** for lab testing, sample management and certificates, especially in process and regulated industries.
 - **QMS (Quality Management System)** for enterprise quality processes: complaints, CAPA, audits, document control. Shopfloor quality checks and SPC usually belong in MES/MOM.
 
+## How they connect
+
+The systems above can be integrated through ERP, directly to MES/MOM, or a mix of both. Pick a pattern and an application to see what flows where.
+
+::block integration-map
+
 ## The connectivity layer
 
 Below the operations layer sit the machines, PLCs and sensors, and the connectivity that links them upwards: OPC UA, MQTT, IIoT platforms and, increasingly, a unified namespace. I explain those in [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).

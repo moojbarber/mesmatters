@@ -80,6 +80,8 @@
     </div>
   </div>
 </footer>
+{% if paths_json %}<script type="application/json" id="lp-data">{{ paths_json|safe }}</script>{% endif %}
+<script>window.LP_BASE="{{ base }}";</script>
 <script src="{{ base }}/js/site.js?v={{ version }}" defer></script>
 </body>
 </html>

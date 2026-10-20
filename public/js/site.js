@@ -151,3 +151,211 @@
   setInterval(function () { if (!paused && !hover && !document.hidden) go(i + 1); }, 8000);
   layout();
 })();
+
+/* Learning paths: progress saved in this browser only (no account, nothing sent anywhere) */
+(function () {
+  var el = document.getElementById('lp-data');
+  if (!el) return;
+  var PATHS = JSON.parse(el.textContent), BASE = window.LP_BASE || '';
+  var byId = {}; PATHS.forEach(function (p) { byId[p.id] = p; });
+  var KEY = 'sm-paths-v1';
+  function load() { try { return JSON.parse(localStorage.getItem(KEY)) || { read: {}, last: null }; } catch (e) { return { read: {}, last: null }; } }
+  function save(s) { try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) {} }
+  var S = load(); S.read = S.read || {};
+  function isRead(slug) { return !!S.read[slug]; }
+  function doneCount(p) { return p.slugs.filter(isRead).length; }
+  function nextIndex(p) { for (var i = 0; i < p.slugs.length; i++) if (!isRead(p.slugs[i])) return i; return -1; }
+  function postUrl(slug, pid) { return BASE + '/post/' + slug + '?path=' + pid; }
+  function current() {
+    if (S.last && byId[S.last]) { var p = byId[S.last], d = doneCount(p); if (d > 0 && d < p.slugs.length) return p; }
+    var best = null; PATHS.forEach(function (p) { var d = doneCount(p); if (d > 0 && d < p.slugs.length && (!best || d > doneCount(best))) best = p; });
+    return best;
+  }
+  function setRead(slug, on, pid) { if (on) S.read[slug] = Date.now(); else delete S.read[slug]; if (pid) S.last = pid; save(S); }
+
+  // ---------- home cards ----------
+  var cards = document.querySelector('.lp-cards');
+  if (cards) {
+    var roles = [].slice.call(document.querySelectorAll('.lp-roles [data-role]'));
+    function rec(id) {
+      roles.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.role === id ? 'true' : 'false'); });
+      [].forEach.call(cards.querySelectorAll('.lp-card'), function (c) { c.classList.toggle('is-rec', c.dataset.card === id); });
+      cards.classList.add('has-rec');
+    }
+    roles.forEach(function (b) { b.addEventListener('click', function () { rec(b.dataset.role); }); });
+    PATHS.forEach(function (p) {
+      var d = doneCount(p), st = cards.querySelector('[data-card-status="' + p.id + '"]');
+      [].forEach.call(cards.querySelectorAll('[data-mini="' + p.id + '"] i'), function (i) { i.classList.toggle('done', isRead(i.dataset.slug)); });
+      if (st) st.textContent = d === p.slugs.length ? 'Completed' : d ? d + ' of ' + p.slugs.length + ' read' : 'Start path';
+    });
+    var cur = current(); rec(cur ? cur.id : (roles[0] && roles[0].dataset.role));
+  }
+
+  // ---------- hub map ----------
+  var map = document.querySelector('.lp-map');
+  if (map) {
+    var lines = [].slice.call(map.querySelectorAll('.lp-line'));
+    function pick(id) {
+      lines.forEach(function (l) {
+        var on = l.dataset.line === id;
+        l.classList.toggle('on', on);
+        l.querySelector('.lp-tag').setAttribute('aria-pressed', on ? 'true' : 'false');
+        [].forEach.call(l.querySelectorAll('.lp-stn'), function (a) { a.tabIndex = on ? 0 : -1; });
+      });
+      [].forEach.call(document.querySelectorAll('[data-detail]'), function (d) { d.hidden = d.dataset.detail !== id; });
+    }
+    PATHS.forEach(function (p) {
+      var ni = nextIndex(p), d = doneCount(p);
+      [].forEach.call(map.querySelectorAll('[data-line="' + p.id + '"] .lp-stn'), function (a, k) {
+        a.classList.toggle('done', isRead(a.dataset.slug));
+        a.classList.toggle('here', k === ni);
+      });
+      [].forEach.call(document.querySelectorAll('[data-detail="' + p.id + '"] li'), function (li) { li.classList.toggle('done', isRead(li.dataset.slug)); });
+      var cta = document.querySelector('[data-path-cta="' + p.id + '"]');
+      if (cta) cta.textContent = d === p.slugs.length ? 'Ride it again' : d ? 'Continue this line' : 'Start this line';
+    });
+    lines.forEach(function (l) { l.querySelector('.lp-tag').addEventListener('click', function () { pick(l.dataset.line); }); });
+    var c = current();
+    pick(c ? c.id : 'foundations');
+    var w = document.querySelector('.lp-welcome');
+    if (c && w) {
+      var ni = nextIndex(c);
+      w.querySelector('[data-lp-welcome]').textContent = "You're " + doneCount(c) + ' stations into ' + c.title + '.';
+      var a = w.querySelector('[data-lp-continue]'); a.href = postUrl(c.slugs[ni], c.id); a.textContent = 'Continue: ' + c.titles[ni];
+      w.hidden = false;
+    }
+  }
+
+  // ---------- path page ----------
+  var page = document.querySelector('.lp-page');
+  if (page) {
+    var P = byId[page.dataset.path];
+    function paint() {
+      var d = doneCount(P), n = P.slugs.length, ni = nextIndex(P);
+      page.querySelector('[data-lp-count]').textContent = d;
+      var mins = 0;
+      [].forEach.call(page.querySelectorAll('.lp-st'), function (li, k) {
+        var r = isRead(li.dataset.slug);
+        li.classList.toggle('done', r); li.classList.toggle('here', k === ni);
+        li.querySelector('[data-state]').textContent = r ? 'Read' : k === ni ? 'Up next' : 'Not started';
+        var b = li.querySelector('.lp-mark'); b.textContent = r ? 'Read' : 'Mark as read'; b.setAttribute('aria-pressed', r ? 'true' : 'false');
+        if (!r) mins += parseInt((li.querySelector('.meta').textContent.match(/(\d+) min/) || [0, 0])[1], 10);
+      });
+      [].forEach.call(page.querySelectorAll('.lp-rail li'), function (li, k) { li.classList.toggle('done', isRead(li.dataset.slug)); li.classList.toggle('here', k === ni); });
+      var circ = 2 * Math.PI * 58;
+      page.querySelector('[data-lp-ring]').style.strokeDasharray = (circ * d / n).toFixed(1) + ' ' + circ.toFixed(1);
+      page.querySelector('[data-lp-left]').textContent = d === n ? 'Line complete' : mins + ' min to go';
+      var f = page.querySelector('[data-lp-fill]');
+      if (f) f.style.width = (d ? Math.min(100, ((d - 1 + (d < n ? .5 : 0)) / (n - 1)) * 100) : 0) + '%';
+      var nx = page.querySelector('[data-lp-next]');
+      if (d === n) { nx.textContent = 'Pick your next line'; nx.href = BASE + '/paths/'; }
+      else { nx.textContent = d ? 'Continue: ' + P.titles[ni] : 'Start at station 1'; nx.href = postUrl(P.slugs[ni], P.id); }
+      var ey = page.querySelector('[data-lp-reward-eyebrow]'); if (ey) ey.textContent = d === n ? 'Line complete. Nice work.' : 'When you reach the end of the line';
+    }
+    page.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-mark]'); if (!b) return;
+      setRead(b.dataset.mark, !isRead(b.dataset.mark), P.id); paint();
+    });
+    paint();
+  }
+
+  // ---------- article inside a path ----------
+  var bars = document.querySelectorAll('[data-lp-bar]');
+  if (bars.length) {
+    var slug = location.pathname.split('/').pop().replace(/\.html$/, '');
+    var want = new URLSearchParams(location.search).get('path');
+    var ids = [].map.call(bars, function (b) { return b.dataset.lpBar; });
+    var pid = ids.indexOf(want) >= 0 ? want : (S.last && ids.indexOf(S.last) >= 0 && doneCount(byId[S.last]) > 0 ? S.last : null);
+    if (pid) {
+      S.last = pid; save(S);
+      var bar = document.querySelector('[data-lp-bar="' + pid + '"]'); bar.hidden = false;
+      [].forEach.call(bar.querySelectorAll('i[data-slug]'), function (i) { if (isRead(i.dataset.slug) && !i.classList.contains('here')) i.classList.add('done'); });
+      var card = document.querySelector('[data-lp-next-card="' + pid + '"]'); if (card) card.hidden = false;
+      // reaching the end of the article counts as read
+      var end = document.querySelector('.post-end');
+      if (end && 'IntersectionObserver' in window) {
+        new IntersectionObserver(function (es, o) { es.forEach(function (en) { if (en.isIntersecting) { setRead(slug, true, pid); o.disconnect(); } }); }, { rootMargin: '0px 0px -20% 0px' }).observe(end);
+      }
+    }
+  }
+})();
+
+/* Integration map: modes, animated data flow, app details */
+(function () {
+  var maps = document.querySelectorAll('.imap');
+  if (!maps.length) return;
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var NS = 'http://www.w3.org/2000/svg';
+  [].forEach.call(maps, function (fig) {
+    var D = JSON.parse(fig.querySelector('.imap-data').textContent);
+    var svg = fig.querySelector('svg'), dotsG = fig.querySelector('.imap-dots');
+    var edges = [].slice.call(fig.querySelectorAll('.imap-edge'));
+    var note = fig.querySelector('.imap-mode-note'), info = fig.querySelector('.imap-info');
+    var mode = fig.dataset.mode || 'hybrid', sel = null, dots = [];
+    edges.forEach(function (e) { e._len = e.getTotalLength(); e.classList.add('r-' + e.dataset.route); });
+    function active(e) {
+      var a = e.dataset.app, r = e.dataset.route;
+      if (a === 'core' || a === 'floor') return true;
+      return (D.modes[mode].routes[a] || []).indexOf(r) >= 0;
+    }
+    function spawn() {
+      dots.forEach(function (d) { d.el.remove(); }); dots = [];
+      if (reduce) return;
+      edges.forEach(function (e) {
+        if (!active(e)) return;
+        var col = e.dataset.route === 'erp' ? '#ffb86b' : e.dataset.route === 'mes' ? '#33d4e0' : '#c9bcff';
+        var n = e.dataset.app === 'core' ? 4 : e.dataset.app === 'floor' ? 3 : 2;
+        for (var k = 0; k < n; k++) {
+          var c = document.createElementNS(NS, 'circle');
+          c.setAttribute('r', e.dataset.app === 'core' ? 4.5 : 3.5); c.setAttribute('fill', col); c.style.color = col;
+          dotsG.appendChild(c);
+          dots.push({ el: c, e: e, t: k / n + Math.random() * .1, dir: k % 2 ? -1 : 1, v: (e.dataset.app === 'core' ? .0038 : .0026) * (0.8 + Math.random() * .4) });
+        }
+      });
+    }
+    function paint() {
+      fig.dataset.mode = mode;
+      [].forEach.call(fig.querySelectorAll('.imap-modes button'), function (b) { b.setAttribute('aria-pressed', b.dataset.mode === mode ? 'true' : 'false'); });
+      note.textContent = D.modes[mode].note;
+      edges.forEach(function (e) { e.classList.toggle('on', active(e)); e.classList.toggle('sel', !!sel && e.dataset.app === sel); });
+      fig.classList.toggle('focus', !!sel);
+      [].forEach.call(fig.querySelectorAll('.imap-app'), function (g) { g.classList.toggle('sel', g.dataset.app === sel); g.setAttribute('aria-pressed', g.dataset.app === sel ? 'true' : 'false'); });
+      if (sel) {
+        var A = D.apps[sel], R = D.modes[mode].routes[sel] || [];
+        info.innerHTML = '<h4></h4><p></p><div class="imap-routes"><div class="erp"><b>Via ERP</b><span></span></div><div class="mes"><b>Direct to MES/MOM</b><span></span></div></div><a></a>';
+        info.querySelector('h4').textContent = A.name;
+        info.querySelector('p').textContent = A.what;
+        ['erp', 'mes'].forEach(function (r) {
+          var d = info.querySelector('.imap-routes .' + r), on = R.indexOf(r) >= 0;
+          d.classList.add(on ? 'on' : 'off');
+          d.querySelector('span').textContent = (on ? '' : 'Not used in this pattern. ') + A[r];
+        });
+        var a = info.querySelector('a'); a.href = (window.LP_BASE || '') + A.link; a.textContent = 'Read: ' + A.read + ' →';
+      }
+      spawn();
+    }
+    fig.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-mode]');
+      if (b && b.tagName === 'BUTTON') { mode = b.dataset.mode; paint(); return; }
+      var g = e.target.closest('.imap-app');
+      if (g) { sel = sel === g.dataset.app ? null : g.dataset.app; paint(); }
+    });
+    fig.addEventListener('keydown', function (e) {
+      var g = e.target.closest && e.target.closest('.imap-app');
+      if (g && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); sel = sel === g.dataset.app ? null : g.dataset.app; paint(); }
+    });
+    var visible = true;
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (es) { visible = es[0].isIntersecting; }).observe(fig);
+    function tick() {
+      if (visible && !document.hidden) dots.forEach(function (d) {
+        d.t += d.v; if (d.t > 1) d.t -= 1;
+        var p = d.e._len * (d.dir > 0 ? d.t : 1 - d.t), pt = d.e.getPointAtLength(p);
+        d.el.setAttribute('cx', pt.x); d.el.setAttribute('cy', pt.y);
+        d.el.style.opacity = (sel && d.e.dataset.app !== sel && d.e.dataset.app !== 'core' && d.e.dataset.app !== 'floor') ? .15 : Math.min(1, Math.sin(d.t * Math.PI) * 1.6);
+      });
+      requestAnimationFrame(tick);
+    }
+    paint();
+    if (!reduce) requestAnimationFrame(tick);
+  });
+})();
