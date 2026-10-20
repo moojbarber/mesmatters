@@ -63,7 +63,7 @@ That level of detail lives elsewhere. Not because ERP is weak, but because it's 
 | **Typical question** | What should we make, and what did it cost? | What's happening right now, and is it right? |
 | **Data** | Transactions and summaries | Events, measurements, genealogy and test results |
 
-Not every ERP stops in the same place, though. Some are built for manufacturing from the ground up, with deep support for routings, production orders, shopfloor reporting, quality and even parts of execution. If you run one of those, your ERP is already carrying more of the operational load than most, and that's a genuine strength.
+That said, ERPs aren't all the same. Some were designed with manufacturing in mind and cover more of the production side than others, such as detailed routings and shopfloor reporting. If you run one of those, it will already handle more of the operational detail than a general-purpose ERP would.
 
 Even then, MES/MOM adds a different layer. Finer detail, captured in real time at the point of work, with every event tied to its order, batch, machine and operator. That context is what turns a production record into something you can act on in the moment and learn from over time.
 
