@@ -12,6 +12,8 @@ outlets:   # order of the home-page strip
   - Unplugged IIoT
   - The Manufacturing IT Podcast
   - Factory Forward
+  - MESsy Mondays
+  - WBSRocks
   - ElevatIQ
 
 items:
@@ -31,13 +33,14 @@ items:
 
   - title: MES strategy for unifying ERP, the shopfloor and AI
     outlet: ElevatIQ
-    show: ElevatIQ live webinar
+    show: ElevatIQ webinar, also released as WBSRocks podcast episode 910
     type: webinar
     role: Speaker
     date: 2026-05-28
-    with: With Jan Burian (ARC Advisory Group) and Sam Gupta (ElevatIQ)
+    with: Panel with Jan Burian (ARC Advisory Group), hosted by Sam Gupta (ElevatIQ)
     blurb: A live panel on how manufacturers can connect ERP, shopfloor execution and AI into one operating model.
     links:
+      - {kind: apple, url: "https://podcasts.apple.com/gb/podcast/wbsp910-scale-growth-by-understanding-infor-mes-strategy/id1544644166?i=1000791552457", label_note: "WBSRocks podcast, Sept 2026"}
       - {kind: event, url: "https://www.elevatiq.com/events-and-webinars/infor-mes-strategy-unifying-erp-shop-floor-and-ai-for-manufacturing-operations/"}
 
   - title: "From visibility to predictability: MES on the ground"
@@ -101,6 +104,17 @@ items:
     blurb: How MES and ERP complement each other in the smart factory, and why MES should be designed around the people on the shopfloor.
     links:
       - {kind: read, url: "https://manufacturingdigital.com/smart-manufacturing/a-deep-dive-into-mes-functionality-at-infor"}
+
+  - title: "MESsy Mondays #001: Matt Barber"
+    outlet: MESsy Mondays
+    show: MESsy Mondays with Kunal Wagh · Episode 1
+    type: podcast
+    role: Guest
+    date: 2025-01-06
+    with: Host Kunal Wagh
+    blurb: The first episode of the series, on educating the industry about MES and its role in smart manufacturing, Industry 4.0 and sustainability.
+    links:
+      - {kind: youtube, url: "https://www.youtube.com/watch?v=gt7Rv8z5Yh8"}
 
   - title: Interview with Matt Barber
     outlet: The Manufacturing IT Podcast
