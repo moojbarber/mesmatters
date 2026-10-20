@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build the social calendar page from social/queue and social/state.
 
-  python scripts/social/calendar.py <out_dir>
+  python scripts/social/social_calendar.py <out_dir>
 
 Writes <out_dir>/index.html plus <out_dir>/thumbs/*.jpg (small previews).
 Publish the folder as an artifact (root = out_dir).
