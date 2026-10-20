@@ -23,14 +23,15 @@
           {% for s in p.stations %}
           <a class="lp-stn" href="{{ base }}/post/{{ s.post.slug }}?path={{ p.id }}" data-slug="{{ s.post.slug }}" style="left:{{ s.x }}px;top:{{ s.y }}px" aria-label="{{ p.title }}, station {{ s.n }}: {{ s.post.short }}" tabindex="-1"><i></i><span>{{ s.post.short }}</span></a>
           {% endfor %}
-          <button type="button" class="lp-tag" data-pick="{{ p.id }}" aria-pressed="false" style="left:{{ p.end + 140 }}px;top:{{ p.y - 25 }}px">
+          <button type="button" class="lp-tag" data-pick="{{ p.id }}" aria-pressed="false" style="left:{{ p.end + 108 }}px;top:{{ p.y - 25 }}px">
             <i aria-hidden="true"></i><span><b>{{ p.title }}</b><small>{{ p.n }} stations, {{ p.minutes }} min</small></span>
           </button>
         </div>
         {% endfor %}
-        <span class="lp-hub-ring" aria-hidden="true"></span>
-        <span class="lp-hub-core" aria-hidden="true">START</span>
-        <span class="lp-hub-cap">Every line starts here</span>
+        {% set hub = paths[0].hub %}
+        <span class="lp-hub-ring" aria-hidden="true" style="left:{{ hub.x - 38 }}px;top:{{ hub.y - 38 }}px"></span>
+        <span class="lp-hub-core" aria-hidden="true" style="left:{{ hub.x - 30 }}px;top:{{ hub.y - 30 }}px">START</span>
+        <span class="lp-hub-cap" style="right:calc(100% - {{ hub.x - 56 }}px);top:{{ hub.y - 22 }}px">Every line<br>starts here</span>
       </div>
     </div>
 

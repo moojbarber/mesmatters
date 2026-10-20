@@ -101,19 +101,19 @@ def load_paths(posts):
     """Learning paths: lines of articles. Adds hub-map geometry and per-post path context."""
     data = yaml.safe_load((ROOT / "content" / "paths.yaml").read_text(encoding="utf-8"))
     by_slug = {p["slug"]: p for p in posts}
-    HX, HY, END, T = 130, 360, 850, 10
+    HX, HY, END, T = 190, 420, 880, 10
     paths = []
     for i, d in enumerate(data["paths"]):
         st = [by_slug[s] for s in d["stations"] if s in by_slug]
-        y = 120 + i * 80
+        y = 180 + i * 80
         dy, x0 = y - HY, HX + abs(y - HY)
         n = len(st)
-        gap = (END - x0 - 50) / (n - 1)
+        gap = (END - x0 - 80) / (n - 1)
         segs = []
         if dy:
             segs.append(f"left:{HX}px;top:{HY - T / 2}px;width:{abs(dy) * 2 ** .5:.1f}px;transform-origin:0 50%;transform:rotate({-45 if dy < 0 else 45}deg)")
         segs.append(f"left:{x0 - T / 2}px;top:{y - T / 2}px;width:{END - x0 + T}px")
-        stations = [{"post": q, "n": k + 1, "x": round(x0 + 50 + k * gap, 1), "y": y} for k, q in enumerate(st)]
+        stations = [{"post": q, "n": k + 1, "x": round(x0 + 80 + k * gap, 1), "y": y} for k, q in enumerate(st)]
         paths.append(dict(d, stations=stations, n=n, minutes=sum(q["read_time"] for q in st), y=y, x0=x0, end=END,
                           segs=segs, flow=f"left:{x0}px;top:{y - 2}px;width:{END - x0}px", slugs=[q["slug"] for q in st]))
     for path in paths:
@@ -123,6 +123,8 @@ def load_paths(posts):
                                               "n": path["n"], "index": k + 1, "slugs": path["slugs"],
                                               "prev": path["stations"][k - 1]["post"] if k else None,
                                               "next": path["stations"][k + 1]["post"] if k + 1 < path["n"] else None})
+    for path in paths:
+        path["hub"] = {"x": HX, "y": HY}
     order = {k: i for i, k in enumerate(data["home_order"])}
     return paths, sorted(paths, key=lambda p: order.get(p["id"], 99))
 

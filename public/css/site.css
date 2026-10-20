@@ -505,7 +505,7 @@ form.signup p.fine{font:400 13px/1.5 var(--body);letter-spacing:0;max-width:none
 .lp-welcome .btn{align-self:flex-start}
 .lp-welcome[hidden]{display:none}
 .lp-mapbox{margin-top:52px;border-radius:28px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,rgba(18,15,51,.85),rgba(8,7,26,.95));box-shadow:0 40px 120px -40px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.06);overflow-x:auto;-webkit-overflow-scrolling:touch}
-.lp-map{position:relative;width:1250px;height:720px;margin:0 auto}
+.lp-map{position:relative;width:1230px;height:780px;margin:0 auto}
 .lp-seg{position:absolute;height:10px;border-radius:10px;background:var(--c);opacity:.22;z-index:2;transition:opacity .45s,box-shadow .45s}
 .lp-flow{position:absolute;height:4px;border-radius:4px;z-index:5;opacity:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.9) 0 6px,transparent 6px 40px);transition:opacity .45s}
 .lp-stn{position:absolute;width:0;height:0;z-index:3;color:inherit}
@@ -516,7 +516,7 @@ form.signup p.fine{font:400 13px/1.5 var(--body);letter-spacing:0;max-width:none
 .lp-tag:hover{transform:translateX(3px)}
 .lp-tag i{flex:none;width:14px;height:14px;border-radius:50%;background:var(--c);box-shadow:0 0 10px var(--c)}
 .lp-tag span{display:flex;flex-direction:column;line-height:1.15}
-.lp-tag b{font:700 15px var(--disp)}.lp-tag small{font-size:12px;opacity:.8}
+.lp-tag b{font:700 15px var(--disp);white-space:nowrap}.lp-tag small{font-size:12px;opacity:.8}
 .lp-tag:focus-visible,.lp-stn:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .lp-line.on .lp-seg{opacity:1;box-shadow:0 0 18px var(--c),0 0 4px var(--c);z-index:4}
 .lp-line.on .lp-flow{opacity:.55;animation:lpflow 1.2s linear infinite}
@@ -529,9 +529,9 @@ form.signup p.fine{font:400 13px/1.5 var(--body);letter-spacing:0;max-width:none
 .lp-line.on .lp-tag i{background:#06051a;box-shadow:none}
 @keyframes lpflow{from{background-position:0 0}to{background-position:40px 0}}
 @keyframes lpping{0%{box-shadow:0 0 0 0 rgba(255,255,255,.55)}80%{box-shadow:0 0 0 22px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
-.lp-hub-ring{position:absolute;left:92px;top:322px;width:76px;height:76px;border-radius:50%;background:#fff;box-shadow:0 0 40px rgba(255,255,255,.5);z-index:6;animation:lpping 2.6s infinite}
-.lp-hub-core{position:absolute;left:100px;top:330px;width:60px;height:60px;border-radius:50%;background:#06051a;z-index:7;display:flex;align-items:center;justify-content:center;font:700 13px var(--disp);color:#fff}
-.lp-hub-cap{position:absolute;left:44px;top:410px;width:172px;text-align:center;font-size:13px;color:var(--mut);z-index:7}
+.lp-hub-ring{position:absolute;width:76px;height:76px;border-radius:50%;background:#fff;box-shadow:0 0 40px rgba(255,255,255,.5);z-index:6;animation:lpping 2.6s infinite}
+.lp-hub-core{position:absolute;width:60px;height:60px;border-radius:50%;background:#06051a;z-index:7;display:flex;align-items:center;justify-content:center;font:700 13px var(--disp);color:#fff}
+.lp-hub-cap{position:absolute;text-align:right;font-size:13px;line-height:1.35;color:var(--mut);z-index:7;white-space:nowrap}
 .lp-detail{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:40px;margin-top:22px;padding:34px 36px;border-radius:24px;border:1px solid rgba(var(--rgb),.5);background:linear-gradient(110deg,rgba(var(--rgb),.16),rgba(255,255,255,.02) 60%)}
 .lp-detail[hidden]{display:none}
 .lp-detail h2{font:700 44px/1 var(--disp);letter-spacing:-.02em;margin:8px 0 12px;color:#fff}
