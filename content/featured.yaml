@@ -11,6 +11,7 @@ outlets:   # order of the home-page strip
   - IT/OT Insider
   - Unplugged IIoT
   - The Manufacturing IT Podcast
+  - Factory Forward
   - ElevatIQ
 
 items:
@@ -65,6 +66,18 @@ items:
       - {kind: apple, url: "https://podcasts.apple.com/us/podcast/the-it-ot-insider-podcast-pioneers-pathfinders/id1740533475", show: true}
       - {kind: transcript, url: "https://itotinsider.com/podcast-transcript/mes-matters-with-matt-barber/"}
       - {kind: read, url: "https://itotinsider.substack.com/p/mes-matters-with-matt-barber", label: Episode recap}
+
+  - title: Why MES is the backbone of smart manufacturing
+    outlet: Factory Forward
+    show: "Factory Forward (Retrocausal) · Season 2, Episode 4"
+    type: podcast
+    role: Guest
+    date: 2025-03-27
+    with: Host Zeeshan Zia, CEO of Retrocausal
+    blurb: MES versus ERP, cloud MES, where AI fits in MES, designing for operators, and building the right team for implementation.
+    links:
+      - {kind: youtube, url: "https://www.youtube.com/watch?v=b4wTA0m2428"}
+      - {kind: episode, url: "https://retrocausal.ai/podcast/s2e4-why-mes-is-the-backbone-of-smart-manufacturing-mes-vs-erp-explained-real-world-roi/"}
 
   - title: "Lifetime of achievement: Matt Barber"
     outlet: Manufacturing Digital
