@@ -73,7 +73,7 @@ That's where specialist applications come in, as a complement to ERP rather than
 
 A good ERP becomes even more valuable when it's surrounded by the right specialists, each doing one job very well and sharing data with the core:
 
-- **MES/MOM** runs the shopfloor: executing orders, enforcing quality, tracking genealogy and feeding real actuals back to ERP.
+- **MES/MOM** runs the shopfloor across all four pillars: production (executing orders and recording output, scrap and downtime), quality (checks, SPC and holds), inventory (material movements, genealogy and traceability) and maintenance (breakdowns and planned work), feeding real actuals back to ERP.
 - **Connected worker** puts instructions, checklists, skills and handover in front of the people doing the work.
 - **WMS** handles complex warehousing, picking and storage strategies.
 - **APS** produces detailed, constraint-based schedules when MRP's view isn't fine enough.
