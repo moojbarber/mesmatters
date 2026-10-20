@@ -441,12 +441,12 @@ form.signup p.fine{font:400 13px/1.5 var(--body);letter-spacing:0;max-width:none
 .fx-where{margin:0;font-size:15px;color:var(--mut)}
 .fx-badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;max-width:340px}
 .pbadge{--pc:var(--b);display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 15px;border-radius:99px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.03);color:var(--tx);font-size:14px;font-weight:600;white-space:nowrap;transition:background .2s,border-color .2s}
-.pbadge i{width:9px;height:9px;border-radius:50%;background:var(--pc)}
+.pbadge .pi{width:20px;height:20px;flex:none}
 .pbadge:hover{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.4)}
 .p-youtube{--pc:#ff5a5a}.p-spotify{--pc:#3ddc84}.p-apple{--pc:#c77dff}.p-transcript,.p-read{--pc:var(--b)}.p-event{--pc:#ff9fe6}.p-episode{--pc:#b9a6ff}
-.fx-invite{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;margin-top:56px;padding:30px 32px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,.04)}
-.fx-invite h2{font:700 24px/1.2 var(--disp);margin:0}.fx-invite p{color:var(--mut);margin:4px 0 0}
-@media (max-width:860px){.fx-lead{grid-template-columns:1fr;padding:24px 20px;gap:22px}.fx-row{grid-template-columns:112px minmax(0,1fr);gap:14px;align-items:start}.fx-thumb img{width:112px}.fx-badges{grid-column:1 / -1;justify-content:flex-start;max-width:none}.fx-text h2{font-size:18px}.fx-invite{padding:24px 20px}}
+.fx-invite{display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin-top:28px;padding:16px 18px 16px 22px;border-radius:16px;border:1px solid rgba(51,212,224,.35);background:rgba(51,212,224,.07);max-width:760px}
+.fx-invite p{margin:0;flex:1 1 320px;color:var(--mut);font-size:16px}.fx-invite p b{color:var(--tx)}
+@media (max-width:860px){.fx-lead{grid-template-columns:1fr;padding:24px 20px;gap:22px}.fx-row{grid-template-columns:112px minmax(0,1fr);gap:14px;align-items:start}.fx-thumb img{width:112px}.fx-badges{grid-column:1 / -1;justify-content:flex-start;max-width:none}.fx-text h2{font-size:18px}.fx-invite{padding:16px}}
 
 /* ---------- home: Featured in coverflow ---------- */
 .cf{--cw:330px;--ch:330px;min-width:0}

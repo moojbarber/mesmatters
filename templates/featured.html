@@ -1,11 +1,15 @@
 {% extends "base.html" %}
-{% from "macros.html" import hero_bg, cta %}
+{% from "macros.html" import hero_bg, cta, platform_icon %}
 {% block main %}
 <section class="hero page-hero">
   {{ hero_bg() }}
   <div class="wrap">
     <h1>Podcasts, interviews and press</h1>
     <p class="kicker">Where I've talked about MES, the smart factory and shopfloor AI. Every episode and article in one place, with links to watch, listen or read.</p>
+    <div class="fx-invite">
+      <p><b>Want me on your podcast or panel?</b> I talk about MES, the smart factory, connected worker and shopfloor AI.</p>
+      <a class="btn" href="{{ linkedin }}" target="_blank" rel="me noopener">Message me on LinkedIn</a>
+    </div>
   </div>
 </section>
 <div class="wrap">
@@ -35,17 +39,13 @@
       </div>
       <div class="fx-badges">
         {% for l in it.links %}
-        <a class="pbadge p-{{ l.kind }}" href="{{ l.url }}" target="_blank" rel="noopener"><i aria-hidden="true"></i>{{ l.short }}</a>
+        <a class="pbadge p-{{ l.kind }}" href="{{ l.url }}" target="_blank" rel="noopener">{{ platform_icon(l.kind) }}{{ l.short }}</a>
         {% endfor %}
       </div>
     </article>
     {% endfor %}
   </div>
 
-  <div class="fx-invite">
-    <div><h2>Want me on your podcast or panel?</h2><p>I talk about MES, the smart factory, connected worker and shopfloor AI.</p></div>
-    <a class="btn" href="{{ linkedin }}" target="_blank" rel="me noopener">Message me on LinkedIn</a>
-  </div>
   {{ cta(base, linkedin, kit_form) }}
 </div>
 <script>

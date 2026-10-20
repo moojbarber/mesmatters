@@ -29,10 +29,8 @@ items:
     with: Hosts Phil Seboa and Ed Fuentes (Industry Sage Media)
     blurb: A conversation on what MES really does on the shopfloor, where the savings come from, and how manufacturers can get started without over-complicating it.
     links:
+      - {kind: apple, url: "https://podcasts.apple.com/gb/podcast/38-how-m-e-s-transforms-manufacturing-operations-and/id1754213670?i=1000739300343"}
       - {kind: episode, url: "https://www.industrysagemedia.com/matt-barber"}
-      - {kind: youtube, url: "https://www.youtube.com/channel/UCXWmJ-WvjSDqOzJQTdXSiHg", show: true}
-      - {kind: spotify, url: "https://open.spotify.com/show/2Vk016XBFf3i0Uc8MrDSz8", show: true}
-      - {kind: apple, url: "https://podcasts.apple.com/us/podcast/unplugged-an-iiot-podcast/id1754213670", show: true}
 
   - title: MES strategy for unifying ERP, the shopfloor and AI
     image: elevatiq-panel
@@ -77,7 +75,6 @@ items:
     links:
       - {kind: youtube, url: "https://www.youtube.com/watch?v=jJ45xRV6flk"}
       - {kind: spotify, url: "https://open.spotify.com/episode/5gtBTBx2OyqxKs7C1EKSuW"}
-      - {kind: apple, url: "https://podcasts.apple.com/us/podcast/the-it-ot-insider-podcast-pioneers-pathfinders/id1740533475", show: true}
       - {kind: transcript, url: "https://itotinsider.com/podcast-transcript/mes-matters-with-matt-barber/"}
       - {kind: read, url: "https://itotinsider.substack.com/p/mes-matters-with-matt-barber", label: Episode recap}
 
@@ -145,6 +142,5 @@ items:
     date: 2024-02-08
     blurb: Fifteen years in MES, from code to running the business, and why educating the industry about MES and smart manufacturing matters.
     links:
-      - {kind: apple, url: "https://podcasts.apple.com/rw/podcast/podcast-interview-with-matt-barber-vp-and-general/id1571505095"}
-      - {kind: spotify, url: "https://open.spotify.com/show/004Vn8kV5MwImhPZIaPL1A", show: true}
-      - {kind: episode, url: "https://podtail.com/en/podcast/manufacturing-it-podcast/podcast-interview-with-matt-barber-vp-and-general-/"}
+      - {kind: apple, url: "https://podcasts.apple.com/gb/podcast/podcast-interview-with-matt-barber-vp-and-general/id1571505095?i=1000644631030"}
+      - {kind: spotify, url: "https://creators.spotify.com/pod/profile/manufacturingitpodcast/episodes/Podcast-interview-with-Matt-Barber--VP-and-General-Manager-of-MES-at-Infor-e2fh79n"}
