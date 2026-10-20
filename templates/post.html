@@ -1,6 +1,18 @@
 {% extends "base.html" %}
 {% from "macros.html" import card, hero_bg, cta %}
 {% block main %}
+{% if p.paths %}
+{% for lp in p.paths %}
+<div class="lp-bar" data-lp-bar="{{ lp.id }}" style="--c:{{ lp.color }};--rgb:{{ lp.rgb }}" hidden>
+  <div class="wide">
+    <a class="lp-bar-name" href="{{ base }}/paths/{{ lp.id }}"><small>Learning path</small><b>{{ lp.title }}</b></a>
+    <span class="lp-bar-line" aria-hidden="true">{% for sl in lp.slugs %}<i class="{% if loop.index < lp.index %}done{% elif loop.index == lp.index %}here{% endif %}" data-slug="{{ sl }}"></i>{% endfor %}<em style="width:calc((100% - 16px) * {{ ((lp.index - 1) / (lp.n - 1)) | round(4) }})"></em></span>
+    <span class="lp-bar-pos">Station {{ lp.index }} of {{ lp.n }}</span>
+    {% if lp.next %}<a class="lp-bar-next" href="{{ base }}/post/{{ lp.next.slug }}?path={{ lp.id }}">Next station</a>{% else %}<a class="lp-bar-next" href="{{ base }}/paths/{{ lp.id }}">End of the line</a>{% endif %}
+  </div>
+</div>
+{% endfor %}
+{% endif %}
 <article>
 <section class="hero post-hero">
   {{ hero_bg() }}
@@ -40,6 +52,21 @@
 {{ body }}
       </div>
       <div class="post-end">
+        {% for lp in p.paths or [] %}
+        <div class="lp-next" data-lp-next-card="{{ lp.id }}" style="--c:{{ lp.color }};--rgb:{{ lp.rgb }}" hidden>
+          {% if lp.next %}
+          <p class="lp-next-msg"><span class="n">{{ lp.index }}</span>Station {{ lp.index }} of {{ lp.n }} done on the {{ lp.title }} line.</p>
+          <a class="lp-next-card" href="{{ base }}/post/{{ lp.next.slug }}?path={{ lp.id }}">
+            <img src="{{ base }}/images/art/{{ lp.next.slug }}.svg" alt="" width="1600" height="900" loading="lazy">
+            <span><small>Next station, {{ lp.index + 1 }} of {{ lp.n }} / {{ lp.next.read_time }} min read</small><b>{{ lp.next.short }}</b><span>{{ lp.next.description }}</span><em>Continue the path</em></span>
+          </a>
+          <p class="lp-next-links">{% if lp.prev %}<a href="{{ base }}/post/{{ lp.prev.slug }}?path={{ lp.id }}">Previous: {{ lp.prev.short }}</a>{% else %}<span></span>{% endif %}<a href="{{ base }}/paths/{{ lp.id }}">See the whole line</a></p>
+          {% else %}
+          <p class="lp-next-msg"><span class="n">{{ lp.index }}</span>That's the end of the {{ lp.title }} line. Nice work.</p>
+          <p class="lp-next-links"><a href="{{ base }}/paths/{{ lp.id }}">Back to the line</a><a href="{{ base }}/paths/">Pick your next line</a></p>
+          {% endif %}
+        </div>
+        {% endfor %}
         <div class="share">
           <span class="micro">Share</span>
           {% set share_text = "I've just read this excellent article on shopfloormatters.com by Matt Barber: \"" ~ p.title ~ "\"\n\n" ~ p.description ~ "\n\n" ~ p.canonical %}

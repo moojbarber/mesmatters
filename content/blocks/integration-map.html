@@ -1,0 +1,117 @@
+<figure class="imap" data-mode="hybrid">
+  <div class="imap-head">
+    <div>
+      <span class="imap-eyebrow">Interactive</span>
+      <h3>How the strategic applications connect</h3>
+    </div>
+    <div class="imap-modes" role="group" aria-label="Integration pattern">
+      <button type="button" data-mode="erp" aria-pressed="false">Everything through ERP</button>
+      <button type="button" data-mode="hybrid" aria-pressed="true">A mix (most common)</button>
+      <button type="button" data-mode="mes" aria-pressed="false">Direct to MES/MOM</button>
+    </div>
+  </div>
+  <p class="imap-mode-note" aria-live="polite"></p>
+  <div class="imap-stage">
+    <svg viewBox="0 0 1000 620" role="img" aria-label="Diagram of ERP, MES/MOM and the specialist applications around them, with the data routes between them">
+      <defs>
+        <radialGradient id="imapGlow"><stop offset="0" stop-color="#33d4e0" stop-opacity=".55"/><stop offset="1" stop-color="#33d4e0" stop-opacity="0"/></radialGradient>
+        <linearGradient id="imapMes" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b6cff"/><stop offset="1" stop-color="#33d4e0"/></linearGradient>
+      </defs>
+      <g class="imap-edges">
+        <path class="imap-edge core" d="M500,122 L500,282" data-app="core" data-route="core"/>
+        <path class="imap-edge floor" d="M500,420 L500,538" data-app="floor" data-route="floor"/>
+        <path class="imap-edge" data-app="plm" data-route="erp" d="M188,110 C300,110 320,92 398,92"/>
+        <path class="imap-edge" data-app="plm" data-route="mes" d="M188,110 C320,110 360,330 432,342"/>
+        <path class="imap-edge" data-app="cpq" data-route="erp" d="M188,250 C300,250 330,104 398,104"/>
+        <path class="imap-edge" data-app="cpq" data-route="mes" d="M188,250 C320,250 370,350 430,352"/>
+        <path class="imap-edge" data-app="aps" data-route="erp" d="M188,390 C290,390 340,114 400,114"/>
+        <path class="imap-edge" data-app="aps" data-route="mes" d="M188,390 C320,390 380,370 434,362"/>
+        <path class="imap-edge" data-app="lims" data-route="erp" d="M188,520 C270,520 350,118 404,120"/>
+        <path class="imap-edge" data-app="lims" data-route="mes" d="M188,520 C330,520 400,410 448,388"/>
+        <path class="imap-edge" data-app="wms" data-route="erp" d="M812,110 C700,110 680,92 602,92"/>
+        <path class="imap-edge" data-app="wms" data-route="mes" d="M812,110 C680,110 640,330 568,342"/>
+        <path class="imap-edge" data-app="qms" data-route="erp" d="M812,250 C700,250 670,104 602,104"/>
+        <path class="imap-edge" data-app="qms" data-route="mes" d="M812,250 C680,250 630,350 570,352"/>
+        <path class="imap-edge" data-app="eam" data-route="erp" d="M812,390 C710,390 660,114 600,114"/>
+        <path class="imap-edge" data-app="eam" data-route="mes" d="M812,390 C680,390 620,370 566,362"/>
+        <path class="imap-edge" data-app="cw" data-route="erp" d="M812,520 C730,520 650,118 596,120"/>
+        <path class="imap-edge" data-app="cw" data-route="mes" d="M812,520 C670,520 600,410 552,388"/>
+      </g>
+      <g class="imap-dots"></g>
+
+      <g class="imap-hub erp">
+        <rect x="400" y="58" width="200" height="66" rx="18"/>
+        <text x="500" y="88" class="t1">ERP</text>
+        <text x="500" y="108" class="t2">Runs the business</text>
+      </g>
+      <g class="imap-hub mes">
+        <circle cx="500" cy="352" r="120" fill="url(#imapGlow)" class="halo"/>
+        <circle cx="500" cy="352" r="68" class="ring"/>
+        <text x="500" y="350" class="t1">MES/MOM</text>
+        <text x="500" y="372" class="t2">Runs the operation</text>
+      </g>
+      <g class="imap-floor">
+        <rect x="270" y="540" width="460" height="52" rx="14"/>
+        <text x="500" y="563" class="t1">Machines, PLCs and people</text>
+        <text x="500" y="581" class="t2">OPC UA, MQTT and a unified namespace</text>
+      </g>
+
+      <g class="imap-app" data-app="plm" tabindex="0" role="button" aria-label="PLM"><rect x="36" y="82" width="152" height="56" rx="14"/><text x="112" y="108" class="t1">PLM</text><text x="112" y="125" class="t2">Product definition</text></g>
+      <g class="imap-app" data-app="cpq" tabindex="0" role="button" aria-label="CPQ"><rect x="36" y="222" width="152" height="56" rx="14"/><text x="112" y="248" class="t1">CPQ</text><text x="112" y="265" class="t2">Configure and quote</text></g>
+      <g class="imap-app" data-app="aps" tabindex="0" role="button" aria-label="APS"><rect x="36" y="362" width="152" height="56" rx="14"/><text x="112" y="388" class="t1">APS</text><text x="112" y="405" class="t2">Detailed scheduling</text></g>
+      <g class="imap-app" data-app="lims" tabindex="0" role="button" aria-label="LIMS"><rect x="36" y="492" width="152" height="56" rx="14"/><text x="112" y="518" class="t1">LIMS</text><text x="112" y="535" class="t2">Lab and samples</text></g>
+      <g class="imap-app" data-app="wms" tabindex="0" role="button" aria-label="WMS"><rect x="812" y="82" width="152" height="56" rx="14"/><text x="888" y="108" class="t1">WMS</text><text x="888" y="125" class="t2">Warehouse</text></g>
+      <g class="imap-app" data-app="qms" tabindex="0" role="button" aria-label="QMS"><rect x="812" y="222" width="152" height="56" rx="14"/><text x="888" y="248" class="t1">QMS</text><text x="888" y="265" class="t2">Enterprise quality</text></g>
+      <g class="imap-app" data-app="eam" tabindex="0" role="button" aria-label="EAM or CMMS"><rect x="812" y="362" width="152" height="56" rx="14"/><text x="888" y="388" class="t1">EAM / CMMS</text><text x="888" y="405" class="t2">Maintenance</text></g>
+      <g class="imap-app" data-app="cw" tabindex="0" role="button" aria-label="Connected worker"><rect x="812" y="492" width="152" height="56" rx="14"/><text x="888" y="518" class="t1">Connected worker</text><text x="888" y="535" class="t2">Frontline apps</text></g>
+    </svg>
+  </div>
+  <div class="imap-legend" aria-hidden="true"><span class="lg-erp">Via ERP</span><span class="lg-mes">Direct to MES/MOM</span><span class="lg-core">Orders down, actuals up</span></div>
+  <div class="imap-info" aria-live="polite">
+    <p class="imap-hint">Pick an application to see what flows where, and why.</p>
+  </div>
+  <script type="application/json" class="imap-data">{
+    "modes": {
+      "erp": {"note": "Every specialist talks to ERP, and ERP passes what it needs down to MES/MOM. One integration hub and simple to govern. The catch: real-time shopfloor data waits for ERP, and ERP ends up storing detail it was never designed for.",
+              "routes": {"plm": ["erp"], "cpq": ["erp"], "aps": ["erp"], "lims": ["erp"], "wms": ["erp"], "qms": ["erp"], "eam": ["erp"], "cw": ["erp"]}},
+      "hybrid": {"note": "The pattern I see work best. Business data (orders, costs, master data) goes through ERP. Execution data (schedules, results, instructions, events) goes straight to MES/MOM. Each system owns what it's good at.",
+              "routes": {"plm": ["erp", "mes"], "cpq": ["erp", "mes"], "aps": ["erp", "mes"], "lims": ["mes"], "wms": ["erp", "mes"], "qms": ["mes"], "eam": ["erp", "mes"], "cw": ["mes"]}},
+      "mes": {"note": "Specialists connect straight to MES/MOM, which becomes the operational hub and reports up to ERP. Fast and real-time. It needs clear ownership of master data, or you end up with two versions of the truth.",
+              "routes": {"plm": ["mes"], "cpq": ["mes"], "aps": ["mes"], "lims": ["mes"], "wms": ["mes"], "qms": ["mes"], "eam": ["mes"], "cw": ["mes"]}}
+    },
+    "apps": {
+      "plm": {"name": "PLM", "what": "Owns the product definition: designs, specifications, the engineering BOM and changes.",
+              "erp": "The engineering BOM becomes a manufacturing BOM and routing in ERP, then flows down to MES/MOM with each order.",
+              "mes": "Drawings, work instructions and change notices go straight to the shopfloor, so operators always see the latest revision.",
+              "link": "/post/plm-erp-mes-digital-thread", "read": "PLM, ERP and MES"},
+      "cpq": {"name": "CPQ", "what": "Configures complex products and prices them correctly.",
+              "erp": "The configured order lands in ERP with its pricing, and ERP plans and costs it.",
+              "mes": "The buildable configuration (options, parameters, test limits) reaches MES/MOM so the line builds exactly what was sold.",
+              "link": "/post/cpq-to-shopfloor", "read": "CPQ to shopfloor"},
+      "aps": {"name": "APS", "what": "Builds detailed, constraint-based schedules when MRP isn't fine enough.",
+              "erp": "Takes demand and orders from ERP and returns planned dates.",
+              "mes": "Sends the sequenced schedule to MES/MOM and gets real progress back, so the next schedule starts from reality.",
+              "link": "/post/aps-vs-mes-scheduling", "read": "APS vs MES scheduling"},
+      "lims": {"name": "LIMS", "what": "Runs the lab: samples, tests, results and certificates.",
+               "erp": "Batch release status and certificates can be passed to ERP for shipping and stock status.",
+               "mes": "Sample requests and results are tied to the batch and the process step in MES/MOM, which can hold or release product in real time.",
+               "link": "/post/lims-and-mes", "read": "LIMS and MES"},
+      "wms": {"name": "WMS", "what": "Runs complex warehouses: storage strategies, picking, automation and docks.",
+              "erp": "Stock levels, receipts and shipments are reconciled with ERP for valuation and orders.",
+              "mes": "Material is staged and replenished to the line from what MES/MOM says it's about to consume.",
+              "link": "/post/wms-vs-mes-inventory", "read": "WMS vs MES inventory"},
+      "qms": {"name": "QMS", "what": "Runs enterprise quality: complaints, CAPA, audits and document control.",
+              "erp": "Supplier and customer quality issues can be linked to ERP's orders and partners.",
+              "mes": "Non-conformances raised on the shopfloor feed CAPA directly, with the full context of the order, batch and machine.",
+              "link": "/post/qms-and-mes-quality", "read": "QMS and MES quality"},
+      "eam": {"name": "EAM / CMMS", "what": "Manages assets and maintenance work.",
+              "erp": "Spares, purchasing and maintenance costs post to ERP.",
+              "mes": "Machine hours, counts and downtime from MES/MOM trigger condition-based work, and maintenance windows feed back into the schedule.",
+              "link": "/post/eam-cmms-and-mes", "read": "EAM, CMMS and MES"},
+      "cw": {"name": "Connected worker", "what": "Puts instructions, checklists, skills and handover in front of frontline people.",
+             "erp": "Bought standalone and wired to ERP, it knows the order but not what the line is actually doing.",
+             "mes": "Built into or tightly linked with MES/MOM, every checklist and instruction knows the order, the machine and the operator.",
+             "link": "/post/connected-worker-one-app-not-five", "read": "Connected worker"}
+    }
+  }</script>
+</figure>

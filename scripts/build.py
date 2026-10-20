@@ -46,7 +46,7 @@ CATEGORIES = [
 CAT_BY_KEY = {c["key"]: c for c in CATEGORIES}
 
 NAV = [
-    {"key": "start", "label": "Start here", "desc": "What is MES/MOM? The essential guide", "href": "/post/what-is-mes-and-why-is-it-important-in-manufacturing"},
+    {"key": "paths", "label": "Learning paths", "desc": "Guided routes through the articles", "href": "/paths/"},
     {"key": "articles", "label": "Articles", "desc": "Everything, newest first", "href": "/articles"},
     {"key": "thought-leadership", "label": "Smart Factory & AI", "desc": "Strategy, shopfloor AI, connected worker", "href": "/thought-leadership"},
     {"key": "mes-education", "label": "Foundations", "desc": "MES, MOM, OEE, ISA-95 explained", "href": "/mes-education"},
@@ -98,6 +98,36 @@ def load_featured():
     items.sort(key=lambda i: i["date_iso"], reverse=True)
     by_img = {i["image"]: i for i in items}
     return {"carousel": [by_img[k] for k in data["carousel"]], "items": items}
+
+
+def load_paths(posts):
+    """Learning paths: lines of articles. Adds hub-map geometry and per-post path context."""
+    data = yaml.safe_load((ROOT / "content" / "paths.yaml").read_text(encoding="utf-8"))
+    by_slug = {p["slug"]: p for p in posts}
+    HX, HY, END, T = 130, 360, 850, 10
+    paths = []
+    for i, d in enumerate(data["paths"]):
+        st = [by_slug[s] for s in d["stations"] if s in by_slug]
+        y = 120 + i * 80
+        dy, x0 = y - HY, HX + abs(y - HY)
+        n = len(st)
+        gap = (END - x0 - 50) / (n - 1)
+        segs = []
+        if dy:
+            segs.append(f"left:{HX}px;top:{HY - T / 2}px;width:{abs(dy) * 2 ** .5:.1f}px;transform-origin:0 50%;transform:rotate({-45 if dy < 0 else 45}deg)")
+        segs.append(f"left:{x0 - T / 2}px;top:{y - T / 2}px;width:{END - x0 + T}px")
+        stations = [{"post": q, "n": k + 1, "x": round(x0 + 50 + k * gap, 1), "y": y} for k, q in enumerate(st)]
+        paths.append(dict(d, stations=stations, n=n, minutes=sum(q["read_time"] for q in st), y=y, x0=x0, end=END,
+                          segs=segs, flow=f"left:{x0}px;top:{y - 2}px;width:{END - x0}px", slugs=[q["slug"] for q in st]))
+    for path in paths:
+        for k, stn in enumerate(path["stations"]):
+            q = stn["post"]
+            q.setdefault("paths", []).append({"id": path["id"], "title": path["title"], "color": path["color"], "rgb": path["rgb"],
+                                              "n": path["n"], "index": k + 1, "slugs": path["slugs"],
+                                              "prev": path["stations"][k - 1]["post"] if k else None,
+                                              "next": path["stations"][k + 1]["post"] if k + 1 < path["n"] else None})
+    order = {k: i for i, k in enumerate(data["home_order"])}
+    return paths, sorted(paths, key=lambda p: order.get(p["id"], 99))
 
 
 # ------------------------------------------------------------------ helpers
@@ -294,6 +324,10 @@ def build(base, relative=False, include_scheduled=False):
     total_words = sum(p["words"] for p in posts)
 
     featured = load_featured()
+    paths, paths_home = load_paths(posts)
+    common["paths_home"] = paths_home
+    common["paths_json"] = json.dumps([{"id": p["id"], "title": p["title"], "slugs": p["slugs"],
+                                        "titles": [st["post"]["short"] for st in p["stations"]]} for p in paths], separators=(",", ":"))
     common["featured_carousel"] = featured["carousel"]
 
     # home
@@ -357,6 +391,17 @@ def build(base, relative=False, include_scheduled=False):
               description=p["description"], canonical=p["canonical"], og_image=f"{SITE}/images/og/{p['slug']}.png",
               p=p, body=Markup(p["body"]), toc=p["toc"], series_posts=series if p["series"] else None,
               prev=prev, next=nxt, related=related, jsonld=[jsonld(ld), jsonld(crumbs)])
+
+    # learning paths
+    write("paths/index.html", "paths.html", active="paths", seo_title="Learning paths | Shopfloor Matters",
+          description="Six guided learning paths through the smart factory, MES/MOM, shopfloor AI and implementation. Articles in the right order, with your progress saved as you read.",
+          canonical=f"{SITE}/paths/", paths=paths, og_image=f"{SITE}/images/og/page-education.png")
+    for path in paths:
+        write(f"paths/{path['id']}.html", "path.html", active="paths", seo_title=f"{path['title']}: learning path | Shopfloor Matters",
+              description=f"{path['blurb']} {path['n']} articles, about {path['minutes']} minutes.",
+              canonical=f"{SITE}/paths/{path['id']}", path=path, integration_map=blocks.get("integration-map", ""), og_image=f"{SITE}/images/og/{path['image']}.png",
+              jsonld=[jsonld({"@context": "https://schema.org", "@type": "ItemList", "name": path["title"],
+                              "itemListElement": [{"@type": "ListItem", "position": s["n"], "url": s["post"]["canonical"], "name": s["post"]["title"]} for s in path["stations"]]})])
 
     # featured
     kinds = [("podcast", "Podcasts", "podcasts"), ("article", "Press", "press features"), ("webinar", "Webinars", "webinar")]
