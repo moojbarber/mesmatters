@@ -1,54 +1,54 @@
 {% extends "base.html" %}
-{% from "macros.html" import hero_bg, cta, platform_icon %}
+{% from "macros.html" import hero_bg, cta %}
 {% block main %}
 <section class="hero page-hero">
   {{ hero_bg() }}
   <div class="wrap">
-    <span class="tag">Featured</span>
     <h1>Podcasts, interviews and press</h1>
-    <p class="kicker">Where I've talked about MES, the smart factory and shopfloor AI. Listen, watch or read them all here.</p>
+    <p class="kicker">Where I've talked about MES, the smart factory and shopfloor AI. Every episode and article in one place, with links to watch, listen or read.</p>
   </div>
 </section>
 <div class="wrap">
-  <div class="fx-counts">
-    {% for t in counts %}<div class="stat"><b>{{ t.n }}</b><span>{{ t.label }}</span></div>{% endfor %}
+  <div class="fx-lead">
+    <figure>
+      <blockquote>“By the time an issue appears on a dashboard, the opportunity to prevent it has often passed.”</blockquote>
+      <figcaption>Quoted by ARC Advisory Group, 2026</figcaption>
+    </figure>
+    <div class="fx-counts">
+      {% for t in counts %}<div class="c-{{ t.key }}"><b>{{ t.n }}</b><span>{{ t.label }}</span></div>{% endfor %}
+    </div>
   </div>
 
-  <div class="fx-filter" role="group" aria-label="Filter by type">
-    <button type="button" data-f="all" aria-pressed="true">All <span>{{ items|length }}</span></button>
-    {% for t in counts %}<button type="button" data-f="{{ t.key }}" aria-pressed="false">{{ t.short }} <span>{{ t.n }}</span></button>{% endfor %}
+  <div class="fx-filter" role="group" aria-label="Show">
+    <button type="button" data-f="all" aria-pressed="true">All {{ items|length }}</button>
+    {% for t in counts %}<button type="button" data-f="{{ t.key }}" aria-pressed="false">{{ t.short }} {{ t.n }}</button>{% endfor %}
   </div>
 
   <div class="fx-list">
     {% for it in items %}
-    <article class="fx-item rv" data-type="{{ it.type }}">
-      <div class="fx-side">
-        <span class="fx-type t-{{ it.type }}">{{ platform_icon(it.type) }}{{ it.type_label }}</span>
-        <span class="fx-outlet">{{ it.outlet }}</span>
-        <time datetime="{{ it.date_iso }}">{{ it.date_text }}</time>
-      </div>
-      <div class="fx-main">
-        <span class="micro">{{ it.show }} · {{ it.role }}</span>
+    <article class="fx-row" id="{{ it.image }}" data-type="{{ it.type }}">
+      <a class="fx-thumb" href="{{ it.links[0].url }}" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="{{ base }}/images/featured/{{ it.image }}.jpg" alt="" width="660" height="336" loading="lazy"></a>
+      <div class="fx-text">
+        <p class="fx-meta">{{ it.date_short }} <i>/</i> {{ it.label }}</p>
         <h2><a href="{{ it.links[0].url }}" target="_blank" rel="noopener">{{ it.title }}</a></h2>
-        {% if it.with %}<p class="fx-with">{{ it.with }}</p>{% endif %}
-        <p>{{ it.blurb }}</p>
-        {% if it.quote %}<blockquote class="fx-quote">“{{ it.quote }}”</blockquote>{% endif %}
-        <div class="fx-badges">
-          {% for l in it.links %}
-          <a class="pbadge p-{{ l.kind }}" href="{{ l.url }}" target="_blank" rel="noopener"{% if l.show %} title="Opens the show's page"{% endif %}>
-            {{ platform_icon(l.kind) }}<span><small>{{ l.verb }}</small>{{ l.name }}</span>
-          </a>
-          {% endfor %}
-        </div>
+        <p class="fx-where">{{ it.show }}{% if it.with %}. {{ it.with }}{% endif %}</p>
+      </div>
+      <div class="fx-badges">
+        {% for l in it.links %}
+        <a class="pbadge p-{{ l.kind }}" href="{{ l.url }}" target="_blank" rel="noopener"><i aria-hidden="true"></i>{{ l.short }}</a>
+        {% endfor %}
       </div>
     </article>
     {% endfor %}
   </div>
 
-  <p class="fx-note">Want me on your podcast, webinar or panel? <a href="{{ linkedin }}" target="_blank" rel="me noopener">Message me on LinkedIn</a>.</p>
+  <div class="fx-invite">
+    <div><h2>Want me on your podcast or panel?</h2><p>I talk about MES, the smart factory, connected worker and shopfloor AI.</p></div>
+    <a class="btn" href="{{ linkedin }}" target="_blank" rel="me noopener">Message me on LinkedIn</a>
+  </div>
   {{ cta(base, linkedin, kit_form) }}
 </div>
 <script>
-(function(){var bs=document.querySelectorAll('.fx-filter button');bs.forEach(function(b){b.addEventListener('click',function(){var f=b.dataset.f;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b)});document.querySelectorAll('.fx-item').forEach(function(i){i.hidden=!(f==='all'||i.dataset.type===f)})})})})();
+(function(){var bs=document.querySelectorAll('.fx-filter button');bs.forEach(function(b){b.addEventListener('click',function(){var f=b.dataset.f;bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});document.querySelectorAll('.fx-row').forEach(function(r){r.hidden=!(f==='all'||r.dataset.type===f)})})})})();
 </script>
 {% endblock %}

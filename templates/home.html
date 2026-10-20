@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import card, hero_bg, cta, featured_strip %}
+{% from "macros.html" import card, hero_bg, cta, coverflow %}
 {% block main %}
 <section class="hero home-hero">
   {{ hero_bg() }}
@@ -13,15 +13,7 @@
         <a class="btn ghost" href="{{ base }}/articles">Browse all {{ posts|length }} articles</a>
       </div>
     </div>
-    <a class="feature-card" href="{{ base }}/post/{{ start[0].slug }}">
-      <img src="{{ base }}/images/art/{{ start[0].slug }}.svg" alt="" width="1600" height="900">
-      <div class="fc-body">
-        <span class="micro">Start with the foundations · {{ start[0].read_time }} min read</span>
-        <h3>{{ start[0].short }}</h3>
-        <p>{{ start[0].description }}</p>
-      </div>
-      <span class="go" aria-hidden="true">→</span>
-    </a>
+    {{ coverflow(base, featured_carousel) }}
   </div>
 </section>
 
@@ -32,8 +24,6 @@
     <div class="stat"><b>{{ series|length }}</b><span>part MES functionality series</span></div>
     <div class="stat"><b>11k+</b><span>followers on LinkedIn</span></div>
   </div>
-
-  {{ featured_strip(base, featured_outlets) }}
 
   <section class="section">
     <div class="big-wrap rv">

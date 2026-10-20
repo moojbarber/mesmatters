@@ -78,7 +78,9 @@ def load_featured():
     items = []
     for it in data["items"]:
         d = it["date"] if isinstance(it["date"], dt.date) else dt.date.fromisoformat(str(it["date"]))
-        it = dict(it, date_iso=d.isoformat(), date_text=it.get("date_label") or d.strftime("%B %Y"), type_label=TYPE_LABEL[it["type"]])
+        it = dict(it, date_iso=d.isoformat(), date_text=it.get("date_label") or d.strftime("%B %Y"),
+                  date_short=it.get("date_label") or d.strftime("%b %Y"), type_label=TYPE_LABEL[it["type"]],
+                  outlet_line=it.get("card_outlet") or it["outlet"])
         links = []
         for l in it["links"]:
             verb, name = PLATFORMS[l["kind"]]
@@ -86,11 +88,16 @@ def load_featured():
                 verb, name = "Read the", l["label"]
             if l.get("show") and l["kind"] in ("spotify", "apple", "youtube"):
                 verb = verb + " (show)"
-            links.append(dict(l, verb=verb, name=name))
+            short = {"youtube": "YouTube", "spotify": "Spotify", "apple": "Apple Podcasts", "transcript": "Transcript",
+                     "read": "Read", "episode": "Episode page", "event": "Event page"}[l["kind"]]
+            if l.get("label"):
+                short = l["label"]
+            links.append(dict(l, verb=verb, name=name, short=short))
         it["links"] = links
         items.append(it)
     items.sort(key=lambda i: i["date_iso"], reverse=True)
-    return {"outlets": data["outlets"], "items": items}
+    by_img = {i["image"]: i for i in items}
+    return {"carousel": [by_img[k] for k in data["carousel"]], "items": items}
 
 
 # ------------------------------------------------------------------ helpers
@@ -287,7 +294,7 @@ def build(base, relative=False, include_scheduled=False):
     total_words = sum(p["words"] for p in posts)
 
     featured = load_featured()
-    common["featured_outlets"] = featured["outlets"]
+    common["featured_carousel"] = featured["carousel"]
 
     # home
     write("index.html", "home.html", active="home",
@@ -352,9 +359,8 @@ def build(base, relative=False, include_scheduled=False):
               prev=prev, next=nxt, related=related, jsonld=[jsonld(ld), jsonld(crumbs)])
 
     # featured
-    kinds = [("podcast", "Podcasts", "podcast appearances"), ("article", "Articles", "articles and interviews"), ("webinar", "Webinars", "webinars and panels")]
-    counts = [{"key": k, "short": sh, "label": lab if sum(1 for i in featured["items"] if i["type"] == k) != 1 else lab.replace("appearances", "appearance").replace("articles and interviews", "article or interview").replace("webinars and panels", "webinar or panel"),
-               "n": sum(1 for i in featured["items"] if i["type"] == k)} for k, sh, lab in kinds]
+    kinds = [("podcast", "Podcasts", "podcasts"), ("article", "Press", "press features"), ("webinar", "Webinars", "webinar")]
+    counts = [{"key": k, "short": sh, "label": lab, "n": sum(1 for i in featured["items"] if i["type"] == k)} for k, sh, lab in kinds]
     write("featured.html", "featured.html", active="featured", seo_title="Podcasts, interviews and press | Shopfloor Matters",
           description="Matt Barber on podcasts, webinars and in the trade press, talking MES, the smart factory and shopfloor AI. Watch, listen or read.",
           canonical=f"{SITE}/featured", items=featured["items"], counts=[c for c in counts if c["n"]], og_image=f"{SITE}/images/og/page-about.png",

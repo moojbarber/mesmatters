@@ -46,12 +46,30 @@
 {%- else -%}<svg class="pi" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 11h6M9 15h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
 {%- endif -%}
 {%- endmacro %}
-{% macro featured_strip(base, outlets) -%}
-<section class="section fx-strip-wrap">
-  <a class="fx-strip rv" href="{{ base }}/featured" aria-label="As featured in: see every podcast, interview and article">
-    <span class="fx-strip-label">As featured in</span>
-    <span class="fx-marks">{% for o in outlets %}<span class="fx-mark">{{ o }}</span>{% endfor %}</span>
-    <span class="fx-strip-go">Watch, listen and read <b aria-hidden="true">→</b></span>
-  </a>
+{% macro coverflow(base, items) -%}
+<section class="cf" aria-roledescription="carousel" aria-label="Featured in">
+  <div class="cf-head">
+    <h2>Featured in</h2>
+    <a href="{{ base }}/featured">See all</a>
+  </div>
+  <div class="cf-stage">
+    {% for it in items %}
+    <a class="cf-card{% if loop.first %} is-active{% endif %}" href="{{ base }}/featured#{{ it.image }}" data-i="{{ loop.index0 }}" aria-label="{{ it.title }}, {{ it.outlet }}" aria-roledescription="slide">
+      <img src="{{ base }}/images/featured/{{ it.image }}.jpg" alt="" width="660" height="336" loading="{{ 'eager' if loop.index <= 3 else 'lazy' }}">
+      <span class="cf-body">
+        <span class="cf-meta"><span>{{ it.label }}</span><span>{{ it.date_short }}</span></span>
+        <span class="cf-title">{{ it.title }}</span>
+        <span class="cf-outlet">{{ it.outlet_line }}</span>
+      </span>
+    </a>
+    {% endfor %}
+  </div>
+  <div class="cf-controls" hidden>
+    <button type="button" class="cf-btn" data-cf="prev" aria-label="Previous"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <div class="cf-dots">{% for it in items %}<button type="button" data-cf-dot="{{ loop.index0 }}" aria-label="Show {{ loop.index }} of {{ items|length }}"><span></span></button>{% endfor %}</div>
+    <button type="button" class="cf-btn" data-cf="next" aria-label="Next"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    <button type="button" class="cf-btn cf-pause" data-cf="toggle" aria-label="Pause rotation"><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5v14l12-7z"/></svg></button>
+  </div>
+  <p class="cf-status" aria-live="off"></p>
 </section>
 {%- endmacro %}
