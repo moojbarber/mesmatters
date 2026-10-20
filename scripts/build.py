@@ -47,10 +47,7 @@ CAT_BY_KEY = {c["key"]: c for c in CATEGORIES}
 
 NAV = [
     {"key": "paths", "label": "Learning paths", "desc": "Guided routes through the articles", "href": "/paths/"},
-    {"key": "articles", "label": "Articles", "desc": "Everything, newest first", "href": "/articles"},
-    {"key": "thought-leadership", "label": "Smart Factory & AI", "desc": "Strategy, shopfloor AI, connected worker", "href": "/thought-leadership"},
-    {"key": "mes-education", "label": "Foundations", "desc": "MES, MOM, OEE, ISA-95 explained", "href": "/mes-education"},
-    {"key": "mes-advice", "label": "Implementation", "desc": "Selecting, deploying and adopting MES", "href": "/mes-advice"},
+    {"key": "articles", "label": "Articles", "desc": "Everything, by topic or newest first", "href": "/articles"},
     {"key": "featured", "label": "Featured", "desc": "Podcasts, interviews and press", "href": "/featured"},
     {"key": "about", "label": "About", "desc": "Who I am and why I write this", "href": "/about"},
 ]
