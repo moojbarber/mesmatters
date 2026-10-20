@@ -30,9 +30,9 @@ Generative AI creates text and answers. Its sweet spot is helping people, not co
 
 Agentic AI plans and carries out tasks through other software. Exciting, and the top of the maturity curve.
 
-The common thread is data, but not always the same data. ML learns from your own history, so it can't learn from shift totals typed in at 6am. GenAI arrives already trained, so it can start now on your procedures, manuals and maintenance notes, however messy. It just can't summarise a shift scattered across paper and Excel.
+The common thread is data, but not always the same data. ML learns from your own history, so it can't learn from shift totals typed in at 6am. GenAI arrives already trained, so it can start now on your procedures, manuals, maintenance notes and shift logs, however messy. It just can't summarise a shift scattered across paper and Excel.
 
-So for AI that predicts, optimises or acts, the data foundation comes first. For GenAI on your documents and know-how, start now, in parallel.
+So for AI that predicts or acts, the data foundation comes first. For GenAI on your documents and know-how, start now, in parallel.
 
 Full article in the first comment.
 

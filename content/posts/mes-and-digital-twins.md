@@ -8,21 +8,22 @@ category: thought-leadership
 art: bins
 ---
 
-Digital twins are one of the most exciting ideas in manufacturing right now. Test a change virtually before you touch the line. Plan capacity on a model that behaves like the real factory. Spot problems before they happen.
+Digital twins are one of the most exciting ideas in manufacturing right now. Test a change virtually before you touch the line. Plan capacity on a model that behaves like the real factory.
 
 But a twin is only as good as the data feeding it. And for most of what happens in a factory, that data comes from MES/MOM.
 
 ## What is a digital twin?
 
-A digital twin is a virtual model of a physical asset, process or entire factory, kept in sync with the real thing through live data, and used to understand, predict or optimise how it behaves.
+A digital twin is a virtual model of a physical asset, process or entire factory, kept in sync with the real thing through live data, and used to understand and predict how it behaves.
 
 There are different flavours. A twin of a single machine, used by engineers to model wear or tune performance. A twin of a production process, used to test changes before making them. A twin of a whole factory, used to plan layouts, capacity and investments.
 
-Most serious definitions share three ingredients:
+Most serious definitions share four ingredients:
 
 - **A model** of the physical thing: its structure, behaviour and constraints.
 - **A live connection** that keeps the model in step with reality.
-- **A purpose**: simulation, prediction or optimisation that helps someone make a better decision.
+- **History**, so the twin learns how the real thing behaves over time.
+- **A purpose**: simulation or prediction that helps someone make a better decision.
 
 MES/MOM isn't the model, and it doesn't do the simulation. What it does is supply much of the live connection, in a form the model can actually use.
 

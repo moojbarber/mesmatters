@@ -15,7 +15,7 @@ If you can explain why each of these is wrong, you'll be ahead of most people in
 
 It won't. Not without a data foundation.
 
-Most manufacturers still struggle to capture accurate, contextualised data from the shopfloor, but their expectations are already at AI level. You can't build predictive or optimising AI on manual entries, estimates and delayed ERP transactions. Generative AI can help sooner, by working on your documents, procedures and maintenance notes. But it can't conjure up operational data that was never captured. Get the processes defined and the data flowing, run GenAI pilots alongside, and AI can deliver.
+Most manufacturers still struggle to capture accurate, contextualised data from the shopfloor, but their expectations are already at AI level. You can't build predictive or optimising AI on manual entries, estimates and delayed ERP transactions. Generative AI can help sooner, by working on your documents, procedures, maintenance notes and shift logs. But it can't conjure up operational data that was never captured. Get the processes defined and the data flowing, run GenAI pilots alongside, and AI can deliver.
 
 More on this in [AI won't fix your factory](/post/the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence).
 

@@ -46,7 +46,7 @@ Level 5, Optimised: AI-enabled. Very few factories are genuinely here, whatever 
 
 In my experience most factories sit between Level 1 and Level 3. And the jump from 2 to 3 is usually the biggest step in value, because that's where data becomes trustworthy.
 
-It's also where predictive and optimising AI finally has something to learn from. GenAI working on your procedures, manuals and maintenance notes can start sooner, alongside the foundation work.
+It's also where predictive and optimising AI finally has something to learn from. GenAI working on your procedures, manuals, maintenance notes and shift logs can start sooner, alongside the foundation work.
 
 Full article in the first comment.
 

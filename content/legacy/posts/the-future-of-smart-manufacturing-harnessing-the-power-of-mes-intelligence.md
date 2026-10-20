@@ -78,9 +78,9 @@ Each of these depends on the same thing. Good data, collected over time, with co
 
 ## Where generative AI doesn't have to wait
 
-Everything above is about AI that learns from your operational data: predicting failures, optimising parameters, spotting anomalies. That kind of AI really does need the foundation first.
+Everything above is about AI that learns from your operational data: predicting failures, optimising parameters, spotting anomalies, catching quality drift. That kind of AI really does need the foundation first.
 
-Generative AI is different, and it's worth being precise about why.
+Generative AI is different.
 
 Large language models arrive already trained. They learned language, and a surprising amount about engineering and manufacturing, before they ever reach your factory. So they don't need years of your own data to be useful. And they work on the kind of information every factory has in abundance, however messy: SOPs, work instructions, equipment manuals, maintenance work orders, free-text downtime comments, shift logs, quality reports, supplier certificates, emails.
 

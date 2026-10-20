@@ -59,7 +59,7 @@ This is the part that matters most right now.
 
 AI value rises with maturity. At Level 1 there's no data for AI to work with. At Level 2 you're collecting some, but it's inconsistent. At Level 3 you have reliable, automatic, contextualised data, and AI finally has something to learn from. At Level 4, with a single source of truth across systems, it can start making meaningful predictions. At Level 5 it's embedded in how you operate.
 
-That's true for AI that learns from operational data: predictive maintenance, predictive quality, optimisation. Generative AI is a little different. It arrives already trained, and it can work on the documents and know-how every factory already has, however messy: procedures, manuals, maintenance notes and shift logs. So GenAI pilots can start at Level 1 or 2, running alongside the foundation work rather than waiting for it.
+That's true for AI that learns from operational data: predictive maintenance, predictive quality, optimisation, anomaly detection. Generative AI is a little different. It arrives already trained, and it can work on the documents and know-how every factory already has, however messy: procedures, manuals, maintenance notes and shift logs. So GenAI pilots can start at Level 1 or 2, running alongside the foundation work rather than waiting for it.
 
 Everyone wants to be at Level 5. But if you're at Level 1 or 2, the path to Level 5 goes through Levels 3 and 4. For your operational data, there are no shortcuts. I cover why, and where GenAI can help sooner, in [AI won't fix your factory](/post/the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence).
 
