@@ -47,7 +47,7 @@ That's where I find the future genuinely exciting. Data-driven decisions about i
 
 ## Simulation is only as good as the data behind it
 
-Here's the catch. A simulation built on assumed cycle times, estimated downtime and a theoretical capacity model will give you very confident, very wrong answers.
+A simulation built on assumed cycle times, estimated downtime and a theoretical capacity model will give you very confident, very wrong answers.
 
 The value comes from a twin that's fed by reality. Actual cycle times by product. Actual downtime patterns by machine and shift. Actual scrap rates. Actual changeover durations.
 

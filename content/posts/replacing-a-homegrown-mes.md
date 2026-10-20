@@ -21,7 +21,7 @@ Your in-house team can be your greatest asset or your biggest obstacle.
 
 **They can make or break the project.** These are smart people. You want their energy going into making the new system succeed, not quietly undermining it.
 
-The key is turning them from reluctant participants into champions:
+Your job is to turn them from reluctant participants into champions:
 
 - **Give them ownership.** Position them as the bridge between old and new. Make them super users. Give them a job title that reflects the new responsibility.
 - **Incentivise success.** Financially or otherwise, tie their reward to the project landing well. Success can lift their careers significantly.

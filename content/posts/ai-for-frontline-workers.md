@@ -1,7 +1,7 @@
 ---
 title: "AI for the frontline: copilots, shift summaries and coaching"
 short: "AI for frontline workers"
-description: "AI for operators isn't about replacing people. It's about giving every new starter your best operator's knowledge. What works today, and why it needs MES/MOM context."
+description: "AI for operators should give every new starter your best operator's knowledge, not replace people. What works today, and why it needs MES/MOM context."
 published: 2026-10-16
 category: thought-leadership
 art: orbits

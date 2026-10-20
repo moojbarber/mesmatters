@@ -53,7 +53,7 @@ None of these is universally right. I'd ask one question first: who actually rai
 
 **One system owns the work order.** Raising a request can happen anywhere. But the work order, its status and its history belong in one place.
 
-**Operators don't log into a second system.** If raising a breakdown means leaving MES/MOM and opening the CMMS, operators will shout across the shop instead. The request should start where they already work. That's the whole point of [connected worker: one app, not five](/post/connected-worker-one-app-not-five).
+**Operators don't log into a second system.** If raising a breakdown means leaving MES/MOM and opening the CMMS, operators will shout across the shop instead. The request should start where they already work. I make the same argument in [connected worker: one app, not five](/post/connected-worker-one-app-not-five).
 
 **Maintenance windows are visible to production.** A planned stop that the schedule doesn't know about is just unplanned downtime with extra paperwork.
 

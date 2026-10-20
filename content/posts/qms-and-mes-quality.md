@@ -33,7 +33,7 @@ I covered shopfloor quality in [MES functionality: quality operations](/post/mes
 
 ## Where the loop breaks
 
-Here's the typical story. An operator finds a defect. They record it in MES/MOM, scrap the part, and carry on. A week later, quality runs a report, spots a trend, and raises a CAPA in the QMS. The CAPA team asks for details. Nobody can remember which shift, which lot, which machine, which operator.
+A typical story goes like this. An operator finds a defect. They record it in MES/MOM, scrap the part, and carry on. A week later, quality runs a report, spots a trend, and raises a CAPA in the QMS. The CAPA team asks for details. Nobody can remember which shift, which lot, which machine, which operator.
 
 The information existed. It just didn't travel.
 

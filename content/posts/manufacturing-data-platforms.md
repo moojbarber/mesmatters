@@ -9,7 +9,7 @@ art: pipeline
 
 MES/MOM generates enormous quantities of data. So do PLCs, sensors, historians and IIoT platforms. Then ERP, quality and maintenance systems add their own.
 
-Where should it all live? It depends what you want to do with it. Here's how the main options fit together.
+Where should it all live? It depends what you want to do with it, so let's go through the main options.
 
 ## Historians
 
@@ -35,7 +35,7 @@ Data lakes are often the raw material for advanced analytics and machine learnin
 
 More recent architectural ideas. Rather than physically copying everything into one place, they focus on making data discoverable and usable across the enterprise wherever it lives.
 
-Think of it as weaving data together rather than moving it all. Useful in large organisations with many systems and sites.
+It weaves data together rather than moving it all. Useful in large organisations with many systems and sites.
 
 ## How it typically fits together
 
@@ -51,7 +51,7 @@ The lines between these categories are blurring, and vendors increasingly offer 
 
 Usually the data platform. That's where data from many sources can be combined, at scale, for training models.
 
-But here's the part that matters. The *context* that makes the data valuable is created upstream, at the point of work, by MES/MOM. A data lake full of uncontextualised machine signals won't give a model much to learn from. One that includes which order, which material and which shift was involved, linked to quality outcomes and maintenance history, will.
+But the *context* that makes the data valuable is created upstream, at the point of work, by MES/MOM. A data lake full of uncontextualised machine signals won't give a model much to learn from. One that includes which order, which material and which shift was involved, linked to quality outcomes and maintenance history, will.
 
 I explain why in [Raw machine data is worthless](/post/contextualised-manufacturing-data).
 

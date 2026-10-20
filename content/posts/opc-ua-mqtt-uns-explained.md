@@ -9,7 +9,7 @@ art: network
 
 Without a connection to the equipment, MES/MOM is just another application where people type things in. The real value comes from automatic, real-time data exchange with the machines.
 
-That's the connectivity layer. And it's surrounded by acronyms and strong opinions. I don't want to go down every rabbit hole, but here's what you need to know to have a sensible conversation.
+That's the connectivity layer. And it's surrounded by acronyms and strong opinions. I won't go down every rabbit hole, but you need enough to have a sensible conversation.
 
 ## OPC UA
 

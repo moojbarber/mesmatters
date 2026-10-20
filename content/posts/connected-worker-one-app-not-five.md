@@ -53,7 +53,7 @@ Think about what an operator actually does in a shift. They don't just tick chec
 
 A standalone connected worker tool does none of that. It handles the people side well, but it has no production context. It doesn't know which order is running. It can't trigger a quality check because a batch of raw material changed. It can't stop someone consuming a quarantined lot.
 
-So here's what usually happens. You implement a connected worker tool for the quick wins: digital checklists, shift handover, task boards. It works. People like it. Then you realise you need production execution, quality and traceability, so you implement an MES/MOM alongside it.
+What usually happens is this. You implement a connected worker tool for the quick wins: digital checklists, shift handover, task boards. It works. People like it. Then you realise you need production execution, quality and traceability, so you implement an MES/MOM alongside it.
 
 Now your operators are using two systems. Two logins. Two places to look when something goes wrong. Your data model is split down the middle, and someone has to integrate the two.
 
@@ -72,7 +72,7 @@ When it's part of the same platform, everything changes:
 
 The operator gets guided through their whole job, with full context of what's happening around them. And every action they take feeds the same data the quality team, the maintenance team and the planners are using.
 
-That's the bit people miss. Connected worker isn't just a better experience for operators. It's how frontline knowledge gets into your single source of truth, instead of living in a separate app nobody else looks at.
+Connected worker is also how frontline knowledge gets into your single source of truth, instead of living in a separate app nobody else looks at.
 
 ## Where connected worker fits in your roadmap
 

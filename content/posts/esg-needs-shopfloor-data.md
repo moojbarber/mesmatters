@@ -9,7 +9,7 @@ art: growth
 
 Here's something I find fascinating.
 
-Manufacturers publish ESG reports full of ambitious goals. Lower energy, less waste, smaller carbon footprint. Meanwhile, many of their shopfloors run exactly as they did five years ago. No visibility. No data. No improvement.
+Manufacturers publish ESG reports full of ambitious goals. Lower energy, less waste, smaller carbon footprint. Meanwhile, many of their shopfloors run exactly as they did five years ago, with no visibility and no data to improve from.
 
 We already have the technology to optimise resource consumption, cut waste in real time and monitor energy across operations. Most manufacturers just aren't using it to feed their sustainability reporting.
 
@@ -31,7 +31,7 @@ Sustainability reporting is increasingly regulated in more regions, and auditors
 - **Yield.** Raw material in versus good product out. In food and process industries, often the biggest lever of all.
 - **Water and other utilities**, where they matter to your process.
 
-Every one of those is a production metric as much as a sustainability one. That's the point people miss.
+Every one of those is a production metric as much as a sustainability one.
 
 ## Sustainability and profit are the same conversation
 

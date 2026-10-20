@@ -52,7 +52,7 @@ slides=[("cover","AI, ML and GenAI are not the same thing","What each one actual
         ("point","What they all need","Good, granular, contextualised data, collected over time."),
         ("quote","AI is the last step, not the first.",""),
         ("cta","Read the full article","Link in bio · shopfloormatters.com")],
-ig="AI, ML and GenAI get used as if they mean the same thing. They don't. Here's what each one does in a factory, and what all of them need first.\n\nFull article: link in bio.\n\n"+IGTAGS),
+ig="AI, ML and GenAI get used as if they mean the same thing. They don't. What each one does in a factory, and what all of them need first.\n\nFull article: link in bio.\n\n"+IGTAGS),
 dict(id="w3-thu",day="Thu 12 Nov",type="Poll",title="Which AI use case would you fund first?",
 li="""If you had budget for one AI project on the shopfloor next year, which would it be?
 
