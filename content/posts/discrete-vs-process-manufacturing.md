@@ -13,7 +13,7 @@ I've been explaining MES to people for well over a decade, and this question com
 
 ## The simple version
 
-Here's how I explain it at a high level.
+At a high level, I explain it like this.
 
 **Discrete:** the final product could, in theory, be taken apart back into its components. A bike.
 

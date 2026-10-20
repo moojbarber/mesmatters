@@ -15,9 +15,9 @@ So before we talk about the systems that sit around ERP, let's give it the credi
 
 ERP stands for Enterprise Resource Planning. It's the system that runs the business side of a manufacturing company on one shared set of data.
 
-Think of it as the company's central nervous system. A customer places an order. ERP records it, checks stock, plans what needs making, raises purchase orders for the materials, books the receipts, values the inventory, invoices the customer and posts every transaction to the ledger.
+A customer places an order. ERP records it, checks stock, plans what needs making, raises purchase orders for the materials, books the receipts, values the inventory, invoices the customer and posts every transaction to the ledger.
 
-One record. One version of the truth for the whole business.
+Everything is one record, so the whole business works from a single version of the truth.
 
 Before ERP, each of those steps lived in a different system, or a different spreadsheet, owned by a different department. Reconciling them took days. Month end took weeks.
 
@@ -32,7 +32,7 @@ Most modern ERPs cover a broad footprint. In manufacturing, the core usually loo
 - **Inventory and costing.** Stock by location, valuation, standard and actual costs, and margin by product or customer.
 - **Production orders.** Creating the orders, the bills of materials and routings behind them, and booking the results.
 
-That last point matters. ERP is where production is *planned and accounted for*. It knows what should be made, from what, at what cost, by when.
+ERP is where production is *planned and accounted for*. It knows what should be made, from what, at what cost, by when.
 
 ## Why it's worth getting right
 
@@ -40,9 +40,9 @@ I'll be honest, ERP gets a hard time it often doesn't deserve. When it's impleme
 
 **Control of the money.** Every order, every purchase and every stock movement flows through to the ledger. Leadership sees margin by product and by customer, without anyone building a spreadsheet.
 
-**Promises you can keep.** When sales confirms a delivery date, it's based on real stock, real lead times and a real plan. Not a guess.
+**Promises you can keep.** When sales confirms a delivery date, it's based on real stock, real lead times and a real plan rather than a guess.
 
-**A common language.** Item codes, customers, suppliers, units of measure and cost centres mean the same thing in every department and every site. Underrated until you've seen a business without it.
+**A common language.** Item codes, customers, suppliers, units of measure and cost centres mean the same thing in every department and every site. You only notice how much that's worth when you work somewhere without it.
 
 **A platform to grow on.** Adding a plant or a new legal entity becomes a configuration task rather than a new system.
 
@@ -50,7 +50,7 @@ The modern trend towards cloud and composable ERP has made all of this more acce
 
 ## Where ERP stops, by design
 
-The point most people miss: ERP is brilliant at running the business. It was never designed to run every *operation* inside it at the level of detail those operations need.
+ERP is brilliant at running the business. It was never designed to run every *operation* inside it at the level of detail those operations need.
 
 An ERP knows that 500 units of an order should be made this week. It doesn't need to know which operator ran the line at 2.14am, which batch of resin went into machine 7, why the line stopped for 11 minutes, or whether the torque on station 4 was in tolerance.
 
@@ -63,7 +63,7 @@ That level of detail lives elsewhere. Not because ERP is weak, but because it's 
 | **Typical question** | What should we make, and what did it cost? | What's happening right now, and is it right? |
 | **Data** | Transactions and summaries | Events, measurements, genealogy and test results |
 
-This is exactly where specialist applications earn their place. Not as a replacement for ERP. As a complement to it.
+That's where specialist applications come in, as a complement to ERP rather than a replacement for it.
 
 ## The applications that sit alongside ERP
 

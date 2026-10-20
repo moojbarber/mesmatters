@@ -49,7 +49,7 @@ What I'd avoid: two systems both believing they own the sequence. If APS publish
 
 ## The feedback loop is the point
 
-A schedule is only as good as the data it's built on. And here's the uncomfortable truth: most plans are built on standard cycle times and setup times that nobody has checked in years.
+A schedule is only as good as the data it's built on. And most plans are built on standard cycle times and setup times that nobody has checked in years.
 
 MES/MOM knows the real numbers. Actual cycle times by product and machine. Actual changeover durations. Real availability after breakdowns and micro-stops. Real yield.
 

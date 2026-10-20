@@ -34,7 +34,7 @@ li="""I saw "Industry 6.0" on LinkedIn recently. It made my blood boil.
 
 We shouldn't need a version number to describe something's value. We should be able to say what it actually does.
 
-So here's the definition I use:
+So this is the definition I use:
 
 A smart factory is a manufacturing environment where people, processes and technology work together, supported by data, to maximise efficiency, flexibility and quality.
 
@@ -42,13 +42,13 @@ No magic. The right information reaches the right person at the right time, and 
 
 In the article I break down the five things that define one. Notice that only one of the five is really about technology. That's deliberate.
 
-I also cover the bit most people miss. A smart factory doesn't reduce complexity. It increases your capacity to handle it.
+I also cover something that gets overlooked. A smart factory doesn't reduce complexity. It increases your capacity to handle it.
 
 Full article in the first comment.
 
 So, which of the five does your factory struggle with most?""",
 li_comment="Full article: "+URL+"?utm_source=linkedin&utm_medium=social",
-x=["I saw \"Industry 6.0\" on LinkedIn recently.\n\nWe shouldn't need a version number to describe a smart factory. Here's what it actually is:",
+x=["I saw \"Industry 6.0\" on LinkedIn recently.\n\nWe shouldn't need a version number to describe a smart factory. This is what it actually is:",
    "A smart factory is where people, processes and technology work together, supported by data.\n\nThe right information reaches the right person at the right time. Decisions run on facts, not gut feel.",
    "Five things define it: defined processes, planning connected to execution, real-time data at the point of work, a single source of truth, and people backed to make the call.",
    "Only one of those five is really about technology. That's deliberate.",
@@ -102,7 +102,7 @@ End with: What's the first thing you look for when you walk onto a shopfloor?
 #SmartFactory #Manufacturing""",
 x=["[Short version of your story: 2–3 posts.]\n\nEnd with: What's the first thing you look for when you walk onto a shopfloor?"],
 ig_format="Reel: 30–45 seconds talking to camera",
-reel="""Open (0–3s): "You can tell if a factory is smart in the first five minutes. Here's how."
+reel="""Open (0–3s): "You can tell if a factory is smart in the first five minutes."
 Middle (3–35s): tell the story from your LinkedIn post in three or four short beats. Keep it to one site and one moment.
 Close (35–45s): "What's the first thing you look for when you walk onto a shopfloor? Tell me below." """,
 slides=[],

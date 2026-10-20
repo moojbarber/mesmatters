@@ -49,7 +49,7 @@ Business cases get approved faster when they clearly show:
 3. **Realistic implementation costs and timeline.** Including your internal people, not just licences and services.
 4. **How the risk is managed.** Phases, milestones, measures and decision points.
 
-That fourth point is the one most people miss. It's the one that deals with the fear.
+I'd spend the most time on the fourth point, because it deals with the fear.
 
 ## Reframe the risk
 

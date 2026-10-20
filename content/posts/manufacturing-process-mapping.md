@@ -33,7 +33,7 @@ It sounds basic, but agreeing this hierarchy early saves a lot of pain later. It
 
 ## Then map what actually happens
 
-Not the manual. Not the ISO documentation. What really happens, warts and all.
+Map what really happens, warts and all, rather than what the manual or the ISO documentation says.
 
 The tool I like for this is a swimlane diagram, with a twist:
 

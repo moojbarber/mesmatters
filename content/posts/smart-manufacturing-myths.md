@@ -39,7 +39,7 @@ ERP manages the business. MES/MOM manages the factory.
 
 ERP works at the level of detail business planning needs. MES/MOM works at the granular, real-time level the shopfloor needs, with interfaces designed for frontline workers rather than office users. You'd never use an MES to do the job of an ERP, so why use an ERP to do the job of an MES?
 
-And here's the twist: ERP data gets *better* when MES/MOM is in place, because it receives validated actuals rather than backflushed estimates. More in [MES vs ERP](/post/implementing-mes-can-simplify-your-erp).
+ERP data actually gets *better* when MES/MOM is in place, because it receives validated actuals rather than backflushed estimates. More in [MES vs ERP](/post/implementing-mes-can-simplify-your-erp).
 
 ## 5. "IIoT replaces MES/MOM"
 

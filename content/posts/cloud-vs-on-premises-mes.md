@@ -15,7 +15,7 @@ It comes up in every evaluation. And the answer isn't as simple as some people m
 
 For most business software, a short outage is an inconvenience. For MES/MOM, it can stop production.
 
-Operators start and stop orders in it. Material can't be consumed without it. Labels can't be printed. Quality checks can't be recorded. So whatever model you choose, the question isn't just cost. It's what happens to the shopfloor if the connection, the server or the service goes down.
+Operators start and stop orders in it. Material can't be consumed without it. Labels can't be printed. Quality checks can't be recorded. So whatever model you choose, think about what happens to the shopfloor if the connection, the server or the service goes down.
 
 ## On-premises
 

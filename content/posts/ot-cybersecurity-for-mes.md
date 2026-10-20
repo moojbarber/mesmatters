@@ -11,7 +11,7 @@ MES/MOM sits in an awkward place for security. It talks to ERP and the cloud on 
 
 Security used to be something IT handled and operations tolerated. That doesn't work any more. Ransomware has stopped production lines for days and weeks. When it happens, it's an operations problem, with an operations-sized bill.
 
-I'm not a security specialist, and you'll need one. But here's what I think every operations and digital leader should understand.
+I'm not a security specialist, and you'll need one. But there are a few things I think every operations and digital leader should understand.
 
 ## IT and OT are different
 

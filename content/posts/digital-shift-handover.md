@@ -57,7 +57,7 @@ A free-text box on a screen is barely better than a logbook. Structure is what m
 - Open actions carried forward until someone closes them
 - Links straight to the order, stop or inspection being discussed
 
-That last one matters. "See the stop at 02:14 on Line 3" is far more useful when the incoming supervisor can tap it and see the detail.
+"See the stop at 02:14 on Line 3" is far more useful when the incoming supervisor can tap it and see the detail.
 
 ## Why it belongs inside MES/MOM
 

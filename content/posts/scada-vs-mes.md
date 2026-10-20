@@ -40,7 +40,7 @@ The benefits of rationalising:
 
 In heavier process industries, SCADA usually stays. Think continuous chemical processes, utilities, complex batch control or anything with safety-critical control loops. There, SCADA and the control layer are doing real-time control that MES/MOM isn't designed for.
 
-In that case, the key is the boundary. SCADA controls the process. MES/MOM manages the operation, receiving the data it needs from the control layer and sending down orders, recipes and parameters where appropriate.
+In that case, get the boundary clear. SCADA controls the process. MES/MOM manages the operation, receiving the data it needs from the control layer and sending down orders, recipes and parameters where appropriate.
 
 ## How to decide
 

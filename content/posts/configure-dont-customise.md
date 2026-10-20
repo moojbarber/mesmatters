@@ -7,7 +7,7 @@ category: advice
 art: hexcore
 ---
 
-Here's the confusion I see every day when people talk about MES customisation.
+I see the same confusion every day when people talk about MES customisation.
 
 Everyone wants a system that "fits our processes". Vendors say their product is "fully flexible". And nobody defines what they mean. So let me break it down.
 

@@ -11,7 +11,7 @@ Your IT landscape isn't, and shouldn't be, a single system.
 
 A smart factory runs on several applications working together. The skill is knowing what each one is for, where the boundaries sit, and when you actually need it. Get that wrong and you either over-buy or stretch a system into a job it was never designed for.
 
-Here's the stack, layer by layer.
+Let's go through it layer by layer.
 
 ## The enterprise layer
 
@@ -71,7 +71,7 @@ For every system in your landscape, ask:
 - Where exactly is the boundary, and what data crosses it, how often, at what level of detail?
 - Who uses it, and how many applications will they need to open to do their job?
 
-That last question is the one most people skip. Every boundary you add is an integration to build and maintain, and often another screen for an operator.
+Don't skip that last question. Every boundary you add is an integration to build and maintain, and often another screen for an operator.
 
 It's not a one-size-fits-all approach. It changes with your processes, your scale and your budget. But it pays to make long-term, deliberate decisions and pick applications that will grow with you.
 

@@ -36,7 +36,7 @@ Why does it matter?
 - Agents can discover and use tools in connected systems without everything being hard-coded in advance.
 - The system stays in control of what's exposed, so you decide which data and actions an agent can reach.
 
-Put simply, MCP is the interoperability layer that lets agents work in real, messy IT landscapes. Which, if you've ever looked at a factory's application landscape, is exactly what's needed.
+MCP is the interoperability layer that lets agents work in real, messy IT landscapes. Which, if you've ever looked at a factory's application landscape, is exactly what's needed.
 
 ## What could agents do on the shopfloor?
 
@@ -62,7 +62,7 @@ That's why agentic operations sit at the very top of the [maturity model](/post/
 - **Systems that enforce rules.** If an agent tries to consume a quarantined lot, the operational system should stop it, just as it would stop a person.
 - **Clear guardrails and audit trails.** What the agent may do on its own, what needs approval, and a record of every action it took and why.
 
-That third point is underrated. A well-implemented MES/MOM already error-proofs what people do. The same validation protects you from what agents do.
+A well-implemented MES/MOM already error-proofs what people do. The same validation protects you from what agents do.
 
 ## My advice
 

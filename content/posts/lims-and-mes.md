@@ -35,7 +35,7 @@ The two meet at the sample.
 3. **Results come back.** Pass, fail or out-of-spec values flow back to MES/MOM against the batch and phase.
 4. **MES/MOM acts.** A pass releases the next step. A fail holds the batch, or triggers an adjustment such as adding more of an ingredient, then a re-sample.
 
-The key is that the sample is born with its context. If the lab has to type in the batch number from a handwritten label, you've lost both time and traceability.
+The sample needs to be born with its context. If the lab has to type in the batch number from a handwritten label, you've lost both time and traceability.
 
 ## Where ERP fits
 

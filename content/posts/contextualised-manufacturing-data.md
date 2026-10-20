@@ -23,7 +23,7 @@ A signal that says "machine stopped" tells you nothing useful. When did it stop?
 
 ## Context turns a signal into something you can act on
 
-Here's the same event, contextualised:
+The same event, contextualised:
 
 > Machine 3 on Line 7 stopped at 14:23 during production order 4521, while making material X, on shift B. The stop lasted 12 minutes. The reason was a jam at station 2. It's the third time that reason has occurred in 48 hours.
 

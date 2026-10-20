@@ -11,11 +11,11 @@ Industry 4.0. Smart manufacturing. The digital factory. The connected enterprise
 
 I genuinely saw "Industry 6.0" on LinkedIn recently, and it made my blood boil. We shouldn't need a version number to describe something's value. We should be able to say what it actually does.
 
-So, labels aside, here's the definition I use.
+So, labels aside, this is the definition I use.
 
 > A smart factory is a manufacturing environment where people, processes and technology work together, supported by data, to maximise efficiency, flexibility and quality.
 
-That's it. No magic. No science fiction. The right information reaches the right person at the right time, and decisions are based on facts rather than gut feel.
+No magic, and no science fiction. The right information reaches the right person at the right time, and decisions are based on facts rather than gut feel.
 
 ## Why the old way is breaking
 
@@ -45,7 +45,7 @@ Notice that only one of those five is really about technology. That's deliberate
 
 ## A smart factory doesn't reduce complexity
 
-This is the bit people miss.
+I think this gets overlooked.
 
 A smart factory doesn't make manufacturing simpler. The complexity is what it is. What it does is increase your capacity to handle it. Those five things create coordination capacity the informal model never had.
 

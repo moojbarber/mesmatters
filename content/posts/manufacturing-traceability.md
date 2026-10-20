@@ -51,7 +51,7 @@ With order-level ERP traceability, you know which orders might be affected. You 
 
 With full traceability, you trace the affected lot forwards in minutes, identify exactly which finished products contain it, check their inspection results and process conditions, and quarantine only what's genuinely at risk.
 
-The difference isn't just speed. It's how much good product you destroy, how much customer trust you keep, and how confident you are in front of a regulator.
+Speed is only part of it. The bigger differences are how much good product you destroy, how much customer trust you keep, and how confident you are in front of a regulator.
 
 ## Inventory and quality on the same data
 

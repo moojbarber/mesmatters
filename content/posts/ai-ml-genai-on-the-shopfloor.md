@@ -55,7 +55,7 @@ It's exciting. It's also the top of the maturity curve, because an agent acting 
 
 ## What all three need
 
-Here's the common thread. Every one of these depends on data. Good, granular, contextualised data, collected over time.
+Every one of these depends on data. Good, granular, contextualised data, collected over time.
 
 ML can't learn patterns from shift totals typed in at 6am. GenAI can't summarise a shift accurately if the shift's data is scattered across paper, Excel and three systems. An agent can't safely act on information it can't trust.
 

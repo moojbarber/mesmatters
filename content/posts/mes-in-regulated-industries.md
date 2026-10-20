@@ -11,7 +11,7 @@ In some industries, making a good product isn't enough. You have to *prove* you 
 
 That changes what you need from MES/MOM. The core functions are the same: orders, materials, quality, equipment, people. But the evidence requirements are much stricter, and the cost of getting it wrong is a recall or a regulator's warning letter.
 
-Here's how four regulated sectors shape MES/MOM. I covered food separately in [The biggest barriers to MES success in food manufacturing](/post/food-manufacturing-mes-barriers).
+Four regulated sectors, and how each shapes MES/MOM. I covered food separately in [The biggest barriers to MES success in food manufacturing](/post/food-manufacturing-mes-barriers).
 
 ## Pharmaceuticals and biotech
 
