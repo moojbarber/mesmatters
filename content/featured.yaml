@@ -1,0 +1,146 @@
+# Where Matt has been featured. Newest first. Shown on /featured and in the
+# "As featured in" strip on the home page.
+#
+# type: podcast | article | webinar        role: Guest | Quoted | Speaker | Profiled
+# link kinds: youtube, spotify, apple, transcript, read, episode, event
+# A link with `show: true` goes to the show's page rather than the episode itself.
+
+carousel:   # order of the home-page "Featured in" carousel (image ids)
+  - itot-insider
+  - arc
+  - unplugged
+  - elevatiq-panel
+  - factory-forward
+  - messy-mondays
+  - md-lifetime
+  - md-deep-dive
+  - manufacturing-it
+
+items:
+  - title: How MES transforms manufacturing operations and slashes costs
+    image: unplugged
+    label: Podcast
+    outlet: Unplugged IIoT
+    card_outlet: "Unplugged: An IIoT Podcast"
+    show: "Unplugged: An IIoT Podcast · Episode 38"
+    type: podcast
+    role: Guest
+    date: 2025-12-02
+    with: Hosts Phil Seboa and Ed Fuentes (Industry Sage Media)
+    blurb: A conversation on what MES really does on the shopfloor, where the savings come from, and how manufacturers can get started without over-complicating it.
+    links:
+      - {kind: apple, url: "https://podcasts.apple.com/gb/podcast/38-how-m-e-s-transforms-manufacturing-operations-and/id1754213670?i=1000739300343"}
+      - {kind: episode, url: "https://www.industrysagemedia.com/matt-barber"}
+
+  - title: MES strategy for unifying ERP, the shopfloor and AI
+    image: elevatiq-panel
+    label: Webinar and podcast
+    outlet: ElevatIQ
+    card_outlet: ElevatIQ, also on WBSRocks
+    show: ElevatIQ webinar, also released as WBSRocks podcast episode 910
+    type: webinar
+    role: Speaker
+    date: 2026-05-28
+    with: Panel with Jan Burian (ARC Advisory Group), hosted by Sam Gupta (ElevatIQ)
+    blurb: A live panel on how manufacturers can connect ERP, shopfloor execution and AI into one operating model.
+    links:
+      - {kind: apple, url: "https://podcasts.apple.com/gb/podcast/wbsp910-scale-growth-by-understanding-infor-mes-strategy/id1544644166?i=1000791552457", show: false}
+      - {kind: event, url: "https://www.elevatiq.com/events-and-webinars/infor-mes-strategy-unifying-erp-shop-floor-and-ai-for-manufacturing-operations/"}
+
+  - title: "From visibility to predictability: MES on the ground"
+    image: arc
+    label: Analyst feature
+    outlet: ARC Advisory Group
+    show: ARC Industry Best Practices
+    type: article
+    role: Quoted
+    date: 2026-06-01
+    date_label: 2026
+    with: By Jan Burian, Research Director, ARC Advisory Group
+    blurb: ARC's view on why manufacturers need to move from seeing problems to anticipating them, drawing on a joint webinar.
+    quote: By the time an issue appears on a dashboard, the opportunity to prevent it has often passed.
+    links:
+      - {kind: read, url: "https://www.arcweb.com/industry-best-practices/visibility-predictability-mes-ground"}
+
+  - title: MES Matters with Matt Barber
+    image: itot-insider
+    label: Podcast
+    outlet: IT/OT Insider
+    card_outlet: The IT/OT Insider Podcast
+    show: "The IT/OT Insider Podcast: Pioneers & Pathfinders"
+    type: podcast
+    role: Guest
+    date: 2025-04-29
+    blurb: How MES differs from MOM, how to get started with MES, and how the market, change management and industrial data platforms are evolving.
+    links:
+      - {kind: youtube, url: "https://www.youtube.com/watch?v=jJ45xRV6flk"}
+      - {kind: spotify, url: "https://open.spotify.com/episode/5gtBTBx2OyqxKs7C1EKSuW"}
+      - {kind: transcript, url: "https://itotinsider.com/podcast-transcript/mes-matters-with-matt-barber/"}
+      - {kind: read, url: "https://itotinsider.substack.com/p/mes-matters-with-matt-barber", label: Episode recap}
+
+  - title: Why MES is the backbone of smart manufacturing
+    image: factory-forward
+    label: Podcast
+    outlet: Factory Forward
+    show: "Factory Forward (Retrocausal) · Season 2, Episode 4"
+    type: podcast
+    role: Guest
+    date: 2025-03-27
+    with: Host Zeeshan Zia, CEO of Retrocausal
+    blurb: MES versus ERP, cloud MES, where AI fits in MES, designing for operators, and building the right team for implementation.
+    links:
+      - {kind: youtube, url: "https://www.youtube.com/watch?v=b4wTA0m2428"}
+      - {kind: episode, url: "https://retrocausal.ai/podcast/s2e4-why-mes-is-the-backbone-of-smart-manufacturing-mes-vs-erp-explained-real-world-roi/"}
+
+  - title: "Lifetime of achievement: Matt Barber"
+    image: md-lifetime
+    label: Profile
+    outlet: Manufacturing Digital
+    show: Manufacturing Digital magazine
+    type: article
+    role: Profiled
+    date: 2024-04-03
+    with: By Helen Sydney Adams
+    blurb: A profile of Matt's path from MES developer to running a global MES business, and his work educating the industry on MES.
+    quote: MES is emerging as the ideal repository for this valuable information.
+    links:
+      - {kind: read, url: "https://manufacturingdigital.com/articles/lifetime-of-achievement-matt-barber"}
+
+  - title: A deep dive into MES functionality
+    image: md-deep-dive
+    label: Interview
+    outlet: Manufacturing Digital
+    show: Manufacturing Digital magazine
+    type: article
+    role: Quoted
+    date: 2024-02-26
+    with: By Helen Sydney Adams
+    blurb: How MES and ERP complement each other in the smart factory, and why MES should be designed around the people on the shopfloor.
+    links:
+      - {kind: read, url: "https://manufacturingdigital.com/smart-manufacturing/a-deep-dive-into-mes-functionality-at-infor"}
+
+  - title: "MESsy Mondays #001: Matt Barber"
+    image: messy-mondays
+    label: Video interview
+    outlet: MESsy Mondays
+    show: MESsy Mondays with Kunal Wagh · Episode 1
+    type: podcast
+    role: Guest
+    date: 2025-01-06
+    with: Host Kunal Wagh
+    blurb: The first episode of the series, on educating the industry about MES and its role in smart manufacturing, Industry 4.0 and sustainability.
+    links:
+      - {kind: youtube, url: "https://www.youtube.com/watch?v=gt7Rv8z5Yh8"}
+
+  - title: Interview with Matt Barber
+    image: manufacturing-it
+    label: Podcast
+    outlet: The Manufacturing IT Podcast
+    show: The Manufacturing IT Podcast
+    type: podcast
+    role: Guest
+    date: 2024-02-08
+    blurb: Fifteen years in MES, from code to running the business, and why educating the industry about MES and smart manufacturing matters.
+    links:
+      - {kind: apple, url: "https://podcasts.apple.com/gb/podcast/podcast-interview-with-matt-barber-vp-and-general/id1571505095?i=1000644631030"}
+      - {kind: spotify, url: "https://creators.spotify.com/pod/profile/manufacturingitpodcast/episodes/Podcast-interview-with-Matt-Barber--VP-and-General-Manager-of-MES-at-Infor-e2fh79n"}

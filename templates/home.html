@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import card, hero_bg, cta %}
+{% from "macros.html" import card, hero_bg, cta, coverflow %}
 {% block main %}
 <section class="hero home-hero">
   {{ hero_bg() }}
@@ -13,15 +13,7 @@
         <a class="btn ghost" href="{{ base }}/articles">Browse all {{ posts|length }} articles</a>
       </div>
     </div>
-    <a class="feature-card" href="{{ base }}/post/{{ start[0].slug }}">
-      <img src="{{ base }}/images/art/{{ start[0].slug }}.svg" alt="" width="1600" height="900">
-      <div class="fc-body">
-        <span class="micro">Start with the foundations · {{ start[0].read_time }} min read</span>
-        <h3>{{ start[0].short }}</h3>
-        <p>{{ start[0].description }}</p>
-      </div>
-      <span class="go" aria-hidden="true">→</span>
-    </a>
+    {{ coverflow(base, featured_carousel) }}
   </div>
 </section>
 
@@ -98,7 +90,7 @@
         <span class="micro">Matt Barber</span>
         <h3>From MES developer to running a global MES business</h3>
         <p>I started out writing code and integrations for MES projects, moved into project delivery and solution design, then ran product. Today I'm VP &amp; General Manager for MES at Infor. This is where I write about what the smart factory and shopfloor AI really take, and why the foundations matter more than the hype.</p>
-        <div class="links"><a class="btn sm" href="{{ base }}/about">More about me</a><a class="btn ghost sm" href="{{ linkedin }}" target="_blank" rel="me noopener">LinkedIn</a></div>
+        <div class="links"><a class="btn sm" href="{{ base }}/about">More about me</a><a class="btn ghost sm" href="{{ base }}/featured">Podcasts and press</a><a class="btn ghost sm" href="{{ linkedin }}" target="_blank" rel="me noopener">LinkedIn</a></div>
       </div>
     </div>
   </section>
