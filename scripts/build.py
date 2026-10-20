@@ -61,6 +61,7 @@ REDIRECTS = {
     "blog": "/articles",
     "challenges": "/articles",
     "post/introduction-to-mes-and-smart-manufacturing": "/post/what-is-a-smart-factory",
+    "post/mes-is-a-digital-twin": "/post/mes-and-digital-twins",
 }
 
 

@@ -30,9 +30,9 @@ Generative AI creates text and answers. Its sweet spot is helping people, not co
 
 Agentic AI plans and carries out tasks through other software. Exciting, and the top of the maturity curve.
 
-The common thread is data. ML can't learn from shift totals typed in at 6am. GenAI can't summarise a shift scattered across paper and Excel.
+The common thread is data, but not always the same data. ML learns from your own history, so it can't learn from shift totals typed in at 6am. GenAI arrives already trained, so it can start now on your procedures, manuals and maintenance notes, however messy. It just can't summarise a shift scattered across paper and Excel.
 
-That's why I keep saying AI is the last step, not the first.
+So for AI that predicts, optimises or acts, the data foundation comes first. For GenAI on your documents and know-how, start now, in parallel.
 
 Full article in the first comment.
 
@@ -42,17 +42,17 @@ x=["AI, ML and GenAI get used interchangeably. They shouldn't be, especially if 
    "Machine learning predicts outcomes from your operational data.\n\nPredictive maintenance, predictive quality, anomaly detection, vision inspection. You train it and test it before you trust it.",
    "Generative AI creates text and answers.\n\nIts sweet spot is helping people, not controlling machines.",
    "Agentic AI plans and carries out tasks through other software.\n\nExciting. Also the top of the maturity curve.",
-   "The common thread is data. ML can't learn from shift totals typed in at 6am.\n\nAI is the last step, not the first.",
+   "The common thread is data. ML can't learn from shift totals typed in at 6am.\n\nGenAI can start sooner on your documents. Predictive AI needs the foundation first.",
    "Full article: "+URL+"?utm_source=x&utm_medium=social"],
 ig_format="Carousel, 7 slides",
 slides=[("cover","AI, ML and GenAI are not the same thing","What each one actually does on the shopfloor"),
         ("point","Machine learning","Predicts outcomes from your data: maintenance, quality, anomalies and defects."),
         ("point","Generative AI","Creates text and answers. Helps people, doesn't control machines."),
         ("point","Agentic AI","Plans and carries out tasks through other software. The top of the maturity curve."),
-        ("point","What they all need","Good, granular, contextualised data, collected over time."),
-        ("quote","AI is the last step, not the first.",""),
+        ("point","What they need","ML and agents need good operational data. GenAI can start on your documents now."),
+        ("quote","Predictive AI needs the foundation first. GenAI can start alongside it.",""),
         ("cta","Read the full article","Link in bio · shopfloormatters.com")],
-ig="AI, ML and GenAI get used as if they mean the same thing. They don't. What each one does in a factory, and what all of them need first.\n\nFull article: link in bio.\n\n"+IGTAGS),
+ig="AI, ML and GenAI get used as if they mean the same thing. They don't. What each one does in a factory, and what each of them needs.\n\nFull article: link in bio.\n\n"+IGTAGS),
 dict(id="w3-thu",day="Thu 12 Nov",type="Poll",title="Which AI use case would you fund first?",
 li="""If you had budget for one AI project on the shopfloor next year, which would it be?
 

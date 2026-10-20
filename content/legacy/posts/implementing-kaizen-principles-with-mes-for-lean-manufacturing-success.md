@@ -15,31 +15,28 @@ wordCount: 999
 
 Kaizen is a Japanese term that translates to "change for the better" or "continuous improvement." In the context of manufacturing, it refers to activities that continually improve all functions and involve all employees from the CEO to the assembly line workers. This philosophy is a core pillar of the Toyota Production System, which has influenced manufacturing practices globally.
 
-Many factories nowadays have a continuous improvement (CI) team responsible for evaluating an improving manufacturing processes, and guess what....using an MES helps! We will dive into exactly how MES helps later on.
+Many factories nowadays have a continuous improvement (CI) team responsible for evaluating and improving manufacturing processes, and guess what....using an MES helps! Here's how.
 
 #### Origins of Kaizen
 
-The concept of Kaizen was born in Japan following World War II. The term was coined by Toyota as a fundamental part of their production system. The Toyota Production System, often referred to as "Lean Manufacturing," aimed to eliminate waste and inefficiency in production processes. Kaizen was the method by which continuous, incremental improvements could be made.
+"Kaizen" is an everyday Japanese word for improvement. Its use as a management philosophy grew out of post-war Japanese industry, helped along by the US Training Within Industry (TWI) programmes introduced in the late 1940s and 1950s, and was refined most famously inside the Toyota Production System.
 
-While Kaizen originated in Japan, its principles have been adopted by businesses worldwide. It is now a common practice in industries ranging from healthcare to logistics, and from software development to education.
+The idea reached a wide Western audience through Masaaki Imai's 1986 book *Kaizen: The Key to Japan's Competitive Success*. A few years later, Western researchers coined the term "Lean" to describe the Toyota approach, popularised by *The Machine That Changed the World* in 1990.
 
-#### Principles of Kaizen
+While Kaizen originated in Japanese manufacturing, its principles have been adopted far beyond it, from healthcare to logistics and software development.
 
-Kaizen is based on five fundamental principles:
+#### The core ideas of Kaizen
 
-1. Teamwork
-2. Personal discipline
-3. Improved morale
-4. Quality circles
-5. Suggestions for improvement.
+You'll see various lists of "Kaizen principles" online. The ideas that turn up consistently in the original sources are these:
 
-These principles are designed to create a productive work environment where all employees are actively engaged in improving the company, or manufacturing process.
+1. **Continuous improvement and respect for people.** Toyota describes these as the two pillars of the Toyota Way. Improvement never stops, and it's done with the people who do the work, not to them.
+2. **Small steps, by everyone.** Lots of small, low-cost improvements, made continually by people at every level, rather than waiting for the big project.
+3. **Go to the gemba.** The gemba is where the work happens. Problems are understood by going to see them on the shopfloor, not from a report in an office.
+4. **Standardise, then improve.** A saying often repeated in Lean circles: without a standard, there can be no Kaizen. You need a stable, documented way of working to measure an improvement against.
+5. **Eliminate waste.** Muda, the Japanese word for waste, covers anything that doesn't add value for the customer: waiting, defects, overproduction, excess movement and inventory, among others.
+6. **Plan, do, check, act (PDCA).** The improvement cycle: plan a change, try it, check the result, then standardise it or try again.
 
-Teamwork is crucial as Kaizen believes that the collective efforts of all employees (not just those in managerial or supervisory roles) can lead to significant improvements. Personal discipline, on the other hand, is necessary for maintaining a commitment to these continuous improvements.
-
-Improved morale and quality circles are related. By involving all employees in improvement activities, companies can boost morale and create a sense of ownership. Quality circles are small groups of employees who meet regularly to discuss and solve work-related problems.
-
-The last principle, suggestions for improvement, encourages all employees to contribute ideas for bettering the company's processes, products, or services. These suggestions are valued, regardless of how small they may seem.
+Quality circles and suggestion systems are two of the classic mechanisms for making this happen. Small teams meet regularly to solve problems in their own area, and everyone is encouraged to put forward ideas, however small.
 
 Everyone has a voice, which makes Kaizen incredibly powerful when implemented correctly.
 

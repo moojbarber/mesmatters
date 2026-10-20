@@ -59,7 +59,14 @@ This has enormous benefits, such as simpler ERP deployments, roll-out, and a low
 
 One of the main reasons behind this shift is the increasing complexity of business processes. As companies grow and expand, their operations become more intricate and require specialised software solutions to handle specific tasks. ERP's broad scope is its great strength, but it's hard for any one system to go deep in every specialist area as those needs evolve. By focusing on their core functions, ERP systems can become more agile and flexible. They can adapt to changing business requirements more easily and focus more on user experience. This is particularly important in industries where agility and responsiveness are critical, such as manufacturing and supply chain management.
 
-This shift allows companies to take advantage of the best-of-breed approach. Instead of relying on a single ERP to handle all their business processes, companies can select the most suitable software solutions for each specific task. This not only improves overall efficiency but also allows for greater customisation and specialisation. Having said that, choosing to implement ERP and MES from the same vendor brings enormous benefits, not least standard integrations. Integrations often add complexity and risk. When one vendor owns both sides, they own the integration too. That typically costs less to implement and maintain, and it takes a lot of risk out of the project.
+This shift allows companies to take advantage of the best-of-breed approach. Instead of relying on a single ERP to handle all their business processes, companies can select the most suitable software solutions for each specific task. This not only improves overall efficiency but also allows for greater customisation and specialisation. Very few vendors offer both a strong ERP and a strong MES/MOM, and plenty of manufacturers successfully run ERP from one vendor and MES/MOM from another. Whichever route you take, go in with your eyes open about the integration between them, because that's where much of the risk sits:
+
+- **Building and maintaining the interface.** Orders, master data, confirmations, consumption and stock movements all have to flow reliably, in both directions, for years.
+- **Upgrades.** Every upgrade on either side means retesting the integration, and the two roadmaps won't always line up.
+- **Ownership when something breaks.** When a confirmation goes missing, someone has to own the problem end to end, rather than each side pointing at the other.
+- **Master data alignment.** Materials, BOMs, routings and units of measure have to mean the same thing in both systems.
+
+Where one vendor does offer both, standard integrations can take a lot of that cost and risk away. Where they don't, a well-designed integration, standard interfaces and an experienced integration partner do the same job. Choose the shopfloor application on its own merits first, then weigh up the integration.
 
 The retraction of ERP to its core functions is a natural response to the increasing complexity of business processes and the increased prevalence of specialised software solutions.
 

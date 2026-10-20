@@ -14,7 +14,7 @@ I've sat through countless conferences where everyone is obsessed with AI. Then 
 
 Think about ChatGPT, Claude or Gemini for a moment. The models are remarkable. But they learned from the internet: decades of text, data and knowledge that people put online. Take the internet away and the most advanced model in the world has nothing to learn from. It's redundant.
 
-Your factory works the same way. Shopfloor data is your factory's internet. AI is the technology that sits on top of it. Without the data, there's nothing for AI to work with.
+Your factory works the same way. Shopfloor data is your factory's internet. AI is the technology that sits on top of it. Without that data, AI can tell you a lot about factories in general, and very little about yours.
 
 So let me put my position plainly. AI won't fix your factory. Your data foundation makes it possible. And then AI will make it much, much better.
 
@@ -76,15 +76,39 @@ The newer applications are real too. The technology behind them is ready. What's
 
 Each of these depends on the same thing. Good data, collected over time, with context.
 
-## You can't skip the steps
+## Where generative AI doesn't have to wait
+
+Everything above is about AI that learns from your operational data: predicting failures, optimising parameters, spotting anomalies. That kind of AI really does need the foundation first.
+
+Generative AI is different, and it's worth being precise about why.
+
+Large language models arrive already trained. They learned language, and a surprising amount about engineering and manufacturing, before they ever reach your factory. So they don't need years of your own data to be useful. And they work on the kind of information every factory has in abundance, however messy: SOPs, work instructions, equipment manuals, maintenance work orders, free-text downtime comments, shift logs, quality reports, supplier certificates, emails.
+
+Here's how they get value from it:
+
+- **Search with understanding.** Documents are split into passages and indexed by meaning, not just keywords. When someone asks "how do we clear a jam on the capper?", the system retrieves the most relevant passages and the model answers from them, with a link back to the source. This is usually called retrieval-augmented generation (RAG). It works on documents as they are today.
+- **Turning text into data.** A model can read ten years of free-text maintenance notes and pull out the asset, the failure mode, the part replaced and the likely cause. Or classify thousands of operator comments into consistent downtime reasons. That turns messy history into structured data you can analyse, and it helps build the foundation rather than waiting for it.
+- **Reading what was never digital.** Photos of handwritten logbooks, scanned travellers and paper checklists can be read and digitised.
+- **Asking questions of the data you do have.** Even a partial data set becomes more useful when people can ask about it in plain English instead of waiting for a report.
+
+So GenAI pilots can, and often should, run alongside the foundation work rather than after it. Aim them at knowledge problems: finding answers in manuals, troubleshooting from maintenance history, drafting reports, onboarding new starters.
+
+Be clear about the limits, though:
+
+- **It can't recover what was never captured.** If nobody recorded the three-second stops, no model will find them.
+- **It's only as current as its sources.** Index the 2019 version of an SOP and it will confidently give you the 2019 answer.
+- **It can sound right and be wrong.** Ground every answer in your own documents, show the source, and keep a person reviewing anything that matters.
+- **Acting is different from answering.** The moment AI starts recommending or taking actions on live operations, the quality, timeliness and context of the operational data matter again, and so do guardrails.
+
+## You can't skip the steps for operational AI
 
 Everyone wants to be at the top of the [maturity model](/post/smart-manufacturing-maturity-model). Predictive, autonomous, AI-enabled. Very few are.
 
-Most manufacturers I speak to are somewhere between paper-based and partially digital. That's not a criticism. It's a starting point. But the path to AI goes through the middle, not around it.
+Most manufacturers I speak to are somewhere between paper-based and partially digital. That's not a criticism. It's a starting point. For AI that predicts and optimises operations, the path goes through the middle, not around it.
 
 Get the processes defined. Put MES/MOM on the shopfloor. Connect the equipment. Build up clean, contextualised data. Then point AI at the problems that matter most.
 
-Do it in that order and AI amplifies everything you've built. Skip the steps and you'll be back at the start in two years, with a very expensive pilot to explain.
+Do it in that order and AI amplifies everything you've built. Run GenAI pilots on your documents and know-how in parallel, so people see value early and you learn what works. But skip the foundation for operational AI and you'll be back at the start in two years, with a very expensive pilot to explain.
 
 ## So where should you start?
 

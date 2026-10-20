@@ -153,11 +153,9 @@ Tracking inventory movements in real-time allows manufacturers to optimise stock
 
 Inventory in the production area should always be managed in an MES if you have one. MES has the context of the production order, the material being made, and the bill of materials. This allows MES to consume inventory into the process, create new inventory and print labels, track traceability at a detailed inventory level.
 
-ERP is a mature market, and a lot of people know about ERP. MES is on a trajectory as a rapidly growing market, it's exciting, but it means true knowledge on how these systems play together is limited.
+Where to draw the boundary between ERP and MES for inventory is one of the most debated design decisions in any project, and there's no single right answer for every factory.
 
-Sometimes this can lead to misunderstandings around where the ERP/MES boundaries can be drawn, even from experienced consultants.
-
-You may hear people say things like "ERP is the master of Inventory, and should be responsible for all Inventory transactions, even on the shopfloor in ERP". I'd urge some caution here.
+A common starting position is "ERP is the master of inventory, so all inventory transactions should happen in ERP, including on the shopfloor." It's a reasonable principle. It's worth being precise about what "master" means, though.
 
 ERP can, and usually should, be the master of inventory at an aggregated level: stock by material and by warehouse, valued for the balance sheet. But the shopfloor needs a much finer level of detail. Individual lots and containers, exact locations, quality status, and what was consumed into which order and when. That level of detail is best captured and managed in real time by operational applications like MES/MOM or a WMS, which keep ERP updated with the totals it needs.
 

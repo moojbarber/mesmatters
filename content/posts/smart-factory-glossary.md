@@ -21,7 +21,7 @@ Manufacturing is full of jargon. This glossary explains the terms you'll hear mo
 | CMMS | Computerised maintenance management system | Software for managing maintenance work orders, schedules and spare parts. |
 | Connected worker | | Digital tools that connect frontline workers to the information, instructions and tasks they need. See [Connected worker](/post/connected-worker-one-app-not-five). |
 | Cpk | Process capability index | A measure of how well a process stays within its specification limits. |
-| Digital twin | | A virtual representation of a physical asset, process or factory, kept in sync with live data. See [Your MES is already a digital twin](/post/mes-is-a-digital-twin). |
+| Digital twin | | A virtual representation of a physical asset, process or factory, kept in sync with live data. MES/MOM is a key source of the real-time, contextualised data it needs. See [MES/MOM and digital twins](/post/mes-and-digital-twins). |
 | EAM | Enterprise asset management | Software for managing the full lifecycle of physical assets, usually across many sites. |
 | Edge | | Computing done close to the machines rather than in a central data centre or cloud. |
 | ERP | Enterprise resource planning | The system that runs the business: finance, procurement, sales, planning and costing. |

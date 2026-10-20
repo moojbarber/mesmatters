@@ -61,7 +61,7 @@ Yield is often the single biggest profit lever in food. A system that shows you 
 
 ## Practical advice for anyone starting the journey
 
-**Assemble the team before you touch the technology.** You need an experienced project manager, operational subject matter experts, IT support, and an executive sponsor who will clear roadblocks. If you lack MES/MOM expertise internally, bring in someone practical and hands-on. Avoid people who thrive on theory. They'll only complicate proceedings.
+**Assemble the team before you touch the technology.** You need an experienced project manager, operational subject matter experts, IT support, and an executive sponsor who will clear roadblocks. If you lack MES/MOM expertise internally, bring in an experienced partner, ideally one who has delivered MES/MOM in food before. A good consultant or systems integrator shortens the learning curve enormously.
 
 **Define success early, and make it specific.** What does good look like after phase one? Scrap down by a set percentage? Batch release in hours rather than days? Digital traceability for every finished pallet? Allergen changeovers signed off digitally? Measure it, and use the system to capture the data that proves it. That evidence is what funds phase two.
 

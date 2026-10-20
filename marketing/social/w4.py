@@ -46,7 +46,7 @@ Level 5, Optimised: AI-enabled. Very few factories are genuinely here, whatever 
 
 In my experience most factories sit between Level 1 and Level 3. And the jump from 2 to 3 is usually the biggest step in value, because that's where data becomes trustworthy.
 
-It's also where AI finally has something to learn from.
+It's also where predictive and optimising AI finally has something to learn from. GenAI working on your procedures, manuals and maintenance notes can start sooner, alongside the foundation work.
 
 Full article in the first comment.
 
@@ -55,7 +55,7 @@ li_comment="Full article: "+URL+"?utm_source=linkedin&utm_medium=social",
 x=["You can't skip a level of smart manufacturing maturity. Plenty of factories are trying to.\n\nThe five levels:",
    "1 Initial: paper and whiteboards.\n2 Managed: a few digital tools that don't talk.\n3 Defined: integrated systems, automatic data capture.\n4 Quantified: a connected business.\n5 Optimised: AI-enabled.",
    "Most factories sit between Level 1 and Level 3.\n\nThe jump from 2 to 3 is usually the biggest step in value. It's where data becomes trustworthy.",
-   "It's also where AI finally has something to learn from.\n\nEveryone wants Level 5. The path goes through 3 and 4.",
+   "It's also where predictive AI finally has something to learn from. GenAI on your documents can start sooner.\n\nEveryone wants Level 5. The path goes through 3 and 4.",
    "Full article: "+URL+"?utm_source=x&utm_medium=social"],
 ig_format="Carousel, 9 slides",
 slides=[("cover","You can't skip a level","The smart manufacturing maturity model"),
@@ -65,9 +65,9 @@ slides=[("cover","You can't skip a level","The smart manufacturing maturity mode
         ("level","4","Quantified. A connected business. Maintenance scheduled by data."),
         ("level","5","Optimised. AI-enabled. Very few factories are really here."),
         ("point","Most factories are between 1 and 3","The jump from 2 to 3 is usually the biggest step in value."),
-        ("quote","AI starts paying back at Level 3.","That's where it finally has trustworthy data to learn from."),
+        ("quote","Predictive AI starts paying back at Level 3.","GenAI on your documents and know-how can start sooner."),
         ("cta","Read the full article","Link in bio · shopfloormatters.com")],
-ig="Five levels from paper to AI-enabled, and why there are no shortcuts. Where would you put your factory?\n\nFull article: link in bio.\n\n"+IGTAGS),
+ig="Five levels from paper to AI-enabled, and why there are no shortcuts for your data. Where would you put your factory?\n\nFull article: link in bio.\n\n"+IGTAGS),
 dict(id="w4-thu",day="Thu 19 Nov",type="Poll",title="What level is your factory at?",
 li="""Be honest. What maturity level is your factory at today?
 
@@ -87,18 +87,20 @@ ig_story="Is your factory still mostly on paper and spreadsheets?  Options: Yes 
 slides=[("quote","You can't plan a route if you're lying to yourself about the starting point.","shopfloormatters.com")],
 ig="Be honest: what level is your factory at? Vote in my story.\n\n"+IGTAGS),
 dict(id="w4-fri",day="Fri 20 Nov",type="Contrarian",title="A turbo on flat tyres",
-li="""Buying AI before you've fixed your data is like fitting a turbo to a car with flat tyres.
+li="""Buying predictive AI before you've fixed your data is like fitting a turbo to a car with flat tyres.
 
 It's an impressive purchase. It just won't get you anywhere faster.
 
 Every level of maturity builds on the one before. Skip a level and you usually end up paying twice: once for the shiny thing, and again for the foundations it needed.
 
+(GenAI on your documents and know-how is the exception. That can start now, alongside the tyres.)
+
 So the question I'd ask any leadership team is simple. Where would your money go further this year: the turbo, or the tyres?
 
 #ShopfloorAI #SmartManufacturing""",
-x=["Buying AI before you've fixed your data is like fitting a turbo to a car with flat tyres.\n\nImpressive purchase. Not much faster."],
+x=["Buying predictive AI before you've fixed your data is like fitting a turbo to a car with flat tyres.\n\nImpressive purchase. Not much faster."],
 ig_format="Carousel, 5 slides",
-slides=[("cover","Buying AI before fixing your data…","…is like fitting a turbo to a car with flat tyres."),
+slides=[("cover","Buying predictive AI before fixing your data…","…is like fitting a turbo to a car with flat tyres."),
         ("point","Impressive purchase","It just won't get you anywhere faster."),
         ("point","Each level builds on the last","Skip one and you pay twice: for the shiny thing, then the foundations."),
         ("point","Fix the tyres first","Automatic data capture, with context. Then the turbo is worth having."),

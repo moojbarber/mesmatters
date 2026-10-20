@@ -55,11 +55,15 @@ It's exciting. It's also the top of the maturity curve, because an agent acting 
 
 ## What all three need
 
-Every one of these depends on data. Good, granular, contextualised data, collected over time.
+Every one of these depends on data, but not always the same data, or at the same time.
 
-ML can't learn patterns from shift totals typed in at 6am. GenAI can't summarise a shift accurately if the shift's data is scattered across paper, Excel and three systems. An agent can't safely act on information it can't trust.
+ML learns from your own operational history, so it needs good, granular, contextualised data collected over time. It can't learn patterns from shift totals typed in at 6am.
 
-That's why I keep saying AI is the last step, not the first. On the shopfloor, [MES/MOM](/post/what-is-mes-and-why-is-it-important-in-manufacturing) is where most of that data is created and given its context: which order, which material, which machine, which shift, and why.
+GenAI arrives already trained, so it can start earlier. It works well on the documents and know-how you already have, however messy: procedures, manuals, maintenance notes, shift logs. It can even help clean that history up, for example by classifying years of free-text downtime comments into consistent reasons. But when you ask it about live operations, it can't summarise a shift accurately if the shift's data is scattered across paper, Excel and three systems.
+
+An agent can't safely act on information it can't trust.
+
+So for AI that predicts, optimises or acts, the data foundation comes first. For GenAI on documents and knowledge, you can start now, in parallel. On the shopfloor, [MES/MOM](/post/what-is-mes-and-why-is-it-important-in-manufacturing) is where most of that data is created and given its context: which order, which material, which machine, which shift, and why.
 
 ## A practical way to start
 

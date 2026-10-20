@@ -32,7 +32,7 @@ Warehouse management can be handled in one of three systems:
 2. **WMS -** Warehouse Management System
 3. **MES -** Manufacturing Execution System
 
-Each of these approaches has positives and negatives, and it's important to consider what works best for your factory, I can not stress strongly enough that it is not a one-size-fits-all approach. You need to approach this modelling challenge with an open mind, and ensure anyone you take advice from understands the pros and cons of each solution. I come from a world of MES, but I often recommend ERP or WMS for warehousing depending on the customer situation, be wary of people who aren't able to express the benefits of each approach.
+Each of these approaches has positives and negatives, and it's important to consider what works best for your factory, I can not stress strongly enough that it is not a one-size-fits-all approach. You need to approach this modelling challenge with an open mind, and ensure anyone you take advice from understands the pros and cons of each solution. I come from a world of MES, but I often recommend ERP or WMS for warehousing depending on the customer situation. The best advisers I've worked with lay out the strengths of each option before they recommend one.
 
 |  |  |  |
 | --- | --- | --- |

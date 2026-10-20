@@ -50,7 +50,7 @@ My advice:
 - **Think about future needs** at the level of platform capability, not detailed features.
 - **Base it on your process maps.** If you've done the work in [Process before technology](/post/manufacturing-process-mapping), your requirements will be specific and vendors can answer properly.
 
-Going overboard makes it harder for everyone, gives you misleading answers, and slows the whole process down. If you're using consultants to write the RFP, be cautious. Some, not all, go overboard to demonstrate their knowledge.
+Going overboard makes it harder for everyone, gives you misleading answers, and slows the whole process down. If you're working with an adviser or systems integrator on the RFP, use their experience to keep it focused. The good ones have seen hundreds of these, and they know which requirements genuinely separate one platform from another.
 
 ## See it, don't read about it
 

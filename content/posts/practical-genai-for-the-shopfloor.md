@@ -53,6 +53,8 @@ Every one of these depends on the same thing: the AI has to have access to good,
 
 A report on OEE trends is only as accurate as the downtime data behind it. A shift summary is only useful if the shift's activity was captured in a system, not on paper. A knowledge assistant needs current procedures, not the version from three years ago on a shared drive.
 
+The good news is that you don't have to wait for perfect data to start. A knowledge assistant works on the documents you have today, as long as you point it at the current versions. GenAI can read and structure messy history too, such as free-text maintenance notes or scanned logbooks, which makes your data better rather than waiting for it. The shift summaries and the questions about live performance are where the operational data foundation really matters.
+
 That's why GenAI built into, or connected to, your [MES/MOM](/post/what-is-mes-and-why-is-it-important-in-manufacturing) is far more useful than a general chatbot. It has the context: which order, which line, which material, which shift.
 
 ## A word of caution

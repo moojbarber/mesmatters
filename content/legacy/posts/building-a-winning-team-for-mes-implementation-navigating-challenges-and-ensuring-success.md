@@ -71,7 +71,7 @@ Be in no doubt that the MES project manager role is a complex and challenging on
 
 An often overlooked aspect of building an MES implementation team is leveraging internal expertise and knowledge. Organisations often have employees who possess a wealth of knowledge and experience in the manufacturing processes, particularly operations people working on the shop floor. It's crucial to spend time with these people, and transfer as much knowledge as possible.
 
-Identify these individuals and encourage their active involvement in the implementation process. By doing so, you not only tap into their process expertise but also boost employee morale and engagement. Using internal resources can also reduce costs associated with external consultants, making the implementation more cost-effective.
+Identify these individuals and encourage their active involvement in the implementation process. By doing so, you not only tap into their process expertise but also boost employee morale and engagement. It also lets your external partners focus their time where their expertise adds the most.
 
 These people don't necessarily need to be part of the core team, but involve them when necessary, especially when discussing the manufacturing processes, and let them know they can come to you with any queries, questions, or suggestions.
 
@@ -81,7 +81,7 @@ Although internal expertise is valuable, there are situations where seeking exte
 
 If you lack MES knowledge and expertise within the business then you probably want to consider hiring in an expert, or partnering with a consulting company. External consultants bring a fresh perspective and specialised knowledge to the team.
 
-When selecting external consultants, ensure that they have a proven track record in MES implementation projects and are familiar with the specific challenges and requirements of your industry. You will want someone who is practical and hands-on with real-world experience, try to avoid people who thrive on theory, they will just complicate proceedings.
+When selecting external consultants, ensure that they have a proven track record in MES implementation projects and are familiar with the specific challenges and requirements of your industry. Look for people with hands-on, real-world delivery experience, who will help you keep the solution as simple as your processes allow.
 
 Collaborating with experienced consultants will complement the internal team's knowledge and provide valuable insights and guidance throughout the implementation process.
 
