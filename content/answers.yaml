@@ -380,3 +380,70 @@ smart-factory-where-to-start:
       a: "Look for a line where losses are measurable and worth fixing, ideally at or near the bottleneck, with a reasonably stable process and a keen supervisor. It helps if the equipment can be connected and the line is representative of others, so what you learn carries over. Avoid lines whose problems are mostly mechanical."
     - q: "What should you avoid in the first 90 days?"
       a: "Buying software before you know your requirements, starting with AI before the data foundation exists, and piloting a point solution you couldn't scale. Above all, don't leave the shopfloor out. People support what they helped create, and the operators know the workarounds that never made it into the procedures."
+
+mes-vs-erp:
+  summary: "ERP plans and accounts for production: orders, materials, costs and dates, across the business. MES/MOM runs it on the shopfloor in real time, recording what actually happened by order, lot, machine and operator. They overlap on orders and inventory, but do different jobs for different people, and most manufacturers past the simplest operations need both."
+  faq:
+    - q: "What is the difference between MES and ERP?"
+      a: "ERP runs the business side of a manufacturer: finance, sales orders, purchasing, planning and costing, working in months, weeks and days. MES runs production on the shopfloor in shifts, minutes and seconds, recording what happened by order, lot, machine and operator. ERP creates and costs the production order; MES/MOM executes it and sends the actuals back."
+    - q: "Can ERP replace an MES?"
+      a: "For a small, simple operation, ERP's shopfloor reporting may be enough, and some ERPs designed for manufacturing cover more than others. It stops being enough when you need real-time machine data, lot-level traceability with quality results attached, in-process checks or guided work instructions. ERP should never be connected straight to the machines."
+    - q: "Do I need MES if I already have ERP?"
+      a: "Most manufacturers beyond the simplest operations do. ERP knows what should be made and what it cost. MES/MOM knows what's happening right now and whether it's right. ERP data also improves when MES/MOM is in place, because it receives actual consumption and output instead of backflushed estimates."
+
+it-vs-ot:
+  summary: "IT manages information and puts confidentiality first; OT controls physical equipment and puts availability and safety first. OT assets last decades and can't be patched on a whim. MES/MOM sits on the boundary at ISA-95 level 3, so it needs both: IT owning the application and security, operations owning the processes and data standards."
+  faq:
+    - q: "What is the difference between IT and OT?"
+      a: "IT is the world of business systems such as ERP, email and the cloud, and its first priority is protecting data. OT is the hardware and software that monitors and controls physical equipment, such as PLCs, SCADA and sensors, and its first priority is keeping processes running safely. OT equipment often stays in service for decades."
+    - q: "Is MES IT or OT?"
+      a: "Both. MES/MOM sits at level 3 of ISA-95, between ERP above and the control systems below. It talks to business systems and the cloud on one side and to PLCs and SCADA on the other, which makes it a bridge and a security boundary. It works best when IT owns the application and security, and operations owns the processes and master data standards."
+
+opc-ua-vs-mqtt:
+  summary: "OPC UA is the standard for reading machines, with structure, meaning and security built in. MQTT is a lightweight publish-subscribe protocol that moves data efficiently through a broker to many consumers. They aren't really competitors: OPC UA is often the first hop at the machine, and MQTT the distribution layer across the plant and up to the cloud."
+  faq:
+    - q: "Should I use OPC UA or MQTT?"
+      a: "Often both. OPC UA is the natural choice for reading structured data from machines and PLCs, many of which support it natively. MQTT is better at distributing data efficiently to many systems through a broker. A common pattern collects data with OPC UA at the machine and publishes it over MQTT across the plant."
+    - q: "What is Sparkplug B?"
+      a: "Sparkplug B is a specification that sits on top of MQTT. Plain MQTT doesn't define what a message means. Sparkplug B adds a defined payload format and a way to track whether each device is online, so different systems can understand the same messages without custom agreements."
+
+oee-vs-teep:
+  summary: "OEE, OOE and TEEP all multiply availability, performance and quality, but measure availability against different time. OEE uses planned production time, OOE uses the hours the factory is open, and TEEP uses every hour in the calendar. Use OEE to improve the line, OOE to challenge planned stops, and TEEP to find hidden capacity before you invest."
+  faq:
+    - q: "What is the difference between OEE and TEEP?"
+      a: "OEE measures how well equipment runs during the time it was planned to run. TEEP measures how productive it is against all calendar time, 24 hours a day, 7 days a week. A line running two shifts on weekdays can have a good OEE and a low TEEP, which usually means there's capacity available in the hours it doesn't run."
+    - q: "When should you use TEEP?"
+      a: "When someone proposes a new line or another big capital investment. A low TEEP alongside a reasonable OEE often means the capacity already exists in unused hours. Before buying a new machine, it's worth asking whether an extra shift would do the same job."
+
+build-vs-buy-mes:
+  summary: "Building your own MES looks cheaper and fits exactly on day one. Over ten years it usually costs more: key-person dependency, no upgrade path, security to maintain, and every new capability built in-house. The pattern that works is to buy a configurable platform and build only at the edges, with extensions, integrations and analytics."
+  faq:
+    - q: "Should we build our own MES?"
+      a: "In my view, building a full MES/MOM platform from scratch is rarely better or less risky than buying one. Homegrown systems work well at first, then depend on a few people, struggle to keep up with security and platform changes, and have no roadmap for capabilities such as AI. Building extensions and integrations on a bought platform is a different matter, and often sensible."
+    - q: "What does a homegrown MES really cost?"
+      a: "More than it appears. There's no licence fee, but the developers' time is real money, and it grows with every new feature, upgrade and departure. Add the cost of keeping it secure and compatible, and the risk when the person who built it leaves. Compare costs over ten years, not just the first project."
+
+preventive-vs-predictive-maintenance:
+  label: The short version
+  summary: "Reactive maintenance fixes things when they break, preventive works to a schedule, condition-based acts on measured wear, and predictive forecasts failures from data. The right answer is a mix chosen asset by asset. Run cheap, non-critical assets to failure, and save predictive for bottleneck assets with measurable warning signs and enough failure history."
+  faq:
+    - q: "What is the difference between preventive and predictive maintenance?"
+      a: "Preventive maintenance happens on a schedule, by calendar time or by usage such as running hours or cycles. Predictive maintenance uses condition data and failure history to forecast when a failure is likely, so work is done at the last sensible moment. Preventive is simpler to run; predictive needs sensors, data and history, and pays back most on critical assets."
+    - q: "Where should a factory start with predictive maintenance?"
+      a: "With accurate downtime data. Most factories still record stops at the end of the shift from memory, and miss short stops altogether. Capture stops automatically from the equipment with reasons added while they're fresh, then add condition sensors to bottleneck assets. Models need failure history and maintenance actions too, so the data foundation comes first."
+
+historian-vs-mes:
+  summary: "A historian stores high-frequency machine signals, often every second, for engineers to trend and troubleshoot. MES/MOM records operational events with context, such as orders, lots, stops and reasons, and manages the work itself. They link by time and equipment. A historian alone can't run orders or trace material, so most manufacturers need both."
+  faq:
+    - q: "Is a historian the same as an MES?"
+      a: "No. A historian is a time-series database that records process values at high frequency, which engineers use to see what a process was doing. MES/MOM records events with context, such as which order ran, which lot was consumed and why a machine stopped, and it manages the work. A historian watches the process; MES/MOM runs the operation."
+    - q: "Do I need a historian if I have MES?"
+      a: "Often yes, especially in process industries. MES/MOM doesn't need to keep every high-frequency reading, and a historian stores them efficiently for years. The two work best linked: MES/MOM tells you which machine and which hours were involved in a problem, and the historian shows exactly what the process was doing then."
+
+lot-vs-serial-traceability:
+  summary: "Lot traceability tracks quantities that share an identifier, serial traceability tracks every individual item, and time-based traceability traces continuous processes by time window. Choose per material and product, based on what customers and regulators require, what a recall would cost, and whether you'll service the product. Whatever the level, record consumption as it happens."
+  faq:
+    - q: "What is the difference between lot and serial traceability?"
+      a: "Lot traceability gives a quantity of material one identifier, so you know which lots went into which lots. Serial traceability gives every individual item its own identifier, so you know exactly which components went into exactly which unit. Serial is more precise in a recall but needs every item marked and scanned."
+    - q: "Do I need serial traceability?"
+      a: "It depends on the product. Regulated devices, aerospace parts and products you'll service in the field often need serial-level records. Many other manufacturers are well served by lot-level traceability with tight lot sizes, recorded as material is actually consumed rather than backflushed afterwards."

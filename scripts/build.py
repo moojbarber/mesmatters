@@ -290,7 +290,31 @@ def load_glossary(posts):
     return sorted(data, key=lambda g: g["term"].lower())
 
 
-GLOSSARY_SKIP = {"ai", "erp", "mes", "mom", "batch", "lot", "routing", "edge", "smart-factory", "bottleneck", "changeover", "cycle-time", "scrap-rate"}
+FAQ_TOPICS = [
+    {"id": "basics", "name": "MES, MOM and ERP basics", "blurb": "What the systems are, and how they differ.", "color": "#a594ff", "rgb": "165,148,255",
+     "icon": "M4 6h16M4 12h16M4 18h10",
+     "slugs": ["what-is-mes-and-why-is-it-important-in-manufacturing", "mes-vs-mom", "what-is-erp", "mes-vs-erp", "implementing-mes-can-simplify-your-erp", "mes-mom-erp-compared"]},
+    {"id": "strategy", "name": "Smart factory strategy", "blurb": "Where to start, and the order that works.", "color": "#ff8fe0", "rgb": "255,143,224",
+     "icon": "M4 20l5-6 4 3 7-9M15 8h5v5",
+     "slugs": ["what-is-a-smart-factory", "smart-manufacturing-maturity-model", "smart-factory-where-to-start", "how-to-modernise-a-factory"]},
+    {"id": "buying", "name": "Choosing and delivering", "blurb": "Selection, business cases, deployment and timelines.", "color": "#ffb86b", "rgb": "255,184,107",
+     "icon": "M9 12l2 2 4-4M5 4h14v16H5z",
+     "slugs": ["how-to-choose-an-mes", "mes-business-case", "build-vs-buy-mes", "cloud-vs-on-premises-mes", "how-long-does-mes-implementation-take"]},
+    {"id": "shopfloor", "name": "Running the shopfloor", "blurb": "Operators, traceability and maintenance.", "color": "#3ddc97", "rgb": "61,220,151",
+     "icon": "M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4 21c1-4 4-6 8-6s7 2 8 6",
+     "slugs": ["shopfloor-applications-explained", "connected-worker-one-app-not-five", "lot-vs-serial-traceability", "preventive-vs-predictive-maintenance"]},
+    {"id": "performance", "name": "Measuring performance", "blurb": "OEE and the measures around it.", "color": "#ff8a70", "rgb": "255,138,112",
+     "icon": "M12 21a9 9 0 1 1 9-9M12 12l5-5",
+     "slugs": ["what-is-oee-overall-equipment-effectiveness", "oee-vs-teep"]},
+    {"id": "architecture", "name": "Architecture and integration", "blurb": "ISA-95, connectivity and the systems around MES/MOM.", "color": "#7fa6ff", "rgb": "127,166,255",
+     "icon": "M5 5h5v5H5zM14 14h5v5h-5zM10 7.5h4.5V14",
+     "slugs": ["what-is-the-isa-95-model-and-where-does-mes-fit", "it-vs-ot", "opc-ua-vs-mqtt", "iiot-vs-mes", "scada-vs-mes", "historian-vs-mes"]},
+]
+
+GLOSSARY_SKIP = {"ai", "erp", "mes", "mom", "batch", "lot", "routing", "edge", "smart-factory", "bottleneck", "changeover", "cycle-time", "scrap-rate",
+                 "shopfloor", "availability", "performance", "yield", "recall", "configuration", "customisation", "rework", "throughput",
+                 "production-order", "recipe", "lean", "copilot", "validation", "quality-rate", "cavity", "andon", "gemba", "super-user",
+                 "change-management", "process-mapping", "traveller", "time-series-data", "saas", "hypercare"}
 
 
 def autolink_glossary(posts, glossary, base, limit=6):
@@ -353,6 +377,7 @@ def write_llms(posts, paths, glossary):
            "## Start here", "",
            *[f"- [{g['title']}]({g['canonical']}): {g['summary'] or g['description']}" for g in posts if g.get("guide")],
            f"- [Learning paths]({SITE}/paths/): guided routes through the articles, in order",
+           f"- [FAQ]({SITE}/faq/): short answers to common questions, each linked to the full article",
            f"- [Glossary]({SITE}/glossary/): definitions of MES, MOM, OEE, ISA-95, UNS and other shopfloor terms",
            f"- [About Matt Barber]({SITE}/about): background and credentials",
            f"- [Podcasts, interviews and press]({SITE}/featured)",
@@ -368,7 +393,7 @@ def write_llms(posts, paths, glossary):
     (DIST / "llms.txt").write_text("\n".join(out) + "\n", encoding="utf-8")
     full = ["# Shopfloor Matters: full text", "", f"By Matt Barber. Source: {SITE}. Cite as: Matt Barber, Shopfloor Matters, with a link to the article.", ""]
     for p in posts:
-        full += ["---", "", f"# {p['title']}", "", f"URL: {p['canonical']}", f"Author: Matt Barber", f"Published: {p['published_iso']}  Last reviewed: {p['reviewed'].date().isoformat() if p['reviewed'] else ''}", ""]
+        full += ["---", "", f"# {p['title']}", "", f"URL: {p['canonical']}", f"Author: Matt Barber", f"Published: {p['published_iso']}  Last updated: {p['reviewed'].date().isoformat() if p['reviewed'] else ''}", ""]
         if p["summary"]:
             full += [f"Summary: {p['summary']}", ""]
         full += [md_clean(p["md"]), ""]
@@ -459,8 +484,10 @@ def build(base, relative=False, include_scheduled=False):
               "knowsAbout": ["Manufacturing Execution Systems (MES)", "Manufacturing Operations Management (MOM)",
                              "Smart factory", "Shopfloor AI", "Connected worker", "ISA-95", "OEE",
                              "ERP and MES integration", "Industry 4.0", "Manufacturing digital transformation"],
-              "image": f"{SITE}/images/matt-barber.jpg"}
-    person_full = {**person, "description": "Matt Barber started as an MES software engineer and now runs a global MES business. He writes Shopfloor Matters, about the smart factory, shopfloor AI and MES/MOM.",
+              "image": f"{SITE}/images/matt-barber.jpg",
+              "award": "Infor Circle of Excellence, 2024", "alumniOf": [{"@type": "CollegeOrUniversity", "name": "The University of Sheffield"}, {"@type": "CollegeOrUniversity", "name": "The London School of Economics and Political Science"}], "hasOccupation": {"@type": "Occupation", "name": "MES software executive",
+              "description": "Involved in hundreds of MES projects across food and beverage, automotive, packaging, metal and plastics fabrication and industrial manufacturing."}}
+    person_full = {**person, "description": "Matt Barber studied computer science at the University of Sheffield, started as an MES software engineer and has been VP & General Manager, MES at Infor since 2024. He writes Shopfloor Matters, about the smart factory, shopfloor AI and MES/MOM.",
                    "subjectOf": [{"@type": {"podcast": "PodcastEpisode", "webinar": "CreativeWork"}.get(it.get("type"), "Article"),
                                   "name": it["title"], "url": next((l["url"] for l in it.get("links", [])), None),
                                   "publisher": {"@type": "Organization", "name": it.get("outlet", "")}}
@@ -623,6 +650,21 @@ def build(base, relative=False, include_scheduled=False):
             page = relativise(page, f"{old}.html").replace('"@REL@/', '"' + ("/".join([".."] * old.count("/")) or ".") + "/").replace(new + '"', new + '.html"')
         out.write_text(page, encoding="utf-8")
 
+    # FAQ hub
+    by_slug_all = {p["slug"]: p for p in posts}
+    faq_topics, faq_all = [], []
+    for t in FAQ_TOPICS:
+        items = [{"q": f["q"], "a": f["a"], "post": by_slug_all[sl]} for sl in t["slugs"] if sl in by_slug_all for f in by_slug_all[sl]["faq"]]
+        if items:
+            faq_topics.append({**t, "items": items})
+            faq_all += items
+    if faq_all:
+        write("faq/index.html", "faq.html", active="articles", seo_title="MES, MOM and smart factory FAQ | Shopfloor Matters",
+              description=f"Straight answers to {len(faq_all)} common questions about MES, MOM, ERP, OEE, the smart factory and shopfloor systems, each linked to the full article.",
+              canonical=f"{SITE}/faq/", topics=faq_topics, total=len(faq_all),
+              jsonld=[jsonld({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+                  {"@type": "Question", "name": i["q"], "acceptedAnswer": {"@type": "Answer", "text": i["a"], "url": i["post"]["canonical"]}} for i in faq_all]})])
+
     # glossary
     if glossary:
         gset = {"@type": "DefinedTermSet", "@id": f"{SITE}/glossary/#set", "name": "Shopfloor Matters glossary", "url": f"{SITE}/glossary/"}
@@ -649,7 +691,7 @@ def build(base, relative=False, include_scheduled=False):
     urls = [(f"{SITE}/", posts[0]["updated"]), (f"{SITE}/articles", posts[0]["updated"]), (f"{SITE}/about", None), (f"{SITE}/subscribe", None)]
     urls += [(f"{SITE}/{c['slug']}", None) for c in CATEGORIES]
     urls += [(f"{SITE}/featured", None), (f"{SITE}/paths/", None)] + [(f"{SITE}/paths/{x['id']}", None) for x in paths]
-    urls += [(f"{SITE}/glossary/", None)] + [(f"{SITE}/glossary/{g['slug']}", None) for g in glossary]
+    urls += [(f"{SITE}/faq/", None), (f"{SITE}/glossary/", None)] + [(f"{SITE}/glossary/{g['slug']}", None) for g in glossary]
     urls += [(p["canonical"], p["updated"]) for p in posts]
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u, d in urls:

@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% from "macros.html" import hero_bg, cta %}
+{% block main %}
+<section class="hero page-hero faq-hero">
+  {{ hero_bg() }}
+  <div class="wide faq-hero-grid">
+   <div>
+    <span class="tag">FAQ</span>
+    <h1>Straight answers to the questions I get asked most</h1>
+    <p class="kicker">{{ total }} questions about MES, MOM, ERP and the smart factory, each answered in a paragraph. Every answer links to the full article if you want to go deeper.</p>
+    <label class="faq-search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input type="search" placeholder="Search the questions, e.g. OEE, ERP, cloud" aria-label="Search the questions" data-faq-search>
+      <span class="faq-count" data-faq-count aria-live="polite">{{ total }} questions</span>
+    </label>
+   </div>
+   <div class="faq-tiles" aria-hidden="true">
+     {% for t in topics %}<a href="#{{ t.id }}" tabindex="-1" class="faq-tile" style="--c:{{ t.color }};--rgb:{{ t.rgb }};--i:{{ loop.index0 }}"><span class="faq-icon"><svg viewBox="0 0 24 24"><path d="{{ t.icon }}"/></svg></span><b>{{ t.name }}</b><small>{{ t['items']|length }} questions</small></a>{% endfor %}
+   </div>
+  </div>
+</section>
+
+<div class="wide faq-layout">
+  <nav class="faq-topics" aria-label="Topics">
+    <span class="micro">Topics</span>
+    <button type="button" class="faq-chip on" data-faq-topic="all" aria-pressed="true"><i style="--c:#e9e6ff"></i>All topics<b>{{ total }}</b></button>
+    {% for t in topics %}
+    <button type="button" class="faq-chip" data-faq-topic="{{ t.id }}" aria-pressed="false" style="--c:{{ t.color }};--rgb:{{ t.rgb }}"><i></i>{{ t.name }}<b>{{ t['items']|length }}</b></button>
+    {% endfor %}
+  </nav>
+
+  <div class="faq-groups">
+    {% for t in topics %}
+    <section class="faq-group" id="{{ t.id }}" data-faq-group="{{ t.id }}" style="--c:{{ t.color }};--rgb:{{ t.rgb }}" aria-labelledby="faq-h-{{ t.id }}">
+      <header class="faq-group-head">
+        <span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="{{ t.icon }}"/></svg></span>
+        <div><h2 id="faq-h-{{ t.id }}">{{ t.name }}</h2><p>{{ t.blurb }}</p></div>
+      </header>
+      {% for i in t['items'] %}
+      <details class="faq-q" data-faq-item>
+        <summary><span>{{ i.q }}</span><i aria-hidden="true"></i></summary>
+        <div class="faq-a">
+          <p>{{ i.a }}</p>
+          <a class="faq-src" href="{{ base }}/post/{{ i.post.slug }}">
+            <img src="{{ base }}/images/art/{{ i.post.slug }}.svg" alt="" width="1600" height="900" loading="lazy">
+            <span><small>Read the full article · {{ i.post.read_time }} min</small><b>{{ i.post.short }}</b></span>
+            <em aria-hidden="true">→</em>
+          </a>
+        </div>
+      </details>
+      {% endfor %}
+    </section>
+    {% endfor %}
+    <p class="faq-empty" data-faq-empty hidden>No questions match that. Try the <a href="{{ base }}/glossary/">glossary</a>, or <a href="{{ base }}/contact">ask me directly</a>.</p>
+    <aside class="faq-more">
+      <div><b>Looking for a definition?</b><span>The glossary explains the acronyms in plain English.</span></div>
+      <a class="btn" href="{{ base }}/glossary/">Open the glossary</a>
+    </aside>
+  </div>
+</div>
+<div class="wrap">{{ cta(base, linkedin, kit_form) }}</div>
+
+<script>
+(function () {
+  var input = document.querySelector('[data-faq-search]'), count = document.querySelector('[data-faq-count]');
+  var chips = [].slice.call(document.querySelectorAll('[data-faq-topic]'));
+  var groups = [].slice.call(document.querySelectorAll('[data-faq-group]'));
+  var empty = document.querySelector('[data-faq-empty]'), topic = 'all';
+  function apply() {
+    var q = (input.value || '').trim().toLowerCase(), shown = 0;
+    groups.forEach(function (g) {
+      var inTopic = topic === 'all' || g.getAttribute('data-faq-group') === topic, any = 0;
+      [].forEach.call(g.querySelectorAll('[data-faq-item]'), function (it) {
+        var ok = inTopic && (!q || it.textContent.toLowerCase().indexOf(q) > -1);
+        it.hidden = !ok; if (ok) { any++; shown++; }
+        if (q && ok) it.open = true;
+      });
+      g.hidden = !any;
+    });
+    count.textContent = shown + (shown === 1 ? ' question' : ' questions');
+    empty.hidden = shown > 0;
+  }
+  input.addEventListener('input', apply);
+  chips.forEach(function (c) {
+    c.addEventListener('click', function () {
+      topic = c.getAttribute('data-faq-topic');
+      chips.forEach(function (x) { var on = x === c; x.classList.toggle('on', on); x.setAttribute('aria-pressed', on); });
+      apply();
+      var top = document.querySelector('.faq-groups').getBoundingClientRect().top + window.scrollY - 90;
+      if (window.scrollY > top) window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  });
+  [].forEach.call(document.querySelectorAll('.faq-tile'), function (a) {
+    a.addEventListener('click', function (e) { e.preventDefault(); var c = chips.filter(function (x) { return x.getAttribute('data-faq-topic') === a.getAttribute('href').slice(1); })[0]; if (c) { c.click(); document.querySelector('.faq-groups').scrollIntoView({behavior: 'smooth'}); } });
+  });
+  if (location.hash) {
+    var t = location.hash.slice(1), c = chips.filter(function (x) { return x.getAttribute('data-faq-topic') === t; })[0];
+    if (c) c.click();
+  }
+})();
+</script>
+{% endblock %}

@@ -66,7 +66,7 @@
         {% endfor %}
       </section>
       {% endif %}
-      <p class="reviewed">Last reviewed {{ p.reviewed_long }} by <a href="{{ base }}/about">Matt Barber</a>.</p>
+      <p class="reviewed">Written by <a href="{{ base }}/about">Matt Barber</a> · Last updated {{ p.reviewed_long }}</p>
       <div class="post-end">
         {% for lp in p.paths or [] %}
         <div class="lp-next" data-lp-next-card="{{ lp.id }}" style="--c:{{ lp.color }};--rgb:{{ lp.rgb }}" hidden>
