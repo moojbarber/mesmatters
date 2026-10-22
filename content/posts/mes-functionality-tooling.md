@@ -2,7 +2,7 @@
 title: "MES functionality: tooling"
 short: "Tooling"
 description: "Moulds, dies, jigs and fixtures are often the single biggest factor in quality. How MES/MOM manages tool life, tool readiness and setups, so the order doesn't wait for the tool."
-published: 2026-10-16
+published: 2026-06-02
 category: education
 art: gantt
 series: functionality

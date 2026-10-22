@@ -2,7 +2,7 @@
 title: "Historians, data lakes and data fabric: where shopfloor data lives"
 short: "Manufacturing data platforms"
 description: "Historians, data warehouses, data lakes, data fabric. Which one holds what, how they relate to MES/MOM, and which layer AI actually reads from."
-published: 2026-10-16
+published: 2026-07-28
 category: education
 art: pipeline
 ---

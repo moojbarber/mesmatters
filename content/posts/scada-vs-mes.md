@@ -2,7 +2,7 @@
 title: "Do you need both SCADA and MES?"
 short: "SCADA vs MES"
 description: "SCADA and MES often read the same PLCs. When you need both, when MES/MOM can do the job on its own, and how to decide."
-published: 2026-10-16
+published: 2026-06-23
 category: education
 art: signal
 ---

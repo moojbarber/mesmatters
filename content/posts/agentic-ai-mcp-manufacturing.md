@@ -2,7 +2,7 @@
 title: "Agentic AI and MCP, explained for people who run factories"
 short: "Agentic AI and MCP"
 description: "Agentic AI and MCP are all over LinkedIn. What they actually are, what they could mean for the shopfloor, and what has to be in place before any agent touches production."
-published: 2026-10-16
+published: 2026-08-27
 category: thought-leadership
 art: network
 ---

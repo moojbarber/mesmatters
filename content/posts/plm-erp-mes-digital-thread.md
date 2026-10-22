@@ -2,7 +2,7 @@
 title: "PLM, ERP and MES: where the digital thread actually runs"
 short: "PLM, ERP and MES"
 description: "How product data gets from PLM to the shopfloor. Why ERP usually sits in the middle, when a direct PLM to MES link makes sense, and how to choose."
-published: 2026-10-16
+published: 2026-09-01
 category: education
 art: pipeline
 ---

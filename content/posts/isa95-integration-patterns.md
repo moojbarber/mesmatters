@@ -2,7 +2,7 @@
 title: "Connecting MES/MOM to everything else: integration patterns that last"
 short: "Integration patterns"
 description: "Point-to-point, middleware, event-driven or UNS. How to connect MES/MOM with ERP, PLM, WMS, QMS and the rest, and how to choose a pattern that survives upgrades."
-published: 2026-10-16
+published: 2026-10-01
 category: advice
 art: network
 ---

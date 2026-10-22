@@ -2,7 +2,7 @@
 title: "SPC on the shopfloor: catch the drift before it becomes scrap"
 short: "SPC on the shopfloor"
 description: "Statistical process control explained for operations leaders. Control charts, capability, the rules that matter, and why SPC belongs in MES/MOM at the line."
-published: 2026-10-16
+published: 2026-08-12
 category: education
 art: signal
 ---

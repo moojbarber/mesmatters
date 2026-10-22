@@ -2,7 +2,7 @@
 title: "Rolling out across sites: the centre of excellence and template approach"
 short: "Multi-site rollout"
 description: "How multi-site manufacturers scale MES/MOM without reinventing the wheel at every factory: an enterprise template, local exceptions only, and a centre of excellence to own it."
-published: 2026-10-16
+published: 2026-08-13
 category: advice
 art: hexgrid
 ---

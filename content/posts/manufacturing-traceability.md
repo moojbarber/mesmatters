@@ -2,7 +2,7 @@
 title: "Your traceability probably isn't as good as you think"
 short: "Manufacturing traceability"
 description: "Batch-level tracking and backflushing in ERP is better than nothing, but nowhere near what's possible. What full traceability looks like, and why it matters in a recall."
-published: 2026-10-16
+published: 2026-05-12
 category: education
 art: flow
 ---

@@ -2,7 +2,7 @@
 title: "From CPQ to the shopfloor: building what the customer actually configured"
 short: "CPQ to shopfloor"
 description: "Configured and engineer-to-order products start in CPQ. How the configuration reaches the operator through ERP, and when PLM gets involved too."
-published: 2026-10-16
+published: 2026-09-03
 category: education
 art: tiles
 ---

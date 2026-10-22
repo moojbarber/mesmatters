@@ -2,7 +2,7 @@
 title: "How to choose an MES: 12 questions to ask every vendor"
 short: "How to choose an MES"
 description: "The 12 questions every manufacturer should ask when evaluating MES/MOM, plus the RFP mistakes that make selection harder than it needs to be."
-published: 2026-10-16
+published: 2026-06-16
 category: advice
 art: wheel
 ---

@@ -2,7 +2,7 @@
 title: "Skills you can enforce, not just record"
 short: "Skills enforcement"
 description: "Most skills matrices live in a spreadsheet nobody checks at the point of work. Why skills management should block the wrong person from the wrong job, not just report it."
-published: 2026-10-16
+published: 2026-07-16
 category: thought-leadership
 art: badge
 ---

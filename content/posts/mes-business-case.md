@@ -2,7 +2,7 @@
 title: "How to build an MES business case leadership will sign"
 short: "The MES business case"
 description: "You know your factory runs on paper and Excel. Your leadership hasn't approved the fix. How to build a business case around business impact, risk and the cost of doing nothing."
-published: 2026-10-16
+published: 2026-05-20
 category: advice
 art: growth
 ---

@@ -2,7 +2,7 @@
 title: "Practical GenAI for the shopfloor: four uses that save time today"
 short: "Practical GenAI"
 description: "Forget the hype. Four practical ways generative AI already saves time in factories, and the one condition that decides whether any of them work."
-published: 2026-10-16
+published: 2026-06-25
 category: thought-leadership
 art: signal
 ---

@@ -2,7 +2,7 @@
 title: "The smart factory tech stack, system by system"
 short: "The smart factory tech stack"
 description: "ERP, PLM, APS, MES/MOM, WMS, CMMS, LIMS, historians and data platforms. What each system does, where the boundaries sit, and how they fit together."
-published: 2026-10-16
+published: 2026-08-18
 category: education
 art: stack
 ---

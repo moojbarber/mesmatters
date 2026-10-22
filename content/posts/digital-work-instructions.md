@@ -2,7 +2,7 @@
 title: "Digital work instructions that know what's running"
 short: "Digital work instructions"
 description: "Paper work instructions go out of date the day they're printed. How digital instructions with production context help new starters get it right in days, not months."
-published: 2026-10-16
+published: 2026-06-10
 category: thought-leadership
 art: document
 ---

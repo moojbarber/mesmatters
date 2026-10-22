@@ -2,7 +2,7 @@
 title: "Where to start with a smart factory: your first 90 days"
 short: "Smart factory: where to start"
 description: "A practical plan for the first 90 days of a smart factory programme. What to do in each month, how to pick the first line, and what to have in place before you talk to a single vendor."
-published: 2026-10-22
+published: 2026-10-13
 category: advice
 art: growth
 guide: true

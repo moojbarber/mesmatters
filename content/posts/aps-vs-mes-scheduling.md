@@ -2,7 +2,7 @@
 title: "ERP, APS and MES scheduling: the plan versus the shift"
 short: "APS vs MES scheduling"
 description: "ERP plans, APS sequences and MES/MOM executes. Where scheduling belongs in each system, the options for connecting them, and how to keep the plan honest."
-published: 2026-10-16
+published: 2026-09-10
 category: education
 art: gantt
 ---

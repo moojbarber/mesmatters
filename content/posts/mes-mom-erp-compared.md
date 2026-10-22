@@ -2,7 +2,7 @@
 title: "MES vs MOM vs ERP, and the rest of the stack, compared"
 short: "MES vs MOM vs ERP compared"
 description: "ERP, MES, MOM, APS, WMS, QMS, LIMS, EAM, PLM, SCADA and IIoT side by side. What each one does, who uses it, what data it owns, and how to tell whether you need it."
-published: 2026-10-22
+published: 2026-10-15
 category: education
 art: stack
 guide: true

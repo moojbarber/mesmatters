@@ -2,7 +2,7 @@
 title: "Digital twins run on shopfloor data. MES/MOM is where it comes from"
 short: "MES/MOM and digital twins"
 description: "A digital twin is only as good as the data feeding it. MES/MOM is the key source of real-time, contextualised shopfloor data that keeps a twin honest."
-published: 2026-10-16
+published: 2026-08-25
 updated: 2026-10-20
 category: thought-leadership
 art: bins

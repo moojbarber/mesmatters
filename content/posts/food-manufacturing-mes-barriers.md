@@ -2,7 +2,7 @@
 title: "The biggest barriers to MES success in food manufacturing"
 short: "MES barriers in food manufacturing"
 description: "Food manufacturers rarely fail at MES because of the technology. The people, the scope, the master data and the platform choice are where projects stumble."
-published: 2026-10-16
+published: 2026-08-04
 category: advice
 art: gates
 ---

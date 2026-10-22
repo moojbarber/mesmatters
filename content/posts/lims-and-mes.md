@@ -2,7 +2,7 @@
 title: "LIMS and MES: getting lab results to the line before the batch moves on"
 short: "LIMS and MES"
 description: "In process industries, LIMS runs the lab and MES/MOM runs the batch. How sampling, results and release flow between them, with ERP holding batch status."
-published: 2026-10-16
+published: 2026-09-22
 category: education
 art: tanks
 ---

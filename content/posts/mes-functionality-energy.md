@@ -2,7 +2,7 @@
 title: "MES functionality: energy"
 short: "Energy"
 description: "Energy is a cost and a sustainability problem, and most factories can't see it below the site meter. How MES/MOM attributes energy to machines, orders and products."
-published: 2026-10-16
+published: 2026-06-30
 category: education
 art: growth
 series: functionality

@@ -2,7 +2,7 @@
 title: "Your ERP master data isn't ready for MES"
 short: "Master data for MES"
 description: "MES/MOM needs more detailed master data than ERP was ever set up with. Why routings built for costing aren't enough, and how to fix master data once for every system."
-published: 2026-10-16
+published: 2026-05-28
 category: advice
 art: bridge
 ---

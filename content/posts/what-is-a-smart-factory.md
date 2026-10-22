@@ -2,7 +2,7 @@
 title: "What is a smart factory? No version number required"
 short: "What is a smart factory?"
 description: "A smart factory isn't science fiction or Industry 6.0. It's people, processes and technology working together on good data. Five things define it."
-published: 2026-10-16
+published: 2026-04-23
 category: thought-leadership
 art: hexgrid
 ---

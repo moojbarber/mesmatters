@@ -2,7 +2,7 @@
 title: "Shift handover is a process. Treat it like one."
 short: "Digital shift handover"
 description: "Most shift handovers are a quick chat at the door. Detail gets lost and the next crew starts blind. How to make handover a structured, data-driven process."
-published: 2026-10-16
+published: 2026-07-02
 category: thought-leadership
 art: handover
 ---

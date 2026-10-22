@@ -2,7 +2,7 @@
 title: "You can't hit ESG targets without shopfloor data"
 short: "ESG and shopfloor data"
 description: "Manufacturers publish ambitious ESG goals while their shopfloors run exactly as they did five years ago. Why sustainability needs operational data, and where it comes from."
-published: 2026-10-16
+published: 2026-07-14
 category: thought-leadership
 art: growth
 ---

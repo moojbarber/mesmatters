@@ -2,7 +2,7 @@
 title: "The smart manufacturing maturity model: you can't skip a level"
 short: "The maturity model"
 description: "Five levels from paper-driven to AI-enabled. Where most factories really are, where AI starts to pay back, and why there are no shortcuts for your data."
-published: 2026-10-16
+published: 2026-04-30
 category: thought-leadership
 art: ladder
 ---

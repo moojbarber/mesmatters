@@ -2,7 +2,7 @@
 title: "MES/MOM in regulated industries: pharma, medical devices, aerospace and automotive"
 short: "Regulated industries"
 description: "What changes when regulators and customers audit your shopfloor. Electronic batch records, device records, first article inspection, PPAP and traceability."
-published: 2026-10-16
+published: 2026-09-23
 category: education
 art: document
 ---

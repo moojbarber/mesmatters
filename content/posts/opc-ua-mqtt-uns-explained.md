@@ -2,7 +2,7 @@
 title: "OPC UA, MQTT and UNS in plain English"
 short: "OPC UA, MQTT and UNS"
 description: "The shopfloor connectivity layer without the rabbit hole. What OPC UA, MQTT and a unified namespace are, how they relate to MES/MOM, and what to ask vendors."
-published: 2026-10-16
+published: 2026-07-07
 category: education
 art: network
 ---

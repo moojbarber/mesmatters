@@ -2,7 +2,7 @@
 title: "Closing the loop: service data back to the shopfloor and engineering"
 short: "Service data loop"
 description: "When a product fails in the field, the answer is often in the as-built record. How service, ERP, MES/MOM and PLM connect to turn failures into fixes."
-published: 2026-10-16
+published: 2026-09-24
 category: thought-leadership
 art: orbits
 ---

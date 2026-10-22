@@ -2,7 +2,7 @@
 title: "WMS, MES and ERP: who owns inventory once it reaches the line?"
 short: "WMS vs MES inventory"
 description: "ERP, WMS and MES/MOM all track stock. Where the boundaries sit for warehouse, line-side and WIP inventory, and the integration options that work."
-published: 2026-10-16
+published: 2026-09-08
 category: education
 art: bins
 ---

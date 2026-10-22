@@ -2,7 +2,7 @@
 title: "Raw machine data is worthless. Context is what makes it useful"
 short: "Contextualised data"
 description: "A machine signal that says 'stopped' tells you nothing. How MES/MOM turns raw data into contextualised information, and why point solutions lose that context."
-published: 2026-10-16
+published: 2026-05-07
 category: thought-leadership
 art: flow2
 ---

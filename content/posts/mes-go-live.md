@@ -2,7 +2,7 @@
 title: "Go-live is the starting line"
 short: "After go-live"
 description: "Go-live feels like the finish line. It isn't. Hypercare, super users and continuous improvement: what happens after MES/MOM goes live decides whether it delivers."
-published: 2026-10-16
+published: 2026-07-23
 category: advice
 art: steps
 ---

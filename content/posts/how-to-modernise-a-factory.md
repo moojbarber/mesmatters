@@ -2,7 +2,7 @@
 title: "How to modernise a factory, step by step"
 short: "How to modernise a factory"
 description: "A practical, step-by-step route from paper and spreadsheets to a connected, data-driven factory. What to do first, what to leave until later, and how to know you're ready for the next step."
-published: 2026-10-22
+published: 2026-10-20
 category: advice
 art: ladder
 guide: true

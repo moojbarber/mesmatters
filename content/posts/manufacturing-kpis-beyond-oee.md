@@ -2,7 +2,7 @@
 title: "Manufacturing KPIs beyond OEE"
 short: "KPIs beyond OEE"
 description: "OEE is the most widely used manufacturing KPI, but it isn't the only one that matters. First-pass yield, scrap, cycle and changeover time, OTIF, MTBF and MTTR explained."
-published: 2026-10-16
+published: 2026-06-11
 category: education
 art: rings
 ---

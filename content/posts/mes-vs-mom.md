@@ -2,7 +2,7 @@
 title: "MES vs MOM: why the difference matters when you buy"
 short: "MES vs MOM"
 description: "MES and MOM are sometimes used interchangeably, but they describe different scopes. MES runs production; MOM runs the whole operation on the same data."
-published: 2026-10-16
+published: 2026-04-28
 category: education
 art: stack
 ---

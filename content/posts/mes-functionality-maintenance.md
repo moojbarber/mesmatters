@@ -2,7 +2,7 @@
 title: "MES functionality: maintenance"
 short: "Maintenance"
 description: "Why maintenance belongs in the same platform as production: shared downtime data, autonomous maintenance by operators, and when a separate CMMS or EAM makes sense."
-published: 2026-10-16
+published: 2026-05-14
 category: education
 art: gates
 series: functionality

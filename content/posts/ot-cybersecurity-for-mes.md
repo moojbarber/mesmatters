@@ -2,7 +2,7 @@
 title: "OT cybersecurity for MES/MOM: what operations leaders need to know"
 short: "OT cybersecurity"
 description: "MES/MOM sits between IT and OT, which makes it a security boundary. The practical basics: zones, conduits, access, patching, cloud and recovery."
-published: 2026-10-16
+published: 2026-09-29
 category: advice
 art: gates
 ---

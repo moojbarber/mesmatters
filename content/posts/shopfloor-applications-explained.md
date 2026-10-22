@@ -2,7 +2,7 @@
 title: "Shopfloor applications explained: what each one does and which problem it solves"
 short: "Shopfloor applications explained"
 description: "Production execution, quality, inventory, maintenance, tooling, energy, connected worker and AI. What each shopfloor application does, the problem it solves, and why they work best on one platform."
-published: 2026-10-22
+published: 2026-10-14
 category: education
 art: hexgrid
 guide: true

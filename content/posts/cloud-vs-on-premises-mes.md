@@ -2,7 +2,7 @@
 title: "Cloud, on-premises or hybrid: where should your MES run?"
 short: "Cloud vs on-premises MES"
 description: "Where your MES/MOM runs matters for a system the shopfloor depends on 24x7. The trade-offs between cloud, on-premises and hybrid, and why licensing model matters too."
-published: 2026-10-16
+published: 2026-07-09
 category: education
 art: cloud
 ---

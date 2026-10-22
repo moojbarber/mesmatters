@@ -2,7 +2,7 @@
 title: "Resistance to change is guaranteed. Plan for it."
 short: "Change management"
 description: "Every smart factory project meets resistance. Technology is the easy part. Why people resist, what leadership has to do, and how to invest in adoption, not just implementation."
-published: 2026-10-16
+published: 2026-07-01
 category: advice
 art: orbits
 ---

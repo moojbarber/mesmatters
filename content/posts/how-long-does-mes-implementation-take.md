@@ -2,7 +2,7 @@
 title: "How long does an MES implementation take?"
 short: "MES implementation timeline"
 description: "How long it really takes to get MES/MOM live in the first factory, why I've seen it done in four months, and what drives the range."
-published: 2026-10-16
+published: 2026-05-19
 category: advice
 art: timeline
 ---

@@ -2,7 +2,7 @@
 title: "Predictive maintenance needs data you probably aren't collecting yet"
 short: "Predictive maintenance"
 description: "From reactive to preventive to condition-based. What predictive maintenance really needs, why downtime data comes first, and where operators fit in."
-published: 2026-10-16
+published: 2026-07-22
 category: thought-leadership
 art: spc
 ---

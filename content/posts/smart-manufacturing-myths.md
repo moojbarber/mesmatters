@@ -2,7 +2,7 @@
 title: "Eight smart manufacturing myths that refuse to die"
 short: "Eight smart manufacturing myths"
 description: "AI will solve everything. Excel is good enough. IIoT replaces MES. Eight myths I hear in boardrooms and on LinkedIn every week, and why they're wrong."
-published: 2026-10-16
+published: 2026-08-20
 category: thought-leadership
 art: mesh
 ---

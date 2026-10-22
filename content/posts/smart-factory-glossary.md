@@ -2,7 +2,7 @@
 title: "The smart factory glossary"
 short: "Smart factory glossary"
 description: "Every acronym from APS to UNS in one place. Plain-English definitions of the MES, MOM, smart factory and shopfloor AI terms you'll hear in projects and on LinkedIn."
-published: 2026-10-16
+published: 2026-10-06
 category: education
 art: tiles
 ---

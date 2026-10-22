@@ -2,7 +2,7 @@
 title: "EBOM, MBOM, as-built: who owns the BOM at each stage"
 short: "Who owns the BOM"
 description: "A bill of materials changes shape four times between engineering and shipment. Which system owns it at each stage, and where MES/MOM fits."
-published: 2026-10-16
+published: 2026-09-02
 category: education
 art: stack
 ---
