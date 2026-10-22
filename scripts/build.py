@@ -208,6 +208,14 @@ def uk_today():
         return dt.date.today()
 
 
+ANSWERS = yaml.safe_load((ROOT / "content" / "answers.yaml").read_text(encoding="utf-8")) if (ROOT / "content" / "answers.yaml").exists() else {}
+ANSWERS = ANSWERS or {}
+
+
+def month_year(d):
+    return d.strftime("%B %Y") if d else ""
+
+
 def load_posts(base, blocks, seo, include_scheduled=False):
     posts = []
     schedule = {} if publish_all_now() else load_schedule()
@@ -230,6 +238,7 @@ def load_posts(base, blocks, seo, include_scheduled=False):
         cat = CAT_BY_KEY[meta.get("category", "education")]
         words = len(re.findall(r"[A-Za-z0-9']+", body))
         html_body, toc = render_body(body, base, blocks)
+        extra = ANSWERS.get(slug, {})
         p = {
             "slug": slug,
             "title": html.unescape(meta.get("title", slug)),
@@ -237,7 +246,7 @@ def load_posts(base, blocks, seo, include_scheduled=False):
             "description": meta.get("description", ""),
             "category_key": cat["key"], "category_slug": cat["slug"], "category_label": cat["name"],
             "art": meta.get("art", "hexgrid"),
-            "series": meta.get("series"), "order": meta.get("order", 0), "start": meta.get("start"),
+            "series": meta.get("series"), "guide": bool(meta.get("guide")), "order": meta.get("order", 0), "start": meta.get("start"),
             "published": published, "updated": updated,
             "published_iso": published.date().isoformat() if published else "",
             "updated_iso": updated.date().isoformat() if updated else "",
@@ -246,7 +255,12 @@ def load_posts(base, blocks, seo, include_scheduled=False):
             "words": words, "read_time": max(1, math.ceil(words / 230)),
             "body": html_body, "toc": toc,
             "canonical": f"{SITE}/post/{slug}",
+            "md": body,
+            "summary": extra.get("summary", ""), "summary_label": extra.get("label", "Summary"),
+            "faq": extra.get("faq", []),
+            "reviewed": parse_date(extra.get("reviewed")) or updated,
         }
+        p["reviewed_long"] = month_year(p["reviewed"])
         seen[slug] = p
     posts = sorted(seen.values(), key=lambda p: p["published"] or dt.datetime(2000, 1, 1), reverse=True)
     # links to articles that aren't released yet become plain text until they are
@@ -259,6 +273,140 @@ def load_posts(base, blocks, seo, include_scheduled=False):
 
 def jsonld(obj):
     return json.dumps(obj, ensure_ascii=False).replace("</", "<\\/")
+
+
+def load_glossary(posts):
+    f = ROOT / "content" / "glossary.yaml"
+    if not f.exists():
+        return []
+    data = yaml.safe_load(f.read_text(encoding="utf-8")) or []
+    by_slug = {p["slug"]: p for p in posts}
+    for g in data:
+        g["slug"] = g.get("slug") or slugify(g["term"])
+        g["articles"] = [by_slug[a] for a in g.get("articles", []) if a in by_slug]
+    names = {g["slug"]: g for g in data}
+    for g in data:
+        g["see"] = [names[x] for x in g.get("see_also", []) if x in names]
+    return sorted(data, key=lambda g: g["term"].lower())
+
+
+GLOSSARY_SKIP = {"ai", "erp", "mes", "mom", "batch", "lot", "routing", "edge", "smart-factory", "bottleneck", "changeover", "cycle-time", "scrap-rate"}
+
+
+def autolink_glossary(posts, glossary, base, limit=6):
+    """Link the first mention of glossary terms in each article's paragraphs and list items."""
+    terms = []
+    for g in glossary:
+        if g["slug"] in GLOSSARY_SKIP:
+            continue
+        forms = [g["term"]] + ([g["term"].lower()] if not g["term"].isupper() and g["term"].lower() != g["term"] else [])
+        rx = re.compile(r"(?<![\w/-])(" + "|".join(re.escape(f) for f in forms) + r")(?![\w/-])")
+        terms.append((g, rx))
+    block = re.compile(r"<(p|li)>(.*?)</\1>", re.S)
+    for p in posts:
+        if p["slug"] == "smart-factory-glossary":
+            continue
+        used, count = set(), [0]
+
+        def fix_block(m):
+            inner = m.group(2)
+            parts = re.split(r"(<a\b.*?</a>|<[^>]+>)", inner, flags=re.S)
+            for i, part in enumerate(parts):
+                if not part or part.startswith("<"):
+                    continue
+                for g, rx in terms:
+                    if count[0] >= limit:
+                        break
+                    if g["slug"] in used or (g["articles"] and g["articles"][0]["slug"] == p["slug"]):
+                        continue
+                    mm = rx.search(part)
+                    if mm:
+                        used.add(g["slug"]); count[0] += 1
+                        link = f'<a class="gloss" href="{base}/glossary/{g["slug"]}" title="{html.escape(g["short"])}">{mm.group(1)}</a>'
+                        part = part[:mm.start()] + link + part[mm.end():]
+                        # don't re-scan inside the new link
+                        before, after = part.split(link, 1)
+                        parts[i] = before + link + after
+                        break
+                else:
+                    continue
+            return f"<{m.group(1)}>" + "".join(parts) + f"</{m.group(1)}>"
+
+        p["body"] = block.sub(fix_block, p["body"])
+
+
+def md_clean(md):
+    md = re.sub(r"^::block\s+[\w-]+\s*$", "", md, flags=re.M)
+    md = re.sub(r"\]\((/[^)]*)\)", lambda m: f"]({SITE}{m.group(1)})", md)
+    return md.strip()
+
+
+def write_llms(posts, paths, glossary):
+    by_cat = {}
+    for p in posts:
+        by_cat.setdefault(p["category_label"], []).append(p)
+    out = ["# Shopfloor Matters", "",
+           "> Practical, vendor-neutral writing on the smart factory, shopfloor AI and the MES/MOM systems underneath them, "
+           "by Matt Barber (VP & General Manager, MES at Infor; former MES developer, implementation lead and head of product). "
+           "Covers MES, MOM, ISA-95, OEE, connected worker, integration with ERP, PLM, WMS, APS, QMS, LIMS and CMMS, implementation and the business case.", "",
+           "Cite as: Matt Barber, Shopfloor Matters, " + SITE + ". Quoting with attribution and a link is welcome.", "",
+           "## Start here", "",
+           *[f"- [{g['title']}]({g['canonical']}): {g['summary'] or g['description']}" for g in posts if g.get("guide")],
+           f"- [Learning paths]({SITE}/paths/): guided routes through the articles, in order",
+           f"- [Glossary]({SITE}/glossary/): definitions of MES, MOM, OEE, ISA-95, UNS and other shopfloor terms",
+           f"- [About Matt Barber]({SITE}/about): background and credentials",
+           f"- [Podcasts, interviews and press]({SITE}/featured)",
+           f"- [Full text of every article]({SITE}/llms-full.txt)", ""]
+    for cat, ps in by_cat.items():
+        out += [f"## {cat}", ""]
+        for p in ps:
+            out.append(f"- [{p['title']}]({p['canonical']}): {p['summary'] or p['description']}")
+        out.append("")
+    out += ["## Learning paths", ""]
+    for x in paths:
+        out.append(f"- [{x['title']}]({SITE}/paths/{x['id']}): {x['blurb']}")
+    (DIST / "llms.txt").write_text("\n".join(out) + "\n", encoding="utf-8")
+    full = ["# Shopfloor Matters: full text", "", f"By Matt Barber. Source: {SITE}. Cite as: Matt Barber, Shopfloor Matters, with a link to the article.", ""]
+    for p in posts:
+        full += ["---", "", f"# {p['title']}", "", f"URL: {p['canonical']}", f"Author: Matt Barber", f"Published: {p['published_iso']}  Last reviewed: {p['reviewed'].date().isoformat() if p['reviewed'] else ''}", ""]
+        if p["summary"]:
+            full += [f"Summary: {p['summary']}", ""]
+        full += [md_clean(p["md"]), ""]
+        if p["faq"]:
+            full += ["## Frequently asked questions", ""]
+            for f in p["faq"]:
+                full += [f"**{f['q']}**", "", f["a"], ""]
+    if glossary:
+        full += ["---", "", "# Glossary", "", f"URL: {SITE}/glossary/", ""]
+        for g in glossary:
+            name = g["term"] + (f" ({g['stands']})" if g.get("stands") else "")
+            full += [f"## {name}", "", g["short"], "", g.get("body", ""), "", f"URL: {SITE}/glossary/{g['slug']}", ""]
+    (DIST / "llms-full.txt").write_text("\n".join(full) + "\n", encoding="utf-8")
+
+
+def write_feeds(posts, paths):
+    from email.utils import format_datetime
+
+    def rss(title, link, desc, items, path):
+        x = ['<?xml version="1.0" encoding="UTF-8"?>', '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">', "<channel>",
+             f"<title>{html.escape(title)}</title>", f"<link>{link}</link>", f"<description>{html.escape(desc)}</description>", "<language>en-gb</language>",
+             f'<atom:link href="{SITE}/{path}" rel="self" type="application/rss+xml"/>']
+        for p in items:
+            d = p["published"].replace(tzinfo=dt.timezone.utc) if p["published"] else None
+            x += ["<item>", f"<title>{html.escape(p['title'])}</title>", f"<link>{p['canonical']}</link>", f"<guid>{p['canonical']}</guid>",
+                  f"<description>{html.escape(p['summary'] or p['description'])}</description>",
+                  f"<content:encoded><![CDATA[{p['body'].replace(']]>', ']]&gt;')}]]></content:encoded>",
+                  f"<author>noreply@shopfloormatters.com (Matt Barber)</author>", f"<category>{html.escape(p['category_label'])}</category>"]
+            if d:
+                x.append(f"<pubDate>{format_datetime(d)}</pubDate>")
+            x.append("</item>")
+        x += ["</channel>", "</rss>"]
+        out = DIST / path
+        out.parent.mkdir(parents=True, exist_ok=True)
+        out.write_text("\n".join(x) + "\n", encoding="utf-8")
+    rss("Shopfloor Matters", SITE + "/", "Practical writing on the smart factory, shopfloor AI and MES/MOM, by Matt Barber.", posts, "feed.xml")
+    for x in paths:
+        rss(f"Shopfloor Matters: {x['title']}", f"{SITE}/paths/{x['id']}", x["blurb"], [s["post"] for s in x["stations"]], f"paths/{x['id']}.xml")
 
 
 # ------------------------------------------------------------------ build
@@ -303,8 +451,20 @@ def build(base, relative=False, include_scheduled=False):
         c["posts"] = [p for p in posts if p["category_key"] == c["key"]]
     common["categories"] = CATEGORIES
 
-    person = {"@type": "Person", "name": "Matt Barber", "url": f"{SITE}/about", "sameAs": [LINKEDIN],
-              "jobTitle": "VP & General Manager, MES", "image": f"{SITE}/images/matt-barber.jpg"}
+    featured = load_featured()
+    person = {"@type": "Person", "@id": f"{SITE}/about#matt", "name": "Matt Barber", "url": f"{SITE}/about",
+              "sameAs": [LINKEDIN, "https://www.industrysagemedia.com/matt-barber",
+                         "https://manufacturingdigital.com/articles/lifetime-of-achievement-matt-barber"],
+              "jobTitle": "VP & General Manager, MES", "worksFor": {"@type": "Organization", "name": "Infor"},
+              "knowsAbout": ["Manufacturing Execution Systems (MES)", "Manufacturing Operations Management (MOM)",
+                             "Smart factory", "Shopfloor AI", "Connected worker", "ISA-95", "OEE",
+                             "ERP and MES integration", "Industry 4.0", "Manufacturing digital transformation"],
+              "image": f"{SITE}/images/matt-barber.jpg"}
+    person_full = {**person, "description": "Matt Barber started as an MES software engineer and now runs a global MES business. He writes Shopfloor Matters, about the smart factory, shopfloor AI and MES/MOM.",
+                   "subjectOf": [{"@type": {"podcast": "PodcastEpisode", "webinar": "CreativeWork"}.get(it.get("type"), "Article"),
+                                  "name": it["title"], "url": next((l["url"] for l in it.get("links", [])), None),
+                                  "publisher": {"@type": "Organization", "name": it.get("outlet", "")}}
+                                 for it in featured["items"] if it.get("links")]}
     org = {"@type": "Organization", "name": "Shopfloor Matters", "url": SITE, "logo": f"{SITE}/favicon.svg"}
 
     def write(rel, tpl, **ctx):
@@ -323,8 +483,9 @@ def build(base, relative=False, include_scheduled=False):
     start = sorted([p for p in posts if p["start"]], key=lambda p: p["start"])
     total_words = sum(p["words"] for p in posts)
 
-    featured = load_featured()
     paths, paths_home = load_paths(posts)
+    glossary = load_glossary(posts)
+    autolink_glossary(posts, glossary, base)
     common["paths_home"] = paths_home
     common["paths_json"] = json.dumps([{"id": p["id"], "title": p["title"], "slugs": p["slugs"],
                                         "titles": [st["post"]["short"] for st in p["stations"]]} for p in paths], separators=(",", ":"))
@@ -344,7 +505,9 @@ def build(base, relative=False, include_scheduled=False):
           seo_title="All articles | Shopfloor Matters", description="Every article on the smart factory, shopfloor AI, implementation and the MES and MOM foundations underneath them.",
           canonical=f"{SITE}/articles", eyebrow=f"Library / {len(posts)} articles", heading="Every article, in one place",
           kicker="Guides, explainers and opinion on the smart factory, shopfloor AI and MES/MOM. Newest first.",
-          all_count=len(posts), featured=posts[0], groups=[{"label": "Everything else", "posts": posts[1:]}])
+          all_count=len(posts), featured=posts[0],
+          groups=[g for g in ({"label": "The essential guides", "posts": [q for q in posts[1:] if q.get("guide")]},
+                              {"label": "Everything else", "posts": [q for q in posts[1:] if not q.get("guide")]}) if g["posts"]])
 
     # categories (same URLs as the Wix site)
     for c in CATEGORIES:
@@ -382,6 +545,12 @@ def build(base, relative=False, include_scheduled=False):
               "datePublished": p["published_iso"], "dateModified": p["updated_iso"], "author": person, "publisher": org,
               "mainEntityOfPage": p["canonical"], "url": p["canonical"], "image": f"{SITE}/images/og/{p['slug']}.png",
               "articleSection": p["category_label"], "wordCount": p["words"], "inLanguage": "en-GB"}
+        if p["summary"]:
+            ld["abstract"] = p["summary"]
+        extra_ld = []
+        if p["faq"]:
+            extra_ld.append(jsonld({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+                {"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in p["faq"]]}))
         crumbs = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE}/"},
             {"@type": "ListItem", "position": 2, "name": p["category_label"], "item": f"{SITE}/{p['category_slug']}"},
@@ -390,7 +559,7 @@ def build(base, relative=False, include_scheduled=False):
               seo_title=(p["title"] if len(p["title"]) > 42 else f"{p['title']} | Shopfloor Matters"), og_title=p["title"], og_type="article",
               description=p["description"], canonical=p["canonical"], og_image=f"{SITE}/images/og/{p['slug']}.png",
               p=p, body=Markup(p["body"]), toc=p["toc"], series_posts=series if p["series"] else None,
-              prev=prev, next=nxt, related=related, jsonld=[jsonld(ld), jsonld(crumbs)])
+              prev=prev, next=nxt, related=related, jsonld=[jsonld(ld), jsonld(crumbs)] + extra_ld)
 
     # learning paths
     write("paths/index.html", "paths.html", active="paths", seo_title="Learning paths | Shopfloor Matters",
@@ -420,7 +589,7 @@ def build(base, relative=False, include_scheduled=False):
           canonical=f"{SITE}/about", eyebrow="About", heading="Hi, I'm Matt.",
           kicker="I've spent my career on the shopfloor side of software. This is where I write down what I've learnt about making factories smarter.",
           content=Markup(about), show_cta=True, og_image=f"{SITE}/images/og/page-about.png",
-          jsonld=[jsonld({"@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": person})])
+          jsonld=[jsonld({"@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": person_full})])
     contact = (ROOT / "content" / "pages" / "contact.html").read_text(encoding="utf-8").replace("{{base}}", base).replace("{{linkedin}}", LINKEDIN)
     write("contact.html", "page.html", active="contact", seo_title="Contact | Shopfloor Matters",
           description="Get in touch with Matt Barber about the smart factory, shopfloor AI, MES and MOM, or something you've read here.",
@@ -454,17 +623,48 @@ def build(base, relative=False, include_scheduled=False):
             page = relativise(page, f"{old}.html").replace('"@REL@/', '"' + ("/".join([".."] * old.count("/")) or ".") + "/").replace(new + '"', new + '.html"')
         out.write_text(page, encoding="utf-8")
 
+    # glossary
+    if glossary:
+        gset = {"@type": "DefinedTermSet", "@id": f"{SITE}/glossary/#set", "name": "Shopfloor Matters glossary", "url": f"{SITE}/glossary/"}
+        letters = sorted({g["term"][0].upper() for g in glossary})
+        write("glossary/index.html", "glossary.html", active="articles", seo_title="Smart factory and MES glossary | Shopfloor Matters",
+              description="Plain-English definitions of MES, MOM, OEE, ISA-95, UNS and the other terms you'll hear in smart factory and shopfloor projects.",
+              canonical=f"{SITE}/glossary/", terms=glossary, letters=letters,
+              jsonld=[jsonld({"@context": "https://schema.org", **gset, "hasDefinedTerm": [
+                  {"@type": "DefinedTerm", "name": g["term"], "description": g["short"], "url": f"{SITE}/glossary/{g['slug']}",
+                   **({"alternateName": g["stands"]} if g.get("stands") else {})} for g in glossary]})])
+        for g in glossary:
+            name = g["term"] + (f" ({g['stands']})" if g.get("stands") else "")
+            write(f"glossary/{g['slug']}.html", "term.html", active="articles", seo_title=f"{name}: meaning in manufacturing | Shopfloor Matters",
+                  description=g["short"], canonical=f"{SITE}/glossary/{g['slug']}", g=g,
+                  jsonld=[jsonld({"@context": "https://schema.org", "@type": "DefinedTerm", "name": g["term"], "description": g["short"] + " " + g.get("body", ""),
+                                  "url": f"{SITE}/glossary/{g['slug']}", "inDefinedTermSet": gset,
+                                  **({"alternateName": g["stands"]} if g.get("stands") else {})}),
+                          jsonld({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+                              {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE}/"},
+                              {"@type": "ListItem", "position": 2, "name": "Glossary", "item": f"{SITE}/glossary/"},
+                              {"@type": "ListItem", "position": 3, "name": g["term"]}]})])
+
     # sitemap, robots
     urls = [(f"{SITE}/", posts[0]["updated"]), (f"{SITE}/articles", posts[0]["updated"]), (f"{SITE}/about", None), (f"{SITE}/subscribe", None)]
     urls += [(f"{SITE}/{c['slug']}", None) for c in CATEGORIES]
     urls += [(f"{SITE}/featured", None), (f"{SITE}/paths/", None)] + [(f"{SITE}/paths/{x['id']}", None) for x in paths]
+    urls += [(f"{SITE}/glossary/", None)] + [(f"{SITE}/glossary/{g['slug']}", None) for g in glossary]
     urls += [(p["canonical"], p["updated"]) for p in posts]
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u, d in urls:
         sm.append(f"  <url><loc>{u}</loc>" + (f"<lastmod>{d.date().isoformat()}</lastmod>" if d else "") + "</url>")
     sm.append("</urlset>")
     (DIST / "sitemap.xml").write_text("\n".join(sm) + "\n", encoding="utf-8")
-    (DIST / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {SITE}/sitemap.xml\n", encoding="utf-8")
+    bots = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "ClaudeBot", "Claude-User", "Claude-SearchBot", "anthropic-ai", "PerplexityBot",
+            "Perplexity-User", "Google-Extended", "Applebot-Extended", "CCBot", "Bingbot", "Googlebot", "meta-externalagent", "Amazonbot", "cohere-ai"]
+    robots = ["# Shopfloor Matters welcomes search engines and AI assistants.", "# Quote freely with attribution: Matt Barber, Shopfloor Matters (shopfloormatters.com).", ""]
+    for b in bots:
+        robots += [f"User-agent: {b}", "Allow: /", ""]
+    robots += ["User-agent: *", "Allow: /", "", f"Sitemap: {SITE}/sitemap.xml", ""]
+    (DIST / "robots.txt").write_text("\n".join(robots), encoding="utf-8")
+    write_llms(posts, paths, glossary)
+    write_feeds(posts, paths)
 
     (DIST / ".nojekyll").write_text("")
     if relative:

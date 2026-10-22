@@ -1,0 +1,446 @@
+# Glossary. One page per term at /glossary/<slug>, plus the index at /glossary/.
+# Fields: term, stands (expansion, optional), short (one line), body (Matt's angle), articles (slugs), see_also (term slugs)
+
+- term: Agentic AI
+  short: AI that plans and carries out tasks towards a goal, using other software, rather than only answering questions.
+  body: The important word is acts. An agent might re-sequence a schedule or raise a maintenance request, which is powerful and also why it needs limits. On the shopfloor I'd start with agents that prepare information and recommend, with a person making the call.
+  articles: [agentic-ai-mcp-manufacturing, practical-genai-for-the-shopfloor]
+  see_also: [mcp, genai, ai]
+
+- term: AI
+  stands: Artificial intelligence
+  short: Systems that perform tasks normally needing human intelligence, such as recognising patterns or predicting outcomes.
+  body: AI is the broad category, with machine learning and generative AI as two quite different subsets. In a factory, AI is only as good as the shopfloor data it learns from, which is why the data foundation comes first.
+  articles: [ai-ml-genai-on-the-shopfloor, the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence]
+  see_also: [ml, genai, agentic-ai]
+
+- term: APS
+  stands: Advanced planning and scheduling
+  short: Software for detailed, finite-capacity production scheduling beyond what ERP provides.
+  body: APS sequences work in days and hours, respecting changeovers, tooling, labour and material. Many factories don't need one. It earns its place when sequencing is genuinely hard, and many ERP suites include it as a module.
+  articles: [aps-vs-mes-scheduling, mes-basics-production-scheduling]
+  see_also: [erp, mrp, mes]
+
+- term: As-built record
+  short: The record of exactly what went into a finished item, including lots, serials, operators, measurements and process conditions.
+  body: The as-built is MES/MOM's job, because nobody else is there when it happens. It's the foundation of traceability, and for serialised products it's the genealogy you'll need years later when a field failure comes back.
+  articles: [ebom-mbom-as-built, service-data-back-to-engineering, manufacturing-traceability]
+  see_also: [ebom, mbom, genealogy, traceability]
+
+- term: Autonomous maintenance
+  short: Routine asset care such as cleaning and lubrication, carried out by operators rather than the maintenance team.
+  body: Operators notice problems first, so giving them day-to-day asset care is a good thing. It works best when their maintenance tasks sit in the same place they run production, not in a separate system with another login.
+  articles: [mes-functionality-maintenance, eam-cmms-and-mes]
+  see_also: [cmms, mtbf, predictive-maintenance]
+
+- term: Backflushing
+  short: Recording material consumption automatically after production, calculated from the bill of materials rather than actual usage.
+  body: Backflushing is better than nothing, but it records what should have been used rather than what was. MES/MOM posts actual consumption by order and lot, which improves ERP costing and gives you real traceability.
+  articles: [manufacturing-traceability, implementing-mes-can-simplify-your-erp]
+  see_also: [bom, traceability, erp]
+
+- term: Batch
+  short: A defined quantity of material produced together and treated as one unit for quality and traceability.
+  body: Batch manufacturing sits between discrete and process, and is common in food and pharma. In regulated industries the batch record is the heart of compliance.
+  articles: [discrete-vs-process-manufacturing, lims-and-mes, mes-in-regulated-industries]
+  see_also: [lot, ebr, traceability]
+
+- term: BOM
+  stands: Bill of materials
+  short: The list of materials and components, with quantities, needed to make a product.
+  body: The BOM changes shape as it moves from design to a finished product, from engineering BOM to manufacturing BOM to order BOM to the as-built record. Most integration arguments come from not agreeing who owns which stage.
+  articles: [ebom-mbom-as-built, erp-master-data-for-mes]
+  see_also: [ebom, mbom, as-built-record, routing]
+
+- term: Bottleneck
+  short: The machine or operation with the lowest throughput, which limits the output of the whole line.
+  body: OEE should be measured on the bottleneck, and an hour lost there is an hour lost for the whole line. When you ask what a 1% OEE improvement is worth, work it out for your bottleneck.
+  articles: [what-is-oee-overall-equipment-effectiveness, can-mes-improve-your-bottom-line]
+  see_also: [oee, cycle-time]
+
+- term: CAPA
+  stands: Corrective and preventive action
+  short: A structured process for fixing quality problems and stopping them recurring.
+  body: CAPA usually lives in an enterprise QMS. The loop breaks when shopfloor defects never reach it with their context, so the CAPA team ends up asking for details nobody can remember.
+  articles: [qms-and-mes-quality]
+  see_also: [qms, spc]
+
+- term: Changeover
+  short: Switching a line or machine from one product to the next, including setup and adjustment.
+  body: In high-mix, low-volume manufacturing, changeovers are often the biggest constraint on throughput. Measuring them accurately is the first step to reducing them, and tracking tools and setters together turns them into planned activities.
+  articles: [manufacturing-kpis-beyond-oee, mes-functionality-tooling]
+  see_also: [oee, bottleneck]
+
+- term: CMMS
+  stands: Computerised maintenance management system
+  short: Software for managing maintenance work orders and spare parts.
+  body: A CMMS is the lighter, maintenance-team version of EAM. Whatever you use, production and maintenance need to agree on downtime, so connect it to MES/MOM or run maintenance inside MES/MOM.
+  articles: [eam-cmms-and-mes, mes-functionality-maintenance]
+  see_also: [eam, mtbf, mttr]
+
+- term: Composable ERP
+  short: An approach where ERP focuses on core business functions and specialist applications handle the rest, connected through open integration.
+  body: As ERP vendors pull back to core business functions, the shopfloor is increasingly left to applications built for it, such as MES/MOM. It's one of the forces driving demand in the MES market.
+  articles: [an-overview-of-the-mes-market, what-is-erp]
+  see_also: [erp, mes]
+
+- term: Connected worker
+  short: Digital tools that connect frontline workers to the information, instructions and tasks they need.
+  body: Checklists, shift handover, skills, work instructions and safety sign-offs. It solves real frontline problems. I'd build it into MES/MOM rather than add a standalone app, so operators have one screen that knows what's running.
+  articles: [connected-worker-one-app-not-five, digital-work-instructions, skills-enforcement-shopfloor, digital-shift-handover]
+  see_also: [shift-handover, mom, genai]
+
+- term: Contextualised data
+  short: Shopfloor data enriched with the order, material, machine, shift, operator and reason behind each event.
+  body: A signal that says a machine stopped tells you very little. Context is what turns it into decisions and, eventually, into something AI can learn from. On the shopfloor, most of that context comes from MES/MOM.
+  articles: [contextualised-manufacturing-data, manufacturing-data-platforms]
+  see_also: [mes, uns, historian]
+
+- term: Control limits
+  short: Limits calculated from a process's own data, usually three standard deviations either side of the average.
+  body: Control limits describe what the process normally does. They're different from specification limits, which come from the customer. A process can drift out of control while still in spec, and that's exactly what SPC exists to catch.
+  articles: [spc-on-the-shopfloor]
+  see_also: [spc, cpk]
+
+- term: Cpk
+  stands: Process capability index
+  short: A measure of how well a process stays within its specification limits.
+  body: Cpk compares the natural spread of a process with the specification, and takes into account how well centred it is. It's a common question for a knowledge assistant at the line, because few people remember the calculation.
+  articles: [spc-on-the-shopfloor, practical-genai-for-the-shopfloor]
+  see_also: [spc, control-limits]
+
+- term: CPQ
+  stands: Configure, price, quote
+  short: Software that lets sales or customers configure a product from options and rules, and produces a valid, priced quote.
+  body: An accepted configuration is a list of choices, not something the shopfloor can build. ERP usually resolves it into an order-specific BOM and routing before MES/MOM sees it as a normal order.
+  articles: [cpq-to-shopfloor]
+  see_also: [erp, plm, bom]
+
+- term: Cycle time
+  short: The time it takes to produce one unit, compared with the target.
+  body: Cycle time variation across shifts and operators is one of the clearest signs of an unstandardised process. The target cycle time also drives the OEE performance figure, so keep it honest.
+  articles: [manufacturing-kpis-beyond-oee, what-is-oee-overall-equipment-effectiveness]
+  see_also: [oee, changeover]
+
+- term: Digital thread
+  short: The connected flow of product data from design, through planning and production, to service and back again.
+  body: It sounds great on a slide. In practice the thread has knots, especially at the handover between engineering and production. In most manufacturers it runs from PLM through ERP to MES/MOM.
+  articles: [plm-erp-mes-digital-thread, service-data-back-to-engineering]
+  see_also: [plm, ebom, as-built-record]
+
+- term: Digital twin
+  short: A virtual model of an asset, process or factory, kept in sync with the real thing through live data.
+  body: A twin is only as good as the data feeding it. MES/MOM doesn't do the simulation, but it supplies much of the operational reality that keeps a twin honest.
+  articles: [mes-and-digital-twins]
+  see_also: [contextualised-data, historian]
+
+- term: EAM
+  stands: Enterprise asset management
+  short: Software for managing the full lifecycle of physical assets, usually across many sites.
+  body: EAM covers the asset register, maintenance plans, work orders and the financial side of assets. It makes sense for asset-heavy operations with advanced needs, connected to MES/MOM so downtime data is consistent.
+  articles: [eam-cmms-and-mes, mes-functionality-maintenance]
+  see_also: [cmms, mtbf, mttr]
+
+- term: EBOM
+  stands: Engineering bill of materials
+  short: The product as designed, structured by function, held in PLM.
+  body: The EBOM usually leaves out packaging, labels, consumables and the jig you need to hold a part. Restructuring it into the manufacturing BOM is a step that needs one clear owner.
+  articles: [ebom-mbom-as-built, plm-erp-mes-digital-thread]
+  see_also: [mbom, plm, bom]
+
+- term: EBR
+  stands: Electronic batch record
+  short: A digital record of every step, material, measurement and signature in a batch, enforced by the system as it runs.
+  body: In pharma a paper batch record can run to hundreds of pages. An EBR in MES/MOM enforces the sequence and flags deviations as they happen, with weights taken from connected instruments, so QA can review by exception.
+  articles: [mes-in-regulated-industries]
+  see_also: [batch, review-by-exception]
+
+- term: Edge
+  short: Computing done close to the machines rather than in a central data centre or the cloud.
+  body: In a hybrid deployment, machine connectivity and critical shopfloor functions often run at the edge, with data buffered locally, so production keeps going if the connection to the cloud drops.
+  articles: [cloud-vs-on-premises-mes, ai-ml-genai-on-the-shopfloor]
+  see_also: [iiot, ot]
+
+- term: ERP
+  stands: Enterprise resource planning
+  short: The system that runs the business side of a manufacturer on one set of data, from finance and orders to planning and costing.
+  body: A good ERP is the backbone of a manufacturing business, and it deserves more credit than it gets. It plans and accounts for production rather than running it minute by minute, which is where specialist applications complement it.
+  articles: [what-is-erp, implementing-mes-can-simplify-your-erp, smart-factory-tech-stack]
+  see_also: [mes, mrp, composable-erp]
+
+- term: FPY
+  stands: First-pass yield
+  short: The percentage of output that passes every quality check first time, with no rework.
+  body: A line can have a decent OEE quality rate and still be quietly reworking a lot of what it makes. First-pass yield exposes that, so agree the definition before you compare numbers across sites.
+  articles: [manufacturing-kpis-beyond-oee]
+  see_also: [oee, scrap-rate]
+
+- term: GenAI
+  stands: Generative AI
+  short: AI that generates content such as text and code, including large language models.
+  body: GenAI's sweet spot is helping people rather than controlling machines. Shift summaries and a knowledge assistant at the line both work today, as long as it has good, contextualised data.
+  articles: [practical-genai-for-the-shopfloor, ai-ml-genai-on-the-shopfloor, ai-for-frontline-workers]
+  see_also: [ai, ml, agentic-ai]
+
+- term: Genealogy
+  short: The full parent and child history of material, tracing what went into each product and where each input ended up.
+  body: Genealogy is the core of traceability, in both directions. The difference between adequate and excellent traceability is everything captured alongside it, from tooling to process parameters.
+  articles: [manufacturing-traceability, ebom-mbom-as-built]
+  see_also: [traceability, lot, serialisation]
+
+- term: Historian
+  short: A database designed to store high-frequency time-series data from machines and sensors.
+  body: Historians hold the raw, high-frequency data that MES/MOM doesn't need to keep, and engineers use them for troubleshooting and trends. They sit alongside MES/MOM rather than replacing it.
+  articles: [manufacturing-data-platforms]
+  see_also: [contextualised-data, iiot]
+
+- term: IEC 62443
+  short: The main international standard for industrial automation and OT cybersecurity.
+  body: Its core idea is grouping assets into zones with similar security needs and controlling the conduits between them. MES/MOM usually sits in the site operations zone, with an industrial DMZ between it and the enterprise network.
+  articles: [ot-cybersecurity-for-mes]
+  see_also: [ot, isa-95]
+
+- term: IIoT
+  stands: Industrial Internet of Things
+  short: Connecting machines, sensors and devices so their data can be collected and used.
+  body: IIoT is a concept, delivered by several kinds of system, and it lives in the connectivity layer. It feeds MES/MOM rather than replacing it, because collecting machine data is a small part of running a factory.
+  articles: [iiot-vs-mes, opc-ua-mqtt-uns-explained]
+  see_also: [opc-ua, mqtt, uns]
+
+- term: Industry 4.0
+  slug: industry-4-0
+  short: The label for the current wave of connected, data-driven manufacturing technology.
+  body: I'd rather describe what something does than give it a version number. A smart factory is defined by outcomes such as defined processes and real-time data, not by which revolution it belongs to.
+  articles: [what-is-a-smart-factory, introduction-to-mes-and-smart-manufacturing]
+  see_also: [smart-factory, iiot]
+
+- term: ISA-95
+  short: The international standard for integrating enterprise and control systems, also published as IEC 62264.
+  body: ISA-95 splits a factory into levels from the physical process up to ERP, with MES/MOM at level 3. Its real value is the discipline it brings to integration, starting with which system owns each piece of data.
+  articles: [what-is-the-isa-95-model-and-where-does-mes-fit, isa95-integration-patterns]
+  see_also: [mom, mes, erp]
+
+- term: ISO 22400
+  short: The international standard defining manufacturing KPIs, including OEE.
+  body: You don't need to memorise it, but it's worth knowing it exists, especially if you're comparing figures across sites or systems that might calculate them differently.
+  articles: [manufacturing-kpis-beyond-oee, what-is-oee-overall-equipment-effectiveness]
+  see_also: [oee, fpy]
+
+- term: Kaizen
+  short: Continuous improvement, made in small steps by everyone, at the place where the work happens.
+  body: Kaizen is a core idea in the Toyota Production System. MES/MOM supports it with standardised processes and accurate data, so improvement rests on facts and you can prove each change worked.
+  articles: [implementing-kaizen-principles-with-mes-for-lean-manufacturing-success, mes-go-live]
+  see_also: [oee, smart-factory]
+
+- term: LIMS
+  stands: Laboratory information management system
+  short: Software for managing lab samples, tests, results and certificates of analysis.
+  body: In process industries, LIMS runs the lab while MES/MOM runs the batch. The two meet at the sample, which should be born with its batch context rather than a handwritten label.
+  articles: [lims-and-mes]
+  see_also: [batch, qms]
+
+- term: Lot
+  short: A quantity of material with a unique identifier, used for tracking and traceability.
+  body: Lot numbers often change by day or by production order. Knowing exactly how much of each lot went into each output is what separates full traceability from order-level estimates.
+  articles: [mes-functionality-inventory-management, manufacturing-traceability]
+  see_also: [batch, serialisation, genealogy]
+
+- term: MBOM
+  stands: Manufacturing bill of materials
+  short: The product as it will be built, restructured around the process and usually held in ERP.
+  body: The MBOM adds what the EBOM leaves out, such as consumables, packaging, labels and phantom kits, and groups sub-assemblies by where they're built. ERP needs it to plan, purchase and cost.
+  articles: [ebom-mbom-as-built, plm-erp-mes-digital-thread]
+  see_also: [ebom, bom, routing]
+
+- term: MCP
+  stands: Model Context Protocol
+  short: An open standard that lets AI agents connect to other software systems and use their data and functions.
+  body: MCP gives agents a common way to talk to applications without a custom integration for every pairing, while the system stays in control of what's exposed. That's useful in a factory, where agents may need to work across dozens of systems.
+  articles: [agentic-ai-mcp-manufacturing]
+  see_also: [agentic-ai, genai]
+
+- term: MES
+  stands: Manufacturing execution system
+  short: The production pillar of manufacturing operations, running orders on the shopfloor and recording output and downtime.
+  body: MES is the original term and still the one most people search for. It's one part of MOM rather than another name for it, and the difference matters most when you decide what to buy.
+  articles: [what-is-mes-and-why-is-it-important-in-manufacturing, mes-vs-mom, mes-functionality-inventory-logistics-overview]
+  see_also: [mom, erp, isa-95]
+
+- term: MESA-11
+  short: The 1997 model from MESA International setting out eleven core functions of an MES.
+  body: The list was already far broader than production execution, covering quality, maintenance, labour, documents and genealogy. That breadth is what we now call MOM. MESA ceased operation in June 2026 and ISA took on its work.
+  articles: [who-are-mesa-and-how-do-they-define-mes]
+  see_also: [mes, mom]
+
+- term: ML
+  stands: Machine learning
+  short: A type of AI where algorithms are trained on historical data to predict outcomes.
+  body: Machine learning has been in factories for longer than most people realise, through SPC-style thinking and predictive maintenance. It needs a clear question and good data, then a model you train and refine before you trust it.
+  articles: [ai-ml-genai-on-the-shopfloor, predictive-maintenance-data]
+  see_also: [ai, genai, predictive-maintenance]
+
+- term: MOM
+  stands: Manufacturing operations management
+  short: The whole operation on one set of data, covering production, quality, inventory and maintenance.
+  body: The term exists because the scope grew. MOM lines up with the four areas of manufacturing operations defined in ISA-95, and the broadest platforms go further into tooling, energy, skills and connected worker.
+  articles: [mes-vs-mom, what-is-mes-and-why-is-it-important-in-manufacturing]
+  see_also: [mes, isa-95, connected-worker]
+
+- term: MQTT
+  short: A lightweight publish-and-subscribe messaging protocol widely used for IIoT.
+  body: Devices publish messages to a broker and interested systems subscribe. MQTT doesn't define what the data means on its own; extensions such as Sparkplug add structure. It often works alongside OPC UA.
+  articles: [opc-ua-mqtt-uns-explained]
+  see_also: [opc-ua, uns, iiot]
+
+- term: MRP
+  stands: Material requirements planning
+  short: The ERP process that works out what to make and buy, and when, from demand, stock and lead times.
+  body: MRP mostly assumes infinite capacity, or uses rough-cut checks. When sequencing needs to respect real constraints, that's the job of APS or a dispatch list in MES/MOM.
+  articles: [what-is-erp, aps-vs-mes-scheduling]
+  see_also: [erp, aps]
+
+- term: MTBF
+  stands: Mean time between failures
+  short: The average time equipment runs between breakdowns.
+  body: MTBF tells you how often equipment fails. It depends on accurate downtime data, which is why production and maintenance need to record the same stops.
+  articles: [manufacturing-kpis-beyond-oee, mes-functionality-maintenance]
+  see_also: [mttr, cmms]
+
+- term: MTTR
+  stands: Mean time to repair
+  short: The average time it takes to fix equipment after a breakdown.
+  body: Together with MTBF, MTTR shows whether reliability is improving and where maintenance effort is best spent.
+  articles: [manufacturing-kpis-beyond-oee, mes-functionality-maintenance]
+  see_also: [mtbf, eam]
+
+- term: OEE
+  stands: Overall equipment effectiveness
+  short: Availability multiplied by performance multiplied by quality.
+  body: OEE compares the good product you made with what the line could have made in the time it was planned to run. Measure it on the bottleneck, from automatic data, and use it to find losses rather than to compare people.
+  articles: [what-is-oee-overall-equipment-effectiveness, manufacturing-kpis-beyond-oee, can-mes-improve-your-bottom-line]
+  see_also: [bottleneck, iso-22400, fpy]
+
+- term: OPC UA
+  stands: Open Platform Communications Unified Architecture
+  short: The industry standard for secure, structured machine-to-system communication.
+  body: OPC UA carries structure and meaning as well as values, and it has security built in. If there's one connectivity standard to know, it's this one.
+  articles: [opc-ua-mqtt-uns-explained]
+  see_also: [mqtt, uns, plc]
+
+- term: OT
+  stands: Operational technology
+  short: The hardware and software that monitors and controls physical equipment, as opposed to IT.
+  body: In OT the priority is availability and safety rather than confidentiality. You can't patch a PLC on a Tuesday afternoon because a bulletin came out, and security has to respect that.
+  articles: [ot-cybersecurity-for-mes]
+  see_also: [iec-62443, plc, scada]
+
+- term: OTIF
+  stands: On time in full
+  short: The percentage of orders delivered complete and on the promised date.
+  body: OTIF connects shopfloor performance to the customer. You can have great OEE and still miss deliveries if the wrong things were made at the wrong time.
+  articles: [manufacturing-kpis-beyond-oee]
+  see_also: [oee]
+
+- term: PLC
+  stands: Programmable logic controller
+  short: An industrial computer that controls machines and processes.
+  body: PLCs sit at levels 1 and 2 of ISA-95. MES/MOM reads from them, and sometimes sends setpoints down, but ERP should never be wired to them directly.
+  articles: [the-history-of-mes-and-digitalisation-in-manufacturing, smart-factory-technology-mistakes]
+  see_also: [scada, opc-ua, ot]
+
+- term: PLM
+  stands: Product lifecycle management
+  short: The system holding product designs, specifications, engineering BOMs and engineering changes.
+  body: PLM is the source of truth for what a product is, not for how or where you build it. Product data usually reaches the shopfloor through ERP, with a direct link for rich content where it helps.
+  articles: [plm-erp-mes-digital-thread, ebom-mbom-as-built]
+  see_also: [ebom, digital-thread, erp]
+
+- term: Predictive maintenance
+  short: Using condition data and failure history to forecast a failure before it happens.
+  body: It's the last step after reactive, preventive and condition-based maintenance, and it starts with recording downtime accurately. Models also need operating context, which usually lives in MES/MOM.
+  articles: [predictive-maintenance-data, ai-ml-genai-on-the-shopfloor]
+  see_also: [ml, mtbf, autonomous-maintenance]
+
+- term: QMS
+  stands: Quality management system
+  short: Software for enterprise quality processes such as CAPA, complaints, audits and document control.
+  body: A QMS runs quality over weeks and months across sites and suppliers, while MES/MOM runs it at the point of production. Connect them so the right non-conformances reach the QMS with full context.
+  articles: [qms-and-mes-quality]
+  see_also: [capa, spc, lims]
+
+- term: Review by exception
+  short: Reviewing only the parts of a batch record that went outside the normal path, instead of every page.
+  body: It's possible when an electronic batch record enforces the sequence and flags deviations as they happen.
+  articles: [mes-in-regulated-industries, lims-and-mes]
+  see_also: [ebr, batch]
+
+- term: Routing
+  short: The sequence of operations needed to make a product, with the equipment and cycle times for each.
+  body: ERP routings are often set to what costing needed and nothing more. MES/MOM needs to know which machines each operation runs on, with realistic cycle and setup times.
+  articles: [erp-master-data-for-mes, ebom-mbom-as-built]
+  see_also: [bom, mbom, cycle-time]
+
+- term: SCADA
+  stands: Supervisory control and data acquisition
+  short: Systems that monitor and control equipment in real time.
+  body: If SCADA is mainly used for visibility, MES/MOM can often cover it. In heavier process industries with real control loops, keep both and agree a clear boundary.
+  articles: [scada-vs-mes]
+  see_also: [plc, ot, mes]
+
+- term: Scrap rate
+  short: The percentage of output that's waste.
+  body: Scrap throws away the machine time and labour that went into the part as well as the material. In food and process industries, yield is often the biggest single profit lever.
+  articles: [manufacturing-kpis-beyond-oee, can-mes-improve-your-bottom-line]
+  see_also: [fpy, oee]
+
+- term: Serialisation
+  short: Giving each individual item a unique identifier so it can be tracked on its own.
+  body: Serial items are common in discrete manufacturing and essential for products you'll service later. When something fails in the field, the serial number is the key that links the service record to the as-built record.
+  articles: [mes-functionality-inventory-management, service-data-back-to-engineering]
+  see_also: [lot, genealogy, as-built-record]
+
+- term: Shift handover
+  short: The transfer of status, issues and open actions from one shift to the next.
+  body: Most handovers are a quick chat at the door. Build them from MES/MOM data on what actually happened, then let the supervisor add what only a person knows.
+  articles: [digital-shift-handover, practical-genai-for-the-shopfloor]
+  see_also: [connected-worker, genai]
+
+- term: Smart factory
+  short: A manufacturing environment where people, processes and technology work together, supported by data, to maximise efficiency, flexibility and quality.
+  body: No version number required. It comes down to defined processes, planning connected to execution, real-time data at the point of work, one source of truth and people backed to make the call.
+  articles: [what-is-a-smart-factory, smart-manufacturing-maturity-model, smart-factory-tech-stack]
+  see_also: [industry-4-0, mom]
+
+- term: SPC
+  stands: Statistical process control
+  short: Using statistics to monitor a process and detect drift before it produces defects.
+  body: Inspection tells you a part is bad; SPC tells you it's about to be. It belongs at the line, in front of operators, not in a spreadsheet updated at the end of the week.
+  articles: [spc-on-the-shopfloor, mes-functionality-quality-operations]
+  see_also: [control-limits, cpk, capa]
+
+- term: Traceability
+  short: The ability to trace material forwards and backwards through production.
+  body: Order-level traceability in ERP is better than nothing. Full traceability adds serials, exact lot quantities, tooling, quality results and process parameters, and it's what turns a recall from a weekend into minutes.
+  articles: [manufacturing-traceability, mes-functionality-inventory-management]
+  see_also: [genealogy, lot, serialisation]
+
+- term: UNS
+  stands: Unified namespace
+  short: An architecture where operational data is published to one central place, organised by the plant hierarchy.
+  body: Done well, a UNS reduces integration spaghetti. Done badly, it's a very big pile of tags with no context. MES/MOM is one of the most valuable publishers into it.
+  articles: [opc-ua-mqtt-uns-explained, isa95-integration-patterns]
+  see_also: [mqtt, opc-ua, contextualised-data]
+
+- term: WIP
+  stands: Work in progress
+  short: Material that has started production but isn't finished.
+  body: When you can trust real-time WIP data, you stop holding buffers to cover for not trusting it, which frees working capital. On the shopfloor, WIP is MES/MOM's responsibility.
+  articles: [wms-vs-mes-inventory, can-mes-improve-your-bottom-line]
+  see_also: [wms, lot]
+
+- term: WMS
+  stands: Warehouse management system
+  short: Software for warehouse operations such as receiving, putaway, picking and storage.
+  body: Many manufacturers don't need one, because ERP and MES/MOM cover simpler warehouses. A WMS earns its place when warehouse volumes or automation get complex.
+  articles: [wms-vs-mes-inventory, mes-functionality-logistics-warehousing]
+  see_also: [wip, erp, mes]

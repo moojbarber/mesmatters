@@ -110,7 +110,7 @@ The answer is.....to identify where in the process the losses are occurring for 
 
 ## Data Capture
 
-To get the most accurate OEE figure it's crucial to invest in automatic data capture in real-time directly from the shopfloor equipment. This is usually captured via OPC.
+To get the most accurate OEE figure you need to invest in automatic data capture in real-time directly from the shopfloor equipment. This is usually captured via OPC.
 
 In the absence of automated OPC data, operators can capture this data manually but be aware that this will always give you a more positive view of your OEE figure because operators are unable to collect the detailed data, for example very short machine stops, sometimes only a few seconds will not be captured by operators, and sometimes short stops can have the biggest impact on production.
 

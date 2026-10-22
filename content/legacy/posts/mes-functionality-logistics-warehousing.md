@@ -12,7 +12,7 @@ wordCount: 2386
 ---
 
 ## Inventory and logistics in warehouses
-Tracking inventory movements in real-time allows manufacturers to optimise stock, reduce WIP (Work In Progress), and ensure that inventory is available when and where it is needed. Managing the flow of inventory in warehouses, between warehouses, and across the boundary into the production area is a crucial part of any inventory system.
+Tracking inventory movements in real-time allows manufacturers to optimise stock, reduce WIP (Work In Progress), and ensure that inventory is available when and where it is needed. Managing the flow of inventory in warehouses, between warehouses, and across the boundary into the production area is a core part of any inventory system.
 
 Logistics operations at a high level includes the following:
 
@@ -66,7 +66,7 @@ It's common to re-label inventory as it arrives in the factory to give it a stan
 Depending on the industry, an Advanced Shipment Notice (ASN) may be provided by the supplier, with information about the exact inventory on the delivery. This process is handled by ERP, and again the information about the expected inventory can be shared with MES.
 
 #### Replenishment to Production Lines
-It's crucial to ensure production has enough material to execute the planned production orders. If material is unavailable, the production line stops, affecting the OEE of the production line.
+Production needs to have enough material to execute the planned production orders. If material is unavailable, the production line stops, affecting the OEE of the production line.
 
 It's possible to manage replenishment manually, often a simple system like pushing an empty container forward to show it needs replacing is used. As the Logistics team move around the factory they spot these empty containers, pick them up, and replace them. This might work well in a smaller factory, where they same materials are always required, but for more complex operations this isn't a workable solution.
 

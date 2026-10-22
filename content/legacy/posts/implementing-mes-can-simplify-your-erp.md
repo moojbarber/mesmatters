@@ -19,7 +19,7 @@ Many companies today face the challenge of integrating various systems and proce
 
 ## MES complements ERP
 
-ERP systems are designed to manage and integrate core business processes such as finance, human resources, and supply chain management. These systems have revolutionised the way organisations operate by providing a centralised platform for data management and streamlining operations. However, ERP systems are not designed to handle the complexities of shop floor operations, which require real-time monitoring and control. This is where MES comes in.
+ERP systems are designed to manage and integrate core business processes such as finance, human resources, and supply chain management. These systems have transformed the way organisations operate by providing a centralised platform for data management and streamlining operations. However, ERP systems are not designed to handle the complexities of shop floor operations, which require real-time monitoring and control. This is where MES comes in.
 
 MES is specifically built to manage and control manufacturing operations, capturing real-time data from the shop floor and translating it into actionable insights. It acts as a bridge between the shop floor and the ERP system, enhancing the capabilities of both. By integrating MES with ERP, companies get a smooth flow of information and reduce manual data entry and reconciliation efforts.
 
@@ -41,7 +41,7 @@ The shop floor environment is dynamic and fast-paced, with numerous machines, op
 
 MES is specifically designed to address the unique needs of the shop floor. These systems provide real-time visibility into production lines, allowing operators and managers to monitor the status of machines, track production progress, and identify bottlenecks or issues that may arise. With MES, companies can capture granular data at every stage of the manufacturing process, enabling them to make data-driven decisions and optimise their operations.
 
-A strength of MES is its ability to track quality metrics. Quality control is crucial in manufacturing, and MES provides the tools to monitor and improve product quality. MES can transfer quality data, such as inspection results and defect rates, from the shop floor to ERP for further analysis and decision-making. For example, the ERP may need to know the quality results of materials provided by a supplier to determine how much they will pay for the materials.
+A strength of MES is its ability to track quality metrics. Quality control is essential in manufacturing, and MES provides the tools to monitor and improve product quality. MES can transfer quality data, such as inspection results and defect rates, from the shop floor to ERP for further analysis and decision-making. For example, the ERP may need to know the quality results of materials provided by a supplier to determine how much they will pay for the materials.
 
 MES offer real-time visibility into machine status and performance. By monitoring key parameters such as machine downtime, and cycle times, operators can quickly identify any issues or inefficiencies and take immediate action. This proactive approach to machine management can significantly reduce downtime and improve overall equipment effectiveness ([OEE](/post/what-is-oee-overall-equipment-effectiveness)).
 
@@ -94,7 +94,7 @@ A common misconception is that implementing an MES means that ERP no longer has 
 
 More often than not the introduction of MES significantly improves the quality of data in ERP, because MES posts "actuals" back to ERP, improving the accuracy of ERP costings, which are usually estimated through methods like backflushing.
 
-Accurate costings are crucial for companies to understand their profitability and make informed business decisions. So, relying solely on estimates can lead to inaccuracies and volatility in cost calculations.
+Companies need accurate costings to understand their profitability and make informed business decisions. So, relying solely on estimates can lead to inaccuracies and volatility in cost calculations.
 
 MES provides actual data on machine usage, labour hours, material consumption, energy usage, and much more. This ensures that the costings are based on real-time data, improving the accuracy of financial reporting and enabling companies to make more precise cost projections. MES supercharges your ERP.
 
@@ -102,7 +102,7 @@ MES provides actual data on machine usage, labour hours, material consumption, e
 
 Getting MES and ERP working together matters for companies looking to streamline their operations and level-up their productivity and effectiveness. By integrating these two systems, companies can achieve a holistic view of their entire manufacturing process, from resource planning to execution.
 
-MES and ERP working together provide real-time visibility into production operations, enable data-driven decision making, and keep information flowing across the organisation. This integration empowers companies to optimise their processes, reduce costs, improve productivity, and ultimately gain a competitive edge in the market.
+MES and ERP working together provide real-time visibility into production operations, enable data-driven decision making, and keep information flowing across the organisation. This integration helps companies optimise their processes, reduce costs, improve productivity, and ultimately gain a competitive edge in the market.
 
 ## An analogy: the menu and the fitness app
 

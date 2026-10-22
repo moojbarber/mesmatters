@@ -48,9 +48,25 @@
         <ol>{% for s in series_posts %}<li><a href="{{ base }}/post/{{ s.slug }}"{% if s.slug == p.slug %} aria-current="page"{% endif %}>{{ s.short }}</a></li>{% endfor %}</ol>
       </nav>
       {% endif %}
-      <div class="prose">
+      {% if p.summary %}
+      <aside class="tldr" aria-labelledby="tldr-h">
+        <span class="tldr-label" id="tldr-h">{{ p.summary_label }}</span>
+        <p>{{ p.summary }}</p>
+        <a class="tldr-more" href="#article-body">Find out more in the full article below</a>
+      </aside>
+      {% endif %}
+      <div class="prose" id="article-body">
 {{ body }}
       </div>
+      {% if p.faq %}
+      <section class="faq" aria-labelledby="faq-h">
+        <h2 id="faq-h">Common questions</h2>
+        {% for f in p.faq %}
+        <details{% if loop.first %} open{% endif %}><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>
+        {% endfor %}
+      </section>
+      {% endif %}
+      <p class="reviewed">Last reviewed {{ p.reviewed_long }} by <a href="{{ base }}/about">Matt Barber</a>.</p>
       <div class="post-end">
         {% for lp in p.paths or [] %}
         <div class="lp-next" data-lp-next-card="{{ lp.id }}" style="--c:{{ lp.color }};--rgb:{{ lp.rgb }}" hidden>

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% from "macros.html" import hero_bg, cta %}
+{% block main %}
+<section class="hero page-hero">
+  {{ hero_bg() }}
+  <div class="wrap">
+    <span class="tag">Glossary</span>
+    <h1>Shopfloor jargon, in plain English</h1>
+    <p class="kicker">{{ terms|length }} terms you'll hear in smart factory, MES/MOM and shopfloor AI projects. Each one has a short definition, my take on what it means in practice, and the articles that go deeper.</p>
+  </div>
+</section>
+<div class="wrap">
+  <nav class="gl-az" aria-label="Jump to letter">{% for l in letters %}<a href="#gl-{{ l }}">{{ l }}</a>{% endfor %}</nav>
+  {% for l in letters %}
+  <section class="gl-group" id="gl-{{ l }}" aria-labelledby="gl-h-{{ l }}">
+    <h2 id="gl-h-{{ l }}">{{ l }}</h2>
+    <div class="gl-grid">
+      {% for g in terms if g.term[0]|upper == l %}
+      <a class="gl-card" href="{{ base }}/glossary/{{ g.slug }}">
+        <b>{{ g.term }}</b>{% if g.stands %}<small>{{ g.stands }}</small>{% endif %}
+        <span>{{ g.short }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+  {{ cta(base, linkedin, kit_form) }}
+</div>
+{% endblock %}

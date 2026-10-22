@@ -21,11 +21,11 @@ Manufacturers had to rely on manual data collection and analysis to monitor thei
 
 Despite these challenges, manufacturers were still able to produce products using the technologies available at the time. However, it was a much more manual and labour-intensive process than it is today, making it difficult to achieve large production volumes and high-quality products. Manufacturers had to rely on the skills of their workers to produce products to the required specifications, and quality control was often done through visual inspection rather than sophisticated data analysis, or automation.
 
-As manufacturing became more mechanised and automated, the need for coordination and control became more important. The PLC was invented in 1968, and used for the first time by General Motors in 1969, revolutionising manufacturing. Since then it has become the norm for manufacturers to use computer systems to manage their operations. These early systems were often standalone and lacked the connectivity and integration capabilities of modern MES.
+As manufacturing became more mechanised and automated, the need for coordination and control became more important. The PLC was invented in 1968, and used for the first time by General Motors in 1969, transforming manufacturing. Since then it has become the norm for manufacturers to use computer systems to manage their operations. These early systems were often standalone and lacked the connectivity and integration capabilities of modern MES.
 
 ## Automation and operational systems
 
-The introduction of automation revolutionised the manufacturing industry, allowing manufacturers to monitor and control their operations in real-time and to optimise their processes for maximum efficiency and productivity. This first manifested as dedicated automation systems such as Supervisory Control and Data Acquisition (SCADA) systems. These systems integrated with plant equipment to control and monitor the manufacturing process. SCADA systems are still widely used today to monitor production.
+The introduction of automation transformed the manufacturing industry, allowing manufacturers to monitor and control their operations in real-time and to optimise their processes for maximum efficiency and productivity. This first manifested as dedicated automation systems such as Supervisory Control and Data Acquisition (SCADA) systems. These systems integrated with plant equipment to control and monitor the manufacturing process. SCADA systems are still widely used today to monitor production.
 
 Other departments also had their own systems. Quality departments for example would invest in a Quality Management System (QMS), or a Laboratory Information Management System (LIMS), or a Statistical Process Control (SPC) solution. The maintenance department would buy an Enterprise Asset Management (EAM) system, or a Computerised Maintenance Management System (CMMS).
 
@@ -35,13 +35,11 @@ MES is a single solution that manages the operations of all departments: Schedul
 
 MES has grown up to encompass all manufacturing operations, monitoring and managing factories in real-time, collecting vast quantities of data as a by-product of managing the process. MES captures data at a much more granular level of detail than ERP.
 
-The MES market is now going through rapid and substantial growth, driven by the significant investments in digital transformation, automation, and smart factories. Investing in MES is crucial for manufacturers to save costs, manage their supply chain, automate, and improve operational efficiency.
+Demand for MES/MOM has grown steadily, driven by investment in digital transformation and automation, and more recently by AI ambitions and pressure on the workforce. Yet many manufacturers, especially smaller ones, still run on paper and spreadsheets. I look at the current numbers in [An overview of the MES market](/post/an-overview-of-the-mes-market).
 
-MES is the culmination of many advances im manufacturing over the decades, bringing all operational data together in one system.
+MES is the culmination of many advances in manufacturing over the decades, bringing operational data together in one system.
 
-Manufacturing has come a long way, and progress has been rapid over recent years. A modern MES will continue to push the boundaries of future technologies, including Artificial Intelligence (AI), Machine Learning (ML), Internet of Things (IoTl, and big data and analytics.
-
-Unfortunately there are still many dated solutions on the market, with large customer bases and stale technology.
+The scope keeps growing. Modern MES/MOM platforms connect to IIoT devices, feed data platforms and analytics, and increasingly build AI into the tools operators and engineers use every day. How old or new a platform's technology is varies a lot across the market, so it's worth asking any vendor how their architecture has changed over the last few years.
 
 ## Where it goes next
 

@@ -9,6 +9,8 @@ art: tiles
 
 Manufacturing is full of jargon. This glossary explains the terms you'll hear most in smart factory projects, in a line or two each. Bookmark it and come back when someone in a meeting says "UNS" with a straight face.
 
+Every term also has its own page, with my take on what it means in practice and the articles that go deeper, in the [full glossary](/glossary/).
+
 | Term | Stands for | What it means |
 | --- | --- | --- |
 | Agentic AI | | AI systems that plan and carry out tasks towards a goal, using other software, rather than just answering questions. See [Agentic AI and MCP](/post/agentic-ai-mcp-manufacturing). |

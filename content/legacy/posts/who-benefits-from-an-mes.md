@@ -13,7 +13,7 @@ wordCount: 1704
 
 Well the short answer to the question is.......everyone!
 
-But let's delve in a little deeper and look at each user role related to manufacturing operations.
+But let's look a little deeper and look at each user role related to manufacturing operations.
 
 We've broken this down into three key user groups:
 
@@ -37,17 +37,17 @@ Supervisors oversee and manage a group of operators, or a collection of producti
 
 #### Production Scheduler
 
-Schedulers utilise the MES system to configure production schedules based on demand, available resources, and other constraints. They can optimise the sequencing of orders, assign tasks to workstations or operators, and monitor schedule adherence. The MES system empowers schedulers to improve production planning accuracy, minimize downtime, enhance resource utilization, and ensure on-time deliveries. MES usually downloads production orders directly from ERP, and then allows the scheduler to make fine-tune changes and resource allocations.
+Schedulers utilise the MES system to configure production schedules based on demand, available resources, and other constraints. They can optimise the sequencing of orders, assign tasks to workstations or operators, and monitor schedule adherence. The MES system helps schedulers improve production planning accuracy, minimize downtime, enhance resource utilization, and ensure on-time deliveries. MES usually downloads production orders directly from ERP, and then allows the scheduler to make fine-tune changes and resource allocations.
 
 #### Quality Engineer
 
-Quality engineers leverage the MES system to monitor and track quality-related data, including inspections,, defects, and non-conformances. They can use MES to set up quality control plans, define quality parameters and specifications, conduct statistical process control (SPC), and generate quality reports. MES provides quality engineers with real-time visibility into quality metrics, facilitates root cause analysis, supports corrective and preventive actions (CAPA), and enables continuous improvement in product quality and processes.
+Quality engineers use the MES system to monitor and track quality-related data, including inspections, defects, and non-conformances. They can use MES to set up quality control plans, define quality parameters and specifications, conduct statistical process control (SPC), and generate quality reports. MES provides quality engineers with real-time visibility into quality metrics, facilitates root cause analysis, supports corrective and preventive actions (CAPA), and enables continuous improvement in product quality and processes.
 
 The quality team could also use the MES system in a laboratory environment, taking samples from the production line to be tested offline. This could be elsewhere in the factory, offsite, or by a 3rd party.
 
 #### Continuous Improvement Engineer
 
-Continuous improvement personnel, such as Lean Six Sigma practitioners or process engineers, use the MES system to access production data, identify process inefficiencies, analyse trends, and implement improvement initiatives. They can leverage the MES system to track key performance indicators, conduct data-driven problem-solving, collaborate with cross-functional teams, and monitor the impact of improvement projects. By using an MES system, continuous improvement personnel can drive operational excellence, reduce waste, increase productivity, and enhance overall business performance.
+Continuous improvement personnel, such as Lean Six Sigma practitioners or process engineers, use the MES system to access production data, identify process inefficiencies, analyse trends, and implement improvement initiatives. They can use the MES system to track key performance indicators, conduct data-driven problem-solving, collaborate with cross-functional teams, and monitor the impact of improvement projects. By using an MES system, continuous improvement personnel can drive operational excellence, reduce waste, increase productivity, and enhance overall business performance.
 
 #### Logistics Personnel
 
@@ -91,7 +91,7 @@ The logistics manager oversees the movement of materials within the organisation
 
 #### Maintenance Manager
 
-The maintenance manager is responsible for managing and coordinating maintenance activities within the organisation. They interact with the MES system to schedule preventive maintenance tasks, track equipment performance, manage work orders, and generate maintenance reports. The MES system allows maintenance managers to optimise maintenance schedules, plan resources efficiently, track equipment downtime, streamline maintenance workflows, and implement predictive maintenance strategies. By leveraging an MES system, maintenance managers can enhance equipment reliability, reduce unplanned downtime, optimise maintenance costs, and improve overall maintenance effectiveness.
+The maintenance manager is responsible for managing and coordinating maintenance activities within the organisation. They interact with the MES system to schedule preventive maintenance tasks, track equipment performance, manage work orders, and generate maintenance reports. The MES system allows maintenance managers to optimise maintenance schedules, plan resources efficiently, track equipment downtime, streamline maintenance workflows, and implement predictive maintenance strategies. With an MES system, maintenance managers can enhance equipment reliability, reduce unplanned downtime, optimise maintenance costs, and improve overall maintenance effectiveness.
 
 ## Executives
 
@@ -107,11 +107,11 @@ The MES is a critical part of the IT landscape, it is the foundation of a smart 
 
 #### COO (Chief Operating Officer)
 
-The COO is responsible for the organisation's operations, including production, logistics, quality, and maintenance. They rely on the MES system to gain real-time visibility into operations, monitor performance metrics, identify bottlenecks, allocate resources efficiently, ensure compliance, and drive continuous improvement initiatives. By leveraging an MES system, the COO can enhance productivity, quality, and profitability.
+The COO is responsible for the organisation's operations, including production, logistics, quality, and maintenance. They rely on the MES system to gain real-time visibility into operations, monitor performance metrics, identify bottlenecks, allocate resources efficiently, ensure compliance, and drive continuous improvement initiatives. With an MES system, the COO can enhance productivity, quality, and profitability.
 
 #### CEO (Chief Executive Officer)
 
-The CEO uses the MES system to gain a high-level overview of the organisation's operations and performance. They can access key performance indicators, analyse trends, monitor production efficiency, ensure alignment with strategic goals, and make informed decisions based on real-time data. The MES system empowers CEOs to have a holistic view of the company's manufacturing operations, enabling them to drive growth, improve competitiveness, and maximize profitability.
+The CEO uses the MES system to gain a high-level overview of the organisation's operations and performance. They can access key performance indicators, analyse trends, monitor production efficiency, ensure alignment with strategic goals, and make informed decisions based on real-time data. The MES system gives CEOs a holistic view of the company's manufacturing operations, enabling them to drive growth, improve competitiveness, and maximize profitability.
 
 ## The #1 reason to invest
 

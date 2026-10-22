@@ -18,12 +18,12 @@ The Food & Beverage (F&B) sector is a fascinating but incredibly demanding lands
 ### Understanding the Core Hurdles:
 
 #### Food Safety & Quality: The Absolute Priority
-This is, without a doubt, paramount. In F&B, any lapse in food safety or quality can lead to immediate and severe consequences. A single product recall can not only incur massive financial costs from withdrawn goods but, more damagingly, irrevocably tarnish a brand's reputation and, most critically, pose significant health risks to consumers.
+This is, without a doubt, the top priority. In F&B, any lapse in food safety or quality can lead to immediate and severe consequences. A single product recall can not only incur massive financial costs from withdrawn goods but, more damagingly, irrevocably tarnish a brand's reputation and, most critically, pose significant health risks to consumers.
 
 Maintaining strict control and adherence to evolving standards – from the moment raw ingredients arrive, through every step of processing, to the final packaged product – isn't just good practice; it's the foundation of consumer trust. This includes managing allergens, preventing cross-contamination, and ensuring accurate labelling, all whilst adhering to industry regulations.
 
 #### Cost & Waste Optimisation: Protecting the Bottom Line
-With global markets influencing ingredient prices and energy costs, alongside shifts in consumer demands and seasonaility, optimising every aspect of production is crucial. In F&B, waste isn't just about wasted materials; it includes spoilage of perishable goods, inefficient use of energy in cooling or heating, over-production that leads to expired stock, and rework of batches that don't meet specification. for example - taste, appearance, or colour.
+With global markets influencing ingredient prices and energy costs, alongside shifts in consumer demands and seasonaility, optimising every aspect of production matters more than ever. In F&B, waste isn't just about wasted materials; it includes spoilage of perishable goods, inefficient use of energy in cooling or heating, over-production that leads to expired stock, and rework of batches that don't meet specification. for example - taste, appearance, or colour.
 
 Finding ways to minimise material 'give-away' in packaging, reduce scrap rates for expensive raw materials, blend more effectively, and enhance overall efficiency directly impacts profitability and sustainability goals.
 
@@ -31,7 +31,7 @@ Finding ways to minimise material 'give-away' in packaging, reduce scrap rates f
 Attracting, retaining, and effectively onboarding skilled labour for the factory floor is an ongoing difficulty across manufacturing, and F&B is no exception. The complexity of modern machinery, coupled with the precision required for food production, demands a knowledgeable workforce who are following the right processes in the right way, every time. Unfortunately, reliance on outdated, paper-based systems for training, documentation, and data capture can prevent quick onboarding of new hires and hinder existing operators from consistently following the correct processes. This can lead to increased errors, reduced productivity, and increased costs.
 
 #### Supply Chain Resilience & Traceability: Navigating Global Complexity
-The F&B supply chain is inherently complex and often global. Geopolitical events, climate impacts, and sudden shifts in demand can cause unexpected disruptions to the availability of crucial ingredients or packaging materials. Beyond ingredient availability, achieving clear visibility across the entire supply chain and maintaining immediate, end-to-end traceability of all components – from farm to fork – is vital.
+The F&B supply chain is inherently complex and often global. Geopolitical events, climate impacts, and sudden shifts in demand can cause unexpected disruptions to the availability of key ingredients or packaging materials. Beyond ingredient availability, achieving clear visibility across the entire supply chain and maintaining immediate, end-to-end traceability of all components – from farm to fork – is essential.
 
 This enables mitigation of risks, ensures product authenticity, helps combat food fraud (a term I only learnt recently), and facilitates swift, targeted responses in the event of a quality issue or recall.
 

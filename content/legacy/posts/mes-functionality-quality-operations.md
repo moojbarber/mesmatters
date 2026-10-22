@@ -140,7 +140,7 @@ Powerful analytical techniques such as Statistical Process Control (SPC) can be 
 
 #### Connection to metrology equipment
 
-Connecting to metrology equipment (gauges and measurement equipment) on the shopfloor is crucial for quality operations. Metrology equipment is used for making precise measurements and ensuring that products meet established quality standards. MES systems provide tools for connecting to metrology equipment, enabling manufacturers to collect measurement data in real-time and monitor product quality at every step of the production process. By integrating MES systems with metrology equipment, manufacturers can streamline quality processes, improve measurement accuracy, and reduce costs associated with manual data collection.
+Connecting to metrology equipment (gauges and measurement equipment) on the shopfloor is essential for quality operations. Metrology equipment is used for making precise measurements and ensuring that products meet established quality standards. MES systems provide tools for connecting to metrology equipment, enabling manufacturers to collect measurement data in real-time and monitor product quality at every step of the production process. By integrating MES systems with metrology equipment, manufacturers can streamline quality processes, improve measurement accuracy, and reduce costs associated with manual data collection.
 
 #### Document Management
 
@@ -168,6 +168,6 @@ One application across operations means super users only need to learn one appli
 
 ## Summary
 
-Improving quality operations are a big driver for manufacturers, and provide a competitive edge in the market. With the help of MES, manufacturers can gain a deep understanding of their quality operations, make data-driven decisions, and take proactive measures to address issues that arise. By leveraging MES, manufacturers can improve product quality, reduce costs, and increase customer satisfaction. Ultimately, integrating MES systems into quality operations can help manufacturers remain competitive and thrive in an increasingly complex and competitive marketplace.
+Improving quality operations are a big driver for manufacturers, and provide a competitive edge in the market. With the help of MES, manufacturers can gain a deep understanding of their quality operations, make data-driven decisions, and take proactive measures to address issues that arise. With MES, manufacturers can improve product quality, reduce costs, and increase customer satisfaction. Ultimately, integrating MES systems into quality operations can help manufacturers remain competitive and thrive in an increasingly complex and competitive marketplace.
 
 This article is part of the [MES functionality series](/post/mes-functionality-inventory-logistics-overview). Related: [Your traceability probably isn't as good as you think](/post/manufacturing-traceability).

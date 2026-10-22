@@ -131,7 +131,7 @@ Lots and serials can be tracked at two levels of granularity:
 1. Production Order Level
 2. Inventory Level
 
-ERP typically gives traceability at a production order level (although some can work at a finer granularity), whereas a good MES is able to track against the inventory being created on the process for additional detail. This is especially important for processes like assembly, where the exact serials being used are crucial to track.
+ERP typically gives traceability at a production order level (although some can work at a finer granularity), whereas a good MES is able to track against the inventory being created on the process for additional detail. This is especially important for processes like assembly, where the exact serials being used need to be tracked.
 
 ###### Silos
 
@@ -149,7 +149,7 @@ This is common in processes such as making printed circuit boards. Reels of inpu
 
 #### Inventory Management
 
-Tracking inventory movements in real-time allows manufacturers to optimise stock, reduce WIP (Work In Progress), and ensure that inventory is available when and where it is needed. Managing the flow of inventory in warehouses, between warehouses, and across the boundary into the production area is a crucial part of any inventory system.
+Tracking inventory movements in real-time allows manufacturers to optimise stock, reduce WIP (Work In Progress), and ensure that inventory is available when and where it is needed. Managing the flow of inventory in warehouses, between warehouses, and across the boundary into the production area is a core part of any inventory system.
 
 Inventory in the production area should always be managed in an MES if you have one. MES has the context of the production order, the material being made, and the bill of materials. This allows MES to consume inventory into the process, create new inventory and print labels, track traceability at a detailed inventory level.
 
@@ -199,7 +199,7 @@ If inventory is not good enough quality then it is scrapped. However, if it is s
 
 #### Printing Labels
 
-Labels are crucial for tracking inventory through the factory, labels uniquely identify the inventory, and specify key information such as the material, and quantity. Labels are also used in some processes to track state, although to avoid re-printing labels this is sometimes marked on the label with a pen or sticker.
+Labels are how you track inventory through the factory, labels uniquely identify the inventory, and specify key information such as the material, and quantity. Labels are also used in some processes to track state, although to avoid re-printing labels this is sometimes marked on the label with a pen or sticker.
 
 MES systems provide tools for printing inventory labels, enabling manufacturers to identify and track inventory items throughout the warehouse and production process. By automating the label printing process, manufacturers can reduce the risk of human error and ensure that inventory items are accurately identified and tracked.
 

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% from "macros.html" import hero_bg, card, cta %}
+{% block main %}
+<section class="hero page-hero">
+  {{ hero_bg() }}
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ base }}/">Home</a><span class="sep">/</span><a href="{{ base }}/glossary/">Glossary</a></nav>
+    <span class="tag">Glossary</span>
+    <h1>{{ g.term }}</h1>
+    {% if g.stands %}<p class="gl-stands">{{ g.stands }}</p>{% endif %}
+  </div>
+</section>
+<div class="wrap gl-term">
+  <aside class="tldr" aria-label="Definition">
+    <span class="tldr-label">Definition</span>
+    <p>{{ g.short }}</p>
+  </aside>
+  {% if g.body %}<div class="prose"><h2>In practice</h2><p>{{ g.body }}</p></div>{% endif %}
+  {% if g.articles %}
+  <h2 class="gl-sub">Read more</h2>
+  <div class="gl-reads">
+    {% for a in g.articles %}<a class="gl-read" href="{{ base }}/post/{{ a.slug }}"><img src="{{ base }}/images/art/{{ a.slug }}.svg" alt="" width="1600" height="900" loading="lazy"><span><small>{{ a.read_time }} min read</small><b>{{ a.short }}</b></span></a>{% endfor %}
+  </div>
+  {% endif %}
+  {% if g.see %}
+  <h2 class="gl-sub">Related terms</h2>
+  <div class="gl-see">{% for x in g.see %}<a href="{{ base }}/glossary/{{ x.slug }}">{{ x.term }}</a>{% endfor %}</div>
+  {% endif %}
+  <p class="reviewed"><a href="{{ base }}/glossary/">All glossary terms</a></p>
+  {{ cta(base, linkedin, kit_form) }}
+</div>
+{% endblock %}
