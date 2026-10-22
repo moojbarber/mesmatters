@@ -3,6 +3,7 @@ title: "Connected worker: why your operators need one app, not five"
 short: "Connected worker"
 description: "Connected worker solves real frontline problems. Bought as a standalone tool, it creates new ones. Why it belongs inside your MES/MOM, not alongside it."
 published: 2026-05-26
+updated: 2026-10-22
 category: thought-leadership
 art: worker
 ---
@@ -35,7 +36,7 @@ And the gap is getting wider. Deloitte and the Manufacturing Institute estimate 
 
 That changes the job of shopfloor software. It's no longer enough to record what happened. It has to guide a new starter through the process so they get it right on their second day, not their second year.
 
-Connected worker capabilities do exactly that. Which is why spending on them is growing fast, with Verdantix expecting the market to reach $3 billion by 2026, driven largely by labour shortages ([Verdantix](https://marketing.verdantix.com/blog/spending-on-connected-worker-solutions-market-set-to-reach-3-0-billion-by-2026-driven-by-the-need-to-tackle-labour-shortages-at-industrial-facilities)).
+Connected worker capabilities do exactly that. Which is why spending on them is growing fast, with Verdantix expecting the market to reach $3.24 billion by 2028, as manufacturers look to retain workers and keep them safe ([Verdantix, 2023](https://www.verdantix.com/insights/blog/connected-worker-solutions-market-to-reach-3.24-billion-dollars-by-2028-overcoming-initial-slow-growth)).
 
 ## The problem with standalone connected worker platforms
 
