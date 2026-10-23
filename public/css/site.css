@@ -1299,7 +1299,7 @@ button.ttt-label:hover{background:rgba(255,255,255,.04)}
   .ttt-grid{grid-template-columns:1fr}
   .ttt-ai-h{display:none}
   .ttt-ai{border-left:0;padding:4px 0 12px;gap:10px}
-  .ttt-ai:before{content:"AI value";flex:none;font:700 9.5px var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--b)}
+  .ttt-ai:before{content:"Shopfloor AI value";flex:none;font:700 9.5px var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--b)}
   .ttt-ai i{width:calc(var(--v) * .7)}
 }
 
@@ -1317,3 +1317,4 @@ button.ttt-label:hover{background:rgba(255,255,255,.04)}
 .ttt-cols p:nth-child(3){grid-column:2;grid-row:1/span 2}
 .ttt-cols p:nth-child(4){grid-column:2;grid-row:3}
 @media(max-width:700px){.ttt-cols p:nth-child(n){grid-column:1;grid-row:auto}}
+.ttt-ai-h{line-height:1.35;letter-spacing:.12em}
