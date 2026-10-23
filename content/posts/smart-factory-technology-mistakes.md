@@ -33,7 +33,7 @@ Too many people start with something small to fill a gap: an OEE tool, a checkli
 
 It solves the immediate problem. Then requirements grow. You need quality connected to production, inventory connected to quality, maintenance connected to downtime. The point solution can't do it.
 
-Now you're either replacing it, or adding more tools and connecting them. Stitching best-of-breed applications together can work, especially with a well-governed unified namespace, but every boundary is an interface to own and some context is lost at each one. Start with the end in mind. Whichever route you take, know how it grows, and what connecting the pieces will cost. I compare the options in [Build, stitch or configure](/post/build-vs-buy-mes).
+Now you're either replacing it, or adding more tools and connecting them. Stitching best-of-breed applications together can work, especially with a well-governed unified namespace, but every boundary is an interface to own and some context is lost at each one. Start with the end in mind. Whichever route you take, know how it grows, and what connecting the pieces will cost. I compare the options in [Code, build, stitch or configure](/post/build-vs-buy-mes).
 
 ## 4. Over-customising
 

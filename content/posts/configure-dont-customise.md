@@ -9,7 +9,7 @@ art: hexcore
 
 I see the same confusion every day when people talk about MES customisation.
 
-This article is about making a bought platform fit. If you're weighing that against building your own from building blocks, or stitching specialist tools together, I compare the three in [Build, stitch or configure](/post/build-vs-buy-mes).
+This article is about making a bought platform fit. If you're weighing that against writing your own, building from building blocks or stitching specialist tools together, I compare all four in [Code, build, stitch or configure](/post/build-vs-buy-mes).
 
 Everyone wants a system that "fits our processes". Vendors say their product is "fully flexible". And nobody defines what they mean. So let me break it down.
 
