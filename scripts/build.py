@@ -443,6 +443,8 @@ def relativise(page_html, rel):
         attr, path, tail = m.group(1), m.group(2), m.group(3)
         if not path:
             path = "index.html"
+        elif path.endswith("/"):
+            path = path + "index.html"
         elif "." not in path.rsplit("/", 1)[-1]:
             path = path.rstrip("/") + ".html"
         return f'{attr}="{prefix}/{path}{tail}"'
