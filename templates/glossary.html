@@ -20,14 +20,14 @@
         <summary>
           <b>{{ g.term }}</b>{% if g.stands %}<small>{{ g.stands }}</small>{% endif %}
           <span>{{ g.short }}</span>
-          <em class="gl-more">{% if g.mentions %}Mentioned in {{ g.mentions|length }} article{{ 's' if g.mentions|length != 1 }}{% else %}Read more{% endif %}<i aria-hidden="true"></i></em>
+          <em class="gl-more">{% if g.mentions %}Covered in {{ g.mentions|length }} article{{ 's' if g.mentions|length != 1 }}{% else %}Read more{% endif %}<i aria-hidden="true"></i></em>
         </summary>
         <div class="gl-open">
           {% if g.body %}<p class="gl-body">{{ g.body }}</p>{% endif %}
           {% if g.mentions %}
           <span class="micro">Where it comes up on the site</span>
           <ul class="gl-uses">
-            {% for m in g.mentions[:8] %}<li><a href="{{ base }}/post/{{ m.post.slug }}"><img src="{{ base }}/images/art/{{ m.post.slug }}.svg" alt="" width="1600" height="900" loading="lazy"><span><b>{{ m.post.short }}</b><small>{{ m.n }} mention{{ 's' if m.n != 1 }} · {{ m.post.read_time }} min read</small></span></a></li>{% endfor %}
+            {% for m in g.mentions[:8] %}<li><a href="{{ base }}/post/{{ m.post.slug }}"><img src="{{ base }}/images/art/{{ m.post.slug }}.svg" alt="" width="1600" height="900" loading="lazy"><span><b>{{ m.post.short }}</b><small>{% if m.n %}{{ m.n }} mention{{ 's' if m.n != 1 }}{% else %}Related reading{% endif %} · {{ m.post.read_time }} min read</small></span></a></li>{% endfor %}
           </ul>
           {% if g.mentions|length > 8 %}<p class="gl-extra">And {{ g.mentions|length - 8 }} more articles.</p>{% endif %}
           {% endif %}

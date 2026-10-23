@@ -1180,7 +1180,7 @@
   articles: [how-to-modernise-a-factory, manufacturing-change-management]
   see_also: [smart-factory, change-management]
 
-# ---------- added 23 October 2026: lean, quality, food, planning, maintenance, logistics, automation ----------
+# ---------- added 23 October 2026: lean, quality, food, logistics and automation terms used on the site ----------
 
 - term: 5S
   slug: 5s
@@ -1200,106 +1200,7 @@
   - spc-on-the-shopfloor
   - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
   see_also:
-  - dmaic
-  - lean-six-sigma
   - spc
-- term: DMAIC
-  stands: Define, measure, analyse, improve, control
-  short: The five-phase improvement cycle used in Six Sigma projects.
-  body: 'The measure and control phases are where MES/MOM helps most: a reliable baseline before the change, and SPC to hold the gain afterwards.'
-  articles:
-  - spc-on-the-shopfloor
-  - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
-  see_also:
-  - six-sigma
-  - pdca
-  - spc
-- term: Lean Six Sigma
-  short: A combination of lean's focus on removing waste with Six Sigma's focus on reducing variation.
-  body: Lean tells you where the waste is; Six Sigma helps you understand why a process varies. Both depend on accurate, contextualised shopfloor data.
-  articles:
-  - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
-  - spc-on-the-shopfloor
-  see_also:
-  - lean
-  - six-sigma
-  - dmaic
-- term: SMED
-  stands: Single-minute exchange of die
-  short: A method for cutting changeover time by moving as much setup work as possible to while the machine is still running.
-  body: You can only reduce what you measure. Recording changeover start, end and the waiting in between is the first step, and tool readiness tracking stops the order waiting for the tool.
-  articles:
-  - mes-functionality-tooling
-  - manufacturing-kpis-beyond-oee
-  see_also:
-  - changeover
-  - tool-life
-  - oee
-- term: TPM
-  stands: Total productive maintenance
-  short: An approach that involves everyone, operators included, in keeping equipment running, aiming for zero breakdowns and zero defects.
-  body: Autonomous maintenance by operators is one of its pillars. It works best when operators see their tasks, and log faults, on the same screen they use to run production.
-  articles:
-  - mes-functionality-maintenance
-  - preventive-vs-predictive-maintenance
-  see_also:
-  - autonomous-maintenance
-  - oee
-  - six-big-losses
-- term: Six big losses
-  short: 'The main causes of lost OEE: breakdowns, setups and adjustments, small stops, reduced speed, startup rejects and production rejects.'
-  body: They map neatly onto availability, performance and quality. Recording losses against these categories makes OEE something you can act on, not just a number.
-  articles:
-  - what-is-oee-overall-equipment-effectiveness
-  - manufacturing-kpis-beyond-oee
-  see_also:
-  - oee
-  - tpm
-  - micro-stop
-- term: Muda
-  short: 'The Japanese word for waste: any activity that adds cost without adding value for the customer.'
-  body: Lean usually lists seven or eight types, including waiting, defects, overproduction and excess movement. Real-time data shows where the waiting and the defects actually are.
-  articles:
-  - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
-  see_also:
-  - lean
-  - mura
-  - muri
-- term: Mura
-  short: Unevenness in a process, such as workloads or production volumes that swing from day to day.
-  body: Mura often causes muda and muri. Levelling the schedule is the usual cure.
-  articles:
-  - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
-  see_also:
-  - muda
-  - muri
-  - heijunka
-- term: Muri
-  short: 'Overburden: pushing people or equipment beyond what they can reasonably sustain.'
-  body: Overloaded machines break down and overloaded people make mistakes. Maintenance and skills data both help spot it before it costs you.
-  articles:
-  - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
-  see_also:
-  - muda
-  - mura
-- term: Jidoka
-  short: 'Automation with a human touch: equipment or people stop the process as soon as a problem is detected.'
-  body: It's the idea behind the andon cord and error-proofing. Stopping early is cheaper than finding the problem at final inspection.
-  articles:
-  - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
-  see_also:
-  - andon
-  - error-proofing
-  - lean
-- term: Poka-yoke
-  short: 'The Japanese lean term for error-proofing: designing a step so a mistake can''t happen or is caught straight away.'
-  body: On the shopfloor I usually just say error-proofing. Scanning to confirm the right material before it's consumed is a simple, effective example.
-  articles:
-  - mes-functionality-inventory-management
-  - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
-  see_also:
-  - error-proofing
-  - jidoka
 - term: Just-in-time
   short: Producing and delivering only what's needed, at the moment it's needed.
   body: JIT relies on accurate, real-time inventory and consumption data. Without it, buffers creep back in to cover for uncertainty.
@@ -1308,35 +1209,7 @@
   - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
   see_also:
   - kanban
-  - just-in-sequence
   - safety-stock
-- term: Just-in-sequence
-  short: Delivering parts to the line in the exact order they'll be used, common in automotive assembly.
-  body: It extends just-in-time to sequence. It needs the supplier, the warehouse and MES/MOM to agree on the build order in near real time.
-  articles:
-  - wms-vs-mes-inventory
-  - aps-vs-mes-scheduling
-  see_also:
-  - just-in-time
-  - kitting
-- term: Heijunka
-  short: Levelling production by volume and mix over time, so the workload stays even.
-  body: A levelled schedule is easier for the shopfloor and the supply chain. It's a planning decision that MES/MOM then helps the line execute.
-  articles:
-  - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
-  - aps-vs-mes-scheduling
-  see_also:
-  - mura
-  - takt-time
-- term: Value stream mapping
-  short: A lean technique for drawing the flow of material and information from order to delivery, to find waste and delays.
-  body: It complements the swimlane process maps I use before any system project. Both make the invisible handoffs visible.
-  articles:
-  - manufacturing-process-mapping
-  - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
-  see_also:
-  - process-mapping
-  - lean
 - term: Standard work
   short: The agreed, documented best way to do a task, used as the baseline for training and improvement.
   body: Without a standard, there can be no kaizen. Digital work instructions are how standard work reaches the operator at the moment it's needed.
@@ -1353,61 +1226,7 @@
   - manufacturing-traceability
   - qms-and-mes-quality
   see_also:
-  - 5-whys
-  - fishbone-diagram
   - capa
-- term: 5 Whys
-  slug: 5-whys
-  short: 'A simple root cause technique: keep asking why until you reach the underlying cause.'
-  body: It works well for straightforward problems. For anything with several interacting causes, combine it with data and a fishbone diagram.
-  articles:
-  - qms-and-mes-quality
-  - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
-  see_also:
-  - root-cause-analysis
-  - fishbone-diagram
-- term: Fishbone diagram
-  short: A cause-and-effect diagram, also called an Ishikawa diagram, that groups possible causes of a problem by category.
-  body: Common categories include people, methods, machines, materials, measurement and environment. Contextualised data helps you test each branch rather than guess.
-  articles:
-  - qms-and-mes-quality
-  see_also:
-  - root-cause-analysis
-  - 5-whys
-- term: Pareto analysis
-  short: Ranking problems by size to focus on the few causes that account for most of the loss, often summarised as the 80/20 rule.
-  body: A Pareto of downtime reasons is usually the first useful chart MES/MOM produces. It's only as good as the reason codes behind it.
-  articles:
-  - manufacturing-kpis-beyond-oee
-  - predictive-maintenance-data
-  see_also:
-  - downtime-reason-codes
-  - root-cause-analysis
-- term: A3
-  short: A structured problem-solving report that fits on one A3 sheet, from background and analysis to countermeasures and follow-up.
-  body: The discipline of one page forces clear thinking. Real data from the shopfloor makes the analysis section far stronger.
-  articles:
-  - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
-  see_also:
-  - pdca
-  - root-cause-analysis
-- term: Hoshin kanri
-  short: A lean method for strategy deployment, aligning goals from leadership down to daily work.
-  body: It connects the board's targets to what each line is measured on. That only works when everyone measures the same way.
-  articles:
-  - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
-  - mes-multi-site-rollout
-  see_also:
-  - lean
-  - kpi
-- term: Theory of constraints
-  short: A management approach that improves throughput by finding and strengthening the system's constraint, the bottleneck.
-  body: It's why OEE should be measured on the bottleneck. Improving anything else first rarely increases output.
-  articles:
-  - what-is-oee-overall-equipment-effectiveness
-  see_also:
-  - bottleneck
-  - throughput
 - term: Continuous improvement
   short: The ongoing effort to improve processes in small, regular steps rather than occasional big projects.
   body: After go-live, it becomes the rhythm. The difference with good data is that each improvement can be measured and proved.
@@ -1429,17 +1248,6 @@
   - oee
   - iso-22400
   - fpy
-- term: FMEA
-  stands: Failure mode and effects analysis
-  short: A structured way to identify how a product or process could fail, and to rank each failure by risk so the biggest are prevented first.
-  body: FMEA decides which characteristics are critical. Those are the ones that deserve in-process checks and SPC on the shopfloor.
-  articles:
-  - mes-functionality-quality-operations
-  - qms-and-mes-quality
-  see_also:
-  - control-plan
-  - spc
-  - capa
 - term: Control plan
   short: A document listing the checks, methods, frequencies and reactions needed to keep a process producing good product.
   body: Control plans are standard in automotive. MES/MOM turns them from a document into checks that are triggered and recorded at the line.
@@ -1447,18 +1255,8 @@
   - mes-in-regulated-industries
   - mes-functionality-quality-operations
   see_also:
-  - fmea
   - inspection-plan
   - ppap
-- term: 8D
-  short: An eight-discipline problem-solving method for customer complaints and serious quality issues, common in automotive.
-  body: Most of the time in an 8D goes on finding facts. A good as-built record shortens that dramatically.
-  articles:
-  - qms-and-mes-quality
-  - manufacturing-traceability
-  see_also:
-  - capa
-  - root-cause-analysis
 - term: Process capability
   short: How well a process can produce output within its specification limits, usually expressed as Cp or Cpk.
   body: A process can be stable and still incapable, if its natural spread is wider than the specification. SPC shows stability; capability shows whether stable is good enough.
@@ -1468,51 +1266,6 @@
   - cpk
   - control-limits
   - specification-limits
-- term: MSA
-  stands: Measurement system analysis
-  short: Checking that a measurement system is accurate and repeatable enough to trust, often through a gauge R&R study.
-  body: If the gauge varies more than the process, SPC charts are measuring the gauge. Check the measurement system before you chase process variation.
-  articles:
-  - spc-on-the-shopfloor
-  - mes-functionality-quality-operations
-  see_also:
-  - gauge-r-r
-  - metrology
-- term: Gauge R&R
-  slug: gauge-r-r
-  short: A study of how much measurement variation comes from the gauge itself (repeatability) and from different people using it (reproducibility).
-  body: It's the most common form of measurement system analysis.
-  articles:
-  - spc-on-the-shopfloor
-  see_also:
-  - msa
-  - metrology
-- term: SQC
-  stands: Statistical quality control
-  short: Using statistical methods, including sampling and control charts, to monitor and control quality.
-  body: SPC is the part of SQC that watches the process while it runs. Acceptance sampling is the part that judges finished lots.
-  articles:
-  - spc-on-the-shopfloor
-  see_also:
-  - spc
-  - acceptance-sampling
-- term: Acceptance sampling
-  short: Inspecting a sample from a lot and accepting or rejecting the whole lot based on the result.
-  body: It's common at goods receipt and final inspection. It judges a lot after it's made; SPC aims to stop bad lots being made at all.
-  articles:
-  - mes-functionality-quality-operations
-  see_also:
-  - aql
-  - sqc
-  - supplier-quality
-- term: AQL
-  stands: Acceptance quality limit
-  short: The worst defect rate considered acceptable on average in acceptance sampling.
-  body: AQL sets the sample size and the number of defects allowed before a lot is rejected.
-  articles:
-  - mes-functionality-quality-operations
-  see_also:
-  - acceptance-sampling
 - term: Defect
   short: A non-measurable flaw in a product, such as a scratch or dent, usually classed by severity.
   body: Recording defects by type and location, against the order and machine, is what turns a scrap count into something you can improve.
@@ -1539,15 +1292,6 @@
   - qms
   - iatf-16949
   - as9100
-- term: Quality 4.0
-  short: Applying digital technology and connected data to quality management.
-  body: Most of it rests on quality data captured at the point of production, linked to the order, lot and process conditions.
-  articles:
-  - mes-functionality-quality-operations
-  - qms-and-mes-quality
-  see_also:
-  - spc
-  - qms
 - term: HACCP
   stands: Hazard analysis and critical control points
   short: A food safety system that identifies hazards and controls them at specific critical points in the process.
@@ -1556,16 +1300,7 @@
   - food-manufacturing-mes-barriers
   - food-beverage-industry-challenges
   see_also:
-  - ccp
   - allergen-management
-- term: CCP
-  stands: Critical control point
-  short: A step in a food process where a control is essential to prevent or remove a safety hazard.
-  body: Each CCP has a limit, and a corrective action if it's breached. Recording them digitally at the moment of work gives auditors evidence instead of signatures.
-  articles:
-  - food-manufacturing-mes-barriers
-  see_also:
-  - haccp
 - term: Allergen management
   short: Controlling allergens through production so they don't contaminate products that shouldn't contain them.
   body: It shapes the schedule and the cleaning between runs. Sequencing allergen-free products first is a classic APS rule.
@@ -1573,26 +1308,7 @@
   - food-beverage-industry-challenges
   - aps-vs-mes-scheduling
   see_also:
-  - line-clearance
   - haccp
-- term: Line clearance
-  short: Checking that a line is cleared of the previous product and its labels before the next run starts.
-  body: It's a critical step in food and pharma. A digital checklist that blocks the order start until it's signed off makes it hard to skip.
-  articles:
-  - mes-in-regulated-industries
-  - connected-worker-one-app-not-five
-  see_also:
-  - allergen-management
-  - changeover
-- term: CIP
-  stands: Clean in place
-  short: Cleaning process equipment without dismantling it, by circulating cleaning solutions through it.
-  body: CIP cycles take line time and need recording. Linking them to production data shows their real effect on availability.
-  articles:
-  - food-manufacturing-mes-barriers
-  see_also:
-  - line-clearance
-  - changeover
 - term: Shelf life
   short: How long a product can be stored before it's no longer fit to sell or use.
   body: Shelf-life rules differ by product and drive how stock is picked. MES/MOM tracks expiry by lot so expired material can't be consumed.
@@ -1600,18 +1316,7 @@
   - food-manufacturing-mes-barriers
   - mes-functionality-inventory-management
   see_also:
-  - fefo
   - lot
-- term: FEFO
-  stands: First expired, first out
-  short: Picking stock with the earliest expiry date first.
-  body: Essential for perishable materials, where FIFO by receipt date isn't enough.
-  articles:
-  - mes-functionality-logistics-warehousing
-  - food-manufacturing-mes-barriers
-  see_also:
-  - fifo
-  - shelf-life
 - term: FIFO
   stands: First in, first out
   short: Using or shipping the oldest stock first.
@@ -1619,7 +1324,6 @@
   articles:
   - mes-functionality-logistics-warehousing
   see_also:
-  - fefo
   - wms
 - term: Give-away
   short: Product given away free by overfilling packs above their declared weight or volume.
@@ -1627,44 +1331,7 @@
   articles:
   - food-beverage-industry-challenges
   see_also:
-  - checkweigher
   - yield
-- term: Checkweigher
-  short: A machine that weighs every pack on the line and rejects any outside limits.
-  body: Its data shows both underweight risk and give-away. Connected to MES/MOM, it can feed SPC on fill weights.
-  articles:
-  - food-beverage-industry-challenges
-  - spc-on-the-shopfloor
-  see_also:
-  - give-away
-  - spc
-- term: Mass balance
-  short: Reconciling material inputs against outputs and waste, to show where everything went.
-  body: It's a common audit test of traceability, especially in food. Lot-level consumption data makes it quick rather than a weekend in spreadsheets.
-  articles:
-  - manufacturing-traceability
-  - food-manufacturing-mes-barriers
-  see_also:
-  - traceability
-  - yield
-- term: FSMA
-  stands: Food Safety Modernization Act
-  short: The US law that shifted food safety towards prevention, including enhanced traceability rules for certain foods.
-  body: It raised expectations for how fast food manufacturers can trace products. That's a shopfloor data question as much as a compliance one.
-  articles:
-  - food-manufacturing-mes-barriers
-  - manufacturing-traceability
-  see_also:
-  - haccp
-  - traceability
-- term: BRCGS
-  short: A widely used global food safety certification standard, often required by retailers.
-  body: Audits expect evidence of checks and traceability. Digital records make that evidence quick to produce.
-  articles:
-  - food-manufacturing-mes-barriers
-  see_also:
-  - haccp
-  - traceability
 - term: Electronic signature
   short: A digital sign-off that legally links a person to a record, as defined by regulations such as 21 CFR Part 11.
   body: It has to be attributable and secure, and linked to the exact record and meaning of the signature.
@@ -1690,65 +1357,6 @@
   see_also:
   - lims
   - batch-release
-- term: MPS
-  stands: Master production schedule
-  short: The plan of which finished products to make and when, which drives MRP.
-  body: It's an ERP-level plan in weeks. The shopfloor sees its consequences as production orders.
-  articles:
-  - what-is-erp
-  - aps-vs-mes-scheduling
-  see_also:
-  - mrp
-  - s-op
-  - aps
-- term: MRP II
-  slug: mrp-ii
-  stands: Manufacturing resource planning
-  short: An extension of MRP that adds capacity and financial planning, and the forerunner of modern ERP.
-  body: Most of what MRP II described now lives inside ERP.
-  articles:
-  - what-is-erp
-  see_also:
-  - mrp
-  - erp
-- term: ATP
-  stands: Available to promise
-  short: The quantity of stock or planned production not yet committed, which sales can promise to customers.
-  body: Promises are only as good as the data behind them. Accurate stock and production actuals from the shopfloor keep ATP honest.
-  articles:
-  - what-is-erp
-  see_also:
-  - ctp
-  - mps
-- term: CTP
-  stands: Capable to promise
-  short: A delivery promise that checks capacity and material as well as stock.
-  body: It needs realistic capacity data, which is where real OEE figures matter.
-  articles:
-  - what-is-erp
-  - aps-vs-mes-scheduling
-  see_also:
-  - atp
-  - capacity-planning
-- term: Make-to-stock
-  short: Producing standard products to a forecast and holding them in stock until customers order.
-  body: Accuracy of stock and forecast matters most. Overproduction is the classic lean waste here.
-  articles:
-  - cpq-to-shopfloor
-  - what-is-erp
-  see_also:
-  - make-to-order
-  - demand-planning
-- term: Make-to-order
-  short: Producing only once a customer order is received.
-  body: Lead time and schedule reliability matter most. The shopfloor needs to see each order's due date and progress in real time.
-  articles:
-  - cpq-to-shopfloor
-  - aps-vs-mes-scheduling
-  see_also:
-  - make-to-stock
-  - configure-to-order
-  - engineer-to-order
 - term: High-mix low-volume
   short: Manufacturing many different products in small quantities.
   body: Changeovers become the biggest constraint on throughput, and work instructions have to change with every order.
@@ -1757,17 +1365,7 @@
   - manufacturing-kpis-beyond-oee
   see_also:
   - changeover
-  - smed
   - digital-work-instructions
-- term: Batch size
-  short: The quantity produced in one run before changing over to something else.
-  body: Smaller batches mean less WIP and faster flow, but more changeovers. Reducing changeover time is what makes small batches affordable.
-  articles:
-  - discrete-vs-process-manufacturing
-  see_also:
-  - changeover
-  - smed
-  - wip
 - term: Utilisation
   short: The share of available time a resource is actually used.
   body: 'High utilisation isn''t always good: a busy non-bottleneck machine can just be building WIP. TEEP is the more useful measure for capacity decisions.'
@@ -1777,41 +1375,12 @@
   - teep
   - bottleneck
 - term: Speed loss
-  short: Running slower than the target rate, one of the six big losses and the main driver of OEE performance losses.
+  short: Running slower than the target rate, and the main driver of OEE performance losses.
   body: Speed losses are easy to miss because the line looks busy. Only counts against target cycle time reveal them.
   articles:
   - what-is-oee-overall-equipment-effectiveness
   see_also:
   - performance
-  - six-big-losses
-- term: OLE
-  stands: Overall labour effectiveness
-  short: A measure of how productively labour is used, built like OEE from availability, performance and quality.
-  body: It's useful where people, not machines, set the pace. It needs labour tracking by order and operation.
-  articles:
-  - manufacturing-kpis-beyond-oee
-  see_also:
-  - oee
-  - labour-tracking
-- term: MTTF
-  stands: Mean time to failure
-  short: The average time a non-repairable component lasts before it fails.
-  body: MTBF is for things you repair; MTTF is for things you replace.
-  articles:
-  - mes-functionality-maintenance
-  see_also:
-  - mtbf
-  - mttr
-- term: RCM
-  stands: Reliability-centred maintenance
-  short: A method for choosing the right maintenance strategy for each asset based on how it fails and what a failure costs.
-  body: It's the formal version of choosing per asset between run-to-failure, preventive, condition-based and predictive maintenance.
-  articles:
-  - preventive-vs-predictive-maintenance
-  see_also:
-  - preventive-maintenance
-  - condition-based-maintenance
-  - fmea
 - term: Maintenance work order
   short: An instruction to carry out maintenance on an asset, with tasks, parts, labour and sign-off.
   body: Linking each work order to the stops it fixed is how you find out whether the repair worked.
@@ -1837,7 +1406,6 @@
   - preventive-vs-predictive-maintenance
   see_also:
   - reactive-maintenance
-  - rcm
 - term: AS/RS
   slug: as-rs
   stands: Automated storage and retrieval system
@@ -1857,25 +1425,7 @@
   - wms-vs-mes-inventory
   - mes-functionality-logistics-warehousing
   see_also:
-  - amr
   - line-side-replenishment
-- term: AMR
-  stands: Autonomous mobile robot
-  short: A robot that moves material around a site and navigates by itself rather than along fixed routes.
-  body: Replenishment requests from the line are a natural trigger for AMR missions.
-  articles:
-  - wms-vs-mes-inventory
-  see_also:
-  - agv
-  - line-side-replenishment
-- term: Cobot
-  short: A collaborative robot designed to work safely alongside people.
-  body: Cobots change the work, not the need for instructions, skills and records. The operator's screen still needs to know what's running.
-  articles:
-  - ai-for-frontline-workers
-  - connected-worker-one-app-not-five
-  see_also:
-  - connected-worker
 - term: Goods receipt
   short: Recording the arrival of purchased material, often with a quality check before it's released for use.
   body: It's where lot traceability starts. Capture the supplier lot at receipt, or you can't trace it later.
@@ -1884,7 +1434,6 @@
   - wms-vs-mes-inventory
   see_also:
   - lot
-  - acceptance-sampling
   - supplier-quality
 - term: Putaway
   short: Moving received material into its storage location.
@@ -1912,7 +1461,6 @@
   see_also:
   - data-matrix
   - rfid
-  - gs1
 - term: Data matrix
   short: A compact two-dimensional code that can be printed or engraved on small parts.
   body: It's common for marking individual parts with a serial number, because it survives harsh environments when engraved.
@@ -1931,14 +1479,6 @@
   see_also:
   - barcode
   - traceability
-- term: GS1
-  short: The global organisation behind standard barcodes and identifiers used across supply chains.
-  body: GS1 standards let a lot or serial number be read the same way by every company in the chain.
-  articles:
-  - lot-vs-serial-traceability
-  see_also:
-  - barcode
-  - udi
 - term: Sensor
   short: A device that measures a physical property, such as temperature or vibration, and turns it into a signal.
   body: Sensors produce data; context makes it useful. Start with the sensors that tell you about your bottleneck.
@@ -1949,15 +1489,6 @@
   - iiot
   - plc
   - historian
-- term: Modbus
-  short: A simple, long-established industrial communication protocol, still common on older equipment.
-  body: Gateways often translate Modbus into OPC UA or MQTT so older machines can join a modern architecture.
-  articles:
-  - opc-ua-mqtt-uns-explained
-  see_also:
-  - opc-ua
-  - mqtt
-  - plc
 - term: Gateway
   short: A device or software that translates between industrial protocols, or between the plant network and other systems.
   body: Gateways let older equipment take part in OPC UA or MQTT architectures without replacing the controller.
@@ -1965,7 +1496,6 @@
   - opc-ua-mqtt-uns-explained
   - iiot-vs-mes
   see_also:
-  - modbus
   - opc-ua
   - edge
 - term: Smart manufacturing
@@ -1977,24 +1507,6 @@
   see_also:
   - smart-factory
   - industry-4-0
-- term: Industry 5.0
-  slug: industry-5-0
-  short: A European Commission concept that adds human-centric and sustainability goals to Industry 4.0.
-  body: I'd rather describe what something does than give it a version number. The human focus is welcome, though, and connected worker is where it shows up on the shopfloor.
-  articles:
-  - what-is-a-smart-factory
-  see_also:
-  - industry-4-0
-  - connected-worker
-- term: Lights-out manufacturing
-  short: Production that runs without people on site, fully automated.
-  body: It's rare and suits only certain processes. Most factories gain far more from making people more effective than from removing them.
-  articles:
-  - what-is-a-smart-factory
-  - ai-for-frontline-workers
-  see_also:
-  - smart-factory
-  - cobot
 - term: Simulation
   short: Modelling a process or factory on a computer to test changes before making them for real.
   body: Discrete event simulation is the common type for factory flow. A digital twin adds a live link to the real factory.

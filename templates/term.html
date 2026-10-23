@@ -26,7 +26,7 @@
   {% if extra %}
   <h2 class="gl-sub">Also mentioned in</h2>
   <ul class="gl-uses gl-uses-page">
-    {% for m in extra[:12] %}<li><a href="{{ base }}/post/{{ m.post.slug }}"><img src="{{ base }}/images/art/{{ m.post.slug }}.svg" alt="" width="1600" height="900" loading="lazy"><span><b>{{ m.post.short }}</b><small>{{ m.n }} mention{{ 's' if m.n != 1 }} · {{ m.post.read_time }} min read</small></span></a></li>{% endfor %}
+    {% for m in extra[:12] %}<li><a href="{{ base }}/post/{{ m.post.slug }}"><img src="{{ base }}/images/art/{{ m.post.slug }}.svg" alt="" width="1600" height="900" loading="lazy"><span><b>{{ m.post.short }}</b><small>{% if m.n %}{{ m.n }} mention{{ 's' if m.n != 1 }}{% else %}Related reading{% endif %} · {{ m.post.read_time }} min read</small></span></a></li>{% endfor %}
   </ul>
   {% endif %}
   {% if g.see %}

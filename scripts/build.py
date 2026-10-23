@@ -376,10 +376,12 @@ def glossary_mentions(posts, glossary):
         found = []
         for p in posts:
             text = re.sub(r"\]\([^)]*\)", "]", p["md"])
-            n = sum(len(re.findall(r"(?<![\w-])" + re.escape(f) + r"(?![\w-])", text, flags)) for f, flags in forms)
+            n = sum(len(re.findall(r"(?<![\w-])" + re.escape(f) + r"(?:s|es)?(?![\w-])", text, flags)) for f, flags in forms)
             if n:
                 found.append((n, p))
         found.sort(key=lambda x: (-x[0], x[1]["title"]))
+        seen = {p["slug"] for n, p in found}
+        found += [(0, a) for a in g["articles"] if a["slug"] not in seen]
         g["mentions"] = [{"post": p, "n": n} for n, p in found]
 
 
