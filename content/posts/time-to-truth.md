@@ -19,27 +19,27 @@ The answer tells you more about a factory than any framework slide. I call it ti
 
 ::block time-to-truth
 
-## Next week: paper and Excel
+## Eventually: paper and Excel
 
-The operator writes "machine fault, 40 minutes" on a downtime sheet. The sheet goes in a tray. On Friday someone types it into a spreadsheet, if it gets typed up at all.
+The operator writes "machine fault, 40 minutes" on a downtime sheet. The sheet goes in a tray. At some point someone types it into a spreadsheet, if it gets typed up at all.
 
 By the time anyone looks, the detail has gone. Which bearing? Was it the third time this month? Nobody can say, so the same failure happens again. And because every department keeps its own spreadsheet, every department has its own version of the number.
 
 **How you'll recognise it:** travellers on clipboards, downtime on a whiteboard, and a morning meeting that starts with someone reading out yesterday's numbers from a notebook.
 
-## Next morning: ERP on the shopfloor
+## End of hour or shift: ERP on the shopfloor
 
-Production and scrap are booked into ERP at a terminal at the end of the shift, or backflushed when the order closes. It's a real step forward. The quantities are in the system of record, and finance can cost the order.
+Production and scrap are booked into ERP at a terminal every hour or at the end of the shift, or backflushed when the order closes. It's a real step forward. The quantities are in the system of record, and finance can cost the order.
 
-The truth arrives the next morning, once the confirmations have posted. You know how many were good and what it cost. You don't know why 40 were scrapped or why the line stopped, because ERP's job is running the business. Watching what happens between an order starting and finishing is a different job.
+The truth arrives at the end of the hour or the shift, once someone books the confirmation. You know how many were good and what it cost. You don't know why 40 were scrapped or why the line stopped, because ERP's job is running the business. Watching what happens between an order starting and finishing is a different job.
 
 **How you'll recognise it:** accurate order totals, and nobody able to explain them.
 
-## End of shift: digitalised
+## After the fact: digitalised
 
 Tablets replace the clipboards, and point solutions arrive: an OEE tool on a couple of lines, a checklist app, a maintenance app and a quality tool. Data still gets typed in by hand, and the tools don't talk to each other.
 
-The truth arrives faster, by the end of the shift. But it's keyed in, so it's rounded. The short stops never make it in, and the downtime record doesn't know which order was running.
+The truth arrives sooner, but always after the fact. Someone keys it in once the stop is over, from memory or a scribbled note, so it's rounded. The short stops never make it in, and the downtime record doesn't know which order was running.
 
 **How you'll recognise it:** an app for every department, and a weekly report someone builds by copying between them.
 
@@ -67,17 +67,17 @@ AI agents work on trusted, contextualised data, inside clear guardrails. Systems
 
 ## Truth arrives in order
 
-You can't get to "before it happens" from "next week". Prediction needs history, and history needs data captured accurately and automatically, with its context. That's what the "right now" stage builds.
+You can't get to "before it happens" from "eventually". Prediction needs history, and history needs data captured accurately and automatically, with its context. That's what the "right now" stage builds.
 
 That's true for AI that learns from operational data: predictive maintenance, predictive quality, optimisation and anomaly detection all depend on it. Generative AI is a little different. It arrives already trained, and it can work on the documents and know-how every factory already has, however messy. Procedures, manuals, maintenance notes and shift logs all count. So GenAI pilots can start in the earliest stages, running alongside the foundation work rather than waiting for it. I go further into this in [AI won't fix your factory](/post/the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence).
 
-Most factories I see sit somewhere between "next week" and "end of shift". A few are genuinely "right now" across the board. The jump to right now is usually the biggest single step in value, because it's where data becomes trustworthy and departments start working from the same picture.
+Most factories I see sit somewhere between "eventually" and "after the fact". A few are genuinely "right now" across the board. The jump to right now is usually the biggest single step in value, because it's where data becomes trustworthy and departments start working from the same picture.
 
 ## Your factory has a shape, not a single answer
 
 This is the part a single maturity score hides. Time to truth is rarely the same everywhere.
 
-It's common to find machine stops logged "right now" while quality checks still arrive "next morning" on paper. Or a plant with excellent dashboards and nobody who owns the process behind them. One site can be well ahead of another in the same group.
+It's common to find machine stops logged "right now" while quality checks still arrive "eventually" on paper. Or a plant with excellent dashboards and nobody who owns the process behind them. One site can be well ahead of another in the same group.
 
 The slowest area sets the pace. Fast machine data doesn't help much if the reason, the quality result or the person who should act on it arrives a day later.
 

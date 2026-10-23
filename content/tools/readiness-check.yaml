@@ -2,21 +2,21 @@
 # Stages follow the time-to-truth article: how long until the right person knows what happened, with context.
 levels:
   - n: 1
-    name: Next week
+    name: Eventually
     state: Paper and Excel
     line: Paper on the floor and spreadsheets in the office. The truth gets typed up eventually, by which time the detail has gone.
     next: Get the basics visible. Map how one order really flows and agree what you'll measure. Then take the paper off one line. Don't buy anything until the process map is on the wall.
     read: [manufacturing-process-mapping, smart-factory-where-to-start, paperless-manufacturing]
   - n: 2
-    name: Next morning
+    name: End of hour or shift
     state: ERP on the shopfloor
-    line: Production and scrap booked into ERP. You know how many and what it cost, the next morning, but not why.
+    line: Production and scrap booked into ERP every hour or shift. You know how many and what it cost, but not why.
     next: Keep ERP doing what it does well, and add a shopfloor layer for what happens between an order starting and finishing. Start where the unexplained losses are biggest.
     read: [mes-vs-erp, mes-business-case, mes-mom-erp-compared]
   - n: 3
-    name: End of shift
+    name: After the fact
     state: Digitalised
-    line: Tablets and point solutions. Faster than paper, but still typed in by hand, and the tools don't talk to each other.
+    line: Tablets and point solutions. Faster than paper, but still typed in by hand after the event, and the tools don't talk to each other.
     next: This is where most of the value is waiting. Getting to "right now" is usually the biggest single jump, because it's where the data becomes trustworthy. Check that what you've already bought can grow into an integrated platform, rather than adding another island.
     read: [mes-business-case, shopfloor-applications-explained, how-to-choose-an-mes]
   - n: 4

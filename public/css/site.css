@@ -1204,7 +1204,8 @@ form.signup p.fine{font:400 13px/1.5 var(--body);letter-spacing:0;max-width:none
 @keyframes ttt-run{0%{opacity:0;left:var(--from)}8%{opacity:1}88%{opacity:1}100%{opacity:0;left:var(--to)}}
 .ttt-note{position:absolute;top:calc(50% + 10px);left:calc(var(--to) + 14px);font:500 12.5px/1.3 var(--body);font-style:normal;color:var(--mut);white-space:nowrap}
 .s1 .ttt-note{left:auto;right:calc(100% - var(--to));top:calc(50% + 12px);text-align:right}
-.s2 .ttt-note,.s3 .ttt-note{left:auto;right:calc(100% - var(--to));top:calc(50% + 12px);text-align:right}
+.s2 .ttt-note{left:auto;right:calc(100% - var(--to));top:calc(50% + 12px);text-align:right}
+.s3 .ttt-note{top:calc(50% - 9px)}
 .s4 .ttt-note{top:calc(50% - 26px)}
 .ttt-note.left{left:calc(var(--ev) + 14px);top:calc(50% - 9px)}
 .s6 .ttt-note{left:calc(var(--ev) + 40px);top:50%;transform:translateY(-50%);white-space:normal;max-width:calc(100% - var(--ev) - 44px);color:var(--tx)}

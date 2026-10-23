@@ -26,7 +26,7 @@ The first month is about listening and looking, not buying.
 
 **Walk the shopfloor, on every shift.** Including nights. You'll see workarounds that never made it into the SOP, and paper in places nobody mentioned.
 
-**Find your time to truth.** Pick a real stoppage from last week and trace when each person found out, and what they knew. Most factories land somewhere between "next week" and "next morning", and usually later than they think. See [Time to truth](/post/time-to-truth).
+**Find your time to truth.** Pick a real stoppage from last week and trace when each person found out, and what they knew. Most factories land somewhere between "eventually" and "after the fact", and usually further back than they think. See [Time to truth](/post/time-to-truth).
 
 **List every system and spreadsheet.** ERP, any MES or point solutions, quality tools, maintenance systems, the spreadsheets that actually run things, and who owns each one. It's often longer than anyone expected.
 
