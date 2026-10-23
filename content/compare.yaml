@@ -1,0 +1,14 @@
+# The Compare hub (/compare). Groups of "X vs Y" articles, in display order.
+# Each entry shows the article's short title and the first sentence of its summary from answers.yaml.
+intro: "Short, straight answers to the comparisons people ask about most, from MES vs ERP to UNS vs MES. Each one links to the full article, with a side-by-side table and the questions to ask."
+groups:
+  - name: Business and planning systems
+    slugs: [mes-vs-erp, mes-vs-mom, mes-mom-erp-compared, mrp-vs-mes, aps-vs-mes-scheduling, wms-vs-mes-inventory, plm-erp-mes-digital-thread]
+  - name: Control and connectivity
+    slugs: [scada-vs-mes, dcs-vs-mes, historian-vs-mes, iiot-vs-mes, uns-vs-mes, opc-ua-vs-mqtt, it-vs-ot, isa-95-vs-isa-88, mes-and-digital-twins]
+  - name: Operations on the floor
+    slugs: [qms-and-mes-quality, lims-and-mes, eam-cmms-and-mes, preventive-vs-predictive-maintenance, connected-worker-one-app-not-five, lot-vs-serial-traceability, oee-vs-teep]
+  - name: Choosing an approach
+    slugs: [build-vs-buy-mes, low-code-vs-mes, cloud-vs-on-premises-mes, discrete-vs-process-manufacturing]
+  - name: AI on the shopfloor
+    slugs: [ai-ml-genai-on-the-shopfloor, ai-copilots-vs-agents]

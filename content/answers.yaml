@@ -449,3 +449,63 @@ lot-vs-serial-traceability:
       a: "Lot traceability gives a quantity of material one identifier, so you know which lots went into which lots. Serial traceability gives every individual item its own identifier, so you know exactly which components went into exactly which unit. Serial is more precise in a recall but needs every item marked and scanned."
     - q: "Do I need serial traceability?"
       a: "It depends on the product. Regulated devices, aerospace parts and products you'll service in the field often need serial-level records. Many other manufacturers are well served by lot-level traceability with tight lot sizes, recorded as material is actually consumed rather than backflushed afterwards."
+
+uns-vs-mes:
+  summary: "A unified namespace (UNS) is an architecture for sharing live data: systems publish what they know to a central broker, organised by the plant hierarchy, and others subscribe. MES/MOM is an application that runs the operation: it dispatches orders, guides operators, enforces checks and keeps the history with its context. A UNS shows what's happening now, so it doesn't replace MES/MOM on its own. Most factories get the best results using both, with MES/MOM publishing contextualised data into the UNS."
+  faq:
+    - q: "Can a unified namespace replace an MES?"
+      a: "For simple visibility, such as live machine status and counts, a UNS with some light applications can cover a lot. It doesn't replace MES/MOM for orders, quality, traceability and enforced processes, because a UNS shows the current state rather than keeping history or running business logic. Most architectures use both."
+    - q: "Why can't you calculate OEE in a UNS?"
+      a: "You can publish the current OEE to a UNS, but you can't aggregate published OEE figures by order or by shift. That needs the raw availability, performance and quality data, stored with its history and calculated consistently, which is the job of MES/MOM or another system that keeps the data."
+    - q: "How do UNS and MES/MOM work together?"
+      a: "Machines publish to the namespace. MES/MOM subscribes to the machine data it needs, adds the context of the order, material lot, operator and shift, and publishes that contextualised data back. Other systems, such as data platforms and AI applications, then subscribe to rich operational events rather than raw signals."
+
+low-code-vs-mes:
+  summary: "Low-code platforms give your own team the tools to build shopfloor apps quickly, which suits smaller companies with tech-savvy teams and narrow scope. MES/MOM platforms arrive with orders, genealogy, quality, inventory and maintenance already modelled on one data model, which suits larger and multi-site operations wanting a standard way of working. They're built for different kinds of business, and many manufacturers combine them, with low-code filling gaps at the edges."
+  faq:
+    - q: "Can a low-code platform replace an MES?"
+      a: "For a narrow scope and a capable internal team, a low-code platform can cover a lot of what a small plant needs. The trade-off is that you design the data model and build and support every app yourself, and it's easy to end up with disconnected apps. For broad scope across many sites, most manufacturers get more from configuring an MES/MOM platform."
+    - q: "Is low-code faster than building software from scratch?"
+      a: "Usually much faster. Configuring screens and logic in a low-code environment avoids writing and maintaining most of the code. Many MES/MOM platforms now include their own low-code tools for screens, reports and workflows as well."
+    - q: "Can you use low-code alongside MES/MOM?"
+      a: "Yes, and many manufacturers do. MES/MOM runs the core operation, and low-code apps handle site-specific or niche needs at the edges. If the MES/MOM has its own low-code tools, those apps can share the same data model."
+
+mrp-vs-mes:
+  summary: "MRP (material requirements planning) is the part of ERP that works out what to make and buy, and when, from demand, bills of materials, stock and lead times. MES/MOM runs that work on the shopfloor and records what actually happened, with context. MRP plans in days and weeks; MES/MOM works in seconds and minutes. Most manufacturers need both, and accurate feedback from MES/MOM is what keeps the MRP plan honest."
+  faq:
+    - q: "What is the difference between MRP and MES?"
+      a: "MRP plans: it calculates the production and purchase orders needed to meet demand. MES/MOM executes: it dispatches those orders on the shopfloor and records quantities, scrap, downtime, materials consumed and genealogy."
+    - q: "Is MRP part of ERP?"
+      a: "Yes. MRP is a planning process inside ERP, sometimes extended as MRP II to include capacity and other resources. MES/MOM is a separate shopfloor system that sits between ERP and the equipment, at ISA-95 level 3."
+    - q: "Why does MES data matter to MRP?"
+      a: "MRP plans from the stock and yields it believes are true. If production is booked late or rounded, the plan is built on the wrong numbers. MES/MOM captures what actually happened as it happens, so the next MRP run starts from reality."
+
+dcs-vs-mes:
+  summary: "A distributed control system (DCS) controls continuous and batch processes in real time, holding temperatures, pressures, flows and levels at their setpoints at ISA-95 levels 1 and 2. MES/MOM manages the operation around the process at level 3: orders, materials, genealogy, quality, samples and the batch record. A DCS batch manager runs the recipe's control steps, while MES/MOM handles the order and materials, and keeps the evidence. Most process plants with complex materials or regulatory needs use both."
+  faq:
+    - q: "Does a DCS replace an MES?"
+      a: "No. A DCS controls the process. It typically doesn't manage material status and genealogy across the warehouse, coordinate sampling and lab results, handle orders from ERP or produce a complete electronic batch record. Those are MES/MOM jobs."
+    - q: "Where does a DCS end and MES/MOM begin?"
+      a: "The boundary is usually the batch. MES/MOM releases a batch order with the recipe and confirmed materials. The DCS or batch manager executes the control steps. Process data and events flow back to MES/MOM, which ties them to the order and the lots used."
+    - q: "Can we extend our DCS to do MES functions?"
+      a: "Some plants do, through custom code. It can work, but it puts business logic inside a control system that wasn't designed for it, so every change carries control-system risk and validation effort."
+
+isa-95-vs-isa-88:
+  summary: "ISA-88 (S88, IEC 61512) is the batch control standard, first published in 1995. It defines physical, process, procedural and recipe models, and separates recipes from equipment. ISA-95 (IEC 62264), with Part 1 published in 2000, standardises how manufacturing operations connect to the business, defining the four areas of operations and the data ERP and MES/MOM exchange. ISA-88 lives mainly at the control level, ISA-95 mainly at level 3 and the boundary with ERP, and batch process plants usually need both."
+  faq:
+    - q: "What is the difference between ISA-88 and ISA-95?"
+      a: "ISA-88 standardises batch control: how recipes and equipment are modelled inside the control system. ISA-95 standardises how manufacturing operations are organised and integrated with business systems such as ERP. One looks down into the process, the other looks up to the business."
+    - q: "Do discrete manufacturers need ISA-88?"
+      a: "Rarely in detail. ISA-95 matters most for discrete manufacturers, especially when integrating ERP and MES/MOM. ISA-88's idea of separating product definitions from equipment is still worth knowing."
+    - q: "How do ISA-88 and ISA-95 fit together?"
+      a: "They were designed to be compatible. ISA-88's process cells and units sit under ISA-95's areas and work centres, giving one equipment hierarchy from ERP to the control module. MES/MOM handles the batch order and materials, the batch manager runs the phases, ISA-95 describes the exchange between them and ISA-88 describes what happens inside."
+
+ai-copilots-vs-agents:
+  summary: "An AI copilot helps a person when they ask, answering questions or drafting content, while the person decides what to do. An AI agent is given a goal, plans the steps and acts through business systems to complete the task, either with a person approving or within limits the business has agreed. In manufacturing, copilots are usually the easier first step, and agents typically start with a human in the loop. Both depend on accurate, contextualised operational data."
+  faq:
+    - q: "What is the difference between an AI copilot and an AI agent?"
+      a: "A copilot responds to a request, one answer at a time, and the person acts. An agent works through multiple steps towards a goal, using tools and systems, and takes actions itself, with approval or within agreed limits."
+    - q: "What does an AI agent do in a factory?"
+      a: "Examples include raising a maintenance work order with the spare part reserved for a supervisor to approve, re-sequencing tomorrow's schedule around a late delivery, flagging materials that won't arrive in time, or preparing a deviation investigation pack for the quality team. They act through business systems, not by controlling equipment."
+    - q: "Should we start with copilots or agents?"
+      a: "Most manufacturers start with copilots, because they're low risk and quickly show where the data needs work. Agents follow, starting with tasks where a person approves every action, and move towards autonomy one decision at a time."

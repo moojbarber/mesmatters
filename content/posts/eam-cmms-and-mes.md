@@ -1,6 +1,6 @@
 ---
-title: "EAM, CMMS and MES: who owns the maintenance work order?"
-short: "EAM, CMMS and MES"
+title: "CMMS vs EAM vs MES: who owns the maintenance work order?"
+short: "CMMS vs EAM vs MES"
 description: "Maintenance data sits in EAM, CMMS, ERP and MES/MOM. Where each one's job starts and stops, and the integration options that keep downtime data consistent."
 published: 2026-09-17
 category: education

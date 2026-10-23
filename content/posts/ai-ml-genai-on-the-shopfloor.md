@@ -1,6 +1,6 @@
 ---
-title: "AI, ML and GenAI on the shopfloor: what each one actually does"
-short: "AI, ML and GenAI explained"
+title: "AI vs ML vs GenAI on the shopfloor: what each one actually does"
+short: "AI vs ML vs GenAI"
 description: "AI, machine learning and generative AI get used interchangeably. They shouldn't be. What each one is, where it earns its keep in a factory, and what it needs."
 published: 2026-05-21
 category: thought-leadership

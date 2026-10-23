@@ -1,6 +1,6 @@
 ---
-title: "Connected worker: why your operators need one app, not five"
-short: "Connected worker"
+title: "Connected worker vs MES: why your operators need one app, not five"
+short: "Connected worker vs MES"
 description: "Connected worker solves real frontline problems. Bought as a standalone tool, it creates new ones. Why it belongs inside your MES/MOM, not alongside it."
 published: 2026-05-26
 category: thought-leadership

@@ -485,6 +485,7 @@ def write_llms(posts, paths, glossary, tools=(), audiences=()):
            *[f"- [{g['title']}]({g['canonical']}): {g['summary'] or g['description']}" for g in posts if g.get("guide")],
            f"- [Learning paths]({SITE}/paths/): guided routes through the articles, in order",
            f"- [FAQ]({SITE}/faq/): short answers to common questions, each linked to the full article",
+           f"- [MES compared]({SITE}/compare/): straight answers to MES vs ERP, MOM, MRP, SCADA, DCS, UNS, low-code and other comparisons",
            f"- [Glossary]({SITE}/glossary/): definitions of MES, MOM, OEE, ISA-95, UNS and other shopfloor terms",
            f"- [Tools]({SITE}/tools/): free, vendor-neutral tools and templates",
            f"- [About Matt Barber]({SITE}/about): background and credentials",
@@ -843,6 +844,29 @@ def build(base, relative=False, include_scheduled=False):
               description=x["blurb"], canonical=f"{SITE}/tools/{x['id']}", t=x, tools_js=True,
               og_image=f"{SITE}/images/og/page-advice.png", jsonld=[jsonld(ld), jsonld(crumbs)])
 
+    # compare hub
+    cmp_cfg = yaml.safe_load((ROOT / "content" / "compare.yaml").read_text(encoding="utf-8"))
+    by_slug = {q["slug"]: q for q in posts}
+    def first_sentence(s):
+        parts = re.split(r"(?<=[.!?])\s+(?=[A-Z])", (s or "").strip())
+        out = parts[0]
+        if len(out) < 110 and len(parts) > 1:
+            out += " " + parts[1]
+        return out
+    compare = {"intro": cmp_cfg["intro"], "groups": []}
+    for g in cmp_cfg["groups"]:
+        items = [{"slug": s, "short": by_slug[s]["short"], "title": by_slug[s]["title"], "canonical": by_slug[s]["canonical"],
+                  "answer": first_sentence(by_slug[s]["summary"]) or by_slug[s]["description"]} for s in g["slugs"] if s in by_slug]
+        compare["groups"].append({"name": g["name"], "posts": items})
+    cmp_items = [x for g in compare["groups"] for x in g["posts"]]
+    write("compare/index.html", "compare.html", active="compare", seo_title="MES compared: MES vs ERP, MOM, SCADA, UNS and more | Shopfloor Matters",
+          description="Straight answers to the most common MES comparisons: MES vs ERP, MOM, MRP, SCADA, DCS, historian, IIoT, UNS, low-code and more, each linked to the full article.",
+          canonical=f"{SITE}/compare/", og_image=f"{SITE}/images/og/page-education.png", compare=compare,
+          jsonld=[jsonld({"@context": "https://schema.org", "@type": "CollectionPage", "name": "MES compared", "url": f"{SITE}/compare/",
+                          "author": person, "inLanguage": "en-GB",
+                          "mainEntity": {"@type": "ItemList", "itemListElement": [
+                              {"@type": "ListItem", "position": i + 1, "url": x["canonical"], "name": x["title"]} for i, x in enumerate(cmp_items)]}})])
+
     # industries and roles
     write("for/index.html", "audiences.html", active="for", seo_title="MES and the smart factory by industry and role | Shopfloor Matters",
           description="The smart factory and MES/MOM for food and beverage, automotive, packaging, metal fabrication and plastics, and for plant, IT and quality leaders.",
@@ -881,7 +905,7 @@ def build(base, relative=False, include_scheduled=False):
     urls += [(f"{SITE}/faq/", None), (f"{SITE}/glossary/", None)] + [(f"{SITE}/glossary/{g['slug']}", None) for g in glossary]
     urls += [(f"{SITE}/tools/", None)] + [(f"{SITE}/tools/{x['id']}", None) for x in tools]
     urls += [(f"{SITE}/for/", None)] + [(f"{SITE}/for/{a['id']}", None) for a in audiences]
-    urls += [(f"{SITE}/speaking", None), (f"{SITE}/ask", None)]
+    urls += [(f"{SITE}/speaking", None), (f"{SITE}/ask", None), (f"{SITE}/compare/", None)]
     urls += [(p["canonical"], p["updated"]) for p in posts]
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u, d in urls:

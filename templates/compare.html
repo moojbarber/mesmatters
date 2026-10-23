@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% from "macros.html" import hero_bg, cta %}
+{% block main %}
+<section class="hero page-hero">
+  {{ hero_bg() }}
+  <div class="wrap">
+    <span class="tag">Compare</span>
+    <h1>MES compared: straight answers</h1>
+    <p class="kicker">{{ compare.intro }}</p>
+  </div>
+</section>
+<div class="wrap">
+  {% for g in compare.groups %}
+  <section class="section tight">
+    <h2 class="label">{{ g.name }}</h2>
+    <ul class="cmp-list">
+      {% for p in g.posts %}
+      <li class="rv">
+        <a href="{{ base }}/post/{{ p.slug }}">
+          <b>{{ p.short }}</b>
+          <span>{{ p.answer }}</span>
+          <i aria-hidden="true">→</i>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+  {{ cta(base, linkedin, kit_form) }}
+</div>
+{% endblock %}

@@ -5,6 +5,7 @@
   short: AI that plans and carries out tasks towards a goal, using other software, rather than only answering questions.
   body: The important word is acts. An agent might re-sequence a schedule or raise a maintenance request, which is powerful and also why it needs limits. On the shopfloor I'd start with agents that prepare information and recommend, with a person making the call.
   articles:
+  - ai-copilots-vs-agents
   - agentic-ai-mcp-manufacturing
   - practical-genai-for-the-shopfloor
   see_also:
@@ -488,6 +489,7 @@
   short: The ERP process that works out what to make and buy, and when, from demand, stock and lead times.
   body: MRP mostly assumes infinite capacity, or uses rough-cut checks. When sequencing needs to respect real constraints, that's the job of APS or a dispatch list in MES/MOM.
   articles:
+  - mrp-vs-mes
   - what-is-erp
   - aps-vs-mes-scheduling
   see_also:
@@ -688,6 +690,7 @@
   short: An architecture where operational data is published to one central place, organised by the plant hierarchy.
   body: Done well, a UNS reduces point-to-point integrations and makes data easy to find and reuse. It shows what's happening now, so you still need applications around it to keep the history and add context. MES/MOM is one of the most valuable publishers into it.
   articles:
+  - uns-vs-mes
   - opc-ua-mqtt-uns-explained
   - isa95-integration-patterns
   see_also:
@@ -1253,11 +1256,24 @@
   short: A control system for continuous and batch processes, with control spread across the plant.
   body: Common in chemicals and other large process plants. Like SCADA, it sits at ISA-95 level 2, below MES/MOM.
   articles:
+  - dcs-vs-mes
+  - isa-95-vs-isa-88
   - what-is-the-isa-95-model-and-where-does-mes-fit
   - scada-vs-mes
   see_also:
   - scada
   - plc
+- term: ISA-88
+  stands: Batch control standard, also known as S88
+  short: The international standard for batch control, defining how recipes and equipment are modelled.
+  body: Its big idea is separating the recipe from the equipment, so the same recipe can run on different units. It lives mainly in the control system and fits alongside ISA-95, which covers the layer above.
+  articles:
+  - isa-95-vs-isa-88
+  - dcs-vs-mes
+  see_also:
+  - isa-95
+  - dcs
+  - recipe
 - term: HMI
   stands: Human-machine interface
   short: The screen or panel an operator uses to monitor and control a machine.
@@ -1357,6 +1373,7 @@
   short: Tools that let people build screens and logic by dragging and configuring rather than writing code.
   body: Low-code covers more complex needs without touching the product's code, so it stays upgradeable.
   articles:
+  - low-code-vs-mes
   - configure-dont-customise
   - build-vs-buy-mes
   see_also:
@@ -1448,6 +1465,7 @@
   short: An AI assistant built into the software people already use, answering questions in plain English.
   body: 'On the shopfloor, a copilot is only as good as its context: the order, material, recent stops and approved procedures.'
   articles:
+  - ai-copilots-vs-agents
   - ai-for-frontline-workers
   - practical-genai-for-the-shopfloor
   see_also:

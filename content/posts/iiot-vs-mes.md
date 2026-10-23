@@ -1,5 +1,5 @@
 ---
-title: "Why IIoT doesn't replace MES"
+title: "IIoT vs MES: why IIoT doesn't replace MES"
 short: "IIoT vs MES"
 description: "IIoT platforms sound cooler than MES. But connecting sensors is a small part of running a factory. Where IIoT fits, where MES/MOM fits, and why you need both."
 published: 2026-06-09

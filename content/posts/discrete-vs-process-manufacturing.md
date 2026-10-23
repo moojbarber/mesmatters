@@ -1,6 +1,6 @@
 ---
-title: "Discrete, process, batch or mixed-mode: why it changes your MES choice"
-short: "Manufacturing types"
+title: "Discrete vs process manufacturing: why it changes your MES choice"
+short: "Discrete vs process"
 description: "Not all manufacturing is the same. How discrete, process, batch, assembly and mixed-mode manufacturing differ, and why the type drives your data, KPIs and MES/MOM choice."
 published: 2026-04-29
 category: education
