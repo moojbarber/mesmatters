@@ -9,11 +9,11 @@ tools:
     title: Smart factory readiness check
     short: Readiness check
     eyebrow: Where are you today?
-    blurb: Twenty honest statements across five areas. See which maturity level you're really at, and where your weakest link is.
+    blurb: Twenty honest statements across five areas. Find your factory's time to truth, area by area, and where the slowest link is.
     minutes: 5
     icon: ladder
     color: "#8b6cff"
-    posts: [smart-manufacturing-maturity-model, smart-factory-where-to-start, what-is-a-smart-factory, how-to-modernise-a-factory, smart-manufacturing-myths, the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence]
+    posts: [time-to-truth, smart-factory-where-to-start, what-is-a-smart-factory, how-to-modernise-a-factory, smart-manufacturing-myths, the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence]
 
   - id: oee-one-percent
     kind: tool

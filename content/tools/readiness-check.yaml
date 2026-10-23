@@ -1,29 +1,29 @@
 # Smart factory readiness check. Five areas, four statements each, scored 1 to 5.
-# Levels follow the maturity model article (adapted from CMMI).
+# Stages follow the time-to-truth article: how long until the right person knows what happened, with context.
 levels:
   - n: 1
-    name: Initial
-    line: Paper-driven. Knowledge lives in people's heads and visibility arrives the next morning, if at all.
+    name: Next week
+    line: Paper-driven. The truth gets written down and typed up eventually, by which time the detail has gone.
     next: Get the basics visible. Map how one order really flows and agree what you'll measure. Then take the paper out of one line. Don't buy anything until the process map is on the wall.
     read: [manufacturing-process-mapping, smart-factory-where-to-start, paperless-manufacturing]
   - n: 2
-    name: Managed
-    line: Basic digital. Processes are written down and a few point solutions are in, but data is still typed in and nothing talks to anything else.
-    next: This is where most of the value is waiting. Going from 2 to 3 is usually the biggest single jump, because it's where the data becomes trustworthy. Check that what you've already bought can grow into an integrated platform, rather than adding another island.
+    name: Next morning
+    line: Some point solutions and a lot of spreadsheets. The truth arrives the next day, in more than one version.
+    next: This is where most of the value is waiting. Getting to "right now" is usually the biggest single jump, because it's where the data becomes trustworthy. Check that what you've already bought can grow into an integrated platform, rather than adding another island.
     read: [mes-business-case, mes-mom-erp-compared, how-to-choose-an-mes]
   - n: 3
-    name: Defined
-    line: Integrated on the shopfloor. MES/MOM is the backbone and data is captured automatically. Operators work from one screen.
-    next: Widen the architecture. Connect PLM, scheduling, quality and your data platform deliberately, so there's one source of truth beyond the shopfloor. This is also the level where AI on operational data finally has something to learn from.
+    name: Right now
+    line: Integrated on the shopfloor. MES/MOM captures what happens as it happens, with the context attached.
+    next: Widen the architecture. Connect PLM, scheduling, quality and your data platform deliberately, so there's one source of truth beyond the shopfloor. This is also the stage where AI on operational data finally has something to learn from.
     read: [isa95-integration-patterns, contextualised-manufacturing-data, ai-ml-genai-on-the-shopfloor]
   - n: 4
-    name: Quantified
-    line: A connected business. Systems share data through a deliberate architecture, and maintenance and quality move from reactive to proactive.
-    next: Pick the AI use cases with a measurable payback and run them on the foundation you've built. Keep the template disciplined as you add sites, because Level 4 is easy to lose one local customisation at a time.
+    name: Before it happens
+    line: A connected business. Trends raise warnings early, and maintenance and quality move from reacting to preventing.
+    next: Pick the AI use cases with a measurable payback and run them on the foundation you've built. Keep the template disciplined as you add sites, because this stage is easy to lose one local customisation at a time.
     read: [predictive-maintenance-data, mes-multi-site-rollout, agentic-ai-mcp-manufacturing]
   - n: 5
-    name: Optimised
-    line: Data-driven and AI-enabled. Systems make some decisions themselves and models improve over time.
+    name: Without asking
+    line: Systems act on the data themselves. People set the rules and handle the exceptions.
     next: Very few factories are genuinely here. If your scores say you are, ask two colleagues from different departments to take the check too. If they agree, write it up. I'd like to read it.
     read: [the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence, manufacturing-kpis-beyond-oee]
 
@@ -31,7 +31,7 @@ areas:
   - id: process
     name: Process
     read: manufacturing-process-mapping
-    advice: Your weakest area is process. Technology on top of an undocumented process just makes the mess faster. Map the as-is with the people who do the work, then standardise before you configure anything.
+    advice: Your slowest area is process. Technology on top of an undocumented process just makes the mess faster. Map the as-is with the people who do the work, then standardise before you configure anything.
     items:
       - q: How well are your processes documented?
         lo: They live in people's heads
@@ -48,7 +48,7 @@ areas:
   - id: data
     name: Data
     read: contextualised-manufacturing-data
-    advice: "Your weakest area is data. Everything else, including any AI plans, depends on it. Focus on automatic capture at the point of work, and on giving every number its context: the order, the material, the operator and the reason."
+    advice: "Your slowest area is data. Everything else, including any AI plans, depends on it. Focus on automatic capture at the point of work, and on giving every number its context: the order, the material, the operator and the reason."
     items:
       - q: How is production data captured?
         lo: On paper, or typed in later
@@ -65,7 +65,7 @@ areas:
   - id: systems
     name: Systems
     read: shopfloor-applications-explained
-    advice: Your weakest area is systems. The shopfloor is probably running on paper, spreadsheets and a few disconnected tools. Start from the problems, work out which capabilities you need and where each should live, then look at platforms.
+    advice: Your slowest area is systems. The shopfloor is probably running on paper, spreadsheets and a few disconnected tools. Start from the problems, work out which capabilities you need and where each should live, then look at platforms.
     items:
       - q: What runs the shopfloor today?
         lo: Paper and spreadsheets
@@ -82,7 +82,7 @@ areas:
   - id: people
     name: People
     read: manufacturing-change-management
-    advice: Your weakest area is people. This is the hardest part of every programme I've seen, and the one that's easiest to underfund. Find a visible sponsor and give someone the job full time. Then bring operators in from the first workshop, not the last.
+    advice: Your slowest area is people. This is the hardest part of every programme I've seen, and the one that's easiest to underfund. Find a visible sponsor and give someone the job full time. Then bring operators in from the first workshop, not the last.
     items:
       - q: Who sponsors the programme?
         lo: Nobody, or nobody senior
@@ -99,7 +99,7 @@ areas:
   - id: analytics
     name: Analytics and AI
     read: ai-ml-genai-on-the-shopfloor
-    advice: Your weakest area is analytics and AI. That's normal, and usually the right order of things. Get KPIs calculated automatically and consistently first. GenAI on your documents can start now, but AI that learns from operational data needs the foundation underneath it.
+    advice: Your slowest area is analytics and AI. That's normal, and usually the right order of things. Get KPIs calculated automatically and consistently first. GenAI on your documents can start now, but AI that learns from operational data needs the foundation underneath it.
     items:
       - q: How are KPIs like OEE calculated?
         lo: Estimated at the end of the shift, if at all

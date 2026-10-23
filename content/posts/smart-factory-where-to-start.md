@@ -26,7 +26,7 @@ The first month is about listening and looking, not buying.
 
 **Walk the shopfloor, on every shift.** Including nights. You'll see workarounds that never made it into the SOP, and paper in places nobody mentioned.
 
-**Assess your maturity honestly.** Most factories are between level 1 (paper-driven) and level 3 (integrated systems), and usually earlier than they think. See [The maturity model](/post/smart-manufacturing-maturity-model).
+**Find your time to truth.** Pick a real stoppage from last week and trace when each person found out, and what they knew. Most factories land somewhere between "next week" and "next morning", and usually later than they think. See [Time to truth](/post/time-to-truth).
 
 **List every system and spreadsheet.** ERP, any MES or point solutions, quality tools, maintenance systems, the spreadsheets that actually run things, and who owns each one. It's often longer than anyone expected.
 

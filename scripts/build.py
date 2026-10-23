@@ -69,6 +69,7 @@ REDIRECTS = {
     "challenges": "/articles",
     "post/introduction-to-mes-and-smart-manufacturing": "/post/what-is-a-smart-factory",
     "post/mes-is-a-digital-twin": "/post/mes-and-digital-twins",
+    "post/smart-manufacturing-maturity-model": "/post/time-to-truth",
 }
 
 
@@ -378,7 +379,7 @@ FAQ_TOPICS = [
      "slugs": ["what-is-mes-and-why-is-it-important-in-manufacturing", "mes-vs-mom", "what-is-erp", "mes-vs-erp", "implementing-mes-can-simplify-your-erp", "mes-mom-erp-compared"]},
     {"id": "strategy", "name": "Smart factory strategy", "blurb": "Where to start, and the order that works.", "color": "#ff8fe0", "rgb": "255,143,224",
      "icon": "M4 20l5-6 4 3 7-9M15 8h5v5",
-     "slugs": ["what-is-a-smart-factory", "smart-manufacturing-maturity-model", "smart-factory-where-to-start", "how-to-modernise-a-factory"]},
+     "slugs": ["what-is-a-smart-factory", "time-to-truth", "smart-factory-where-to-start", "how-to-modernise-a-factory"]},
     {"id": "buying", "name": "Choosing and delivering", "blurb": "Selection, business cases, deployment and timelines.", "color": "#ffb86b", "rgb": "255,184,107",
      "icon": "M9 12l2 2 4-4M5 4h14v16H5z",
      "slugs": ["how-to-choose-an-mes", "mes-business-case", "build-vs-buy-mes", "cloud-vs-on-premises-mes", "how-long-does-mes-implementation-take"]},
@@ -641,6 +642,7 @@ def build(base, relative=False, include_scheduled=False):
     caps = next(t for t in tools if t["id"] == "which-systems")["data"]["capabilities"]
     audiences = load_audiences(posts, glossary, tools, caps, base)
     common["tools"] = tools
+    common["ttt_block"] = Markup(blocks.get("time-to-truth", ""))
     common["audiences"] = audiences
     common["paths_home"] = paths_home
     common["paths_json"] = json.dumps([{"id": p["id"], "title": p["title"], "slugs": p["slugs"],

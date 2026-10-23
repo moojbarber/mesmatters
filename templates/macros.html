@@ -112,7 +112,7 @@
   </div>
   <form class="ask-form" data-ask="{{ endpoint }}" data-source="{{ source }}" data-linkedin="https://www.linkedin.com/in/mattjbarber/" {% if endpoint %}action="{{ endpoint }}" method="post"{% endif %} novalidate>
     <label for="aq-{{ source|replace(':', '-') }}">Your question</label>
-    <textarea id="aq-{{ source|replace(':', '-') }}" name="question" rows="4" maxlength="2000" placeholder="e.g. We're at Level 2 with three point solutions. Do we replace them or connect them?" required></textarea>
+    <textarea id="aq-{{ source|replace(':', '-') }}" name="question" rows="4" maxlength="2000" placeholder="e.g. Our truth arrives next morning, from three point solutions. Do we replace them or connect them?" required></textarea>
     <div class="ask-row">
       <label class="sr" for="ae-{{ source|replace(':', '-') }}">Email (optional)</label>
       <input id="ae-{{ source|replace(':', '-') }}" type="email" name="email" placeholder="Email, if you'd like a reply" autocomplete="email">

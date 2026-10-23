@@ -18,9 +18,9 @@ So this is the route I'd follow, step by step, with a simple test for each one s
 
 Not where the last board presentation said you are. Where you actually are.
 
-I use a five-level maturity model, from paper-driven at level 1 to AI-enabled at level 5. Most factories sit somewhere between levels 1 and 3, and often earlier than they'd like to admit. Travellers on clipboards, and a morning meeting that starts with someone reading yesterday's numbers from a notebook. That's level 1, and it's very common.
+The question I use is time to truth: when a line stops at 2am, how long until the right person knows, and do they know why? The stages run from "next week" to "without asking". Most factories sit somewhere between next week and next morning, and often later than they'd like to admit. Travellers on clipboards, and a morning meeting that starts with someone reading yesterday's numbers from a notebook. That's next week, and it's very common.
 
-You can't plan a route if you're lying to yourself about the starting point. More in [The smart manufacturing maturity model](/post/smart-manufacturing-maturity-model).
+You can't plan a route if you're lying to yourself about the starting point. More in [Time to truth](/post/time-to-truth).
 
 **Ready to move on when:** you can describe, with evidence, how data is captured today on each line, and you've agreed a realistic level with the people who run the shopfloor.
 
@@ -122,7 +122,7 @@ That isn't because I'm sceptical about it. I believe AI can genuinely transform 
 
 | Step | You're ready to move on when |
 | --- | --- |
-| 1. Know where you are | Data capture on each line is described with evidence, and the maturity level is agreed |
+| 1. Know where you are | Data capture on each line is described with evidence, and everyone agrees the time to truth by area |
 | 2. Map the process | Current-state maps exist for the first area and the target process is agreed |
 | 3. Put a number on it | A sponsor is in place and the first phase is funded |
 | 4. Build the team | Named people have the time, with day jobs backfilled |

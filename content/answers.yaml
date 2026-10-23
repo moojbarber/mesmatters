@@ -310,15 +310,15 @@ smart-factory-technology-mistakes:
   label: The short version
   summary: "Don't wire ERP straight to machines, build your own MES platform, buy point solutions that can't scale, over-customise, add a lightweight connected worker app that collides with MES/MOM, or mistake an IIoT platform for an MES. I've seen every one of these repeatedly, and every one is avoidable."
 
-smart-manufacturing-maturity-model:
-  summary: "Five levels, adapted from CMMI: initial (paper), managed (basic digital and point solutions), defined (integrated MES/MOM), quantified (a connected business) and optimised (AI-enabled). Most factories are earlier than they think. You can't skip a level, because each one builds the data the next one needs."
+time-to-truth:
+  summary: "Time to truth is how long it takes a factory to know what really happened, with enough context to act on it. The stages run from next week (paper) through next morning (point solutions and spreadsheets), right now (integrated MES/MOM) and before it happens (a connected, predictive business) to without asking (systems that act). Most factories sit between the first two, and the truth arrives in order."
   faq:
-    - q: "What are the levels of smart manufacturing maturity?"
-      a: "The model I use is adapted from CMMI and has five levels. Initial is paper-driven. Managed has basic digital tools and point solutions. Defined has integrated systems with MES/MOM as the backbone. Quantified is a connected business sharing data through a deliberate architecture. Optimised is data-driven and AI-enabled, and very few factories are genuinely there."
-    - q: "Can a factory skip a maturity level?"
-      a: "No. Each level builds the processes and data the next one needs. You can't get reliable AI from manual entries and estimates, so jumping from paper straight to AI doesn't work. You can run pilots ahead of your level, but the foundation still has to be built in order."
-    - q: "Where are most factories on the maturity model?"
-      a: "Most are somewhere between levels 1 and 3, and often earlier than their board presentations suggest. Plenty of organisations describe themselves as well on the way to digital transformation while still printing production orders and tracking quality in spreadsheets. That's common, and honest assessment of the starting point is the first step."
+    - q: "What is time to truth in manufacturing?"
+      a: "Time to truth is how long it takes your factory to know what really happened, such as a line stopping, with enough context to act on it. A paper-based plant might find out next week. A plant with integrated MES/MOM knows within minutes, with the order and reason attached. A connected, predictive plant sees the problem coming before it happens."
+    - q: "Can a factory skip straight to AI?"
+      a: "Not for AI that learns from operations. Prediction needs history, and history needs data captured accurately and automatically, with its context. That's what the right-now stage builds. Generative AI on documents and know-how is the exception, and can start earlier alongside the foundation work."
+    - q: "Where are most factories today?"
+      a: "Most sit somewhere between next week and next morning, and often later than their board presentations suggest. Plenty still print production orders and track quality in spreadsheets. The jump to right now is usually the biggest single step in value, because it's where the data becomes trustworthy."
 
 smart-manufacturing-myths:
   summary: "AI won't solve everything without a data foundation. Excel isn't good enough to run operations. A smart factory is more than MES/MOM, ERP and MES do different jobs, and IIoT doesn't replace MES. These and three more myths come up every week, and each one falls apart once you look at how a factory actually runs."

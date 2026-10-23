@@ -102,7 +102,7 @@ Be clear about the limits, though:
 
 ## You can't skip the steps for operational AI
 
-Everyone wants to be at the top of the [maturity model](/post/smart-manufacturing-maturity-model). Predictive, autonomous, AI-enabled. Very few are.
+Everyone wants a factory that acts [without asking](/post/time-to-truth). Predictive, autonomous, AI-enabled. Very few are there.
 
 Most manufacturers I speak to are somewhere between paper-based and partially digital. That's not a criticism. It's a starting point. For AI that predicts and optimises operations, the path goes through the middle, not around it.
 

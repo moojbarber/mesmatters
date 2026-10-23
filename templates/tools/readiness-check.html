@@ -2,13 +2,12 @@
 <div class="tk-intro rv">
   <div>
     <h2>How to score it</h2>
+    <p>The check gives you a <a href="{{ base }}/post/time-to-truth">time to truth</a> for each of five areas: how long it takes your factory to know what really happened, with enough context to act on it.</p>
     <p>For each statement, pick the number that's true <b>across your site today</b>. Not your best line, and not next year's plan. 1 looks like the left-hand description, 5 looks like the right.</p>
-    <p class="dimmed">Most factories land somewhere between Level 1 and 3. That's a starting point, not a criticism.</p>
+    <p class="dimmed">Most factories land between "next week" and "next morning". That's a starting point, not a criticism.</p>
   </div>
-  <ol class="tk-levels">
-    {% for l in d.levels %}<li><b>{{ l.n }}</b><span><strong>{{ l.name }}</strong> {{ l.line }}</span></li>{% endfor %}
-  </ol>
 </div>
+{{ ttt_block|safe }}
 
 <form class="rc" id="rc-form" novalidate>
   {% set ns = namespace(i=0) %}
@@ -35,19 +34,20 @@
 
 <section class="rc-result" id="rc-result" hidden tabindex="-1" aria-labelledby="rc-h">
   <div class="rc-hero">
-    <div class="rc-ring" data-rc-ring><b data-rc-level>–</b><small>Level</small></div>
+    <div class="rc-ring" data-rc-ring><b data-rc-level>–</b><small>Stage</small></div>
     <div>
-      <span class="micro">Your result</span>
+      <span class="micro">Your time to truth</span>
       <h2 id="rc-h"><span data-rc-name>–</span></h2>
       <p data-rc-line></p>
       <p class="rc-avg">Average score <b data-rc-avg>–</b> out of 5</p>
     </div>
   </div>
+  <ol class="rc-stages" data-rc-stages>{% for l in d.levels %}<li data-n="{{ l.n }}"><i></i><span>{{ l.name }}</span></li>{% endfor %}</ol>
   <div class="rc-areas" data-rc-areas></div>
   <div class="rc-warn" data-rc-warn hidden></div>
   <div class="rc-next">
     <div><span class="micro">What to do next</span><p data-rc-next></p></div>
-    <div><span class="micro">Your weakest area</span><p data-rc-weak></p></div>
+    <div><span class="micro">Your slowest area</span><p data-rc-weak></p></div>
   </div>
   <div class="rc-read"><span class="micro">Read next</span><div class="rc-read-list" data-rc-read></div></div>
   <div class="tk-actions">

@@ -55,7 +55,7 @@ An agent that acts on bad data acts badly, and quickly.
 
 If it's reading downtime that was typed in at the end of a shift, inventory that's only roughly right, and quality results sitting in a spreadsheet, its decisions will reflect that. The speed that makes agents attractive also makes their mistakes expensive.
 
-That's why agentic operations sit at the very top of the [maturity model](/post/smart-manufacturing-maturity-model). They need:
+That's why agentic operations sit at the far end of [time to truth](/post/time-to-truth), the "without asking" stage. They need:
 
 - **Trustworthy, real-time data.** Captured automatically where possible, validated at the point of work.
 - **Context.** Which order, which material, which machine, which shift. That context lives in [MES/MOM](/post/what-is-mes-and-why-is-it-important-in-manufacturing).

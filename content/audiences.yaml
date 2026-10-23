@@ -247,7 +247,7 @@ pages:
     sections:
       - h: Where to start
         body: |
-          Be honest about where you are. Most factories sit between Level 1 and 3 on the [maturity model](/post/smart-manufacturing-maturity-model), and that's fine. Take the [readiness check](/tools/readiness-check) with a couple of colleagues from different departments and compare answers.
+          Be honest about where you are. Ask how long your plant takes to know what happened when a line stops. Most factories answer ["next week" or "next morning"](/post/time-to-truth), and that's fine. Take the [readiness check](/tools/readiness-check) with a couple of colleagues from different departments and compare answers.
 
           Then follow one order through the factory. Map what actually happens, not the procedure. It's the best requirements document you'll ever write, and the [swimlane template](/tools/swimlane-template) will help.
 
@@ -262,7 +262,7 @@ pages:
           The hardest part of every programme is people, not technology. Bring operators in early and free up super users properly. Then be visible on the floor at go-live. Expect the first weeks to be messy. That's a learning curve, not a failure.
 
           Read [resistance to change is guaranteed](/post/manufacturing-change-management) and [go-live is the starting line](/post/mes-go-live) before you plan the project, not after.
-    posts: [smart-factory-where-to-start, mes-business-case, smart-manufacturing-maturity-model, manufacturing-change-management, mes-go-live, how-to-modernise-a-factory]
+    posts: [smart-factory-where-to-start, mes-business-case, time-to-truth, manufacturing-change-management, mes-go-live, how-to-modernise-a-factory]
     tools: [readiness-check, oee-one-percent, first-line-scorecard, business-case-template]
     terms: [oee, mes, mom, continuous-improvement, kpi, hypercare, super-user, change-management]
     faq:

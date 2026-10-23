@@ -96,6 +96,7 @@
       return n;
     }
     var result = null;
+    function stage(a) { return a < 1.8 ? 1 : a < 2.6 ? 2 : a < 3.4 ? 3 : a < 4.2 ? 4 : 5; }
     function compute() {
       var a = answers(), areas = DATA.areas.map(function (ar) {
         var vals = $$('input[data-area="' + ar.id + '"]:checked', form).map(function (i) { return +i.value; });
@@ -104,7 +105,7 @@
       });
       var all = Object.keys(a).map(function (k) { return a[k]; });
       var avg = all.reduce(function (s, v) { return s + v; }, 0) / all.length;
-      var lvl = avg < 1.8 ? 1 : avg < 2.6 ? 2 : avg < 3.4 ? 3 : avg < 4.2 ? 4 : 5;
+      var lvl = stage(avg);
       var weak = areas.slice().sort(function (x, y) { return x.avg - y.avg; })[0];
       return { avg: avg, lvl: lvl, L: DATA.levels[lvl - 1], areas: areas, weak: weak };
     }
@@ -114,30 +115,31 @@
       var R = result;
       $('[data-rc-level]').textContent = R.lvl;
       $('[data-rc-ring]').style.setProperty('--p', (R.avg - 1) / 4 * 100);
-      $('[data-rc-name]').textContent = 'Level ' + R.lvl + ': ' + R.L.name;
+      $('[data-rc-name]').textContent = R.L.name;
+      $$('[data-rc-stages] li').forEach(function (li) { var n = +li.dataset.n; li.classList.toggle('on', n === R.lvl); li.classList.toggle('past', n < R.lvl); });
       $('[data-rc-line]').textContent = R.L.line;
       $('[data-rc-avg]').textContent = R.avg.toFixed(1);
       $('[data-rc-areas]').innerHTML = R.areas.map(function (x) {
-        return '<div class="rc-ar' + (x === R.weak ? ' weak' : '') + '"><span>' + esc(x.ar.name) + (x === R.weak ? ' <em>weakest</em>' : '') + '</span><div class="rc-track"><i style="width:' + ((x.avg - 1) / 4 * 100).toFixed(0) + '%"></i></div><b>' + x.avg.toFixed(1) + '</b></div>';
+        return '<div class="rc-ar' + (x === R.weak ? ' weak' : '') + '"><span>' + esc(x.ar.name) + (x === R.weak ? ' <em>slowest</em>' : '') + '</span><div class="rc-track"><i style="width:' + ((x.avg - 1) / 4 * 100).toFixed(0) + '%"></i></div><b>' + esc(DATA.levels[stage(x.avg) - 1].name) + '</b></div>';
       }).join('');
       $('[data-rc-next]').textContent = R.L.next;
       $('[data-rc-weak]').innerHTML = esc(R.weak.ar.advice) + ' <a href="' + url('/post/' + R.weak.ar.post.slug) + '">Read: ' + esc(R.weak.ar.post.title) + ' →</a>';
       var byId = {}; R.areas.forEach(function (x) { byId[x.ar.id] = x.avg; });
       var warn = $('[data-rc-warn]');
-      if (byId.analytics - byId.data >= 1) { warn.hidden = false; warn.innerHTML = '<b>You can\'t skip a level.</b> Your analytics and AI score is well ahead of your data score. AI that learns from operational data needs that foundation first. GenAI on documents is the exception. <a href="' + url('/post/smart-manufacturing-maturity-model') + '">Why there are no shortcuts →</a>'; }
+      if (byId.analytics - byId.data >= 1) { warn.hidden = false; warn.innerHTML = '<b>The truth has to arrive first.</b> Your analytics and AI score is well ahead of your data score. AI that learns from operational data needs data captured right now, with its context. GenAI on documents is the exception. <a href="' + url('/post/time-to-truth') + '">Why truth arrives in order →</a>'; }
       else if (byId.systems - byId.process >= 1) { warn.hidden = false; warn.innerHTML = '<b>Technology ahead of process.</b> Your systems score is well ahead of your process score. That usually means the systems are automating workarounds. <a href="' + url('/post/manufacturing-process-mapping') + '">Process before technology →</a>'; }
       else warn.hidden = true;
       $('[data-rc-read]').innerHTML = R.L.posts.map(link).join('');
       out.hidden = false;
       var gf = $('form.gate', out);
       if (gf) gf._extra = function (f) {
-        [['readiness_level', R.lvl + ' ' + R.L.name], ['readiness_score', R.avg.toFixed(1)], ['readiness_weakest', R.weak.ar.name]].concat(R.areas.map(function (x) { return ['readiness_' + x.ar.id, x.avg.toFixed(1)]; }))
+        [['readiness_level', R.L.name], ['readiness_score', R.avg.toFixed(1)], ['readiness_weakest', R.weak.ar.name]].concat(R.areas.map(function (x) { return ['readiness_' + x.ar.id, x.avg.toFixed(1)]; }))
           .forEach(function (kv) { var i = $('input[name="fields[' + kv[0] + ']"]', f) || f.appendChild(Object.assign(d.createElement('input'), { type: 'hidden', name: 'fields[' + kv[0] + ']' })); i.value = kv[1]; });
       };
       if (scroll) { out.focus({ preventScroll: true }); out.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     }
     csvRows = function () {
-      var rows = [['Shopfloor Matters readiness check', new Date().toISOString().slice(0, 10)], ['Level', result.lvl + ' ' + result.L.name], ['Average', result.avg.toFixed(2)], [], ['Area', 'Question', 'Score']];
+      var rows = [['Shopfloor Matters readiness check', new Date().toISOString().slice(0, 10)], ['Time to truth', result.L.name], ['Average', result.avg.toFixed(2)], [], ['Area', 'Question', 'Score']];
       var i = 0;
       DATA.areas.forEach(function (ar) { ar.items.forEach(function (it) { i++; var r = $('input[name=q' + i + ']:checked', form); rows.push([ar.name, it.q, r ? r.value : '']); }); });
       return rows;
