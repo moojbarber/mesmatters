@@ -1,5 +1,5 @@
-# Learning paths. Each path is a "line"; each article is a station, in order.
-# Stations use article slugs. Read times and "what you'll learn" lines come from the articles.
+# Learning paths. Each path is a set of articles, read in order.
+# "stations" lists the article slugs in reading order. Read times and "what you'll learn" lines come from the articles.
 # Order here is the order on the hub map, top to bottom. The home page shows them in `home_order`.
 
 home_order: [foundations, beyond-erp, business-case, implementation, shopfloor-ai, connected-worker, systems-landscape]
@@ -73,7 +73,7 @@ paths:
       - mes-functionality-inventory-logistics-overview
       - mes-functionality-production-monitoring
       - what-is-oee-overall-equipment-effectiveness
-      - implementing-mes-can-simplify-your-erp
+      - mes-vs-erp
 
   - id: implementation
     title: Implementation playbook

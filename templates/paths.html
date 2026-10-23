@@ -5,8 +5,8 @@
   <div class="wide">
     <div class="lp-head">
       <div>
-        <h1>Pick a line.<br><span>Ride it to the end.</span></h1>
-        <p class="kicker">{{ paths|length }} learning paths through the site, each a line of articles in the right order. Every line starts at the same station. Choose where you want to end up.</p>
+        <h1>Choose your path.<br><span>Learn it step by step.</span></h1>
+        <p class="kicker">{{ paths|length }} learning paths through the site, each a set of articles in the order that makes sense. They all start from the same place. Choose where you want to get to, and your progress is saved as you read.</p>
       </div>
       <div class="lp-welcome" hidden>
         <p><b>Welcome back.</b> <span data-lp-welcome></span></p>
@@ -21,17 +21,17 @@
           {% for s in p.segs %}<span class="lp-seg" style="{{ s }}" aria-hidden="true"></span>{% endfor %}
           <span class="lp-flow" style="{{ p.flow }}" aria-hidden="true"></span>
           {% for s in p.stations %}
-          <a class="lp-stn" href="{{ base }}/post/{{ s.post.slug }}?path={{ p.id }}" data-slug="{{ s.post.slug }}" style="left:{{ s.x }}px;top:{{ s.y }}px" aria-label="{{ p.title }}, station {{ s.n }}: {{ s.post.short }}" tabindex="-1"><i></i><span>{{ s.post.short }}</span></a>
+          <a class="lp-stn" href="{{ base }}/post/{{ s.post.slug }}?path={{ p.id }}" data-slug="{{ s.post.slug }}" style="left:{{ s.x }}px;top:{{ s.y }}px" aria-label="{{ p.title }}, step {{ s.n }}: {{ s.post.short }}" tabindex="-1"><i></i><span>{{ s.post.short }}</span></a>
           {% endfor %}
           <button type="button" class="lp-tag" data-pick="{{ p.id }}" aria-pressed="false" style="left:{{ p.end + 108 }}px;top:{{ p.y - 25 }}px">
-            <i aria-hidden="true"></i><span><b>{{ p.title }}</b><small>{{ p.n }} stations, {{ p.minutes }} min</small></span>
+            <i aria-hidden="true"></i><span><b>{{ p.title }}</b><small>{{ p.n }} articles, {{ p.minutes }} min</small></span>
           </button>
         </div>
         {% endfor %}
         {% set hub = paths[0].hub %}
         <span class="lp-hub-ring" aria-hidden="true" style="left:{{ hub.x - 38 }}px;top:{{ hub.y - 38 }}px"></span>
         <span class="lp-hub-core" aria-hidden="true" style="left:{{ hub.x - 30 }}px;top:{{ hub.y - 30 }}px">START</span>
-        <span class="lp-hub-cap" style="right:calc(100% - {{ hub.x - 56 }}px);top:{{ hub.y - 22 }}px">Every line<br>starts here</span>
+        <span class="lp-hub-cap" style="right:calc(100% - {{ hub.x - 56 }}px);top:{{ hub.y - 22 }}px">Every path<br>starts here</span>
       </div>
     </div>
 
@@ -42,8 +42,8 @@
         <h2>{{ p.title }}</h2>
         <p>{{ p.blurb }}</p>
         <div class="lp-go">
-          <a class="lp-btn" href="{{ base }}/paths/{{ p.id }}" data-path-cta="{{ p.id }}">Start this line</a>
-          <span>{{ p.n }} stations, about {{ p.minutes }} min</span>
+          <a class="lp-btn" href="{{ base }}/paths/{{ p.id }}" data-path-cta="{{ p.id }}">Start this path</a>
+          <span>{{ p.n }} articles, about {{ p.minutes }} min</span>
         </div>
       </div>
       <ol class="lp-list">

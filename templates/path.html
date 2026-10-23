@@ -11,7 +11,7 @@
         <h1>{{ path.title }}</h1>
         <p class="kicker">{{ path.blurb }}</p>
         <div class="lp-go">
-          <a class="lp-btn" data-lp-next href="{{ base }}/post/{{ path.stations[0].post.slug }}?path={{ path.id }}">Start at station 1</a>
+          <a class="lp-btn" data-lp-next href="{{ base }}/post/{{ path.stations[0].post.slug }}?path={{ path.id }}">Start the first article</a>
           <span>{{ path.n }} articles, about {{ path.minutes }} minutes</span>
         </div>
       </div>
@@ -34,7 +34,7 @@
       <li class="lp-st" data-slug="{{ s.post.slug }}">
         <a class="lp-st-img" href="{{ base }}/post/{{ s.post.slug }}?path={{ path.id }}" tabindex="-1" aria-hidden="true"><img src="{{ base }}/images/art/{{ s.post.slug }}.svg" alt="" width="1600" height="900" loading="lazy"></a>
         <div class="lp-st-txt">
-          <p class="meta">Station {{ s.n }} <i>/</i> {{ s.post.read_time }} min read <i>/</i> <span data-state>Not started</span></p>
+          <p class="meta">Step {{ s.n }} <i>/</i> {{ s.post.read_time }} min read <i>/</i> <span data-state>Not started</span></p>
           <h2><a href="{{ base }}/post/{{ s.post.slug }}?path={{ path.id }}">{{ s.post.short }}</a></h2>
           <p>{{ s.post.description }}</p>
         </div>
@@ -45,8 +45,8 @@
 
     <div class="lp-reward">
       <div>
-        <span class="lp-who" data-lp-reward-eyebrow>When you reach the end of the line</span>
-        <h2>Keep learning after the last station</h2>
+        <span class="lp-who" data-lp-reward-eyebrow>When you finish the path</span>
+        <h2>Keep learning after the last article</h2>
         <p>One practical article a week on the smart factory, shopfloor AI and MES/MOM, from real implementations. Free, and you can leave in one click.</p>
       </div>
       {{ signup(base, kit_form, big=True) }}

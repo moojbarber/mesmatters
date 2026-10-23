@@ -173,22 +173,16 @@
   }
   function setRead(slug, on, pid) { if (on) S.read[slug] = Date.now(); else delete S.read[slug]; if (pid) S.last = pid; save(S); }
 
-  // ---------- home cards ----------
-  var cards = document.querySelector('.lp-cards');
-  if (cards) {
-    var roles = [].slice.call(document.querySelectorAll('.lp-roles [data-role]'));
-    function rec(id) {
-      roles.forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.role === id ? 'true' : 'false'); });
-      [].forEach.call(cards.querySelectorAll('.lp-card'), function (c) { c.classList.toggle('is-rec', c.dataset.card === id); });
-      cards.classList.add('has-rec');
+  // ---------- home teaser ----------
+  var teaser = document.querySelector('.lp-teaser');
+  if (teaser) {
+    var cur = current();
+    if (cur) {
+      var ni = nextIndex(cur), d = doneCount(cur);
+      teaser.href = postUrl(cur.slugs[ni], cur.id);
+      teaser.querySelector('[data-lp-teaser-msg]').textContent = "Welcome back. You're " + d + ' of ' + cur.slugs.length + ' articles into ' + cur.title + '. Next up: ' + cur.titles[ni] + '.';
+      teaser.querySelector('[data-lp-teaser-cta]').textContent = 'Continue your path';
     }
-    roles.forEach(function (b) { b.addEventListener('click', function () { rec(b.dataset.role); }); });
-    PATHS.forEach(function (p) {
-      var d = doneCount(p), st = cards.querySelector('[data-card-status="' + p.id + '"]');
-      [].forEach.call(cards.querySelectorAll('[data-mini="' + p.id + '"] i'), function (i) { i.classList.toggle('done', isRead(i.dataset.slug)); });
-      if (st) st.textContent = d === p.slugs.length ? 'Completed' : d ? d + ' of ' + p.slugs.length + ' read' : 'Start path';
-    });
-    var cur = current(); rec(cur ? cur.id : (roles[0] && roles[0].dataset.role));
   }
 
   // ---------- hub map ----------
@@ -212,7 +206,7 @@
       });
       [].forEach.call(document.querySelectorAll('[data-detail="' + p.id + '"] li'), function (li) { li.classList.toggle('done', isRead(li.dataset.slug)); });
       var cta = document.querySelector('[data-path-cta="' + p.id + '"]');
-      if (cta) cta.textContent = d === p.slugs.length ? 'Ride it again' : d ? 'Continue this line' : 'Start this line';
+      if (cta) cta.textContent = d === p.slugs.length ? 'Read it again' : d ? 'Continue this path' : 'Start this path';
     });
     lines.forEach(function (l) { l.querySelector('.lp-tag').addEventListener('click', function () { pick(l.dataset.line); }); });
     var c = current();
@@ -220,7 +214,7 @@
     var w = document.querySelector('.lp-welcome');
     if (c && w) {
       var ni = nextIndex(c);
-      w.querySelector('[data-lp-welcome]').textContent = "You're " + doneCount(c) + ' stations into ' + c.title + '.';
+      w.querySelector('[data-lp-welcome]').textContent = "You're " + doneCount(c) + ' article' + (doneCount(c) === 1 ? '' : 's') + ' into ' + c.title + '.';
       var a = w.querySelector('[data-lp-continue]'); a.href = postUrl(c.slugs[ni], c.id); a.textContent = 'Continue: ' + c.titles[ni];
       w.hidden = false;
     }
@@ -244,13 +238,13 @@
       [].forEach.call(page.querySelectorAll('.lp-rail li'), function (li, k) { li.classList.toggle('done', isRead(li.dataset.slug)); li.classList.toggle('here', k === ni); });
       var circ = 2 * Math.PI * 58;
       page.querySelector('[data-lp-ring]').style.strokeDasharray = (circ * d / n).toFixed(1) + ' ' + circ.toFixed(1);
-      page.querySelector('[data-lp-left]').textContent = d === n ? 'Line complete' : mins + ' min to go';
+      page.querySelector('[data-lp-left]').textContent = d === n ? 'Path complete' : mins + ' min to go';
       var f = page.querySelector('[data-lp-fill]');
       if (f) f.style.width = (d ? Math.min(100, ((d - 1 + (d < n ? .5 : 0)) / (n - 1)) * 100) : 0) + '%';
       var nx = page.querySelector('[data-lp-next]');
-      if (d === n) { nx.textContent = 'Pick your next line'; nx.href = BASE + '/paths/'; }
-      else { nx.textContent = d ? 'Continue: ' + P.titles[ni] : 'Start at station 1'; nx.href = postUrl(P.slugs[ni], P.id); }
-      var ey = page.querySelector('[data-lp-reward-eyebrow]'); if (ey) ey.textContent = d === n ? 'Line complete. Nice work.' : 'When you reach the end of the line';
+      if (d === n) { nx.textContent = 'Choose your next path'; nx.href = BASE + '/paths/'; }
+      else { nx.textContent = d ? 'Continue: ' + P.titles[ni] : 'Start the first article'; nx.href = postUrl(P.slugs[ni], P.id); }
+      var ey = page.querySelector('[data-lp-reward-eyebrow]'); if (ey) ey.textContent = d === n ? 'Path complete. Nice work.' : 'When you finish the path';
     }
     page.addEventListener('click', function (e) {
       var b = e.target.closest('[data-mark]'); if (!b) return;

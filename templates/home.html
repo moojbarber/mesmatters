@@ -32,29 +32,27 @@
     </div>
   </section>
 
-  <section class="section lp-home">
-    <div class="section-head">
-      <div><h3>Choose your learning path</h3><p>Hand-picked articles in the right order, from first principles to go-live. Your progress is saved as you read.</p></div>
-      <a class="more" href="{{ base }}/paths/">See the line map →</a>
-    </div>
-    <div class="lp-roles" role="group" aria-label="I'm">
-      <span>I'm</span>
-      {% for p in paths_home %}<button type="button" data-role="{{ p.id }}" aria-pressed="{{ 'true' if loop.first else 'false' }}">{{ p.role }}</button>{% endfor %}
-    </div>
-    <div class="lp-cards">
-      {% for p in paths_home %}
-      <a class="lp-card{% if loop.first %} is-rec{% endif %}" href="{{ base }}/paths/{{ p.id }}" data-card="{{ p.id }}" style="--c:{{ p.color }};--rgb:{{ p.rgb }}">
-        <span class="lp-card-img"><img src="{{ base }}/images/art/{{ p.image }}.svg" alt="" width="1600" height="900" loading="lazy"><b>{{ p.n }}<small>stations</small></b><em>Start here</em></span>
-        <span class="lp-card-body">
-          <span class="lp-who">{{ p.who }}</span>
-          <span class="lp-card-title">{{ p.title }}</span>
-          <span class="lp-card-blurb">{{ p.blurb }}</span>
-          <span class="lp-mini" aria-hidden="true" data-mini="{{ p.id }}">{% for s in p.stations %}<i data-slug="{{ s.post.slug }}"></i>{% endfor %}</span>
-          <span class="lp-card-foot"><span>{{ p.minutes }} min</span><span data-card-status="{{ p.id }}">Start path</span></span>
-        </span>
-      </a>
-      {% endfor %}
-    </div>
+  <section class="section">
+    <a class="lp-teaser rv" href="{{ base }}/paths/" aria-label="Find your learning path">
+      <div class="lp-teaser-copy">
+        <span class="lp-teaser-eyebrow">Learning paths</span>
+        <h3>Learn it in the right order</h3>
+        <p data-lp-teaser-msg>{{ paths_home|length }} guided paths, from MES basics to shopfloor AI. Pick where you want to get to and take it one article at a time. Your progress is saved as you read.</p>
+        <span class="lp-teaser-cta"><span data-lp-teaser-cta>Find your learning path</span><i aria-hidden="true">→</i></span>
+      </div>
+      <svg class="lp-teaser-art" viewBox="0 0 520 260" aria-hidden="true">
+        <defs><radialGradient id="lpt-glow"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#a594ff" stop-opacity="0"/></radialGradient></defs>
+        {% set n = paths_home|length %}
+        {% for p in paths_home %}
+        {% set y = 24 + loop.index0 * (212 / (n - 1)) %}
+        <path id="lpt-{{ loop.index }}" d="M44 130 C 190 130, 250 {{ y }}, 470 {{ y }}" fill="none" stroke="{{ p.color }}" stroke-width="3" stroke-linecap="round" opacity=".85"/>
+        <circle cx="470" cy="{{ y }}" r="6" fill="#0a0820" stroke="{{ p.color }}" stroke-width="3"/>
+        <circle class="lpt-dot" r="4.5" fill="{{ p.color }}"><animateMotion dur="{{ 3.2 + loop.index0 * 0.35 }}s" begin="-{{ loop.index0 * 0.45 }}s" repeatCount="indefinite"><mpath href="#lpt-{{ loop.index }}"/></animateMotion></circle>
+        {% endfor %}
+        <circle cx="44" cy="130" r="30" fill="url(#lpt-glow)" opacity=".5"/>
+        <circle cx="44" cy="130" r="13" fill="#0a0820" stroke="#fff" stroke-width="3"/>
+      </svg>
+    </a>
   </section>
 
   <section class="section">
