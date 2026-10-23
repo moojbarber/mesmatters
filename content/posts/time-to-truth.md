@@ -67,9 +67,9 @@ AI agents work on trusted, contextualised data, inside clear guardrails. Systems
 
 ## AI adds value at every stage, but the value compounds
 
-You don't have to wait for "without asking" to get value from AI. You can start at any stage. What changes is how much it can do.
+You don't have to wait for "without asking" to get value from AI. What changes from stage to stage is how much it can do.
 
-With paper and Excel, generative AI can already search your manuals and procedures, or draft work instructions from what's written down. It arrives already trained, so it doesn't need clean data. With ERP on the shopfloor, AI can forecast demand and spot cost and scrap trends across orders, though it can tell you what happened far more often than why. With digitalised point solutions, it can group free-text downtime notes and find patterns across tools.
+With paper and Excel, the value is negligible. An AI assistant on a spreadsheet can tidy the data and chart it better, so the numbers are easier to read, but it can't analyse what was never captured. With ERP on the shopfloor, the value is small: AI can forecast demand and spot cost and scrap trends across orders, though it can tell you what happened far more often than why. With digitalised point solutions it's modest. AI can group free-text downtime notes and find patterns across tools, but it's held back by data that's rounded and keyed in late.
 
 Then the curve bends. Once the truth arrives "right now", with its context, AI can learn from your own operations: anomaly detection, root cause analysis, early predictive quality and copilots that can explain why a line stopped. With harmonious systems it predicts and optimises across the whole stack. And agents that act without asking only hold up because everything underneath them does.
 
