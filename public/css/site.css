@@ -1233,7 +1233,6 @@ form.signup p.fine{font:400 13px/1.5 var(--body);letter-spacing:0;max-width:none
   .ttt-loop{width:38px;height:38px;margin:-19px 0 0 -19px}
   .ttt-note,.s1 .ttt-note,.s2 .ttt-note,.s3 .ttt-note,.s4 .ttt-note,.s6 .ttt-note,.ttt-note.left{left:0;right:auto;top:auto;bottom:6px;transform:none;max-width:none;text-align:left;white-space:normal}
   .ttt-axis span{font-size:9px;letter-spacing:.08em}
-  .ttt-axis span:nth-child(3){display:none}
   .prose .ttt{margin-inline:0}
   .ttt-event{flex-direction:column;align-items:flex-start}
 }
@@ -1276,13 +1275,29 @@ button.ttt-label:hover{background:rgba(255,255,255,.04)}
 @keyframes ttt-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .ttt-info .micro{color:var(--rc,var(--b))}
 .ttt-info h4{margin:6px 0 12px;font:700 21px/1.2 var(--disp);color:var(--tx)}
-.ttt-cols{display:grid;grid-template-columns:1.5fr 1fr;gap:6px 26px}
+.ttt-cols{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;grid-auto-flow:column;gap:8px 26px}
 .ttt-cols p{margin:0;font-size:14.5px;line-height:1.55;color:var(--mut)}
-.ttt-cols p:nth-child(3){grid-column:2;grid-row:1/span 2;padding-left:20px;border-left:1px solid var(--line)}
 .ttt-cols b{color:var(--tx)}
-@media(max-width:700px){.ttt-cols{grid-template-columns:1fr}.ttt-cols p:nth-child(3){grid-column:1;grid-row:auto;padding:10px 0 0;border-left:0;border-top:1px solid var(--line)}}
+@media(max-width:700px){.ttt-cols{grid-template-columns:1fr;grid-auto-flow:row}}
 .prose .ttt h4{margin-top:6px}
 .rc-state{display:inline-block;margin:2px 0 10px;padding:4px 11px;border-radius:99px;font:700 11px var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--b);border:1px solid rgba(51,212,224,.45);background:rgba(51,212,224,.08)}
 .rc-stages{grid-template-columns:repeat(6,1fr)}
 .rc-stages small{display:block;font-weight:500;font-size:11px;color:var(--dim);margin-top:2px}
 @media(max-width:620px){.rc-stages small{display:none}}
+
+.ttt-cols p:nth-child(3){padding:10px 14px;border-radius:12px;background:rgba(51,212,224,.07);border:1px solid rgba(51,212,224,.25)}
+.ttt-cols p:nth-child(3) b{color:var(--b)}
+.ttt-grid{grid-template-columns:minmax(210px,270px) 1fr 150px}
+.ttt-zone{grid-column:1/-1}
+.ttt-ai-h{grid-column:3;grid-row:1;align-self:end;padding-bottom:6px;border-bottom:1px solid var(--line);font:700 10.5px var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--b);text-align:left;padding-left:14px}
+.ttt-ai{position:relative;display:flex;align-items:center;padding-left:14px;border-bottom:1px solid rgba(255,255,255,.06);border-left:1px dashed rgba(51,212,224,.25);transition:opacity .25s}
+.ttt-ai i{display:block;height:16px;width:var(--v);min-width:7px;border-radius:0 7px 7px 0;background:linear-gradient(90deg,rgba(51,212,224,.35),#33d4e0);box-shadow:0 0 calc(var(--v) / 4) rgba(51,212,224,.6);transform-origin:0 50%;transition:transform 1.2s cubic-bezier(.2,.8,.2,1) .4s}
+.js .ttt.rv:not(.in) .ttt-ai i{transform:scaleX(0)}
+.ttt.has-active .ttt-row:not(.on) .ttt-ai{opacity:.32}
+@media(max-width:760px){
+  .ttt-grid{grid-template-columns:1fr}
+  .ttt-ai-h{display:none}
+  .ttt-ai{border-left:0;padding:4px 0 12px;gap:10px}
+  .ttt-ai:before{content:"AI value";flex:none;font:700 9.5px var(--disp);letter-spacing:.14em;text-transform:uppercase;color:var(--b)}
+  .ttt-ai i{width:calc(var(--v) * .7)}
+}

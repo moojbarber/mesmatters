@@ -317,8 +317,8 @@ time-to-truth:
       a: "Time to truth is how long it takes your factory to know what really happened, such as a line stopping, with enough context to act on it. A plant on paper and Excel finds out eventually, whenever someone types it up. With automatic data capture through MES/MOM it knows within minutes, with the order and reason attached. A plant with harmonious, connected systems sees the problem coming before it happens."
     - q: "What are the six stages of time to truth?"
       a: "Eventually, with paper and Excel. End of the hour or shift, with production booked into ERP on the shopfloor. After the fact, with tablets and point solutions that are still keyed in by hand. Right now, with automatic data capture through MES/MOM. Before it happens, with harmonious systems working as one architecture. And without asking, with agentic AI acting inside clear guardrails."
-    - q: "Can a factory skip straight to AI?"
-      a: "Not for AI that learns from operations. Prediction needs history, and history needs data captured accurately and automatically, with its context. That's what the right-now stage builds. Generative AI on documents and know-how is the exception, and can start earlier alongside the foundation work."
+    - q: "Can you get value from AI before the data foundation is in place?"
+      a: "Yes. AI adds value at every stage, but the value grows sharply as the data improves. GenAI can work on manuals, procedures, maintenance notes and shift logs from day one, and AI on ERP data can forecast and spot trends. AI that learns from your own operations, such as anomaly detection, root cause analysis, predictive quality and predictive maintenance, needs data captured automatically and with its context first, and that's where most of the value is."
 
 smart-manufacturing-myths:
   summary: "AI won't solve everything without a data foundation. Excel isn't good enough to run operations. A smart factory is more than MES/MOM, ERP and MES do different jobs, and IIoT doesn't replace MES. These and three more myths come up every week, and each one falls apart once you look at how a factory actually runs."

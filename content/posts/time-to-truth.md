@@ -65,11 +65,17 @@ AI agents work on trusted, contextualised data, inside clear guardrails. Systems
 
 **How you'll recognise it:** honestly, you probably won't yet. Very few factories are genuinely here, whatever their marketing says.
 
-## Truth arrives in order
+## AI adds value at every stage, but the value compounds
 
-You can't get to "before it happens" from "eventually". Prediction needs history, and history needs data captured accurately and automatically, with its context. That's what the "right now" stage builds.
+You don't have to wait for "without asking" to get value from AI. You can start at any stage. What changes is how much it can do.
 
-That's true for AI that learns from operational data: predictive maintenance, predictive quality, optimisation and anomaly detection all depend on it. Generative AI is a little different. It arrives already trained, and it can work on the documents and know-how every factory already has, however messy. Procedures, manuals, maintenance notes and shift logs all count. So GenAI pilots can start in the earliest stages, running alongside the foundation work rather than waiting for it. I go further into this in [AI won't fix your factory](/post/the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence).
+With paper and Excel, generative AI can already search your manuals and procedures, or draft work instructions from what's written down. It arrives already trained, so it doesn't need clean data. With ERP on the shopfloor, AI can forecast demand and spot cost and scrap trends across orders, though it can tell you what happened far more often than why. With digitalised point solutions, it can group free-text downtime notes and find patterns across tools.
+
+Then the curve bends. Once the truth arrives "right now", with its context, AI can learn from your own operations: anomaly detection, root cause analysis, early predictive quality and copilots that can explain why a line stopped. With harmonious systems it predicts and optimises across the whole stack. And agents that act without asking only hold up because everything underneath them does.
+
+So the value roughly doubles with each stage, and most of it sits in the last few. That's why the order matters. Prediction needs history, and history needs data captured accurately and automatically, with its context. You can't get to "before it happens" from "eventually". I go further into this in [AI won't fix your factory](/post/the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence).
+
+## Where most factories are
 
 Most factories I see sit somewhere between "eventually" and "after the fact". A few are genuinely "right now" across the board. The jump to right now is usually the biggest single step in value, because it's where data becomes trustworthy and departments start working from the same picture.
 
