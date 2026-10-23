@@ -316,7 +316,10 @@ FAQ_TOPICS = [
 GLOSSARY_SKIP = {"ai", "erp", "mes", "mom", "batch", "lot", "routing", "edge", "smart-factory", "bottleneck", "changeover", "cycle-time", "scrap-rate",
                  "shopfloor", "availability", "performance", "yield", "recall", "configuration", "customisation", "rework", "throughput",
                  "production-order", "recipe", "lean", "copilot", "validation", "quality-rate", "cavity", "andon", "gemba", "super-user",
-                 "change-management", "process-mapping", "traveller", "time-series-data", "saas", "hypercare"}
+                 "change-management", "process-mapping", "traveller", "time-series-data", "saas", "hypercare",
+                 "defect", "deviation", "sensor", "barcode", "picking", "putaway", "batch-size", "simulation", "utilisation",
+                 "continuous-improvement", "kpi", "spare-parts", "gateway", "goods-receipt", "shelf-life", "smart-manufacturing",
+                 "procurement", "supply-chain", "lead-time", "master-data", "digital-transformation", "demand-planning", "capacity-planning"}
 
 
 def autolink_glossary(posts, glossary, base, limit=6):
