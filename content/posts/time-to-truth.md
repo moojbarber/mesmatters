@@ -61,7 +61,7 @@ Now the bearing's temperature trend raises a warning at 23:40. Maintenance chang
 
 ## Without asking: agentic and AI
 
-AI agents work on trusted, contextualised data, inside clear guardrails. Systems make some of the decisions themselves, such as slowing a line to protect quality or raising the work order before anyone asks. People set the rules and handle the exceptions.
+AI agents work on trusted, contextualised data, inside clear guardrails. Systems make some of the decisions themselves. An agent spots the bearing trend, raises the maintenance work order with the spare part reserved, and books it into the next planned stop for a supervisor to approve. People set the rules and handle the exceptions.
 
 **How you'll recognise it:** honestly, you probably won't yet. Very few factories are genuinely here, whatever their marketing says.
 
