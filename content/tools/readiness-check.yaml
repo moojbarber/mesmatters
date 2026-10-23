@@ -10,7 +10,7 @@ levels:
   - n: 2
     name: End of hour or shift
     state: ERP on the shopfloor
-    line: Production and scrap booked into ERP every hour or shift. You know how many and what it cost, but not why.
+    line: Production and scrap typically booked into ERP every hour, or at the end of the job or shift. You know how many and what it cost, but not why.
     next: Keep ERP doing what it does well, and add a shopfloor layer for what happens between an order starting and finishing. Start where the unexplained losses are biggest.
     read: [mes-vs-erp, mes-business-case, mes-mom-erp-compared]
   - n: 3

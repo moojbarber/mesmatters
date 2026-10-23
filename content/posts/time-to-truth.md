@@ -29,9 +29,9 @@ By the time anyone looks, the detail has gone. Which bearing? Was it the third t
 
 ## End of hour or shift: ERP on the shopfloor
 
-Production and scrap are booked into ERP at a terminal every hour or at the end of the shift, or backflushed when the order closes. It's a real step forward. The quantities are in the system of record, and finance can cost the order.
+Production and scrap are typically booked into ERP at a terminal every hour, or at the end of the job or shift. It's a real step forward. The quantities are in the system of record, and finance can cost the order.
 
-The truth arrives at the end of the hour or the shift, once someone books the confirmation. You know how many were good and what it cost. You don't know why 40 were scrapped or why the line stopped, because ERP's job is running the business. Watching what happens between an order starting and finishing is a different job.
+The truth arrives when someone books the confirmation. You know how many were good and what it cost. You don't know why 40 were scrapped or why the line stopped, because ERP's job is running the business. Watching what happens between an order starting and finishing is a different job.
 
 **How you'll recognise it:** accurate order totals, and nobody able to explain them.
 
