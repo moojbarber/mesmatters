@@ -1305,3 +1305,4 @@ button.ttt-label:hover{background:rgba(255,255,255,.04)}
 .ttt-ai{flex-direction:column;align-items:flex-start;justify-content:center;gap:5px}
 .ttt-ai span{font:700 10px var(--disp);letter-spacing:.12em;text-transform:uppercase;color:color-mix(in srgb,var(--b) 75%,var(--dim))}
 @media(max-width:760px){.ttt-ai{flex-direction:row;align-items:center}.ttt-ai span{order:2}}
+.ttt-cols p i{font-style:normal;font-weight:600;color:var(--tx)}

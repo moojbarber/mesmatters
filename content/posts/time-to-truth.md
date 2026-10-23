@@ -69,9 +69,13 @@ AI agents work on trusted, contextualised data, inside clear guardrails. Systems
 
 You don't have to wait for "without asking" to get value from AI. What changes from stage to stage is how much it can do.
 
-With paper and Excel, the value is negligible. An AI assistant on a spreadsheet can tidy the data and chart it better, so the numbers are easier to read, but it can't analyse what was never captured. With ERP on the shopfloor, the value is small: AI can forecast demand and spot cost and scrap trends across orders, though it can tell you what happened far more often than why. With digitalised point solutions it's modest. AI can group free-text downtime notes and find patterns across tools, but it's held back by data that's rounded and keyed in late.
+With paper and Excel, the value is negligible. AI can help you read the data you have, but it can't analyse what was never captured. An AI assistant on a spreadsheet can tidy it up and chart it more clearly, and that's about it.
 
-Then the curve bends. Once the truth arrives "right now", with its context, AI can learn from your own operations: anomaly detection, root cause analysis, early predictive quality and copilots that can explain why a line stopped. With harmonious systems it predicts and optimises across the whole stack. And agents that act without asking only hold up because everything underneath them does.
+With ERP on the shopfloor, the value is small. AI can find trends in transactional data and forecast from them, such as a product whose scrap cost is creeping up across orders. But it sees totals rather than causes, so it can tell you what happened far more often than why.
+
+With digitalised point solutions, it's modest. AI can make sense of data people enter by hand and spot patterns across disconnected tools, for example grouping free-text downtime notes into common causes. It's held back by data that's rounded and keyed in late.
+
+Then the curve bends. Once the truth arrives "right now", with its context, AI can learn from your own operations, spotting anomalies and finding root causes. A copilot can explain why Line 3 stopped from the facts, not a guess. With harmonious systems it predicts and optimises across the whole stack, because planning, engineering, quality and maintenance data finally line up: maintenance is planned from the bearing's condition, and the schedule moves around it. And at "without asking", AI moves from advising to acting, inside guardrails you set. That only holds up because everything underneath it does.
 
 So the value roughly doubles with each stage, and most of it sits in the last few. That's why the order matters. Prediction needs history, and history needs data captured accurately and automatically, with its context. You can't get to "before it happens" from "eventually". I go further into this in [AI won't fix your factory](/post/the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence).
 
