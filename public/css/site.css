@@ -1208,7 +1208,7 @@ form.signup p.fine{font:400 13px/1.5 var(--body);letter-spacing:0;max-width:none
 .s3 .ttt-note{top:calc(50% - 9px)}
 .s4 .ttt-note{top:calc(50% - 26px)}
 .ttt-note.left{left:calc(var(--ev) + 14px);top:calc(50% - 9px)}
-.s6 .ttt-note{left:calc(var(--ev) + 40px);top:50%;transform:translateY(-50%);white-space:normal;max-width:calc(100% - var(--ev) - 44px);color:var(--tx)}
+.s6 .ttt-note,.s7 .ttt-note{left:calc(var(--ev) + 40px);top:50%;transform:translateY(-50%);white-space:normal;max-width:calc(100% - var(--ev) - 44px);color:var(--tx)}
 .ttt-loop{position:absolute;left:var(--ev);top:50%;width:46px;height:46px;margin:-23px 0 0 -23px;fill:none;stroke:var(--rc);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 8px var(--rc));animation:ttt-spin 6s linear infinite;background:#0d0a26;border-radius:50%}
 @keyframes ttt-spin{to{transform:rotate(360deg)}}
 .s1{--rc:#ff6fd8;--rc2:rgba(255,111,216,.25)}
@@ -1217,6 +1217,7 @@ form.signup p.fine{font:400 13px/1.5 var(--body);letter-spacing:0;max-width:none
 .s4{--rc:#8b6cff;--rc2:rgba(139,108,255,.35)}
 .s5{--rc:#5fb6f0;--rc2:rgba(95,182,240,.3)}
 .s6{--rc:#33d4e0;--rc2:rgba(51,212,224,.3)}
+.s7{--rc:#7ef0c4;--rc2:rgba(126,240,196,.3)}
 .ttt-zone{grid-column:1/-1;margin-top:10px;padding:8px 0 6px;border-top:1px dashed rgba(51,212,224,.55);position:relative}
 .ttt-zone span{font:700 10.5px var(--disp);letter-spacing:.18em;text-transform:uppercase;color:var(--b);text-shadow:0 0 12px rgba(51,212,224,.6)}
 .ttt figcaption{margin-top:20px;font-size:14px;color:var(--mut)}
@@ -1231,7 +1232,7 @@ form.signup p.fine{font:400 13px/1.5 var(--body);letter-spacing:0;max-width:none
   .ttt-track{min-height:84px}
   .ttt-bar,.ttt-dot,.ttt-pulse,.ttt-loop{top:32%!important}
   .ttt-loop{width:38px;height:38px;margin:-19px 0 0 -19px}
-  .ttt-note,.s1 .ttt-note,.s2 .ttt-note,.s3 .ttt-note,.s4 .ttt-note,.s6 .ttt-note,.ttt-note.left{left:0;right:auto;top:auto;bottom:6px;transform:none;max-width:none;text-align:left;white-space:normal}
+  .ttt-note,.s1 .ttt-note,.s2 .ttt-note,.s3 .ttt-note,.s4 .ttt-note,.s6 .ttt-note,.s7 .ttt-note,.ttt-note.left{left:0;right:auto;top:auto;bottom:6px;transform:none;max-width:none;text-align:left;white-space:normal}
   .ttt-axis span{font-size:9px;letter-spacing:.08em}
   .prose .ttt{margin-inline:0}
   .ttt-event{flex-direction:column;align-items:flex-start}
@@ -1306,3 +1307,13 @@ button.ttt-label:hover{background:rgba(255,255,255,.04)}
 .ttt-ai span{font:700 10px var(--disp);letter-spacing:.12em;text-transform:uppercase;color:color-mix(in srgb,var(--b) 75%,var(--dim))}
 @media(max-width:760px){.ttt-ai{flex-direction:row;align-items:center}.ttt-ai span{order:2}}
 .ttt-cols p i{font-style:normal;font-weight:600;color:var(--tx)}
+
+.ttt-approve{animation:none!important}
+.ttt-approve circle{stroke-dasharray:4 7}
+.rc-stages{grid-template-columns:repeat(7,1fr)}
+.ttt-cols{grid-auto-flow:row;grid-template-rows:none;align-items:start}
+.ttt-cols p:nth-child(1){grid-column:1;grid-row:1}
+.ttt-cols p:nth-child(2){grid-column:1;grid-row:2/span 2}
+.ttt-cols p:nth-child(3){grid-column:2;grid-row:1/span 2}
+.ttt-cols p:nth-child(4){grid-column:2;grid-row:3}
+@media(max-width:700px){.ttt-cols p:nth-child(n){grid-column:1;grid-row:auto}}

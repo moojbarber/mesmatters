@@ -1,7 +1,7 @@
 ---
 title: "Time to truth: how long does your factory take to know what happened?"
 short: "Time to truth"
-description: "One question tells you more about a factory than any maturity slide: how long until the truth about a stoppage reaches the right person? Six stages, from paper and Excel to agentic AI."
+description: "One question tells you more about a factory than any maturity slide: how long until the truth about a stoppage reaches the right person? Seven stages, from paper and Excel to agentic AI."
 published: 2026-04-30
 category: thought-leadership
 art: ladder
@@ -59,9 +59,19 @@ Now the bearing's temperature trend raises a warning at 23:40. Maintenance chang
 
 **How you'll recognise it:** maintenance gets scheduled because the data says so, not because the calendar does.
 
-## Without asking: agentic and AI
+## Before anyone asks: agentic, human in the loop
 
-AI agents work on trusted, contextualised data, inside clear guardrails. Systems make some of the decisions themselves. An agent spots the bearing trend, raises the maintenance work order with the spare part reserved, and books it into the next planned stop for a supervisor to approve. People set the rules and handle the exceptions.
+AI agents work on trusted, contextualised data, and prepare the decision before anyone thinks to ask for it. An agent spots the bearing trend, raises the maintenance work order with the spare part reserved, and books it into the next planned stop. A supervisor approves it in seconds, with the facts in front of them.
+
+People stay in control. And every approval teaches you something: the recommendations people accept unchanged, week after week, are the ones you can start to trust on their own.
+
+**How you'll recognise it:** decisions that used to take a meeting take a click.
+
+## Without asking: autonomous
+
+Agents make routine decisions on their own, inside limits the business has agreed. An agent re-sequences tomorrow's schedule around a late delivery and tells the planner what changed. People set the rules, handle the exceptions and review the rest when they choose.
+
+Autonomy here is earned decision by decision. It's never switched on for the whole factory at once.
 
 **How you'll recognise it:** honestly, you probably won't yet. Very few factories are genuinely here, whatever their marketing says.
 
@@ -75,7 +85,7 @@ With ERP on the shopfloor, the value is small. AI can find trends in transaction
 
 With digitalised point solutions, it's modest. AI can make sense of data people enter by hand and spot patterns across disconnected tools, for example grouping free-text downtime notes into common causes. It's held back by data that's rounded and keyed in late.
 
-Then the curve bends. Once the truth arrives "right now", with its context, AI can learn from your own operations, spotting anomalies and finding root causes. A copilot can explain why Line 3 stopped from the facts, not a guess. With harmonious systems it predicts and optimises across the whole stack, because planning, engineering, quality and maintenance data finally line up: maintenance is planned from the bearing's condition, and the schedule moves around it. And at "without asking", AI moves from advising to acting, inside guardrails you set. That only holds up because everything underneath it does.
+Then the curve bends. Once the truth arrives "right now", with its context, AI can learn from your own operations, spotting anomalies and finding root causes. A copilot can explain why Line 3 stopped from the facts, not a guess. With harmonious systems it predicts and optimises across the whole stack, because planning, engineering, quality and maintenance data finally line up: maintenance is planned from the bearing's condition, and the schedule moves around it. At "before anyone asks", agents prepare the action and people approve it. And at "without asking", AI acts on routine decisions within agreed limits. That only holds up because everything underneath it does.
 
 So the value roughly doubles with each stage, and most of it sits in the last few. That's why the order matters. Prediction needs history, and history needs data captured accurately and automatically, with its context. You can't get to "before it happens" from "eventually". I go further into this in [AI won't fix your factory](/post/the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence).
 

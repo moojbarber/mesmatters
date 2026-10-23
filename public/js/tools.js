@@ -96,7 +96,7 @@
       return n;
     }
     var result = null;
-    function stage(a) { return a < 1.67 ? 1 : a < 2.33 ? 2 : a < 3 ? 3 : a < 3.67 ? 4 : a < 4.33 ? 5 : 6; }
+    function stage(a) { return a < 1.57 ? 1 : a < 2.14 ? 2 : a < 2.71 ? 3 : a < 3.29 ? 4 : a < 3.86 ? 5 : a < 4.43 ? 6 : 7; }
     function compute() {
       var a = answers(), areas = DATA.areas.map(function (ar) {
         var vals = $$('input[data-area="' + ar.id + '"]:checked', form).map(function (i) { return +i.value; });
@@ -127,7 +127,7 @@
       $('[data-rc-weak]').innerHTML = esc(R.weak.ar.advice) + ' <a href="' + url('/post/' + R.weak.ar.post.slug) + '">Read: ' + esc(R.weak.ar.post.title) + ' →</a>';
       var byId = {}; R.areas.forEach(function (x) { byId[x.ar.id] = x.avg; });
       var warn = $('[data-rc-warn]');
-      if (byId.analytics - byId.data >= 1) { warn.hidden = false; warn.innerHTML = '<b>The truth has to arrive first.</b> Your analytics and AI score is well ahead of your data score. AI on spreadsheets and ERP data can help a little today, but AI that learns from your operations needs data captured right now, with its context. That's where most of the value is. <a href="' + url('/post/time-to-truth') + '">Why truth arrives in order →</a>'; }
+      if (byId.analytics - byId.data >= 1) { warn.hidden = false; warn.innerHTML = '<b>The truth has to arrive first.</b> Your analytics and AI score is well ahead of your data score. AI on spreadsheets and ERP data can help a little today, but AI that learns from your operations needs data captured right now, with its context. That\'s where most of the value is. <a href="' + url('/post/time-to-truth') + '">Why truth arrives in order →</a>'; }
       else if (byId.systems - byId.process >= 1) { warn.hidden = false; warn.innerHTML = '<b>Technology ahead of process.</b> Your systems score is well ahead of your process score. That usually means the systems are automating workarounds. <a href="' + url('/post/manufacturing-process-mapping') + '">Process before technology →</a>'; }
       else warn.hidden = true;
       $('[data-rc-read]').innerHTML = R.L.posts.map(link).join('');
