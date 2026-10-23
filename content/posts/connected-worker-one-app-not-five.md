@@ -39,9 +39,7 @@ Connected worker capabilities do exactly that. Which is why spending on them is 
 
 ## The problem with standalone connected worker platforms
 
-Here's where I have a strong opinion.
-
-Standalone connected worker platforms only get you so far. They very quickly bump into applications with much deeper functionality.
+Standalone connected worker platforms solve real problems, and they're quick to get going. My concern is how far they take you before they bump into applications with much deeper functionality.
 
 Think about what an operator actually does in a shift. They don't just tick checklists. They:
 
@@ -51,19 +49,23 @@ Think about what an operator actually does in a shift. They don't just tick chec
 - Carry out autonomous maintenance on their equipment
 - Manage tooling and setups
 
-A standalone connected worker tool does none of that. It handles the people side well, but it has no production context. It doesn't know which order is running. It can't trigger a quality check because a batch of raw material changed. It can't stop someone consuming a quarantined lot.
+On its own, a standalone connected worker tool does none of that. It handles the people side well, but it has no production context. It doesn't know which order is running. It can't trigger a quality check because a batch of raw material changed. It can't stop someone consuming a quarantined lot.
 
 What usually happens is this. You implement a connected worker tool for the quick wins: digital checklists, shift handover, task boards. It works. People like it. Then you realise you need production execution, quality and traceability, so you implement an MES/MOM alongside it.
 
 Now your operators are using two systems. Two logins. Two places to look when something goes wrong. Your data model is split down the middle, and someone has to integrate the two.
 
-Nobody wants to feel like they're working blind, switching between screens and trying to piece together what's happening.
+As soon as frontline workers need more than one application, that introduces friction. Nobody wants to feel like they're working blind, switching between screens and trying to piece together what's happening.
+
+Some connected worker platforms aim to be the single front end across several back-end applications. It's possible, but the back-end products were designed with their own screens in mind. A new front end layered on top tends to become bespoke, and can fall behind the versions underneath.
+
+As always, it depends on what you need. For some factories, a standalone tool alongside MES/MOM is a sensible choice. It just needs to be a deliberate one.
 
 ## One screen, one source of truth
 
-The answer isn't less connected worker. It's connected worker in the right place: **built into your MES/MOM**, not bolted on beside it.
+My preference is connected worker **built into your MES/MOM**, rather than bolted on beside it.
 
-When it's part of the same platform, everything changes:
+When it's part of the same platform, a lot changes:
 
 - **Checklists know the context.** A start-up checklist appears because this order is starting on this line, not because it's 6am.
 - **Quality checks are triggered by events.** A material change, a tool change or a count threshold prompts the right inspection automatically.

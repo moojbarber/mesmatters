@@ -686,7 +686,7 @@
 - term: UNS
   stands: Unified namespace
   short: An architecture where operational data is published to one central place, organised by the plant hierarchy.
-  body: Done well, a UNS reduces point-to-point integrations and makes data easy to find and reuse. It needs a clear structure and someone to govern it, so the context travels with the data. MES/MOM is one of the most valuable publishers into it.
+  body: Done well, a UNS reduces point-to-point integrations and makes data easy to find and reuse. It shows what's happening now, so you still need applications around it to keep the history and add context. MES/MOM is one of the most valuable publishers into it.
   articles:
   - opc-ua-mqtt-uns-explained
   - isa95-integration-patterns

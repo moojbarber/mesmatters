@@ -71,6 +71,6 @@ It's Category 1 that faces the challenging future.
 
 Know which category you're buying from, and why.
 
-If you want to build, Category 2 can be brilliant, as long as you have the people to sustain it and a plan to avoid creating new silos. If you want a standard way of working across many sites, look at Category 3. And if you're running a Category 1 system today, ask your vendor some hard questions about their roadmap.
+If you want to build, Category 2 can be brilliant, as long as you have the people to sustain it and a plan to avoid creating new silos. If you want a standard way of working across many sites, look at Category 3. And if you're running a Category 1 system today, ask your vendor some hard questions about their roadmap. I set out the trade-offs between building, stitching and configuring in more detail in [Code, build, stitch or configure](/post/build-vs-buy-mes).
 
 Do you see the same trends? I'd be interested to hear where you'd disagree.

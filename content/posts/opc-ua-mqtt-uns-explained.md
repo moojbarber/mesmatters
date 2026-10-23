@@ -38,6 +38,12 @@ Systems publish what they know and subscribe to what they need, instead of every
 
 Done well, it reduces point-to-point integrations and makes data easier to find and reuse. It needs a clear structure and someone to govern it, so the context travels with the data rather than a long list of tags.
 
+It's worth being clear about what a UNS is, though. At heart it's an organisational structure on top of a broker, showing what's happening right now. On its own it doesn't keep the history, and it doesn't add the meaning. You still need applications around it to do that.
+
+OEE is a good example. You can publish the current OEE to a UNS, but you can't aggregate OEE figures by order or shift. For that you have to go back to the raw data, stored somewhere that keeps it.
+
+So a UNS is a useful pattern, and for many factories a very good one. It's not a silver bullet, and it works best alongside the systems that hold the history and context.
+
 ## Where MES/MOM fits
 
 Connectivity moves data. MES/MOM gives it meaning.

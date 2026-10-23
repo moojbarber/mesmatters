@@ -33,6 +33,10 @@ Every customisation is code that has to be specified, built, tested, documented 
 
 Less mature systems often look cheaper upfront. But the total cost of ownership grows fast as customisations pile up. You pay again at every upgrade, or you stop upgrading and get stuck on an old version.
 
+So a higher licence cost isn't necessarily something to shy away from. Be wary of a cheap quote from anyone who doesn't understand your processes in detail, because that's usually how costs escalate.
+
+In software, almost anything is possible. But what's possible now can become very hard to live with later.
+
 ## Your processes probably aren't unique
 
 I hate to break it to you, but unless you're doing something truly niche, your manufacturing processes are not unique.
@@ -54,6 +58,8 @@ So you have a choice. Adapt to the system, have the system adapt to you, or a mi
 ## A warning sign
 
 If a vendor tells you everything needs to be custom-built, be wary. That's a sign of an immature product, or of requirements that haven't been challenged.
+
+Some products are really toolkits, which need a lot of coding to fit together. Others are configurable through master data and low-code tools, so your own team can build screens and reports without going back to the vendor. Ask which you're looking at.
 
 And if your own team is pushing for heavy customisation, challenge them. Are we customising because the process genuinely requires it, or because we're unwilling to change the process?
 
