@@ -9,6 +9,8 @@ art: hexcore
 
 I see the same confusion every day when people talk about MES customisation.
 
+This article is about making a bought platform fit. If you're weighing that against building your own from building blocks, or stitching specialist tools together, I compare the three in [Build, stitch or configure](/post/build-vs-buy-mes).
+
 Everyone wants a system that "fits our processes". Vendors say their product is "fully flexible". And nobody defines what they mean. So let me break it down.
 
 ## The six levels
@@ -41,11 +43,11 @@ So you have a choice. Adapt to the system, have the system adapt to you, or a mi
 
 ## How to keep customisation down
 
-**Pick a mature, configurable platform from the start.** The more you can achieve through configuration, the less you'll need to customise. But be realistic: you won't remove customisation completely, especially for integrations with third-party software.
+**If you're buying a platform, pick a mature, configurable one.** The more you can achieve through configuration, the less you'll need to customise. But be realistic: you won't remove customisation completely, especially for integrations with third-party software.
 
 **Assess every gap with an open mind.** For each point where you'd need to deviate from how the software works, ask: is this business-critical and must work exactly as before? Or could a process change or some training close the gap, so we use the software the standard way?
 
-**Adopt best practice.** A mature MES/MOM is built around what works across hundreds of factories. Insisting on your way regardless isn't smart. It's stubborn.
+**Adopt best practice.** A mature MES/MOM is built around what works across hundreds of factories. Insisting on your own way for everything usually costs more than it returns.
 
 **Have strong project management on both sides.** Vendor and manufacturer. Someone needs to say no, politely and often, to requests that recreate the old system in the new one.
 

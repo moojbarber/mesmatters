@@ -298,7 +298,7 @@ skills-enforcement-shopfloor:
   summary: "A skills matrix in a spreadsheet records qualifications; it doesn't stop the wrong person running the wrong job. Define skills against specific operations and equipment, and let expiry dates and procedure changes trigger retraining. Then check qualifications at login and order start, so the system blocks the job rather than reporting it afterwards."
 
 smart-factory-glossary:
-  summary: "Plain-English definitions of the terms you'll hear in smart factory projects, from APS and CAPA to SPC and UNS. Each entry explains what the term means in practice and links to the article that covers it in more depth. Bookmark it for the next meeting where someone says \"UNS\" with a straight face."
+  summary: "Plain-English definitions of the terms you'll hear in smart factory projects, from APS and CAPA to SPC and UNS. Each entry explains what the term means in practice and links to the article that covers it in more depth. Bookmark it for the next time a term comes up that you want to pin down."
 
 smart-factory-roi-research:
   summary: "Deloitte's 2025 survey of large US manufacturers reported average gains of 10% to 20% in production output and 10% to 15% in capacity from smart manufacturing. Meanwhile over half of small and mid-sized manufacturers still rely on manual methods. What the main studies actually show, and what they don't tell you."
@@ -416,10 +416,12 @@ oee-vs-teep:
       a: "When someone proposes a new line or another big capital investment. A low TEEP alongside a reasonable OEE often means the capacity already exists in unused hours. Before buying a new machine, it's worth asking whether an extra shift would do the same job."
 
 build-vs-buy-mes:
-  summary: "Building your own MES looks cheaper and fits exactly on day one. Over ten years it usually costs more: key-person dependency, no upgrade path, security to maintain, and every new capability built in-house. The pattern that works is to buy a configurable platform and build only at the edges, with extensions, integrations and analytics."
+  summary: "There are three broad ways to run shopfloor systems: build your own from building blocks, stitch best-of-breed applications together (often through a unified namespace), or configure an out-of-the-box MES/MOM platform. Building fits exactly and starts cheaply, but you own it forever. Stitching gives depth in each area, but every boundary is an interface to maintain. A platform costs more up front, but the data is connected and in context from the start, with no integrations between shopfloor functions and the vendor maintaining it. Most factories end up with a mix, so the real choice is which one is the backbone."
   faq:
     - q: "Should we build our own MES?"
-      a: "In my view, building a full MES/MOM platform from scratch is rarely better or less risky than buying one. Homegrown systems work well at first, then depend on a few people, struggle to keep up with security and platform changes, and have no roadmap for capabilities such as AI. Building extensions and integrations on a bought platform is a different matter, and often sensible."
+      a: "It can work for a narrow scope and a strong internal team, and it fits exactly. The trade-off is that you own it for its whole life: upgrades, security, documentation and every new capability. Knowledge also tends to sit with a few people. For a full MES/MOM across production, quality, inventory and maintenance, most manufacturers get more value over time from configuring a platform and building only at the edges."
+    - q: "Is stitching best-of-breed tools together through a UNS a good approach?"
+      a: "It can be. Each department gets a tool that's very good at its job, and a well-governed unified namespace cuts point-to-point integrations. The cost is that every boundary is an interface to own and retest, some context is lost between systems, and someone has to design and govern the architecture."
     - q: "What does a homegrown MES really cost?"
       a: "More than it appears. There's no licence fee, but the developers' time is real money, and it grows with every new feature, upgrade and departure. Add the cost of keeping it secure and compatible, and the risk when the person who built it leaves. Compare costs over ten years, not just the first project."
 

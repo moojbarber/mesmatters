@@ -23,7 +23,7 @@ MES/MOM exists precisely to sit between ERP and the shopfloor. Use it. And if it
 
 I have a strong opinion on this one.
 
-It's irresponsible to suggest that building an entire MES/MOM platform from scratch is better, faster or less risky than buying one. Homegrown systems start small. Someone builds a database, adds some screens, connects a couple of machines. It works, for a while.
+Building your own applications from building blocks can work well for a narrow scope and a strong team. Building an entire MES/MOM platform that way is a much bigger commitment than it looks. Homegrown systems start small. Someone builds a database, adds some screens, connects a couple of machines. It works, for a while.
 
 Then requirements grow. The person who built it becomes the single point of failure. Eventually, they leave. No vendor support, no upgrade path, no roadmap. When it breaks, you're on your own. I cover replacing them in [Replacing a homegrown MES](/post/replacing-a-homegrown-mes).
 
@@ -33,7 +33,7 @@ Too many people start with something small to fill a gap: an OEE tool, a checkli
 
 It solves the immediate problem. Then requirements grow. You need quality connected to production, inventory connected to quality, maintenance connected to downtime. The point solution can't do it.
 
-Now you're either replacing it, wasting the original investment, or bolting on more point solutions and creating an integration mess. Start with the end in mind. Choose a platform that can grow with you, even if you only use part of it on day one.
+Now you're either replacing it, or adding more tools and connecting them. Stitching best-of-breed applications together can work, especially with a well-governed unified namespace, but every boundary is an interface to own and some context is lost at each one. Start with the end in mind. Whichever route you take, know how it grows, and what connecting the pieces will cost. I compare the options in [Build, stitch or configure](/post/build-vs-buy-mes).
 
 ## 4. Over-customising
 

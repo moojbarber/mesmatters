@@ -36,7 +36,7 @@ A unified namespace is an architectural idea rather than a product. All operatio
 
 Systems publish what they know and subscribe to what they need, instead of every system integrating point-to-point with every other.
 
-Done well, it reduces integration spaghetti and makes data easier to find and reuse. Done badly, it's a very big pile of tags with no context.
+Done well, it reduces point-to-point integrations and makes data easier to find and reuse. It needs a clear structure and someone to govern it, so the context travels with the data rather than a long list of tags.
 
 ## Where MES/MOM fits
 

@@ -209,7 +209,7 @@
       $('[data-ws-n]').textContent = picked.length;
       $('[data-ws-p]').textContent = probs.length;
       var inMom = picked.filter(function (c) { return /^MES\/MOM/.test(DATA.caps[c].where); }).length;
-      $('[data-ws-summary]').textContent = inMom >= 3 ? inMom + ' of these usually live in MES/MOM. That points towards one operational platform rather than a tool per problem.' : inMom ? inMom + ' of these usually live in MES/MOM, the rest in specialist systems connected to it.' : 'These mostly live in specialist systems. Plan how they connect to the shopfloor before you choose any of them.';
+      $('[data-ws-summary]').textContent = inMom >= 3 ? inMom + ' of these usually live in MES/MOM. With that much overlap, one operational platform is worth looking at first, with specialist tools where you need extra depth.' : inMom ? inMom + ' of these usually live in MES/MOM, the rest in specialist systems connected to it.' : 'These mostly live in specialist systems. Plan how they connect to the shopfloor before you choose any of them.';
       $('[data-ws-caps]').innerHTML = picked.map(function (c, i) {
         var C = DATA.caps[c];
         return '<article class="ws-cap' + (i < 3 ? ' top' : '') + '"><div class="ws-cap-h"><span class="ws-n">' + count[c] + '</span><div><h3>' + esc(C.name) + '</h3><span class="ws-where">' + esc(C.where) + '</span></div></div><p>' + esc(C.what) + '</p><p class="ws-from">Solves: ' + from[c].map(esc).join(' · ') + '</p>' + (C.post ? '<a href="' + url('/post/' + C.post.slug) + '">' + esc(C.post.title) + ' →</a>' : '') + '</article>';

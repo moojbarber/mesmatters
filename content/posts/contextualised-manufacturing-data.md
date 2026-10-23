@@ -1,7 +1,7 @@
 ---
 title: "Raw machine data is worthless. Context is what makes it useful"
 short: "Contextualised data"
-description: "A machine signal that says 'stopped' tells you nothing. How MES/MOM turns raw data into contextualised information, and why point solutions lose that context."
+description: "A machine signal that says 'stopped' tells you nothing. How MES/MOM turns raw data into contextualised information, and where context gets lost between systems."
 published: 2026-05-07
 category: thought-leadership
 art: flow2
@@ -49,7 +49,7 @@ On the shopfloor, context comes from the system that knows what's *supposed* to 
 
 That's [MES/MOM](/post/what-is-mes-and-why-is-it-important-in-manufacturing). It's the central hub of contextualised operational data, sitting between ERP above and the machines below. It takes the raw signal and attaches everything around it.
 
-## Why point solutions lose context
+## Where context gets lost
 
 This is where I get opinionated.
 
@@ -64,7 +64,7 @@ When those live in one application, every piece of data carries all of that cont
 
 When they're spread across separate systems and integrated, you lose some of it at every boundary. You can't pass everything through an integration, so you pass a subset. The quality system knows a sample failed, but not what the machine was doing. The CMMS knows a fault was logged, but not that the line was mid-changeover.
 
-Integrating siloed applications always loses context. That's not a criticism of integration. It's just physics.
+Integrating separate applications nearly always loses some context. A well-designed unified namespace or integration layer can carry more of it, but someone has to model that context and keep it consistent. In a single platform it's there by default. I compare the approaches in [Build, stitch or configure](/post/build-vs-buy-mes).
 
 ## Context is what AI really needs
 

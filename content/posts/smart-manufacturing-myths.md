@@ -61,9 +61,9 @@ What may be unique are your *business* processes around manufacturing. Most "we'
 
 ## 8. "We'll build our own"
 
-For a very small manufacturer with capable technical people, a homegrown system can work for a while. It very quickly runs out of steam.
+For a small manufacturer with capable technical people, or a narrow scope, a homegrown system can work well for a while. As requirements grow, it often runs out of steam.
 
-Requirements grow. The person who built it becomes the single point of failure, and eventually they leave. No vendor support, no upgrade path, no roadmap. I've replaced a lot of homegrown systems, and the hidden costs are always higher than anyone expected. See [Replacing a homegrown MES](/post/replacing-a-homegrown-mes).
+Requirements grow. The person who built it becomes the single point of failure, and eventually they leave. No vendor support, no upgrade path, no roadmap. I've seen a lot of homegrown systems replaced, and the hidden costs are usually higher than anyone expected. I compare building, stitching and configuring in [Build, stitch or configure](/post/build-vs-buy-mes).
 
 ## A bonus one: "MES and MOM are just two names for the same thing"
 

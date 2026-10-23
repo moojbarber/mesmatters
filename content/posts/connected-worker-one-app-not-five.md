@@ -80,9 +80,9 @@ I'm not telling you to skip the quick wins. Connected worker is often the best p
 
 The question is what you start *on*.
 
-If you buy standalone, you get quick wins. Then you hit the ceiling, and you're either replacing the tool or integrating it with something deeper. Your operators pay the price either way.
+A standalone connected worker app gets you quick wins, often faster than anything else. Some factories run them well for years, especially alongside a unified namespace that connects them to the rest of the stack. The trade-off comes later: as you need checklists to know the order and the machine, or skills to block an action, the app has to be integrated with something deeper, and every boundary is an interface to own.
 
-If you choose an MES/MOM with connected worker built in, you get the same quick wins on day one, on a platform that grows with you into production, quality, inventory and maintenance. One system, one data model.
+An MES/MOM with connected worker built in gives you similar quick wins on day one, on a platform that grows into production, quality, inventory and maintenance. One system, one data model, with nothing to stitch together. In my experience that's where the most value ends up, but it's a choice to make with your eyes open. I compare the options in [Build, stitch or configure](/post/build-vs-buy-mes).
 
 Start with the end in mind. Connected worker is the front door. MOM is the house behind it. Make sure you're buying a door that's attached to a house.
 
@@ -90,13 +90,13 @@ Start with the end in mind. Connected worker is the front door. MOM is the house
 
 The connected worker market is full of lightweight tools that look brilliant in a demo. Nice mobile screens, quick to configure, an easy sell to a frustrated operations manager.
 
-Be wary of choosing a point solution that solves today's problem and creates tomorrow's headache. Ask any vendor:
+Before you choose, think past today's problem. Ask any vendor:
 
 - What happens when we need production execution and quality on the same screen?
 - How does a checklist know which order, material and machine it relates to?
 - Can skills block an action, or only report on it?
 - If we add your MES/MOM modules later, is it the same data model or another integration?
 
-The answers will tell you very quickly whether you're buying a platform or a stop-gap.
+The answers will tell you quickly how far the tool will take you, and what connecting it will cost.
 
 Have you implemented a standalone connected worker tool and then needed MES/MOM on top? I'd genuinely like to hear how that went.

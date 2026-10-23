@@ -7,7 +7,7 @@ category: education
 art: tiles
 ---
 
-Manufacturing is full of jargon. This glossary explains the terms you'll hear most in smart factory projects, in a line or two each. Bookmark it and come back when someone in a meeting says "UNS" with a straight face.
+Manufacturing is full of jargon. This glossary explains the terms you'll hear most in smart factory projects, in a line or two each. Bookmark it and come back whenever a term comes up that you want to pin down.
 
 Every term also has its own page, with my take on what it means in practice and the articles that go deeper, in the [full glossary](/glossary/).
 

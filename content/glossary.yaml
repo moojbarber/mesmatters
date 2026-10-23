@@ -686,7 +686,7 @@
 - term: UNS
   stands: Unified namespace
   short: An architecture where operational data is published to one central place, organised by the plant hierarchy.
-  body: Done well, a UNS reduces integration spaghetti. Done badly, it's a very big pile of tags with no context. MES/MOM is one of the most valuable publishers into it.
+  body: Done well, a UNS reduces point-to-point integrations and makes data easy to find and reuse. It needs a clear structure and someone to govern it, so the context travels with the data. MES/MOM is one of the most valuable publishers into it.
   articles:
   - opc-ua-mqtt-uns-explained
   - isa95-integration-patterns
@@ -1364,7 +1364,7 @@
   - customisation
 - term: Homegrown MES
   short: A manufacturing execution system built in-house rather than bought.
-  body: They usually work well at first, then depend on a few people and struggle to keep up. Replacing one is mostly a people challenge.
+  body: They fit exactly and can be quick to start. Over time they tend to depend on a few people, and every upgrade and new capability is yours to build. Replacing one is mostly a people challenge.
   articles:
   - build-vs-buy-mes
   - replacing-a-homegrown-mes
@@ -1373,7 +1373,7 @@
   - point-solution
 - term: Point solution
   short: A tool that solves one narrow problem, such as an OEE dashboard or a checklist app.
-  body: It fixes today's gap. As requirements grow, point solutions multiply into digital silos and an integration mess.
+  body: It fixes today's gap quickly, often with real depth. As requirements grow, each extra tool adds an interface to own, and context can get lost between them.
   articles:
   - smart-factory-technology-mistakes
   - paperless-manufacturing

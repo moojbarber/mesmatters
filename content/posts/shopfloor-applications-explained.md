@@ -1,7 +1,7 @@
 ---
 title: "Shopfloor applications explained: what each one does and which problem it solves"
 short: "Shopfloor applications explained"
-description: "Production execution, quality, inventory, maintenance, tooling, energy, connected worker and AI. What each shopfloor application does, the problem it solves, and why they work best on one platform."
+description: "Production execution, quality, inventory, maintenance, tooling, energy, connected worker and AI. What each shopfloor application does, the problem it solves, and the trade-offs between one platform and several."
 published: 2026-10-14
 category: education
 art: hexgrid
@@ -101,8 +101,10 @@ Every one of these depends on the applications above. AI needs the order, the ma
 
 You can buy most of these as separate products. An OEE tool here, a checklist app there, a standalone quality system, a CMMS.
 
-Each one solves its own problem. Then the problems start to overlap. Quality needs to know what's running. Inventory needs to know whether a lot passed inspection. Maintenance needs production's downtime. The operator needs one screen, not five logins. Every boundary becomes an integration to build and retest, and context gets lost at each one.
+That has real advantages. Each department gets a tool that's very good at its job, and you can start where the pain is biggest. A unified namespace makes connecting them far easier than it used to be.
 
-That's why I'd pick the problem that hurts most, but solve it on a platform that can grow into the rest. Start small, with the end in mind. The full argument is in [Six technology mistakes that sink smart factory projects](/post/smart-factory-technology-mistakes).
+The trade-off shows up as the problems overlap. Quality needs to know what's running. Inventory needs to know whether a lot passed inspection. Maintenance needs production's downtime. The operator needs one screen, not five logins. Every boundary becomes an interface to own and retest, and some context gets lost at each one.
+
+On one platform those overlaps are already handled, because everything shares the same data model. That's why my own preference is to pick the problem that hurts most, and solve it on a platform that can grow into the rest. I set out all three approaches, including building your own, in [Build, stitch or configure](/post/build-vs-buy-mes).
 
 Which row of that table describes your biggest problem right now?
