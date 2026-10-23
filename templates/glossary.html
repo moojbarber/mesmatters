@@ -10,20 +10,49 @@
   </div>
 </section>
 <div class="wrap">
-  <nav class="gl-az" aria-label="Jump to letter">{% for l in letters %}<a href="#gl-{{ l }}">{{ l }}</a>{% endfor %}</nav>
+  <nav class="gl-az" aria-label="Jump to letter">{% for l in letters %}<a href="#gl-{{ loop.index }}">{{ l }}</a>{% endfor %}</nav>
   {% for l in letters %}
-  <section class="gl-group" id="gl-{{ l }}" aria-labelledby="gl-h-{{ l }}">
-    <h2 id="gl-h-{{ l }}">{{ l }}</h2>
+  <section class="gl-group" id="gl-{{ loop.index }}" aria-labelledby="gl-h-{{ loop.index }}">
+    <h2 id="gl-h-{{ loop.index }}">{{ l }}</h2>
     <div class="gl-grid">
-      {% for g in terms if g.term[0]|upper == l %}
-      <a class="gl-card" href="{{ base }}/glossary/{{ g.slug }}">
-        <b>{{ g.term }}</b>{% if g.stands %}<small>{{ g.stands }}</small>{% endif %}
-        <span>{{ g.short }}</span>
-      </a>
+      {% for g in terms if g.letter == l %}
+      <details class="gl-card" id="t-{{ g.slug }}">
+        <summary>
+          <b>{{ g.term }}</b>{% if g.stands %}<small>{{ g.stands }}</small>{% endif %}
+          <span>{{ g.short }}</span>
+          <em class="gl-more">{% if g.mentions %}Mentioned in {{ g.mentions|length }} article{{ 's' if g.mentions|length != 1 }}{% else %}Read more{% endif %}<i aria-hidden="true"></i></em>
+        </summary>
+        <div class="gl-open">
+          {% if g.body %}<p class="gl-body">{{ g.body }}</p>{% endif %}
+          {% if g.mentions %}
+          <span class="micro">Where it comes up on the site</span>
+          <ul class="gl-uses">
+            {% for m in g.mentions[:8] %}<li><a href="{{ base }}/post/{{ m.post.slug }}"><img src="{{ base }}/images/art/{{ m.post.slug }}.svg" alt="" width="1600" height="900" loading="lazy"><span><b>{{ m.post.short }}</b><small>{{ m.n }} mention{{ 's' if m.n != 1 }} · {{ m.post.read_time }} min read</small></span></a></li>{% endfor %}
+          </ul>
+          {% if g.mentions|length > 8 %}<p class="gl-extra">And {{ g.mentions|length - 8 }} more articles.</p>{% endif %}
+          {% endif %}
+          <a class="gl-full" href="{{ base }}/glossary/{{ g.slug }}">Full entry for {{ g.term }} →</a>
+        </div>
+      </details>
       {% endfor %}
     </div>
   </section>
   {% endfor %}
   {{ cta(base, linkedin, kit_form) }}
 </div>
+<script>
+(function () {
+  var cards = [].slice.call(document.querySelectorAll('.gl-card'));
+  cards.forEach(function (d) {
+    d.addEventListener('toggle', function () {
+      if (d.open) {
+        cards.forEach(function (o) { if (o !== d) o.open = false; });
+        history.replaceState(null, '', '#' + d.id);
+        setTimeout(function () { d.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }, 60);
+      }
+    });
+  });
+  if (location.hash) { var t = document.getElementById(location.hash.slice(1)); if (t && t.tagName === 'DETAILS') { t.open = true; } }
+})();
+</script>
 {% endblock %}

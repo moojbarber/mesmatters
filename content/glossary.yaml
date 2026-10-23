@@ -281,7 +281,7 @@
 
 - term: MOM
   stands: Manufacturing operations management
-  short: The whole operation on one set of data, covering production, quality, inventory and maintenance.
+  short: The whole operation, covering production, quality, inventory and maintenance.
   body: The term exists because the scope grew. MOM lines up with the four areas of manufacturing operations defined in ISA-95, and the broadest platforms go further into tooling, energy, skills and connected worker.
   articles: [mes-vs-mom, what-is-mes-and-why-is-it-important-in-manufacturing]
   see_also: [mes, isa-95, connected-worker]
@@ -1010,3 +1010,172 @@
   body: It's where the data that matters is created, and where most smart factory programmes succeed or fail.
   articles: [shopfloor-applications-explained, what-is-a-smart-factory]
   see_also: [mom, gemba]
+
+# ---------- added 23 October 2026 ----------
+
+- term: WFM
+  stands: Workforce management
+  short: "Software for planning and managing people: shift patterns, rosters, time and attendance, absence and labour costs."
+  body: WFM decides who is scheduled to work. MES/MOM decides what they work on and checks they're qualified for it, so the two should share people and skills data rather than keep separate copies.
+  articles: [skills-enforcement-shopfloor, connected-worker-one-app-not-five]
+  see_also: [time-and-attendance, labour-tracking, skills-matrix]
+
+- term: Time and attendance
+  short: Recording when people clock on and off, for pay, compliance and labour planning.
+  body: It usually lives in WFM or HR systems. Linking it to MES/MOM shows who was actually available on each line, which helps explain output and cost.
+  articles: [who-benefits-from-an-mes]
+  see_also: [wfm, labour-tracking]
+
+- term: Labour tracking
+  short: Recording which people worked on which orders and operations, and for how long.
+  body: It turns labour from a site-wide cost into a cost per order and per product. MES/MOM captures it as people log on to operations, rather than from timesheets afterwards.
+  articles: [can-mes-improve-your-bottom-line, who-benefits-from-an-mes]
+  see_also: [wfm, time-and-attendance]
+
+- term: Supply chain
+  short: Everything involved in getting a product from raw materials to the customer, including suppliers, production, warehousing and transport.
+  body: The factory is one link in it. Accurate shopfloor data makes the rest of the chain more reliable, because promises to customers rest on what production can actually deliver.
+  articles: [what-is-erp, wms-vs-mes-inventory]
+  see_also: [scm, s-op, otif]
+
+- term: SCM
+  stands: Supply chain management
+  short: Planning and coordinating the flow of materials and information across suppliers, plants, warehouses and customers.
+  body: SCM software usually sits alongside ERP at the business level. It depends on accurate stock and production data from the plants, which is where MES/MOM and WMS come in.
+  articles: [what-is-erp, smart-factory-tech-stack]
+  see_also: [supply-chain, s-op, erp]
+
+- term: S&OP
+  slug: s-op
+  stands: Sales and operations planning
+  short: A regular process that balances demand forecasts with supply and production capacity, so sales and operations work to one plan.
+  body: S&OP works in months. Its capacity assumptions are only as good as the shopfloor data behind them, which is one reason real OEE and TEEP figures matter at board level.
+  articles: [oee-vs-teep, aps-vs-mes-scheduling]
+  see_also: [demand-planning, mrp, aps]
+
+- term: Demand planning
+  short: Forecasting what customers will order, so production and purchasing can be planned ahead.
+  body: The forecast feeds S&OP and MRP in ERP. Production then turns the plan into orders, and MES/MOM records what was actually made.
+  articles: [what-is-erp, aps-vs-mes-scheduling]
+  see_also: [s-op, mrp]
+
+- term: Procurement
+  short: Buying the materials, components and services a manufacturer needs, from choosing suppliers to paying them.
+  body: Procurement lives in ERP. Accurate consumption data from the shopfloor means purchasing works from real usage instead of estimates.
+  articles: [what-is-erp]
+  see_also: [erp, supplier-quality]
+
+- term: Supplier quality
+  short: Making sure purchased materials and components meet specification, through supplier approvals and incoming inspection.
+  body: Supplier quality usually sits in a QMS. Lot-level traceability on the shopfloor is what lets you trace a problem back to a specific supplier lot.
+  articles: [qms-and-mes-quality, lot-vs-serial-traceability]
+  see_also: [qms, lot, capa]
+
+- term: Lead time
+  short: The time between starting a process and finishing it, such as from order to delivery or from material arrival to use.
+  body: Planning relies on lead times being right. In continuous processes, the actual lead time through the line is also how time-based traceability works out which input went into which output.
+  articles: [what-is-erp, lot-vs-serial-traceability]
+  see_also: [mrp, time-based-traceability]
+
+- term: Safety stock
+  short: Extra inventory held to protect against variation in demand or supply.
+  body: Some safety stock is sensible. A lot of it is there because nobody trusts the inventory data, and real-time tracking lets you reduce it.
+  articles: [can-mes-improve-your-bottom-line, wms-vs-mes-inventory]
+  see_also: [wip, inventory-turns]
+
+- term: Inventory turns
+  short: How many times inventory is used and replaced over a period, usually a year.
+  body: Higher turns mean less working capital tied up in stock. Trustworthy, real-time inventory data is one of the simplest ways to improve them.
+  articles: [can-mes-improve-your-bottom-line]
+  see_also: [safety-stock, wip]
+
+- term: TMS
+  stands: Transport management system
+  short: Software for planning, executing and tracking the movement of goods, such as carrier selection and delivery scheduling.
+  body: TMS sits at the end of the chain, after the warehouse. It's a business-level system, usually connected through ERP rather than to the shopfloor.
+  articles: [smart-factory-tech-stack]
+  see_also: [wms, supply-chain]
+
+- term: CRM
+  stands: Customer relationship management
+  short: Software for managing customers and sales opportunities.
+  body: CRM rarely touches the shopfloor directly. Customer complaints, though, need to trace back through quality and production records, which is where the systems meet.
+  articles: [service-data-back-to-engineering]
+  see_also: [cpq, fsm]
+
+- term: FSM
+  stands: Field service management
+  short: Software for managing service visits, technicians, parts used and faults found at customer sites.
+  body: When products fail in the field, FSM records the failure against the serial number, and the as-built record in MES/MOM shows what the failed units had in common.
+  articles: [service-data-back-to-engineering]
+  see_also: [serialisation, as-built-record, crm]
+
+- term: EHS
+  stands: Environment, health and safety
+  short: The processes and systems that manage workplace safety and environmental compliance.
+  body: Safety checks and sign-offs at the point of work are a natural part of connected worker, built into the screens operators already use.
+  articles: [connected-worker-one-app-not-five, esg-needs-shopfloor-data]
+  see_also: [connected-worker, esg]
+
+- term: Master data
+  short: The core reference data systems share, such as materials, BOMs, routings, equipment and customers.
+  body: MES/MOM needs more detailed master data than most ERP set-ups were built with. Fix it once at the source, so every system benefits.
+  articles: [erp-master-data-for-mes, isa95-integration-patterns]
+  see_also: [mdm, routing, bom]
+
+- term: MDM
+  stands: Master data management
+  short: The processes and tools that keep master data accurate and consistent across systems.
+  body: The rule that matters most is one owner per object. Everyone else holds a copy.
+  articles: [erp-master-data-for-mes, isa95-integration-patterns]
+  see_also: [master-data]
+
+- term: API
+  stands: Application programming interface
+  short: A defined way for one piece of software to request data or actions from another.
+  body: APIs are how most modern integrations work. Agree which system owns the data before anyone starts writing code against one.
+  articles: [isa95-integration-patterns]
+  see_also: [middleware, event-driven-architecture]
+
+- term: Middleware
+  short: Software that sits between systems to move and translate data, so each system connects once rather than to every other.
+  body: An integration platform costs more upfront than point-to-point links. With more than a handful of systems, it usually pays for itself in maintenance.
+  articles: [isa95-integration-patterns]
+  see_also: [point-to-point-integration, ipaas, api]
+
+- term: iPaaS
+  stands: Integration platform as a service
+  short: A cloud-based integration platform for connecting applications, with monitoring and retries in one place.
+  body: It's the cloud version of middleware. For shopfloor integrations, check how it behaves when the connection drops.
+  articles: [isa95-integration-patterns, cloud-vs-on-premises-mes]
+  see_also: [middleware, api]
+
+- term: Point-to-point integration
+  short: Connecting systems directly to each other, one link per pair.
+  body: Quick for two or three integrations. With eight systems you can end up with dozens of links, each breaking when either side upgrades.
+  articles: [isa95-integration-patterns]
+  see_also: [middleware, uns]
+
+- term: Event-driven architecture
+  short: An integration approach where systems publish events, such as "order started" or "lot on hold", and others react to them.
+  body: It suits the shopfloor, where things happen at unpredictable times. A unified namespace is one way to build it.
+  articles: [isa95-integration-patterns, opc-ua-mqtt-uns-explained]
+  see_also: [uns, mqtt, api]
+
+- term: Work centre
+  short: A machine, line or group of resources where an operation is performed, used for planning and costing.
+  body: ERP routings often define work centres broadly. MES/MOM usually needs to know the specific machines within them.
+  articles: [erp-master-data-for-mes]
+  see_also: [routing, asset-hierarchy]
+
+- term: Capacity planning
+  short: Working out whether you have enough machines and people to meet demand.
+  body: Real OEE and TEEP figures make it far more accurate than nameplate speeds. Hidden capacity often sits in the hours you don't run.
+  articles: [oee-vs-teep, aps-vs-mes-scheduling]
+  see_also: [teep, finite-capacity-scheduling, s-op]
+
+- term: Digital transformation
+  short: Changing how a business operates by using digital technology and data, not just adding software.
+  body: In manufacturing, it succeeds or fails on processes and people more than technology. Map the process first, and plan for resistance.
+  articles: [how-to-modernise-a-factory, manufacturing-change-management]
+  see_also: [smart-factory, change-management]

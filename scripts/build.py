@@ -49,6 +49,8 @@ NAV = [
     {"key": "paths", "label": "Learning paths", "desc": "Guided routes through the articles", "href": "/paths/"},
     {"key": "articles", "label": "Articles", "desc": "Everything, by topic or newest first", "href": "/articles"},
     {"key": "featured", "label": "Featured", "desc": "Podcasts, interviews and press", "href": "/featured"},
+    {"key": "faq", "label": "FAQ", "desc": "Straight answers to common questions", "href": "/faq/"},
+    {"key": "glossary", "label": "Glossary", "desc": "Shopfloor jargon in plain English", "href": "/glossary/"},
     {"key": "about", "label": "About", "desc": "Who I am and why I write this", "href": "/about"},
 ]
 
@@ -359,6 +361,25 @@ def autolink_glossary(posts, glossary, base, limit=6):
         p["body"] = block.sub(fix_block, p["body"])
 
 
+def glossary_mentions(posts, glossary):
+    """For each term, the articles that mention it, most mentions first."""
+    for g in glossary:
+        forms = []
+        for f in [g["term"], g.get("stands")]:
+            if not f:
+                continue
+            acronym = f.replace("&", "").replace(" ", "").isupper() or any(ch.isdigit() for ch in f)
+            forms.append((f, 0 if acronym else re.I))
+        found = []
+        for p in posts:
+            text = re.sub(r"\]\([^)]*\)", "]", p["md"])
+            n = sum(len(re.findall(r"(?<![\w-])" + re.escape(f) + r"(?![\w-])", text, flags)) for f, flags in forms)
+            if n:
+                found.append((n, p))
+        found.sort(key=lambda x: (-x[0], x[1]["title"]))
+        g["mentions"] = [{"post": p, "n": n} for n, p in found]
+
+
 def md_clean(md):
     md = re.sub(r"^::block\s+[\w-]+\s*$", "", md, flags=re.M)
     md = re.sub(r"\]\((/[^)]*)\)", lambda m: f"]({SITE}{m.group(1)})", md)
@@ -515,6 +536,7 @@ def build(base, relative=False, include_scheduled=False):
     paths, paths_home = load_paths(posts)
     glossary = load_glossary(posts)
     autolink_glossary(posts, glossary, base)
+    glossary_mentions(posts, glossary)
     common["paths_home"] = paths_home
     common["paths_json"] = json.dumps([{"id": p["id"], "title": p["title"], "slugs": p["slugs"],
                                         "titles": [st["post"]["short"] for st in p["stations"]]} for p in paths], separators=(",", ":"))
@@ -661,7 +683,7 @@ def build(base, relative=False, include_scheduled=False):
             faq_topics.append({**t, "items": items})
             faq_all += items
     if faq_all:
-        write("faq/index.html", "faq.html", active="articles", seo_title="MES, MOM and smart factory FAQ | Shopfloor Matters",
+        write("faq/index.html", "faq.html", active="faq", seo_title="MES, MOM and smart factory FAQ | Shopfloor Matters",
               description=f"Straight answers to {len(faq_all)} common questions about MES, MOM, ERP, OEE, the smart factory and shopfloor systems, each linked to the full article.",
               canonical=f"{SITE}/faq/", topics=faq_topics, total=len(faq_all),
               jsonld=[jsonld({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
@@ -670,8 +692,10 @@ def build(base, relative=False, include_scheduled=False):
     # glossary
     if glossary:
         gset = {"@type": "DefinedTermSet", "@id": f"{SITE}/glossary/#set", "name": "Shopfloor Matters glossary", "url": f"{SITE}/glossary/"}
-        letters = sorted({g["term"][0].upper() for g in glossary})
-        write("glossary/index.html", "glossary.html", active="articles", seo_title="Smart factory and MES glossary | Shopfloor Matters",
+        for g in glossary:
+            g["letter"] = "0–9" if g["term"][0].isdigit() else g["term"][0].upper()
+        letters = sorted({g["letter"] for g in glossary}, key=lambda x: (x != "0–9", x))
+        write("glossary/index.html", "glossary.html", active="glossary", seo_title="Smart factory and MES glossary | Shopfloor Matters",
               description="Plain-English definitions of MES, MOM, OEE, ISA-95, UNS and the other terms you'll hear in smart factory and shopfloor projects.",
               canonical=f"{SITE}/glossary/", terms=glossary, letters=letters,
               jsonld=[jsonld({"@context": "https://schema.org", **gset, "hasDefinedTerm": [
@@ -679,7 +703,7 @@ def build(base, relative=False, include_scheduled=False):
                    **({"alternateName": g["stands"]} if g.get("stands") else {})} for g in glossary]})])
         for g in glossary:
             name = g["term"] + (f" ({g['stands']})" if g.get("stands") else "")
-            write(f"glossary/{g['slug']}.html", "term.html", active="articles", seo_title=f"{name}: meaning in manufacturing | Shopfloor Matters",
+            write(f"glossary/{g['slug']}.html", "term.html", active="glossary", seo_title=f"{name}: meaning in manufacturing | Shopfloor Matters",
                   description=g["short"], canonical=f"{SITE}/glossary/{g['slug']}", g=g,
                   jsonld=[jsonld({"@context": "https://schema.org", "@type": "DefinedTerm", "name": g["term"], "description": g["short"] + " " + g.get("body", ""),
                                   "url": f"{SITE}/glossary/{g['slug']}", "inDefinedTermSet": gset,

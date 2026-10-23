@@ -38,7 +38,7 @@ Every term also has its own page, with my take on what it means in practice and 
 | MCP | Model Context Protocol | An open standard that lets AI agents connect to other software systems and use their data and functions. |
 | MES | Manufacturing execution system | The production pillar: executing orders, recording counts, scrap and downtime, calculating OEE. See [MES vs MOM](/post/mes-vs-mom). |
 | ML | Machine learning | A type of AI where algorithms are trained on historical data to predict outcomes. |
-| MOM | Manufacturing operations management | The whole operation: production, quality, inventory and maintenance on the same data. |
+| MOM | Manufacturing operations management | The whole operation: production, quality, inventory and maintenance. |
 | MQTT | | A lightweight publish-and-subscribe messaging protocol widely used for IIoT. |
 | MTBF | Mean time between failures | The average time equipment runs between breakdowns. |
 | MTTR | Mean time to repair | The average time it takes to fix equipment after a breakdown. |
