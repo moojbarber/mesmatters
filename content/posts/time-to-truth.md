@@ -1,7 +1,7 @@
 ---
 title: "Time to truth: how long does your factory take to know what happened?"
 short: "Time to truth"
-description: "One question tells you more about a factory than any maturity slide: how long until the truth about a stoppage reaches the right person? Seven stages, from paper and Excel to agentic AI."
+description: "Follow one stoppage through a factory and you learn more than any maturity slide shows: how long until the truth reaches the right person, with the context to act? Seven stages, from paper and Excel to autonomous operations."
 published: 2026-04-30
 category: thought-leadership
 art: ladder
@@ -11,11 +11,11 @@ The first question in any transformation is simple: where are you today?
 
 The trouble is that most ways of answering it invite flattery. Ask a leadership team to rate its own maturity and the answer usually matches the last board presentation, not the shopfloor.
 
-So I ask a different question.
+So I prefer to start with a real example. Something like this:
 
 **Line 3 stops at 02:14. A bearing has been running hot. When does the right person find out, and do they know why?**
 
-The answer tells you more about a factory than any framework slide. I call it time to truth: how long it takes your factory to know what really happened, with enough context to act on it.
+Follow one event like that through the factory and you learn more than any framework slide will show you. I call it time to truth: how long it takes your factory to know what really happened, with enough context to act on it.
 
 ::block time-to-truth
 

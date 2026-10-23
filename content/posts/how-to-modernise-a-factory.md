@@ -18,7 +18,7 @@ So this is the route I'd follow, step by step, with a simple test for each one s
 
 Not where the last board presentation said you are. Where you actually are.
 
-The question I use is time to truth: when a line stops at 2am, how long until the right person knows, and do they know why? The stages run from "eventually" to "without asking". Most factories sit somewhere between eventually and after the fact, and often further back than they'd like to admit. Travellers on clipboards, and a morning meeting that starts with someone reading yesterday's numbers from a notebook. That's "eventually", and it's very common.
+One way I look at it is time to truth. Take an example: when a line stops at 2am, how long until the right person knows, and do they know why? The stages run from "eventually" to "without asking". Most factories sit somewhere between eventually and after the fact, and often further back than they'd like to admit. Travellers on clipboards, and a morning meeting that starts with someone reading yesterday's numbers from a notebook. That's "eventually", and it's very common.
 
 You can't plan a route if you're lying to yourself about the starting point. More in [Time to truth](/post/time-to-truth).
 
