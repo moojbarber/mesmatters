@@ -64,14 +64,26 @@
           <li><a href="{{ base }}/paths/">Learning paths</a></li>
           <li><a href="{{ base }}/faq/">FAQ</a></li>
           <li><a href="{{ base }}/glossary/">Glossary</a></li>
+          <li><a href="{{ base }}/for/">By industry and role</a></li>
           <li><a href="{{ base }}/thought-leadership">Smart Factory &amp; AI</a></li>
           <li><a href="{{ base }}/mes-education">Foundations</a></li>
           <li><a href="{{ base }}/mes-advice">Implementation</a></li>
         </ul>
       </div>
       <div>
+        <h4>Use</h4>
+        <ul>
+          <li><a href="{{ base }}/tools/">All tools</a></li>
+          <li><a href="{{ base }}/tools/readiness-check">Readiness check</a></li>
+          <li><a href="{{ base }}/tools/oee-one-percent">What is 1% of OEE worth?</a></li>
+          <li><a href="{{ base }}/tools/vendor-scorecard">MES vendor scorecard</a></li>
+        </ul>
+      </div>
+      <div>
         <h4>Connect</h4>
         <ul>
+          <li><a href="{{ base }}/ask">Ask Matt</a></li>
+          <li><a href="{{ base }}/speaking">Speaking</a></li>
           <li><a href="{{ base }}/about">About Matt</a></li>
           <li><a href="{{ base }}/subscribe">Newsletter</a></li>
           <li><a href="{{ base }}/contact">Contact</a></li>
@@ -88,5 +100,6 @@
 {% if paths_json %}<script type="application/json" id="lp-data">{{ paths_json|safe }}</script>{% endif %}
 <script>window.LP_BASE="{{ base }}";</script>
 <script src="{{ base }}/js/site.js?v={{ version }}" defer></script>
+{% if tools_js %}<script src="{{ base }}/js/tools.js?v={{ version }}" defer></script>{% endif %}
 </body>
 </html>

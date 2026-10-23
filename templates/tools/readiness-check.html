@@ -1,0 +1,61 @@
+{% set d = t.data %}
+<div class="tk-intro rv">
+  <div>
+    <h2>How to score it</h2>
+    <p>For each statement, pick the number that's true <b>across your site today</b>. Not your best line, and not next year's plan. 1 looks like the left-hand description, 5 looks like the right.</p>
+    <p class="dimmed">Most factories land somewhere between Level 1 and 3. That's a starting point, not a criticism.</p>
+  </div>
+  <ol class="tk-levels">
+    {% for l in d.levels %}<li><b>{{ l.n }}</b><span><strong>{{ l.name }}</strong> {{ l.line }}</span></li>{% endfor %}
+  </ol>
+</div>
+
+<form class="rc" id="rc-form" novalidate>
+  {% set ns = namespace(i=0) %}
+  {% for a in d.areas %}
+  <fieldset class="rc-area rv" data-area="{{ a.id }}">
+    <legend><span class="micro">Area {{ loop.index }} of {{ d.areas|length }}</span>{{ a.name }}</legend>
+    {% for it in a['items'] %}{% set ns.i = ns.i + 1 %}
+    <div class="rc-q" role="radiogroup" aria-labelledby="rcq{{ ns.i }}">
+      <p class="rc-qt" id="rcq{{ ns.i }}"><i>{{ ns.i }}</i>{{ it.q }}</p>
+      <div class="rc-scale">
+        <span class="rc-lo">{{ it.lo }}</span>
+        <div class="rc-opts">
+          {% for v in range(1, 6) %}<label><input type="radio" name="q{{ ns.i }}" value="{{ v }}" data-area="{{ a.id }}"><span>{{ v }}</span></label>{% endfor %}
+        </div>
+        <span class="rc-hi">{{ it.hi }}</span>
+      </div>
+    </div>
+    {% endfor %}
+  </fieldset>
+  {% endfor %}
+</form>
+
+<div class="rc-bar" aria-live="polite"><span><b data-rc-count>0</b> of {{ ns.i }} answered</span><div class="rc-bar-line"><i data-rc-fill></i></div><button class="btn sm" type="button" data-rc-show disabled>See my result</button></div>
+
+<section class="rc-result" id="rc-result" hidden tabindex="-1" aria-labelledby="rc-h">
+  <div class="rc-hero">
+    <div class="rc-ring" data-rc-ring><b data-rc-level>–</b><small>Level</small></div>
+    <div>
+      <span class="micro">Your result</span>
+      <h2 id="rc-h"><span data-rc-name>–</span></h2>
+      <p data-rc-line></p>
+      <p class="rc-avg">Average score <b data-rc-avg>–</b> out of 5</p>
+    </div>
+  </div>
+  <div class="rc-areas" data-rc-areas></div>
+  <div class="rc-warn" data-rc-warn hidden></div>
+  <div class="rc-next">
+    <div><span class="micro">What to do next</span><p data-rc-next></p></div>
+    <div><span class="micro">Your weakest area</span><p data-rc-weak></p></div>
+  </div>
+  <div class="rc-read"><span class="micro">Read next</span><div class="rc-read-list" data-rc-read></div></div>
+  <div class="tk-actions">
+    <button class="btn ghost sm" type="button" data-print>Print or save as PDF</button>
+    <button class="btn ghost sm" type="button" data-csv="readiness">Download (CSV)</button>
+    <button class="btn ghost sm" type="button" data-reset>Start again</button>
+  </div>
+  <p class="tk-tip"><b>Getting a truer answer.</b> Ask two colleagues from different departments, say quality and IT, to take it separately, then compare. Where your scores differ is often more revealing than the scores themselves.</p>
+  {{ gate(base, kit_form, "readiness-check", "Email me my result", "A copy of your level and scores, plus the reading list for your weakest area. Handy when you want to share it with the team.", "Email it to me") }}
+</section>
+<script type="application/json" id="tk-data">{{ t.json|safe }}</script>

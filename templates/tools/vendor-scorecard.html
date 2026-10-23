@@ -1,0 +1,65 @@
+{% set d = t.data %}
+<div class="tk-intro rv">
+  <div>
+    <h2>Before the first demo</h2>
+    <p>Ask every vendor the same twelve questions, including any you already favour. Listen for <b>how</b>, not yes. Every vendor says yes. The good ones show you how, in your context.</p>
+    <p>Agree the weights with your selection team before anyone sees a demo. It's much harder to be objective once a slick presentation has made an impression.</p>
+    <p class="dimmed">I work for an MES vendor. This scorecard doesn't favour anyone, mine included. Test every vendor against exactly the same criteria.</p>
+  </div>
+  <div class="vs-names">
+    <b>Your shortlist</b>
+    {% for v in ['A', 'B', 'C'] %}<label>Vendor {{ v }}<input type="text" data-vname="{{ loop.index0 }}" placeholder="Vendor {{ v }}" maxlength="40"></label>{% endfor %}
+    <p class="dimmed">Names stay in your browser.</p>
+  </div>
+</div>
+
+<div class="vs-key rv"><span><b>Weight</b> 1 nice to have · 2 important · 3 critical</span><span><b>Score</b> 1 doesn't meet it · 3 partly · 5 fully meets it, proven in a real factory</span></div>
+
+<form class="vs" id="vs-form" novalidate>
+  {% set ns = namespace(i=0) %}
+  {% for g in d.groups %}
+  <fieldset class="vs-group rv">
+    <legend>{{ g.name }}</legend>
+    {% for q in g.questions %}{% set ns.i = ns.i + 1 %}
+    <div class="vs-q">
+      <div class="vs-qt">
+        <p><i>{{ ns.i }}</i>{{ q.q }}</p>
+        <details><summary>What good sounds like, and the red flag</summary>
+          <p class="vs-good"><b>Sounds like:</b> {{ q.good }}</p>
+          <p class="vs-flag"><b>Red flag:</b> {{ q.flag }}</p>
+        </details>
+      </div>
+      <div class="vs-inputs">
+        <label><span>Weight</span><select name="w{{ ns.i }}"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option></select></label>
+        {% for v in ['A', 'B', 'C'] %}<label><span data-vlabel="{{ loop.index0 }}">{{ v }}</span><input type="number" name="s{{ ns.i }}_{{ loop.index0 }}" min="1" max="5" step="1" inputmode="numeric" placeholder="–"></label>{% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </fieldset>
+  {% endfor %}
+</form>
+
+<section class="vs-result rv" aria-live="polite">
+  <span class="micro">Weighted scores, out of 100</span>
+  <div class="vs-bars" data-vs-bars></div>
+  <p class="dimmed" data-vs-note>Score each vendor after the scripted demo and a reference visit, not after the first meeting. The scorecard informs the decision. It doesn't make it.</p>
+</section>
+
+<section class="section tight vs-demo">
+  <h2 class="label">The scripted demo</h2>
+  <p class="vs-demo-intro">Send every vendor the same scenarios in advance, built on your own products and processes, awkward exceptions included. Then note what each one actually showed you.</p>
+  <div class="table-wrap"><table class="vs-table">
+    <thead><tr><th>Scenario</th><th>What you need to see</th>{% for v in ['A', 'B', 'C'] %}<th data-vlabel="{{ loop.index0 }}">{{ v }}</th>{% endfor %}</tr></thead>
+    <tbody>
+      {% for s in d.demo %}{% set si = loop.index0 %}<tr><td>{{ s.scenario }}</td><td>{{ s.see }}</td>{% for v in range(3) %}<td><select name="d{{ si }}_{{ v }}" form="vs-form" aria-label="Result"><option value="">–</option><option>Shown</option><option>Partly</option><option>Not shown</option></select></td>{% endfor %}</tr>
+      {% endfor %}
+    </tbody>
+  </table></div>
+</section>
+
+<div class="tk-actions">
+  <button class="btn ghost sm" type="button" data-print>Print or save as PDF</button>
+  <button class="btn ghost sm" type="button" data-csv="vendors">Download (CSV)</button>
+  <button class="btn ghost sm" type="button" data-reset>Clear the scorecard</button>
+</div>
+<script type="application/json" id="tk-data">{{ t.json|safe }}</script>

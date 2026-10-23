@@ -1,0 +1,47 @@
+{% set d = t.data %}
+<div class="tk-intro rv">
+  <div>
+    <h2>Start from the problem, not the product</h2>
+    <p>Most system selections start with a shortlist of vendors. The good ones start with a list of problems. Tick the ones you recognise, and the picker shows which capabilities solve them and where each one usually lives.</p>
+    <p class="dimmed">It won't name a product. That decision comes after your process maps and requirements, and after you've seen vendors prove it with your own scenarios.</p>
+  </div>
+  <div class="ws-ctx">
+    <b>A little context</b>
+    <label><input type="checkbox" name="regulated" form="ws-form"> We're in a regulated industry (food, pharma, medical devices, aerospace)</label>
+    <label><input type="checkbox" name="multisite" form="ws-form"> We have more than one site to think about</label>
+    <label><input type="checkbox" name="onevendor" form="ws-form"> We're considering ERP and MES from the same vendor</label>
+  </div>
+</div>
+
+<form class="ws" id="ws-form" novalidate>
+  {% for g in d.groups %}
+  <fieldset class="ws-group rv">
+    <legend>{{ g.name }}</legend>
+    {% for p in g.problems %}
+    <label class="ws-p"><input type="checkbox" name="{{ p.id }}" value="{{ p.caps|join(',') }}"><span>{{ p.text }}</span></label>
+    {% endfor %}
+  </fieldset>
+  {% endfor %}
+</form>
+
+<section class="ws-result" id="ws-result" aria-live="polite">
+  <div class="ws-empty" data-ws-empty><span class="micro">Your capability map</span><p>Tick a problem or two above and your map builds here.</p></div>
+  <div data-ws-out hidden>
+    <div class="ws-head">
+      <div><span class="micro">Your capability map</span><h2><span data-ws-n>0</span> capabilities from <span data-ws-p>0</span> problems</h2></div>
+      <p data-ws-summary></p>
+    </div>
+    <div class="ws-caps" data-ws-caps></div>
+    <div class="ws-notes" data-ws-notes></div>
+    <div class="tk-actions">
+      <button class="btn ghost sm" type="button" data-print>Print or save as PDF</button>
+      <button class="btn ghost sm" type="button" data-csv="systems">Download (CSV)</button>
+      <button class="btn ghost sm" type="button" data-reset>Clear</button>
+    </div>
+  </div>
+</section>
+
+<div class="ws-legend rv">
+  <p><b>Reading the map.</b> Capabilities that solve more of your problems are listed first. Where several sit in MES/MOM, that's a sign one platform could cover a lot of ground, rather than a separate tool for each problem. I explain how the pieces fit in <a href="{{ base }}/post/shopfloor-applications-explained">Shopfloor applications explained</a>.</p>
+</div>
+<script type="application/json" id="tk-data">{{ t.json|safe }}</script>

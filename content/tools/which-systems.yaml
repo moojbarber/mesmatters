@@ -1,0 +1,163 @@
+# "Which systems do I need?" Each problem points at one or more capabilities.
+# where: where the capability usually lives. Vendor-neutral on purpose.
+capabilities:
+  execution:
+    name: Production execution and monitoring
+    where: MES/MOM
+    what: Orders released to the line, operators guided through each step, counts, scrap, downtime and reasons captured as they happen.
+    read: mes-functionality-production-monitoring
+  scheduling:
+    name: Finite scheduling
+    where: APS, or the scheduling module in MES/MOM
+    what: A plan that respects real capacity, changeovers, material and labour, re-run when something changes rather than rebuilt by hand.
+    read: aps-vs-mes-scheduling
+  quality:
+    name: In-process quality and SPC
+    where: MES/MOM
+    what: Checks triggered at the right moment, results recorded at source, control charts and holds that stop bad product moving on.
+    read: mes-functionality-quality-operations
+  qms:
+    name: Quality management (QMS)
+    where: QMS, connected to MES/MOM
+    what: Complaints, CAPA, audits, document control and supplier quality. The system of record for how quality is managed.
+    read: qms-and-mes-quality
+  lims:
+    name: Laboratory management (LIMS)
+    where: LIMS, connected to MES/MOM
+    what: Samples, lab tests, instruments and certificates of analysis, with results flowing back to the batch.
+    read: lims-and-mes
+  traceability:
+    name: Traceability and genealogy
+    where: MES/MOM
+    what: Every lot or serial linked to the materials, equipment, people and results that went into it, searchable in minutes.
+    read: manufacturing-traceability
+  inventory:
+    name: Shopfloor inventory and material flow
+    where: MES/MOM, with WMS in the warehouse
+    what: Material staged and consumed at the line, and replenished before it runs out, with stock you can trust between the warehouse and the machine.
+    read: wms-vs-mes-inventory
+  wms:
+    name: Warehouse management (WMS)
+    where: WMS, or warehouse functions in ERP
+    what: Receiving, put-away, picking and shipping, with locations and stock levels you don't have to count to believe.
+    read: mes-functionality-logistics-warehousing
+  maintenance:
+    name: Maintenance management
+    where: CMMS or EAM, fed by MES/MOM
+    what: Work orders, preventive schedules, spares and asset history. Machine signals from the floor turn into requests automatically.
+    read: eam-cmms-and-mes
+  connectivity:
+    name: Machine connectivity
+    where: Connectivity layer (OPC UA, MQTT, edge), feeding MES/MOM and a historian
+    what: Counts, states, alarms and process values read straight from equipment instead of written down.
+    read: opc-ua-mqtt-uns-explained
+  historian:
+    name: Process data history
+    where: Historian or time-series platform
+    what: High-frequency process values stored over time, for engineers investigating a problem or training a model.
+    read: historian-vs-mes
+  worker:
+    name: Connected worker and digital instructions
+    where: MES/MOM, or a connected worker app on the same data
+    what: Instructions, checks, sign-offs and skills on one screen at the point of work, in the operator's language.
+    read: connected-worker-one-app-not-five
+  skills:
+    name: Skills and qualifications
+    where: MES/MOM, linked to HR or training records
+    what: The system checks someone is qualified before they start a job, rather than a supervisor checking a spreadsheet.
+    read: skills-enforcement-shopfloor
+  plm:
+    name: Engineering change to the shopfloor
+    where: PLM and ERP working with MES/MOM as a digital thread
+    what: A change to the design or BOM reaches the line on time, and the as-built record goes back the other way.
+    read: plm-erp-mes-digital-thread
+  cpq:
+    name: Configure, price, quote (CPQ)
+    where: CPQ connected to ERP and the shopfloor
+    what: Configurable products quoted and engineered correctly, so the order that reaches the floor can actually be built.
+    read: cpq-to-shopfloor
+  data:
+    name: Data platform and reporting
+    where: Data platform or unified namespace, fed by MES/MOM
+    what: KPIs and reports built from contextualised data automatically, instead of a spreadsheet someone rebuilds every morning.
+    read: manufacturing-data-platforms
+  energy:
+    name: Energy monitoring
+    where: MES/MOM or an energy management system
+    what: Energy linked to the order, product, shift and machine that used it, so you can see the cost per unit and the waste.
+    read: mes-functionality-energy
+  tooling:
+    name: Tool management
+    where: MES/MOM or a dedicated tool management system
+    what: Tool life and condition tracked, with a warning before a worn tool makes scrap.
+    read: mes-functionality-tooling
+
+groups:
+  - name: Running production
+    problems:
+      - id: p1
+        text: We find out how yesterday went at this morning's meeting
+        caps: [execution, data]
+      - id: p2
+        text: Downtime is written on a whiteboard or not recorded at all
+        caps: [execution, connectivity]
+      - id: p3
+        text: Planners rebuild the schedule by hand every time something changes
+        caps: [scheduling]
+      - id: p4
+        text: Operators work from paper travellers and printed instructions
+        caps: [worker, execution]
+      - id: p5
+        text: We can't prove who was qualified to do a job
+        caps: [skills]
+  - name: Quality and compliance
+    problems:
+      - id: q1
+        text: Quality checks are recorded on paper and typed up later
+        caps: [quality]
+      - id: q2
+        text: Tracing a batch back to its raw materials takes hours or days
+        caps: [traceability, inventory]
+      - id: q3
+        text: Complaints and corrective actions are managed in email and spreadsheets
+        caps: [qms]
+      - id: q4
+        text: Lab results arrive on paper or in a separate system nobody on the line can see
+        caps: [lims, quality]
+      - id: q5
+        text: We find out a process drifted after the product failed final inspection
+        caps: [quality, connectivity]
+  - name: Material and maintenance
+    problems:
+      - id: m1
+        text: The system says we have stock, the line says we don't
+        caps: [inventory, wms]
+      - id: m2
+        text: Lines stop waiting for material
+        caps: [inventory, scheduling]
+      - id: m3
+        text: Maintenance is mostly reactive. We fix things when they break
+        caps: [maintenance, connectivity]
+      - id: m4
+        text: A worn tool is usually discovered through scrap
+        caps: [tooling]
+      - id: m5
+        text: We can't say what energy a product or line really uses
+        caps: [energy, connectivity]
+  - name: Engineering and the wider business
+    problems:
+      - id: e1
+        text: Engineering changes reach the shopfloor late, or not at all
+        caps: [plm]
+      - id: e2
+        text: Configured orders arrive on the floor that can't be built as quoted
+        caps: [cpq, plm]
+      - id: e3
+        text: Every department has its own numbers and we argue about whose are right
+        caps: [data, execution]
+      - id: e4
+        text: Engineers can't get the process data they need to solve a problem
+        caps: [historian, connectivity]
+      - id: e5
+        text: Our AI ideas stall because the data isn't there
+        caps: [data, connectivity, execution]

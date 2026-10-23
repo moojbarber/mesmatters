@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% from "macros.html" import hero_bg, cta, ask_box %}
+{% block main %}
+<section class="hero page-hero">
+  {{ hero_bg() }}
+  <div class="wrap">
+    <span class="tag">Speaking <i>/</i> Podcasts <i>/</i> Panels</span>
+    <h1>Speaking and media</h1>
+    <p class="kicker">Talks on the smart factory, shopfloor AI, connected worker and MES/MOM, from someone who has spent his career making factory software work in real factories. Vendor-neutral, and happy to disagree with the hype.</p>
+    <div class="actions"><a class="btn" href="{{ linkedin }}" target="_blank" rel="me noopener">Invite me on LinkedIn →</a><a class="btn ghost" href="#kit">Bio and photo</a></div>
+  </div>
+</section>
+<div class="wrap">
+  <section class="section tight">
+    <h2 class="label">Talks</h2>
+    <div class="sp-talks">
+      {% for t in sp.talks %}
+      <article class="sp-talk rv">
+        <span class="micro">{{ t.tag }}</span>
+        <h3>{{ t.title }}</h3>
+        <p>{{ t.abstract }}</p>
+        <ul>{% for k in t.takeaways %}<li>{{ k }}</li>{% endfor %}</ul>
+      </article>
+      {% endfor %}
+    </div>
+    <p class="dimmed">Every talk can be shaped around your audience, from shopfloor teams to boards.</p>
+  </section>
+
+  <section class="section">
+    <h2 class="label">Formats</h2>
+    <div class="grid" style="--min:230px">
+      {% for f in sp.formats %}<div class="card rv"><div class="body"><h3>{{ f.name }}</h3><p>{{ f.text }}</p></div></div>{% endfor %}
+    </div>
+  </section>
+
+  {% if appearances %}
+  <section class="section">
+    <div class="section-head"><div><h2 class="label">Recent appearances</h2></div><a class="more" href="{{ base }}/featured">Everything, with links →</a></div>
+    <ul class="sp-list rv">
+      {% for it in appearances %}<li><span class="sp-date">{{ it.date_short }}</span><span class="sp-kind">{{ it.label }}</span><b>{{ it.title }}</b><span class="dimmed">{{ it.outlet_line }}</span></li>{% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  <section class="section" id="kit">
+    <h2 class="label">Speaker kit</h2>
+    <div class="sp-kit rv">
+      <figure><img src="{{ base }}/images/matt-barber.jpg" alt="Matt Barber" width="400" height="400" loading="lazy"><figcaption><a class="btn ghost sm" href="{{ base }}/images/matt-barber.jpg" download>Download photo</a></figcaption></figure>
+      <div>
+        <div class="sp-bio"><div class="sp-bio-h"><b>Short bio</b><button class="btn ghost sm" type="button" data-copy-text="bio-short">Copy</button></div><p id="bio-short">{{ sp.bio_short }}</p></div>
+        <div class="sp-bio"><div class="sp-bio-h"><b>Long bio</b><button class="btn ghost sm" type="button" data-copy-text="bio-long">Copy</button></div><p id="bio-long">{{ sp.bio_long }}</p></div>
+        <p class="dimmed">Introduce me as Matt Barber, VP &amp; General Manager, MES at Infor and author of Shopfloor Matters. I don't pitch products from the stage.</p>
+      </div>
+    </div>
+  </section>
+  {{ ask_box(base, ask_endpoint, "speaking") }}
+</div>
+{% endblock %}

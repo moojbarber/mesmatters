@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% from "macros.html" import hero_bg, cta, ask_box %}
+{% block main %}
+<section class="hero page-hero tk-hero">
+  {{ hero_bg() }}
+  <div class="wrap">
+    <span class="tag">Tools <i>/</i> {{ tools|selectattr("kind", "equalto", "tool")|list|length }} tools and {{ tools|selectattr("kind", "equalto", "template")|list|length }} templates</span>
+    <h1>Tools for the work, not the brochure</h1>
+    <p class="kicker">Free, vendor-neutral tools built from the articles on this site. Find out where you really are and put a number on the problem. Then run a fair selection. No sign-up for the tools. The templates ask for an email.</p>
+  </div>
+</section>
+<div class="wrap">
+  <section class="section tight">
+    <h2 class="label">Run it in your browser</h2>
+    <div class="tk-cards">
+      {% for t in tools if t.kind == "tool" %}
+      <a class="tk-card rv" href="{{ base }}/tools/{{ t.id }}" style="--c:{{ t.color }}">
+        <span class="tk-ico" aria-hidden="true">{{ icons[t.icon]|safe }}</span>
+        <span class="micro">{{ t.eyebrow }} · {{ t.minutes }} min</span>
+        <h3>{{ t.title }}</h3>
+        <p>{{ t.blurb }}</p>
+        <span class="tk-go">Open the tool →</span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  <section class="section">
+    <h2 class="label">Templates to download</h2>
+    <div class="tk-cards small">
+      {% for t in tools if t.kind == "template" %}
+      <a class="tk-card rv" href="{{ base }}/tools/{{ t.id }}" style="--c:{{ t.color }}">
+        <span class="tk-ico" aria-hidden="true">{{ icons[t.icon]|safe }}</span>
+        <span class="micro">Excel template</span>
+        <h3>{{ t.title }}</h3>
+        <p>{{ t.blurb }}</p>
+        <span class="tk-go">Get the template →</span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  <section class="section">
+    <h2 class="label">A suggested order</h2>
+    <ol class="tk-order rv">
+      <li><b>Where are we?</b> Take the <a href="{{ base }}/tools/readiness-check">readiness check</a> with two colleagues and compare answers.</li>
+      <li><b>What actually happens?</b> Map one order with the <a href="{{ base }}/tools/swimlane-template">swimlane template</a>.</li>
+      <li><b>What's it worth?</b> Work out <a href="{{ base }}/tools/oee-one-percent">what 1% of OEE is worth</a>, then build the <a href="{{ base }}/tools/business-case-template">business case</a>.</li>
+      <li><b>What do we need?</b> Turn the problems into capabilities with the <a href="{{ base }}/tools/which-systems">systems picker</a>.</li>
+      <li><b>Who do we choose?</b> Run every vendor through the <a href="{{ base }}/tools/vendor-scorecard">same twelve questions</a>, then pick the <a href="{{ base }}/tools/first-line-scorecard">first line</a>.</li>
+      <li><b>Are we ready?</b> Work through the <a href="{{ base }}/tools/go-live-checklist">go-live and hypercare checklist</a>.</li>
+    </ol>
+  </section>
+  {{ ask_box(base, ask_endpoint, "tools") }}
+  {{ cta(base, linkedin, kit_form) }}
+</div>
+{% endblock %}

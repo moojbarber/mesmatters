@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% from "macros.html" import hero_bg, cta, card, gate, ask_box %}
+{% block main %}
+<section class="hero page-hero tk-hero">
+  {{ hero_bg() }}
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ base }}/tools/">Tools</a><span aria-hidden="true">/</span><span>{{ t.short }}</span></nav>
+    <span class="tag">{{ t.eyebrow }}{% if t.minutes %} <i>/</i> About {{ t.minutes }} minutes{% endif %}</span>
+    <h1>{{ t.title }}</h1>
+    <p class="kicker">{{ t.blurb }}</p>
+    <p class="tk-private">{{ "Free. Excel format, ready to fill in." if t.kind == "template" else "Free, no sign-up. Your answers stay in this browser." }}</p>
+  </div>
+</section>
+<div class="wrap">
+  <div class="tk" data-tool="{{ t.id }}">
+    {% include ("tools/template.html" if t.kind == "template" else "tools/" ~ t.id ~ ".html") %}
+  </div>
+
+  {% if sfg_url %}
+  <aside class="tk-deeper rv">
+    <span class="micro">Want to go deeper?</span>
+    <p>A fuller version of this sits inside <a href="{{ sfg_url }}" rel="noopener" target="_blank">Smart Factory Core</a>, the vendor-neutral course I built with Kunal Wagh.</p>
+  </aside>
+  {% endif %}
+
+  {{ ask_box(base, ask_endpoint, "tool:" ~ t.id) }}
+
+  {% if t.reading %}
+  <section class="section">
+    <h2 class="label">Read alongside it</h2>
+    <div class="grid" style="--min:280px">{% for r in t.reading %}{{ card(r, base) }}{% endfor %}</div>
+  </section>
+  {% endif %}
+
+  <section class="section tight">
+    <h2 class="label">More tools</h2>
+    <div class="tk-more">
+      {% for o in tools if o.id != t.id %}
+      <a class="tk-mini rv" href="{{ base }}/tools/{{ o.id }}" style="--c:{{ o.color }}"><span class="micro">{{ 'Template' if o.kind == 'template' else 'Tool' }}</span><b>{{ o.title }}</b></a>
+      {% endfor %}
+    </div>
+  </section>
+  {{ cta(base, linkedin, kit_form) }}
+</div>
+{% endblock %}

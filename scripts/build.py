@@ -31,6 +31,10 @@ SITE = "https://www.shopfloormatters.com"
 LINKEDIN = "https://www.linkedin.com/in/mattjbarber/"
 # Kit (kit.com) form ID for the newsletter sign-up. Set the KIT_FORM_ID repo variable; empty = sign-ups not open yet.
 KIT_FORM_ID = os.environ.get("KIT_FORM_ID", "").strip()
+# Where "Ask Matt" questions are POSTed (e.g. a Formspree or Tally endpoint). Empty = copy the question and open LinkedIn.
+ASK_FORM_ENDPOINT = os.environ.get("ASK_FORM_ENDPOINT", "").strip()
+# Optional link to the Smart Factory Core course on tool pages. Empty = not shown.
+SFG_COURSE_URL = os.environ.get("SFG_COURSE_URL", "").strip()
 
 CATEGORIES = [
     {"key": "thought-leadership", "slug": "thought-leadership", "name": "Smart Factory & AI", "eyebrow": "Think", "art": "thought-leadership",
@@ -47,6 +51,7 @@ CAT_BY_KEY = {c["key"]: c for c in CATEGORIES}
 
 NAV = [
     {"key": "paths", "label": "Learning paths", "desc": "Guided routes through the articles", "href": "/paths/"},
+    {"key": "tools", "label": "Tools", "desc": "Calculators, checks and templates", "href": "/tools/"},
     {"key": "articles", "label": "Articles", "desc": "Everything, by topic or newest first", "href": "/articles"},
     {"key": "featured", "label": "Featured", "desc": "Podcasts, interviews and press", "href": "/featured"},
     {"key": "faq", "label": "FAQ", "desc": "Straight answers to common questions", "href": "/faq/"},
@@ -130,6 +135,81 @@ def load_paths(posts):
         path["hub"] = {"x": HX, "y": HY}
     order = {k: i for i, k in enumerate(data["home_order"])}
     return paths, sorted(paths, key=lambda p: order.get(p["id"], 99))
+
+
+ICONS = {
+    "ladder": '<svg viewBox="0 0 24 24"><path d="M5 20h4v-4h4v-4h4V8h3"/><path d="M5 20V4"/></svg>',
+    "gauge": '<svg viewBox="0 0 24 24"><path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5"/><circle cx="12" cy="16" r="1.5"/></svg>',
+    "stack": '<svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/><path d="M3 17.5l9 5 9-5" opacity=".5"/></svg>',
+    "scales": '<svg viewBox="0 0 24 24"><path d="M12 4v16M6 20h12M5 8h14"/><path d="M5 8l-3 6h6zM19 8l-3 6h6z"/></svg>',
+    "chart": '<svg viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><path d="M8 16v-4M12 16V8M16 16v-6"/></svg>',
+    "lanes": '<svg viewBox="0 0 24 24"><path d="M3 5h18M3 12h18M3 19h18"/><rect x="6" y="3" width="4" height="4" rx="1"/><rect x="12" y="10" width="4" height="4" rx="1"/><path d="M10 5h2v7"/></svg>',
+    "target": '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>',
+    "check": '<svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 9l2 2 4-4M8 15h8"/></svg>',
+}
+
+
+def post_ref(p):
+    return {"slug": p["slug"], "title": p["title"], "short": p["short"], "cat": p["category_label"]}
+
+
+def load_tools(posts):
+    """Tools and templates (/tools/). Resolves article references and attaches 'Put it into practice' boxes to posts."""
+    data = yaml.safe_load((ROOT / "content" / "tools.yaml").read_text(encoding="utf-8"))
+    by_slug = {p["slug"]: p for p in posts}
+    tools = []
+    for t in data["tools"]:
+        t = dict(t)
+        f = ROOT / "content" / "tools" / f"{t['id']}.yaml"
+        t["data"] = yaml.safe_load(f.read_text(encoding="utf-8")) if f.exists() else None
+        t["reading"] = [by_slug[s] for s in t.get("posts", []) if s in by_slug][:3]
+        missing = [s for s in t.get("posts", []) if s not in by_slug]
+        if missing:
+            print("  tools: unknown posts", t["id"], missing)
+        d = t["data"]
+        js = None
+        if t["id"] == "readiness-check":
+            for lv in d["levels"]:
+                lv["posts"] = [post_ref(by_slug[s]) for s in lv.pop("read") if s in by_slug]
+            for ar in d["areas"]:
+                ar["post"] = post_ref(by_slug[ar["read"]])
+            js = d
+        elif t["id"] == "which-systems":
+            for k, c in d["capabilities"].items():
+                c["post"] = post_ref(by_slug[c["read"]]) if c.get("read") in by_slug else None
+            js = {"caps": d["capabilities"], "order": list(d["capabilities"].keys())}
+        elif t["id"] == "vendor-scorecard":
+            js = {"n": sum(len(g["questions"]) for g in d["groups"])}
+        t["json"] = json.dumps(js, separators=(",", ":")).replace("</", "<\\/") if js is not None else "null"
+        tools.append(t)
+    for t in tools:
+        for s in t.get("posts", []):
+            if s in by_slug and not by_slug[s].get("tool"):
+                by_slug[s]["tool"] = t
+    return tools
+
+
+def load_audiences(posts, glossary, tools, caps, base):
+    data = yaml.safe_load((ROOT / "content" / "audiences.yaml").read_text(encoding="utf-8"))
+    by_slug = {p["slug"]: p for p in posts}
+    gl = {g["slug"]: g for g in glossary}
+    tl = {t["id"]: t for t in tools}
+    def md(s):
+        return re.sub(r'href="/(?!/)', f'href="{base}/', markdown.markdown(s))
+    out = []
+    for a in data["pages"]:
+        a = dict(a)
+        a["intro_html"] = md(a["intro"])
+        a["sections_html"] = [{"h": s["h"], "id": slugify(s["h"]), "html": md(s["body"])} for s in a["sections"]]
+        a["post_list"] = [by_slug[s] for s in a.get("posts", []) if s in by_slug]
+        a["tool_list"] = [tl[x] for x in a.get("tools", []) if x in tl]
+        a["term_list"] = [gl[x] for x in a.get("terms", []) if x in gl]
+        a["caps"] = [caps[c] for c in a.get("capabilities", []) if c in caps]
+        for kind, have, want in (("posts", a["post_list"], a.get("posts", [])), ("terms", a["term_list"], a.get("terms", []))):
+            if len(have) != len(want):
+                print("  audiences: missing", kind, a["id"], set(want) - {x["slug"] for x in have})
+        out.append(a)
+    return out
 
 
 # ------------------------------------------------------------------ helpers
@@ -391,7 +471,7 @@ def md_clean(md):
     return md.strip()
 
 
-def write_llms(posts, paths, glossary):
+def write_llms(posts, paths, glossary, tools=(), audiences=()):
     by_cat = {}
     for p in posts:
         by_cat.setdefault(p["category_label"], []).append(p)
@@ -405,7 +485,9 @@ def write_llms(posts, paths, glossary):
            f"- [Learning paths]({SITE}/paths/): guided routes through the articles, in order",
            f"- [FAQ]({SITE}/faq/): short answers to common questions, each linked to the full article",
            f"- [Glossary]({SITE}/glossary/): definitions of MES, MOM, OEE, ISA-95, UNS and other shopfloor terms",
+           f"- [Tools]({SITE}/tools/): free, vendor-neutral tools and templates",
            f"- [About Matt Barber]({SITE}/about): background and credentials",
+           f"- [Speaking]({SITE}/speaking): talk topics, bio and recent appearances",
            f"- [Podcasts, interviews and press]({SITE}/featured)",
            f"- [Full text of every article]({SITE}/llms-full.txt)", ""]
     for cat, ps in by_cat.items():
@@ -413,7 +495,13 @@ def write_llms(posts, paths, glossary):
         for p in ps:
             out.append(f"- [{p['title']}]({p['canonical']}): {p['summary'] or p['description']}")
         out.append("")
-    out += ["## Learning paths", ""]
+    out += ["## Tools and templates", ""]
+    for x in tools:
+        out.append(f"- [{x['title']}]({SITE}/tools/{x['id']}): {x['blurb']}")
+    out += ["", "## By industry and role", ""]
+    for a in audiences:
+        out.append(f"- [{a['title']}]({SITE}/for/{a['id']}): {a['kicker']}")
+    out += ["", "## Learning paths", ""]
     for x in paths:
         out.append(f"- [{x['title']}]({SITE}/paths/{x['id']}): {x['blurb']}")
     (DIST / "llms.txt").write_text("\n".join(out) + "\n", encoding="utf-8")
@@ -432,6 +520,12 @@ def write_llms(posts, paths, glossary):
         for g in glossary:
             name = g["term"] + (f" ({g['stands']})" if g.get("stands") else "")
             full += [f"## {name}", "", g["short"], "", g.get("body", ""), "", f"URL: {SITE}/glossary/{g['slug']}", ""]
+    for a in audiences:
+        full += ["---", "", f"# {a['title']}", "", f"URL: {SITE}/for/{a['id']}", "Author: Matt Barber", "", a["intro"].strip(), ""]
+        for s in a["sections"]:
+            full += [f"## {s['h']}", "", s["body"].strip(), ""]
+        for f in a.get("faq", []):
+            full += [f"**{f['q']}**", "", f["a"], ""]
     (DIST / "llms-full.txt").write_text("\n".join(full) + "\n", encoding="utf-8")
 
 
@@ -498,6 +592,7 @@ def build(base, relative=False, include_scheduled=False):
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=True, trim_blocks=True, lstrip_blocks=True)
     version = dt.datetime.now().strftime("%Y%m%d%H%M")
     common = {"base": base, "nav": NAV, "linkedin": LINKEDIN, "year": dt.date.today().year, "version": version, "kit_form": KIT_FORM_ID,
+              "ask_endpoint": ASK_FORM_ENDPOINT, "sfg_url": SFG_COURSE_URL,
               "categories": [], "jsonld": []}
 
     for c in CATEGORIES:
@@ -542,6 +637,11 @@ def build(base, relative=False, include_scheduled=False):
     glossary = load_glossary(posts)
     autolink_glossary(posts, glossary, base)
     glossary_mentions(posts, glossary)
+    tools = load_tools(posts)
+    caps = next(t for t in tools if t["id"] == "which-systems")["data"]["capabilities"]
+    audiences = load_audiences(posts, glossary, tools, caps, base)
+    common["tools"] = tools
+    common["audiences"] = audiences
     common["paths_home"] = paths_home
     common["paths_json"] = json.dumps([{"id": p["id"], "title": p["title"], "slugs": p["slugs"],
                                         "titles": [st["post"]["short"] for st in p["stations"]]} for p in paths], separators=(",", ":"))
@@ -652,7 +752,7 @@ def build(base, relative=False, include_scheduled=False):
           canonical=f"{SITE}/contact", eyebrow="Contact", heading="Let's talk shopfloor",
           kicker="The quickest way to reach me is a message on LinkedIn. I read everything, even if replies sometimes take a few days.",
           actions=Markup(f'<a class="btn" href="{LINKEDIN}" target="_blank" rel="me noopener">Message me on LinkedIn →</a>'),
-          content=Markup(contact), show_cta=False)
+          content=Markup(contact), show_cta=False, ask="contact", tools_js=True)
     write("subscribe.html", "page.html", active="subscribe", seo_title="Subscribe to the newsletter | Shopfloor Matters",
           description="A practical newsletter on the smart factory, shopfloor AI and MES/MOM. New articles and lessons from real implementations, straight to your inbox.",
           canonical=f"{SITE}/subscribe", eyebrow="Newsletter", heading="Smart factory thinking, in your inbox",
@@ -718,11 +818,68 @@ def build(base, relative=False, include_scheduled=False):
                               {"@type": "ListItem", "position": 2, "name": "Glossary", "item": f"{SITE}/glossary/"},
                               {"@type": "ListItem", "position": 3, "name": g["term"]}]})])
 
+    # tools
+    tool_list = {"@context": "https://schema.org", "@type": "ItemList", "name": "Shopfloor Matters tools and templates",
+                 "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f"{SITE}/tools/{x['id']}", "name": x["title"]} for i, x in enumerate(tools)]}
+    write("tools/index.html", "tools-hub.html", active="tools", seo_title="Free smart factory and MES tools | Shopfloor Matters",
+          description="Free, vendor-neutral tools: a smart factory readiness check, a 1% OEE value calculator, a systems picker, an MES vendor scorecard and Excel templates.",
+          canonical=f"{SITE}/tools/", icons=ICONS, tools_js=True, og_image=f"{SITE}/images/og/page-advice.png", jsonld=[jsonld(tool_list)])
+    for x in tools:
+        if x["kind"] == "tool":
+            ld = {"@context": "https://schema.org", "@type": "WebApplication", "name": x["title"], "url": f"{SITE}/tools/{x['id']}",
+                  "description": x["blurb"], "applicationCategory": "BusinessApplication", "operatingSystem": "Any (runs in the browser)",
+                  "isAccessibleForFree": True, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "GBP"}, "author": person, "inLanguage": "en-GB"}
+        else:
+            ld = {"@context": "https://schema.org", "@type": "DigitalDocument", "name": x["title"], "url": f"{SITE}/tools/{x['id']}",
+                  "description": x["blurb"], "encodingFormat": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                  "isAccessibleForFree": True, "author": person, "inLanguage": "en-GB"}
+        crumbs = {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE}/"},
+            {"@type": "ListItem", "position": 2, "name": "Tools", "item": f"{SITE}/tools/"},
+            {"@type": "ListItem", "position": 3, "name": x["title"]}]}
+        write(f"tools/{x['id']}.html", "tool.html", active="tools", seo_title=f"{x['title']} | Shopfloor Matters", og_title=x["title"],
+              description=x["blurb"], canonical=f"{SITE}/tools/{x['id']}", t=x, tools_js=True,
+              og_image=f"{SITE}/images/og/page-advice.png", jsonld=[jsonld(ld), jsonld(crumbs)])
+
+    # industries and roles
+    write("for/index.html", "audiences.html", active="for", seo_title="MES and the smart factory by industry and role | Shopfloor Matters",
+          description="The smart factory and MES/MOM for food and beverage, automotive, packaging, metal fabrication and plastics, and for plant, IT and quality leaders.",
+          canonical=f"{SITE}/for/", og_image=f"{SITE}/images/og/page-education.png")
+    for a in audiences:
+        lds = [jsonld({"@context": "https://schema.org", "@type": "WebPage", "name": a["title"], "url": f"{SITE}/for/{a['id']}", "description": a["kicker"],
+                       "author": person, "inLanguage": "en-GB",
+                       "about": {"@type": "Thing", "name": a["short"]}, "audience": {"@type": "Audience", "audienceType": a["short"]}}),
+               jsonld({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+                   {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{SITE}/"},
+                   {"@type": "ListItem", "position": 2, "name": "Industries and roles", "item": f"{SITE}/for/"},
+                   {"@type": "ListItem", "position": 3, "name": a["short"]}]})]
+        if a.get("faq"):
+            lds.append(jsonld({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+                {"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in a["faq"]]}))
+        write(f"for/{a['id']}.html", "audience.html", active="for", seo_title=f"{a['seo']} | Shopfloor Matters", og_title=a["title"],
+              description=a["kicker"][:158], canonical=f"{SITE}/for/{a['id']}", a=a, tools_js=True,
+              og_image=f"{SITE}/images/og/page-education.png", jsonld=lds)
+
+    # speaking and Ask Matt
+    sp = yaml.safe_load((ROOT / "content" / "speaking.yaml").read_text(encoding="utf-8"))
+    write("speaking.html", "speaking.html", active="about", seo_title="Speaking: Matt Barber on MES, the smart factory and shopfloor AI | Shopfloor Matters",
+          description="Invite Matt Barber to speak on the smart factory, shopfloor AI and MES/MOM. Talk topics, formats, recent appearances, bio and photo.",
+          canonical=f"{SITE}/speaking", sp=sp, appearances=featured["items"][:6], tools_js=True, og_image=f"{SITE}/images/og/page-about.png",
+          jsonld=[jsonld({"@context": "https://schema.org", "@type": "ProfilePage", "url": f"{SITE}/speaking", "mainEntity": person_full})])
+    write("ask.html", "page.html", active="contact", seo_title="Ask Matt a question | Shopfloor Matters",
+          description="Ask Matt Barber a question about MES, MOM, the smart factory or shopfloor AI. Useful questions become articles and FAQ answers, anonymised.",
+          canonical=f"{SITE}/ask", eyebrow="Ask Matt", heading="Ask me anything about the shopfloor",
+          kicker="A question about your project, or about something you've read here. Peer to peer, no sales call.",
+          content=Markup(""), show_cta=False, ask="ask", tools_js=True)
+
     # sitemap, robots
     urls = [(f"{SITE}/", posts[0]["updated"]), (f"{SITE}/articles", posts[0]["updated"]), (f"{SITE}/about", None), (f"{SITE}/subscribe", None)]
     urls += [(f"{SITE}/{c['slug']}", None) for c in CATEGORIES]
     urls += [(f"{SITE}/featured", None), (f"{SITE}/paths/", None)] + [(f"{SITE}/paths/{x['id']}", None) for x in paths]
     urls += [(f"{SITE}/faq/", None), (f"{SITE}/glossary/", None)] + [(f"{SITE}/glossary/{g['slug']}", None) for g in glossary]
+    urls += [(f"{SITE}/tools/", None)] + [(f"{SITE}/tools/{x['id']}", None) for x in tools]
+    urls += [(f"{SITE}/for/", None)] + [(f"{SITE}/for/{a['id']}", None) for a in audiences]
+    urls += [(f"{SITE}/speaking", None), (f"{SITE}/ask", None)]
     urls += [(p["canonical"], p["updated"]) for p in posts]
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u, d in urls:
@@ -736,7 +893,7 @@ def build(base, relative=False, include_scheduled=False):
         robots += [f"User-agent: {b}", "Allow: /", ""]
     robots += ["User-agent: *", "Allow: /", "", f"Sitemap: {SITE}/sitemap.xml", ""]
     (DIST / "robots.txt").write_text("\n".join(robots), encoding="utf-8")
-    write_llms(posts, paths, glossary)
+    write_llms(posts, paths, glossary, tools, audiences)
     write_feeds(posts, paths)
 
     (DIST / ".nojekyll").write_text("")

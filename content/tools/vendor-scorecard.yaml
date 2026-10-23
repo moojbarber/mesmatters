@@ -1,0 +1,62 @@
+# MES vendor scorecard. The 12 questions from "How to choose an MES".
+groups:
+  - name: Technical foundation
+    questions:
+      - q: What's your approach to master data synchronisation with ERP?
+        good: ERP stays the master for materials, BOMs, routings and work centres. Changes flow through a standard interface, and shopfloor detail can be added in MES/MOM without breaking the link.
+        flag: "\"You'll maintain it in both systems.\" Or a nightly file drop that nobody watches for failures."
+      - q: How do you integrate with our existing landscape?
+        good: Documented, standard connectors for your ERP and the rest of your stack, and a customer running a similar combination. A clear answer on what flows each way and how often.
+        flag: "\"We'll build an interface for you\" as the answer to everything. Every custom interface is yours to pay for again at each upgrade."
+      - q: Can you handle our industry's requirements and compliance?
+        good: They name your regulations and show how each is met through configuration. References in your industry.
+        flag: A demo built for a different industry, and "we can customise that" as the answer to compliance.
+  - name: User experience
+    questions:
+      - q: How does it work on tablets, mobiles and shopfloor terminals?
+        good: The same application on any device, designed for touch, shown on a tablet on the floor. A straight answer on what happens when the Wi-Fi drops.
+        flag: Office screens squeezed onto a tablet, or a separate mobile app that only does half the job.
+      - q: Is the interface genuinely intuitive for operators?
+        good: They hand one of your operators the tablet during the demo and let them try it. Few clicks and guided steps, in the languages your people speak.
+        flag: Screens packed with fields that only make sense to IT. "They'll get used to it."
+      - q: How much training will our people need?
+        good: Role-based training and train-the-trainer for your super users. Administrators who can configure on their own afterwards.
+        flag: Weeks of classroom training, and the vendor needed for every small change after go-live.
+  - name: Functional scope
+    questions:
+      - q: How deep is your coverage beyond production?
+        good: Quality, inventory, maintenance and the rest shown on one data model, with an honest answer about where the depth is thinner.
+        flag: Yes to everything, then the modules turn out to be separate products stitched together.
+      - q: Will it stop people across departments needing multiple systems?
+        good: A failed quality check is visible to production the moment it happens. One login and one data model.
+        flag: A different app for each department, kept in step by a sync job.
+      - q: Does it give real-time visibility across all production processes?
+        good: Live status of every line and order, from machine and operator data, including the awkward manual areas.
+        flag: Dashboards refreshed overnight, or visibility only where machines happen to be connected.
+  - name: Scalability and future-proofing
+    questions:
+      - q: What's your roadmap for AI and advanced technology?
+        good: A specific, funded roadmap. AI working on the operational data model, with use cases running in production today, and a clear line between available and planned.
+        flag: AI slides with nothing live. An old application with a new name.
+      - q: How do you support IIoT and modern connectivity?
+        good: Native OPC UA and MQTT, with machine data put in context of order and material. A sensible story for edge and a unified namespace alongside your historian.
+        flag: '"IIoT replaces MES." Or a custom driver for every machine.'
+      - q: Will it grow with us?
+        good: Start with a subset and switch on more functions later without re-implementing. A template you can roll to the next site.
+        flag: A point solution, where growth means another product and another interface.
+
+demo:
+  - scenario: Release an order from ERP and run it on a line, including a changeover
+    see: Order download, operator screens, counts, scrap and downtime with reasons
+  - scenario: A quality check fails mid-run
+    see: The check triggered at the right moment, an alert, a hold and the route to rework
+  - scenario: Trace a finished batch back to raw material lots, and forward to customers
+    see: Both directions, in minutes, without a report being written for the demo
+  - scenario: An unqualified operator tries to start a job
+    see: The skills check warns or blocks, and the training record is visible
+  - scenario: A machine raises an alarm
+    see: Machine signal to downtime to a maintenance request, with the context attached
+  - scenario: Configure a new product or line without writing code
+    see: Live configuration by their consultant, not slides
+  - scenario: Show tomorrow morning's meeting
+    see: OEE, scrap, schedule adherence and a downtime Pareto from the data captured during the demo

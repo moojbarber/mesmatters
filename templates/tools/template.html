@@ -1,0 +1,21 @@
+<div class="tp rv">
+  <div class="tp-inside">
+    <span class="micro">What's inside</span>
+    <ul>{% for i in t.inside %}<li><b>{{ i.name }}</b> {{ i.text }}</li>{% endfor %}</ul>
+    <p class="dimmed">{{ t.format_note }}</p>
+  </div>
+  <div class="tp-get">
+    <div class="tp-file"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12l2.5 3L15 11"/></svg><div><b>{{ t.file }}</b><span>Excel workbook · works in Google Sheets and Numbers</span></div></div>
+    {{ gate(base, kit_form, t.id, "Where should I send it?", "Pop in your work email and the download starts straight away. I'll send the link too, so you can find it again.", "Get the template") }}
+    <div class="gate-reveal" data-gate-reveal="{{ t.id }}" hidden>
+      <a class="btn" href="{{ base }}/downloads/{{ t.file }}" download>Download {{ t.short|lower }} →</a>
+      <p class="dimmed">If it doesn't start, use the button above.</p>
+    </div>
+  </div>
+</div>
+{% if t.howto %}
+<section class="section tight tp-how rv">
+  <h2 class="label">How to use it</h2>
+  <ol class="tp-steps">{% for s in t.howto %}<li>{{ s }}</li>{% endfor %}</ol>
+</section>
+{% endif %}

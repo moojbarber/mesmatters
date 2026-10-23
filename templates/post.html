@@ -66,6 +66,14 @@
         {% endfor %}
       </section>
       {% endif %}
+      {% if p.tool %}
+      <a class="tk-practice" href="{{ base }}/tools/{{ p.tool.id }}" style="--c:{{ p.tool.color }}">
+        <span class="micro">Put it into practice</span>
+        <b>{{ p.tool.title }}</b>
+        <span>{{ p.tool.blurb }}</span>
+        <i aria-hidden="true">→</i>
+      </a>
+      {% endif %}
       <p class="reviewed">Written by <a href="{{ base }}/about">Matt Barber</a> · Last updated {{ p.reviewed_long }}</p>
       <div class="post-end">
         {% for lp in p.paths or [] %}

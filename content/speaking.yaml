@@ -1,0 +1,48 @@
+# Speaking page. Talk titles are proposals for Matt to approve or rewrite.
+talks:
+  - title: "AI won't fix your factory. Your data might."
+    tag: Shopfloor AI
+    abstract: Every board is asking for an AI plan. Most factories don't yet have the data to feed one. This talk separates the AI that works on today's documents and know-how from the AI that needs reliable, contextualised shopfloor data, and shows what has to be in place before each pays back.
+    takeaways:
+      - Why most shopfloor AI pilots stall before the algorithm matters
+      - Where generative AI can start now, alongside the foundation work
+      - The maturity level where AI on operational data starts to pay back
+      - What to fix first, and what to stop buying
+  - title: "MES, MOM and ERP: who does what in the smart factory"
+    tag: Systems
+    abstract: ERP, MES, MOM, WMS, QMS, APS, PLM, IIoT. The acronyms multiply and the boundaries blur. A practical tour of how the systems fit together, and how to avoid paying for the same thing twice.
+    takeaways:
+      - A simple map of the systems landscape, from ERP to the machine
+      - Why ERP and MES aren't rivals, and when one vendor for both makes sense
+      - The integration and master data decisions that cause most delays
+      - How to start from the problems rather than the products
+  - title: "Process before technology"
+    tag: Implementation
+    abstract: The most expensive mistake in digital transformation is digitising a process nobody has questioned. This talk makes the case for mapping the as-is with the people who do the work, and shows how a single swimlane map becomes the best requirements document you'll ever write.
+    takeaways:
+      - Why the same product often has a different process on every shift
+      - How to map what actually happens, not the procedure
+      - Turning pain points into requirements vendors can answer properly
+      - Designing the to-be for the operator, not the org chart
+  - title: "The business case your board will sign"
+    tag: Leadership
+    abstract: Most smart factory business cases fail on nerves, not numbers. Starting from one question, what is 1% of OEE worth, this talk covers how to quantify the problem, reframe the risk and phase the work so the first results fund the next step.
+    takeaways:
+      - The 1% question, and why it changes the conversation
+      - Speaking business outcomes, not features
+      - Reframing the investment as risk mitigation
+      - Phasing that boards find easy to approve
+
+formats:
+  - name: Keynote or conference session
+    text: 20 to 45 minutes on one of the talks above, or a topic built for your audience.
+  - name: Panel
+    text: Happy to take the practical, slightly contrarian seat. Questions in advance help.
+  - name: Podcast or webinar guest
+    text: Conversations about MES/MOM, the smart factory, connected worker and shopfloor AI.
+  - name: Internal leadership session
+    text: A vendor-neutral session for a leadership team starting out. No product, no pitch.
+
+bio_short: Matt Barber is VP & General Manager, MES at Infor. He started his career writing MES code, then ran projects, solution design and product, and has been involved in hundreds of MES projects across food and beverage, automotive, packaging, metal and plastics. He writes Shopfloor Matters, on the smart factory, shopfloor AI and MES/MOM.
+
+bio_long: Matt Barber is VP & General Manager, MES at Infor, where he leads the global MES business. He studied computer science at the University of Sheffield, graduating with first class honours, and later completed the MBA Essentials programme at the London School of Economics. He started his career as an MES software engineer, writing code and integrations for shopfloor projects, before moving into project delivery, solution design, product management and leadership. Over his career he has been involved in hundreds of MES projects across food and beverage, automotive, packaging, metal and plastics fabrication and industrial manufacturing. He won Infor's Circle of Excellence award in 2024. Matt writes Shopfloor Matters, practical and vendor-neutral writing on the smart factory, shopfloor AI and the MES/MOM foundations underneath them, and is a regular podcast and webinar guest on the same topics.

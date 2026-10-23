@@ -75,3 +75,54 @@
   <p class="cf-status" aria-live="off"></p>
 </section>
 {%- endmacro %}
+{% macro role_select(id) -%}
+<label class="sr" for="{{ id }}">Which best describes you?</label>
+<select id="{{ id }}" name="fields[role]">
+  <option value="">Which best describes you?</option>
+  <option value="operations">I run or manage operations or a plant</option>
+  <option value="it">I work in IT or OT</option>
+  <option value="quality">I work in quality</option>
+  <option value="engineering">I'm in engineering or continuous improvement</option>
+  <option value="consultant">I'm a consultant or systems integrator</option>
+  <option value="other">Something else</option>
+</select>
+{%- endmacro %}
+{% macro gate(base, form, resource, title, note, button="Send it to me") -%}
+<form class="gate signup" {% if form %}action="https://app.kit.com/forms/{{ form }}/subscriptions" method="post"{% endif %} data-form="{{ form }}" data-gate="{{ resource }}" novalidate>
+  <div class="gate-copy"><b>{{ title }}</b><p>{{ note }}</p></div>
+  <div class="gate-fields">
+    <label class="sr" for="gm-{{ resource }}">Work email</label>
+    <input id="gm-{{ resource }}" type="email" name="email_address" placeholder="you@company.com" autocomplete="email" required>
+    {{ role_select("gr-" ~ resource) }}
+    <input type="hidden" name="fields[resource]" value="{{ resource }}">
+    <button class="btn" type="submit">{{ button }} →</button>
+  </div>
+  <div class="hp" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+  <p class="fine">You'll also get the newsletter. Unsubscribe in one click. <a href="{{ base }}/privacy">Privacy</a></p>
+  <p class="msg" role="status" aria-live="polite"></p>
+</form>
+{%- endmacro %}
+{% macro ask_box(base, endpoint, source, open=False) -%}
+<section class="ask rv" id="ask">
+  <div class="ask-copy">
+    <span class="micro">Ask Matt</span>
+    <h3>Stuck on something? Ask me.</h3>
+    <p>A question about your project, or about something you've read here. I read every one, and the useful ones become articles or FAQ answers, with names and companies left out.</p>
+    <p class="ask-note">This is a peer conversation, not a sales call or a consultancy. I work for an MES vendor, so I won't recommend a product, mine included.</p>
+  </div>
+  <form class="ask-form" data-ask="{{ endpoint }}" data-source="{{ source }}" data-linkedin="https://www.linkedin.com/in/mattjbarber/" {% if endpoint %}action="{{ endpoint }}" method="post"{% endif %} novalidate>
+    <label for="aq-{{ source|replace(':', '-') }}">Your question</label>
+    <textarea id="aq-{{ source|replace(':', '-') }}" name="question" rows="4" maxlength="2000" placeholder="e.g. We're at Level 2 with three point solutions. Do we replace them or connect them?" required></textarea>
+    <div class="ask-row">
+      <label class="sr" for="ae-{{ source|replace(':', '-') }}">Email (optional)</label>
+      <input id="ae-{{ source|replace(':', '-') }}" type="email" name="email" placeholder="Email, if you'd like a reply" autocomplete="email">
+      {{ role_select("ar-" ~ source|replace(':', '-')) }}
+    </div>
+    <label class="ask-ok"><input type="checkbox" name="ok_to_publish" value="yes" checked> Fine to answer it publicly, anonymised</label>
+    <input type="hidden" name="source" value="{{ source }}">
+    <div class="hp" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+    <button class="btn" type="submit">{{ 'Send my question' if endpoint else 'Copy it and open LinkedIn' }} →</button>
+    <p class="msg" role="status" aria-live="polite"></p>
+  </form>
+</section>
+{%- endmacro %}

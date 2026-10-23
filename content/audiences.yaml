@@ -1,0 +1,346 @@
+# Industry and role pages at /for/<id>.
+# Body sections are Markdown. Keep claims general and true: no invented customers or stories.
+pages:
+  # ------------------------------------------------------------------ industries
+  - id: food-and-beverage
+    kind: industry
+    short: Food and beverage
+    title: The smart factory in food and beverage
+    seo: "MES and the smart factory in food and beverage manufacturing"
+    eyebrow: Industry
+    kicker: Thin margins, short shelf lives, allergens, and a recall that can arrive at any hour. Where MES/MOM earns its keep in food and drink, and the traps I see most often.
+    color: "#33d4e0"
+    intro: |
+      Food and beverage is one of the industries I've spent most time in, and it's one of the hardest to digitalise well.
+
+      Margins are thin, so every kilogram of give-away and every minute of a changeover shows up in the numbers. Products are recipes rather than assemblies, and the same line can run a dozen variants a day. Shelf life puts a clock on everything. And when something goes wrong, you need to know which batches, which customers and which raw material lots, in hours rather than days.
+
+      None of that is unusual. What's unusual is how much of it still runs on paper and spreadsheets.
+    sections:
+      - h: Where the value usually is
+        body: |
+          **Traceability you can answer in minutes.** A mock recall is the quickest way to find out where you really are. If it takes a team most of a day to trace one batch forward to customers and back to suppliers, that's the first case for MES/MOM, before any efficiency argument.
+
+          **Give-away and yield.** Overfilling by a gram on every pack is invisible on a single unit and very visible over a year. Weights captured automatically, with SPC on the line, usually pay back faster than people expect.
+
+          **Changeovers and cleaning.** Allergen changeovers and cleaning cycles take real capacity. Recording them properly is the first step to shortening them, and to proving they happened.
+
+          **Paperless quality records.** Checks recorded at source, with the result linked to the batch, the operator and the time. Audits get shorter and the 3am question "was this checked?" has an answer.
+      - h: What makes it harder here
+        body: |
+          Recipes and units of measure are messier than discrete BOMs. A batch might be weighed in kilograms and shipped in cases, with losses at every step. If the master data doesn't model that properly, the system will disagree with the floor from day one.
+
+          The environment is unforgiving too. Wash-down areas, cold rooms, gloves and hairnets all affect the hardware you choose and how operators interact with screens. Test devices where they'll actually be used.
+
+          I've written more about the barriers in [why food manufacturers hesitate over MES](/post/food-manufacturing-mes-barriers).
+      - h: Questions to settle before you look at vendors
+        body: |
+          - Do we need batch traceability, or lot-level tracking with time-based traceability for continuous processes? (See [lot vs serial traceability](/post/lot-vs-serial-traceability).)
+          - Where do lab results live today, and how do they get back to the batch? (See [LIMS and MES](/post/lims-and-mes).)
+          - What does our ERP already handle for recipes and costing, and where should MES/MOM take over?
+          - Which site has the most representative lines, so the first project becomes the template?
+    capabilities: [traceability, quality, execution, inventory, lims, energy]
+    posts: [food-beverage-industry-challenges, food-manufacturing-mes-barriers, manufacturing-traceability, spc-on-the-shopfloor, lot-vs-serial-traceability, discrete-vs-process-manufacturing]
+    tools: [readiness-check, oee-one-percent, which-systems]
+    terms: [allergen-management, shelf-life, give-away, batch, recipe, recall, coa, yield, time-based-traceability, gmp]
+    faq:
+      - q: Do food manufacturers need MES?
+        a: Not every site needs a full MES on day one, but most food and beverage sites need what it provides. Fast batch traceability, quality checks recorded at source, give-away control and accurate yield are the usual starting points. The question is whether paper and spreadsheets can still deliver those reliably as volume and audit pressure grow.
+      - q: How does MES help with a food recall?
+        a: MES/MOM records which raw material lots went into which batches, on which line, at what time and with which results. That genealogy lets you trace a suspect lot forward to every affected batch and customer, and back to the supplier, in minutes rather than the day or more a paper-based mock recall often takes.
+      - q: Is MES different for process manufacturing like food?
+        a: The principles are the same, but the detail differs. Food works with recipes, batches, units of measure that change through the process, and losses at every step. A system built for discrete assembly can struggle with that, so ask vendors to demonstrate a real recipe from your plant, including a rework or a quality hold.
+
+  - id: automotive
+    kind: industry
+    short: Automotive
+    title: The smart factory in automotive manufacturing
+    seo: "MES and the smart factory in automotive and automotive supply"
+    eyebrow: Industry
+    kicker: Just-in-time schedules and zero-defect expectations, from customers who can audit you. Where MES/MOM matters most for automotive suppliers.
+    color: "#8b6cff"
+    intro: |
+      Automotive has been doing lean manufacturing longer than most industries have been talking about it. The bar is high, and the customer sets much of it.
+
+      For tier one and tier two suppliers, the pressure comes from both sides. Customers expect just-in-time delivery and full traceability, with quality that's proven, not promised. At the same time, programmes change, volumes swing and the mix gets more complex every year.
+
+      MES/MOM is often already there in some form. The question is usually whether what's there can keep up.
+    sections:
+      - h: Where the value usually is
+        body: |
+          **Error-proofing at the station.** Scanning the right part and revision, and checking the operator is qualified, before a job starts. In automotive, preventing the defect is worth far more than finding it.
+
+          **Traceability at the right depth.** Some components need serial-level genealogy, others lot level. Getting that decision right per part saves a lot of complexity. My comparison of [lot and serial traceability](/post/lot-vs-serial-traceability) goes through how to choose.
+
+          **Quality data your customer will accept.** Control plans, SPC on the characteristics that matter, first-article inspection, and records that stand up in an audit or a PPAP submission.
+
+          **OEE you can trust.** Most automotive sites measure OEE. Fewer measure it automatically, with the same definitions on every line. The difference is usually bigger than people expect.
+      - h: What makes it harder here
+        body: |
+          Customer requirements are specific, and they differ by customer. Labelling and traceability rules can vary between two OEMs supplied from the same line. The system needs to handle that through configuration, not a custom build per customer.
+
+          Equipment is often a mix of generations. Connecting a new robot cell is easy. Connecting a press from the 1990s takes more thought, and it's usually the one you need data from.
+
+          And because many suppliers already have a homegrown or legacy MES, the project is often a replacement, which brings its own risks. I've written about [replacing a homegrown MES](/post/replacing-a-homegrown-mes).
+      - h: Questions to settle before you look at vendors
+        body: |
+          - Which parts need serial genealogy, and which can be tracked by lot?
+          - Which customer requirements are we meeting manually today?
+          - How will we connect older equipment, and what data do we actually need from it?
+          - If we're replacing a legacy system, which of its quirks are real requirements and which are workarounds?
+    capabilities: [execution, quality, traceability, connectivity, skills, tooling]
+    posts: [manufacturing-traceability, lot-vs-serial-traceability, spc-on-the-shopfloor, replacing-a-homegrown-mes, what-is-oee-overall-equipment-effectiveness, opc-ua-mqtt-uns-explained]
+    tools: [readiness-check, vendor-scorecard, oee-one-percent]
+    terms: [iatf-16949, ppap, control-plan, first-article-inspection, serialisation, error-proofing, just-in-time, process-capability, andon, line-side-replenishment]
+    faq:
+      - q: Why do automotive suppliers use MES?
+        a: Automotive customers expect just-in-time delivery and quality they can audit. MES/MOM delivers those by error-proofing each station, recording genealogy at lot or serial level, running SPC on critical characteristics and capturing OEE automatically. Many suppliers already have some form of MES. The common challenge is whether it can scale across lines and sites.
+      - q: Does every automotive part need serial traceability?
+        a: No. Safety-critical and high-value parts often need serial-level genealogy, while many others are well served by lot traceability. Deciding part by part keeps the system simpler and the data more useful. Your customer requirements will set the minimum for each part.
+      - q: How does MES support PPAP and IATF 16949?
+        a: MES/MOM doesn't replace your quality management system, but it produces much of the evidence. Control plan checks executed and recorded at source, SPC on the characteristics that matter, first-article results and traceability records all come from the shopfloor. Pulled together, they make audits and PPAP submissions far less painful.
+
+  - id: packaging
+    kind: industry
+    short: Packaging
+    title: The smart factory in packaging manufacturing
+    seo: "MES and the smart factory in packaging manufacturing"
+    eyebrow: Industry
+    kicker: Fast lines, frequent changeovers, short runs and customers who change the artwork on a Friday. Where MES/MOM pays back in packaging.
+    color: "#ff6fd8"
+    intro: |
+      Packaging lines run fast. When they stop, they stop expensively. And the work is often make-to-order, with short runs, customer-specific specifications and artwork that changes more often than anyone would like.
+
+      That combination makes packaging a natural fit for the basics done well: knowing why lines stop and shortening changeovers. And making sure the job on the machine is the job the customer ordered.
+    sections:
+      - h: Where the value usually is
+        body: |
+          **Downtime and micro-stops.** On a fast line, stops of a few seconds add up to hours. They almost never get written down. Automatic capture from the machine is often the single biggest eye-opener, and it's normal for measured OEE to drop when it goes in. That's the truth emerging, not performance getting worse.
+
+          **Changeovers.** Short runs mean lots of changeovers. Measuring each one, by product pair and by crew, shows where the time goes and gives you a baseline to improve against.
+
+          **Right job, right spec.** Specifications and artwork versions checked at job start, so the expensive mistakes get stopped at the first sheet, not the last pallet.
+
+          **Waste and material yield.** Substrate, ink, adhesive and coatings are a big share of cost. Tracking waste by job and by cause makes it manageable.
+      - h: What makes it harder here
+        body: |
+          Many packaging plants run a mix of converting processes, from printing to cutting, gluing and forming, with WIP moving between them. The system has to follow a job through several stages and machines, not just one line.
+
+          Scheduling is a genuine headache when every job has its own setup and the sequence matters. If planners are rebuilding the plan by hand every morning, look at [how APS and MES divide the scheduling work](/post/aps-vs-mes-scheduling).
+      - h: Questions to settle before you look at vendors
+        body: |
+          - What do we lose to micro-stops today? Do we even know?
+          - How long does a typical changeover take, and how much does it vary by crew?
+          - How do specifications and artwork versions reach the machine, and who checks them?
+          - Which machines can we connect quickly, and which will need extra hardware?
+    capabilities: [execution, connectivity, scheduling, quality, data, inventory]
+    posts: [what-is-oee-overall-equipment-effectiveness, manufacturing-kpis-beyond-oee, aps-vs-mes-scheduling, oee-vs-teep, paperless-manufacturing, digital-work-instructions]
+    tools: [oee-one-percent, readiness-check, which-systems]
+    terms: [micro-stop, speed-loss, changeover, oee, downtime-reason-codes, scrap-rate, finite-capacity-scheduling, vision-inspection, dispatch-list, throughput]
+    faq:
+      - q: What does MES do for a packaging manufacturer?
+        a: Mostly the basics, done well. Automatic downtime and micro-stop capture from the machines, changeovers measured job by job, specifications and artwork checked before a job starts, and waste tracked by job and cause. On fast lines with short runs, those basics are where most of the value sits.
+      - q: Why does OEE drop when packaging lines are connected?
+        a: Manual OEE misses short stops and rounds everything off. When counts and states come straight from the machine, the micro-stops and speed losses that were always there finally show up. A drop of 10 or more points is common. It's a more accurate starting point, not a sign that performance got worse.
+      - q: Can MES help with packaging changeovers?
+        a: Yes, in two ways. It measures every changeover automatically, so you can see which product pairs and crews take longest. And it guides the changeover itself with digital checklists and specification checks, so the first good output arrives sooner and the wrong job doesn't run.
+
+  - id: metal-fabrication
+    kind: industry
+    short: Metal fabrication
+    title: The smart factory in metal fabrication
+    seo: "MES and the smart factory in metal fabrication and machining"
+    eyebrow: Industry
+    kicker: High-mix, low-volume work, and jobs that wander through the shop. Where MES/MOM helps fabricators and machine shops see what's really happening.
+    color: "#ffb86b"
+    intro: |
+      Fabrication and machining shops are a different world from a high-speed line. Work is often engineer-to-order or make-to-order, with long routings. A job might visit a laser, a press brake, a welding bay and paint before it ships.
+
+      The question on the floor is rarely "how fast is the line running?" It's "where is that job, and when will it be done?"
+    sections:
+      - h: Where the value usually is
+        body: |
+          **Knowing where every job is.** Real-time job status by operation, so the answer to "where is it?" doesn't need a walk around the shop. That alone changes the conversation with customers about delivery dates.
+
+          **Real labour and machine time.** Actual time against estimated time, by operation. Quotes and costing get better, and you find out which jobs really make money.
+
+          **A dispatch list people trust.** Supervisors and operators working from the same prioritised list, rather than whoever shouts loudest.
+
+          **Drawings and revisions at the workstation.** The right revision of the drawing, on a screen at the machine, removes one of the most expensive mistakes in fabrication.
+      - h: What makes it harder here
+        body: |
+          High-mix work means a lot of master data: routings and standard times for parts you might only make once. If ERP's routings are rough, the shopfloor system will expose it quickly. Plan time to clean them up. I cover what matters in [the ERP master data MES needs](/post/erp-master-data-for-mes).
+
+          Configured and engineered products add another layer. The order has to be buildable as quoted, and engineering changes have to reach the floor on time. That's the digital thread between [CPQ](/post/cpq-to-shopfloor), [PLM and ERP](/post/plm-erp-mes-digital-thread).
+      - h: Questions to settle before you look at vendors
+        body: |
+          - How do we track job progress today, and how accurate is it?
+          - How far apart are our estimated and actual times?
+          - How do drawings and revisions reach the operator?
+          - Which machines would give us useful data if we connected them, and which wouldn't?
+    capabilities: [execution, scheduling, plm, cpq, worker, tooling]
+    posts: [cpq-to-shopfloor, plm-erp-mes-digital-thread, ebom-mbom-as-built, erp-master-data-for-mes, mes-basics-production-scheduling, digital-work-instructions]
+    tools: [which-systems, readiness-check, vendor-scorecard]
+    terms: [engineer-to-order, configure-to-order, high-mix-low-volume, routing, work-centre, labour-tracking, dispatch-list, traveller, configurable-bom, first-article-inspection]
+    faq:
+      - q: Is MES worth it for a job shop or fabricator?
+        a: It can be, if the problems are visibility and control rather than speed. Real-time job status by operation, actual labour and machine time against estimates, a dispatch list people trust and the right drawing revision at the workstation are the usual wins. Start with the jobs and operations that cause the most late deliveries.
+      - q: How does MES handle high-mix, low-volume production?
+        a: By tracking each job through its own routing, operation by operation, rather than counting output from a fixed line. That needs good master data for routings and standard times, which is often the hardest part of the project in a fabrication shop.
+
+  - id: plastics
+    kind: industry
+    short: Plastics
+    title: The smart factory in plastics manufacturing
+    seo: "MES and the smart factory in plastics, moulding and extrusion"
+    eyebrow: Industry
+    kicker: Moulds, cavities, cycle times and process windows. Where MES/MOM pays back in injection moulding and extrusion.
+    color: "#8b6cff"
+    intro: |
+      Plastics manufacturing is rich in data and often poor in using it. Moulding machines and extruders know their cycle times and temperatures to a fraction. Very often, that data stays on the machine.
+
+      Meanwhile the questions that matter to the business, like scrap by tool, the real cycle time against standard and when the next mould service is due, get answered from a spreadsheet.
+    sections:
+      - h: Where the value usually is
+        body: |
+          **Cycle time against standard.** A cycle that's a second slower than standard on a busy press is a lot of lost capacity over a year. Captured automatically, it becomes visible straight away.
+
+          **Moulds and tooling.** Shot counts, cavities running, maintenance due and the tool's history, tracked properly. A worn or damaged tool should be found by the system, not by the scrap. My article on [tooling in MES](/post/mes-functionality-tooling) covers what to track.
+
+          **Process windows and SPC.** Temperatures, pressures, times and dimensions monitored against limits, so drift is caught while the part is still good.
+
+          **Material and regrind.** Resin, masterbatch, additives and regrind tracked by job, with lot traceability back to the material supplier.
+      - h: What makes it harder here
+        body: |
+          Machine data is plentiful, so the risk is collecting everything and using none of it. Decide which signals answer real questions before connecting every parameter. A historian may be the right home for the high-frequency data, with MES/MOM holding the context. See [historian vs MES](/post/historian-vs-mes).
+
+          Multi-cavity tools complicate counting and quality. If a cavity is blocked off, standard rates and quality checks need to know.
+      - h: Questions to settle before you look at vendors
+        body: |
+          - How do we know the real cycle time on each press today?
+          - How do we track mould life and cavity status?
+          - Which process parameters actually predict quality for our parts?
+          - Where should high-frequency machine data live, and who will use it?
+    capabilities: [connectivity, tooling, quality, execution, historian, maintenance]
+    posts: [mes-functionality-tooling, spc-on-the-shopfloor, historian-vs-mes, predictive-maintenance-data, opc-ua-mqtt-uns-explained, mes-functionality-maintenance]
+    tools: [oee-one-percent, readiness-check, which-systems]
+    terms: [cavity, cycle-time, tool-life, spc, process-capability, control-limits, historian, time-series-data, scrap-rate, condition-based-maintenance]
+    faq:
+      - q: What does MES do for an injection moulder?
+        a: It captures cycle times and counts straight from the presses, tracks moulds, shot counts and cavity status, monitors process parameters against limits, and links material lots to each job. The result is scrap and lost capacity you can see by tool and by press, rather than estimates at the end of the shift.
+      - q: Do I need a historian as well as MES in plastics?
+        a: Often, yes. Moulding and extrusion produce high-frequency process data that a historian stores efficiently. MES/MOM adds the context, such as which job, tool, material lot and operator. Engineers use the two together to find what really drives quality.
+
+  # ------------------------------------------------------------------ roles
+  - id: plant-managers
+    kind: role
+    short: Plant and operations managers
+    title: For plant and operations managers
+    seo: "The smart factory for plant and operations managers"
+    eyebrow: Role
+    kicker: You own the numbers and the people. Where to start, how to build a case the board will sign, and how to avoid paying twice.
+    color: "#33d4e0"
+    intro: |
+      If you run a plant, you already know where it hurts. The morning meeting that starts with an argument about whose numbers are right. The experienced operator who's retiring next year. The customer complaint that took three days to trace.
+
+      What's harder is turning that into a plan that gets funded, and then making it stick. That's what this page is for.
+    sections:
+      - h: Where to start
+        body: |
+          Be honest about where you are. Most factories sit between Level 1 and 3 on the [maturity model](/post/smart-manufacturing-maturity-model), and that's fine. Take the [readiness check](/tools/readiness-check) with a couple of colleagues from different departments and compare answers.
+
+          Then follow one order through the factory. Map what actually happens, not the procedure. It's the best requirements document you'll ever write, and the [swimlane template](/tools/swimlane-template) will help.
+
+          My [first 90 days](/post/smart-factory-where-to-start) guide goes through it step by step.
+      - h: Getting it funded
+        body: |
+          Speak business, not features. Work out [what 1% of OEE is worth](/tools/oee-one-percent) to your site. Put a number on the paper. Then reframe the risk: the bigger risk isn't the investment, it's the quality escape, the failed audit, the lost customer and the knowledge walking out of the door.
+
+          Start with one line and let its results fund the next phase. The [business case article](/post/mes-business-case) and the [template](/tools/business-case-template) give you the structure.
+      - h: Making it stick
+        body: |
+          The hardest part of every programme is people, not technology. Bring operators in early and free up super users properly. Then be visible on the floor at go-live. Expect the first weeks to be messy. That's a learning curve, not a failure.
+
+          Read [resistance to change is guaranteed](/post/manufacturing-change-management) and [go-live is the starting line](/post/mes-go-live) before you plan the project, not after.
+    posts: [smart-factory-where-to-start, mes-business-case, smart-manufacturing-maturity-model, manufacturing-change-management, mes-go-live, how-to-modernise-a-factory]
+    tools: [readiness-check, oee-one-percent, first-line-scorecard, business-case-template]
+    terms: [oee, mes, mom, continuous-improvement, kpi, hypercare, super-user, change-management]
+    faq:
+      - q: Where should a plant manager start with a smart factory?
+        a: With an honest assessment of where the plant is today, and a map of how one real order flows through it. Those two things show where the losses are and what the requirements really are. Only then pick a first line and build the case. Technology comes after that.
+      - q: How do I get a smart factory project approved?
+        a: Show what the problems cost today in money, what will improve and when, the realistic costs including your own people, and how the risk will be managed through phases and decision points. Most boards worry about the risk more than the return, so a small first phase that funds the next one is usually easier to approve.
+
+  - id: it-leaders
+    kind: role
+    short: IT and digital leaders
+    title: For IT and digital leaders
+    seo: "The smart factory for IT, digital and OT leaders"
+    eyebrow: Role
+    kicker: You know ERP inside out. The shopfloor speaks a different language. Architecture and data, without the turf war.
+    color: "#8b6cff"
+    intro: |
+      Most IT leaders I speak to know enterprise systems inside out. Then someone asks for AI on the shopfloor, or a new line needs connecting, and the conversation lands somewhere much less familiar. PLCs, MES, OEE, OT security, data with no context.
+
+      The good news is that the principles carry over. Clear ownership of data, and integration that's designed rather than accumulated. The detail is just different.
+    sections:
+      - h: The architecture
+        body: |
+          Start with how the pieces fit. ERP plans and records the business. MES/MOM runs and records the shopfloor. Between them and the equipment sit the control and connectivity layers. [ISA-95](/post/what-is-the-isa-95-model-and-where-does-mes-fit) gives you a shared vocabulary, and my [integration patterns](/post/isa95-integration-patterns) article covers how to connect it all.
+
+          Be deliberate about where each capability lives. The [systems picker](/tools/which-systems) starts from the problems rather than the products.
+      - h: Integration and master data
+        body: |
+          Decide who owns materials, BOMs, routings and work centres, and how changes flow. Most delays I've seen come from master data, not software. Read [the ERP master data MES needs](/post/erp-master-data-for-mes).
+
+          Watch the number of point-to-point interfaces. Every custom interface is yours to maintain at every upgrade.
+      - h: Data and security
+        body: |
+          AI on operational data needs contextualised data captured at the point of work. ERP sees an order start and finish, and very little in between. That's where MES/MOM and a deliberate data architecture come in. See [contextualised data](/post/contextualised-manufacturing-data) and [OPC UA, MQTT and UNS explained](/post/opc-ua-mqtt-uns-explained).
+
+          Bring OT security in from the start, not as a gate at the end. [OT cybersecurity for MES](/post/ot-cybersecurity-for-mes) covers the essentials.
+    posts: [isa95-integration-patterns, erp-master-data-for-mes, it-vs-ot, contextualised-manufacturing-data, ot-cybersecurity-for-mes, cloud-vs-on-premises-mes]
+    tools: [which-systems, vendor-scorecard, readiness-check]
+    terms: [isa-95, purdue-model, it-ot-convergence, uns, opc-ua, mqtt, industrial-dmz, iec-62443, master-data, mdm]
+    faq:
+      - q: What should IT know before an MES project?
+        a: That the shopfloor runs in real time, on equipment that can't simply be patched or rebooted, with users wearing gloves. The key decisions are where each capability lives, who owns master data, how systems integrate and how OT security is handled. ISA-95 gives IT and operations a shared language for all of them.
+      - q: Is ERP enough to support AI on the shopfloor?
+        a: Usually not on its own. ERP records an order starting and finishing, but very little of what happens in between. AI that learns from operations needs real-time, contextualised data from the point of work, which is what MES/MOM and the connectivity layer provide.
+
+  - id: quality-managers
+    kind: role
+    short: Quality managers
+    title: For quality managers
+    seo: "The smart factory for quality managers"
+    eyebrow: Role
+    kicker: From checks on clipboards to quality built into the process. Where MES/MOM, QMS, LIMS and ERP each fit, and what to fix first.
+    color: "#ff6fd8"
+    intro: |
+      Quality teams often feel the cost of paper most. The checks done on clipboards and typed up later. The investigation that means searching through boxes of records.
+
+      A smart factory changes the job from finding defects to preventing them. But only if the systems underneath are set up for it.
+    sections:
+      - h: Where each system fits
+        body: |
+          MES/MOM runs quality on the shopfloor: checks triggered at the right moment, results recorded at source, SPC on the line and holds that stop bad product moving on. A QMS manages quality as a system: complaints, CAPA, audits, document control and supplier quality. A LIMS runs the lab.
+
+          They overlap, and the boundaries matter. I go through them in [QMS and MES](/post/qms-and-mes-quality) and [LIMS and MES](/post/lims-and-mes).
+      - h: What to fix first
+        body: |
+          **Get results captured at source.** A check recorded when it's done, linked to the batch, the operator and the equipment, is worth far more than the same number typed up at the end of the shift.
+
+          **Put SPC where the process is.** Control charts on the line, seen by the operator, catch drift before it becomes scrap. See [SPC on the shopfloor](/post/spc-on-the-shopfloor).
+
+          **Make traceability a search, not a project.** If a mock recall takes a day, that's where to start. See [manufacturing traceability](/post/manufacturing-traceability).
+      - h: In a regulated industry
+        body: |
+          Audit trails and electronic signatures need to be designed in from the start, with validation planned as part of the project. [MES in regulated industries](/post/mes-in-regulated-industries) covers what to look for.
+    posts: [qms-and-mes-quality, spc-on-the-shopfloor, manufacturing-traceability, lims-and-mes, mes-in-regulated-industries, mes-functionality-quality-operations]
+    tools: [which-systems, readiness-check, vendor-scorecard]
+    terms: [spc, control-chart, capa, non-conformance, deviation, quality-hold, review-by-exception, audit-trail, electronic-signature, fpy]
+    faq:
+      - q: What is the difference between QMS and MES for quality?
+        a: MES/MOM handles quality as it happens on the shopfloor, triggering checks, recording results at source, running SPC and placing holds. A QMS manages the wider quality system, such as complaints, CAPA, audits, document control and supplier quality. Most manufacturers need both, connected, with clear rules about which owns what.
+      - q: How does MES improve quality?
+        a: By moving quality from inspection after the fact to prevention during production. Checks happen at the right moment and can't be skipped, results are captured at source, control charts show drift while parts are still good, and traceability links every result to its batch, operator and equipment.

@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% from "macros.html" import hero_bg, cta %}
+{% block main %}
+<section class="hero page-hero">
+  {{ hero_bg() }}
+  <div class="wrap">
+    <span class="tag">Industries and roles</span>
+    <h1>Start from where you work</h1>
+    <p class="kicker">The same principles apply in every factory. The detail doesn't. Pick your industry or your role for the articles and tools that matter most to you.</p>
+  </div>
+</section>
+<div class="wrap">
+  {% for kind, label in [("industry", "By industry"), ("role", "By role")] %}
+  <section class="section tight">
+    <h2 class="label">{{ label }}</h2>
+    <div class="tk-cards small">
+      {% for a in audiences if a.kind == kind %}
+      <a class="tk-card rv" href="{{ base }}/for/{{ a.id }}" style="--c:{{ a.color }}">
+        <span class="micro">{{ a.eyebrow }}</span>
+        <h3>{{ a.short }}</h3>
+        <p>{{ a.kicker }}</p>
+        <span class="tk-go">Read more →</span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+  {{ cta(base, linkedin, kit_form) }}
+</div>
+{% endblock %}

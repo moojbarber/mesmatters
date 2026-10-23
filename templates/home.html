@@ -56,6 +56,16 @@
   </section>
 
   <section class="section">
+    <h2 class="label">Free tools</h2>
+    <div class="section-head"><div><h3>Put a number on it</h3><p>Vendor-neutral tools built from the articles. No sign-up, and your answers stay in your browser.</p></div><a class="more" href="{{ base }}/tools/">All tools and templates →</a></div>
+    <div class="tk-strip">
+      {% for t in tools if t.kind == "tool" %}
+      <a class="tk-mini big rv" href="{{ base }}/tools/{{ t.id }}" style="--c:{{ t.color }}"><span class="micro">{{ t.eyebrow }}</span><b>{{ t.title }}</b><span>{{ t.minutes }} min</span></a>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="section">
     <h2 class="label">Latest thinking</h2>
     <div class="grid" style="--min:300px">
       {{ card(latest[0], base, lead=True) }}

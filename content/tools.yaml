@@ -1,0 +1,137 @@
+# Tools and templates on /tools/.
+# kind: tool (runs in the browser) | template (a download, offered behind a light email gate)
+# posts: articles that link to this tool in their "Put it into practice" box (first match wins per article)
+# Template files live in public/downloads/ and are built by scripts/templates_xlsx.py
+
+tools:
+  - id: readiness-check
+    kind: tool
+    title: Smart factory readiness check
+    short: Readiness check
+    eyebrow: Where are you today?
+    blurb: Twenty honest statements across five areas. See which maturity level you're really at, and where your weakest link is.
+    minutes: 5
+    icon: ladder
+    color: "#8b6cff"
+    posts: [smart-manufacturing-maturity-model, smart-factory-where-to-start, what-is-a-smart-factory, how-to-modernise-a-factory, smart-manufacturing-myths, the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence]
+
+  - id: oee-one-percent
+    kind: tool
+    title: What is 1% of OEE worth?
+    short: The 1% calculator
+    eyebrow: The question I always ask
+    blurb: Five numbers from your site. See what a single point of OEE is worth in sales or in hours, and what five or ten points would mean.
+    minutes: 2
+    icon: gauge
+    color: "#33d4e0"
+    posts: [mes-business-case, what-is-oee-overall-equipment-effectiveness, oee-vs-teep, manufacturing-kpis-beyond-oee, smart-factory-roi-research, can-mes-improve-your-bottom-line]
+
+  - id: which-systems
+    kind: tool
+    title: Which systems do I need?
+    short: Systems picker
+    eyebrow: Start from the problem
+    blurb: Tick the problems you recognise. See which capabilities solve them and where each one usually lives, before anyone mentions a product.
+    minutes: 4
+    icon: stack
+    color: "#ff6fd8"
+    posts: [shopfloor-applications-explained, mes-mom-erp-compared, smart-factory-tech-stack, mes-vs-erp, mes-vs-mom, wms-vs-mes-inventory, qms-and-mes-quality, lims-and-mes, eam-cmms-and-mes, aps-vs-mes-scheduling, historian-vs-mes, iiot-vs-mes, scada-vs-mes]
+
+  - id: vendor-scorecard
+    kind: tool
+    title: MES vendor scorecard
+    short: Vendor scorecard
+    eyebrow: Selection without the sales pitch
+    blurb: My 12 questions, with what a good answer sounds like and the red flags. Weight what matters to you and score up to three vendors side by side.
+    minutes: 15
+    icon: scales
+    color: "#ffb86b"
+    posts: [how-to-choose-an-mes, build-vs-buy-mes, replacing-a-homegrown-mes, configure-dont-customise, an-overview-of-the-mes-market]
+
+  - id: business-case-template
+    kind: template
+    title: MES business case template
+    short: Business case template
+    eyebrow: Spreadsheet
+    file: shopfloor-matters-business-case-template.xlsx
+    blurb: The structure that gets approved. Current-state costs, five benefit levers, every cost line including your own people, and a three-year cash flow with payback.
+    icon: chart
+    color: "#33d4e0"
+    inside:
+      - {name: Baseline, text: "What the problems cost today, including the value of one OEE point."}
+      - {name: Benefits, text: "Five levers with modest default improvements and a ramp over three years."}
+      - {name: Costs, text: "Every line from licences to your internal team, with contingency set on purpose."}
+      - {name: Cash flow and phasing, text: "Payback, three-year ROI, the cost of doing nothing, and how each phase earns the next."}
+    howto:
+      - Fill in Baseline with numbers finance will recognise. Measure the paper hours on the floor rather than guessing.
+      - Keep the improvements on Benefits at the modest end. A board trusts a case that under-promises.
+      - Name the people on Costs. The internal team is the line everyone forgets.
+      - Spend most of your time on Phasing. It's the part that deals with the fear.
+    format_note: Example values describe a fictional site so you can see the maths work. Replace them all.
+    posts: []
+
+  - id: swimlane-template
+    kind: template
+    title: Swimlane process map template
+    short: Swimlane template
+    eyebrow: Spreadsheet
+    file: shopfloor-matters-swimlane-process-map.xlsx
+    blurb: Map one order from release to confirmation, lane by lane. A worked example to copy, and a log that turns every pain point into hours a year.
+    icon: lanes
+    color: "#8b6cff"
+    inside:
+      - {name: Example, text: "A typical paper-based order mapped lane by lane, with every hand-off visible."}
+      - {name: Blank map, text: "Eight lanes and ten steps, ready for your own order."}
+      - {name: Pain points, text: "A log that turns minutes lost into hours a year for the business case."}
+      - {name: Start here, text: "How to run the mapping session, and what to watch for."}
+    howto:
+      - Pick one real order on one line. Follow it from release to the confirmation landing in ERP.
+      - Map what actually happens, not the procedure. Ask the people doing the work and watch them do it.
+      - Mark every hand-off between lanes. That's where time gets lost and errors creep in.
+      - Log every pain point with the time it costs. That list becomes your requirements.
+    format_note: Works for any order type. Add lanes if your process needs them.
+    posts: [manufacturing-process-mapping]
+
+  - id: first-line-scorecard
+    kind: template
+    title: First-line scorecard
+    short: First-line scorecard
+    eyebrow: Spreadsheet
+    file: shopfloor-matters-first-line-scorecard.xlsx
+    blurb: Score up to eight candidate lines on the seven questions that decide where to start. Totals and a ranking, plus the two cautions to read before you decide.
+    icon: target
+    color: "#ff6fd8"
+    inside:
+      - {name: Scorecard, text: "The seven questions from the 90-day guide, for up to eight lines."}
+      - {name: Weights, text: "Raise a question's weight only when the whole team agrees."}
+      - {name: Totals and rank, text: "A score out of 100 and a ranking that updates as you type."}
+      - {name: Two cautions, text: "The traps that make the top score the wrong choice."}
+    howto:
+      - Put your candidate lines across the top. Score them as a group, with operations, quality, maintenance and IT in the room.
+      - Use evidence where you have it. A downtime log beats a feeling.
+      - Read the two cautions before you accept the top score.
+      - Write down why you chose the line you did. Someone will ask in six months.
+    format_note: Lines 1 to 4 hold example scores. Overwrite them.
+    posts: [mes-multi-site-rollout, how-long-does-mes-implementation-take]
+
+  - id: go-live-checklist
+    kind: template
+    title: Go-live and hypercare checklist
+    short: Go-live checklist
+    eyebrow: Spreadsheet
+    file: shopfloor-matters-go-live-hypercare-checklist.xlsx
+    blurb: Nearly fifty readiness checks with owners and dates, and a day-by-day plan for the first fortnight on the floor.
+    icon: check
+    color: "#ffb86b"
+    inside:
+      - {name: Checklist, text: "Nearly fifty readiness checks in nine areas, each with an owner, a date and a status."}
+      - {name: Go / no-go, text: "The questions for the decision meeting, with a suggested call worked out for you."}
+      - {name: First fortnight, text: "Who's on the floor each shift, from cutover to exiting hypercare."}
+      - {name: Issue log, text: "One place for every issue, with severity 1 problems highlighted until they're fixed."}
+    howto:
+      - Give every item an owner and a due date at the start of the final phase. If something doesn't have an owner, it doesn't get done.
+      - Agree who makes the go / no-go call, and on what evidence, before go-live week.
+      - Use the issue log from the first hour. Triage it at the same time every day.
+      - Exit hypercare on evidence, not on a date.
+    format_note: Edit the checks to fit your scope. Mark anything that doesn't apply as N/A.
+    posts: [mes-go-live, manufacturing-change-management, building-a-winning-team-for-mes-implementation-navigating-challenges-and-ensuring-success]

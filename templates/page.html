@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import hero_bg, cta %}
+{% from "macros.html" import hero_bg, cta, ask_box %}
 {% block main %}
 <section class="hero page-hero">
   {{ hero_bg() }}
@@ -12,6 +12,7 @@
 </section>
 <div class="wrap">
   {{ content }}
+  {% if ask %}{{ ask_box(base, ask_endpoint, ask) }}{% endif %}
   {% if show_cta %}{{ cta(base, linkedin, kit_form) }}{% endif %}
 </div>
 {% endblock %}

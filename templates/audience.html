@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% from "macros.html" import hero_bg, cta, card, ask_box %}
+{% block main %}
+<section class="hero page-hero au-hero" style="--c:{{ a.color }}">
+  {{ hero_bg() }}
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ base }}/for/">Industries and roles</a><span aria-hidden="true">/</span><span>{{ a.short }}</span></nav>
+    <span class="tag">{{ a.eyebrow }} <i>/</i> {{ a.short }}</span>
+    <h1>{{ a.title }}</h1>
+    <p class="kicker">{{ a.kicker }}</p>
+  </div>
+</section>
+<div class="wrap au">
+  <div class="au-layout">
+    <div class="prose au-body">
+      {{ a.intro_html|safe }}
+      {% for s in a.sections_html %}<h2 id="{{ s.id }}">{{ s.h }}</h2>{{ s.html|safe }}{% endfor %}
+    </div>
+    <aside class="au-side">
+      {% if a.caps %}
+      <div class="au-box"><span class="micro">Capabilities that matter most</span>
+        <ul>{% for c in a.caps %}<li><b>{{ c.name }}</b><span>{{ c.where }}</span></li>{% endfor %}</ul>
+        <a href="{{ base }}/tools/which-systems">Map your own in the systems picker →</a>
+      </div>
+      {% endif %}
+      <div class="au-box"><span class="micro">Tools for this</span>
+        <ul class="au-tools">{% for t in a.tool_list %}<li><a href="{{ base }}/tools/{{ t.id }}" style="--c:{{ t.color }}">{{ t.title }}</a></li>{% endfor %}</ul>
+      </div>
+      {% if a.term_list %}
+      <div class="au-box"><span class="micro">Terms you'll hear</span>
+        <div class="au-terms">{% for g in a.term_list %}<a href="{{ base }}/glossary/{{ g.slug }}" title="{{ g.short }}">{{ g.term }}</a>{% endfor %}</div>
+      </div>
+      {% endif %}
+    </aside>
+  </div>
+
+  {% if a.faq %}
+  <section class="faq au-faq" aria-labelledby="au-faq-h">
+    <h2 id="au-faq-h">Common questions</h2>
+    {% for f in a.faq %}<details class="faq-q"><summary>{{ f.q }}</summary><div class="faq-a"><p>{{ f.a }}</p></div></details>{% endfor %}
+  </section>
+  {% endif %}
+
+  <section class="section">
+    <h2 class="label">Start with these articles</h2>
+    <div class="grid" style="--min:280px">{% for r in a.post_list %}{{ card(r, base) }}{% endfor %}</div>
+  </section>
+
+  <section class="section tight">
+    <h2 class="label">{{ 'Other industries' if a.kind == 'industry' else 'Other roles' }}</h2>
+    <div class="tk-more">{% for o in audiences if o.kind == a.kind and o.id != a.id %}<a class="tk-mini rv" href="{{ base }}/for/{{ o.id }}" style="--c:{{ o.color }}"><span class="micro">{{ o.eyebrow }}</span><b>{{ o.short }}</b></a>{% endfor %}</div>
+  </section>
+  {{ ask_box(base, ask_endpoint, "for:" ~ a.id) }}
+  {{ cta(base, linkedin, kit_form) }}
+</div>
+{% endblock %}
