@@ -96,7 +96,7 @@
       return n;
     }
     var result = null;
-    function stage(a) { return a < 1.8 ? 1 : a < 2.6 ? 2 : a < 3.4 ? 3 : a < 4.2 ? 4 : 5; }
+    function stage(a) { return a < 1.67 ? 1 : a < 2.33 ? 2 : a < 3 ? 3 : a < 3.67 ? 4 : a < 4.33 ? 5 : 6; }
     function compute() {
       var a = answers(), areas = DATA.areas.map(function (ar) {
         var vals = $$('input[data-area="' + ar.id + '"]:checked', form).map(function (i) { return +i.value; });
@@ -116,6 +116,7 @@
       $('[data-rc-level]').textContent = R.lvl;
       $('[data-rc-ring]').style.setProperty('--p', (R.avg - 1) / 4 * 100);
       $('[data-rc-name]').textContent = R.L.name;
+      $('[data-rc-state]').textContent = R.L.state;
       $$('[data-rc-stages] li').forEach(function (li) { var n = +li.dataset.n; li.classList.toggle('on', n === R.lvl); li.classList.toggle('past', n < R.lvl); });
       $('[data-rc-line]').textContent = R.L.line;
       $('[data-rc-avg]').textContent = R.avg.toFixed(1);

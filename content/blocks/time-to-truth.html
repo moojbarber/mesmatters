@@ -1,33 +1,48 @@
-<figure class="ttt rv" aria-labelledby="ttt-cap">
+<figure class="ttt rv" aria-labelledby="ttt-cap" data-ttt>
   <div class="ttt-head">
     <div class="ttt-event"><span class="ttt-clock">02:14</span><span><b>Line 3 stops.</b> A bearing is running hot. When does the right person find out, and do they know why?</span></div>
+    <button class="ttt-play" type="button" data-ttt-play aria-pressed="false"><span class="i-play" aria-hidden="true">▶</span><span class="i-pause" aria-hidden="true">❚❚</span><span class="t">Play the story</span></button>
   </div>
   <div class="ttt-grid">
     <div class="ttt-axis" aria-hidden="true">
-      <span style="--x:9%">Before</span><span class="ev" style="--x:24%">02:14</span><span style="--x:42%">+1 hour</span><span style="--x:66%">Next morning</span><span style="--x:92%">Next week</span>
+      <span style="--x:9%">Before</span><span class="ev" style="--x:24%">02:14</span><span style="--x:45%">End of shift</span><span style="--x:66%">Next morning</span><span style="--x:92%">Next week</span>
     </div>
 
-    <div class="ttt-row s1" style="--from:24%;--to:92%">
-      <div class="ttt-label"><i>1</i><div><b>Next week</b><span>Paper and clipboards. Someone types it up, eventually.</span></div></div>
+    <div class="ttt-row s1" style="--from:24%;--to:92%" data-s="1">
+      <button class="ttt-label" type="button" aria-controls="ttt-panel"><i>1</i><div><b>Next week</b><span class="ttt-state">Paper and Excel</span></div></button>
       <div class="ttt-track"><span class="ttt-bar"></span><span class="ttt-pulse"></span><span class="ttt-dot"></span><em class="ttt-note">"Downtime: 40 min, machine fault"</em></div>
     </div>
-    <div class="ttt-row s2" style="--from:24%;--to:66%">
-      <div class="ttt-label"><i>2</i><div><b>Next morning</b><span>Point solutions and spreadsheets. The meeting argues about yesterday.</span></div></div>
-      <div class="ttt-track"><span class="ttt-bar"></span><span class="ttt-pulse"></span><span class="ttt-dot"></span><em class="ttt-note">Three versions of the number</em></div>
+    <div class="ttt-row s2" style="--from:24%;--to:66%" data-s="2">
+      <button class="ttt-label" type="button" aria-controls="ttt-panel"><i>2</i><div><b>Next morning</b><span class="ttt-state">ERP on the shopfloor</span></div></button>
+      <div class="ttt-track"><span class="ttt-bar"></span><span class="ttt-pulse"></span><span class="ttt-dot"></span><em class="ttt-note">960 good, 40 scrap. Why? No idea</em></div>
+    </div>
+    <div class="ttt-row s3" style="--from:24%;--to:45%" data-s="3">
+      <button class="ttt-label" type="button" aria-controls="ttt-panel"><i>3</i><div><b>End of shift</b><span class="ttt-state">Digitalised</span></div></button>
+      <div class="ttt-track"><span class="ttt-bar"></span><span class="ttt-pulse"></span><span class="ttt-dot"></span><em class="ttt-note">Keyed into a tablet, rounded to 40</em></div>
     </div>
     <div class="ttt-zone" aria-hidden="true"><span>AI on operational data pays back from here</span></div>
-    <div class="ttt-row s3" style="--from:24%;--to:27%">
-      <div class="ttt-label"><i>3</i><div><b>Right now</b><span>MES/MOM captures it as it happens, with the order and the reason attached.</span></div></div>
+    <div class="ttt-row s4" style="--from:24%;--to:27%" data-s="4">
+      <button class="ttt-label" type="button" aria-controls="ttt-panel"><i>4</i><div><b>Right now</b><span class="ttt-state">Automatic data capture</span></div></button>
       <div class="ttt-track"><span class="ttt-bar"></span><span class="ttt-dot"></span><em class="ttt-note">Stop logged at 02:14, reason at 02:16</em></div>
     </div>
-    <div class="ttt-row s4" style="--from:9%;--to:24%">
-      <div class="ttt-label"><i>4</i><div><b>Before it happens</b><span>Connected systems spot the trend. Maintenance is planned, not called.</span></div></div>
+    <div class="ttt-row s5" style="--from:9%;--to:24%" data-s="5">
+      <button class="ttt-label" type="button" aria-controls="ttt-panel"><i>5</i><div><b>Before it happens</b><span class="ttt-state">Harmonious systems</span></div></button>
       <div class="ttt-track"><span class="ttt-bar back"></span><span class="ttt-dot early"></span><em class="ttt-note left">← Warned at 23:40. Fixed before it failed</em></div>
     </div>
-    <div class="ttt-row s5" style="--from:24%;--to:24%">
-      <div class="ttt-label"><i>5</i><div><b>Without asking</b><span>Systems act on the data. People set the rules and handle the exceptions.</span></div></div>
+    <div class="ttt-row s6" style="--from:24%;--to:24%" data-s="6">
+      <button class="ttt-label" type="button" aria-controls="ttt-panel"><i>6</i><div><b>Without asking</b><span class="ttt-state">Agentic and AI</span></div></button>
       <div class="ttt-track"><svg class="ttt-loop" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 10a22 22 0 1 1-20 12.8"/><path d="M8 14l4 9 9-4"/></svg><em class="ttt-note">Speed lowered and a work order raised before anyone asks</em></div>
     </div>
+  </div>
+
+  <div class="ttt-panel" id="ttt-panel" aria-live="polite">
+    <p class="ttt-hint">Tap a stage to see what the factory and its systems look like.</p>
+    <div class="ttt-info" data-s="1" hidden><span class="micro">Stage 1 · Paper and Excel</span><h4>The truth arrives next week</h4><div class="ttt-cols"><p><b>The factory.</b> Paper travellers and whiteboards on the floor, and spreadsheets in the office with macros only one person understands.</p><p><b>The truth.</b> Written down by hand and typed up later, if at all. By then the detail has gone, and every department has its own version of the number.</p><p><b>To move on.</b> Map how one order really flows. Then take the paper off one line.</p></div></div>
+    <div class="ttt-info" data-s="2" hidden><span class="micro">Stage 2 · ERP on the shopfloor</span><h4>The truth arrives next morning</h4><div class="ttt-cols"><p><b>The factory.</b> Production and scrap booked into ERP at a terminal at the end of the shift, or backflushed when the order closes. ERP knows the order started and finished.</p><p><b>The truth.</b> Posted overnight. You know how many, and what it cost. You don't know why, because watching what happens in between isn't ERP's job.</p><p><b>To move on.</b> Keep ERP doing what it does well: planning, costing, purchasing and the business record. Add a shopfloor layer for everything between start and finish.</p></div></div>
+    <div class="ttt-info" data-s="3" hidden><span class="micro">Stage 3 · Digitalised</span><h4>The truth arrives by the end of the shift</h4><div class="ttt-cols"><p><b>The factory.</b> Tablets and digital forms, and a point solution for each department. Better than paper, but people still type the numbers in and the tools don't talk to each other.</p><p><b>The truth.</b> Faster, but still keyed in by hand. Rounded, and missing the short stops and the order it belonged to.</p><p><b>To move on.</b> Capture from the machine and the scanner, not the keyboard, on a platform that can grow beyond one problem.</p></div></div>
+    <div class="ttt-info" data-s="4" hidden><span class="micro">Stage 4 · Automatic data capture</span><h4>The truth arrives right now</h4><div class="ttt-cols"><p><b>The factory.</b> MES/MOM as the operational backbone, with machines connected. Operators work from one screen with instructions and checks built in.</p><p><b>The truth.</b> Captured as it happens, with the order and reason attached. Nobody argues about the numbers any more.</p><p><b>To move on.</b> Connect the wider stack deliberately, so planning, engineering, quality and maintenance work from the same data.</p></div></div>
+    <div class="ttt-info" data-s="5" hidden><span class="micro">Stage 5 · Harmonious systems</span><h4>The truth arrives before it happens</h4><div class="ttt-cols"><p><b>The factory.</b> ERP, MES/MOM, PLM, scheduling, quality and a data platform working as one architecture. Each system does its own job and shares what it knows.</p><p><b>The truth.</b> Trends raise warnings early. Maintenance is planned because the data says so, not because the calendar does.</p><p><b>To move on.</b> Pick the AI use cases with a measurable payback, and set the guardrails before you let anything act.</p></div></div>
+    <div class="ttt-info" data-s="6" hidden><span class="micro">Stage 6 · Agentic and AI</span><h4>The truth gets acted on without asking</h4><div class="ttt-cols"><p><b>The factory.</b> AI agents working on trusted, contextualised data, inside clear guardrails. People set the rules and handle the exceptions.</p><p><b>The truth.</b> Acted on in seconds: the line slowed to protect quality and a work order raised.</p><p><b>Honestly.</b> Very few factories are here yet, whatever the marketing says. Every stage before it has to be in place first.</p></div></div>
   </div>
   <figcaption id="ttt-cap"><b>Time to truth.</b> How long it takes your factory to know what really happened, with enough context to act on it. Each stage builds on the one before.</figcaption>
 </figure>

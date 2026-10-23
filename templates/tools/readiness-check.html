@@ -38,11 +38,12 @@
     <div>
       <span class="micro">Your time to truth</span>
       <h2 id="rc-h"><span data-rc-name>–</span></h2>
+      <span class="rc-state" data-rc-state></span>
       <p data-rc-line></p>
       <p class="rc-avg">Average score <b data-rc-avg>–</b> out of 5</p>
     </div>
   </div>
-  <ol class="rc-stages" data-rc-stages>{% for l in d.levels %}<li data-n="{{ l.n }}"><i></i><span>{{ l.name }}</span></li>{% endfor %}</ol>
+  <ol class="rc-stages" data-rc-stages>{% for l in d.levels %}<li data-n="{{ l.n }}"><i></i><span>{{ l.name }}<small>{{ l.state }}</small></span></li>{% endfor %}</ol>
   <div class="rc-areas" data-rc-areas></div>
   <div class="rc-warn" data-rc-warn hidden></div>
   <div class="rc-next">

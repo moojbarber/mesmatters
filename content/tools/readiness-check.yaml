@@ -3,27 +3,38 @@
 levels:
   - n: 1
     name: Next week
-    line: Paper-driven. The truth gets written down and typed up eventually, by which time the detail has gone.
-    next: Get the basics visible. Map how one order really flows and agree what you'll measure. Then take the paper out of one line. Don't buy anything until the process map is on the wall.
+    state: Paper and Excel
+    line: Paper on the floor and spreadsheets in the office. The truth gets typed up eventually, by which time the detail has gone.
+    next: Get the basics visible. Map how one order really flows and agree what you'll measure. Then take the paper off one line. Don't buy anything until the process map is on the wall.
     read: [manufacturing-process-mapping, smart-factory-where-to-start, paperless-manufacturing]
   - n: 2
     name: Next morning
-    line: Some point solutions and a lot of spreadsheets. The truth arrives the next day, in more than one version.
-    next: This is where most of the value is waiting. Getting to "right now" is usually the biggest single jump, because it's where the data becomes trustworthy. Check that what you've already bought can grow into an integrated platform, rather than adding another island.
-    read: [mes-business-case, mes-mom-erp-compared, how-to-choose-an-mes]
+    state: ERP on the shopfloor
+    line: Production and scrap booked into ERP. You know how many and what it cost, the next morning, but not why.
+    next: Keep ERP doing what it does well, and add a shopfloor layer for what happens between an order starting and finishing. Start where the unexplained losses are biggest.
+    read: [mes-vs-erp, mes-business-case, mes-mom-erp-compared]
   - n: 3
+    name: End of shift
+    state: Digitalised
+    line: Tablets and point solutions. Faster than paper, but still typed in by hand, and the tools don't talk to each other.
+    next: This is where most of the value is waiting. Getting to "right now" is usually the biggest single jump, because it's where the data becomes trustworthy. Check that what you've already bought can grow into an integrated platform, rather than adding another island.
+    read: [mes-business-case, shopfloor-applications-explained, how-to-choose-an-mes]
+  - n: 4
     name: Right now
-    line: Integrated on the shopfloor. MES/MOM captures what happens as it happens, with the context attached.
+    state: Automatic data capture
+    line: MES/MOM captures what happens as it happens, from the machine and the operator, with the context attached.
     next: Widen the architecture. Connect PLM, scheduling, quality and your data platform deliberately, so there's one source of truth beyond the shopfloor. This is also the stage where AI on operational data finally has something to learn from.
     read: [isa95-integration-patterns, contextualised-manufacturing-data, ai-ml-genai-on-the-shopfloor]
-  - n: 4
+  - n: 5
     name: Before it happens
-    line: A connected business. Trends raise warnings early, and maintenance and quality move from reacting to preventing.
+    state: Harmonious systems
+    line: The whole stack works as one architecture. Trends raise warnings early, and maintenance and quality move from reacting to preventing.
     next: Pick the AI use cases with a measurable payback and run them on the foundation you've built. Keep the template disciplined as you add sites, because this stage is easy to lose one local customisation at a time.
     read: [predictive-maintenance-data, mes-multi-site-rollout, agentic-ai-mcp-manufacturing]
-  - n: 5
+  - n: 6
     name: Without asking
-    line: Systems act on the data themselves. People set the rules and handle the exceptions.
+    state: Agentic and AI
+    line: AI agents act on trusted data, inside clear guardrails. People set the rules and handle the exceptions.
     next: Very few factories are genuinely here. If your scores say you are, ask two colleagues from different departments to take the check too. If they agree, write it up. I'd like to read it.
     read: [the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence, manufacturing-kpis-beyond-oee]
 

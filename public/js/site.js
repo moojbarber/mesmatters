@@ -353,3 +353,39 @@
     if (!reduce) requestAnimationFrame(tick);
   });
 })();
+
+/* Time to truth graphic: click a stage for detail; plays through the story until someone takes over */
+(function () {
+  [].forEach.call(document.querySelectorAll('[data-ttt]'), function (fig) {
+    var rows = [].slice.call(fig.querySelectorAll('.ttt-row'));
+    var infos = [].slice.call(fig.querySelectorAll('.ttt-info'));
+    var play = fig.querySelector('[data-ttt-play]');
+    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var cur = 0, timer = null, touched = false, seen = false;
+    function show(n) {
+      cur = n;
+      fig.classList.toggle('has-active', n > 0);
+      rows.forEach(function (r) { var on = +r.dataset.s === n; r.classList.toggle('on', on); r.querySelector('.ttt-label').setAttribute('aria-pressed', on ? 'true' : 'false'); });
+      infos.forEach(function (i) { var on = +i.dataset.s === n; i.hidden = !on; if (on) i.style.setProperty('--rc', getComputedStyle(rows[n - 1]).getPropertyValue('--rc')); });
+    }
+    var panel = fig.querySelector('.ttt-panel');
+    function reveal() { if (cur && innerWidth < 760) { var r = panel.getBoundingClientRect(); if (r.top > innerHeight - 120) panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); } }
+    function stop() { clearInterval(timer); timer = null; play.setAttribute('aria-pressed', 'false'); play.querySelector('.t').textContent = 'Play the story'; }
+    function start() {
+      stop(); play.setAttribute('aria-pressed', 'true'); play.querySelector('.t').textContent = 'Pause';
+      show(cur >= rows.length ? 1 : cur + 1);
+      timer = setInterval(function () { if (cur >= rows.length) { stop(); return; } show(cur + 1); }, 3800);
+    }
+    rows.forEach(function (r) {
+      r.querySelector('.ttt-label').addEventListener('click', function () { touched = true; stop(); show(+r.dataset.s === cur ? 0 : +r.dataset.s); reveal(); });
+      r.querySelector('.ttt-track').addEventListener('click', function () { touched = true; stop(); show(+r.dataset.s); });
+    });
+    play.addEventListener('click', function () { touched = true; if (timer) stop(); else { if (cur >= rows.length) cur = 0; start(); } });
+    if (!reduce && 'IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting && !seen && !touched) { seen = true; setTimeout(function () { if (!touched) start(); }, 1600); } });
+      }, { threshold: 0.45 });
+      io.observe(fig);
+    }
+  });
+})();
