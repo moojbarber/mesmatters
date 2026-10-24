@@ -1,0 +1,198 @@
+{% extends "base.html" %}
+{% from "macros.html" import hero_bg, cta %}
+{% block main %}
+<section class="hero page-hero ro-hero">
+  {{ hero_bg() }}
+  <div class="wrap">
+    <span class="tag">Role explorer</span>
+    <h1>Same factory. <em class="g">Different questions.</em></h1>
+    <p class="kicker">{{ ro.intro }}</p>
+    <div class="ro-hero-stats" aria-hidden="true">
+      <span><b>{{ ro.roles|length }}</b> roles</span>
+      <span><b>{{ ro.apps|length }}</b> application areas</span>
+    </div>
+  </div>
+  <svg class="ro-hero-art" viewBox="0 0 300 300" aria-hidden="true">
+    {% for ring in ro.radar.rings %}<polygon class="ro-ring" points="{{ ring }}"/>{% endfor %}
+    {% for ax in ro.radar.axes %}<line class="ro-axis" x1="150" y1="150" x2="{{ ax.x }}" y2="{{ ax.y }}"/>{% endfor %}
+    <g class="ro-hero-spin">{% for r in ro.roles %}<polygon points="{{ r.radar_points }}" style="--gc:{{ r.color }};--d:{{ loop.index0 * 0.12 }}s"/>{% endfor %}</g>
+  </svg>
+</section>
+
+<div class="wrap ro-wrap">
+  <div class="ro" id="explorer" data-default="{{ ro.default }}">
+    <aside class="ro-picker" aria-label="Choose a role">
+      <div class="ro-alt" aria-hidden="true"><span>Years</span><span>Minutes</span></div>
+      <div class="ro-tabs" role="tablist" aria-orientation="vertical">
+        {% for g in ro.groups %}
+        <div class="ro-group" style="--gc:{{ g.color }}">
+          <div class="ro-glabel"><i></i><span>{{ g.name }}</span></div>
+          <p class="ro-gnote">{{ g.note }}</p>
+          <div class="ro-chips">
+            {% for r in g.roles %}
+            <button class="ro-chip" role="tab" id="tab-{{ r.id }}" aria-controls="role-{{ r.id }}" aria-selected="{{ 'true' if r.id == ro.default else 'false' }}" tabindex="{{ '0' if r.id == ro.default else '-1' }}" data-role="{{ r.id }}">{{ r.name }}</button>
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </aside>
+
+    <div class="ro-stage">
+      {% for r in ro.roles %}
+      <section class="ro-panel" role="tabpanel" id="role-{{ r.id }}" aria-labelledby="tab-{{ r.id }}" style="--gc:{{ r.color }}"{% if r.id != ro.default %} hidden{% endif %}>
+        <header class="ro-head">
+          <span class="ro-eyebrow">{{ r.group_name }}</span>
+          <h2 class="ro-title">{{ r.title }}</h2>
+          <div class="ro-q">
+            <span class="ro-qlabel">The question on their mind</span>
+            <p>{{ r.question }}</p>
+          </div>
+          <div class="ro-hz" aria-label="Works mostly in {{ r.horizon_text }}">
+            <span class="ro-hzlabel">Time horizon</span>
+            <div class="ro-hzbar">
+              {% for h in ro.horizons %}<span class="{{ 'on' if r.horizon[0] <= loop.index0 <= r.horizon[1] else '' }}">{{ h }}</span>{% endfor %}
+            </div>
+          </div>
+        </header>
+
+        <p class="ro-summary">{{ r.summary }}</p>
+
+        <div class="ro-grid">
+          <figure class="ro-radar">
+            <svg viewBox="-62 -14 424 330" role="img" aria-label="How much each application area matters to the {{ r.name }}">
+              <defs><linearGradient id="rg-{{ r.id }}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{{ r.color }}" stop-opacity=".75"/><stop offset="1" stop-color="#33d4e0" stop-opacity=".35"/></linearGradient></defs>
+              {% for ring in ro.radar.rings %}<polygon class="ro-ring" points="{{ ring }}"/>{% endfor %}
+              {% for ax in ro.radar.axes %}<line class="ro-axis" x1="150" y1="150" x2="{{ ax.x }}" y2="{{ ax.y }}"/>{% endfor %}
+              <g class="ro-shape"><polygon points="{{ r.radar_points }}" fill="url(#rg-{{ r.id }})" stroke="{{ r.color }}"/>
+              {% for p in r.radar_dots %}<circle cx="{{ p.x }}" cy="{{ p.y }}" r="4"/>{% endfor %}</g>
+              {% for ax in ro.radar.axes %}<text class="ro-axl{% if ax.key in r.why %} hot{% endif %}" x="{{ ax.lx }}" y="{{ ax.ly }}" text-anchor="{{ ax.anchor }}">{{ ax.label }}</text>{% endfor %}
+            </svg>
+            <figcaption>Where the value lands for a {{ r.name|lower if r.name not in ['CEO','CFO','COO','CIO'] else r.name }}</figcaption>
+          </figure>
+
+          <div class="ro-side">
+            <h3 class="ro-h">Measured on</h3>
+            <ul class="ro-kpis">
+              {% for k in r.cares %}<li>{% if k.slug %}<a href="{{ base }}/glossary/{{ k.slug }}">{{ k.label }}</a>{% else %}<span>{{ k.label }}</span>{% endif %}</li>{% endfor %}
+            </ul>
+            <h3 class="ro-h">What gets in the way</h3>
+            <ol class="ro-chal">
+              {% for c in r.challenges %}<li><b>{{ c[0] }}</b><span>{{ c[1] }}</span></li>{% endfor %}
+            </ol>
+          </div>
+        </div>
+
+        <h3 class="ro-h ro-h-lg">The applications that matter most, and why</h3>
+        <div class="ro-apps">
+          {% for a in r.top_apps %}
+          <article class="ro-app">
+            <div class="ro-app-top">
+              <h4>{{ a.name }}</h4>
+              <span class="ro-meter" aria-label="Relevance {{ a.score }} out of 5">{% for i in range(5) %}<i class="{{ 'on' if i < a.score else '' }}"></i>{% endfor %}</span>
+            </div>
+            <p>{{ a.why }}</p>
+            {% if a.post %}<a class="ro-more" href="{{ base }}/post/{{ a.post.slug }}">{{ a.post.short or a.post.title }} →</a>{% endif %}
+          </article>
+          {% endfor %}
+        </div>
+
+        <h3 class="ro-h ro-h-lg">What changes</h3>
+        <div class="ro-shift">
+          {% for s in r.shift %}
+          <div class="ro-shift-row">
+            <div class="ro-before"><span>Today</span><p>{{ s[0] }}</p></div>
+            <div class="ro-arrow" aria-hidden="true"></div>
+            <div class="ro-after"><span>With connected operations</span><p>{{ s[1] }}</p></div>
+          </div>
+          {% endfor %}
+        </div>
+
+        <div class="ro-pitch">
+          <span class="ro-qlabel">Making the case to a {{ r.name if r.name in ['CEO','CFO','COO','CIO'] else r.name|lower }}</span>
+          <p>{{ r.pitch }}</p>
+        </div>
+
+        <h3 class="ro-h ro-h-lg">Start here</h3>
+        <div class="ro-reads">
+          {% for p in r.read_posts %}
+          <a class="ro-read" href="{{ base }}/post/{{ p.slug }}">
+            <img src="{{ base }}/images/art/{{ p.slug }}.svg" alt="" loading="lazy" width="1600" height="900">
+            <span>{{ p.title }}</span>
+          </a>
+          {% endfor %}
+        </div>
+        <div class="ro-next">
+          {% if r.tool_obj %}<a class="btn" href="{{ base }}/tools/{{ r.tool_obj.id }}">Tool: {{ r.tool_obj.short or r.tool_obj.title }} →</a>{% endif %}
+          {% if r.path_obj %}<a class="btn ghost" href="{{ base }}/paths/{{ r.path_obj.id }}">Learning path: {{ r.path_obj.title }}</a>{% endif %}
+          {% if r.for_obj %}<a class="btn ghost" href="{{ base }}/for/{{ r.for_obj.id }}">{{ r.for_obj.title }}</a>{% endif %}
+        </div>
+      </section>
+      {% endfor %}
+    </div>
+  </div>
+
+  <section class="section ro-event rv">
+    <div class="section-head">
+      <h2 class="label">{{ ro.one_event.title }}</h2>
+    </div>
+    <p class="ro-event-intro">{{ ro.one_event.intro }}</p>
+    <div class="ro-event-clock" aria-hidden="true"><span>02:10</span><i></i><span>Filler stops</span></div>
+    <ol class="ro-event-list">
+      {% for v in ro.one_event.views %}
+      <li style="--gc:{{ v.color }}">
+        <button class="ro-event-who" data-pick="{{ v.id }}">{{ v.name }}</button>
+        <p>{{ v.text }}</p>
+      </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  {{ cta(base, linkedin, kit_form) }}
+</div>
+
+<script>
+(function () {
+  var root = document.getElementById('explorer'); if (!root) return;
+  var tabs = [].slice.call(root.querySelectorAll('.ro-chip'));
+  var panels = {}; [].slice.call(root.querySelectorAll('.ro-panel')).forEach(function (p) { panels[p.id.slice(5)] = p; });
+  function select(id, focus, fromEvent) {
+    if (!panels[id]) return;
+    tabs.forEach(function (t) {
+      var on = t.dataset.role === id;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      if (on && focus) t.focus();
+      if (on && t.scrollIntoView && innerWidth < 900) {
+        var strip = t.parentNode.parentNode.parentNode;
+        if (strip.scrollWidth > strip.clientWidth) strip.scrollLeft = t.offsetLeft - strip.clientWidth / 2 + t.offsetWidth / 2;
+      }
+    });
+    Object.keys(panels).forEach(function (k) {
+      var p = panels[k];
+      if (k === id) { p.hidden = false; p.classList.remove('ro-in'); void p.offsetWidth; p.classList.add('ro-in'); }
+      else p.hidden = true;
+    });
+    try { var u = new URL(location.href); u.searchParams.set('role', id); history.replaceState(null, '', u); } catch (e) {}
+    // only move the page when the new role would otherwise start out of sight
+    var top = panels[id].getBoundingClientRect().top;
+    if (fromEvent || top < 0) panels[id].scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { select(t.dataset.role); });
+    t.addEventListener('keydown', function (e) {
+      var k = e.key, n = null;
+      if (k === 'ArrowDown' || k === 'ArrowRight') n = (i + 1) % tabs.length;
+      else if (k === 'ArrowUp' || k === 'ArrowLeft') n = (i - 1 + tabs.length) % tabs.length;
+      else if (k === 'Home') n = 0; else if (k === 'End') n = tabs.length - 1;
+      if (n !== null) { e.preventDefault(); select(tabs[n].dataset.role, true); }
+    });
+  });
+  [].slice.call(document.querySelectorAll('[data-pick]')).forEach(function (b) {
+    b.addEventListener('click', function () { select(b.dataset.pick, false, true); });
+  });
+  var want = null; try { want = new URLSearchParams(location.search).get('role'); } catch (e) {}
+  if (want && panels[want] && want !== root.dataset.default) select(want);
+})();
+</script>
+{% endblock %}

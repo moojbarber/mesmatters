@@ -485,6 +485,7 @@ def write_llms(posts, paths, glossary, tools=(), audiences=()):
            *[f"- [{g['title']}]({g['canonical']}): {g['summary'] or g['description']}" for g in posts if g.get("guide")],
            f"- [Learning paths]({SITE}/paths/): guided routes through the articles, in order",
            f"- [FAQ]({SITE}/faq/): short answers to common questions, each linked to the full article",
+           f"- [Role explorer]({SITE}/roles/): what MES/MOM means for each role, from CEO to operator: KPIs, challenges and the applications that matter most",
            f"- [MES compared]({SITE}/compare/): straight answers to MES vs ERP, MOM, MRP, SCADA, historian, IIoT, UNS, low-code and other comparisons",
            f"- [Glossary]({SITE}/glossary/): definitions of MES, MOM, OEE, ISA-95, UNS and other shopfloor terms",
            f"- [Tools]({SITE}/tools/): free, vendor-neutral tools and templates",
@@ -859,13 +860,59 @@ def build(base, relative=False, include_scheduled=False):
                   "answer": first_sentence(by_slug[s]["summary"]) or by_slug[s]["description"]} for s in g["slugs"] if s in by_slug]
         compare["groups"].append({"name": g["name"], "posts": items})
     cmp_items = [x for g in compare["groups"] for x in g["posts"]]
-    write("compare/index.html", "compare.html", active="compare", seo_title="MES compared: MES vs ERP, MOM, SCADA, UNS and more | Shopfloor Matters",
-          description="Straight answers to the most common MES comparisons: MES vs ERP, MOM, MRP, SCADA, historian, IIoT, UNS, low-code and more, each linked to the full article.",
+    write("compare/index.html", "compare.html", active="compare", seo_title="MES compared: MES vs ERP, MOM, SCADA and more | Shopfloor Matters",
+          description="Straight answers to the most common MES comparisons: MES vs ERP, MOM, MRP, SCADA, historian, IIoT, QMS and more, each linked to the full article.",
           canonical=f"{SITE}/compare/", og_image=f"{SITE}/images/og/page-education.png", compare=compare,
           jsonld=[jsonld({"@context": "https://schema.org", "@type": "CollectionPage", "name": "MES compared", "url": f"{SITE}/compare/",
                           "author": person, "inLanguage": "en-GB",
                           "mainEntity": {"@type": "ItemList", "itemListElement": [
                               {"@type": "ListItem", "position": i + 1, "url": x["canonical"], "name": x["title"]} for i, x in enumerate(cmp_items)]}})])
+
+    # role explorer
+    ro = yaml.safe_load((ROOT / "content" / "roles.yaml").read_text(encoding="utf-8"))
+    import math
+    keys = list(ro["apps"].keys())
+    n = len(keys)
+    def pt(i, frac, rad=110):
+        a = -math.pi / 2 + 2 * math.pi * i / n
+        return 150 + rad * frac * math.cos(a), 150 + rad * frac * math.sin(a)
+    axes = []
+    for i, k in enumerate(keys):
+        x, y = pt(i, 1)
+        lx, ly = pt(i, 1, 138)
+        anchor = "middle" if abs(lx - 150) < 12 else ("start" if lx > 150 else "end")
+        axes.append({"key": k, "label": ro["apps"][k]["short"], "x": f"{x:.1f}", "y": f"{y:.1f}", "lx": f"{lx:.1f}", "ly": f"{ly + 4:.1f}", "anchor": anchor})
+    rings = [" ".join("%.1f,%.1f" % pt(i, f) for i in range(n)) for f in (0.2, 0.4, 0.6, 0.8, 1.0)]
+    gl_slugs = {g["slug"] for g in glossary}
+    tools_by = {x["id"]: x for x in tools}
+    paths_by = {x["id"]: x for x in paths}
+    aud_by = {a["id"]: a for a in audiences}
+    groups = {g["id"]: dict(g, roles=[]) for g in ro["groups"]}
+    hz = ["Years", "Quarters", "Weeks", "Shifts", "Minutes"]
+    roles_by = {}
+    for r in ro["roles"]:
+        g = groups[r["group"]]
+        r["color"], r["group_name"] = g["color"], g["name"]
+        sc = r["scores"]
+        pts = [pt(i, sc[k] / 5) for i, k in enumerate(keys)]
+        r["radar_points"] = " ".join("%.1f,%.1f" % p for p in pts)
+        r["radar_dots"] = [{"x": f"{x:.1f}", "y": f"{y:.1f}"} for x, y in pts]
+        r["cares"] = [{"label": c[0], "slug": c[1] if c[1] in gl_slugs else None} for c in r["cares"]]
+        r["top_apps"] = [dict(ro["apps"][k], key=k, score=sc[k], why=w, post=by_slug.get(ro["apps"][k]["read"])) for k, w in r["why"].items()]
+        r["read_posts"] = [by_slug[s] for s in r["reads"] if s in by_slug]
+        r["tool_obj"], r["path_obj"], r["for_obj"] = tools_by.get(r.get("tool")), paths_by.get(r.get("path")), aud_by.get(r.get("for"))
+        r["horizon_text"] = hz[r["horizon"][0]].lower() + ("" if r["horizon"][0] == r["horizon"][1] else " to " + hz[r["horizon"][1]].lower())
+        g["roles"].append(r)
+        roles_by[r["id"]] = r
+    ev = ro["one_event"]
+    ev["views"] = [{"id": v[0], "name": roles_by[v[0]]["name"], "color": roles_by[v[0]]["color"], "text": v[1]} for v in ev["views"]]
+    ro.update(groups=list(groups.values()), horizons=hz, radar={"axes": axes, "rings": rings}, default="plant-manager")
+    write("roles/index.html", "roles.html", active="roles", seo_title="What MES/MOM means for your role: CEO to operator | Shopfloor Matters",
+          description="Pick your role, from CEO and CFO to plant manager, quality manager and operator, to see what you're measured on, what gets in the way, and which shopfloor applications matter most to you.",
+          canonical=f"{SITE}/roles/", og_image=f"{SITE}/images/og/page-education.png", ro=ro,
+          jsonld=[jsonld({"@context": "https://schema.org", "@type": "WebPage", "name": "Role explorer: what MES/MOM means for your role", "url": f"{SITE}/roles/",
+                          "author": person, "inLanguage": "en-GB",
+                          "about": [{"@type": "Occupation", "name": r["title"]} for r in ro["roles"]]})])
 
     # industries and roles
     write("for/index.html", "audiences.html", active="for", seo_title="MES and the smart factory by industry and role | Shopfloor Matters",
@@ -905,7 +952,7 @@ def build(base, relative=False, include_scheduled=False):
     urls += [(f"{SITE}/faq/", None), (f"{SITE}/glossary/", None)] + [(f"{SITE}/glossary/{g['slug']}", None) for g in glossary]
     urls += [(f"{SITE}/tools/", None)] + [(f"{SITE}/tools/{x['id']}", None) for x in tools]
     urls += [(f"{SITE}/for/", None)] + [(f"{SITE}/for/{a['id']}", None) for a in audiences]
-    urls += [(f"{SITE}/speaking", None), (f"{SITE}/ask", None), (f"{SITE}/compare/", None)]
+    urls += [(f"{SITE}/speaking", None), (f"{SITE}/ask", None), (f"{SITE}/compare/", None), (f"{SITE}/roles/", None)]
     urls += [(p["canonical"], p["updated"]) for p in posts]
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u, d in urls:

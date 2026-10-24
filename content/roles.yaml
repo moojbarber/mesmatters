@@ -1,0 +1,620 @@
+# Role explorer (/roles/). One entry per role.
+# scores: how much each application area matters to the role, 1 (little) to 5 (central).
+# why: the role-specific reason for its most relevant areas. reads: article slugs.
+# horizon: [from, to] on the scale years(0) quarters(1) weeks(2) shifts(3) minutes(4).
+
+intro: "Everyone in a factory touches the same orders and machines. They just ask very different questions of them. Pick a role to see what that person is measured on, and which shopfloor applications make the biggest difference to their day."
+
+apps:
+  prod:   {name: "Production execution and OEE", short: "Production", read: what-is-mes-and-why-is-it-important-in-manufacturing, blurb: "Orders dispatched to the line and output recorded as it happens, with OEE calculated the same way everywhere."}
+  qual:   {name: "Quality and SPC", short: "Quality", read: qms-and-mes-quality, blurb: "In-process checks triggered by what's running, SPC at the point of work, and holds that actually stop material moving."}
+  trace:  {name: "Traceability and genealogy", short: "Traceability", read: manufacturing-traceability, blurb: "Which materials and machines went into every lot or serial number, recorded as it happens."}
+  inv:    {name: "Inventory and logistics", short: "Inventory", read: wms-vs-mes-inventory, blurb: "Line-side stock and work in progress, with quality status that travels with the material."}
+  maint:  {name: "Maintenance", short: "Maintenance", read: mes-functionality-maintenance, blurb: "Downtime and usage from the equipment feeding maintenance, with operators raising faults from the screen they already use."}
+  cw:     {name: "Connected worker", short: "Connected worker", read: connected-worker-one-app-not-five, blurb: "Digital work instructions, checklists, skills and shift handover, built around the work rather than the paperwork."}
+  sched:  {name: "Scheduling and dispatch", short: "Scheduling", read: aps-vs-mes-scheduling, blurb: "The right job on the right line at the right time, and real cycle times flowing back to keep the plan honest."}
+  ai:     {name: "Data and AI", short: "Data and AI", read: contextualised-manufacturing-data, blurb: "Contextualised operational data that analytics and AI can actually learn from, rather than raw tags."}
+  energy: {name: "Energy and ESG", short: "Energy", read: esg-needs-shopfloor-data, blurb: "Energy and scrap measured by machine and product, instead of estimated once a year."}
+
+groups:
+  - id: board
+    name: Boardroom
+    note: "Years and quarters. Strategy and capital."
+    color: "#ff6fd8"
+  - id: ops
+    name: Operations leadership
+    note: "Quarters and weeks. Running the network and the plant."
+    color: "#8b6cff"
+  - id: func
+    name: Functional leads
+    note: "Weeks and shifts. Owning a discipline across the plant."
+    color: "#5aa8ff"
+  - id: floor
+    name: Shopfloor
+    note: "Shifts and minutes. Doing the work, right first time."
+    color: "#33d4e0"
+
+roles:
+  - id: ceo
+    group: board
+    name: CEO
+    title: Chief executive
+    horizon: [0, 1]
+    question: "Can we grow and protect our margins, without building another factory?"
+    summary: "The CEO rarely sees the shopfloor directly, but almost every promise the business makes depends on it. Capacity, margin, customer service and reputation are all decided where the product is made."
+    cares: [["Revenue growth", null], ["Operating margin", null], ["On-time in-full", otif], ["Customer complaints and recalls", recall]]
+    challenges:
+      - ["Growth without capex", "Hidden capacity in existing plants is usually far cheaper than a new building, but nobody can say exactly how much there is."]
+      - ["Reputation risk", "One quality escape or slow recall can undo years of brand building."]
+      - ["Different numbers from every site", "Each plant measures performance its own way, so comparisons start arguments rather than decisions."]
+      - ["AI expectations", "The board wants an AI story, and most operational data isn't ready to support one."]
+    scores: {prod: 4, qual: 4, trace: 4, inv: 2, maint: 2, cw: 2, sched: 3, ai: 5, energy: 4}
+    why:
+      ai: "AI only pays back on accurate, contextualised operational data. That foundation decides whether the AI strategy delivers or stalls in pilots."
+      prod: "Standard OEE across sites shows where hidden capacity sits, which is usually the cheapest growth available."
+      trace: "Fast, precise traceability turns a potential company-wide recall into a contained, documented event."
+      energy: "Investors and customers increasingly ask for product-level carbon and energy data, which only the shopfloor can provide."
+    shift:
+      - ["Capacity questions answered with estimates and a capex request", "A clear view of hidden capacity across the network, site by site"]
+      - ["A recall scoped broadly, just to be safe", "A recall scoped to the exact lots and customers affected"]
+    pitch: "Talk about growth and risk, not software. Show what hidden capacity is worth in revenue, and what a contained recall saves compared with a broad one. Keep it to one page."
+    reads: [can-mes-improve-your-bottom-line, smart-factory-roi-research, time-to-truth, what-is-a-smart-factory]
+    tool: oee-one-percent
+    path: business-case
+
+  - id: cfo
+    group: board
+    name: CFO
+    title: Chief financial officer
+    horizon: [0, 2]
+    question: "What does a unit really cost to make, and what will we get back for the money we invest?"
+    summary: "The CFO cares about cost and confidence in the numbers. Much of manufacturing cost is decided on the shopfloor, but the finance team usually only sees it after the month closes."
+    cares: [["Cost of goods sold", null], ["Working capital and inventory", inventory-turns], ["Return on investment", null], ["Cost of poor quality", scrap-rate]]
+    challenges:
+      - ["Standard costs that drift", "Costing uses standard times and yields that no longer match what the line actually does."]
+      - ["Inventory nobody can see", "Work in progress and line-side stock sit outside the books until the next count."]
+      - ["Proving the return", "Digital projects promise a lot, and the benefits are hard to attribute afterwards."]
+      - ["Scrap and rework written off", "The true cost of poor quality is spread across many budgets, so it rarely gets attention."]
+    scores: {prod: 4, qual: 3, trace: 2, inv: 5, maint: 2, cw: 1, sched: 3, ai: 3, energy: 3}
+    why:
+      inv: "Accurate, real-time inventory and WIP free up working capital and remove surprises at the stock count."
+      prod: "Actual material and labour consumption per order replaces standards, so product costs reflect reality."
+      sched: "Real cycle times feeding the plan mean fewer expediting costs and less overtime."
+      ai: "A clean operational data foundation lets finance model the impact of changes before committing the money."
+    shift:
+      - ["Variances explained at month end, if at all", "Cost variances visible by order as production happens"]
+      - ["Business cases built on vendor promises", "Business cases built on measured losses from your own lines"]
+    pitch: "Bring numbers you can defend. Measure the losses first, put a value on one point of OEE, include your own people's time in the costs, and phase the investment so each stage can fund the next."
+    reads: [mes-business-case, can-mes-improve-your-bottom-line, implementing-mes-can-simplify-your-erp, smart-factory-roi-research]
+    tool: business-case-template
+    path: business-case
+
+  - id: coo
+    group: board
+    name: COO
+    title: Chief operating officer
+    horizon: [1, 2]
+    question: "Are all our plants performing to their potential, and can we run them the same way?"
+    summary: "The COO runs the operating network. Their job is consistency at scale: the same standards and measures everywhere, with best practice from one site spreading to the rest."
+    cares: [["Network OEE", oee], ["On-time in-full", otif], ["Cost per unit", null], ["Safety", null]]
+    challenges:
+      - ["Every site is different", "Plants run different systems and processes, so best practice doesn't travel."]
+      - ["Late, inconsistent reporting", "Performance arrives weeks later, calculated differently at each site."]
+      - ["Losing experienced people", "Knowledge leaves with retirements, and new starters take too long to become productive."]
+      - ["Supply disruption", "Plans change faster than the operation can react."]
+    scores: {prod: 5, qual: 4, trace: 3, inv: 3, maint: 3, cw: 4, sched: 4, ai: 4, energy: 3}
+    why:
+      prod: "One definition of OEE and downtime across every plant turns site comparisons into a source of improvement rather than argument."
+      cw: "Digital instructions and skills management let new starters perform like experienced ones much sooner."
+      sched: "Faster, data-driven rescheduling helps the network absorb disruption."
+      ai: "Comparable data across sites is what makes network-level analytics and AI possible."
+    shift:
+      - ["Best practice stuck in the best plant", "A standard template rolled out across sites"]
+      - ["Monthly performance packs, rebuilt by hand", "Live, comparable performance for every plant"]
+    pitch: "Frame it as a standard way of operating, not a set of site projects. Show the gap between the best and worst plants on the same measure, and what closing half of it would be worth."
+    reads: [mes-multi-site-rollout, time-to-truth, manufacturing-kpis-beyond-oee, how-to-modernise-a-factory]
+    tool: readiness-check
+    path: implementation
+
+  - id: cio
+    group: board
+    name: CIO
+    title: Chief information officer
+    horizon: [0, 1]
+    question: "How do we connect the shopfloor to the business securely, without creating a tangle of systems we can't support?"
+    summary: "The CIO owns the architecture and the risk. The shopfloor is where IT meets OT, and where integration and security decisions have the longest consequences."
+    cares: [["Architecture simplicity", null], ["Cybersecurity", iec-62443], ["Total cost of ownership", null], ["Data quality", master-data]]
+    challenges:
+      - ["Point-to-point spaghetti", "Every new application adds interfaces that need maintaining at every upgrade."]
+      - ["OT security", "Shopfloor equipment can't be patched or scanned like office IT."]
+      - ["Shadow IT on the shopfloor", "Spreadsheets and local apps grow up where central systems don't reach."]
+      - ["Data that isn't fit for AI", "Raw machine data arrives with no context of the order or the operator."]
+    scores: {prod: 3, qual: 2, trace: 3, inv: 3, maint: 2, cw: 2, sched: 2, ai: 5, energy: 2}
+    why:
+      ai: "Contextualised data captured at the point of work is the foundation for every analytics and AI ambition the business has."
+      prod: "A shopfloor platform at ISA-95 level 3 gives a clean boundary between ERP and the equipment."
+      trace: "Genealogy is a data model problem as much as a process one, and it needs designing once, properly."
+      inv: "Clear ownership of stock across systems stops two of them arguing about the same bins."
+    shift:
+      - ["ERP wired to PLCs through custom code", "A layered architecture with a clear role for each system"]
+      - ["Every site with its own integrations", "A standard integration pattern reused at every site"]
+    pitch: "Talk architecture and cost of ownership. Show where each capability will live, how integrations follow a standard, and how OT security is designed in from the start."
+    reads: [isa95-integration-patterns, it-vs-ot, ot-cybersecurity-for-mes, cloud-vs-on-premises-mes]
+    tool: which-systems
+    path: systems-landscape
+    for: it-leaders
+
+  - id: cdo
+    group: board
+    name: Chief digital officer
+    title: Chief digital or transformation officer
+    horizon: [0, 2]
+    question: "How do we move from pilots to value at scale, and show it?"
+    summary: "Digital and transformation leaders are judged on outcomes, not technology. Their biggest risk is pilot purgatory: promising projects that never scale beyond one line."
+    cares: [["Value delivered", null], ["Adoption", change-management], ["Speed to scale", null], ["Digital maturity", digital-transformation]]
+    challenges:
+      - ["Pilot purgatory", "Proofs of concept succeed, then stall when it's time to scale."]
+      - ["Adoption on the floor", "Tools that operators don't trust or use deliver nothing."]
+      - ["Too many point solutions", "Each department buys its own tool, and the data never joins up."]
+      - ["Proving AI value", "AI demos impress, but production results depend on the data underneath."]
+    scores: {prod: 4, qual: 3, trace: 3, inv: 3, maint: 3, cw: 4, sched: 3, ai: 5, energy: 3}
+    why:
+      ai: "Scaling AI depends on a consistent operational data foundation, not on a better model."
+      cw: "Frontline tools are where adoption is won or lost, and where trust in digital starts."
+      prod: "Production execution is usually the backbone that other use cases build on."
+      qual: "Quality use cases often show measurable value quickly, which helps fund the next phase."
+    shift:
+      - ["A portfolio of disconnected pilots", "A platform that each new use case builds on"]
+      - ["Value claimed in slides", "Value measured on the line, before and after"]
+    pitch: "Show a roadmap from first line to network, with measures agreed up front. Emphasise the platform decision, because it decides how cheaply each next use case can scale."
+    reads: [time-to-truth, build-vs-buy-mes, practical-genai-for-the-shopfloor, smart-factory-technology-mistakes]
+    tool: readiness-check
+    path: shopfloor-ai
+
+  - id: vp-ops
+    group: ops
+    name: VP operations
+    title: VP or director of operations
+    horizon: [1, 2]
+    question: "Which plant needs my attention this week, and why?"
+    summary: "Operations leaders sit between the board's targets and the plants' reality. They need comparable facts quickly, so they can focus support where it makes the biggest difference."
+    cares: [["OEE by site", oee], ["On-time in-full", otif], ["Cost per unit", null], ["Quality escapes", non-conformance]]
+    challenges:
+      - ["Comparing apples with pears", "Plants measure downtime and OEE differently, so league tables mislead."]
+      - ["Firefighting from a distance", "Problems reach head office days after they've hit the customer."]
+      - ["Capital allocation", "Deciding which plant gets investment without reliable data on where losses sit."]
+      - ["Spreading what works", "Good ideas at one site rarely make it to the others."]
+    scores: {prod: 5, qual: 4, trace: 3, inv: 3, maint: 3, cw: 3, sched: 4, ai: 4, energy: 3}
+    why:
+      prod: "Consistent OEE and loss data across sites shows exactly where to focus support and capital."
+      qual: "Network-wide visibility of quality issues stops one site's problem becoming every site's problem."
+      sched: "Live order status lets you rebalance work between plants when demand or supply shifts."
+      ai: "Comparable data makes it possible to spot patterns across the network rather than plant by plant."
+    shift:
+      - ["Weekly calls to find out what happened", "Exceptions flagged as they happen, with the context attached"]
+      - ["Investment decided on the loudest case", "Investment decided on measured losses"]
+    pitch: "Lead with the network view: the gap between sites on the same measure, and what a standard template would cost compared with every plant solving the same problem alone."
+    reads: [mes-multi-site-rollout, manufacturing-kpis-beyond-oee, oee-vs-teep, how-to-choose-an-mes]
+    tool: oee-one-percent
+    path: implementation
+    for: plant-managers
+
+  - id: plant-manager
+    group: ops
+    name: Plant manager
+    title: Plant or site manager
+    horizon: [1, 3]
+    question: "Are we going to hit the plan this week, and if not, what's stopping us?"
+    summary: "The plant manager owns the numbers and the people. They need one version of the truth for the morning meeting, and the confidence that the plant runs the same way when they're not on the floor."
+    cares: [["OEE", oee], ["Schedule adherence", null], ["Scrap and rework", scrap-rate], ["Safety and absence", null]]
+    challenges:
+      - ["Arguments about whose numbers are right", "Production and maintenance bring different figures to the same meeting."]
+      - ["Knowledge walking out of the door", "Experienced people retire, and their know-how goes with them."]
+      - ["Audits and complaints", "Pulling together evidence takes days of searching through paper."]
+      - ["Getting projects funded", "The plant knows where it hurts, but turning that into an approved business case is hard."]
+    scores: {prod: 5, qual: 4, trace: 4, inv: 4, maint: 4, cw: 4, sched: 4, ai: 3, energy: 3}
+    why:
+      prod: "Real-time output and downtime, with reasons, means the morning meeting starts from facts rather than debate."
+      cw: "Digital instructions and skills enforcement make the plant less dependent on a few experienced people."
+      trace: "Complaints and audits answered in minutes, not days."
+      maint: "Production and maintenance working from the same downtime data ends the blame game."
+    shift:
+      - ["The morning meeting starts with an argument about the numbers", "The morning meeting starts with yesterday's top losses, agreed"]
+      - ["A complaint takes three days to trace", "A complaint traced before the customer call ends"]
+    pitch: "Start with one line and one painful problem. Put a value on it, and let that line's results fund the next."
+    reads: [smart-factory-where-to-start, mes-business-case, manufacturing-change-management, mes-go-live]
+    tool: readiness-check
+    path: foundations
+    for: plant-managers
+
+  - id: opex
+    group: ops
+    name: Operational excellence lead
+    title: Continuous improvement or lean lead
+    horizon: [2, 3]
+    question: "Where are our biggest losses, and did the last improvement actually stick?"
+    summary: "CI and lean leaders live on data about losses. Too often they spend more time collecting and cleaning that data than acting on it."
+    cares: [["OEE losses", oee], ["First pass yield", fpy], ["Changeover time", changeover], ["Cycle time", cycle-time]]
+    challenges:
+      - ["Data collection by clipboard", "Studies rely on manual observation, which is slow and only captures a snapshot."]
+      - ["Improvements that fade", "Gains made in a kaizen event drift back within months."]
+      - ["Micro-stops nobody sees", "Short stops are rarely recorded, but they add up to a large loss."]
+      - ["Standard work on paper", "Standards exist, but nobody can tell whether they're followed."]
+    scores: {prod: 5, qual: 4, trace: 2, inv: 2, maint: 3, cw: 4, sched: 3, ai: 4, energy: 3}
+    why:
+      prod: "Automatic loss capture, including micro-stops, gives a continuous loss tree instead of a one-off study."
+      cw: "Digital standard work makes the standard easy to follow and easy to check."
+      qual: "First pass yield by step shows where hidden rework sits."
+      ai: "Pattern finding across shifts and products points improvement teams at the right problems."
+    shift:
+      - ["Two weeks of manual study before every project", "Loss data ready for every improvement project"]
+      - ["Gains that drift back after the kaizen event", "Gains sustained, with the data to prove it"]
+    pitch: "Show how much CI time goes on collecting data, and how many improvements fade. Automated loss capture frees the team to improve rather than measure."
+    reads: [manufacturing-kpis-beyond-oee, first-pass-yield-vs-rolled-throughput-yield, takt-time-vs-cycle-time-vs-lead-time, manufacturing-process-mapping]
+    tool: oee-one-percent
+    path: foundations
+
+  - id: production-manager
+    group: ops
+    name: Production manager
+    title: Production or manufacturing manager
+    horizon: [2, 4]
+    question: "Which lines are behind right now, and what do I need to do about it?"
+    summary: "Production managers run the shifts that make the plan real. They balance people and machines hour by hour, and need to know about problems while there's still time to fix them."
+    cares: [["Output against plan", null], ["OEE by line", oee], ["Labour efficiency", labour-tracking], ["Changeovers", changeover]]
+    challenges:
+      - ["Finding out too late", "Problems surface at the end of the shift, when it's too late to recover."]
+      - ["Staffing the lines", "Matching qualified people to lines every shift, with absence and turnover."]
+      - ["Materials not where they should be", "Lines stop waiting for components that the system says are available."]
+      - ["Handover gaps", "Each shift starts by working out what the last one left behind."]
+    scores: {prod: 5, qual: 3, trace: 3, inv: 4, maint: 3, cw: 4, sched: 5, ai: 3, energy: 2}
+    why:
+      prod: "Live line status and downtime reasons let you act within the shift, not the day after."
+      sched: "A dispatch list that reflects reality shows what to run next and why it changed."
+      cw: "Skills checks and digital handover keep every shift starting from the same picture."
+      inv: "Line-side material visibility stops lines waiting for parts the system thought were there."
+    shift:
+      - ["Walking the floor to find out what's happening", "Exceptions on screen, with reasons, as they happen"]
+      - ["Handover on a scrap of paper", "Handover built from what actually ran and stopped"]
+    pitch: "Focus on the shift: how much output is lost to problems found too late, and to waiting for materials or people. Show how live data turns those into decisions made in time."
+    reads: [digital-shift-handover, aps-vs-mes-scheduling, takt-time-vs-cycle-time-vs-lead-time, skills-enforcement-shopfloor]
+    tool: first-line-scorecard
+    path: connected-worker
+
+  - id: quality-manager
+    group: func
+    name: Quality manager
+    title: Quality manager or head of quality
+    horizon: [2, 3]
+    question: "Are we making it right every time, and can we prove it?"
+    summary: "Quality leaders protect the customer and the licence to operate. They need problems caught on the line, and evidence ready for any auditor at any time."
+    cares: [["First pass yield", fpy], ["Cost of poor quality", scrap-rate], ["Customer complaints", null], ["CAPA closure", capa]]
+    challenges:
+      - ["Quality found at the end", "Defects are found in final inspection, after value has been added."]
+      - ["Paper records and audits", "Evidence is scattered across paper and spreadsheets, so audits take days to prepare."]
+      - ["Holds that don't hold", "Suspect material keeps moving because the hold lives in a different system."]
+      - ["Slow root cause", "Investigations need data from several systems, so they take weeks."]
+    scores: {prod: 3, qual: 5, trace: 5, inv: 3, maint: 2, cw: 4, sched: 2, ai: 4, energy: 1}
+    why:
+      qual: "Checks triggered by what's actually running, with SPC at the line, catch drift before it becomes scrap."
+      trace: "Complete genealogy turns recalls and complaints into precise, documented answers."
+      cw: "Digital instructions and sign-offs build the quality record as the work is done."
+      ai: "Contextualised data makes root cause analysis faster, because the process conditions are already linked to the result."
+    shift:
+      - ["Defects found at final inspection", "Drift caught at the point of work"]
+      - ["Days preparing for an audit", "Audit evidence available on demand"]
+    pitch: "Lead with the cost of poor quality and the time spent on audits and investigations. Show how quality built into the process reduces both."
+    reads: [qms-and-mes-quality, spc-on-the-shopfloor, qms-vs-lims-vs-mes, mes-in-regulated-industries]
+    tool: readiness-check
+    path: beyond-erp
+    for: quality-managers
+
+  - id: maintenance-manager
+    group: func
+    name: Maintenance manager
+    title: Maintenance or reliability manager
+    horizon: [2, 3]
+    question: "Which assets are going to let us down next, and are we spending maintenance effort in the right place?"
+    summary: "Maintenance leaders are judged on availability and cost. They need accurate data about how equipment is really running, not end-of-shift guesses."
+    cares: [["MTBF", mtbf], ["MTTR", mttr], ["Availability", availability], ["Planned vs reactive work", preventive-maintenance]]
+    challenges:
+      - ["Downtime data nobody trusts", "Stops are recorded from memory, and short stops are missed."]
+      - ["Reactive firefighting", "Too much time goes on breakdowns, leaving little for planned work."]
+      - ["Calendar-based PM", "Assets are serviced by date rather than by actual usage or condition."]
+      - ["Blame between departments", "Production and maintenance argue about the cause of every stop."]
+    scores: {prod: 3, qual: 2, trace: 2, inv: 3, maint: 5, cw: 3, sched: 3, ai: 4, energy: 3}
+    why:
+      maint: "Stops captured from the equipment, with reasons, give reliable MTBF and MTTR and a fair split of the causes."
+      ai: "Condition data combined with downtime history is the starting point for predictive maintenance."
+      sched: "Maintenance windows planned around the production schedule, rather than fighting it."
+      cw: "Operators raising faults from their own screen, and carrying out autonomous maintenance, catch problems early."
+    shift:
+      - ["MTBF calculated from paper logs", "MTBF calculated from every recorded stop"]
+      - ["PM by the calendar", "PM triggered by actual run hours and cycles"]
+    pitch: "Show the gap between recorded and actual downtime, and the share of reactive work. Usage-based maintenance and shared downtime data are quick, low-risk wins."
+    reads: [mtbf-vs-mttr-vs-mttf, preventive-vs-predictive-maintenance, cmms-vs-eam-vs-mes, predictive-maintenance-data]
+    tool: oee-one-percent
+    path: beyond-erp
+
+  - id: planner
+    group: func
+    name: Planner and scheduler
+    title: Supply chain and planning
+    horizon: [2, 3]
+    question: "Can we deliver what the customer wants on time, with the capacity we actually have?"
+    summary: "Planners turn demand into a schedule the factory can follow. Their plans are only as good as the data about real capacity and what actually happened yesterday."
+    cares: [["Schedule adherence", null], ["On-time in-full", otif], ["Inventory levels", inventory-turns], ["Lead time", lead-time]]
+    challenges:
+      - ["Plans built on fiction", "Standard cycle times and setup times no longer match the line."]
+      - ["Late feedback", "Production is reported hours or days later, so the plan is always out of date."]
+      - ["Constant rescheduling", "Breakdowns and rush orders mean the schedule changes all day."]
+      - ["Supervisors running their own plan", "When the schedule isn't trusted, the line runs from a whiteboard."]
+    scores: {prod: 4, qual: 2, trace: 2, inv: 5, maint: 3, cw: 1, sched: 5, ai: 4, energy: 2}
+    why:
+      sched: "Real cycle times and setup times feeding back make every new plan more realistic."
+      inv: "Accurate stock and WIP, updated as material is consumed, mean the plan starts from reality."
+      prod: "Live order progress shows early when a job will finish late."
+      ai: "Patterns in actual performance help forecast capacity and lead times more accurately."
+    shift:
+      - ["Schedules rebuilt by hand after every disruption", "Disruption visible immediately, with the facts to reschedule"]
+      - ["Standard times that are years old", "Standards updated from what the line actually does"]
+    pitch: "Show how far planned times are from actuals, and how often the schedule is overridden. Better feedback is often worth more than a more sophisticated scheduler."
+    reads: [aps-vs-mes-scheduling, erp-vs-mrp-vs-mes, takt-time-vs-cycle-time-vs-lead-time, erp-master-data-for-mes]
+    tool: which-systems
+    path: beyond-erp
+
+  - id: logistics-manager
+    group: func
+    name: Logistics manager
+    title: Warehouse and logistics manager
+    horizon: [2, 4]
+    question: "Is the right material at the right line, at the right time, without piles of stock everywhere?"
+    summary: "Logistics and warehouse leaders keep material flowing. The handover between the warehouse and the line is where stock disappears and lines stop."
+    cares: [["Line stoppages for material", null], ["Inventory accuracy", inventory-turns], ["Picking accuracy", picking], ["FIFO and shelf life", fifo]]
+    challenges:
+      - ["Line-side stock as a black hole", "Material leaves the warehouse and vanishes until the next count."]
+      - ["Replenishment by shouting", "Lines call for material when they run out, rather than before."]
+      - ["Quality status that doesn't travel", "Held material gets picked because the hold isn't visible in the warehouse."]
+      - ["Backflushing errors", "Stock is deducted at standard quantities, so the system and the shelf disagree."]
+    scores: {prod: 3, qual: 3, trace: 4, inv: 5, maint: 1, cw: 3, sched: 4, ai: 2, energy: 1}
+    why:
+      inv: "Material tracked to the line, with consumption recorded as it happens, keeps the system and the shelf in step."
+      sched: "Replenishment triggered by the actual production schedule stops lines waiting."
+      trace: "Lot tracking from receipt to finished goods makes FIFO and shelf life enforceable."
+      qual: "Quality holds visible at every point where material can be moved or consumed."
+    shift:
+      - ["Lines stopping for material that's somewhere in the building", "Material called to the line before it's needed"]
+      - ["Stock counts that never match", "Inventory accurate enough to trust without counting"]
+    pitch: "Count the line stoppages caused by missing material, and the stock adjustments at every count. Show how tracking material to the line fixes both."
+    reads: [wms-vs-mes-inventory, lot-vs-serial-traceability, manufacturing-traceability, erp-master-data-for-mes]
+    tool: which-systems
+    path: beyond-erp
+
+  - id: engineer
+    group: func
+    name: Process engineer
+    title: Manufacturing or process engineer
+    horizon: [2, 4]
+    question: "Is the process running the way it was designed, and when it isn't, why not?"
+    summary: "Engineers design and improve the process. They need detailed data linked to products and recipes, and a quick way to get changes onto the shopfloor."
+    cares: [["Process capability", process-capability], ["Yield", yield], ["Cycle time", cycle-time], ["Engineering change speed", change-management]]
+    challenges:
+      - ["Data without context", "Historian trends show what a value did, but not which order or material was involved."]
+      - ["Slow engineering changes", "Getting a new revision onto every workstation takes too long and isn't always complete."]
+      - ["Recipes and parameters on paper", "Settings are entered manually, with room for error."]
+      - ["New product introductions", "Ramp-up takes longer than planned because problems are found late."]
+    scores: {prod: 4, qual: 5, trace: 4, inv: 2, maint: 3, cw: 4, sched: 2, ai: 5, energy: 3}
+    why:
+      ai: "Process data linked to the order and the outcome is what analytics and AI need to find root causes."
+      qual: "SPC and capability data from the line show where the process drifts."
+      cw: "Digital work instructions mean an engineering change reaches every workstation at once."
+      trace: "As-built records show exactly what went into each unit, for investigations and ramp-up."
+    shift:
+      - ["Correlating spreadsheets by timestamp", "Process data already linked to the order and the lot"]
+      - ["A revision change that takes days to reach the floor", "A revision live at every station as soon as it's released"]
+    pitch: "Show how long investigations and engineering changes take today. Linked data and digital instructions shorten both, which speeds up every new product introduction."
+    reads: [contextualised-manufacturing-data, ebom-mbom-as-built, spc-on-the-shopfloor, plm-erp-mes-digital-thread]
+    tool: swimlane-template
+    path: systems-landscape
+
+  - id: ehs
+    group: func
+    name: EHS and sustainability lead
+    title: Environment, health, safety and sustainability
+    horizon: [1, 3]
+    question: "Are our people safe, and can we prove our environmental performance with real data?"
+    summary: "EHS and sustainability leaders need procedures followed every time, and environmental data they can stand behind when customers and regulators ask."
+    cares: [["Incident rate", null], ["Energy per unit", null], ["Scrap and waste", scrap-rate], ["Compliance", null]]
+    challenges:
+      - ["Estimated sustainability data", "Energy and waste are reported as site totals, estimated once a year."]
+      - ["Safety procedures on paper", "Sign-offs and checks are hard to verify after the fact."]
+      - ["Untrained people on equipment", "Training records aren't checked at the point of work."]
+      - ["Customer carbon requests", "Customers ask for product-level footprints that nobody can calculate."]
+    scores: {prod: 3, qual: 2, trace: 3, inv: 2, maint: 3, cw: 5, sched: 1, ai: 3, energy: 5}
+    why:
+      energy: "Energy and waste measured by machine and product turn ESG reporting from estimates into facts."
+      cw: "Digital safety checks and skills enforcement make sure the right people follow the right procedure."
+      maint: "Well-maintained equipment is safer and uses less energy."
+      trace: "Product-level data makes it possible to answer customer carbon questions."
+    shift:
+      - ["Sustainability figures estimated once a year", "Energy and waste measured by product, every day"]
+      - ["Safety sign-offs on paper", "Digital sign-offs, checked before work starts"]
+    pitch: "Lead with customer and regulatory pressure for real data. Show how the same shopfloor data that drives efficiency also proves sustainability."
+    reads: [esg-needs-shopfloor-data, mes-functionality-energy, skills-enforcement-shopfloor, industry-4-0-vs-industry-5-0]
+    tool: readiness-check
+    path: connected-worker
+
+  - id: ot-architect
+    group: func
+    name: IT/OT architect
+    title: IT/OT architect or OT manager
+    horizon: [1, 3]
+    question: "How do we connect every machine and system reliably and securely, in a way we can support for ten years?"
+    summary: "Architects and OT managers make the connections work. They balance the shopfloor's need for availability with the business's need for data, and live with every integration decision for years."
+    cares: [["Uptime of shopfloor systems", null], ["Number of interfaces", point-to-point-integration], ["Security posture", iec-62443], ["Data latency", null]]
+    challenges:
+      - ["Legacy equipment", "Machines of every age, speaking different protocols."]
+      - ["Interfaces that break at upgrade", "Custom integrations need retesting every time either side changes."]
+      - ["Security without downtime", "Protecting OT without stopping production for patches."]
+      - ["Raw tags with no meaning", "Data from machines has no context, so every consumer has to work out what it means."]
+    scores: {prod: 3, qual: 2, trace: 3, inv: 2, maint: 3, cw: 2, sched: 2, ai: 5, energy: 3}
+    why:
+      ai: "Publishing contextualised data, rather than raw tags, makes every downstream consumer simpler."
+      prod: "A shopfloor platform at level 3 gives the control layer and ERP a single, well-defined partner."
+      maint: "Machine connectivity serves maintenance and production from the same connection."
+      trace: "Genealogy depends on reliable, time-synchronised data from the equipment."
+    shift:
+      - ["A custom interface for every pairing", "A standard connectivity layer, using OPC UA and MQTT"]
+      - ["Security reviewed at the end of the project", "Security designed into the architecture from the start"]
+    pitch: "Talk standards and supportability: OPC UA and MQTT, with clear ISA-95 layering and security zones. Show how many interfaces the design removes."
+    reads: [opc-ua-vs-mqtt, plc-vs-scada-vs-dcs-vs-mes, unified-namespace-uns, ot-cybersecurity-for-mes]
+    tool: which-systems
+    path: systems-landscape
+    for: it-leaders
+
+  - id: hr
+    group: func
+    name: HR and training lead
+    title: HR and training
+    horizon: [1, 3]
+    question: "How do we get new people productive quickly, and keep the experienced ones?"
+    summary: "HR and training leaders face a shrinking, more mobile workforce. The shopfloor tools people use every day shape how quickly they learn and whether they stay."
+    cares: [["Time to competence", null], ["Staff turnover", null], ["Training compliance", skills-matrix], ["Engagement", null]]
+    challenges:
+      - ["Retiring expertise", "Decades of knowledge leave with people who never wrote it down."]
+      - ["Long onboarding", "New starters shadow others for weeks before they can work alone."]
+      - ["Skills records out of date", "Training matrices live in spreadsheets that nobody checks at the point of work."]
+      - ["Frustrating tools", "Paper and clunky screens put younger workers off manufacturing."]
+    scores: {prod: 2, qual: 2, trace: 1, inv: 1, maint: 2, cw: 5, sched: 2, ai: 4, energy: 1}
+    why:
+      cw: "Digital work instructions and skills tracking capture expert knowledge and guide new starters step by step."
+      ai: "AI assistants can answer an operator's question from the SOPs at the moment they need it."
+      qual: "Guided work with built-in checks lets new people get it right first time."
+      prod: "Modern, intuitive shopfloor screens make the job easier to learn and more satisfying."
+    shift:
+      - ["Weeks of shadowing before working alone", "Guided from the first shift, with checks built in"]
+      - ["Training records in a spreadsheet", "Skills checked automatically before work starts"]
+    pitch: "Show the cost of turnover and slow onboarding. Connected worker tools turn tribal knowledge into instructions, and make the job more attractive to the people you're trying to hire."
+    reads: [connected-worker-one-app-not-five, skills-enforcement-shopfloor, ai-for-frontline-workers, digital-work-instructions]
+    tool: readiness-check
+    path: connected-worker
+
+  - id: supervisor
+    group: floor
+    name: Shift supervisor
+    title: Shift supervisor or team leader
+    horizon: [3, 4]
+    question: "What's going wrong on my shift right now, and who do I need?"
+    summary: "Supervisors and team leaders keep the shift running. They juggle people and problems in real time, and are often the ones filling in the paperwork at the end."
+    cares: [["Shift output", null], ["Downtime", downtime-reason-codes], ["Attendance and skills", skills-matrix], ["Safety", null]]
+    challenges:
+      - ["Paperwork at the end of the shift", "Time spent writing up the shift instead of running it."]
+      - ["Fixing problems you hear about late", "By the time an issue reaches you, the loss has already happened."]
+      - ["Covering absences", "Finding someone qualified to cover a line at short notice."]
+      - ["Inheriting the last shift's problems", "Handover misses the detail that matters."]
+    scores: {prod: 5, qual: 3, trace: 2, inv: 3, maint: 4, cw: 5, sched: 4, ai: 3, energy: 1}
+    why:
+      cw: "Digital handover and skills visibility mean you start the shift knowing what's waiting and who can do what."
+      prod: "Live line status with downtime reasons shows where to go first."
+      maint: "Faults raised from the line go straight to maintenance, with the context they need."
+      sched: "A clear dispatch list removes the guesswork about what to run next."
+    shift:
+      - ["An hour of paperwork after every shift", "The shift record built automatically as you go"]
+      - ["Finding out about a stopped line on a walk round", "Alerts as soon as a line stops, with the reason"]
+    pitch: "Talk about time and hassle: the hours spent on paperwork and chasing information. Show a supervisor what their shift looks like on one screen."
+    reads: [digital-shift-handover, skills-enforcement-shopfloor, paperless-manufacturing, connected-worker-one-app-not-five]
+    tool: first-line-scorecard
+    path: connected-worker
+
+  - id: operator
+    group: floor
+    name: Operator
+    title: Machine or line operator
+    horizon: [4, 4]
+    question: "What do I make next, and who helps me when something goes wrong?"
+    summary: "Operators do the work that everything else depends on. The best shopfloor systems make their job easier, not just better recorded."
+    cares: [["Making it right first time", fpy], ["A smooth shift", null], ["Getting help quickly", andon], ["Clear instructions", digital-work-instructions]]
+    challenges:
+      - ["Paper and double entry", "Writing the same numbers on paper and then into a screen."]
+      - ["Out-of-date instructions", "Not knowing whether the printed instruction is the latest version."]
+      - ["Waiting for help", "Calling for maintenance or quality and not knowing when they'll arrive."]
+      - ["Too many screens", "Different systems for production and quality."]
+    scores: {prod: 4, qual: 4, trace: 3, inv: 3, maint: 3, cw: 5, sched: 3, ai: 3, energy: 1}
+    why:
+      cw: "Clear, current instructions and simple checklists on one screen, in your language."
+      prod: "Counts and downtime captured from the machine, so you're not writing them down."
+      qual: "Checks prompted at the right moment, so nothing is missed and nothing is done twice."
+      maint: "Raising a fault in a couple of taps, and seeing when help is coming."
+    shift:
+      - ["Writing everything on paper, then typing it in again", "Data captured once, mostly from the machine"]
+      - ["Hunting for the right instruction", "The right instruction shown for the job you're running"]
+    pitch: "Involve operators early and ask what slows them down. If the system makes the job easier, adoption follows. If it only adds data entry, it won't stick."
+    reads: [digital-work-instructions, ai-for-frontline-workers, paperless-manufacturing, connected-worker-one-app-not-five]
+    tool: first-line-scorecard
+    path: connected-worker
+
+  - id: technician
+    group: floor
+    name: Maintenance technician
+    title: Maintenance or reliability technician
+    horizon: [3, 4]
+    question: "What's broken, what happened before it broke, and do we have the part?"
+    summary: "Technicians keep the equipment running. They need to know what happened before a failure and what was done last time, without searching through paper logs."
+    cares: [["Time to repair", mttr], ["Repeat failures", null], ["Spare parts availability", spare-parts], ["Safe working", null]]
+    challenges:
+      - ["Arriving without the history", "Turning up to a breakdown with no record of what happened before it."]
+      - ["Vague fault reports", "Calls that just say the machine has stopped."]
+      - ["Paper work orders", "Writing up jobs at the end of the shift, from memory."]
+      - ["Missing parts", "Finding out the spare isn't in stock after the machine is stripped down."]
+    scores: {prod: 3, qual: 2, trace: 2, inv: 3, maint: 5, cw: 4, sched: 2, ai: 4, energy: 1}
+    why:
+      maint: "Fault reports with the machine state and recent history attached shorten diagnosis."
+      cw: "Digital procedures and checklists on a tablet at the machine, with sign-off built in."
+      ai: "An assistant that can find what was done the last few times this fault happened."
+      inv: "Spare parts availability visible before the job starts."
+    shift:
+      - ["Arriving at a breakdown with no history", "The fault and the last repair on your screen"]
+      - ["Work orders written up from memory", "Work recorded as you go, at the machine"]
+    pitch: "Show how much repair time goes on diagnosis and finding parts. Better fault information is one of the fastest ways to cut MTTR."
+    reads: [mtbf-vs-mttr-vs-mttf, mes-functionality-maintenance, predictive-maintenance-data, practical-genai-for-the-shopfloor]
+    tool: first-line-scorecard
+    path: beyond-erp
+
+  - id: inspector
+    group: floor
+    name: Quality technician
+    title: Quality inspector or technician
+    horizon: [3, 4]
+    question: "Has this batch been checked properly, and is the evidence complete?"
+    summary: "Quality technicians carry out the checks that protect the customer. They need to know what to check and when, and to record results once."
+    cares: [["Checks completed on time", inspection-plan], ["Defects caught", defect], ["Record accuracy", null], ["Release speed", batch-release]]
+    challenges:
+      - ["Knowing when to check", "Inspections run to a clock rather than to what's happening on the line."]
+      - ["Transcribing results", "Measurements written down, then typed in later."]
+      - ["Chasing missing records", "Batches held because a signature or result is missing."]
+      - ["Holds that leak", "Suspect material moving before the result is in."]
+    scores: {prod: 2, qual: 5, trace: 4, inv: 3, maint: 1, cw: 4, sched: 1, ai: 3, energy: 1}
+    why:
+      qual: "Checks triggered by events such as a material or tool change, with results captured straight from the gauge."
+      trace: "Every result linked to the lot and the operator automatically."
+      cw: "Digital checklists and sign-offs complete the record as you go."
+      inv: "Holds that block material in every system, as soon as they're placed."
+    shift:
+      - ["Checks done by the clock, results typed in later", "Checks triggered by events, results captured at the gauge"]
+      - ["Batches waiting for missing paperwork", "Records complete at the end of the batch"]
+    pitch: "Show how much time goes on paperwork and chasing missing records. Event-driven checks and direct gauge capture improve both speed and accuracy."
+    reads: [spc-on-the-shopfloor, qms-and-mes-quality, lims-and-mes, lot-vs-serial-traceability]
+    tool: first-line-scorecard
+    path: beyond-erp
+
+one_event:
+  title: "One stoppage, seen by every role"
+  intro: "A filler stops for 14 minutes at 02:10. The same event looks very different depending on who's looking. With connected operations, they're all working from the same facts."
+  views:
+    - [operator, "Clears the jam, and selects the reason on the screen in two taps."]
+    - [supervisor, "Sees the line stop live, and checks whether the shift can still hit its target."]
+    - [technician, "Gets the fault with the alarm history attached, and sees it's the third this week."]
+    - [maintenance-manager, "Sees MTBF on the filler falling, and brings forward a planned repair."]
+    - [planner, "Sees the order will finish 20 minutes late, and adjusts the next job."]
+    - [plant-manager, "Sees the stop in the morning's top losses, already agreed by everyone."]
+    - [cfo, "Sees the cost of the lost output in the month's numbers, with no reconciliation."]
