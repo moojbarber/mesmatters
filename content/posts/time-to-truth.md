@@ -1,7 +1,7 @@
 ---
 title: "Time to truth: how long does your factory take to know what happened?"
 short: "Time to truth"
-description: "Follow one stoppage through a factory and you learn more than any maturity slide shows: how long until the truth reaches the right person, with the context to act? Seven stages, from paper and Excel to autonomous operations."
+description: "Follow one stoppage through a factory and ask: how long until the truth reaches the right person, with the context to act? Seven stages, from paper and Excel to autonomous operations."
 published: 2026-04-30
 category: thought-leadership
 art: ladder

@@ -20,7 +20,7 @@
       root.style.scrollBehavior = prev;
     }
     top();
-    addEventListener('load', top);
+    addEventListener('load', function () { top(); setTimeout(top, 60); setTimeout(top, 350); });
     addEventListener('pageshow', function (e) { if (!e.persisted) top(); });
   })();
 
