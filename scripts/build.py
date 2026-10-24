@@ -644,6 +644,21 @@ def build(base, relative=False, include_scheduled=False):
     tools = load_tools(posts)
     caps = next(t for t in tools if t["id"] == "which-systems")["data"]["capabilities"]
     audiences = load_audiences(posts, glossary, tools, caps, base)
+    # which roles each article and tool is recommended for (from the role explorer)
+    _ro = yaml.safe_load((ROOT / "content" / "roles.yaml").read_text(encoding="utf-8"))
+    _gc = {g["id"]: g["color"] for g in _ro["groups"]}
+    _pmap, _tmap = {}, {}
+    for r in _ro["roles"]:
+        ref = {"id": r["id"], "name": r["name"], "color": _gc[r["group"]]}
+        slugs = list(r["reads"]) + [_ro["apps"][k]["read"] for k in r["why"]]
+        for s in dict.fromkeys(slugs):
+            _pmap.setdefault(s, []).append(ref)
+        for tid in ([r["tool"]] if r.get("tool") else []) + r.get("also_tools", []):
+            _tmap.setdefault(tid, []).append(ref)
+    for p in posts:
+        p["for_roles"] = _pmap.get(p["slug"], [])
+    for x in tools:
+        x["for_roles"] = _tmap.get(x["id"], [])
     common["tools"] = tools
     common["ttt_block"] = Markup(blocks.get("time-to-truth", ""))
     common["audiences"] = audiences
@@ -902,6 +917,7 @@ def build(base, relative=False, include_scheduled=False):
         r["top_apps"] = [dict(ro["apps"][k], key=k, score=sc[k], why=w, post=by_slug.get(ro["apps"][k]["read"])) for k, w in r["why"].items()]
         r["read_posts"] = [by_slug[s] for s in r["reads"] if s in by_slug]
         r["tool_obj"], r["path_obj"], r["for_obj"] = tools_by.get(r.get("tool")), paths_by.get(r.get("path")), aud_by.get(r.get("for"))
+        r["also_tool_objs"] = [tools_by[x] for x in r.get("also_tools", []) if x in tools_by]
         r["horizon_text"] = hz[r["horizon"][0]].lower() + ("" if r["horizon"][0] == r["horizon"][1] else " to " + hz[r["horizon"][1]].lower())
         g["roles"].append(r)
         roles_by[r["id"]] = r

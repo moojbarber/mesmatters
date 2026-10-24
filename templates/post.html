@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import card, hero_bg, cta %}
+{% from "macros.html" import card, hero_bg, cta, for_roles %}
 {% block main %}
 {% if p.paths %}
 {% for lp in p.paths %}
@@ -74,6 +74,7 @@
         <i aria-hidden="true">→</i>
       </a>
       {% endif %}
+      {{ for_roles(p.for_roles, base) }}
       <p class="reviewed">Written by <a href="{{ base }}/about">Matt Barber</a> · Last updated {{ p.reviewed_long }}</p>
       <div class="post-end">
         {% for lp in p.paths or [] %}

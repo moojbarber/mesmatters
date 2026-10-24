@@ -124,6 +124,7 @@
         </div>
         <div class="ro-next">
           {% if r.tool_obj %}<a class="btn" href="{{ base }}/tools/{{ r.tool_obj.id }}">Tool: {{ r.tool_obj.short or r.tool_obj.title }} →</a>{% endif %}
+          {% for x in r.also_tool_objs %}<a class="btn ghost" href="{{ base }}/tools/{{ x.id }}">Tool: {{ x.short or x.title }}</a>{% endfor %}
           {% if r.path_obj %}<a class="btn ghost" href="{{ base }}/paths/{{ r.path_obj.id }}">Learning path: {{ r.path_obj.title }}</a>{% endif %}
           {% if r.for_obj %}<a class="btn ghost" href="{{ base }}/for/{{ r.for_obj.id }}">{{ r.for_obj.title }}</a>{% endif %}
         </div>

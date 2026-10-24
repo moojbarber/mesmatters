@@ -1475,3 +1475,9 @@ button.ttt-label:hover{background:rgba(255,255,255,.04)}
 .ro-event-list{grid-template-columns:repeat(4,minmax(0,1fr))}
 @media (max-width:1000px){.ro-event-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.ro-event-list{grid-template-columns:minmax(0,1fr)}}
+.for-roles{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin:28px 0 8px;padding:16px 18px;border-radius:16px;background:linear-gradient(120deg,rgba(255,111,216,.07),rgba(139,108,255,.07),rgba(51,212,224,.06));border:1px solid var(--line)}
+.for-roles .micro{margin:0}
+.for-roles div{display:flex;flex-wrap:wrap;gap:6px}
+.for-roles div a{font-size:13.5px;padding:6px 11px;border-radius:99px;color:#fff;border:1px solid color-mix(in srgb,var(--gc) 50%,transparent);background:color-mix(in srgb,var(--gc) 14%,transparent);text-decoration:none;transition:background .2s}
+.for-roles div a:hover{background:color-mix(in srgb,var(--gc) 30%,transparent)}
+.for-roles-all{margin-left:auto;font-size:13.5px;font-weight:600;color:var(--b);text-decoration:none}

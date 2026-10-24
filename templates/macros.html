@@ -126,3 +126,7 @@
   </form>
 </section>
 {%- endmacro %}
+
+{% macro for_roles(roles, base, label="Most useful for") -%}
+{% if roles %}<aside class="for-roles rv"><span class="micro">{{ label }}</span><div>{% for r in roles %}<a href="{{ base }}/roles/?role={{ r.id }}" style="--gc:{{ r.color }}">{{ r.name }}</a>{% endfor %}</div><a class="for-roles-all" href="{{ base }}/roles/">See every role →</a></aside>{% endif %}
+{%- endmacro %}

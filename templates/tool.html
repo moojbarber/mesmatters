@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import hero_bg, cta, card, gate, ask_box %}
+{% from "macros.html" import hero_bg, cta, card, gate, ask_box, for_roles %}
 {% block main %}
 <section class="hero page-hero tk-hero">
   {{ hero_bg() }}
@@ -22,6 +22,8 @@
     <p>A fuller version of this sits inside <a href="{{ sfg_url }}" rel="noopener" target="_blank">Smart Factory Core</a>, the vendor-neutral course I built with Kunal Wagh.</p>
   </aside>
   {% endif %}
+
+  {{ for_roles(t.for_roles, base) }}
 
   {{ ask_box(base, ask_endpoint, "tool:" ~ t.id) }}
 
