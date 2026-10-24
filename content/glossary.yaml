@@ -121,6 +121,7 @@
   short: Software for managing maintenance work orders and spare parts.
   body: A CMMS is the lighter, maintenance-team version of EAM. Whatever you use, production and maintenance need to agree on downtime, so connect it to MES/MOM or run maintenance inside MES/MOM.
   articles:
+  - cmms-vs-eam
   - eam-cmms-and-mes
   - mes-functionality-maintenance
   see_also:
@@ -218,6 +219,7 @@
   short: Software for managing the full lifecycle of physical assets, usually across many sites.
   body: EAM covers the asset register, maintenance plans, work orders and the financial side of assets. It makes sense for asset-heavy operations with advanced needs, connected to MES/MOM so downtime data is consistent.
   articles:
+  - cmms-vs-eam
   - eam-cmms-and-mes
   - mes-functionality-maintenance
   see_also:

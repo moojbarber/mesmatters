@@ -519,3 +519,13 @@ qms-vs-lims:
       a: "Only for a small lab with simple testing. Some QMS products include basic sample and test management, but a lab with instruments and a heavy sample load needs a dedicated LIMS. The reverse is also true: a LIMS with a CAPA module rarely replaces a full QMS."
     - q: "How do QMS and LIMS work together?"
       a: "The LIMS finds an out-of-specification result, and the investigation and any CAPA move into the QMS. Specifications need one master system. Batch release draws on LIMS results and the batch record from MES/MOM, and can be blocked by an open deviation in the QMS."
+
+cmms-vs-eam:
+  summary: "A CMMS (computerised maintenance management system) helps a maintenance team plan and record work: work orders, preventive maintenance, labour and spare parts, usually at one site. An EAM (enterprise asset management) system does all of that and manages assets across their whole life, adding asset cost, depreciation, capital planning, reliability and multi-site standards. The difference is mostly scope and ownership. A CMMS suits smaller sites focused on getting maintenance done; an EAM suits asset-heavy, multi-site operations."
+  faq:
+    - q: "What is the difference between a CMMS and an EAM?"
+      a: "A CMMS focuses on maintenance work: requests, work orders, preventive schedules, labour and parts. An EAM covers the whole asset lifecycle, from acquisition to disposal, including asset value and capital planning, usually across many sites. An EAM includes CMMS capability, but not the other way round."
+    - q: "Do I need a CMMS or an EAM?"
+      a: "If your main problem is getting preventive maintenance done and recording work at one or two sites, a CMMS is usually enough. If you run many sites with expensive assets and leadership is asking about lifecycle cost and replacement planning, look at an EAM. If you already run an ERP suite, check whether its EAM module covers what you need first."
+    - q: "Where does MES/MOM fit with CMMS and EAM?"
+      a: "MES/MOM knows what the machine is doing right now: run hours, cycle counts, downtime and downtime reasons. That feeds usage-based maintenance and MTBF in the CMMS or EAM. Many plants also handle operator-raised requests and autonomous maintenance in MES/MOM, alongside a CMMS or EAM for technician-led work."
