@@ -1,13 +1,13 @@
 # The Compare hub (/compare). Only genuine comparisons: things people choose between,
 # or genuinely confuse. Systems that work together at different layers don't belong here.
 # Each entry shows the article's short title and the opening of its summary from answers.yaml.
-intro: "Short, straight answers to the comparisons people ask about most: which system does what, which approach to take, and which terms mean what. Each one links to the full article, with a side-by-side table."
+intro: "Short, straight answers to the comparisons people ask about most, from which system does what to which approach to take. Each one links to the full article, with a side-by-side table."
 groups:
   - name: Which system does what
-    slugs: [mes-vs-erp, mes-vs-mom, mes-mom-erp-compared, mrp-vs-mes, scada-vs-mes, historian-vs-mes, iiot-vs-mes, uns-vs-mes, connected-worker-one-app-not-five, aps-vs-mes-scheduling, wms-vs-mes-inventory, qms-vs-lims, cmms-vs-eam]
+    slugs: [mes-vs-erp, mes-vs-mom, mrp-vs-mes, scada-vs-mes, historian-vs-mes, iiot-vs-mes, connected-worker-one-app-not-five, aps-vs-mes-scheduling, wms-vs-mes-inventory, qms-vs-lims, cmms-vs-eam]
   - name: Choosing an approach
-    slugs: [build-vs-buy-mes, low-code-vs-mes, cloud-vs-on-premises-mes, discrete-vs-process-manufacturing]
-  - name: Technology and methods
-    slugs: [opc-ua-vs-mqtt, it-vs-ot, lot-vs-serial-traceability, preventive-vs-predictive-maintenance, oee-vs-teep]
-  - name: AI on the shopfloor
-    slugs: [ai-ml-genai-on-the-shopfloor, ai-copilots-vs-agents]
+    slugs: [build-vs-buy-mes, low-code-vs-mes, cloud-vs-on-premises-mes, discrete-vs-process-manufacturing, lot-vs-serial-traceability]
+  - name: Connectivity and AI
+    slugs: [uns-vs-mes, opc-ua-vs-mqtt, it-vs-ot, ai-copilots-vs-agents]
+  - name: Measures and maintenance
+    slugs: [oee-vs-teep, preventive-vs-predictive-maintenance]

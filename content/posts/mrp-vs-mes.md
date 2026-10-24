@@ -1,5 +1,5 @@
 ---
-title: "MRP vs MES: planning what to make vs running how it's made"
+title: "MRP vs MES: how they differ, and where ERP fits"
 short: "MRP vs MES"
 description: "MRP works out what to make and buy, and when. MES/MOM runs and records the work on the shopfloor. How they differ, how data flows between them, and why most manufacturers need both."
 published: 2026-10-23

@@ -1,6 +1,6 @@
 ---
-title: "MES vs MOM vs ERP, and the rest of the stack, compared"
-short: "MES vs MOM vs ERP compared"
+title: "ERP, MES, MOM and the rest of the stack: what each one does"
+short: "The manufacturing systems stack"
 description: "ERP, MES, MOM, APS, WMS, QMS, LIMS, EAM, PLM, SCADA and IIoT side by side. What each one does, who uses it, what data it owns, and how to tell whether you need it."
 published: 2026-10-15
 category: education
