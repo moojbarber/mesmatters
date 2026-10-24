@@ -2,6 +2,28 @@
   var d = document, root = d.documentElement;
   root.classList.add('js');
 
+  // Start every new page at the top. Links to a section (#anchor) still land on
+  // that section, and back/forward keeps the browser's own scroll restoration.
+  (function () {
+    var nav = window.performance && performance.getEntriesByType && performance.getEntriesByType('navigation')[0];
+    if (location.hash || (nav && nav.type === 'back_forward')) return;
+    var userScrolled = false;
+    function mark() { userScrolled = true; }
+    ['wheel', 'touchmove', 'keydown', 'mousedown'].forEach(function (ev) { addEventListener(ev, mark, { passive: true, once: true }); });
+    function top() {
+      if (userScrolled) return;
+      var prev = root.style.scrollBehavior;
+      root.style.scrollBehavior = 'auto';
+      window.scrollTo(0, 0);
+      // when the page is shown inside a taller frame (as in a preview), bring the frame's top into view too
+      try { if (window.top !== window.self) root.scrollIntoView({ block: 'start', behavior: 'auto' }); } catch (e) {}
+      root.style.scrollBehavior = prev;
+    }
+    top();
+    addEventListener('load', top);
+    addEventListener('pageshow', function (e) { if (!e.persisted) top(); });
+  })();
+
   // mobile menu
   var burger = d.querySelector('.burger'), nav = d.getElementById('nav');
   if (burger && nav) {
