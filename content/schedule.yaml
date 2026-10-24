@@ -69,6 +69,6 @@ weekly:
   - uns-vs-mes
   - low-code-vs-mes
   - mrp-vs-mes
-  - dcs-vs-mes
-  - isa-95-vs-isa-88
+  - dcs-and-mes
+  - isa-88-and-isa-95
   - ai-copilots-vs-agents

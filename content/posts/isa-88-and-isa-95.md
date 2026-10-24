@@ -1,6 +1,6 @@
 ---
-title: "ISA-95 vs ISA-88: which standard covers what"
-short: "ISA-95 vs ISA-88"
+title: "ISA-88 and ISA-95: how the two standards fit together"
+short: "ISA-88 and ISA-95"
 description: "ISA-88 standardises batch control: recipes, equipment and procedures. ISA-95 standardises how manufacturing operations connect to the business. What each covers, where they meet, and which one you need to know."
 published: 2026-10-23
 category: education
@@ -61,6 +61,6 @@ The two standards were designed to fit together, and they overlap in a few place
 - **Anyone integrating ERP and MES/MOM:** start with ISA-95. It gives everyone a common vocabulary, which saves weeks of arguments about what "batch" and "lot" mean.
 - **Vendors and integrators serving process industries:** both, because your customers will expect you to speak each one.
 
-For the control side of the boundary, see [DCS vs MES](/post/dcs-vs-mes).
+For the control side of the boundary, see [DCS and MES](/post/dcs-and-mes).
 
 Do your control engineers and your MES team use the same names for the same equipment?

@@ -485,7 +485,7 @@ def write_llms(posts, paths, glossary, tools=(), audiences=()):
            *[f"- [{g['title']}]({g['canonical']}): {g['summary'] or g['description']}" for g in posts if g.get("guide")],
            f"- [Learning paths]({SITE}/paths/): guided routes through the articles, in order",
            f"- [FAQ]({SITE}/faq/): short answers to common questions, each linked to the full article",
-           f"- [MES compared]({SITE}/compare/): straight answers to MES vs ERP, MOM, MRP, SCADA, DCS, UNS, low-code and other comparisons",
+           f"- [MES compared]({SITE}/compare/): straight answers to MES vs ERP, MOM, MRP, SCADA, historian, IIoT, UNS, low-code and other comparisons",
            f"- [Glossary]({SITE}/glossary/): definitions of MES, MOM, OEE, ISA-95, UNS and other shopfloor terms",
            f"- [Tools]({SITE}/tools/): free, vendor-neutral tools and templates",
            f"- [About Matt Barber]({SITE}/about): background and credentials",
@@ -860,7 +860,7 @@ def build(base, relative=False, include_scheduled=False):
         compare["groups"].append({"name": g["name"], "posts": items})
     cmp_items = [x for g in compare["groups"] for x in g["posts"]]
     write("compare/index.html", "compare.html", active="compare", seo_title="MES compared: MES vs ERP, MOM, SCADA, UNS and more | Shopfloor Matters",
-          description="Straight answers to the most common MES comparisons: MES vs ERP, MOM, MRP, SCADA, DCS, historian, IIoT, UNS, low-code and more, each linked to the full article.",
+          description="Straight answers to the most common MES comparisons: MES vs ERP, MOM, MRP, SCADA, historian, IIoT, UNS, low-code and more, each linked to the full article.",
           canonical=f"{SITE}/compare/", og_image=f"{SITE}/images/og/page-education.png", compare=compare,
           jsonld=[jsonld({"@context": "https://schema.org", "@type": "CollectionPage", "name": "MES compared", "url": f"{SITE}/compare/",
                           "author": person, "inLanguage": "en-GB",

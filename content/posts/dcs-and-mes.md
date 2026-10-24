@@ -1,6 +1,6 @@
 ---
-title: "DCS vs MES: controlling the process vs managing the operation"
-short: "DCS vs MES"
+title: "DCS and MES: where process control ends and operations management begins"
+short: "DCS and MES"
 description: "A DCS controls continuous and batch processes in real time. MES/MOM manages orders, materials, quality and records around them. How they differ in process plants, and where batch control and electronic batch records fit."
 published: 2026-10-23
 category: education
@@ -55,6 +55,6 @@ Some plants stretch the DCS to do more of this through custom code. It can work,
 
 If you run a process plant, you almost certainly need a DCS, or a PLC and SCADA combination doing the same job. The question is whether you also need the layer above it. If batch records are still assembled on paper and materials are tracked in spreadsheets, the answer is probably yes.
 
-I cover the related SCADA question in [SCADA vs MES](/post/scada-vs-mes), and the batch standard in [ISA-95 vs ISA-88](/post/isa-95-vs-isa-88).
+I cover the related SCADA question in [SCADA vs MES](/post/scada-vs-mes), and the batch standard in [ISA-88 and ISA-95](/post/isa-88-and-isa-95).
 
 How much of your batch record is still assembled by hand after the batch has finished?

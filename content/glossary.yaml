@@ -1256,8 +1256,8 @@
   short: A control system for continuous and batch processes, with control spread across the plant.
   body: Common in chemicals and other large process plants. Like SCADA, it sits at ISA-95 level 2, below MES/MOM.
   articles:
-  - dcs-vs-mes
-  - isa-95-vs-isa-88
+  - dcs-and-mes
+  - isa-88-and-isa-95
   - what-is-the-isa-95-model-and-where-does-mes-fit
   - scada-vs-mes
   see_also:
@@ -1268,8 +1268,8 @@
   short: The international standard for batch control, defining how recipes and equipment are modelled.
   body: Its big idea is separating the recipe from the equipment, so the same recipe can run on different units. It lives mainly in the control system and fits alongside ISA-95, which covers the layer above.
   articles:
-  - isa-95-vs-isa-88
-  - dcs-vs-mes
+  - isa-88-and-isa-95
+  - dcs-and-mes
   see_also:
   - isa-95
   - dcs

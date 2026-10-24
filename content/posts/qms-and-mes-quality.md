@@ -1,6 +1,6 @@
 ---
-title: "QMS vs MES: who owns quality, and how to close the loop"
-short: "QMS vs MES"
+title: "QMS and MES: closing the quality loop"
+short: "QMS and MES quality"
 description: "Enterprise QMS runs CAPA, audits and complaints. MES/MOM runs in-process quality. How they divide the work, where ERP fits, and how to connect them."
 published: 2026-09-15
 category: education

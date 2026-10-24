@@ -480,7 +480,7 @@ mrp-vs-mes:
     - q: "Why does MES data matter to MRP?"
       a: "MRP plans from the stock and yields it believes are true. If production is booked late or rounded, the plan is built on the wrong numbers. MES/MOM captures what actually happened as it happens, so the next MRP run starts from reality."
 
-dcs-vs-mes:
+dcs-and-mes:
   summary: "A distributed control system (DCS) controls continuous and batch processes in real time, holding temperatures, pressures, flows and levels at their setpoints at ISA-95 levels 1 and 2. MES/MOM manages the operation around the process at level 3: orders, materials, genealogy, quality, samples and the batch record. A DCS batch manager runs the recipe's control steps, while MES/MOM handles the order and materials, and keeps the evidence. Most process plants with complex materials or regulatory needs use both."
   faq:
     - q: "Does a DCS replace an MES?"
@@ -490,7 +490,7 @@ dcs-vs-mes:
     - q: "Can we extend our DCS to do MES functions?"
       a: "Some plants do, through custom code. It can work, but it puts business logic inside a control system that wasn't designed for it, so every change carries control-system risk and validation effort."
 
-isa-95-vs-isa-88:
+isa-88-and-isa-95:
   summary: "ISA-88 (S88, IEC 61512) is the batch control standard, first published in 1995. It defines physical, process, procedural and recipe models, and separates recipes from equipment. ISA-95 (IEC 62264), with Part 1 published in 2000, standardises how manufacturing operations connect to the business, defining the four areas of operations and the data ERP and MES/MOM exchange. ISA-88 lives mainly at the control level, ISA-95 mainly at level 3 and the boundary with ERP, and batch process plants usually need both."
   faq:
     - q: "What is the difference between ISA-88 and ISA-95?"
