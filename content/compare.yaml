@@ -4,7 +4,7 @@
 intro: "Short, straight answers to the comparisons people ask about most: which system does what, which approach to take, and which terms mean what. Each one links to the full article, with a side-by-side table."
 groups:
   - name: Which system does what
-    slugs: [mes-vs-erp, mes-vs-mom, mes-mom-erp-compared, mrp-vs-mes, scada-vs-mes, historian-vs-mes, iiot-vs-mes, uns-vs-mes, connected-worker-one-app-not-five, aps-vs-mes-scheduling, wms-vs-mes-inventory]
+    slugs: [mes-vs-erp, mes-vs-mom, mes-mom-erp-compared, mrp-vs-mes, scada-vs-mes, historian-vs-mes, iiot-vs-mes, uns-vs-mes, connected-worker-one-app-not-five, aps-vs-mes-scheduling, wms-vs-mes-inventory, qms-vs-lims]
   - name: Choosing an approach
     slugs: [build-vs-buy-mes, low-code-vs-mes, cloud-vs-on-premises-mes, discrete-vs-process-manufacturing]
   - name: Technology and methods

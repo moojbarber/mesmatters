@@ -509,3 +509,13 @@ ai-copilots-vs-agents:
       a: "Examples include raising a maintenance work order with the spare part reserved for a supervisor to approve, re-sequencing tomorrow's schedule around a late delivery, flagging materials that won't arrive in time, or preparing a deviation investigation pack for the quality team. They act through business systems, not by controlling equipment."
     - q: "Should we start with copilots or agents?"
       a: "Most manufacturers start with copilots, because they're low risk and quickly show where the data needs work. Agents follow, starting with tasks where a person approves every action, and move towards autonomy one decision at a time."
+
+qms-vs-lims:
+  summary: "A QMS (quality management system) runs the quality system across the business: CAPA, deviations, complaints, audits, document control and supplier quality. A LIMS (laboratory information management system) runs the lab: samples, test methods, results, instrument data and certificates of analysis. They overlap mainly at out-of-spec results and batch release. Regulated process manufacturers usually need both, connected to each other and to MES/MOM."
+  faq:
+    - q: "What is the difference between a QMS and a LIMS?"
+      a: "A QMS manages the quality system: CAPAs, deviations, complaints, audits and controlled documents, over weeks and months. A LIMS manages the lab: samples, tests and results, over hours and days. One proves the system works and improves it; the other produces a trustworthy result for every sample."
+    - q: "Can a QMS replace a LIMS?"
+      a: "Only for a small lab with simple testing. Some QMS products include basic sample and test management, but a lab with instruments and a heavy sample load needs a dedicated LIMS. The reverse is also true: a LIMS with a CAPA module rarely replaces a full QMS."
+    - q: "How do QMS and LIMS work together?"
+      a: "The LIMS finds an out-of-specification result, and the investigation and any CAPA move into the QMS. Specifications need one master system. Batch release draws on LIMS results and the batch record from MES/MOM, and can be blocked by an open deviation in the QMS."

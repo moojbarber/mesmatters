@@ -399,6 +399,7 @@
   short: Software for managing lab samples, tests, results and certificates of analysis.
   body: In process industries, LIMS runs the lab while MES/MOM runs the batch. The two meet at the sample, which should be born with its batch context rather than a handwritten label.
   articles:
+  - qms-vs-lims
   - lims-and-mes
   see_also:
   - batch
@@ -592,6 +593,7 @@
   short: Software for enterprise quality processes such as CAPA, complaints, audits and document control.
   body: A QMS runs quality over weeks and months across sites and suppliers, while MES/MOM runs it at the point of production. Connect them so the right non-conformances reach the QMS with full context.
   articles:
+  - qms-vs-lims
   - qms-and-mes-quality
   see_also:
   - capa
