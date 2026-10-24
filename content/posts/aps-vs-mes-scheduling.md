@@ -1,7 +1,7 @@
 ---
-title: "APS vs MES vs ERP scheduling: the plan versus the shift"
-short: "APS vs MES scheduling"
-description: "ERP plans, APS sequences and MES/MOM executes. Where scheduling belongs in each system, the options for connecting them, and how to keep the plan honest."
+title: "APS vs ERP scheduling: when ERP is enough, and where MES fits"
+short: "APS vs ERP scheduling"
+description: "ERP plans with mostly infinite capacity; APS sequences against real constraints. When ERP scheduling is enough, when you need APS, and how MES/MOM takes the scheduled orders and runs them."
 published: 2026-09-10
 category: education
 art: gantt
@@ -9,7 +9,9 @@ art: gantt
 
 Every factory has a plan. Every factory also has what actually happened on the shift. The gap between the two is where a lot of money goes.
 
-Scheduling sits across three systems, and the confusion usually starts with the word "schedule" meaning something different in each one.
+Most of the scheduling debate is really about ERP and APS. ERP plans; APS sequences against real capacity. MES/MOM mostly takes the orders once they've been scheduled and dispatches them, with some basic short-interval scheduling of its own.
+
+The confusion usually starts with the word "schedule" meaning something different in each one.
 
 ## Different horizons, different jobs
 
@@ -26,9 +28,9 @@ Scheduling sits across three systems, and the confusion usually starts with the 
 | Output | Orders and due dates | Sequenced schedule | Dispatched jobs, actuals |
 | Key question | What and when? | In what order, where? | What next, and what happened? |
 
-## Do you need APS at all?
+## When is ERP scheduling enough?
 
-Honestly, often not. If you have a handful of lines, stable products and simple changeovers, ERP's scheduling plus a good dispatch list in MES/MOM gets you a long way.
+More often than people expect. With a handful of lines, stable products and simple changeovers, ERP's scheduling plus a dispatch list in MES/MOM can cover most needs.
 
 APS earns its keep when sequencing is genuinely hard: sequence-dependent changeovers (light to dark colours, allergen-free before allergen), shared tools or moulds, multi-stage processes where one bottleneck drives everything, or hundreds of orders a day competing for the same resources.
 
@@ -36,29 +38,33 @@ Many ERP suites include APS capability, so it may be a module you already own ra
 
 ## Where the scheduling logic lives
 
-This is the decision that matters. You have options:
+There are several ways to split the work:
 
 - **ERP schedules, MES/MOM dispatches.** Simplest. ERP releases orders in priority order, MES/MOM shows them to the line and supervisors adjust on the day.
 - **APS schedules via ERP.** ERP sends orders to APS, APS sequences them, the sequence comes back to ERP and down to MES/MOM. ERP stays the single path to the shopfloor.
 - **APS schedules, with a direct link to MES/MOM.** ERP sends orders to APS. APS sends the sequence straight to MES/MOM and receives actuals straight back, so it can reschedule within the shift. ERP still gets order status and confirmations.
 - **Short-interval scheduling in MES/MOM.** Some MES/MOM platforms include detailed scheduling for the shopfloor horizon. Good for plants where the main problem is the next 24 hours, not next week.
 
-Each is valid. The direct APS link pays off when you reschedule several times a shift and the round trip through ERP is too slow. If you reschedule once a day, keep it simple.
+Each is valid. The direct APS link suits plants that reschedule several times a shift, where the round trip through ERP is too slow. Plants that reschedule once a day often use the simpler options.
 
-What I'd avoid: two systems both believing they own the sequence. If APS publishes a schedule and supervisors re-sequence in MES/MOM, someone needs to decide whose version wins, and the other system must be told.
+Whichever option you choose, one system needs to own the sequence. If APS publishes a schedule and supervisors re-sequence in MES/MOM, the other system has to be told.
 
-## The feedback loop is the point
+## The feedback loop
 
 A schedule is only as good as the data it's built on. And most plans are built on standard cycle times and setup times that nobody has checked in years.
 
 MES/MOM knows the real numbers. Actual cycle times by product and machine. Actual changeover durations. Real availability after breakdowns and micro-stops. Real yield.
 
-Feed those back, and the plan gets better every week. Ignore them, and the planners keep building schedules that the shopfloor knows are fiction. Then supervisors stop trusting the schedule and run the line from a whiteboard.
+Fed back, those numbers improve the plan over time. Without them, planners keep building schedules from outdated standards, and supervisors tend to stop trusting the schedule and run the line from a whiteboard.
 
-In my experience, that feedback loop is worth more than any optimisation algorithm. A simple scheduler with honest data beats a clever one working from fantasy standards.
+## Where MES/MOM fits
 
-## What the operator needs
+MES/MOM doesn't need to be your planning system. Its job is dispatch and feedback. It shows the line what to run next from the scheduled orders, and reports what actually happened so the next plan is better.
 
 Whatever sits upstream, the operator needs a clear answer to one question: what do I run next? Plus the reason, if it changed. A dispatch list in MES/MOM, sequenced by the plan, updated when the plan changes, with the materials and tooling status visible.
+
+## My view
+
+What I'd avoid is two systems both believing they own the sequence. In my experience, the feedback loop is worth more than any optimisation algorithm. A simple scheduler with honest data beats a clever one working from fantasy standards.
 
 So, when did someone last compare your planned setup times to the actuals?

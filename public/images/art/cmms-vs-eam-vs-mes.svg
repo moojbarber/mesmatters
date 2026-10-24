@@ -34,12 +34,12 @@
   </filter>
 </defs>
 <rect width="1600" height="900" fill="#0a0820"/>
-<circle cx="96" cy="36.3" r="516.1" fill="url(#bl-v)" opacity="0.95"/>
-<circle cx="1509.2" cy="143.1" r="437.7" fill="url(#bl-t)" opacity="0.8"/>
-<circle cx="1048.2" cy="879.5" r="364.2" fill="url(#bl-m)" opacity="0.6"/>
+<circle cx="69.4" cy="24.3" r="565.5" fill="url(#bl-v)" opacity="0.95"/>
+<circle cx="1504.4" cy="178.1" r="534.6" fill="url(#bl-t)" opacity="0.8"/>
+<circle cx="847.6" cy="883.2" r="389.9" fill="url(#bl-m)" opacity="0.6"/>
 <rect width="1600" height="900" fill="url(#dots)" mask="url(#dotmask)"/>
-<path d="M-20,776.6 C10.7,782.8 102.9,804.4 164.3,813.7 C225.7,823 282,835.9 348.4,832.4 C414.8,829 484.8,803.8 562.7,792.8 C640.6,781.9 733,766.3 815.7,766.9 C898.5,767.5 971.6,797.2 1058.9,796.2 C1146.3,795.3 1249.9,764.3 1339.7,761 C1429.6,757.7 1507.6,767.7 1598.1,776.7 C1688.6,785.7 1835.3,808.6 1882.7,815" fill="none" stroke="url(#g)" stroke-width="2.5" opacity=".55"/>
-<circle cx="815.7" cy="766.9" r="5" fill="#33d4e0" filter="url(#glow)" opacity=".8"/>
+<path d="M-20,786.3 C21.8,781.5 145.4,758.2 230.7,757.5 C316,756.8 404,781.6 491.7,782.1 C579.5,782.5 666.4,768 757,760.2 C847.6,752.4 957.5,739.7 1035.5,735.3 C1113.5,730.9 1163.3,729.9 1225.1,734 C1286.8,738.1 1331.1,755.3 1406.2,759.9 C1481.4,764.5 1631,761.2 1676,761.5" fill="none" stroke="url(#g)" stroke-width="2.5" opacity=".55"/>
+<circle cx="1035.5" cy="735.3" r="5" fill="#33d4e0" filter="url(#glow)" opacity=".8"/>
 <g>
 <path d="M811.1,150.2 A290,290 0 0 1 947.3,190.2 L886.4,293.6 A170,170 0 0 0 806.5,270.1 Z" stroke="url(#g)" stroke-width="3" fill="url(#hot)" opacity="1" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
 <circle cx="891.3" cy="129.1" r="4" fill="#33d4e0" stroke="none" stroke-width="2" opacity="0.7"/>

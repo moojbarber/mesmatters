@@ -7,9 +7,7 @@ category: education
 art: network
 ---
 
-OPC UA versus MQTT generates more heat on LinkedIn than almost any other shopfloor topic. People pick a side and defend it.
-
-I don't think it's a contest. They solve different problems, and most modern architectures use both.
+OPC UA versus MQTT generates more heat on LinkedIn than almost any other shopfloor topic. Both are widely used, and they're designed for different jobs. This article compares them, and shows where each one fits.
 
 ## OPC UA in one paragraph
 
@@ -43,13 +41,13 @@ That's why you so often see both: OPC UA at the machine, MQTT across the plant a
 
 A unified namespace is an architecture, usually built on an MQTT broker. All operational data is published to one structured place, organised by the plant hierarchy: enterprise, site, area, line, machine.
 
-Done well, it cuts the point-to-point spaghetti. Done badly, it's a very big pile of tags with no context. I cover it in [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
+Done well, it cuts the point-to-point spaghetti. Done badly, it's a very big pile of tags with no context. More in [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
 
 ## And MES/MOM?
 
 Connectivity moves data. MES/MOM gives it meaning.
 
-A broker can tell you a machine changed state. MES/MOM knows which order was running, which material, which shift, and that the operator entered the reason as a jam. In a UNS, MES/MOM is both a consumer of machine data and one of the most valuable publishers of contextualised data. More in [Raw machine data is worthless](/post/contextualised-manufacturing-data).
+A broker can tell you a machine changed state. MES/MOM knows which order was running, which material, which shift, and that the operator entered the reason as a jam. In a UNS, MES/MOM is both a consumer of machine data and a publisher of contextualised data. More in [Raw machine data is worthless](/post/contextualised-manufacturing-data).
 
 ## Questions to ask vendors
 
@@ -58,5 +56,9 @@ A broker can tell you a machine changed state. MES/MOM knows which order was run
 - Can it publish its own contextualised events to a broker?
 - If you use MQTT, which payload convention: Sparkplug B or something custom?
 - How is security handled at each hop?
+
+## My view
+
+I don't think it's a contest. They solve different problems, and both earn their place. OPC UA brings meaning and security at the machine. MQTT moves data efficiently to everyone who needs it. Most of the modern architectures I see use both.
 
 Which camp are you in, and has it ever actually been a problem to use both?

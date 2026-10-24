@@ -7,15 +7,13 @@ category: education
 art: signal
 ---
 
-I had a great discussion recently: do you need both SCADA and MES?
-
-My answer: maybe. But not always.
+Do you need both SCADA and MES? It's a common question, because the two often read the same data from the same PLCs. The answer depends on what SCADA is doing in your plant.
 
 ## What each one does
 
 **SCADA** (supervisory control and data acquisition) is for real-time control and monitoring of equipment. Process engineers and control room operators use it to see what the plant is doing and adjust it: setpoints, alarms, valve states, tank levels.
 
-**MES/MOM** is for managing operations: which order is running, what's been produced, what was scrapped and why, whether quality checks were done, what material was used, what maintenance is due. I explain the full scope in [What is MES/MOM?](/post/what-is-mes-and-why-is-it-important-in-manufacturing)
+**MES/MOM** is for managing operations: which order is running, what's been produced, what was scrapped and why, whether quality checks were done, what material was used, what maintenance is due. The full scope is in [What is MES/MOM?](/post/what-is-mes-and-why-is-it-important-in-manufacturing)
 
 So far, clearly different. But there's overlap.
 
@@ -51,6 +49,8 @@ Ask:
 - Are the two systems reading the same signals from the same PLCs?
 - Could MES/MOM provide the visibility operators need, with production context added?
 
-If SCADA is mostly a visibility layer, and operators are switching between two screens to see the same machine, it's worth exploring whether one system will do.
+## My view
+
+Do you need both? Maybe, but not always. If SCADA is mostly a visibility layer, and operators are switching between two screens to see the same machine, I think it's worth exploring whether one system will do. Where SCADA is doing real control, keep it and get the boundary right.
 
 I'm sure plenty of people will disagree with parts of this. So, in your factory, is SCADA doing control, visibility, or both?

@@ -34,12 +34,12 @@
   </filter>
 </defs>
 <rect width="1600" height="900" fill="#0a0820"/>
-<circle cx="150.1" cy="106.4" r="548.8" fill="url(#bl-v)" opacity="0.95"/>
-<circle cx="1521.9" cy="113.1" r="504.3" fill="url(#bl-t)" opacity="0.8"/>
-<circle cx="994.8" cy="872.3" r="387.9" fill="url(#bl-m)" opacity="0.6"/>
+<circle cx="103" cy="129.4" r="593.7" fill="url(#bl-v)" opacity="0.95"/>
+<circle cx="1478.1" cy="115.6" r="495.3" fill="url(#bl-t)" opacity="0.8"/>
+<circle cx="1060.3" cy="899.6" r="387.3" fill="url(#bl-m)" opacity="0.6"/>
 <rect width="1600" height="900" fill="url(#dots)" mask="url(#dotmask)"/>
-<path d="M-20,742 C22.7,743.3 149.3,753.5 236.1,749.9 C322.9,746.4 415.6,720.5 500.8,720.9 C586,721.3 660.4,747.2 747.3,752.4 C834.3,757.6 942.9,747.7 1022.4,752.3 C1101.9,756.9 1157.1,774.1 1224.4,780.1 C1291.6,786 1343.3,787.9 1425.9,787.9 C1508.6,787.8 1671.2,781.1 1720.3,779.8" fill="none" stroke="url(#g)" stroke-width="2.5" opacity=".55"/>
-<circle cx="1022.4" cy="752.3" r="5" fill="#33d4e0" filter="url(#glow)" opacity=".8"/>
+<path d="M-20,790.7 C22.5,787.3 156.5,770.2 235.1,770.2 C313.8,770.3 380.9,787.8 452,791 C523.2,794.1 592.8,789.4 662,789.3 C731.3,789.3 795.3,793.5 867.6,790.7 C939.9,787.9 1014.8,777.7 1095.8,772.4 C1176.9,767.2 1263.7,764.6 1354.1,759.3 C1444.5,754.1 1544.7,744 1638.4,740.8 C1732,737.7 1869.8,740.6 1916.1,740.6" fill="none" stroke="url(#g)" stroke-width="2.5" opacity=".55"/>
+<circle cx="867.6" cy="790.7" r="5" fill="#33d4e0" filter="url(#glow)" opacity=".8"/>
 <g>
 <polygon points="947.2,355 947.2,525 800,610 652.8,525 652.8,355 800,270" fill="url(#hot)" stroke="url(#g)" stroke-width="3" opacity="1" filter="url(#glow)"/>
 <path d="M740,440 L785,490 L870,390" stroke="#33d4e0" stroke-width="8" fill="none" opacity="1" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>

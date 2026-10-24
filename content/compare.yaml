@@ -3,11 +3,11 @@
 # Each entry shows the article's short title and the opening of its summary from answers.yaml.
 intro: "Short, straight answers to the comparisons people ask about most, from which system does what to which approach to take. Each one links to the full article, with a side-by-side table."
 groups:
-  - name: Which system does what
-    slugs: [mes-vs-erp, mes-vs-mom, mrp-vs-mes, scada-vs-mes, historian-vs-mes, iiot-vs-mes, connected-worker-one-app-not-five, aps-vs-mes-scheduling, wms-vs-mes-inventory, qms-vs-lims, cmms-vs-eam]
-  - name: Choosing an approach
-    slugs: [build-vs-buy-mes, low-code-vs-mes, cloud-vs-on-premises-mes, discrete-vs-process-manufacturing, lot-vs-serial-traceability]
-  - name: Connectivity and AI
-    slugs: [uns-vs-mes, opc-ua-vs-mqtt, it-vs-ot, ai-copilots-vs-agents]
-  - name: Measures and maintenance
-    slugs: [oee-vs-teep, preventive-vs-predictive-maintenance]
+  - name: Business and shopfloor systems
+    slugs: [mes-vs-erp, mes-vs-mom, erp-vs-mrp-vs-mes, aps-vs-mes-scheduling, wms-vs-mes-inventory, qms-vs-lims-vs-mes, cmms-vs-eam-vs-mes, connected-worker-one-app-not-five]
+  - name: Automation and data
+    slugs: [plc-vs-scada-vs-dcs-vs-mes, scada-vs-mes, historian-vs-mes, iiot-vs-mes, opc-ua-vs-mqtt, it-vs-ot]
+  - name: Strategy and approach
+    slugs: [build-vs-buy-mes, cloud-vs-on-premises-mes, discrete-vs-process-manufacturing, lot-vs-serial-traceability, industry-4-0-vs-industry-5-0]
+  - name: Measures
+    slugs: [oee-vs-teep, takt-time-vs-cycle-time-vs-lead-time, mtbf-vs-mttr-vs-mttf, first-pass-yield-vs-rolled-throughput-yield]

@@ -61,6 +61,6 @@ The two standards were designed to fit together, and they overlap in a few place
 - **Anyone integrating ERP and MES/MOM:** start with ISA-95. It gives everyone a common vocabulary, which saves weeks of arguments about what "batch" and "lot" mean.
 - **Vendors and integrators serving process industries:** both, because your customers will expect you to speak each one.
 
-For the control side of the boundary, see [DCS and MES](/post/dcs-and-mes).
+For the control side of the boundary, see [PLC vs SCADA vs DCS vs MES](/post/plc-vs-scada-vs-dcs-vs-mes).
 
 Do your control engineers and your MES team use the same names for the same equipment?

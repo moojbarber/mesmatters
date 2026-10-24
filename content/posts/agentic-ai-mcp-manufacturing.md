@@ -25,6 +25,23 @@ Agentic AI goes further. An agent is given an objective and works towards it wit
 
 The important word is *acts*. An agent doesn't just tell you the line is running behind. It might re-sequence the schedule, raise a maintenance request or notify the planner. That's powerful. It's also why you need to think hard before you let one loose.
 
+## Copilots vs agents
+
+You'll hear "copilot" and "agent" used almost interchangeably. There's a useful difference.
+
+A **copilot** helps a person when they ask. An operator asks how to clear a fault and gets the answer from the SOPs. A supervisor asks for a shift summary. The person stays in charge of every step.
+
+An **agent** is given a goal rather than a question. It plans the steps and works through systems to gather information and take actions, until the job is done or it needs a person.
+
+| | Copilot | Agent |
+| --- | --- | --- |
+| **Starts with** | A question or request | A goal |
+| **Who acts** | The person, using the answer | The agent, with approval or within limits |
+| **Typical output** | An answer or a draft | A completed task, or one ready to approve |
+| **Main risk** | A wrong answer | A wrong action |
+
+Copilots are usually the easier first step. They're low risk, and you find out quickly where your data lets you down.
+
 ## What is MCP?
 
 MCP stands for Model Context Protocol. It's an open, standardised way for AI agents to connect to other systems: applications, databases and APIs.

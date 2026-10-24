@@ -13,7 +13,7 @@ They're all asking the same underlying question: what kind of shopfloor systems 
 
 There are broadly four answers. I've seen every one of them work, and I've seen every one of them go wrong.
 
-Online, this debate can get almost political, with very strong voices in every camp. I don't think it needs to be confrontational. Different approaches suit different companies, and there are trade-offs whichever way you go.
+Online, this debate can get almost political, with very strong voices in every camp. It doesn't need to be confrontational. Different approaches suit different companies, and there are trade-offs whichever way you go.
 
 I'll be upfront about my own position before I start. I work for a vendor of the fourth kind, so weigh my view accordingly. I've tried to describe each approach the way its best advocates would.
 
@@ -38,7 +38,7 @@ It's usually a better fit for smaller companies with a narrow scope than for ent
 - **Key-person dependency is at its highest.** When the original developers leave, the knowledge often leaves with them.
 - **It gets harder as you grow.** Add plants and the need to standardise, and custom code tends to multiply until the system is outgrown.
 
-**A typical example:** a system written years ago by a small internal team, which still runs the plant and does its core job well. Few people understand how it works, change requests take months, and nobody wants to be the one who touches it. I cover what changes when you replace one in [Replacing a homegrown MES](/post/replacing-a-homegrown-mes).
+**A typical example:** a system written years ago by a small internal team, which still runs the plant and does its core job well. Few people understand how it works, change requests take months, and nobody wants to be the one who touches it. More on what changes when you replace one in [Replacing a homegrown MES](/post/replacing-a-homegrown-mes).
 
 ## 2. Build from building blocks
 
@@ -46,7 +46,7 @@ It's usually a better fit for smaller companies with a narrow scope than for ent
 
 **Where it works well:**
 
-- **Much faster than coding.** In my experience, configuring something in a low-code environment is far quicker than building it from scratch.
+- **Much faster than coding.** Configuring something in a low-code environment is usually far quicker than building it from scratch.
 - **It fits exactly.** Every screen and rule is built around how you work, with nothing you don't need.
 - **It empowers your own people.** Engineers can make changes themselves without waiting for a vendor, which keeps the cost of change down.
 - **Low cost at first.** Licences for building-block tools are often modest, and a narrow use case, such as a dashboard or a digital checklist, can be live in weeks.
@@ -61,6 +61,8 @@ You see this most in smaller companies with tech-savvy teams, and some of the pl
 - **Key-person dependency.** Knowledge sits with the people who built each app. When they move on, it goes with them.
 
 **A typical example:** a plant with a capable digital team builds downtime tracking and a few digital forms on a low-code platform in a couple of months. It's genuinely useful. Two years later it covers five use cases, depends on two people, and every new request joins a queue.
+
+**Low-code and MES/MOM aren't either/or.** Most modern MES/MOM platforms include low-code tools of their own for screens and workflows. So the real difference is how much is already built for you before you start. Plenty of manufacturers combine the two: MES/MOM runs the core operation on one data model, and low-code fills gaps at the edges, such as a site-specific form or an improvement idea someone wants to try.
 
 ## 3. Stitch together best-of-breed applications
 
@@ -124,7 +126,16 @@ In practice very few factories are purely one type. A common and sensible patter
 
 So the real question is which one you make the backbone.
 
-## Where I land
+## How to decide
+
+- What will each option cost over ten years, including your own people, not just the first quote?
+- Who maintains it when the original team moves on?
+- How much of the value depends on data from different functions lining up in real time?
+- How many interfaces will you own, and who will monitor them?
+- Is your manufacturing process really unique, or is it the business processes around it? See [Configure, don't customise](/post/configure-dont-customise).
+- How will you add AI and new capabilities, and who will build them?
+
+## My view
 
 Personally, I like being part of a connected ecosystem. It's a bit like owning all Apple products: everything works together, and it gets better over time.
 
@@ -133,15 +144,6 @@ Having seen all four over a lot of projects, I think a configurable platform giv
 That's a view, not a law. A truly niche process can justify writing your own code, and a smaller company with a strong digital team can do very well building from blocks. Building and configuring aren't really competing, because they suit different kinds of business. A site with good specialist tools already in place, and the discipline to govern a UNS, can get a lot from stitching.
 
 Whichever you choose, start small, but start small on the right path, with the destination in mind.
-
-## How to decide
-
-- What will each option cost over ten years, including your own people, not just the first quote?
-- Who maintains it when the original team moves on?
-- How much of the value depends on data from different functions lining up in real time?
-- How many interfaces will you own, and who will monitor them?
-- Is your process really unique? Unless you're doing something very niche, the manufacturing process itself rarely is, though the business processes around it often are. See [Configure, don't customise](/post/configure-dont-customise).
-- How will you add AI and new capabilities, and who will build them?
 
 If you're already running a homegrown system, there's no shame in it. Many were written when the market had nothing suitable, and they've served their factories well.
 

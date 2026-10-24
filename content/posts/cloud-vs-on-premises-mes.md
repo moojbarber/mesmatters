@@ -1,65 +1,84 @@
 ---
-title: "Cloud vs on-premises MES: where should your shopfloor system run?"
+title: "Cloud vs on-premises MES: how they compare"
 short: "Cloud vs on-premises MES"
-description: "Where your MES/MOM runs matters for a system the shopfloor depends on 24x7. The trade-offs between cloud, on-premises and hybrid, and why licensing model matters too."
+description: "Cloud and on-premises MES/MOM compared on security, scalability, upgrades, connectivity and cost. Why most multi-site 'on-premises' MES already depends on the network, how edge components handle outages, and when on-premises still fits."
 published: 2026-07-09
 category: education
 art: cloud
 ---
 
-Where does your MES/MOM actually run? Servers in your factory, the cloud, or a mix of the two?
+Where should your MES/MOM run? A few years ago most manufacturers ran it on servers they owned. Today more and more of them run it in the cloud, and the question comes up in almost every evaluation.
 
-It comes up in every evaluation. And the answer isn't as simple as some people make it sound, in either direction.
+This article sets out how the two compare.
 
-## Why this decision is different for MES/MOM
+## What each one means
 
-For most business software, a short outage is an inconvenience. For MES/MOM, it can stop production.
+**On-premises** means you run the MES/MOM software on servers you own or rent, either in the factory or in your own data centre. Your team, or a partner, looks after the servers, databases, backups and upgrades.
 
-Operators start and stop orders in it. Material can't be consumed without it. Labels can't be printed. Quality checks can't be recorded. So whatever model you choose, think about what happens to the shopfloor if the connection, the server or the service goes down.
+**Cloud** means the software runs on a cloud platform, usually delivered by the vendor as software as a service (SaaS). The vendor runs the infrastructure and keeps the application up to date. Most cloud MES/MOM also includes an edge component at each site, close to the machines.
 
-## On-premises
+## Most "on-premises" MES isn't on the premises
 
-The application runs on servers in your factory or your own data centre. Your IT team manages the infrastructure: servers, network, backups, security patches and upgrades.
+One point often gets missed. When MES/MOM serves several sites from one instance, it usually sits in a central data centre. Every site except perhaps one already reaches it over a wide-area network or the internet.
 
-**For:** full control, and no dependency on an external connection for the shopfloor to keep running.
+So the dependency on connectivity that people associate with cloud often exists already. The real difference is who runs the infrastructure, and how the system is kept up to date.
 
-**Against:** you own all the infrastructure work, upgrades tend to be big projects that slip, and scaling across many sites means many sets of servers to look after.
+## Side by side
 
-## Cloud
+| | On-premises | Cloud |
+| --- | --- | --- |
+| **Who runs the infrastructure** | You, or a partner | The vendor and cloud provider |
+| **Security** | Depends on your own team and processes | Large-scale monitoring and patching, with certifications such as ISO 27001 and SOC 2 |
+| **Adding a site or capacity** | Buy and set up servers | Mostly configuration |
+| **Upgrades** | Periodic projects, often years apart | Frequent, smaller updates |
+| **New features, including AI** | Arrive when you upgrade | Arrive as they're released |
+| **If the network drops** | Sites using a central instance are affected | Edge components keep critical functions running |
+| **Control over timing of changes** | Full | Shared with the vendor, usually with test environments |
+| **Typical licensing** | Perpetual licence plus maintenance | Subscription |
 
-The application runs in the vendor's or a hyperscaler's cloud, usually delivered as SaaS. The vendor manages infrastructure, updates and much of the security.
+## What cloud brings
 
-**For:** less infrastructure for you to manage, faster deployment of new sites, regular updates without big upgrade projects, and easier access to analytics and AI services.
+**Security.** Major cloud platforms invest in security at a scale few manufacturers can match: continuous monitoring and rapid patching, backed by independent certifications. Patches are applied as standard rather than waiting for a maintenance window.
 
-**Against:** dependency on network connectivity, questions about latency for real-time machine integration, and data residency or regulatory requirements in some industries.
+**Scalability.** Adding a new site or line is mostly configuration, with no servers to buy. Capacity can grow as data volumes climb with machine connectivity and AI.
 
-## Hybrid
+**Staying current.** Updates arrive regularly and in small steps, so there's no large upgrade project every few years. On-premises customers often put those upgrades off, and fall behind.
 
-Some components run locally at the edge, close to the machines, while others run in the cloud.
+**Access to new capabilities.** New features, including AI and analytics, reach customers as they're released.
 
-A common pattern: machine connectivity, data buffering and critical shopfloor functions run on site so production keeps going if the connection drops, while the wider application, reporting and analytics run in the cloud.
+**Less infrastructure to run.** The vendor looks after servers, databases, backups and disaster recovery. Your team can spend that time on processes and improvement.
 
-For many manufacturers, hybrid is the practical answer. It gets the benefits of cloud without betting the shopfloor on the internet connection.
+**Resilience.** Cloud platforms offer redundancy across data centres, which would be expensive to build yourself.
 
-## Questions to ask
+## What on-premises brings
 
-- What happens on the shopfloor if the connection to the cloud is lost for an hour? For a day?
-- Where is data buffered, and how does it catch up?
-- How is real-time machine integration handled: locally or remotely?
-- How often are updates applied, and can we test them first?
-- Where is our data held, and does that meet our regulatory needs?
+**Full control over timing.** You decide exactly when changes happen, which some regulated sites value. If you've recently invested in data centre capacity and skills, on-premises also makes use of them.
+
+**Working without connectivity.** A site with no reliable connection, or an air-gapped environment in defence and some critical infrastructure, may need everything on site.
+
+## Handling the common concerns about cloud
+
+**What if the connection drops, or latency matters?** Critical shopfloor functions and machine data can run on a local edge component that buffers data and keeps production moving, then catches up when the connection returns. That's the same design question a central on-premises instance raises. Real-time machine connectivity also sits at the edge, so latency isn't an issue for the equipment. The cloud handles the operational application and analytics, where milliseconds don't matter.
+
+**Data residency and regulation.** Cloud regions let you keep data in the country or region you need. In regulated industries, look for vendors with a validated cloud approach and clear documentation for quality and compliance teams.
+
+## Questions to ask a cloud MES vendor
+
+- What runs at the edge, and what keeps working if the connection is lost for an hour or a day?
+- How is machine data buffered, and how does it catch up?
+- Which security certifications do you hold, and how often is the platform patched?
+- How often are updates released, and can we test them before they reach production?
+- Which regions can our data be held in?
 - What does a new site cost to stand up, in time and effort?
 
-## A word on licensing
+## Licensing
 
-This one might be unpopular, but here goes.
+Cloud usually comes with subscription licensing, and on-premises with a perpetual licence plus annual maintenance. Compare the total cost over the life of the system, including infrastructure and the upgrade projects each model involves.
 
-If you want a future-proofed, innovative product, be careful about insisting on perpetual licences.
+## My view
 
-Enterprise software has largely moved to subscription and SaaS licensing, and broadly, that's good for manufacturers. Predictable recurring revenue lets vendors keep investing in product development. That investment is what keeps the product ahead of your requirements as they grow.
+I think cloud is now the right default for most manufacturers. If your MES/MOM already runs in a central data centre, you carry the network dependency without the security and scalability benefits the cloud adds. Subscription licensing also gives vendors the predictable revenue to keep investing in a product you'll rely on for a decade or more.
 
-Flip it round. A vendor that relies on one-off licence sales may struggle to fund ongoing innovation, and that's a risk for a system you'll depend on for a decade or more.
+On-premises still has a place where connectivity really isn't available. For everyone else, I'd want a good reason not to choose cloud.
 
-Look at the total cost over the life of the system, not just the first year. And weigh how much the product will improve during that time.
-
-Which matters more to your operations team: control over the infrastructure, or never having to run another upgrade project?
+If your MES/MOM already runs in a central data centre, what's keeping it out of the cloud?

@@ -1,7 +1,7 @@
 ---
-title: "UNS vs MES: can a unified namespace replace your MES?"
-short: "UNS vs MES"
-description: "A unified namespace is an architecture for sharing live data. MES/MOM is an application that runs and records the operation. What each does, where they overlap, and why most factories end up using them together."
+title: "What is a unified namespace (UNS)? And where MES/MOM fits"
+short: "Unified namespace (UNS)"
+description: "A unified namespace (UNS) is an architecture for sharing live shopfloor data through one structured broker. What it is, what it does well, whether it can replace an MES, and how UNS and MES/MOM work together."
 published: 2026-10-23
 category: education
 art: network
@@ -9,11 +9,9 @@ art: network
 
 "Do we still need an MES if we build a unified namespace?"
 
-I hear this question a lot, usually after someone has watched a very convincing demo. It's a fair question. A unified namespace (UNS) has changed how many factories share shopfloor data, and some people argue it can replace a traditional MES.
+It's a common question, often after a convincing demo. A unified namespace (UNS) has changed how many factories share shopfloor data, and some people argue it can replace a traditional MES. Others see it as a way of connecting MES/MOM to everything else.
 
-I'll be honest about where I sit. I think a UNS is a genuinely useful pattern, but not a silver bullet. And the debate gets heated online, almost political at times, which I don't think helps anyone choose.
-
-So let's compare what each one actually does.
+This article sets out what a UNS is, what MES/MOM does, and where they fit together.
 
 ## What a UNS is
 
@@ -41,27 +39,31 @@ It also makes decisions in the moment. It can stop someone consuming a quarantin
 | **Traceability** | Not on its own | Lot and serial genealogy |
 | **Typical owner** | IT/OT architecture team | Operations, with IT support |
 
-## Where they overlap
+## Can a UNS replace your MES?
 
-The overlap is mostly in visibility. If what you need is live machine status, counts and a dashboard of what's running now, a UNS with some light applications around it can do a lot of that, quickly and cheaply.
+For visibility, partly. For running the operation, no.
+
+The overlap is mostly in visibility. If what you need is live machine status and counts on a dashboard, a UNS with some light applications around it can do a lot of that, quickly and cheaply.
 
 It gets harder as soon as you need history or transactions. OEE is a good example. You can publish the current OEE to a UNS. But you can't aggregate OEE figures by order or by shift from the published values. You have to go back to the raw data, stored somewhere that keeps it, and calculated consistently, ideally to ISO 22400.
 
 The same goes for genealogy and quality records, and anything an auditor will ask about. A UNS passes the data through. Something else has to keep it and give it meaning.
 
-## Why they usually work together
+## How they work together
 
-In practice, the best architectures I see use both. Machines and sensors publish to the namespace. MES/MOM subscribes to the machine data it needs, adds the context of the order, the material lot, the operator and the shift, and publishes that contextualised data back to the UNS. Other systems, such as a data platform or an AI application, then subscribe to rich operational events rather than raw signals.
+Many architectures use both. Machines and sensors publish to the namespace. MES/MOM subscribes to the machine data it needs, adds the context of the order, the material lot, the operator and the shift, and publishes that contextualised data back to the UNS. Other systems, such as a data platform or an AI application, then subscribe to rich operational events rather than raw signals.
 
-That makes MES/MOM one of the most valuable publishers into a UNS, not a competitor to it.
-
-## Which do you need?
+## Where to start
 
 - **Mainly visibility, at a few sites, with a strong internal team?** A UNS with some light applications may be enough to start, especially if you build it with the end in mind.
 - **Orders, quality, traceability and enforced processes?** You need MES/MOM, and a UNS can help connect it to everything else.
 - **Lots of systems that need the same data?** A UNS is worth considering whichever MES/MOM approach you take.
 - **Already running MES/MOM?** Publishing its contextualised data to a UNS is often the quickest way to make it useful to everyone else.
 
-I go further into the wider choice of approaches in [Code, build, stitch or configure](/post/build-vs-buy-mes), and into the protocols underneath in [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
+There's more on the wider choice of approaches in [Code, build, stitch or configure](/post/build-vs-buy-mes), and on the protocols underneath in [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
+
+## My view
+
+I think a UNS is a genuinely useful pattern, but not a silver bullet. The debate gets heated online, almost political at times, which doesn't help anyone choose. In the architectures I see working best, MES/MOM is one of the most valuable publishers into the UNS, rather than a competitor to it.
 
 Where does a UNS sit in your architecture today: alongside your MES, or instead of one?

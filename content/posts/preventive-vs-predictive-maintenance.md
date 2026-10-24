@@ -1,13 +1,13 @@
 ---
-title: "Preventive vs predictive maintenance: which one, for which asset"
-short: "Preventive vs predictive maintenance"
+title: "Reactive, preventive, condition-based or predictive maintenance: which strategy for which asset"
+short: "Maintenance strategies"
 description: "Reactive, preventive, condition-based and predictive maintenance compared. What each costs, what data it needs, and how to choose the right strategy for each asset."
 published: 2026-09-16
 category: education
 art: signal
 ---
 
-Predictive maintenance gets the headlines. But the right answer for most factories is a mix, chosen asset by asset. Some equipment should simply be run until it fails. A few critical assets are worth predicting.
+There are four broad maintenance strategies, from fixing things when they break to forecasting failures from data. Most factories use a mix, chosen asset by asset.
 
 ## Four strategies
 
@@ -44,10 +44,14 @@ A light bulb in a corridor runs to failure. A gearbox on the bottleneck with a v
 
 You can't predict failures you don't record accurately. Most factories still log downtime at the end of the shift, from memory, with a reason chosen from a list that's too long or too vague. Short stops aren't recorded at all.
 
-Get that right first: stops detected automatically from the equipment, with operators adding the reason while it's fresh, and production and maintenance working from the same record. [MES/MOM](/post/mes-functionality-maintenance) does that, and usage counters from production can drive preventive maintenance straight away. I go deeper in [Predictive maintenance needs data you probably aren't collecting yet](/post/predictive-maintenance-data).
+Get that right first: stops detected automatically from the equipment, with operators adding the reason while it's fresh, and production and maintenance working from the same record. [MES/MOM](/post/mes-functionality-maintenance) does that, and usage counters from production can drive preventive maintenance straight away. More in [Predictive maintenance needs data you probably aren't collecting yet](/post/predictive-maintenance-data).
 
 ## Where operators fit
 
 Operators notice problems first. Autonomous maintenance, such as cleaning and routine inspections, catches a lot before any sensor would. Give operators a fast way to raise a fault from the screen they already use, and those observations become data too.
+
+## My view
+
+Predictive maintenance gets the headlines, but I think the right answer for most factories is a mix. Some equipment should simply be run until it fails. A few critical assets are worth predicting. And none of it works without accurate downtime data.
 
 Which of your assets are you maintaining on a schedule that would be better served by condition, or the other way round?

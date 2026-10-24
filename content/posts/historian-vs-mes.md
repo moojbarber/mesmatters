@@ -37,7 +37,7 @@ It also *manages* the work: dispatching orders, guiding operators, enforcing che
 
 ## How they work together
 
-The strongest architectures use each for what it's good at:
+Many architectures use each for what it's good at:
 
 - **The historian keeps the high-frequency signals.** MES/MOM doesn't need every reading.
 - **MES/MOM keeps the events and the context.** Orders, lots, stops, reasons and results.
@@ -46,14 +46,12 @@ The strongest architectures use each for what it's good at:
 
 Some MES/MOM platforms include historian capabilities, and some historians have added event features. The roles stay roughly the same. More on how these layers fit with data lakes and AI in [Historians, data lakes and data fabric](/post/manufacturing-data-platforms).
 
-## Where the confusion costs money
-
-The trap is assuming a historian, or an IIoT platform full of tags, is enough to run the operation. It isn't designed to manage a production order or trace a lot. Manufacturers who try end up building those functions on top, which is effectively building a homegrown MES. I make the same argument in [Why IIoT doesn't replace MES](/post/iiot-vs-mes).
-
-The opposite trap is forcing MES/MOM to store every high-frequency signal. That's what the historian is for.
-
 ## Which do you need?
 
 If your main need is understanding process behaviour, a historian. If it's running orders, tracing material and managing quality and maintenance, MES/MOM. Most manufacturers past the first steps need both, connected.
+
+## My view
+
+The trap is assuming a historian, or an IIoT platform full of tags, is enough to run the operation. It isn't designed to manage a production order or trace a lot. Manufacturers who try end up building those functions on top, which is effectively building a homegrown MES. I make the same argument in [IIoT vs MES](/post/iiot-vs-mes). The opposite trap is forcing MES/MOM to store every high-frequency signal. That's what the historian is for.
 
 Does your historian know which order was running when that value spiked?

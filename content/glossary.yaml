@@ -5,7 +5,6 @@
   short: AI that plans and carries out tasks towards a goal, using other software, rather than only answering questions.
   body: The important word is acts. An agent might re-sequence a schedule or raise a maintenance request, which is powerful and also why it needs limits. On the shopfloor I'd start with agents that prepare information and recommend, with a person making the call.
   articles:
-  - ai-copilots-vs-agents
   - agentic-ai-mcp-manufacturing
   - practical-genai-for-the-shopfloor
   see_also:
@@ -121,7 +120,7 @@
   short: Software for managing maintenance work orders and spare parts.
   body: A CMMS is the lighter, maintenance-team version of EAM. Whatever you use, production and maintenance need to agree on downtime, so connect it to MES/MOM or run maintenance inside MES/MOM.
   articles:
-  - cmms-vs-eam
+  - cmms-vs-eam-vs-mes
   - eam-cmms-and-mes
   - mes-functionality-maintenance
   see_also:
@@ -191,6 +190,7 @@
   short: The time it takes to produce one unit, compared with the target.
   body: Cycle time variation across shifts and operators is one of the clearest signs of an unstandardised process. The target cycle time also drives the OEE performance figure, so keep it honest.
   articles:
+  - takt-time-vs-cycle-time-vs-lead-time
   - manufacturing-kpis-beyond-oee
   - what-is-oee-overall-equipment-effectiveness
   see_also:
@@ -219,7 +219,7 @@
   short: Software for managing the full lifecycle of physical assets, usually across many sites.
   body: EAM covers the asset register, maintenance plans, work orders and the financial side of assets. It makes sense for asset-heavy operations with advanced needs, connected to MES/MOM so downtime data is consistent.
   articles:
-  - cmms-vs-eam
+  - cmms-vs-eam-vs-mes
   - eam-cmms-and-mes
   - mes-functionality-maintenance
   see_also:
@@ -272,6 +272,7 @@
   short: The percentage of output that passes every quality check first time, with no rework.
   body: A line can have a decent OEE quality rate and still be quietly reworking a lot of what it makes. First-pass yield exposes that, so agree the definition before you compare numbers across sites.
   articles:
+  - first-pass-yield-vs-rolled-throughput-yield
   - manufacturing-kpis-beyond-oee
   see_also:
   - oee
@@ -340,6 +341,7 @@
   short: 'The fourth industrial revolution: connected machines and data brought together across the factory and the supply chain.'
   body: It's a useful label for the shift to connected, data-driven manufacturing, which started gaining traction in the 2010s. I'd still rather describe what something does than give it a version number. A smart factory is defined by outcomes, not by which revolution it belongs to.
   articles:
+  - industry-4-0-vs-industry-5-0
   - what-is-a-smart-factory
   - introduction-to-mes-and-smart-manufacturing
   see_also:
@@ -352,6 +354,7 @@
   short: A European Commission concept that builds on Industry 4.0 by putting people and sustainability at the centre of manufacturing.
   body: 'The idea is sound: technology should support people on the shopfloor rather than replace them. That''s what connected worker is about. Whether it needed a new number is another question.'
   articles:
+  - industry-4-0-vs-industry-5-0
   - what-is-a-smart-factory
   - connected-worker-one-app-not-five
   see_also:
@@ -401,7 +404,7 @@
   short: Software for managing lab samples, tests, results and certificates of analysis.
   body: In process industries, LIMS runs the lab while MES/MOM runs the batch. The two meet at the sample, which should be born with its batch context rather than a handwritten label.
   articles:
-  - qms-vs-lims
+  - qms-vs-lims-vs-mes
   - lims-and-mes
   see_also:
   - batch
@@ -492,7 +495,7 @@
   short: The ERP process that works out what to make and buy, and when, from demand, stock and lead times.
   body: MRP mostly assumes infinite capacity, or uses rough-cut checks. When sequencing needs to respect real constraints, that's the job of APS or a dispatch list in MES/MOM.
   articles:
-  - mrp-vs-mes
+  - erp-vs-mrp-vs-mes
   - what-is-erp
   - aps-vs-mes-scheduling
   see_also:
@@ -503,6 +506,7 @@
   short: The average time equipment runs between breakdowns.
   body: MTBF tells you how often equipment fails. It depends on accurate downtime data, which is why production and maintenance need to record the same stops.
   articles:
+  - mtbf-vs-mttr-vs-mttf
   - manufacturing-kpis-beyond-oee
   - mes-functionality-maintenance
   see_also:
@@ -513,11 +517,21 @@
   short: The average time it takes to fix equipment after a breakdown.
   body: Together with MTBF, MTTR shows whether reliability is improving and where maintenance effort is best spent.
   articles:
+  - mtbf-vs-mttr-vs-mttf
   - manufacturing-kpis-beyond-oee
   - mes-functionality-maintenance
   see_also:
   - mtbf
   - eam
+- term: MTTF
+  stands: Mean time to failure
+  short: The average time a non-repairable item, such as a bearing or a sensor, lasts before it fails and is replaced.
+  body: MTTF is for parts you replace rather than repair. It helps you set replacement intervals and decide how many spares to hold.
+  articles:
+  - mtbf-vs-mttr-vs-mttf
+  see_also:
+  - mtbf
+  - mttr
 - term: OEE
   stands: Overall equipment effectiveness
   short: Availability multiplied by performance multiplied by quality.
@@ -563,6 +577,7 @@
   short: An industrial computer that controls machines and processes.
   body: PLCs sit at levels 1 and 2 of ISA-95. MES/MOM reads from them, and sometimes sends setpoints down, but ERP should never be wired to them directly.
   articles:
+  - plc-vs-scada-vs-dcs-vs-mes
   - the-history-of-mes-and-digitalisation-in-manufacturing
   - smart-factory-technology-mistakes
   see_also:
@@ -595,7 +610,7 @@
   short: Software for enterprise quality processes such as CAPA, complaints, audits and document control.
   body: A QMS runs quality over weeks and months across sites and suppliers, while MES/MOM runs it at the point of production. Connect them so the right non-conformances reach the QMS with full context.
   articles:
-  - qms-vs-lims
+  - qms-vs-lims-vs-mes
   - qms-and-mes-quality
   see_also:
   - capa
@@ -620,11 +635,21 @@
   - bom
   - mbom
   - cycle-time
+- term: RTY
+  stands: Rolled throughput yield
+  short: The probability that a unit passes every step of a process right first time, found by multiplying the first-pass yield of each step.
+  body: Four steps at 95% each give an RTY of about 81%, even when final yield looks far better. That gap is the hidden factory of rework and re-inspection.
+  articles:
+  - first-pass-yield-vs-rolled-throughput-yield
+  see_also:
+  - fpy
+  - yield
 - term: SCADA
   stands: Supervisory control and data acquisition
   short: Systems that monitor and control equipment in real time.
   body: If SCADA is mainly used for visibility, MES/MOM can often cover it. In heavier process industries with real control loops, keep both and agree a clear boundary.
   articles:
+  - plc-vs-scada-vs-dcs-vs-mes
   - scada-vs-mes
   see_also:
   - plc
@@ -694,7 +719,7 @@
   short: An architecture where operational data is published to one central place, organised by the plant hierarchy.
   body: Done well, a UNS reduces point-to-point integrations and makes data easy to find and reuse. It shows what's happening now, so you still need applications around it to keep the history and add context. MES/MOM is one of the most valuable publishers into it.
   articles:
-  - uns-vs-mes
+  - unified-namespace-uns
   - opc-ua-mqtt-uns-explained
   - isa95-integration-patterns
   see_also:
@@ -802,6 +827,7 @@
   short: The pace of production needed to meet customer demand, calculated as available time divided by demand.
   body: Takt is set by the customer; cycle time is what the process actually achieves. If cycle time is longer than takt on the bottleneck, you can't meet demand.
   articles:
+  - takt-time-vs-cycle-time-vs-lead-time
   - manufacturing-kpis-beyond-oee
   see_also:
   - cycle-time
@@ -819,6 +845,7 @@
   short: The proportion of input material that ends up as good product.
   body: In food and process industries, yield is often the single biggest profit lever. Natural variation in raw materials means it has to be measured batch by batch.
   articles:
+  - first-pass-yield-vs-rolled-throughput-yield
   - manufacturing-kpis-beyond-oee
   - esg-needs-shopfloor-data
   see_also:
@@ -1258,9 +1285,9 @@
 - term: DCS
   stands: Distributed control system
   short: A control system for continuous and batch processes, with control spread across the plant.
-  body: Common in chemicals and other large process plants. Like SCADA, it sits at ISA-95 level 2, below MES/MOM.
+  body: Common in chemicals and other large process plants. It spans ISA-95 levels 1 and 2, below MES/MOM.
   articles:
-  - dcs-and-mes
+  - plc-vs-scada-vs-dcs-vs-mes
   - isa-88-and-isa-95
   - what-is-the-isa-95-model-and-where-does-mes-fit
   - scada-vs-mes
@@ -1273,7 +1300,7 @@
   body: Its big idea is separating the recipe from the equipment, so the same recipe can run on different units. It lives mainly in the control system and fits alongside ISA-95, which covers the layer above.
   articles:
   - isa-88-and-isa-95
-  - dcs-and-mes
+  - plc-vs-scada-vs-dcs-vs-mes
   see_also:
   - isa-95
   - dcs
@@ -1377,9 +1404,8 @@
   short: Tools that let people build screens and logic by dragging and configuring rather than writing code.
   body: Low-code covers more complex needs without touching the product's code, so it stays upgradeable.
   articles:
-  - low-code-vs-mes
-  - configure-dont-customise
   - build-vs-buy-mes
+  - configure-dont-customise
   see_also:
   - configuration
   - customisation
@@ -1469,7 +1495,7 @@
   short: An AI assistant built into the software people already use, answering questions in plain English.
   body: 'On the shopfloor, a copilot is only as good as its context: the order, material, recent stops and approved procedures.'
   articles:
-  - ai-copilots-vs-agents
+  - agentic-ai-mcp-manufacturing
   - ai-for-frontline-workers
   - practical-genai-for-the-shopfloor
   see_also:
@@ -1624,6 +1650,7 @@
   short: The time between starting a process and finishing it, such as from order to delivery or from material arrival to use.
   body: Planning relies on lead times being right. In continuous processes, the actual lead time through the line is also how time-based traceability works out which input went into which output.
   articles:
+  - takt-time-vs-cycle-time-vs-lead-time
   - what-is-erp
   - lot-vs-serial-traceability
   see_also:

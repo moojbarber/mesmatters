@@ -66,11 +66,13 @@ weekly:
   - manufacturing-data-platforms
   - smart-factory-glossary
   - mes-go-live
-  - uns-vs-mes
-  - low-code-vs-mes
-  - mrp-vs-mes
-  - dcs-and-mes
+  - unified-namespace-uns
+  - erp-vs-mrp-vs-mes
+  - plc-vs-scada-vs-dcs-vs-mes
   - isa-88-and-isa-95
-  - ai-copilots-vs-agents
-  - qms-vs-lims
-  - cmms-vs-eam
+  - qms-vs-lims-vs-mes
+  - cmms-vs-eam-vs-mes
+  - takt-time-vs-cycle-time-vs-lead-time
+  - mtbf-vs-mttr-vs-mttf
+  - first-pass-yield-vs-rolled-throughput-yield
+  - industry-4-0-vs-industry-5-0

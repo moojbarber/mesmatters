@@ -1,17 +1,15 @@
 ---
-title: "Connected worker vs MES: why your operators need one app, not five"
+title: "Connected worker vs MES: standalone app or built into MES/MOM?"
 short: "Connected worker vs MES"
-description: "Connected worker solves real frontline problems. Bought as a standalone tool, it creates new ones. Why it belongs inside your MES/MOM, not alongside it."
+description: "Connected worker tools digitise checklists, handover, skills and work instructions. MES/MOM runs production and quality. How they compare, the trade-offs between a standalone app and connected worker built into MES/MOM, and what to ask vendors."
 published: 2026-05-26
-category: thought-leadership
+category: education
 art: worker
 ---
 
-"Connected worker" is everywhere right now. Every vendor website. Every trade show stand.
+"Connected worker" is everywhere right now, on vendor websites and trade show stands. The frontline is where manufacturing is under the most pressure, and many operators still work from paper and whiteboards.
 
-And for once, the buzz is pointing at something real. The frontline is where manufacturing is under the most pressure, and the tools most operators have been given are terrible.
-
-So I'm a big believer in connected worker. What I want to unpick is *how* you buy it, because that decision will shape your operators' day for the next ten years.
+Connected worker tools and MES/MOM both put software in front of operators, so it's natural to ask how they compare. This article sets out what each does, and the two main ways to buy connected worker: as a standalone app, or built into MES/MOM.
 
 ## What is connected worker?
 
@@ -35,70 +33,54 @@ And the gap is getting wider. Deloitte and the Manufacturing Institute estimate 
 
 That changes the job of shopfloor software. It's no longer enough to record what happened. It has to guide a new starter through the process so they get it right on their second day, not their second year.
 
-Connected worker capabilities do exactly that. Which is why spending on them is growing fast, with Verdantix expecting the market to reach $3 billion by 2026, driven largely by labour shortages ([Verdantix](https://marketing.verdantix.com/blog/spending-on-connected-worker-solutions-market-set-to-reach-3-0-billion-by-2026-driven-by-the-need-to-tackle-labour-shortages-at-industrial-facilities)).
+Connected worker capabilities are designed to do that, and spending on them is growing fast, with Verdantix expecting the market to reach $3 billion by 2026, driven largely by labour shortages ([Verdantix](https://marketing.verdantix.com/blog/spending-on-connected-worker-solutions-market-set-to-reach-3-0-billion-by-2026-driven-by-the-need-to-tackle-labour-shortages-at-industrial-facilities)).
 
-## The problem with standalone connected worker platforms
+## What MES/MOM does for operators
 
-Standalone connected worker platforms solve real problems, and they're quick to get going. My concern is how far they take you before they bump into applications with much deeper functionality.
+MES/MOM runs the operation. For an operator, that means:
 
-Think about what an operator actually does in a shift. They don't just tick checklists. They:
+- Running production orders, with changeovers, counts, scrap and downtime
+- Performing quality inspections and taking samples for the lab
+- Consuming raw materials and labelling what they produce
+- Carrying out autonomous maintenance on their equipment
 
-- Run production orders, with changeovers, counts, scrap and downtime
-- Perform quality inspections and take samples for the lab
-- Consume raw materials and label what they produce
-- Carry out autonomous maintenance on their equipment
-- Manage tooling and setups
+Many MES/MOM platforms now include connected worker capabilities as well, such as checklists and handover.
 
-On its own, a standalone connected worker tool does none of that. It handles the people side well, but it has no production context. It doesn't know which order is running. It can't trigger a quality check because a batch of raw material changed. It can't stop someone consuming a quarantined lot.
+## Side by side
 
-What usually happens is this. You implement a connected worker tool for the quick wins: digital checklists, shift handover, task boards. It works. People like it. Then you realise you need production execution, quality and traceability, so you implement an MES/MOM alongside it.
+| | Standalone connected worker app | MES/MOM |
+| --- | --- | --- |
+| **Main job** | Digitise frontline tasks, knowledge and communication | Run production, quality, inventory and maintenance |
+| **Typical functions** | Checklists, handover, skills, SOPs, safety sign-offs | Orders, counts, downtime, inspections, genealogy, material |
+| **Speed to first value** | Very fast, often weeks | Moderate, though connected worker modules can be quick |
+| **Production context** | Only through integration | Built in: order, material, machine |
+| **Can it block an action?** | Usually only with integration | Yes, for example an unqualified operator or a quarantined lot |
+| **Data model** | Its own | Shared across the operation |
 
-Now your operators are using two systems. Two logins. Two places to look when something goes wrong. Your data model is split down the middle, and someone has to integrate the two.
+## Two ways to buy connected worker
 
-As soon as frontline workers need more than one application, that introduces friction. Nobody wants to feel like they're working blind, switching between screens and trying to piece together what's happening.
+**A standalone app.** Quick to get going, with good mobile screens and easy configuration. It handles the people side well. On its own it doesn't know which order is running, so it can't trigger a quality check when the material changes, or stop someone consuming a quarantined lot. When those needs arrive, the app is integrated with MES/MOM, or used alongside it. Operators then work across two systems, and each boundary is an interface to own. Some factories run this well for years, especially with a unified namespace connecting the apps to the rest of the stack. Some connected worker platforms also aim to be a single front end across several back-end applications, which can work, though the front end can become bespoke and fall behind the products underneath.
 
-Some connected worker platforms aim to be the single front end across several back-end applications. It's possible, but the back-end products were designed with their own screens in mind. A new front end layered on top tends to become bespoke, and can fall behind the versions underneath.
-
-As always, it depends on what you need. For some factories, a standalone tool alongside MES/MOM is a sensible choice. It just needs to be a deliberate one.
-
-## One screen, one source of truth
-
-My preference is connected worker **built into your MES/MOM**, rather than bolted on beside it.
-
-When it's part of the same platform, a lot changes:
+**Built into MES/MOM.** Checklists and skills sit on the same platform and data as production and quality. That gives them context:
 
 - **Checklists know the context.** A start-up checklist appears because this order is starting on this line, not because it's 6am.
 - **Quality checks are triggered by events.** A material change, a tool change or a count threshold prompts the right inspection automatically.
 - **Skills are enforced, not just recorded.** An operator who isn't qualified on a machine can't start an order on it.
-- **Shift handover is built from real data.** The incoming crew sees what ran, what stopped and what's waiting, rather than whatever someone remembered to write down.
+- **Shift handover is built from real data.** The incoming crew sees what ran, what stopped and what's waiting.
 
-The operator gets guided through their whole job, with full context of what's happening around them. And every action they take feeds the same data the quality team, the maintenance team and the planners are using.
+The trade-off is a bigger platform decision up front, and the depth of the connected worker features varies by vendor. Both routes are covered more broadly in [Code, build, stitch or configure](/post/build-vs-buy-mes).
 
-Connected worker is also how frontline knowledge gets into your single source of truth, instead of living in a separate app nobody else looks at.
-
-## Where connected worker fits in your roadmap
-
-I'm not telling you to skip the quick wins. Connected worker is often the best place to start. Going paperless on checklists and handover delivers value in weeks, and it builds trust with the shopfloor early.
-
-The question is what you start *on*.
-
-A standalone connected worker app gets you quick wins, often faster than anything else. Some factories run them well for years, especially alongside a unified namespace that connects them to the rest of the stack. The trade-off comes later: as you need checklists to know the order and the machine, or skills to block an action, the app has to be integrated with something deeper, and every boundary is an interface to own.
-
-An MES/MOM with connected worker built in gives you similar quick wins on day one, on a platform that grows into production, quality, inventory and maintenance. One system, one data model, with nothing to stitch together. In my experience that's where the most value ends up, but it's a choice to make with your eyes open. I compare the options in [Code, build, stitch or configure](/post/build-vs-buy-mes).
-
-Start with the end in mind. Connected worker is the front door. MOM is the house behind it. Make sure you're buying a door that's attached to a house.
-
-## A word of caution
-
-The connected worker market is full of lightweight tools that look brilliant in a demo. Nice mobile screens, quick to configure, an easy sell to a frustrated operations manager.
-
-Before you choose, think past today's problem. Ask any vendor:
+## Questions to ask vendors
 
 - What happens when we need production execution and quality on the same screen?
 - How does a checklist know which order, material and machine it relates to?
 - Can skills block an action, or only report on it?
-- If we add your MES/MOM modules later, is it the same data model or another integration?
+- If we add MES/MOM modules later, is it the same data model or another integration?
 
-The answers will tell you quickly how far the tool will take you, and what connecting it will cost.
+## My view
+
+I'm a big believer in connected worker, and it's often the best place to start: going paperless on checklists and handover delivers value in weeks and builds trust with the shopfloor early. My preference is connected worker built into MES/MOM rather than bolted on beside it. As soon as frontline workers need more than one application, that introduces friction, and nobody wants to switch between screens to piece together what's happening.
+
+Start with the end in mind. Connected worker is the front door. MOM is the house behind it. Make sure you're buying a door that's attached to a house.
 
 Have you implemented a standalone connected worker tool and then needed MES/MOM on top? I'd genuinely like to hear how that went.

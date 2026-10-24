@@ -9,7 +9,7 @@ art: bridge
 
 "We've got an ERP. Why would we need an MES?"
 
-It's the question I hear more than any other, usually from people who know ERP well and are meeting MES for the first time. It's a fair question. And the honest answer starts with giving ERP its due.
+It's one of the most common questions in manufacturing software, usually from people who know ERP well and are meeting MES for the first time. The answer starts with what ERP does well.
 
 ## What ERP does
 
@@ -45,7 +45,7 @@ The overlap is real, and it's where most of the confusion comes from.
 
 **Inventory.** ERP owns stock as a financial asset. MES/MOM owns line-side stock, work in progress and what each order consumed.
 
-**Shopfloor reporting.** Many ERPs can record operation completions and quantities, and some ERPs designed with manufacturing in mind cover detailed routings and shopfloor reporting well. That makes the gap to MES/MOM smaller, which is genuinely helpful.
+**Shopfloor reporting.** Many ERPs can record operation completions and quantities, and some ERPs designed with manufacturing in mind cover detailed routings and shopfloor reporting well. That makes the gap to MES/MOM smaller.
 
 What MES/MOM adds is a different layer of data: finer detail, captured in real time at the point of work, with every event tied to its order, batch, machine and operator.
 
@@ -61,7 +61,7 @@ It stops being enough when you need any of these:
 - Guided work instructions and error-proofing for operators
 - Maintenance working from the same downtime data as production
 
-You'd never use an MES to do the job of an ERP. So why use an ERP to do the job of an MES? And one firm rule: never wire ERP straight to the machines. That's what MES/MOM is for.
+Standard ISA-95 practice is also not to connect ERP directly to the machines. MES/MOM, or a connectivity layer, sits between them.
 
 ## How they work together
 
@@ -72,7 +72,7 @@ The usual pattern:
 3. MES/MOM sends back actuals: quantities produced, material consumed by lot, scrap and labour.
 4. ERP uses those actuals for costing, inventory and the next round of planning.
 
-ERP data gets *better* when MES/MOM is in place, because it receives validated actuals instead of estimates. That's the argument I make in [Implement MES to remove complexity from your ERP](/post/implementing-mes-can-simplify-your-erp).
+ERP data gets *better* when MES/MOM is in place, because it receives validated actuals instead of estimates. More in [Implement MES to remove complexity from your ERP](/post/implementing-mes-can-simplify-your-erp).
 
 Master data is the bit people underestimate. MES/MOM needs more detail than most ERP routings were set up with, so fix it at the source. See [Your ERP master data isn't ready for MES](/post/erp-master-data-for-mes).
 
@@ -87,6 +87,8 @@ A few questions settle most of it:
 
 The more answers point to the shopfloor, the more it belongs in MES/MOM.
 
-The best-run manufacturers I see don't treat this as ERP versus MES. They treat ERP as the backbone and add MES/MOM where the operation needs the detail.
+## My view
+
+You'd never use an MES to do the job of an ERP. So why use an ERP to do the job of an MES? The best-run manufacturers I see don't treat this as ERP versus MES. They treat ERP as the backbone and add MES/MOM where the operation needs the detail.
 
 Where does the line sit in your business today, and is it where you'd draw it if you started again?

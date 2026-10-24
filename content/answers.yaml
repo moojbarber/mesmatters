@@ -126,6 +126,9 @@ can-mes-improve-your-bottom-line:
 
 agentic-ai-mcp-manufacturing:
   summary: "Agentic AI is given an objective and acts towards it, often by using other software. MCP (Model Context Protocol) is an open standard for connecting agents to applications and data. On the shopfloor, start with agents that gather information and recommend, with a person making the call, before letting them act within tight limits."
+  faq:
+    - q: "What is the difference between an AI copilot and an AI agent?"
+      a: "A copilot helps a person when they ask, answering a question or drafting something, and the person decides what to do. An agent is given a goal, plans the steps and acts through business systems to complete the task, with a person approving or within agreed limits."
 
 ai-for-frontline-workers:
   summary: "AI for the frontline should give every operator your best operator's knowledge, not replace people. Copilots, shift summaries, real-time coaching and visual inspection support all work today. They're only useful when the AI has MES/MOM context: the order, material, recent stops, approved procedures and who's asking."
@@ -134,30 +137,30 @@ ai-ml-genai-on-the-shopfloor:
   summary: "AI is the broad category. Machine learning predicts outcomes from your historical data, and has been in factories for years through SPC and predictive maintenance. Generative AI creates content such as text and code, and helps people more than machines. Each needs different data, so ask which kind before you spend money."
 
 aps-vs-mes-scheduling:
-  summary: "ERP plans in weeks and months, and APS sequences in days and hours against finite capacity. MES/MOM works in minutes: it dispatches the work and records what actually happened. Many factories don't need APS at all. When sequencing is genuinely hard, decide deliberately where the scheduling logic lives and how actuals flow back to keep the plan honest."
+  summary: "ERP plans in weeks and months, usually assuming infinite capacity. APS sequences in days and hours against finite capacity, changeovers and constraints. MES/MOM takes the scheduled orders, dispatches them to the line, can do some basic scheduling, and records what actually happened. Many factories manage without APS; it helps most where sequencing is genuinely complex."
 
 cloud-vs-on-premises-mes:
-  summary: "MES/MOM is different from most business software because an outage can stop production. On-premises gives you control, while cloud removes infrastructure work and speeds up new sites. Hybrid keeps critical shopfloor functions local and runs the rest in the cloud, and for many manufacturers it's the practical answer."
+  summary: "On-premises MES/MOM runs on servers you manage; cloud MES/MOM runs on a platform the vendor manages, usually with an edge component at each site. Most multi-site on-premises MES already runs in a central data centre that sites reach over the network. Cloud adds large-scale security, easier scaling and continuous updates. On-premises fits sites without reliable connectivity."
   faq:
     - q: "Can MES run in the cloud?"
-      a: "Yes, and many vendors now deliver MES/MOM as SaaS. Cloud reduces the infrastructure you manage and brings regular updates without big upgrade projects. The main question to answer is what happens on the shopfloor if the connection drops. Check too how real-time machine integration is handled, and whether data residency meets your regulatory needs."
-    - q: "What is hybrid MES?"
-      a: "Hybrid runs some components locally at the edge, close to the machines, and the rest in the cloud. A common pattern keeps machine connectivity and critical shopfloor functions on site, with data buffered locally, so production carries on if the connection is lost, while the wider application, reporting and analytics run in the cloud. For many manufacturers it's the practical answer."
-    - q: "Why does licensing model matter for MES?"
-      a: "You'll depend on the system for a decade or more, so you need the vendor to keep improving it. Subscription licensing gives vendors predictable revenue to keep investing in the product. A vendor relying on one-off licence sales may struggle to fund that. Look at total cost over the life of the system, and how much the product will improve in that time."
+      a: "Yes, and many vendors now deliver MES/MOM as SaaS. Critical shopfloor functions and machine connectivity typically run on an edge component at each site, which buffers data and keeps production moving if the connection drops. The wider application, reporting and analytics run in the cloud."
+    - q: "Is cloud MES secure?"
+      a: "Major cloud platforms invest in security at a scale few manufacturers can match, with continuous monitoring, rapid patching and certifications such as ISO 27001 and SOC 2. Ask any vendor which certifications they hold, how often they patch and which regions your data can be held in."
+    - q: "When does on-premises MES still make sense?"
+      a: "Mainly where a site has no reliable connectivity, or in air-gapped environments such as defence and some critical infrastructure. Some regulated sites also value full control over when changes happen."
 
 configure-dont-customise:
   summary: "Out of the box, configuration, low-code, integrations, extensions and customisation are six different things. Only true customisation changes the product, and it costs you again at every upgrade. Your manufacturing processes are probably less unique than they feel, so pick a mature, configurable platform and challenge every gap."
 
 connected-worker-one-app-not-five:
-  summary: "Connected worker covers checklists, shift handover, skills, work instructions and safety sign-offs, and it solves real frontline problems. Bought as a standalone tool, it adds another app alongside the one operators already use to run production. It works best built into MES/MOM, on the same data and the same screen."
+  summary: "Connected worker tools digitise frontline work: checklists, shift handover, skills, work instructions and safety sign-offs. MES/MOM runs production and quality. Connected worker can be bought as a standalone app, which is quick to start but lacks production context, or built into MES/MOM on the same data. My preference is built in."
   faq:
     - q: "What is a connected worker platform?"
-      a: "Connected worker is the digital layer between frontline people and everything they need to do their job. In practice that's digital checklists and tasks, structured shift handover, skills and certification tracking enforced at the point of work, always-current documents and work instructions, and health and safety sign-offs. Each one replaces something that usually still runs on paper, whiteboards or memory."
+      a: "Connected worker is the digital layer between frontline people and everything they need to do their job. In practice that's digital checklists and tasks, structured shift handover, skills and certification tracking, always-current documents and work instructions, and health and safety sign-offs."
     - q: "Should connected worker be separate from MES?"
-      a: "I'd build it into MES/MOM rather than buy it as a standalone tool. Operators already run orders, perform inspections and consume material in MES/MOM. A separate app means another login and another screen, and it doesn't know which order is running. Inside the operational platform, checklists and instructions can react to what's actually happening."
+      a: "Both approaches are used. A standalone app is quick to start, but doesn't know which order is running unless it's integrated. Built into MES/MOM, checklists and skills can react to what's actually happening and block actions. My preference is built in, so operators work in one application."
     - q: "Why is connected worker growing so fast?"
-      a: "The workforce problem. Experienced people are retiring with knowledge that lives in their heads, and the people replacing them tend to stay for shorter periods. Shopfloor software now has to guide a new starter to get it right on their second day, not their second year, and connected worker capabilities are built for exactly that."
+      a: "The workforce problem. Experienced people are retiring with knowledge that lives in their heads, and the people replacing them tend to stay for shorter periods. Shopfloor software now has to guide a new starter to get it right on their second day, not their second year."
 
 contextualised-manufacturing-data:
   summary: "A machine signal that says \"stopped\" tells you very little. Context adds the order, product, shift, duration and reason, and that's what turns data into decisions and eventually AI. MES/MOM is where most of that context comes from, which is why point solutions that each see one slice lose so much of the value."
@@ -172,7 +175,7 @@ digital-work-instructions:
   summary: "A PDF on a tablet is paper on a screen. Proper digital work instructions appear automatically for the job that's running, are always the latest version, run step by step and capture confirmations as you go. Inside MES/MOM they can react to what's happening, which is how new starters get it right in days rather than months."
 
 discrete-vs-process-manufacturing:
-  summary: "Discrete products can in theory be taken apart; process products can't be turned back into their ingredients. Batch and assembly sit between the two, and mixed-mode, which combines them, is far more common than brochures suggest. The type shapes your units, KPIs, traceability, operator screens and which MES/MOM will fit."
+  summary: "Discrete manufacturing makes countable items that could in theory be taken apart, and includes repetitive, job shop and assembly. Process manufacturing transforms materials that can't be separated again, in batches or continuously. Mixed-mode combines the two, for example a batch that's then filled and packed. The type shapes units of measure, traceability, KPIs and which MES/MOM fits."
 
 eam-cmms-and-mes:
   summary: "EAM and CMMS manage assets and maintenance work orders, with ERP usually owning the financial side. MES/MOM knows what the asset is doing right now. They overlap on downtime and usage counters, so connect them through ERP or directly, or run maintenance inside MES/MOM, and make sure everyone agrees on what stopped and why."
@@ -424,6 +427,8 @@ build-vs-buy-mes:
       a: "It can be. Each department gets a tool that's very good at its job, and a well-governed unified namespace cuts point-to-point integrations. The cost is that every boundary is an interface to own and retest, some context is lost between systems, and someone has to design and govern the architecture."
     - q: "What does a homegrown MES really cost?"
       a: "More than it appears. There's no licence fee, but the developers' time is real money, and it grows with every new feature, upgrade and departure. Add the cost of keeping it secure and compatible, and the risk when the person who built it leaves. Compare costs over ten years, not just the first project."
+    - q: "Is low-code an alternative to MES?"
+      a: "Low-code platforms are one way of building your own shopfloor applications, and they're usually much faster than coding from scratch. Many MES/MOM platforms include low-code tools too. Plenty of manufacturers combine the two, with MES/MOM running the core operation and low-code filling gaps at the edges."
 
 preventive-vs-predictive-maintenance:
   label: The short version
@@ -443,52 +448,14 @@ historian-vs-mes:
       a: "Often yes, especially in process industries. MES/MOM doesn't need to keep every high-frequency reading, and a historian stores them efficiently for years. The two work best linked: MES/MOM tells you which machine and which hours were involved in a problem, and the historian shows exactly what the process was doing then."
 
 lot-vs-serial-traceability:
-  summary: "Lot traceability tracks quantities that share an identifier, serial traceability tracks every individual item, and time-based traceability traces continuous processes by time window. Choose per material and product, based on what customers and regulators require, what a recall would cost, and whether you'll service the product. Whatever the level, record consumption as it happens."
+  summary: "Lot traceability tracks quantities that share an identifier, serial traceability tracks every individual item, and time-based traceability traces continuous processes by time window. Lot and batch are often used interchangeably. The right level depends on the material and product, what customers and regulators require, and what a recall would cost."
   faq:
     - q: "What is the difference between lot and serial traceability?"
       a: "Lot traceability gives a quantity of material one identifier, so you know which lots went into which lots. Serial traceability gives every individual item its own identifier, so you know exactly which components went into exactly which unit. Serial is more precise in a recall but needs every item marked and scanned."
+    - q: "What is the difference between a lot and a batch?"
+      a: "Often nothing: many companies use the words interchangeably. Where there's a difference, a batch is usually the quantity made in one production run, and a lot is a quantity tracked under one identifier. In US pharmaceutical regulations, a lot can be a whole batch or a defined portion of one."
     - q: "Do I need serial traceability?"
-      a: "It depends on the product. Regulated devices, aerospace parts and products you'll service in the field often need serial-level records. Many other manufacturers are well served by lot-level traceability with tight lot sizes, recorded as material is actually consumed rather than backflushed afterwards."
-
-uns-vs-mes:
-  summary: "A unified namespace (UNS) is an architecture for sharing live data: systems publish what they know to a central broker, organised by the plant hierarchy, and others subscribe. MES/MOM is an application that runs the operation: it dispatches orders, guides operators, enforces checks and keeps the history with its context. A UNS shows what's happening now, so it doesn't replace MES/MOM on its own. Most factories get the best results using both, with MES/MOM publishing contextualised data into the UNS."
-  faq:
-    - q: "Can a unified namespace replace an MES?"
-      a: "For simple visibility, such as live machine status and counts, a UNS with some light applications can cover a lot. It doesn't replace MES/MOM for orders, quality, traceability and enforced processes, because a UNS shows the current state rather than keeping history or running business logic. Most architectures use both."
-    - q: "Why can't you calculate OEE in a UNS?"
-      a: "You can publish the current OEE to a UNS, but you can't aggregate published OEE figures by order or by shift. That needs the raw availability, performance and quality data, stored with its history and calculated consistently, which is the job of MES/MOM or another system that keeps the data."
-    - q: "How do UNS and MES/MOM work together?"
-      a: "Machines publish to the namespace. MES/MOM subscribes to the machine data it needs, adds the context of the order, material lot, operator and shift, and publishes that contextualised data back. Other systems, such as data platforms and AI applications, then subscribe to rich operational events rather than raw signals."
-
-low-code-vs-mes:
-  summary: "Low-code platforms give your own team the tools to build shopfloor apps quickly, which suits smaller companies with tech-savvy teams and narrow scope. MES/MOM platforms arrive with orders, genealogy, quality, inventory and maintenance already modelled on one data model, which suits larger and multi-site operations wanting a standard way of working. They're built for different kinds of business, and many manufacturers combine them, with low-code filling gaps at the edges."
-  faq:
-    - q: "Can a low-code platform replace an MES?"
-      a: "For a narrow scope and a capable internal team, a low-code platform can cover a lot of what a small plant needs. The trade-off is that you design the data model and build and support every app yourself, and it's easy to end up with disconnected apps. For broad scope across many sites, most manufacturers get more from configuring an MES/MOM platform."
-    - q: "Is low-code faster than building software from scratch?"
-      a: "Usually much faster. Configuring screens and logic in a low-code environment avoids writing and maintaining most of the code. Many MES/MOM platforms now include their own low-code tools for screens, reports and workflows as well."
-    - q: "Can you use low-code alongside MES/MOM?"
-      a: "Yes, and many manufacturers do. MES/MOM runs the core operation, and low-code apps handle site-specific or niche needs at the edges. If the MES/MOM has its own low-code tools, those apps can share the same data model."
-
-mrp-vs-mes:
-  summary: "MRP (material requirements planning) is the part of ERP that works out what to make and buy, and when, from demand, bills of materials, stock and lead times. MES/MOM runs that work on the shopfloor and records what actually happened, with context. MRP plans in days and weeks; MES/MOM works in seconds and minutes. Most manufacturers need both, and accurate feedback from MES/MOM is what keeps the MRP plan honest."
-  faq:
-    - q: "What is the difference between MRP and MES?"
-      a: "MRP plans: it calculates the production and purchase orders needed to meet demand. MES/MOM executes: it dispatches those orders on the shopfloor and records quantities, scrap, downtime, materials consumed and genealogy."
-    - q: "Is MRP part of ERP?"
-      a: "Yes. MRP is a planning process inside ERP, sometimes extended as MRP II to include capacity and other resources. MES/MOM is a separate shopfloor system that sits between ERP and the equipment, at ISA-95 level 3."
-    - q: "Why does MES data matter to MRP?"
-      a: "MRP plans from the stock and yields it believes are true. If production is booked late or rounded, the plan is built on the wrong numbers. MES/MOM captures what actually happened as it happens, so the next MRP run starts from reality."
-
-dcs-and-mes:
-  summary: "A distributed control system (DCS) controls continuous and batch processes in real time, holding temperatures, pressures, flows and levels at their setpoints at ISA-95 levels 1 and 2. MES/MOM manages the operation around the process at level 3: orders, materials, genealogy, quality, samples and the batch record. A DCS batch manager runs the recipe's control steps, while MES/MOM handles the order and materials, and keeps the evidence. Most process plants with complex materials or regulatory needs use both."
-  faq:
-    - q: "Does a DCS replace an MES?"
-      a: "No. A DCS controls the process. It typically doesn't manage material status and genealogy across the warehouse, coordinate sampling and lab results, handle orders from ERP or produce a complete electronic batch record. Those are MES/MOM jobs."
-    - q: "Where does a DCS end and MES/MOM begin?"
-      a: "The boundary is usually the batch. MES/MOM releases a batch order with the recipe and confirmed materials. The DCS or batch manager executes the control steps. Process data and events flow back to MES/MOM, which ties them to the order and the lots used."
-    - q: "Can we extend our DCS to do MES functions?"
-      a: "Some plants do, through custom code. It can work, but it puts business logic inside a control system that wasn't designed for it, so every change carries control-system risk and validation effort."
+      a: "It depends on the product. Regulated devices, aerospace parts and products serviced in the field often need serial-level records. Many other manufacturers use lot-level traceability with tight lot sizes, recorded as material is actually consumed rather than backflushed afterwards."
 
 isa-88-and-isa-95:
   summary: "ISA-88 (S88, IEC 61512) is the batch control standard, first published in 1995. It defines physical, process, procedural and recipe models, and separates recipes from equipment. ISA-95 (IEC 62264), with Part 1 published in 2000, standardises how manufacturing operations connect to the business, defining the four areas of operations and the data ERP and MES/MOM exchange. ISA-88 lives mainly at the control level, ISA-95 mainly at level 3 and the boundary with ERP, and batch process plants usually need both."
@@ -500,32 +467,92 @@ isa-88-and-isa-95:
     - q: "How do ISA-88 and ISA-95 fit together?"
       a: "They were designed to be compatible. ISA-88's process cells and units sit under ISA-95's areas and work centres, giving one equipment hierarchy from ERP to the control module. MES/MOM handles the batch order and materials, the batch manager runs the phases, ISA-95 describes the exchange between them and ISA-88 describes what happens inside."
 
-ai-copilots-vs-agents:
-  summary: "An AI copilot helps a person when they ask, answering questions or drafting content, while the person decides what to do. An AI agent is given a goal, plans the steps and acts through business systems to complete the task, either with a person approving or within limits the business has agreed. In manufacturing, copilots are usually the easier first step, and agents typically start with a human in the loop. Both depend on accurate, contextualised operational data."
+erp-vs-mrp-vs-mes:
+  summary: "ERP runs the business on one set of data, from finance to purchasing. MRP is the planning process inside ERP that works out what to make and buy, and when, from demand, bills of materials and stock. MES/MOM runs that work on the shopfloor and records what actually happened. Most manufacturers use all three, with MES/MOM feeding actuals back so the next MRP run starts from reality."
   faq:
-    - q: "What is the difference between an AI copilot and an AI agent?"
-      a: "A copilot responds to a request, one answer at a time, and the person acts. An agent works through multiple steps towards a goal, using tools and systems, and takes actions itself, with approval or within agreed limits."
-    - q: "What does an AI agent do in a factory?"
-      a: "Examples include raising a maintenance work order with the spare part reserved for a supervisor to approve, re-sequencing tomorrow's schedule around a late delivery, flagging materials that won't arrive in time, or preparing a deviation investigation pack for the quality team. They act through business systems, not by controlling equipment."
-    - q: "Should we start with copilots or agents?"
-      a: "Most manufacturers start with copilots, because they're low risk and quickly show where the data needs work. Agents follow, starting with tasks where a person approves every action, and move towards autonomy one decision at a time."
+    - q: "What is the difference between ERP, MRP and MES?"
+      a: "ERP manages the whole business: finance, sales, purchasing, inventory and planning. MRP is the part of ERP that calculates the production and purchase orders needed to meet demand. MES/MOM executes those orders on the shopfloor and records quantities, scrap, downtime and the materials consumed."
+    - q: "Is MRP part of ERP?"
+      a: "Usually, yes. MRP started as a standalone planning method in the 1960s and grew into MRP II, which added capacity and other resources. ERP then extended that across the whole business. Today MRP is normally a module or process inside ERP, though some smaller manufacturers use a standalone MRP system."
+    - q: "Can ERP or MRP run the shopfloor?"
+      a: "For a small, simple operation, ERP shopfloor reporting may be enough. Real-time machine data, lot-level genealogy with quality results, in-process checks and guided work instructions are MES/MOM functions. ERP and MRP plan in days and weeks, while MES/MOM works in minutes."
 
-qms-vs-lims:
-  summary: "A QMS (quality management system) runs the quality system across the business: CAPA, deviations, complaints, audits, document control and supplier quality. A LIMS (laboratory information management system) runs the lab: samples, test methods, results, instrument data and certificates of analysis. They overlap mainly at out-of-spec results and batch release. Regulated process manufacturers usually need both, connected to each other and to MES/MOM."
+qms-vs-lims-vs-mes:
+  summary: "A QMS runs the quality management system across the business, including CAPA, deviations, audits and controlled documents. A LIMS runs the lab, from samples to results and certificates of analysis. MES/MOM runs quality at the point of production, with in-process checks, SPC and holds tied to the order and the lot. Regulated manufacturers often need all of them, connected."
   faq:
     - q: "What is the difference between a QMS and a LIMS?"
       a: "A QMS manages the quality system: CAPAs, deviations, complaints, audits and controlled documents, over weeks and months. A LIMS manages the lab: samples, tests and results, over hours and days. One proves the system works and improves it; the other produces a trustworthy result for every sample."
-    - q: "Can a QMS replace a LIMS?"
-      a: "Only for a small lab with simple testing. Some QMS products include basic sample and test management, but a lab with instruments and a heavy sample load needs a dedicated LIMS. The reverse is also true: a LIMS with a CAPA module rarely replaces a full QMS."
-    - q: "How do QMS and LIMS work together?"
-      a: "The LIMS finds an out-of-specification result, and the investigation and any CAPA move into the QMS. Specifications need one master system. Batch release draws on LIMS results and the batch record from MES/MOM, and can be blocked by an open deviation in the QMS."
+    - q: "What does MES/MOM do for quality?"
+      a: "Strictly, MES covers production and MOM adds quality, inventory and maintenance. MOM quality functions run checks on the line, triggered by what's running: in-process inspections, SPC, sampling plans and holds. Every result is tied to the order, the lot and the operator, which feeds genealogy and the batch record."
+    - q: "How do QMS, LIMS and MES/MOM work together?"
+      a: "MES/MOM triggers samples and records line checks. The LIMS tests samples and returns results. Out-of-spec results and serious non-conformances move into the QMS for investigation and CAPA. Batch release draws on the batch record from MES/MOM and LIMS results, and can be blocked by an open deviation in the QMS."
 
-cmms-vs-eam:
-  summary: "A CMMS (computerised maintenance management system) helps a maintenance team plan and record work: work orders, preventive maintenance, labour and spare parts, usually at one site. An EAM (enterprise asset management) system does all of that and manages assets across their whole life, adding asset cost, depreciation, capital planning, reliability and multi-site standards. The difference is mostly scope and ownership. A CMMS suits smaller sites focused on getting maintenance done; an EAM suits asset-heavy, multi-site operations."
+cmms-vs-eam-vs-mes:
+  summary: "A CMMS helps a maintenance team plan and record work, such as work orders, preventive schedules and spare parts, usually at one site. An EAM does that and manages assets across their whole life and across sites, including cost and capital planning. MES/MOM knows what the equipment is doing right now, so it supplies the run hours, counts and downtime reasons that maintenance planning depends on."
   faq:
     - q: "What is the difference between a CMMS and an EAM?"
       a: "A CMMS focuses on maintenance work: requests, work orders, preventive schedules, labour and parts. An EAM covers the whole asset lifecycle, from acquisition to disposal, including asset value and capital planning, usually across many sites. An EAM includes CMMS capability, but not the other way round."
-    - q: "Do I need a CMMS or an EAM?"
-      a: "If your main problem is getting preventive maintenance done and recording work at one or two sites, a CMMS is usually enough. If you run many sites with expensive assets and leadership is asking about lifecycle cost and replacement planning, look at an EAM. If you already run an ERP suite, check whether its EAM module covers what you need first."
     - q: "Where does MES/MOM fit with CMMS and EAM?"
-      a: "MES/MOM knows what the machine is doing right now: run hours, cycle counts, downtime and downtime reasons. That feeds usage-based maintenance and MTBF in the CMMS or EAM. Many plants also handle operator-raised requests and autonomous maintenance in MES/MOM, alongside a CMMS or EAM for technician-led work."
+      a: "Strictly, MES covers production and MOM adds maintenance. MES/MOM records run hours, cycle counts, downtime and downtime reasons as they happen, which feeds usage-based maintenance and MTBF in the CMMS or EAM. Many plants also handle operator-raised requests and autonomous maintenance in MES/MOM."
+    - q: "Do I need a CMMS or an EAM?"
+      a: "A CMMS is often enough for getting preventive maintenance done and recording work at one or two sites. An EAM suits businesses with many sites and expensive assets, where leadership needs lifecycle cost and replacement planning. If you already run an ERP suite, its EAM module may cover what you need."
+
+unified-namespace-uns:
+  summary: "A unified namespace (UNS) is an architecture for sharing live data: systems publish what they know to a central broker, organised by the plant hierarchy, and others subscribe. MES/MOM is an application that runs the operation, dispatching orders, enforcing checks and keeping history with its context. A UNS shows the current state rather than running the operation, and many architectures use both."
+  faq:
+    - q: "What is a unified namespace?"
+      a: "A unified namespace is an architectural pattern rather than a product. Every system publishes its data to one central, structured place, usually an MQTT broker, organised by enterprise, site, area, line and machine. Any system that needs the data subscribes, which cuts point-to-point integrations."
+    - q: "Can a unified namespace replace an MES?"
+      a: "For simple visibility, such as live machine status and counts, a UNS with some light applications can cover a lot. On its own it doesn't run orders, enforce quality checks or keep genealogy, because it shows the current state rather than keeping history or running business logic."
+    - q: "How do UNS and MES/MOM work together?"
+      a: "Machines publish to the namespace. MES/MOM subscribes to the machine data it needs, adds the context of the order, material lot and operator, and publishes that contextualised data back. Other systems, such as data platforms and AI applications, can then subscribe to operational events rather than raw signals."
+
+plc-vs-scada-vs-dcs-vs-mes:
+  summary: "A PLC controls a machine in milliseconds. SCADA supervises equipment, showing operators what it's doing and raising alarms. A DCS controls whole process plants as one integrated system. MES/MOM sits above them all at ISA-95 level 3, managing orders, materials, quality and genealogy. Most plants have PLCs, and use SCADA or a DCS depending on the process, with MES/MOM above the control layer."
+  faq:
+    - q: "What is the difference between PLC, SCADA and DCS?"
+      a: "A PLC is a rugged controller for a machine or a section of a line. SCADA sits above PLCs to monitor and supervise equipment, often across a plant or a wide area. A DCS combines control and supervision in one integrated system designed for large continuous and batch process plants."
+    - q: "Where does MES fit with PLC, SCADA and DCS?"
+      a: "MES/MOM sits above the control layer at ISA-95 level 3. It reads data from PLCs, SCADA or the DCS, adds the context of the order and the lot, and manages the operation: dispatching orders, guiding operators and recording quality and genealogy. It passes results up to ERP."
+    - q: "Does a DCS replace an MES?"
+      a: "No. A DCS controls the process. It typically doesn't manage material status and genealogy across the plant, handle orders from ERP or produce a complete electronic batch record. In batch plants, the DCS batch manager runs the recipe's control steps while MES/MOM handles the order, the materials and the batch record."
+
+takt-time-vs-cycle-time-vs-lead-time:
+  summary: "Takt time is the pace you need to produce at to meet demand: available time divided by customer demand. Cycle time is how long it actually takes to complete a unit or a step. Lead time is how long the customer waits, from order to delivery, including all the waiting in between. Comparing them shows whether you can meet demand, and how much of lead time is waiting."
+  faq:
+    - q: "What is the difference between takt time and cycle time?"
+      a: "Takt time is set by customer demand: how often you need to finish a unit to keep up. Cycle time is set by the process: how long a unit or step actually takes. If cycle time is longer than takt time at the bottleneck, you can't meet demand without more time or capacity."
+    - q: "How do you calculate takt time?"
+      a: "Divide available production time by customer demand for the same period. A line that runs for 450 minutes a shift, with demand of 900 units a shift, has a takt time of 30 seconds."
+    - q: "What is the difference between lead time and cycle time?"
+      a: "Cycle time measures the work on a unit. Lead time measures the whole wait, from order to delivery, including queues, material waits, inspection and shipping. In most factories, processing is a small fraction of lead time."
+
+mtbf-vs-mttr-vs-mttf:
+  summary: "MTBF (mean time between failures) is how long a repairable asset runs, on average, before it fails. MTTR (mean time to repair) is how long it takes to get it running again. MTTF (mean time to failure) is how long a non-repairable item lasts before it's replaced. MTBF and MTTR combine into availability, and all of them depend on accurate downtime data."
+  faq:
+    - q: "What is the difference between MTBF and MTTF?"
+      a: "MTBF applies to repairable assets, such as machines and lines, and measures the average running time between failures. MTTF applies to items you replace rather than repair, such as bearings or sensors, and measures how long they last on average."
+    - q: "How do you calculate MTBF and MTTR?"
+      a: "MTBF is total operating time divided by the number of failures. MTTR is total repair time divided by the number of repairs. A filler that runs 1,000 hours with five failures has an MTBF of 200 hours; if those repairs took 15 hours in total, MTTR is three hours."
+    - q: "How do MTBF and MTTR relate to availability?"
+      a: "Availability equals MTBF divided by the sum of MTBF and MTTR. With an MTBF of 200 hours and an MTTR of three hours, availability is about 98.5%. Improving either figure raises availability, which also feeds OEE."
+
+first-pass-yield-vs-rolled-throughput-yield:
+  summary: "First pass yield (FPY) is the share of units that pass a step right first time, with no rework or scrap. Rolled throughput yield (RTY) multiplies the FPY of every step to give the probability a unit gets through the whole process right first time. Final yield counts reworked units as good, so it can look far better than RTY."
+  faq:
+    - q: "What is the difference between first pass yield and rolled throughput yield?"
+      a: "First pass yield measures right-first-time performance at one step, or for the line as a whole. Rolled throughput yield multiplies the first pass yield of each step, showing how many units get through every step without being touched again."
+    - q: "How do you calculate rolled throughput yield?"
+      a: "Multiply the first pass yield of each step together. Four steps at 95% each give an RTY of 0.95 × 0.95 × 0.95 × 0.95, which is about 81%."
+    - q: "Why is final yield misleading?"
+      a: "Final yield counts reworked units as good, so a part fixed twice looks the same as one that was right first time. The rework still costs time and capacity. FPY and RTY expose it, which is why they're widely used in Six Sigma."
+
+industry-4-0-vs-industry-5-0:
+  summary: "Industry 4.0 describes connected, data-driven manufacturing, with machines and systems integrated and analytics used to optimise operations. Industry 5.0, a European Commission concept from 2021, builds on it and adds human-centric, resilient and sustainable goals. Both depend on accurate, contextualised shopfloor data. In my view the outcomes matter more than the version numbers."
+  faq:
+    - q: "What is the difference between Industry 4.0 and Industry 5.0?"
+      a: "Industry 4.0 focuses on connectivity, data and automation to improve efficiency and productivity. Industry 5.0 builds on it, and asks technology to serve wider goals: supporting people on the shopfloor, making operations resilient to disruption and reducing environmental impact."
+    - q: "Does Industry 5.0 replace Industry 4.0?"
+      a: "No. The European Commission presents Industry 5.0 as a complement to Industry 4.0, not a replacement. It uses much the same technology, with more emphasis on people, resilience and sustainability."
+    - q: "Is Industry 5.0 about cobots?"
+      a: "Collaboration between people and robots is part of it, and some people use Industry 5.0 to mean exactly that. The European Commission's framing is broader, covering human-centric technology, resilience and sustainability across manufacturing."

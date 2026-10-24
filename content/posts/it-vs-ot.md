@@ -39,7 +39,7 @@ In [ISA-95](/post/what-is-the-isa-95-model-and-where-does-mes-fit) terms, OT liv
 
 **Timing.** Most IT systems are happy with a response in a second or two. A control loop may need an answer in milliseconds, every time.
 
-**Security.** In IT, you scan networks and patch quickly. In OT, an aggressive network scan can knock over a 20-year-old controller, and a patch may need the line stopped and the process revalidated. I go into this in [OT cybersecurity for MES/MOM](/post/ot-cybersecurity-for-mes).
+**Security.** In IT, you scan networks and patch quickly. In OT, an aggressive network scan can knock over a 20-year-old controller, and a patch may need the line stopped and the process revalidated. More in [OT cybersecurity for MES/MOM](/post/ot-cybersecurity-for-mes).
 
 ## Why convergence matters now
 
@@ -51,7 +51,7 @@ Convergence doesn't mean IT takes over OT, or the reverse. It means an agreed ar
 
 MES/MOM is the most IT-like thing on the shopfloor and the most OT-like thing in the IT landscape. It talks to ERP and the cloud on one side and to PLCs and SCADA on the other. That makes it both a bridge and a security boundary.
 
-It's also why ownership of MES/MOM can get political. My view: it needs both. IT owns the application, infrastructure, integrations and security. OT and operations own the processes, master data standards, screens and KPIs. In multi-site businesses that blend usually becomes a centre of excellence. More in [Rolling out across sites](/post/mes-multi-site-rollout).
+It's also why ownership of MES/MOM can get political. Some businesses give it to IT, some to operations, and some share it.
 
 ## Making it work
 
@@ -59,5 +59,9 @@ It's also why ownership of MES/MOM can get political. My view: it needs both. IT
 - **Use standard connectivity.** OPC UA and MQTT rather than custom interfaces. See [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
 - **Never connect the enterprise network straight to a PLC.** Go through MES/MOM or an industrial DMZ.
 - **Put people from both sides on the project team** from the start, not just at sign-off.
+
+## My view
+
+MES/MOM needs both. IT should own the application, infrastructure, integrations and security. OT and operations should own the processes, master data standards, screens and KPIs. In multi-site businesses that blend usually becomes a centre of excellence. More in [Rolling out across sites](/post/mes-multi-site-rollout).
 
 Who owns MES/MOM in your business today: IT, OT, or both?

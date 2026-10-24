@@ -7,9 +7,7 @@ category: education
 art: stack
 ---
 
-It's a question I get asked constantly: what's the difference between MES and MOM?
-
-You'll hear them used interchangeably. Vendors do it. Analysts do it. I've done it. But really they describe two different scopes, and that difference matters most when you're spending money.
+What's the difference between MES and MOM? You'll hear the terms used interchangeably, by vendors and analysts alike. Strictly, they describe two different scopes, and the difference matters most when you're spending money.
 
 ## The short answer
 
@@ -22,7 +20,7 @@ MES is one part of MOM. Not a synonym for it.
 
 MES is the original term. Early systems focused on the production process: release the order, run it, record what happened.
 
-Over time, the best systems grew. They took on quality, inventory and traceability, maintenance, logistics, tooling, energy, skills. At that point "execution system" didn't describe what they did any more, and MOM emerged as the more accurate name.
+Over time, many systems grew. They took on quality, inventory and traceability, maintenance, logistics, tooling, energy, skills. At that point "execution system" didn't describe what they did any more, and MOM emerged as the more accurate name.
 
 The ISA-95 standard defines four areas of manufacturing operations management: production, quality, inventory and maintenance. That's the MOM scope.
 
@@ -37,24 +35,24 @@ The ISA-95 standard defines four areas of manufacturing operations management: p
 
 ## Why the distinction matters
 
-It's not about acronyms. It's about whether everyone in operations is working from the same data.
+The scope decides whether everyone in operations works from the same data.
 
 Production and maintenance both care about downtime. Quality needs to know what's being produced and from which material. Inventory needs to know whether a lot has passed inspection. And the operator does a bit of all four, often in the same ten minutes.
 
 With MOM, that's one platform and one source of truth. The downtime production sees is the downtime maintenance sees. Quality checks are triggered by what's actually running. Traceability links every lot to its inspection results and process conditions.
 
-## The risk: a system per pillar
+## One platform, or a system per pillar?
 
-The alternative is buying a separate system for each pillar and integrating them. An OEE tool here, a quality system there, inventory in ERP, a CMMS for maintenance.
+The alternative to MOM is a separate system for each pillar, integrated together: an OEE tool here, a quality system there, inventory in ERP, a CMMS for maintenance.
 
-It looks sensible on paper. In practice:
+Separate systems can offer more depth in one area, and each can be bought and deployed on its own timeline. A complex warehouse may need a WMS. A heavy asset business may need a full EAM.
 
-- **Context is lost at every integration.** You only ever pass a subset of the data across.
-- **Integrations are costly and fragile.** They need retesting with every upgrade on either side.
-- **Operators juggle applications.** Different logins, different screens, lost context.
-- **You get several versions of the truth.** The very problem you set out to solve.
+The trade-offs:
 
-There are good reasons for a dedicated system in some areas. A complex warehouse may need a WMS. A heavy asset business may need a full EAM. Those should be deliberate choices about depth, with clear boundaries. What I'd avoid is drifting into four point solutions because each one fixed a single problem quickly.
+- **Context is lost at each integration.** Usually only a subset of the data passes across.
+- **Integrations need maintaining.** They need retesting with every upgrade on either side.
+- **Operators may juggle applications.** Different logins, different screens.
+- **Data can diverge.** Two systems can hold different versions of the same downtime or stock.
 
 ## What to ask a vendor
 
@@ -72,5 +70,9 @@ Those answers tell you far more than whether the brochure says MES or MOM.
 Use whichever your audience understands. MES is still the more common search term.
 
 On this site, **MES** means production execution, **MOM** means the whole operation, and **MES/MOM** means the category. For the full picture of what each pillar does, start with [What is MES/MOM?](/post/what-is-mes-and-why-is-it-important-in-manufacturing)
+
+## My view
+
+Dedicated systems should be deliberate choices about depth, with clear boundaries. What I'd avoid is drifting into four point solutions because each one fixed a single problem quickly.
 
 When you look at your own factory, how many systems does it take to cover those four pillars today?

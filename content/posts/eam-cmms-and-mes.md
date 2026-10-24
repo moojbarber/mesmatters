@@ -13,7 +13,7 @@ When those two views live in different systems with no link between them, you ge
 
 ## The systems involved
 
-**EAM** (Enterprise Asset Management) and **CMMS** (Computerised Maintenance Management System) manage assets over their whole life. The difference is mostly scale: EAM covers the full lifecycle and the financials across many sites; CMMS is the lighter, maintenance-team-focused version. I compare the two in more detail in [CMMS vs EAM](/post/cmms-vs-eam). Both handle:
+**EAM** (Enterprise Asset Management) and **CMMS** (Computerised Maintenance Management System) manage assets over their whole life. The difference is mostly scale: EAM covers the full lifecycle and the financials across many sites; CMMS is the lighter, maintenance-team-focused version. I compare the two in more detail in [CMMS vs EAM vs MES](/post/cmms-vs-eam-vs-mes). Both handle:
 
 - The asset register and hierarchy
 - Preventive maintenance plans and schedules

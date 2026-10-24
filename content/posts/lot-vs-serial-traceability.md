@@ -1,7 +1,7 @@
 ---
-title: "Lot vs serial traceability: how granular do you need to be?"
-short: "Lot vs serial traceability"
-description: "Lot, serial and time-based traceability compared. What each one costs, what regulators and customers expect, and how to choose the right level for each material and product."
+title: "Lot vs batch vs serial traceability: how granular do you need to be?"
+short: "Lot vs batch vs serial"
+description: "Lot, batch, serial and time-based traceability compared. The difference between a lot and a batch, what each level costs, what regulators and customers expect, and how to choose."
 published: 2026-10-06
 category: education
 art: tiles
@@ -20,6 +20,18 @@ The answer changes the cost of the project and the work operators do every shift
 **Time-based traceability.** In continuous processes, material doesn't arrive in neat lots. You trace by time window instead, using the actual lead time through the line to work out which input was in which output. It's how extrusion and many continuous food lines do it.
 
 Many manufacturers use a mix, such as serialised finished goods built from lot-tracked components.
+
+## Lot vs batch: is there a difference?
+
+The two words are often used interchangeably, and in many factories that's fine. But there's a useful distinction.
+
+A **batch** is a quantity made in one production run, usually under one order and one recipe. It's a production term, most common in process industries.
+
+A **lot** is a quantity that shares one identity for traceability, whether you made it or bought it. A supplier's delivery of resin is a lot. A batch you produce becomes a lot once it's identified and stored.
+
+The two don't always line up one to one. A large batch might be split into several lots for packing or release, and a lot of finished goods might be blended from more than one batch. In US pharmaceutical regulations, for example, a lot can be a whole batch or an identified portion of one.
+
+What matters is that your MES/MOM can record both, and the links between them, so that you can trace from any lot back to the batches and raw material lots that went into it.
 
 ## Side by side
 
