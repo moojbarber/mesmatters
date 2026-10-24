@@ -50,6 +50,7 @@ CATEGORIES = [
 CAT_BY_KEY = {c["key"]: c for c in CATEGORIES}
 
 NAV = [
+    {"key": "roles", "label": "Your role", "desc": "What it means for your job, CEO to operator", "href": "/roles/"},
     {"key": "paths", "label": "Learning paths", "desc": "Guided routes through the articles", "href": "/paths/"},
     {"key": "tools", "label": "Tools", "desc": "Calculators, checks and templates", "href": "/tools/"},
     {"key": "articles", "label": "Articles", "desc": "Everything, by topic or newest first", "href": "/articles"},
