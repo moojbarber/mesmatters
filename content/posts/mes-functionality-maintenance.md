@@ -62,6 +62,8 @@ Getting maintenance onto the same data as production is also the foundation for 
 
 A good MES/MOM with maintenance capability replaces the need for a CMMS, and I'd only add an EAM where asset management genuinely goes beyond it. If you do, draw the boundary carefully, so operators and production still see downtime and maintenance status in MES/MOM. Running a MOM and a CMMS side by side just creates another interface, and another version of the truth.
 
+If your MES covers production only, it can feed a separate CMMS, but a full MOM is the better overall solution.
+
 This article is part of the [MES functionality series](/post/mes-functionality-guide).
 
 Do your production and maintenance teams agree on last week's downtime?

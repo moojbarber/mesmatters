@@ -93,6 +93,8 @@ There's more on the boundaries with MES/MOM in [QMS and MES: closing the quality
 
 A good MOM platform replaces the need for a separate QMS. It covers quality on the line, and the quality system around it, from non-conformances and deviations to CAPA, audits and controlled documents, all tied to the order and the lot. Running a MOM and a separate QMS side by side makes little sense: you pay for the same capability twice, then stitch the two together.
 
+If you run an MES that covers production only, it can feed a separate QMS with non-conformances and results, and that works. But a full MOM is the better overall solution.
+
 A LIMS is different. Whether you need one depends on your industry and regulations, and plenty of manufacturers get by without.
 
 Where does an out-of-spec result go in your business today, and how long does it take to get there?

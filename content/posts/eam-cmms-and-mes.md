@@ -65,4 +65,6 @@ None of these is universally right. I'd ask one question first: who actually rai
 
 A good MOM platform replaces the need for a CMMS: requests, work orders, preventive maintenance and downtime in one place. Running a MOM and a CMMS side by side makes little sense. Where an EAM is needed for asset lifecycle and capital planning, use the rules above so MOM still owns downtime, and production and maintenance tell the same story.
 
+An MES that covers production only can feed a CMMS instead, using the same rules. But a full MOM is the better overall solution.
+
 So, look at last month's top five downtime causes in your MES. Now look at your maintenance system. Do they tell the same story?

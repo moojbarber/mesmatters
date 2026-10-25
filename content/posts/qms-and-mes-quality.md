@@ -70,4 +70,6 @@ So the same revision question comes up as with PLM: the operator must see the ap
 
 A good MOM platform replaces the need for a separate QMS, and that's the option I'd choose. Running both means paying twice for the same capability, and losing context at the boundary. If a QMS is already in place, connect it directly, so non-conformances arrive with their full context.
 
+With an MES that covers production only, feeding a QMS through one of the options above works well enough. But a full MOM is the better overall solution.
+
 When a CAPA concludes "retrain operators", how do you prove the retraining happened before that operator next ran the job? That's where [skills you can enforce](/post/skills-enforcement-shopfloor) close the loop.

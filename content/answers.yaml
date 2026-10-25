@@ -614,7 +614,7 @@ cmms-vs-eam-vs-mes:
     - q: "What is the difference between a CMMS and an EAM?"
       a: "A CMMS focuses on maintenance work: requests, work orders, preventive schedules, labour and parts. An EAM covers the whole asset lifecycle, from acquisition to disposal, including asset value and capital planning, usually across many sites. An EAM includes CMMS capability, but not the other way round."
     - q: "Where does MES/MOM fit with CMMS and EAM?"
-      a: "Strictly, MES covers production and MOM adds maintenance. A good MOM platform handles day-to-day maintenance itself, from operator requests to work orders and preventive maintenance on actual run hours, which replaces the need for a CMMS. Where an EAM is needed, MOM feeds it run hours, counts and downtime for asset management."
+      a: "Strictly, MES covers production and MOM adds maintenance. A good MOM platform handles day-to-day maintenance itself, from operator requests to work orders and preventive maintenance on actual run hours, which replaces the need for a CMMS. An MES focused on production only can instead feed a CMMS with run hours, counts and downtime, and either can feed an EAM for asset management."
     - q: "Do I need a CMMS or an EAM?"
       a: "If you run a MOM platform with maintenance capability, you don't need a CMMS. Without one, a CMMS is often enough for getting preventive maintenance done. An EAM suits businesses with many sites and expensive assets, where leadership needs lifecycle cost and replacement planning. If you already run an ERP suite, its EAM module may cover what you need."
 

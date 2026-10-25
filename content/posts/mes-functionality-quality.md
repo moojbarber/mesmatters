@@ -103,6 +103,8 @@ Platforms with a narrower quality scope pass serious or repeat issues to a separ
 
 Quality data is most valuable when it sits on the same platform as production and inventory. That's what lets a check be triggered by what's actually running, and a result follow the material wherever it goes. A good MOM replaces the need for a separate QMS. Running both side by side means paying for the same capability twice, then stitching them together.
 
+An MES focused on production can feed a separate QMS instead, but a full MOM is the better overall solution.
+
 This article is part of the [MES functionality series](/post/mes-functionality-guide). Related: [Your traceability probably isn't as good as you think](/post/manufacturing-traceability).
 
 How many of your quality checks are still recorded on paper?
