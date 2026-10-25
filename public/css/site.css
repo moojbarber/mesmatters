@@ -1498,3 +1498,14 @@ button.ttt-label:hover{background:rgba(255,255,255,.04)}
 @media (max-width:1100px){.ro-grid{grid-template-columns:minmax(0,1fr)}}
 .ro-side .ro-hzbar{gap:3px}
 .ro-side .ro-hzbar span{font-size:10.5px;padding:7px 0;overflow:hidden;text-overflow:clip}
+/* role comparison overlay */
+.ro-ov{fill:color-mix(in srgb,var(--oc) 10%,transparent);stroke:var(--oc);stroke-width:2;stroke-dasharray:6 4;stroke-linejoin:round;animation:roGrow .6s cubic-bezier(.2,.8,.2,1) both;transform-box:view-box;transform-origin:150px 150px}
+.ro-cmp{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;margin-top:12px}
+.ro-cmp-label{font:700 10.5px/1 var(--disp);letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+.ro-cmp-pill{display:inline-flex;align-items:center;gap:7px;padding:6px 10px;border-radius:99px;border:1px solid color-mix(in srgb,var(--oc) 55%,transparent);background:color-mix(in srgb,var(--oc) 12%,transparent);color:#fff;font:500 13px/1 var(--body);cursor:pointer}
+.ro-cmp-pill i{width:14px;height:0;border-top:2px dashed var(--oc)}
+.ro-cmp-pill b{font-weight:600;color:var(--mut);margin-left:2px}
+.ro-cmp-pill:hover b{color:#fff}
+.ro-cmp-add{appearance:none;-webkit-appearance:none;font:500 13px/1 var(--body);color:var(--tx);background:rgba(255,255,255,.05) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23a9a4d6' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 10px center;border:1px dashed rgba(255,255,255,.25);border-radius:99px;padding:7px 28px 7px 12px;cursor:pointer}
+.ro-cmp-add:hover{border-color:var(--b)}
+.ro-cmp-add option,.ro-cmp-add optgroup{background:#120f33;color:var(--tx)}

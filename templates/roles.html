@@ -58,9 +58,11 @@
               {% for ax in ro.radar.axes %}<line class="ro-axis" x1="150" y1="150" x2="{{ ax.x }}" y2="{{ ax.y }}"/>{% endfor %}
               <g class="ro-shape"><polygon points="{{ r.radar_points }}" fill="url(#rg-{{ r.id }})" stroke="{{ r.color }}"/>
               {% for p in r.radar_dots %}<circle cx="{{ p.x }}" cy="{{ p.y }}" r="4"/>{% endfor %}</g>
+              <g class="ro-overlay"></g>
               {% for ax in ro.radar.axes %}<text class="ro-axl{% if ax.key in r.why %} hot{% endif %}" x="{{ ax.lx }}" y="{{ ax.ly }}" text-anchor="{{ ax.anchor }}">{{ ax.label }}</text>{% endfor %}
             </svg>
             <figcaption>Where the value lands for a {{ r.name|lower if r.name not in ['CEO','CFO','COO','CIO'] else r.name }}</figcaption>
+            <div class="ro-cmp" data-self="{{ r.id }}"></div>
           </figure>
 
           <div class="ro-side">
@@ -152,6 +154,7 @@
   {{ cta(base, linkedin, kit_form) }}
 </div>
 
+<script id="ro-data" type="application/json">{{ ro.js|tojson }}</script>
 <script>
 (function () {
   var root = document.getElementById('explorer'); if (!root) return;
@@ -195,6 +198,51 @@
   // keep the selected role visible in the scrolling strip on small screens
   (function () { var on = root.querySelector('.ro-chip[aria-selected=true]'); var strip = root.querySelector('.ro-tabs');
     if (on && strip && strip.scrollWidth > strip.clientWidth) strip.scrollLeft = on.offsetLeft - strip.clientWidth / 2 + on.offsetWidth / 2; })();
+  // compare: layer up to two extra roles onto every chart
+  var data = JSON.parse(document.getElementById('ro-data').textContent);
+  var byId = {}; data.roles.forEach(function (r) { byId[r.id] = r; });
+  var CMP_COLORS = ['#ffb86b', '#9dffcf'], MAX = 2, cmp = [];
+  try { cmp = (new URLSearchParams(location.search).get('compare') || '').split(',').filter(function (x) { return byId[x]; }).slice(0, MAX); } catch (e) {}
+  var NS = 'http://www.w3.org/2000/svg';
+  function renderCmp() {
+    [].slice.call(root.querySelectorAll('.ro-panel')).forEach(function (p) {
+      var self = p.id.slice(5), list = cmp.filter(function (x) { return x !== self; });
+      var g = p.querySelector('.ro-overlay'); while (g.firstChild) g.removeChild(g.firstChild);
+      list.forEach(function (id) {
+        var i = cmp.indexOf(id), poly = document.createElementNS(NS, 'polygon');
+        poly.setAttribute('points', byId[id].points); poly.setAttribute('class', 'ro-ov');
+        poly.style.setProperty('--oc', CMP_COLORS[i]); g.appendChild(poly);
+      });
+      var box = p.querySelector('.ro-cmp'); if (!box) return;
+      var html = '<span class="ro-cmp-label">Compare with</span>';
+      list.forEach(function (id) {
+        html += '<button type="button" class="ro-cmp-pill" data-rm="' + id + '" style="--oc:' + CMP_COLORS[cmp.indexOf(id)] + '" aria-label="Remove ' + byId[id].name + ' from the chart"><i></i>' + byId[id].name + '<b aria-hidden="true">×</b></button>';
+      });
+      if (list.length < MAX) {
+        html += '<label class="sr" for="cmp-' + self + '">Add a role to compare</label><select class="ro-cmp-add" id="cmp-' + self + '"><option value="">+ Add a role</option>';
+        var grp = '';
+        data.roles.forEach(function (r) {
+          if (r.id === self || cmp.indexOf(r.id) > -1) return;
+          if (r.group !== grp) { if (grp) html += '</optgroup>'; html += '<optgroup label="' + r.group + '">'; grp = r.group; }
+          html += '<option value="' + r.id + '">' + r.name + '</option>';
+        });
+        html += '</optgroup></select>';
+      }
+      box.innerHTML = html;
+    });
+    try { var u = new URL(location.href); if (cmp.length) u.searchParams.set('compare', cmp.join(',')); else u.searchParams.delete('compare'); history.replaceState(null, '', u); } catch (e) {}
+  }
+  root.addEventListener('change', function (e) {
+    if (!e.target.classList.contains('ro-cmp-add') || !e.target.value) return;
+    var keep = e.target.closest('.ro-panel').id;
+    cmp.push(e.target.value); cmp = cmp.slice(-MAX); renderCmp();
+    var s = document.querySelector('#' + keep + ' .ro-cmp-add, #' + keep + ' .ro-cmp-pill:last-of-type'); if (s) s.focus();
+  });
+  root.addEventListener('click', function (e) {
+    var b = e.target.closest('.ro-cmp-pill'); if (!b) return;
+    cmp = cmp.filter(function (x) { return x !== b.dataset.rm; }); renderCmp();
+  });
+  renderCmp();
   var want = null; try { want = new URLSearchParams(location.search).get('role'); } catch (e) {}
   if (want && panels[want] && want !== root.dataset.default) select(want);
 })();

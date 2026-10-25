@@ -924,6 +924,7 @@ def build(base, relative=False, include_scheduled=False):
     ev = ro["one_event"]
     ev["views"] = [{"id": v[0], "name": roles_by[v[0]]["name"], "color": roles_by[v[0]]["color"], "text": v[1]} for v in ev["views"]]
     ro.update(groups=list(groups.values()), horizons=hz, radar={"axes": axes, "rings": rings}, default="plant-manager")
+    ro["js"] = {"roles": [{"id": r["id"], "name": r["name"], "group": r["group_name"], "points": r["radar_points"]} for r in ro["roles"]]}
     write("roles/index.html", "roles.html", active="roles", seo_title="What MES/MOM means for your role: CEO to operator | Shopfloor Matters",
           description="Pick your role, from CEO and CFO to plant manager, quality manager and operator, to see what you're measured on, what gets in the way, and which shopfloor applications matter most to you.",
           canonical=f"{SITE}/roles/", og_image=f"{SITE}/images/og/page-education.png", ro=ro,
