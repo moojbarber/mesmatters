@@ -1,7 +1,7 @@
 ---
 title: "What is a unified namespace (UNS)? And where MES/MOM fits"
 short: "Unified namespace (UNS)"
-description: "A unified namespace (UNS) is an architecture for sharing live shopfloor data through one structured broker. What it is, what it does well, whether it can replace an MES, and how UNS and MES/MOM work together."
+description: "A unified namespace shares live data through a central broker. What a UNS is, whether it can replace MES, and how UNS and MES/MOM work together."
 published: 2026-10-23
 category: education
 art: network

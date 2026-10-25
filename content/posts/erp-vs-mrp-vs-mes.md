@@ -1,7 +1,7 @@
 ---
 title: "ERP vs MRP vs MES: what each one does, and how they fit together"
 short: "ERP vs MRP vs MES"
-description: "ERP runs the business, MRP plans what to make and buy, and MES/MOM runs the work on the shopfloor. How the three differ, where they overlap, and why most manufacturers end up needing all of them."
+description: "ERP runs the business, MRP plans what to make and buy, and MES/MOM runs it on the shopfloor. What each does, and how the three fit together."
 published: 2026-10-23
 category: education
 art: gantt

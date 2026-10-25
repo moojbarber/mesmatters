@@ -1,7 +1,7 @@
 ---
 title: "MES vs ERP: what each one does, and why most manufacturers need both"
 short: "MES vs ERP"
-description: "ERP plans and accounts for production; MES/MOM runs it on the shopfloor. The differences in scope, users, timing and data, where they overlap, and how to decide where the line sits."
+description: "ERP runs the business; MES/MOM runs the shopfloor. What each one does, where they overlap, and how they work together in most manufacturers."
 published: 2026-06-03
 category: education
 art: bridge

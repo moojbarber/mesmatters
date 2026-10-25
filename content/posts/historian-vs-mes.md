@@ -1,7 +1,7 @@
 ---
 title: "Historian vs MES: what each one stores, and why you usually want both"
 short: "Historian vs MES"
-description: "A historian stores high-frequency machine signals; MES/MOM records operational events with context. How they differ, how they work together, and which questions each one answers."
+description: "A historian stores high-frequency process values; MES/MOM records events with context and runs the work. What each stores, and how they work together."
 published: 2026-09-30
 category: education
 art: pipeline

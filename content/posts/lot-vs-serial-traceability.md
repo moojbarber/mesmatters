@@ -1,7 +1,7 @@
 ---
 title: "Lot vs batch vs serial traceability: how granular do you need to be?"
 short: "Lot vs batch vs serial"
-description: "Lot, batch, serial and time-based traceability compared. The difference between a lot and a batch, what each level costs, what regulators and customers expect, and how to choose."
+description: "Lot, batch, serial and time-based traceability explained: how granular you need to be, whether lot and batch differ, and how to choose per product."
 published: 2026-10-06
 category: education
 art: tiles

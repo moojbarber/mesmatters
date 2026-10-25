@@ -1,7 +1,7 @@
 ---
 title: "PLC vs SCADA vs DCS vs MES: the automation stack explained"
 short: "PLC vs SCADA vs DCS vs MES"
-description: "PLCs control machines, SCADA supervises them, a DCS controls whole process plants, and MES/MOM manages the operation above them all. What each layer does, where they overlap, and how they connect."
+description: "PLCs control machines, SCADA supervises them, a DCS controls process plants and MES/MOM manages the operation. The automation stack, layer by layer."
 published: 2026-10-24
 category: education
 art: stack

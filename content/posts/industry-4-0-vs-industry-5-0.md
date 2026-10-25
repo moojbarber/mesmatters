@@ -1,7 +1,7 @@
 ---
 title: "Industry 4.0 vs Industry 5.0: what's actually different?"
 short: "Industry 4.0 vs 5.0"
-description: "Industry 4.0 is about connected machines and data. Industry 5.0, a European Commission concept, puts people, resilience and sustainability at the centre. What each one means on the shopfloor, and why they belong together."
+description: "Industry 4.0 is about connected machines and data. Industry 5.0 adds people, resilience and sustainability. What's actually different on the shopfloor."
 published: 2026-10-24
 category: thought-leadership
 art: growth

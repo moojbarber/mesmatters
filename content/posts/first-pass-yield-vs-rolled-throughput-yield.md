@@ -1,7 +1,7 @@
 ---
-title: "First pass yield vs rolled throughput yield: which quality metric tells the truth?"
+title: "First pass yield vs rolled throughput yield: which one tells the truth?"
 short: "FPY vs RTY"
-description: "First pass yield measures how many units pass one step right first time. Rolled throughput yield multiplies those steps together to show how many make it through the whole process with no rework. How to calculate both, and why final yield can hide the problem."
+description: "First pass yield measures right first time at one step. Rolled throughput yield multiplies every step. How to calculate both, and what final yield hides."
 published: 2026-10-24
 category: education
 art: spc

@@ -138,6 +138,13 @@ ai-ml-genai-on-the-shopfloor:
 
 aps-vs-mes-scheduling:
   summary: "ERP plans in weeks and months, usually assuming infinite capacity. APS sequences in days and hours against finite capacity, changeovers and constraints. MES/MOM takes the scheduled orders, dispatches them to the line, can do some basic scheduling, and records what actually happened. Many factories manage without APS; it helps most where sequencing is genuinely complex."
+  faq:
+    - q: "What is the difference between APS and ERP scheduling?"
+      a: "ERP schedules in weeks and days, usually assuming infinite capacity, and works out what to make and when. APS sequences orders in days and hours against finite capacity, taking account of changeovers, tooling, labour and material. Many ERP suites include APS as a module."
+    - q: "When is ERP scheduling enough?"
+      a: "More often than people expect. With a handful of lines, stable products and simple changeovers, ERP scheduling plus a dispatch list in MES/MOM can cover most needs. APS helps most where sequencing is genuinely complex, such as sequence-dependent changeovers or shared tools."
+    - q: "Does MES do scheduling?"
+      a: "MES/MOM mainly takes the scheduled orders and dispatches them to the line, and some platforms add basic short-interval scheduling for the next shift or day. Its biggest contribution is feeding actual cycle times and downtime back, so the next plan is built on reality."
 
 cloud-vs-on-premises-mes:
   summary: "On-premises MES/MOM runs on servers you manage; cloud MES/MOM runs on a platform the vendor manages, usually with an edge component at each site. Most multi-site on-premises MES already runs in a central data centre that sites reach over the network. Cloud adds large-scale security, easier scaling and continuous updates. On-premises fits sites without reliable connectivity."
@@ -176,6 +183,13 @@ digital-work-instructions:
 
 discrete-vs-process-manufacturing:
   summary: "Discrete manufacturing makes countable items that could in theory be taken apart, and includes repetitive, job shop and assembly. Process manufacturing transforms materials that can't be separated again, in batches or continuously. Mixed-mode combines the two, for example a batch that's then filled and packed. The type shapes units of measure, traceability, KPIs and which MES/MOM fits."
+  faq:
+    - q: "What is the difference between discrete and process manufacturing?"
+      a: "Discrete manufacturing makes countable items that could in theory be taken apart, such as cars or electronics. Process manufacturing transforms materials that can't be separated again, such as food or pharmaceuticals, measured by weight or volume and made to recipes."
+    - q: "What are the main types of manufacturing?"
+      a: "Discrete splits into repetitive, job shop and assembly. Process splits into batch and continuous. Mixed-mode combines them, such as a food plant that mixes a batch and then fills and packs it into cases. Production strategy, from make to stock to engineer to order, is a separate choice."
+    - q: "Why does the type of manufacturing matter for MES?"
+      a: "It shapes units of measure, how traceability works, which KPIs matter and what operators need on screen. Not every MES handles every type equally well, so ask vendors to show your type running, including any handovers between process and discrete steps."
 
 eam-cmms-and-mes:
   summary: "EAM and CMMS manage assets and maintenance work orders, with ERP usually owning the financial side. MES/MOM knows what the asset is doing right now. They overlap on downtime and usage counters, so connect them through ERP or directly, or run maintenance inside MES/MOM, and make sure everyone agrees on what stopped and why."
@@ -341,6 +355,13 @@ what-is-a-smart-factory:
 
 wms-vs-mes-inventory:
   summary: "ERP owns inventory as a business asset and WMS owns it inside the warehouse. MES/MOM owns it on the shopfloor, including line-side stock and work in progress. Many manufacturers don't need a WMS at all. The boundary that matters is the line, so agree who requests, delivers, receives and records consumption."
+  faq:
+    - q: "What is the difference between a WMS and MES?"
+      a: "A WMS manages the warehouse: receiving, putaway, storage, picking and shipping. MES/MOM manages material once it reaches production: line-side stock and work in progress, with consumption recorded by order and lot. ERP stays the financial owner of the stock."
+    - q: "Do I need a WMS if I have MES?"
+      a: "Not always. Many plants with simple warehousing manage with ERP inventory plus MES/MOM at the line. A WMS earns its place with high volumes, complex storage, automation or demanding picking, where warehouse execution needs its own system."
+    - q: "Where should the boundary between WMS and MES sit?"
+      a: "Usually at the line. The WMS owns stock until it's delivered to a line-side location, and MES/MOM owns it from there until it's consumed or produced. Whatever the split, one system should own each location, and quality status must travel with the material."
 
 the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence:
   label: The short version

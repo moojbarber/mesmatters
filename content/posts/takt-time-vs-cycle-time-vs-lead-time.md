@@ -1,7 +1,7 @@
 ---
 title: "Takt time vs cycle time vs lead time: what each one measures"
 short: "Takt vs cycle vs lead time"
-description: "Takt time is the pace customers demand, cycle time is how fast you actually work, and lead time is how long the customer waits. How to calculate each, how they relate, and where MES/MOM gets the real numbers."
+description: "Takt time is the pace demand sets, cycle time is how fast you work and lead time is how long customers wait. How to calculate each, and how they relate."
 published: 2026-10-24
 category: education
 art: timeline

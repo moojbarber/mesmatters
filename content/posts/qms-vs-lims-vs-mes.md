@@ -1,7 +1,7 @@
 ---
 title: "QMS vs LIMS vs MES: which quality system does what?"
 short: "QMS vs LIMS vs MES"
-description: "A QMS runs the quality management system, a LIMS runs the lab, and MES/MOM runs quality at the point of production. What each one does, where they overlap, and which you need."
+description: "A QMS runs the quality system, a LIMS runs the lab and MES/MOM runs quality on the line. What each one does, where they overlap, and which you need."
 published: 2026-10-24
 category: education
 art: badge

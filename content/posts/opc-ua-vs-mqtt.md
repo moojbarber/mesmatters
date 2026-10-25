@@ -1,7 +1,7 @@
 ---
 title: "OPC UA vs MQTT: which one, when, and why the answer is often both"
 short: "OPC UA vs MQTT"
-description: "OPC UA reads machines with structure and security; MQTT moves messages lightly through a broker. How they differ, where Sparkplug and UNS fit, and how to choose for your shopfloor."
+description: "OPC UA brings structured, secure machine data; MQTT moves data efficiently to many systems. How they compare, where each fits, and why plants use both."
 published: 2026-07-15
 category: education
 art: network

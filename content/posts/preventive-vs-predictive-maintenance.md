@@ -1,5 +1,5 @@
 ---
-title: "Reactive, preventive, condition-based or predictive maintenance: which strategy for which asset"
+title: "Maintenance strategies: reactive, preventive, condition-based or predictive?"
 short: "Maintenance strategies"
 description: "Reactive, preventive, condition-based and predictive maintenance compared. What each costs, what data it needs, and how to choose the right strategy for each asset."
 published: 2026-09-16

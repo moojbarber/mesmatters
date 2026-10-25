@@ -1,7 +1,7 @@
 ---
 title: "ISA-88 and ISA-95: how the two standards fit together"
 short: "ISA-88 and ISA-95"
-description: "ISA-88 standardises batch control: recipes, equipment and procedures. ISA-95 standardises how manufacturing operations connect to the business. What each covers, where they meet, and which one you need to know."
+description: "ISA-88 standardises batch control; ISA-95 connects manufacturing operations to the business. What each covers, and how the two standards fit together."
 published: 2026-10-23
 category: education
 art: stack

@@ -1,7 +1,7 @@
 ---
 title: "Connected worker vs MES: standalone app or built into MES/MOM?"
 short: "Connected worker vs MES"
-description: "Connected worker tools digitise checklists, handover, skills and work instructions. MES/MOM runs production and quality. How they compare, the trade-offs between a standalone app and connected worker built into MES/MOM, and what to ask vendors."
+description: "Connected worker tools digitise checklists, handover and skills. How they compare with MES/MOM, and the trade-offs of standalone versus built in."
 published: 2026-05-26
 category: education
 art: worker

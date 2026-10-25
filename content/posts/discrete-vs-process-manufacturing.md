@@ -1,7 +1,7 @@
 ---
-title: "Discrete vs process manufacturing: the types of manufacturing, and why they change your MES choice"
+title: "Discrete vs process manufacturing: the types, and why they matter for MES"
 short: "Discrete vs process"
-description: "Discrete, repetitive, job shop, batch, continuous and mixed-mode manufacturing explained. How each type works, how it differs, and why it drives your data, KPIs and MES/MOM choice."
+description: "Discrete, process, batch, continuous and mixed-mode manufacturing explained, with production strategies and why the type shapes your MES choice."
 published: 2026-04-29
 category: education
 art: tanks

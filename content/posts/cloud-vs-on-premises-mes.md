@@ -1,7 +1,7 @@
 ---
 title: "Cloud vs on-premises MES: how they compare"
 short: "Cloud vs on-premises MES"
-description: "Cloud and on-premises MES/MOM compared on security, scalability, upgrades, connectivity and cost. Why most multi-site 'on-premises' MES already depends on the network, how edge components handle outages, and when on-premises still fits."
+description: "Cloud vs on-premises MES/MOM compared on security, scalability, upgrades and cost, and why most multi-site MES already depends on the network."
 published: 2026-07-09
 category: education
 art: cloud

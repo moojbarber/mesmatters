@@ -1,7 +1,7 @@
 ---
 title: "Code, build, stitch or configure: four ways to run your shopfloor systems"
 short: "Code, build, stitch or configure"
-description: "Build vs buy MES, and the options in between: a homegrown system coded from scratch, building blocks you assemble yourself, best-of-breed applications stitched together, or a configurable platform. The honest advantages and drawbacks of each, and how to choose."
+description: "Four ways to run shopfloor systems: code from scratch, build from blocks, stitch best-of-breed tools, or configure a platform. The trade-offs of each."
 published: 2026-08-26
 category: advice
 art: gates

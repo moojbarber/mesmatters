@@ -1,7 +1,7 @@
 ---
 title: "MTBF vs MTTR vs MTTF: maintenance metrics explained"
 short: "MTBF vs MTTR vs MTTF"
-description: "MTBF measures how long a repairable asset runs between failures, MTTR how long it takes to fix, and MTTF how long a non-repairable item lasts. How to calculate each, how they relate to availability, and where the data comes from."
+description: "MTBF, MTTR and MTTF explained: how to calculate each reliability metric, how they combine into availability, and where reliable data comes from."
 published: 2026-10-24
 category: education
 art: wheel

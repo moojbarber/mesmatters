@@ -1,7 +1,7 @@
 ---
 title: "APS vs ERP scheduling: when ERP is enough, and where MES fits"
 short: "APS vs ERP scheduling"
-description: "ERP plans with mostly infinite capacity; APS sequences against real constraints. When ERP scheduling is enough, when you need APS, and how MES/MOM takes the scheduled orders and runs them."
+description: "ERP plans, APS sequences against real capacity, and MES/MOM dispatches and feeds back actuals. When ERP scheduling is enough, and where each one fits."
 published: 2026-09-10
 category: education
 art: gantt

@@ -1,7 +1,7 @@
 ---
 title: "IT vs OT: why the two worlds think differently, and where MES/MOM sits"
 short: "IT vs OT"
-description: "IT protects data; OT keeps machines running safely. How their priorities, lifecycles and security differ, why convergence is hard, and why MES/MOM sits right on the boundary."
+description: "IT protects data; OT keeps machines running safely. Why the two worlds think differently, where MES/MOM sits, and how to make convergence work."
 published: 2026-06-24
 category: education
 art: bridge

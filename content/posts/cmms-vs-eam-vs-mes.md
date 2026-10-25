@@ -1,7 +1,7 @@
 ---
 title: "CMMS vs EAM vs MES: which maintenance system does what?"
 short: "CMMS vs EAM vs MES"
-description: "A CMMS helps a maintenance team plan and record work, an EAM manages assets over their whole life, and MES/MOM knows what each machine is doing right now. How they differ, where they overlap, and how to choose."
+description: "A CMMS plans maintenance work, an EAM manages assets for life, and MES/MOM supplies the run hours and downtime they depend on. Which does what."
 published: 2026-10-24
 category: education
 art: wheel
