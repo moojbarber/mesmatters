@@ -107,6 +107,6 @@ The trade-off shows up as the problems overlap. Quality needs to know what's run
 
 ## My view
 
-On one platform those overlaps are already handled, because everything shares the same data model. That's why my own preference is a MOM platform that covers most of what a standalone QMS or CMMS would. Pick the problem that hurts most, and solve it on a platform that can grow into the rest. I set out all four approaches, including coding or building your own, in [Code, build, stitch or configure](/post/build-vs-buy-mes).
+On one platform those overlaps are already handled, because everything shares the same data model. That's why my own preference is a MOM platform, which replaces the need for a standalone QMS or CMMS. Pick the problem that hurts most, and solve it on a platform that can grow into the rest. I set out all four approaches, including coding or building your own, in [Code, build, stitch or configure](/post/build-vs-buy-mes).
 
 Which row of that table describes your biggest problem right now?

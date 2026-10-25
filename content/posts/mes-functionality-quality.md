@@ -88,9 +88,9 @@ It only works if quality results are linked to the production and process data a
 
 ## MES/MOM and QMS
 
-MES/MOM and a QMS cover different parts of quality. MES/MOM runs quality at the point of production, with in-process checks and holds tied to the order and the lot. A QMS runs the quality system across the business, including CAPA, audits, complaints and controlled documents.
+MES on its own runs quality at the point of production, with in-process checks and holds tied to the order and the lot. A good MOM platform goes further, and covers the quality system as well, including CAPA, audits, complaints and controlled documents. That replaces the need for a separate QMS.
 
-Some manufacturers run in-process quality entirely in MES/MOM and use a QMS for the wider system. Others with simpler needs manage with MES/MOM alone. The full comparison is in [QMS vs LIMS vs MES](/post/qms-vs-lims-vs-mes), and the connections between them in [QMS and MES](/post/qms-and-mes-quality).
+Platforms with a narrower quality scope pass serious or repeat issues to a separate QMS instead. The full comparison is in [QMS vs LIMS vs MES](/post/qms-vs-lims-vs-mes), and the connections between them in [QMS and MES](/post/qms-and-mes-quality).
 
 ## What it delivers
 
@@ -101,7 +101,7 @@ Some manufacturers run in-process quality entirely in MES/MOM and use a QMS for 
 
 ## My view
 
-Quality data is most valuable when it sits on the same platform as production and inventory. That's what lets a check be triggered by what's actually running, and a result follow the material wherever it goes. For most manufacturers, MOM should cover the bulk of quality work on the shopfloor, with a QMS added for audit and CAPA workflows where they're heavy. Stitching separate quality and production systems together by default just creates more interfaces, and more versions of the truth.
+Quality data is most valuable when it sits on the same platform as production and inventory. That's what lets a check be triggered by what's actually running, and a result follow the material wherever it goes. A good MOM replaces the need for a separate QMS. Running both side by side means paying for the same capability twice, then stitching them together.
 
 This article is part of the [MES functionality series](/post/mes-functionality-guide). Related: [Your traceability probably isn't as good as you think](/post/manufacturing-traceability).
 

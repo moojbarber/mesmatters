@@ -52,7 +52,7 @@ There's more than one way to wire this up.
 
 **Direct MES/MOM to QMS, with ERP for stock.** Non-conformances and inspection data go straight to the QMS with full context. Stock status changes still go through ERP, because ERP must know what's blocked. This is the pattern I see working best where quality is critical.
 
-**One platform.** Some MES/MOM platforms cover a good part of the QMS scope, and some QMS products reach down to the shopfloor. If one system does both well enough for your industry, fewer integrations is a real benefit. Be wary of stretching either one too far. A shopfloor system with a token CAPA module, or a QMS with a clunky operator screen, helps nobody.
+**One platform.** A good MOM platform covers the QMS scope as well, so there's no separate QMS to connect. Check the depth: CAPA workflows, audits and document control should be genuinely usable, not token modules.
 
 ## Holds must be everywhere at once
 
@@ -68,6 +68,6 @@ So the same revision question comes up as with PLM: the operator must see the ap
 
 ## My view
 
-Wherever possible, I'd keep in-process quality, holds and non-conformances in MOM, so the QMS only handles what genuinely needs a dedicated system, such as audits and CAPA. The fewer systems quality data has to cross, the less context gets lost on the way.
+A good MOM platform replaces the need for a separate QMS, and that's the option I'd choose. Running both means paying twice for the same capability, and losing context at the boundary. If a QMS is already in place, connect it directly, so non-conformances arrive with their full context.
 
 When a CAPA concludes "retrain operators", how do you prove the retraining happened before that operator next ran the job? That's where [skills you can enforce](/post/skills-enforcement-shopfloor) close the loop.

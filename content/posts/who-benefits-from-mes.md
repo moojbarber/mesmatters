@@ -37,7 +37,7 @@ For a deeper, interactive view of 21 roles, including what each is measured on a
 
 **Continuous improvement engineers**, such as Lean Six Sigma practitioners and process engineers, use the data to find inefficiencies and measure the impact of improvement projects. See [Kaizen and MES](/post/kaizen-and-mes).
 
-**Maintenance engineers** use the MOM maintenance capability, often alongside a CMMS or EAM, to plan preventive work and track equipment performance. Accurate downtime data from the line gives them a reliable picture of MTBF and MTTR. More in [CMMS vs EAM vs MES](/post/cmms-vs-eam-vs-mes).
+**Maintenance engineers** use the MOM maintenance capability, alongside an EAM where asset management needs it, to plan preventive work and track equipment performance. Accurate downtime data from the line gives them a reliable picture of MTBF and MTTR. More in [CMMS vs EAM vs MES](/post/cmms-vs-eam-vs-mes).
 
 ## Managers
 

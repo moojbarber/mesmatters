@@ -77,20 +77,22 @@ Its users are operators, team leaders, supervisors and quality technicians on th
 
 Some QMS products include basic sample and test management, and some LIMS products include deviation or CAPA modules. A strong MOM platform covers a lot of in-process and even lab-style testing, and in some plants that's enough without a separate LIMS. If your lab is small and your testing simple, fewer systems may well do the job.
 
-But a lab with instruments and a heavy sample load needs a real LIMS. A regulated manufacturer with audits and CAPAs needs a real QMS. Stretching either one into the other's job usually means a clunky experience for whoever ends up on the wrong side of it.
+A good MOM platform can also cover the QMS scope: CAPA, deviations, audits and controlled documents, alongside in-process quality. A LIMS is a different question. A lab with instruments and a heavy sample load usually needs one, which depends largely on your industry and regulations. Many manufacturers get by without a LIMS at all.
 
 There's more on the boundaries with MES/MOM in [QMS and MES: closing the quality loop](/post/qms-and-mes-quality) and [LIMS and MES: getting lab results to the line](/post/lims-and-mes).
 
 ## Which do you need?
 
 - **Defects found too late, or quality data without context?** Start with quality in MES/MOM.
-- **Certified or regulated, with little lab testing?** A QMS.
-- **Heavy lab testing, especially in process industries?** A LIMS, plus a QMS once audits and CAPAs grow.
-- **Mostly testing incoming materials?** A LIMS connected to ERP may be enough, with supplier issues raised in the QMS.
-- **A regulated process plant?** Usually all three, connected so results and holds travel with their context.
+- **Certified or regulated, with little lab testing?** QMS capability, either in a MOM platform that covers it or in a dedicated QMS.
+- **Heavy lab testing, especially in process industries?** A LIMS, alongside MES/MOM.
+- **Mostly testing incoming materials?** A LIMS connected to ERP may be enough, and many manufacturers manage without one.
+- **A regulated process plant?** MES/MOM with full quality capability, usually plus a LIMS.
 
 ## My view
 
-For most manufacturers, I think MOM should cover most of what people buy a QMS for on the shopfloor: inspections, SPC, holds, non-conformances and deviations, all tied to the order and the lot. A dedicated QMS earns its place where audit and CAPA workflows are heavy, usually in regulated industries, and a LIMS where lab testing is heavy. What I'd avoid is stitching separate systems together by default. Every boundary loses context, and becomes another interface to maintain.
+A good MOM platform replaces the need for a separate QMS. It covers quality on the line, and the quality system around it, from non-conformances and deviations to CAPA, audits and controlled documents, all tied to the order and the lot. Running a MOM and a separate QMS side by side makes little sense: you pay for the same capability twice, then stitch the two together.
+
+A LIMS is different. Whether you need one depends on your industry and regulations, and plenty of manufacturers get by without.
 
 Where does an out-of-spec result go in your business today, and how long does it take to get there?

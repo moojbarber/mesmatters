@@ -1,7 +1,7 @@
 ---
 title: "MES functionality: maintenance"
 short: "Maintenance"
-description: "Why maintenance belongs on the same platform as production: shared downtime data, and when a separate CMMS or EAM still makes sense."
+description: "Why maintenance belongs on the same platform as production: shared downtime data, operators involved, and when a separate EAM still makes sense."
 published: 2026-05-14
 category: education
 art: gates
@@ -48,9 +48,9 @@ But it means operators need, in the same place they run production:
 
 If that sits in a separate CMMS, it's another login and another screen. Most of the time, it simply won't get used.
 
-## When a dedicated CMMS or EAM makes sense
+## When an EAM makes sense
 
-I'm not saying you never need one.
+MOM's maintenance capability covers the ground a CMMS would. An EAM is a different case.
 
 A full EAM (Enterprise Asset Management) system makes sense for asset-heavy businesses with advanced needs: complex spare parts management, reliability engineering, linear assets, regulatory asset records across many sites.
 
@@ -60,7 +60,7 @@ Getting maintenance onto the same data as production is also the foundation for 
 
 ## My view
 
-For most manufacturers, I'd choose an MES/MOM with maintenance capabilities, and only add a dedicated CMMS or EAM where advanced use cases genuinely need it. If you do, draw the boundary carefully, so operators and production still see downtime and maintenance status in MES/MOM. Stitching separate systems together by default just creates another interface, and another version of the truth.
+A good MES/MOM with maintenance capability replaces the need for a CMMS, and I'd only add an EAM where asset management genuinely goes beyond it. If you do, draw the boundary carefully, so operators and production still see downtime and maintenance status in MES/MOM. Running a MOM and a CMMS side by side just creates another interface, and another version of the truth.
 
 This article is part of the [MES functionality series](/post/mes-functionality-guide).
 

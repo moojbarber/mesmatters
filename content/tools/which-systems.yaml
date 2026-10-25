@@ -18,7 +18,7 @@ capabilities:
     read: mes-functionality-quality
   qms:
     name: Quality management (QMS)
-    where: QMS, connected to MES/MOM
+    where: MES/MOM with quality system capability, or a QMS connected to it
     what: Complaints, CAPA, audits, document control and supplier quality. The system of record for how quality is managed.
     read: qms-and-mes-quality
   lims:
@@ -43,7 +43,7 @@ capabilities:
     read: mes-functionality-logistics
   maintenance:
     name: Maintenance management
-    where: CMMS or EAM, fed by MES/MOM
+    where: MES/MOM, with an EAM for asset-heavy operations
     what: Work orders, preventive schedules, spares and asset history. Machine signals from the floor turn into requests automatically.
     read: eam-cmms-and-mes
   connectivity:

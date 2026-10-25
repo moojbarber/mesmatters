@@ -100,7 +100,7 @@
 - term: CAPA
   stands: Corrective and preventive action
   short: A structured process for fixing quality problems and stopping them recurring.
-  body: CAPA usually lives in an enterprise QMS. The loop breaks when shopfloor defects never reach it with their context, so the CAPA team ends up asking for details nobody can remember.
+  body: CAPA lives in a QMS, or in a MOM platform that covers the quality system. The loop breaks when shopfloor defects never reach it with their context, so the CAPA team ends up asking for details nobody can remember.
   articles:
   - qms-and-mes-quality
   see_also:
@@ -118,7 +118,7 @@
 - term: CMMS
   stands: Computerised maintenance management system
   short: Software for managing maintenance work orders and spare parts.
-  body: A CMMS is the lighter, maintenance-team version of EAM. Whatever you use, production and maintenance need to agree on downtime, so connect it to MES/MOM or run maintenance inside MES/MOM.
+  body: A CMMS is the lighter, maintenance-team version of EAM. A good MOM platform covers the same ground, which replaces the need for a separate CMMS and keeps production and maintenance on the same downtime data.
   articles:
   - cmms-vs-eam-vs-mes
   - eam-cmms-and-mes
@@ -608,7 +608,7 @@
 - term: QMS
   stands: Quality management system
   short: Software for enterprise quality processes such as CAPA, complaints, audits and document control.
-  body: A QMS runs quality over weeks and months across sites and suppliers, while MES/MOM runs it at the point of production. Connect them so the right non-conformances reach the QMS with full context.
+  body: A QMS runs quality over weeks and months across sites and suppliers. A good MOM platform covers that scope as well as quality at the point of production, which replaces the need for a separate QMS. Where one already exists, connect it so non-conformances arrive with full context.
   articles:
   - qms-vs-lims-vs-mes
   - qms-and-mes-quality
@@ -1638,7 +1638,7 @@
   - supplier-quality
 - term: Supplier quality
   short: Making sure purchased materials and components meet specification, through supplier approvals and incoming inspection.
-  body: Supplier quality usually sits in a QMS. Lot-level traceability on the shopfloor is what lets you trace a problem back to a specific supplier lot.
+  body: Supplier quality sits in a QMS, or in a MOM platform that covers the quality system. Lot-level traceability on the shopfloor is what lets you trace a problem back to a specific supplier lot.
   articles:
   - qms-and-mes-quality
   - lot-vs-serial-traceability

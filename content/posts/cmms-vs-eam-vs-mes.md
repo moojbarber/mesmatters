@@ -60,18 +60,20 @@ Many MOM platforms also handle the maintenance work that sits with operators:
 
 ## Which do you need?
 
-- **One or two sites, and the main problem is getting PMs done and recording work?** A CMMS.
+- **Running, or choosing, a MOM platform?** Its maintenance capability replaces the need for a CMMS.
+- **No MOM, and the main problem is getting PMs done and recording work?** A CMMS.
 - **Many sites with expensive assets, and leadership asking about replacement and capital spend?** An EAM.
 - **Already running an ERP suite with an EAM module?** Check what it covers before buying another system.
-- **Most maintenance raised by operators, on simple equipment?** MES/MOM's own maintenance capability may be all you need.
-- **Unsure?** Start with the problems. If nobody is asking about asset value or lifecycle cost, you probably need a CMMS.
+- **Unsure?** Start with the problems. If nobody is asking about asset value or lifecycle cost, you probably don't need an EAM.
 
 ## How they work together
 
-For many plants, MES/MOM covers operator-raised requests and autonomous maintenance, and feeds counters and downtime to a CMMS or EAM for the technician-led work. Whatever the split, one system should own downtime reasons and one should own the work order. I cover that boundary in [EAM, CMMS and MES: who owns the maintenance work order?](/post/eam-cmms-and-mes)
+With a MOM platform, maintenance work lives alongside production on the same data. Where an EAM is also needed, MES/MOM covers the day-to-day maintenance and feeds counters and downtime to the EAM for asset management. Whatever the split, one system should own downtime reasons and one should own the work order. I cover that boundary in [EAM, CMMS and MES: who owns the maintenance work order?](/post/eam-cmms-and-mes)
 
 ## My view
 
-For most manufacturers, I think MOM's maintenance capability should cover what a CMMS would: operator requests, work orders, preventive maintenance on actual run hours, and spare parts. A dedicated CMMS or EAM earns its place in asset-heavy, multi-site businesses with real reliability engineering or capital planning needs. Bolting a separate CMMS onto MES by default means two versions of downtime, and one more interface to maintain.
+A good MOM platform replaces the need for a CMMS. Its maintenance capability covers operator requests, work orders, preventive maintenance on actual run hours, and spare parts. Running a MOM and a separate CMMS side by side would be silly: two versions of downtime, and an interface to maintain between them.
+
+An EAM is different. Asset-heavy, multi-site businesses with real reliability engineering or capital planning needs may still want one alongside MOM.
 
 Which question is your maintenance system really answering today: getting the work done, or managing the assets?

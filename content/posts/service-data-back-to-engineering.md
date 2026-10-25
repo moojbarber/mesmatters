@@ -20,7 +20,7 @@ After shipment, product data spreads across a few places:
 - **Field service management (FSM)** handles service visits, technicians, parts used and the fault found.
 - **ERP** usually holds the installed base, warranty, service orders, returns and the cost of all of it. Many ERP suites include the service module.
 - **PLM** owns engineering change requests: the formal route to fix the design.
-- **QMS** owns complaints and CAPA, especially in regulated industries.
+- **QMS**, or the quality capability of MOM, owns complaints and CAPA.
 
 And **MES/MOM** holds the [as-built record](/post/ebom-mbom-as-built): which component lots and serials went into each unit, which operator built it, which machine, the measurements recorded, any rework or deviations.
 

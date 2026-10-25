@@ -58,6 +58,6 @@ With an MTBF of 200 hours and an MTTR of three hours, availability is about 98.5
 
 All of them depend on knowing exactly how long each stop lasted and why it happened. If downtime is written on a sheet at the end of the shift, short stops vanish and the reasons are guesses.
 
-MES/MOM records each stop from the machine as it happens, with the reason and the order attached. That gives MTBF and MTTR a reliable basis, and gives a CMMS or EAM the data it needs to plan maintenance. More in [CMMS vs EAM vs MES](/post/cmms-vs-eam-vs-mes) and [maintenance strategies](/post/preventive-vs-predictive-maintenance).
+MES/MOM records each stop from the machine as it happens, with the reason and the order attached. That gives MTBF and MTTR a reliable basis, and gives maintenance planning the data it needs, whether in MOM or an EAM. More in [CMMS vs EAM vs MES](/post/cmms-vs-eam-vs-mes) and [maintenance strategies](/post/preventive-vs-predictive-maintenance).
 
 Do your maintenance and production teams calculate MTBF from the same downtime data?

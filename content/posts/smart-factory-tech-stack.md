@@ -30,9 +30,9 @@ It sits at the heart of the stack, because it's the system that connects the bus
 Alongside it, depending on how much depth you need:
 
 - **WMS (Warehouse Management System)** for complex warehousing: optimised picking, storage strategies, automation, yard and dock management. Simple warehouses often don't need one.
-- **CMMS or EAM** for maintenance and asset management. A full EAM makes sense for asset-heavy operations with advanced needs. Otherwise MES/MOM with maintenance capability keeps production and maintenance on the same data.
+- **EAM** for asset lifecycle management in asset-heavy operations with advanced needs. Day-to-day maintenance belongs in MES/MOM, which replaces the need for a separate CMMS and keeps production and maintenance on the same data.
 - **LIMS (Laboratory Information Management System)** for lab testing, sample management and certificates, especially in process and regulated industries.
-- **QMS (Quality Management System)** for enterprise quality processes: complaints, CAPA, audits, document control. Shopfloor quality checks and SPC usually belong in MES/MOM.
+- **QMS (Quality Management System)** for enterprise quality processes: complaints, CAPA, audits, document control. A good MOM platform covers these as well as shopfloor checks and SPC, which replaces the need for a separate QMS.
 
 ## How they connect
 

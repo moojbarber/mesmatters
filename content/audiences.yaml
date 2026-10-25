@@ -323,7 +323,7 @@ pages:
     sections:
       - h: Where each system fits
         body: |
-          MES/MOM runs quality on the shopfloor: checks triggered at the right moment, results recorded at source, SPC on the line and holds that stop bad product moving on. A QMS manages quality as a system: complaints, CAPA, audits, document control and supplier quality. A LIMS runs the lab.
+          MES/MOM runs quality on the shopfloor: checks triggered at the right moment, results recorded at source, SPC on the line and holds that stop bad product moving on. Quality as a system, from complaints and CAPA to audits and document control, sits in a QMS, or in a MOM platform that covers it. A LIMS runs the lab, where your industry needs one.
 
           They overlap, and the boundaries matter. I go through them in [QMS and MES](/post/qms-and-mes-quality) and [LIMS and MES](/post/lims-and-mes).
       - h: What to fix first
@@ -341,6 +341,6 @@ pages:
     terms: [spc, control-chart, capa, non-conformance, deviation, quality-hold, review-by-exception, audit-trail, electronic-signature, fpy]
     faq:
       - q: What is the difference between QMS and MES for quality?
-        a: MES/MOM handles quality as it happens on the shopfloor, triggering checks, recording results at source, running SPC and placing holds. A QMS manages the wider quality system, such as complaints, CAPA, audits, document control and supplier quality. Most manufacturers need both, connected, with clear rules about which owns what.
+        a: MES/MOM handles quality as it happens on the shopfloor, triggering checks, recording results at source, running SPC and placing holds. A QMS manages the wider quality system, such as complaints, CAPA, audits, document control and supplier quality. A good MOM platform covers both, which removes the need for a separate QMS. Where one already exists, connect them with clear rules about which owns what.
       - q: How does MES improve quality?
         a: By moving quality from inspection after the fact to prevention during production. Checks happen at the right moment and can't be skipped, results are captured at source, control charts show drift while parts are still good, and traceability links every result to its batch, operator and equipment.
