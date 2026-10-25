@@ -101,7 +101,7 @@ Some manufacturers run in-process quality entirely in MES/MOM and use a QMS for 
 
 ## My view
 
-Quality data is most valuable when it sits on the same platform as production and inventory. That's what lets a check be triggered by what's actually running, and a result follow the material wherever it goes.
+Quality data is most valuable when it sits on the same platform as production and inventory. That's what lets a check be triggered by what's actually running, and a result follow the material wherever it goes. For most manufacturers, MOM should cover the bulk of quality work on the shopfloor, with a QMS added for audit and CAPA workflows where they're heavy. Stitching separate quality and production systems together by default just creates more interfaces, and more versions of the truth.
 
 This article is part of the [MES functionality series](/post/mes-functionality-guide). Related: [Your traceability probably isn't as good as you think](/post/manufacturing-traceability).
 

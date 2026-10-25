@@ -1509,3 +1509,6 @@ button.ttt-label:hover{background:rgba(255,255,255,.04)}
 .ro-cmp-add{appearance:none;-webkit-appearance:none;font:500 13px/1 var(--body);color:var(--tx);background:rgba(255,255,255,.05) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23a9a4d6' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 10px center;border:1px dashed rgba(255,255,255,.25);border-radius:99px;padding:7px 28px 7px 12px;cursor:pointer}
 .ro-cmp-add:hover{border-color:var(--b)}
 .ro-cmp-add option,.ro-cmp-add optgroup{background:#120f33;color:var(--tx)}
+.ttt-tip{font:600 12.5px/1.2 var(--body);color:var(--dim);padding:8px 12px;border-radius:10px;border:1px dashed rgba(255,255,255,.18);white-space:nowrap}
+.ttt-row{cursor:pointer}
+@media (max-width:760px){.ttt-tip{display:none}}

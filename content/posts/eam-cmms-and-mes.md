@@ -61,4 +61,8 @@ None of these is universally right. I'd ask one question first: who actually rai
 
 [Predictive maintenance](/post/predictive-maintenance-data) depends on exactly this link. The models need machine conditions and production context from MES/MOM, and they need somewhere to send their predictions that results in a work order. Without the integration, a prediction is just an alert nobody acts on.
 
+## My view
+
+My preference is for MOM to own as much maintenance as it can, including requests and work orders, and to add a CMMS or EAM only where asset management genuinely goes beyond it. The more systems maintenance data crosses, the harder it is for production and maintenance to tell the same story.
+
 So, look at last month's top five downtime causes in your MES. Now look at your maintenance system. Do they tell the same story?

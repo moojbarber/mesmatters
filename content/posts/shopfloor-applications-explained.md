@@ -105,6 +105,8 @@ That has real advantages. Each department gets a tool that's very good at its jo
 
 The trade-off shows up as the problems overlap. Quality needs to know what's running. Inventory needs to know whether a lot passed inspection. Maintenance needs production's downtime. The operator needs one screen, not five logins. Every boundary becomes an interface to own and retest, and some context gets lost at each one.
 
-On one platform those overlaps are already handled, because everything shares the same data model. That's why my own preference is to pick the problem that hurts most, and solve it on a platform that can grow into the rest. I set out all four approaches, including coding or building your own, in [Code, build, stitch or configure](/post/build-vs-buy-mes).
+## My view
+
+On one platform those overlaps are already handled, because everything shares the same data model. That's why my own preference is a MOM platform that covers most of what a standalone QMS or CMMS would. Pick the problem that hurts most, and solve it on a platform that can grow into the rest. I set out all four approaches, including coding or building your own, in [Code, build, stitch or configure](/post/build-vs-buy-mes).
 
 Which row of that table describes your biggest problem right now?

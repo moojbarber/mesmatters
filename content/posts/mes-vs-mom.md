@@ -73,6 +73,6 @@ On this site, **MES** means production execution, **MOM** means the whole operat
 
 ## My view
 
-Dedicated systems should be deliberate choices about depth, with clear boundaries. What I'd avoid is drifting into four point solutions because each one fixed a single problem quickly.
+For most manufacturers, I think a MOM platform should cover most of the functionality people buy a separate QMS or CMMS for. Dedicated systems should be deliberate choices about depth, with clear boundaries. What I'd avoid is drifting into four point solutions because each one fixed a single problem quickly.
 
 When you look at your own factory, how many systems does it take to cover those four pillars today?

@@ -70,4 +70,8 @@ Many MOM platforms also handle the maintenance work that sits with operators:
 
 For many plants, MES/MOM covers operator-raised requests and autonomous maintenance, and feeds counters and downtime to a CMMS or EAM for the technician-led work. Whatever the split, one system should own downtime reasons and one should own the work order. I cover that boundary in [EAM, CMMS and MES: who owns the maintenance work order?](/post/eam-cmms-and-mes)
 
+## My view
+
+For most manufacturers, I think MOM's maintenance capability should cover what a CMMS would: operator requests, work orders, preventive maintenance on actual run hours, and spare parts. A dedicated CMMS or EAM earns its place in asset-heavy, multi-site businesses with real reliability engineering or capital planning needs. Bolting a separate CMMS onto MES by default means two versions of downtime, and one more interface to maintain.
+
 Which question is your maintenance system really answering today: getting the work done, or managing the assets?

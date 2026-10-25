@@ -89,4 +89,8 @@ There's more on the boundaries with MES/MOM in [QMS and MES: closing the quality
 - **Mostly testing incoming materials?** A LIMS connected to ERP may be enough, with supplier issues raised in the QMS.
 - **A regulated process plant?** Usually all three, connected so results and holds travel with their context.
 
+## My view
+
+For most manufacturers, I think MOM should cover most of what people buy a QMS for on the shopfloor: inspections, SPC, holds, non-conformances and deviations, all tied to the order and the lot. A dedicated QMS earns its place where audit and CAPA workflows are heavy, usually in regulated industries, and a LIMS where lab testing is heavy. What I'd avoid is stitching separate systems together by default. Every boundary loses context, and becomes another interface to maintain.
+
 Where does an out-of-spec result go in your business today, and how long does it take to get there?

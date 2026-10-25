@@ -376,14 +376,14 @@
   });
 })();
 
-/* Time to truth graphic: click a stage for detail; plays through the story until someone takes over */
+/* Time to truth graphic: hover a stage to preview it, click or tap to pin it */
 (function () {
   [].forEach.call(document.querySelectorAll('[data-ttt]'), function (fig) {
     var rows = [].slice.call(fig.querySelectorAll('.ttt-row'));
     var infos = [].slice.call(fig.querySelectorAll('.ttt-info'));
-    var play = fig.querySelector('[data-ttt-play]');
-    var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var cur = 0, timer = null, touched = false, seen = false;
+    var hover = window.matchMedia && matchMedia('(hover: hover) and (pointer: fine)').matches;
+    var cur = 0, pinned = 0, dwell = null;
+    if (hover) fig.addEventListener('mouseleave', function () { clearTimeout(dwell); show(pinned); });
     function show(n) {
       cur = n;
       fig.classList.toggle('has-active', n > 0);
@@ -392,22 +392,17 @@
     }
     var panel = fig.querySelector('.ttt-panel');
     function reveal() { if (cur && innerWidth < 760) { var r = panel.getBoundingClientRect(); if (r.top > innerHeight - 120) panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); } }
-    function stop() { clearInterval(timer); timer = null; play.setAttribute('aria-pressed', 'false'); play.querySelector('.t').textContent = 'Play the story'; }
-    function start() {
-      stop(); play.setAttribute('aria-pressed', 'true'); play.querySelector('.t').textContent = 'Pause';
-      show(cur >= rows.length ? 1 : cur + 1);
-      timer = setInterval(function () { if (cur >= rows.length) { stop(); return; } show(cur + 1); }, 3800);
-    }
+    function pick(n) { pinned = pinned === n ? 0 : n; show(pinned); reveal(); }
     rows.forEach(function (r) {
-      r.querySelector('.ttt-label').addEventListener('click', function () { touched = true; stop(); show(+r.dataset.s === cur ? 0 : +r.dataset.s); reveal(); });
-      r.querySelector('.ttt-track').addEventListener('click', function () { touched = true; stop(); show(+r.dataset.s); });
+      var n = +r.dataset.s;
+      r.querySelector('.ttt-label').addEventListener('click', function () { pick(n); });
+      r.querySelector('.ttt-track').addEventListener('click', function () { pick(n); });
+      if (hover) {
+        // a short dwell, so sweeping the mouse down to the detail panel doesn't flick through every stage
+        r.addEventListener('mouseenter', function () { clearTimeout(dwell); dwell = setTimeout(function () { show(n); }, 140); });
+        r.addEventListener('mouseleave', function () { clearTimeout(dwell); });
+      }
+      r.querySelector('.ttt-label').addEventListener('focus', function () { if (!pinned) show(n); });
     });
-    play.addEventListener('click', function () { touched = true; if (timer) stop(); else { if (cur >= rows.length) cur = 0; start(); } });
-    if (!reduce && 'IntersectionObserver' in window) {
-      var io = new IntersectionObserver(function (es) {
-        es.forEach(function (e) { if (e.isIntersecting && !seen && !touched) { seen = true; setTimeout(function () { if (!touched) start(); }, 1600); } });
-      }, { threshold: 0.45 });
-      io.observe(fig);
-    }
   });
 })();

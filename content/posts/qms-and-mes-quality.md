@@ -66,4 +66,8 @@ Document control usually sits in the QMS. Work instructions, specifications and 
 
 So the same revision question comes up as with PLM: the operator must see the approved revision for this order, not a copy someone saved locally in 2023. Either publish from the QMS to MES/MOM, or have MES/MOM reference the QMS directly. Just don't maintain two copies.
 
+## My view
+
+Wherever possible, I'd keep in-process quality, holds and non-conformances in MOM, so the QMS only handles what genuinely needs a dedicated system, such as audits and CAPA. The fewer systems quality data has to cross, the less context gets lost on the way.
+
 When a CAPA concludes "retrain operators", how do you prove the retraining happened before that operator next ran the job? That's where [skills you can enforce](/post/skills-enforcement-shopfloor) close the loop.

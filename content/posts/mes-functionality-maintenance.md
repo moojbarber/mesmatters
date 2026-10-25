@@ -54,14 +54,13 @@ I'm not saying you never need one.
 
 A full EAM (Enterprise Asset Management) system makes sense for asset-heavy businesses with advanced needs: complex spare parts management, reliability engineering, linear assets, regulatory asset records across many sites.
 
-My advice:
-
-- Choose an MES/MOM with maintenance capabilities for most manufacturers.
-- Only choose a dedicated CMMS or EAM if you have advanced use cases that genuinely need it. If you do, draw the boundary carefully, so operators and production still see downtime and maintenance status in MES/MOM.
-
 ## The step towards predictive maintenance
 
 Getting maintenance onto the same data as production is also the foundation for condition-based and predictive maintenance. Models need failure history, condition data and operating context together. I cover the journey in [Predictive maintenance needs data you aren't collecting yet](/post/predictive-maintenance-data).
+
+## My view
+
+For most manufacturers, I'd choose an MES/MOM with maintenance capabilities, and only add a dedicated CMMS or EAM where advanced use cases genuinely need it. If you do, draw the boundary carefully, so operators and production still see downtime and maintenance status in MES/MOM. Stitching separate systems together by default just creates another interface, and another version of the truth.
 
 This article is part of the [MES functionality series](/post/mes-functionality-guide).
 
