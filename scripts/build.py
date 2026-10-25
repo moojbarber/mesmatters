@@ -889,13 +889,13 @@ def build(base, relative=False, include_scheduled=False):
     import math
     keys = list(ro["apps"].keys())
     n = len(keys)
-    def pt(i, frac, rad=110):
+    def pt(i, frac, rad=122):
         a = -math.pi / 2 + 2 * math.pi * i / n
         return 150 + rad * frac * math.cos(a), 150 + rad * frac * math.sin(a)
     axes = []
     for i, k in enumerate(keys):
         x, y = pt(i, 1)
-        lx, ly = pt(i, 1, 138)
+        lx, ly = pt(i, 1, 148)
         anchor = "middle" if abs(lx - 150) < 12 else ("start" if lx > 150 else "end")
         axes.append({"key": k, "label": ro["apps"][k]["short"], "x": f"{x:.1f}", "y": f"{y:.1f}", "lx": f"{lx:.1f}", "ly": f"{ly + 4:.1f}", "anchor": anchor})
     rings = [" ".join("%.1f,%.1f" % pt(i, f) for i in range(n)) for f in (0.2, 0.4, 0.6, 0.8, 1.0)]

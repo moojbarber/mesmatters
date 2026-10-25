@@ -48,19 +48,11 @@
             <span class="ro-qlabel">The question on their mind</span>
             <p>{{ r.question }}</p>
           </div>
-          <div class="ro-hz" aria-label="Works mostly in {{ r.horizon_text }}">
-            <span class="ro-hzlabel">Time horizon</span>
-            <div class="ro-hzbar">
-              {% for h in ro.horizons %}<span class="{{ 'on' if r.horizon[0] <= loop.index0 <= r.horizon[1] else '' }}">{{ h }}</span>{% endfor %}
-            </div>
-          </div>
         </header>
-
-        <p class="ro-summary">{{ r.summary }}</p>
 
         <div class="ro-grid">
           <figure class="ro-radar">
-            <svg viewBox="-62 -14 424 330" role="img" aria-label="How much each application area matters to the {{ r.name }}">
+            <svg viewBox="-80 -10 460 318" role="img" aria-label="How much each application area matters to the {{ r.name }}">
               <defs><linearGradient id="rg-{{ r.id }}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{{ r.color }}" stop-opacity=".75"/><stop offset="1" stop-color="#33d4e0" stop-opacity=".35"/></linearGradient></defs>
               {% for ring in ro.radar.rings %}<polygon class="ro-ring" points="{{ ring }}"/>{% endfor %}
               {% for ax in ro.radar.axes %}<line class="ro-axis" x1="150" y1="150" x2="{{ ax.x }}" y2="{{ ax.y }}"/>{% endfor %}
@@ -72,16 +64,24 @@
           </figure>
 
           <div class="ro-side">
+            <p class="ro-summary">{{ r.summary }}</p>
             <h3 class="ro-h">Measured on</h3>
             <ul class="ro-kpis">
               {% for k in r.cares %}<li>{% if k.slug %}<a href="{{ base }}/glossary/{{ k.slug }}">{{ k.label }}</a>{% else %}<span>{{ k.label }}</span>{% endif %}</li>{% endfor %}
             </ul>
-            <h3 class="ro-h">What gets in the way</h3>
-            <ol class="ro-chal">
-              {% for c in r.challenges %}<li><b>{{ c[0] }}</b><span>{{ c[1] }}</span></li>{% endfor %}
-            </ol>
+            <div class="ro-hz" aria-label="Works mostly in {{ r.horizon_text }}">
+              <span class="ro-hzlabel">Time horizon</span>
+              <div class="ro-hzbar">
+                {% for h in ro.horizons %}<span class="{{ 'on' if r.horizon[0] <= loop.index0 <= r.horizon[1] else '' }}">{{ h }}</span>{% endfor %}
+              </div>
+            </div>
           </div>
         </div>
+
+        <h3 class="ro-h ro-h-lg">What gets in the way</h3>
+        <ol class="ro-chal">
+          {% for c in r.challenges %}<li><b>{{ c[0] }}</b><span>{{ c[1] }}</span></li>{% endfor %}
+        </ol>
 
         <h3 class="ro-h ro-h-lg">The applications that matter most, and why</h3>
         <div class="ro-apps">
@@ -192,6 +192,9 @@
   [].slice.call(document.querySelectorAll('[data-pick]')).forEach(function (b) {
     b.addEventListener('click', function () { select(b.dataset.pick, false, true); });
   });
+  // keep the selected role visible in the scrolling strip on small screens
+  (function () { var on = root.querySelector('.ro-chip[aria-selected=true]'); var strip = root.querySelector('.ro-tabs');
+    if (on && strip && strip.scrollWidth > strip.clientWidth) strip.scrollLeft = on.offsetLeft - strip.clientWidth / 2 + on.offsetWidth / 2; })();
   var want = null; try { want = new URLSearchParams(location.search).get('role'); } catch (e) {}
   if (want && panels[want] && want !== root.dataset.default) select(want);
 })();

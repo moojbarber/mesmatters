@@ -1481,3 +1481,20 @@ button.ttt-label:hover{background:rgba(255,255,255,.04)}
 .for-roles div a{font-size:13.5px;padding:6px 11px;border-radius:99px;color:#fff;border:1px solid color-mix(in srgb,var(--gc) 50%,transparent);background:color-mix(in srgb,var(--gc) 14%,transparent);text-decoration:none;transition:background .2s}
 .for-roles div a:hover{background:color-mix(in srgb,var(--gc) 30%,transparent)}
 .for-roles-all{margin-left:auto;font-size:13.5px;font-weight:600;color:var(--b);text-decoration:none}
+/* role panel layout v2: bigger radar beside summary, challenges in a 2x2 grid */
+.ro-grid{grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr);align-items:center;gap:32px;margin-top:28px}
+.ro-radar{padding:18px 8px 14px}
+.ro-axl{font-size:15px}
+.ro-side .ro-summary{margin:0 0 24px;font-size:17px}
+.ro-side .ro-kpis{margin-bottom:24px}
+.ro-side .ro-hz{display:block;margin-top:0}
+.ro-side .ro-hzlabel{display:block;margin-bottom:10px}
+.ro-side .ro-hzbar{min-width:0}
+.ro-chal{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+@media (max-width:1100px){.ro-grid{grid-template-columns:minmax(0,1fr)}.ro-radar{max-width:620px;margin-inline:auto;width:100%}}
+@media (max-width:640px){.ro-chal{grid-template-columns:minmax(0,1fr)}}
+.ro-grid{grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:28px}
+.ro-radar{padding:10px 4px 12px}
+@media (max-width:1100px){.ro-grid{grid-template-columns:minmax(0,1fr)}}
+.ro-side .ro-hzbar{gap:3px}
+.ro-side .ro-hzbar span{font-size:10.5px;padding:7px 0;overflow:hidden;text-overflow:clip}
