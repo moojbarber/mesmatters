@@ -1,7 +1,7 @@
 ---
 title: "Going paperless: start small, but start with the end in mind"
 short: "Going paperless"
-description: "If you can't do everything at once, at least do something. Why removing paper from the shopfloor is a great first step, and the one mistake to avoid when you take it."
+description: "If you can't do everything at once, do something. Why removing paper from the shopfloor is a great first step, and the mistake to avoid."
 published: 2026-06-18
 category: advice
 art: document

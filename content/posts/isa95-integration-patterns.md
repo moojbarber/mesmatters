@@ -1,7 +1,7 @@
 ---
 title: "Connecting MES/MOM to everything else: integration patterns that last"
 short: "Integration patterns"
-description: "Point-to-point, middleware, event-driven or UNS. How to connect MES/MOM with ERP, PLM, WMS, QMS and the rest, and how to choose a pattern that survives upgrades."
+description: "Point-to-point, middleware, event-driven or UNS. How to connect MES/MOM with ERP, PLM, WMS and QMS, and choose a pattern that survives upgrades."
 published: 2026-10-01
 category: advice
 art: network
@@ -13,7 +13,7 @@ This article pulls together the patterns behind the rest of this series: [PLM](/
 
 ## Start with ISA-95, not with technology
 
-ISA-95 gives you a common language for what flows between business systems (level 4) and manufacturing operations (level 3). I explain the model in [What is ISA-95, and where does MES fit?](/post/what-is-the-isa-95-model-and-where-does-mes-fit)
+ISA-95 gives you a common language for what flows between business systems (level 4) and manufacturing operations (level 3). I explain the model in [What is ISA-95, and where does MES fit?](/post/isa-95-explained)
 
 ::block isa95-stack
 

@@ -1,7 +1,7 @@
 ---
-title: "Shopfloor applications explained: what each one does and which problem it solves"
+title: "Shopfloor applications explained: what each one does, and why"
 short: "Shopfloor applications explained"
-description: "Production execution, quality, inventory, maintenance, tooling, energy, connected worker and AI. What each shopfloor application does, the problem it solves, and the trade-offs between one platform and several."
+description: "Production, quality, inventory, maintenance, connected worker and AI: what each shopfloor application does, and one platform versus several."
 published: 2026-10-14
 category: education
 art: hexgrid
@@ -18,19 +18,19 @@ This guide goes through the main shopfloor applications by the job they do. At t
 
 Anything used at the point of work, by the people doing the work, in real time. Operators, supervisors, quality technicians, maintenance engineers and logistics.
 
-That's different from ERP, which runs the business from the office, and from SCADA, which controls the equipment itself. Shopfloor applications sit in between, at level 3 of [ISA-95](/post/what-is-the-isa-95-model-and-where-does-mes-fit). Collectively, that layer is MES/MOM.
+That's different from ERP, which runs the business from the office, and from SCADA, which controls the equipment itself. Shopfloor applications sit in between, at level 3 of [ISA-95](/post/isa-95-explained). Collectively, that layer is MES/MOM.
 
 ## Production
 
-**Production execution and monitoring.** Getting the right order onto the right line, starting and stopping it, and recording good counts, scrap and downtime, ideally straight from the equipment. The production order is the context everything else hangs off. This is the core of MES, and for many manufacturers their first step. See [Production monitoring](/post/mes-functionality-production-monitoring).
+**Production execution and monitoring.** Getting the right order onto the right line, starting and stopping it, and recording good counts, scrap and downtime, ideally straight from the equipment. The production order is the context everything else hangs off. This is the core of MES, and for many manufacturers their first step. See [Production monitoring](/post/mes-functionality-production).
 
-**OEE and performance.** Availability, performance and quality on the bottleneck, calculated from automatic data rather than end-of-shift estimates. Most people are genuinely surprised when they first see their micro-stops. See [What is OEE?](/post/what-is-oee-overall-equipment-effectiveness) and [KPIs beyond OEE](/post/manufacturing-kpis-beyond-oee).
+**OEE and performance.** Availability, performance and quality on the bottleneck, calculated from automatic data rather than end-of-shift estimates. Most people are genuinely surprised when they first see their micro-stops. See [What is OEE?](/post/what-is-oee) and [KPIs beyond OEE](/post/manufacturing-kpis-beyond-oee).
 
-**Scheduling and dispatch.** ERP plans the orders. On the shopfloor, the job is fine-tuning the sequence and showing the line what to run next, and adjusting when a machine goes down. Complex sequencing may need APS on top. See [Production scheduling](/post/mes-basics-production-scheduling).
+**Scheduling and dispatch.** ERP plans the orders. On the shopfloor, the job is fine-tuning the sequence and showing the line what to run next, and adjusting when a machine goes down. Complex sequencing may need APS on top. See [Production scheduling](/post/mes-functionality-scheduling).
 
 ## Quality
 
-**In-process quality.** Inspection plans and checks triggered by what's actually running, with measurements and defects recorded against the order and material. Holds when something is wrong. See [Quality operations](/post/mes-functionality-quality-operations).
+**In-process quality.** Inspection plans and checks triggered by what's actually running, with measurements and defects recorded against the order and material. Holds when something is wrong. See [Quality operations](/post/mes-functionality-quality).
 
 **SPC.** Control charts at the line, so operators see a process drifting before it makes scrap. Inspection tells you a part is bad; SPC tells you it's about to be. See [SPC on the shopfloor](/post/spc-on-the-shopfloor).
 
@@ -38,9 +38,9 @@ That's different from ERP, which runs the business from the office, and from SCA
 
 ## Inventory and traceability
 
-**Inventory and material tracking.** Labelled units, lots, serials and containers, consumed and created against orders as it happens, with labels printed at the line. See [Inventory management](/post/mes-functionality-inventory-management).
+**Inventory and material tracking.** Labelled units, lots, serials and containers, consumed and created against orders as it happens, with labels printed at the line. See [Inventory management](/post/mes-functionality-inventory).
 
-**Line-side logistics.** Replenishment requests based on real consumption or kanban signals, with a clean handover from the warehouse. See [Warehouse management](/post/mes-functionality-logistics-warehousing).
+**Line-side logistics.** Replenishment requests based on real consumption or kanban signals, with a clean handover from the warehouse. See [Warehouse management](/post/mes-functionality-logistics).
 
 **Traceability.** Genealogy forwards and backwards, plus the tooling, operators, quality results and process parameters behind every lot. In a recall, the difference between minutes and a weekend in spreadsheets. See [Your traceability probably isn't as good as you think](/post/manufacturing-traceability).
 
@@ -82,11 +82,11 @@ Every one of these depends on the applications above. AI needs the order, the ma
 
 | If your problem is... | Start with | Read |
 | --- | --- | --- |
-| Nobody trusts the downtime numbers | Automatic stop detection and reason capture | [Production monitoring](/post/mes-functionality-production-monitoring) |
-| Output is lower than it should be, and you don't know why | OEE on the bottleneck | [What is OEE?](/post/what-is-oee-overall-equipment-effectiveness) |
+| Nobody trusts the downtime numbers | Automatic stop detection and reason capture | [Production monitoring](/post/mes-functionality-production) |
+| Output is lower than it should be, and you don't know why | OEE on the bottleneck | [What is OEE?](/post/what-is-oee) |
 | Scrap is found at final inspection, too late | In-process checks and SPC | [SPC on the shopfloor](/post/spc-on-the-shopfloor) |
 | A recall would mean quarantining a week of production | Lot-level traceability | [Traceability](/post/manufacturing-traceability) |
-| ERP stock never matches what's on the floor | Inventory tracking at the line | [Inventory management](/post/mes-functionality-inventory-management) |
+| ERP stock never matches what's on the floor | Inventory tracking at the line | [Inventory management](/post/mes-functionality-inventory) |
 | Lines wait for material | Consumption-based replenishment | [WMS, MES and ERP](/post/wms-vs-mes-inventory) |
 | Production and maintenance argue about what stopped | Maintenance on the same data as production | [Maintenance](/post/mes-functionality-maintenance) |
 | Changeovers wait for the tool or the setter | Tool management and readiness | [Tooling](/post/mes-functionality-tooling) |

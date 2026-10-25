@@ -23,7 +23,7 @@ That last one is the goal. But you can't jump to it.
 
 ## Why downtime is where it starts
 
-Downtime is usually the biggest loss when you look at [OEE](/post/what-is-oee-overall-equipment-effectiveness). For most manufacturers, it's the single largest area for improvement.
+Downtime is usually the biggest loss when you look at [OEE](/post/what-is-oee). For most manufacturers, it's the single largest area for improvement.
 
 Before you can predict failures, you need to know your failures. Accurately. Which machine, how long, how often, for what reason, during which order.
 
@@ -40,7 +40,7 @@ Predictive maintenance models learn the patterns that come before a failure. Tha
 - **Maintenance actions.** What was actually done each time: the part replaced, the adjustment made. Otherwise the model can't tell a repaired machine from a degrading one.
 - **Operating context.** What the machine was doing at the time: which product, which speed, which material. A spike in temperature during a heavy product run means something different from the same spike on a light one.
 
-Condition data and failure history are often in separate places. Operating context usually only exists in [MES/MOM](/post/what-is-mes-and-why-is-it-important-in-manufacturing). That's why I'm wary of predictive maintenance projects that sit in a silo, disconnected from what production was doing.
+Condition data and failure history are often in separate places. Operating context usually only exists in [MES/MOM](/post/what-is-mes). That's why I'm wary of predictive maintenance projects that sit in a silo, disconnected from what production was doing.
 
 ## Production and maintenance on the same data
 

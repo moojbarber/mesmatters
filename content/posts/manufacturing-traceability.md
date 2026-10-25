@@ -1,7 +1,7 @@
 ---
 title: "Your traceability probably isn't as good as you think"
 short: "Manufacturing traceability"
-description: "Batch-level tracking and backflushing in ERP is better than nothing, but nowhere near what's possible. What full traceability looks like, and why it matters in a recall."
+description: "Batch-level tracking and backflushing in ERP is better than nothing, but far from what's possible. What full traceability looks like in a recall."
 published: 2026-05-12
 category: education
 art: flow
@@ -23,7 +23,7 @@ For a straightforward product with low risk, that may be enough. For most manufa
 
 ## What full traceability looks like
 
-With [MES/MOM](/post/what-is-mes-and-why-is-it-important-in-manufacturing), traceability can go much deeper:
+With [MES/MOM](/post/what-is-mes), traceability can go much deeper:
 
 - **Serialised items**, tracked individually
 - **Specific lot quantities**, so you know exactly how much of each lot went into each output
@@ -63,7 +63,7 @@ When they share one platform, an inspection result is attached to the lot it was
 
 ## It still syncs with ERP
 
-None of this replaces ERP. MES/MOM holds the detail and sends ERP what it needs, at the right level: actual consumption rather than backflushed estimates. ERP's data gets better, not worse. More on that in [MES vs ERP](/post/implementing-mes-can-simplify-your-erp).
+None of this replaces ERP. MES/MOM holds the detail and sends ERP what it needs, at the right level: actual consumption rather than backflushed estimates. ERP's data gets better, not worse. More on that in [MES vs ERP](/post/mes-simplifies-erp).
 
 ## A simple test
 

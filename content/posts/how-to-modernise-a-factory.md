@@ -1,7 +1,7 @@
 ---
 title: "How to modernise a factory, step by step"
 short: "How to modernise a factory"
-description: "A practical, step-by-step route from paper and spreadsheets to a connected, data-driven factory. What to do first, what to leave until later, and how to know you're ready for the next step."
+description: "A practical route from paper and spreadsheets to a connected, data-driven factory: what to do first, and how to know you're ready for the next step."
 published: 2026-10-20
 category: advice
 art: ladder
@@ -53,7 +53,7 @@ The team you build has more impact on success than the software you choose.
 
 You need an executive sponsor who'll clear the way, a project manager who's properly freed up, IT and operations working as one team, and the right external expertise where you don't have it in-house. Bring in super users from the shopfloor early. If you're a multi-site business, think now about who will own the global standard later, usually a centre of excellence blending IT and OT.
 
-And plan for resistance. Every project meets it, because change is uncomfortable. Involve people in the design and explain why it makes their shift easier. Adoption deserves as much investment as implementation. See [Building the right team](/post/building-a-winning-team-for-mes-implementation-navigating-challenges-and-ensuring-success) and [Resistance to change is guaranteed](/post/manufacturing-change-management).
+And plan for resistance. Every project meets it, because change is uncomfortable. Involve people in the design and explain why it makes their shift easier. Adoption deserves as much investment as implementation. See [Building the right team](/post/mes-implementation-team) and [Resistance to change is guaranteed](/post/manufacturing-change-management).
 
 **Ready to move on when:** named people have time in their diaries for the project, with their day jobs backfilled where needed.
 
@@ -116,7 +116,7 @@ Once the first area works, turn what you built into a template: standard process
 
 Notice where AI sits in this list.
 
-That isn't because I'm sceptical about it. I believe AI can genuinely transform manufacturing. But it learns from your shopfloor data, and until steps 1 to 10 are in place, there isn't much reliable data to learn from. GenAI can help earlier, with shift summaries and plain-English questions about your procedures. Predictive and optimising AI needs the foundation first. More in [AI won't fix your factory](/post/the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence).
+That isn't because I'm sceptical about it. I believe AI can genuinely transform manufacturing. But it learns from your shopfloor data, and until steps 1 to 10 are in place, there isn't much reliable data to learn from. GenAI can help earlier, with shift summaries and plain-English questions about your procedures. Predictive and optimising AI needs the foundation first. More in [AI won't fix your factory](/post/ai-needs-shopfloor-data).
 
 ## The checklist
 

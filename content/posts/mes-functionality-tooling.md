@@ -1,7 +1,7 @@
 ---
 title: "MES functionality: tooling"
 short: "Tooling"
-description: "Moulds, dies, jigs and fixtures are often the single biggest factor in quality. How MES/MOM manages tool life, tool readiness and setups, so the order doesn't wait for the tool."
+description: "Moulds, dies and fixtures often decide quality. How MES/MOM manages tool life and setups, so the order never waits for the tool."
 published: 2026-06-02
 category: education
 art: gantt
@@ -52,6 +52,6 @@ When tool requirements, availability, setup and setter readiness are tracked tog
 
 In high-mix environments, that alone can recover a surprising amount of capacity.
 
-This article is part of the [MES functionality series](/post/mes-functionality-inventory-logistics-overview).
+This article is part of the [MES functionality series](/post/mes-functionality-guide).
 
 How do you know today whether the tool for tomorrow's first order is ready?

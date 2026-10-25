@@ -11,13 +11,13 @@ paths:
     role: exploring AI
     color: "#ff8fe0"
     rgb: "255,143,224"
-    image: the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence
+    image: ai-needs-shopfloor-data
     blurb: What AI needs from your shopfloor data, where it already pays off, and what agentic AI changes next.
     stations:
       - ai-ml-genai-on-the-shopfloor
       - contextualised-manufacturing-data
       - manufacturing-data-platforms
-      - the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence
+      - ai-needs-shopfloor-data
       - practical-genai-for-the-shopfloor
       - agentic-ai-mcp-manufacturing
       - predictive-maintenance-data
@@ -31,8 +31,8 @@ paths:
     image: mes-business-case
     blurb: Who benefits, where the money comes from, how to build a case leadership will approve, and how to choose without regret.
     stations:
-      - who-benefits-from-an-mes
-      - can-mes-improve-your-bottom-line
+      - who-benefits-from-mes
+      - mes-roi-bottom-line
       - mes-business-case
       - smart-factory-roi-research
       - how-to-choose-an-mes
@@ -49,14 +49,14 @@ paths:
     stations:
       - what-is-erp
       - smart-factory-tech-stack
-      - implementing-mes-can-simplify-your-erp
+      - mes-simplifies-erp
       - mes-vs-mom
       - connected-worker-one-app-not-five
       - wms-vs-mes-inventory
       - aps-vs-mes-scheduling
       - cpq-to-shopfloor
       - plm-erp-mes-digital-thread
-      - an-overview-of-the-mes-market
+      - mes-market-overview
 
   - id: foundations
     title: MES/MOM foundations
@@ -64,15 +64,15 @@ paths:
     role: new to MES
     color: "#a594ff"
     rgb: "165,148,255"
-    image: what-is-mes-and-why-is-it-important-in-manufacturing
+    image: what-is-mes
     blurb: What MES and MOM actually do, how ISA-95 fits the systems together, how OEE is measured, and where ERP should stop.
     stations:
-      - what-is-mes-and-why-is-it-important-in-manufacturing
+      - what-is-mes
       - mes-vs-mom
-      - what-is-the-isa-95-model-and-where-does-mes-fit
-      - mes-functionality-inventory-logistics-overview
-      - mes-functionality-production-monitoring
-      - what-is-oee-overall-equipment-effectiveness
+      - isa-95-explained
+      - mes-functionality-guide
+      - mes-functionality-production
+      - what-is-oee
       - mes-vs-erp
 
   - id: implementation
@@ -85,7 +85,7 @@ paths:
     blurb: Every stage of a shopfloor project in the order you will hit it, from mapping the process to rolling out across sites.
     stations:
       - manufacturing-process-mapping
-      - building-a-winning-team-for-mes-implementation-navigating-challenges-and-ensuring-success
+      - mes-implementation-team
       - erp-master-data-for-mes
       - configure-dont-customise
       - isa95-integration-patterns

@@ -1,7 +1,7 @@
 ---
 title: "Where to start with a smart factory: your first 90 days"
 short: "Smart factory: where to start"
-description: "A practical plan for the first 90 days of a smart factory programme. What to do in each month, how to pick the first line, and what to have in place before you talk to a single vendor."
+description: "A practical plan for the first 90 days of a smart factory programme: what to do each month, and how to pick the first line before talking to vendors."
 published: 2026-10-13
 category: advice
 art: growth
@@ -52,7 +52,7 @@ The first month is about listening and looking, not buying.
 
 **Secure a sponsor.** Someone senior enough to allocate resources and clear blockers. Without one, plant-level projects struggle.
 
-**Name the team.** A project manager with real time, IT and operations together, super users from the line, and outside expertise where you don't have it. Backfill day jobs where you need to. See [Building the right team](/post/building-a-winning-team-for-mes-implementation-navigating-challenges-and-ensuring-success).
+**Name the team.** A project manager with real time, IT and operations together, super users from the line, and outside expertise where you don't have it. Backfill day jobs where you need to. See [Building the right team](/post/mes-implementation-team).
 
 **Write requirements from your process maps**, not a wish list. Separate what you need now from what you might need later. Then you're ready to talk to vendors. See [How to choose an MES](/post/how-to-choose-an-mes).
 
@@ -79,7 +79,7 @@ Two cautions. Don't pick a line purely because it's the worst performer if its p
 ## What not to do in the first 90 days
 
 - **Don't buy software in month one.** You don't know your requirements yet.
-- **Don't start with AI.** It needs the data foundation you haven't built yet. Run GenAI experiments on documents if you like, but don't make them the plan. See [AI won't fix your factory](/post/the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence).
+- **Don't start with AI.** It needs the data foundation you haven't built yet. Run GenAI experiments on documents if you like, but don't make them the plan. See [AI won't fix your factory](/post/ai-needs-shopfloor-data).
 - **Don't pilot a point solution you couldn't scale.** A pilot that becomes a silo costs you twice.
 - **Don't leave the shopfloor out.** People support what they helped create. See [Resistance to change is guaranteed](/post/manufacturing-change-management).
 

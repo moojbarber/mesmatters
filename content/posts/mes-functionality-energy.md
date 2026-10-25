@@ -1,7 +1,7 @@
 ---
 title: "MES functionality: energy"
 short: "Energy"
-description: "Energy is a cost and a sustainability problem, and most factories can't see it below the site meter. How MES/MOM attributes energy to machines, orders and products."
+description: "Most factories can't see energy below the site meter. How MES/MOM attributes energy to machines and products, for cost and sustainability."
 published: 2026-06-30
 category: education
 art: growth
@@ -25,7 +25,7 @@ You know the site used more energy this month. You don't know why.
 
 An energy meter on its own tells you how much was used. That's helpful, but it doesn't tell you what to do.
 
-The value comes when energy is linked to operational context, which is exactly what [MES/MOM](/post/what-is-mes-and-why-is-it-important-in-manufacturing) has. Which order was running. Which product. Which shift. Whether the machine was producing, idle, in changeover or stopped.
+The value comes when energy is linked to operational context, which is exactly what [MES/MOM](/post/what-is-mes) has. Which order was running. Which product. Which shift. Whether the machine was producing, idle, in changeover or stopped.
 
 Now you can answer useful questions:
 
@@ -55,6 +55,6 @@ I make the wider case in [You can't hit ESG targets without shopfloor data](/pos
 
 You don't need to meter everything. Start with your largest energy users and your bottleneck lines, link them to production data, and look for the obvious waste first. In my experience, the first improvements usually pay for the metering.
 
-This article is part of the [MES functionality series](/post/mes-functionality-inventory-logistics-overview).
+This article is part of the [MES functionality series](/post/mes-functionality-guide).
 
 Do you know which of your products is the most energy-intensive to make?

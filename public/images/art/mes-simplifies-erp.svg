@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img">
+
+<defs>
+  <linearGradient id="g" gradientUnits="userSpaceOnUse" x1="200" y1="0" x2="1400" y2="0">
+    <stop offset="0" stop-color="#8b6cff"/><stop offset="1" stop-color="#33d4e0"/>
+  </linearGradient>
+  <linearGradient id="hot" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#8b6cff" stop-opacity=".38"/><stop offset="1" stop-color="#33d4e0" stop-opacity=".22"/>
+  </linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffffff" stop-opacity=".07"/><stop offset="1" stop-color="#ffffff" stop-opacity=".025"/>
+  </linearGradient>
+  <linearGradient id="barfill" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8b6cff" stop-opacity=".3"/><stop offset="1" stop-color="#8b6cff" stop-opacity=".04"/>
+  </linearGradient>
+  <linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#33d4e0" stop-opacity=".28"/><stop offset="1" stop-color="#8b6cff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="liquid" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#33d4e0" stop-opacity=".35"/><stop offset="1" stop-color="#8b6cff" stop-opacity=".2"/>
+  </linearGradient>
+  <linearGradient id="liquidp" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ff6fd8" stop-opacity=".3"/><stop offset="1" stop-color="#8b6cff" stop-opacity=".18"/>
+  </linearGradient>
+  <radialGradient id="bl-v"><stop offset="0" stop-color="#6a3df0" stop-opacity=".62"/><stop offset=".7" stop-color="#6a3df0" stop-opacity="0"/></radialGradient>
+  <radialGradient id="bl-t"><stop offset="0" stop-color="#12b5c9" stop-opacity=".5"/><stop offset=".7" stop-color="#12b5c9" stop-opacity="0"/></radialGradient>
+  <radialGradient id="bl-m"><stop offset="0" stop-color="#c53fb8" stop-opacity=".45"/><stop offset=".7" stop-color="#c53fb8" stop-opacity="0"/></radialGradient>
+  <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1.1" fill="#fff" fill-opacity=".13"/></pattern>
+  <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".9" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <mask id="dotmask"><rect width="1600" height="900" fill="url(#fade)"/></mask>
+  <radialGradient id="vignette" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#0a0820" stop-opacity="0"/><stop offset="1" stop-color="#0a0820" stop-opacity=".7"/></radialGradient>
+  <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+<rect width="1600" height="900" fill="#0a0820"/>
+<circle cx="103" cy="32.8" r="561.1" fill="url(#bl-v)" opacity="0.95"/>
+<circle cx="1500.5" cy="168" r="421.7" fill="url(#bl-t)" opacity="0.8"/>
+<circle cx="1124.4" cy="861.2" r="345.1" fill="url(#bl-m)" opacity="0.6"/>
+<rect width="1600" height="900" fill="url(#dots)" mask="url(#dotmask)"/>
+<path d="M-20,768.3 C16.8,774.9 134,805.1 200.8,807.7 C267.7,810.3 313.6,788.5 380.9,783.8 C448.3,779.1 533.1,782.1 604.8,779.7 C676.4,777.2 737.7,775.3 810.9,769.2 C884.2,763.1 962.8,743.3 1044.5,743 C1126.3,742.7 1228.5,763 1301.5,767.4 C1374.5,771.7 1410.2,764.3 1482.6,769.1 C1555,773.9 1693.7,791.8 1735.9,796.4" fill="none" stroke="url(#g)" stroke-width="2.5" opacity=".55"/>
+<circle cx="810.9" cy="769.2" r="5" fill="#33d4e0" filter="url(#glow)" opacity=".8"/>
+<g>
+<rect x="150" y="210" width="360" height="460" rx="22" fill="url(#glass)" stroke="url(#g)" stroke-width="1.5" opacity="1"/>
+<line x1="190" y1="260" x2="450.7" y2="260" stroke="#8b6cff" stroke-width="6" opacity="0.45" stroke-linecap="round"/>
+<line x1="190" y1="318" x2="396.6" y2="318" stroke="#8b6cff" stroke-width="6" opacity="0.45" stroke-linecap="round"/>
+<line x1="190" y1="376" x2="445.3" y2="376" stroke="#8b6cff" stroke-width="6" opacity="0.45" stroke-linecap="round"/>
+<line x1="190" y1="434" x2="386.2" y2="434" stroke="#8b6cff" stroke-width="6" opacity="0.45" stroke-linecap="round"/>
+<line x1="190" y1="492" x2="362.7" y2="492" stroke="#8b6cff" stroke-width="6" opacity="0.45" stroke-linecap="round"/>
+<line x1="190" y1="550" x2="402.9" y2="550" stroke="#8b6cff" stroke-width="6" opacity="0.45" stroke-linecap="round"/>
+<line x1="190" y1="608" x2="400.7" y2="608" stroke="#8b6cff" stroke-width="6" opacity="0.45" stroke-linecap="round"/>
+<rect x="1090" y="210" width="360" height="460" rx="22" fill="url(#hot)" stroke="url(#g)" stroke-width="2.5" opacity="1" filter="url(#glow)"/>
+<rect x="1130" y="250" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<rect x="1228" y="250" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<rect x="1326" y="250" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<rect x="1130" y="348" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<rect x="1228" y="348" width="82" height="82" rx="12" fill="rgba(51,212,224,.2)" stroke="#33d4e0" stroke-width="1.4" opacity="1" filter="url(#glow)"/>
+<rect x="1326" y="348" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<rect x="1130" y="446" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<rect x="1228" y="446" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<rect x="1326" y="446" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<rect x="1130" y="544" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<rect x="1228" y="544" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<rect x="1326" y="544" width="82" height="82" rx="12" fill="rgba(255,255,255,.04)" stroke="url(#g)" stroke-width="1.4" opacity="1"/>
+<path d="M510,280 C538.3,280 611.7,286 680,280 C748.3,274 851.7,250 920,244 C988.3,238 1061.7,244 1090,244" stroke="url(#g)" stroke-width="2" fill="none" opacity="0.85" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="713.8" cy="262" r="5" fill="#33d4e0" stroke="none" stroke-width="2" opacity="1"/>
+<path d="M510,360 C538.3,360 611.7,363 680,360 C748.3,357 851.7,345 920,342 C988.3,339 1061.7,342 1090,342" stroke="url(#g)" stroke-width="2" fill="none" opacity="0.85" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="819.7" cy="351" r="5" fill="#33d4e0" stroke="none" stroke-width="2" opacity="1"/>
+<path d="M510,440 C538.3,440 611.7,440 680,440 C748.3,440 851.7,440 920,440 C988.3,440 1061.7,440 1090,440" stroke="url(#g)" stroke-width="2" fill="none" opacity="0.85" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="875.2" cy="440" r="5" fill="#33d4e0" stroke="none" stroke-width="2" opacity="1"/>
+<path d="M510,520 C538.3,520 611.7,517 680,520 C748.3,523 851.7,535 920,538 C988.3,541 1061.7,538 1090,538" stroke="url(#g)" stroke-width="2" fill="none" opacity="0.85" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="824.5" cy="529" r="5" fill="#33d4e0" stroke="none" stroke-width="2" opacity="1"/>
+<path d="M510,600 C538.3,600 611.7,594 680,600 C748.3,606 851.7,630 920,636 C988.3,642 1061.7,636 1090,636" stroke="url(#g)" stroke-width="2" fill="none" opacity="0.85" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="841.5" cy="618" r="5" fill="#33d4e0" stroke="none" stroke-width="2" opacity="1"/>
+<circle cx="800" cy="440" r="20.8" fill="#33d4e0" stroke="none" stroke-width="2" opacity="0.18"/>
+<circle cx="800" cy="440" r="8" fill="#0a0820" stroke="#33d4e0" stroke-width="2.5" opacity="1" filter="url(#glow)"/>
+</g>
+<rect width="1600" height="900" fill="url(#vignette)"/>
+</svg>

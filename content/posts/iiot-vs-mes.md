@@ -15,7 +15,7 @@ IIoT, the Industrial Internet of Things, is about connecting machines, sensors a
 
 It's a concept. Many systems help deliver it: IIoT platforms, historians, edge devices and MES/MOM itself.
 
-In [ISA-95](/post/what-is-the-isa-95-model-and-where-does-mes-fit) terms, IIoT lives in the connectivity layer: Levels 1 and 2, the sensors and the control systems.
+In [ISA-95](/post/isa-95-explained) terms, IIoT lives in the connectivity layer: Levels 1 and 2, the sensors and the control systems.
 
 ## MES/MOM is operational management
 

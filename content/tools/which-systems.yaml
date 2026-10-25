@@ -5,7 +5,7 @@ capabilities:
     name: Production execution and monitoring
     where: MES/MOM
     what: Orders released to the line, operators guided through each step, counts, scrap, downtime and reasons captured as they happen.
-    read: mes-functionality-production-monitoring
+    read: mes-functionality-production
   scheduling:
     name: Finite scheduling
     where: APS, or the scheduling module in MES/MOM
@@ -15,7 +15,7 @@ capabilities:
     name: In-process quality and SPC
     where: MES/MOM
     what: Checks triggered at the right moment, results recorded at source, control charts and holds that stop bad product moving on.
-    read: mes-functionality-quality-operations
+    read: mes-functionality-quality
   qms:
     name: Quality management (QMS)
     where: QMS, connected to MES/MOM
@@ -40,7 +40,7 @@ capabilities:
     name: Warehouse management (WMS)
     where: WMS, or warehouse functions in ERP
     what: Receiving, put-away, picking and shipping, with locations and stock levels you don't have to count to believe.
-    read: mes-functionality-logistics-warehousing
+    read: mes-functionality-logistics
   maintenance:
     name: Maintenance management
     where: CMMS or EAM, fed by MES/MOM

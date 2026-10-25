@@ -69,7 +69,7 @@ Running SPC in MES/MOM gives you things a standalone tool or spreadsheet can't:
 - **Context on every point.** Order, lot, machine, tool, operator, shift. When the chart shifts, you can see what changed.
 - **Action, not just alarms.** A rule violation can require the operator to record a reason and a corrective action before continuing, or put the lot on hold.
 
-I covered inspection plans and quality operations in [MES functionality: quality operations](/post/mes-functionality-quality-operations). SPC is the part that turns those inspections from a pass/fail record into an early warning.
+I covered inspection plans and quality operations in [MES functionality: quality operations](/post/mes-functionality-quality). SPC is the part that turns those inspections from a pass/fail record into an early warning.
 
 ## Closing the loop
 

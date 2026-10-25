@@ -3,17 +3,15 @@
 # Keyed by article slug. Optional: label (defaults to "Summary"), faq, reviewed.
 # Rules: 40-60 words, the answer first, written as Matt, nothing invented.
 
-what-is-mes-and-why-is-it-important-in-manufacturing:
-  summary: "MES is the production pillar: running orders on the shopfloor and recording output and downtime as they happen. MOM covers the whole operation, which ISA-95 splits into production, quality, inventory and maintenance, on the same data. The difference decides what you buy, and whether everyone in operations works from one version of the truth."
+what-is-mes:
+  summary: "MES, a manufacturing execution system, runs production: dispatching orders and recording output and downtime as they happen. MOM, manufacturing operations management, covers the whole operation that ISA-95 defines, from production and quality to inventory and maintenance, on the same data. The difference decides what you buy, and whether everyone in operations works from one version of the truth."
   faq:
     - q: "What does MES stand for?"
-      a: "MES stands for Manufacturing Execution System. It's the software that gets the right order onto the right line and records what actually happened, including output and downtime, ideally straight from the equipment. It sits between ERP, which plans the business, and the machines and control systems on the shopfloor. It's still the term most people search for, even when they need something broader."
+      a: "MES stands for manufacturing execution system. It's the software that gets the right order onto the right line and records what actually happened, including output and downtime, ideally straight from the equipment. It sits between ERP, which plans the business, and the machines and control systems on the shopfloor."
     - q: "What is the difference between MES and MOM?"
-      a: "MES is the production pillar. MOM, Manufacturing Operations Management, covers the four areas ISA-95 defines for manufacturing operations, which are production, quality, inventory and maintenance, on one set of data. The broadest MOM platforms go further into tooling, energy, skills and connected worker. MES is one part of MOM. When a vendor says their MES covers everything, ask which pillars it actually handles and how deeply."
-    - q: "Do I need MES if I already have an ERP?"
-      a: "Usually, yes. ERP plans and accounts for production at the level of detail the business needs. MES/MOM works at the granular, real-time level of the shopfloor, with screens built for operators rather than office users. ERP also gets better when MES/MOM is in place, because it receives validated actuals instead of backflushed estimates. The two do different jobs and work best together."
-    - q: "Why does it matter whether quality, inventory and maintenance are in the same system?"
-      a: "Because the operator does a bit of all four, often in the same ten minutes, and the departments overlap constantly. When production and maintenance record downtime in different systems, the morning meeting starts with an argument about whose numbers are right. With one platform, the downtime production sees is the downtime maintenance sees, and quality checks are triggered by what's actually running."
+      a: "MES is the production pillar. MOM, manufacturing operations management, covers the four areas ISA-95 defines for manufacturing operations, which are production, quality, inventory and maintenance, on one set of data. MES is one part of MOM. When a vendor says their MES covers everything, ask which of the four areas it actually handles, and how deeply."
+    - q: "Why does MES/MOM matter for AI?"
+      a: "AI needs accurate, contextualised data collected over time. A machine signal that says stopped means little on its own. MES/MOM adds the order, the material, the shift and the reason, which turns raw signals into data a model can learn from. The broader the scope, the richer that context."
 
 mes-vs-mom:
   summary: "MES runs production: orders, counts, scrap, downtime and OEE. MOM covers all four areas ISA-95 defines for manufacturing operations, which are production, quality, inventory and maintenance, on one platform. MES is one part of MOM, not a synonym for it, and buying a separate system per pillar usually leaves you reconciling them forever."
@@ -35,70 +33,138 @@ what-is-erp:
     - q: "Do manufacturing-focused ERPs still need MES/MOM?"
       a: "Some ERPs were designed with manufacturing in mind and cover more of the production side, such as detailed routings and shopfloor reporting. That makes the gap to MES/MOM smaller, which is helpful. MES/MOM still adds a different layer of data: finer detail, captured in real time, with every event tied to its order, batch, machine and operator."
 
-implementing-mes-can-simplify-your-erp:
-  summary: "MES/MOM takes the shopfloor detail out of ERP and sends back accurate actuals instead of backflushed estimates. ERP keeps doing what it does best, planning and accounting, while MES/MOM handles real-time execution with screens built for operators. The two together give better costing and planning than either could manage alone."
+mes-simplifies-erp:
+  summary: "ERP is built to run the business, not the shopfloor. Forcing it to handle real-time execution adds custom code and complexity. Putting execution into MES/MOM alongside ERP lets both run closer to standard and improves ERP data, because MES/MOM posts actual consumption and output rather than backflushed estimates."
   faq:
-    - q: "How does MES make ERP better?"
-      a: "MES/MOM captures what actually happened on the shopfloor and posts accurate actuals back to ERP: real consumption, counts and scrap, rather than figures backflushed from the bill of materials. That gives ERP more accurate inventory and costing, and it removes the manual data entry and reconciliation that used to sit between the two."
-    - q: "Should ERP connect directly to machines?"
-      a: "No. ERP isn't designed for real-time communication with equipment. It needs aggregated data at a sensible frequency, not thousands of signals a second from a PLC. Direct interfaces between ERP and machines tend to be fragile and expensive, and they make every ERP upgrade harder. MES/MOM exists to sit in between, and if it isn't in place yet, buffer machine data in a historian or IIoT platform."
-    - q: "What data flows between ERP and MES?"
-      a: "ERP sends production orders and shared master data such as bills of materials and routings. MES/MOM runs the order on the shopfloor and sends back a summary of what happened, including quantities produced, material consumed, scrap and labour. The detailed shopfloor data stays in MES/MOM, which is better suited to store and report on it."
+    - q: "Does MES replace ERP?"
+      a: "No. ERP keeps running the business, including finance, purchasing, planning and inventory valuation. MES/MOM runs the shopfloor and keeps ERP up to date with what actually happened. Each does the job it was designed for."
+    - q: "How does MES improve ERP data?"
+      a: "MES/MOM records consumption and output as they happen and posts the actuals to ERP, instead of ERP backflushing standard quantities. That makes inventory and product costs more accurate, and means production is confirmed in near real time rather than at the end of a shift."
+    - q: "Does ERP lose visibility when MES is introduced?"
+      a: "No. ERP keeps at least the information it had before, because MES/MOM keeps it updated, often with aggregated data. The detailed, high-volume shopfloor data stays in MES/MOM, which also reduces the transaction load on ERP."
 
-what-is-the-isa-95-model-and-where-does-mes-fit:
-  summary: "ISA-95, also published as IEC 62264, is the international standard for how business systems and shopfloor systems fit together. It splits a factory into levels, from the physical process at level 0 up to ERP at level 4. MES/MOM sits at level 3, between ERP and the control systems, exchanging orders and actuals with both."
+isa-95-explained:
+  summary: "ISA-95 (IEC 62264) is the international standard for integrating business systems with manufacturing operations. It defines five levels, from the physical process at level 0 to ERP at level 4, with MES/MOM at level 3. It also defines what ERP and MES/MOM exchange, and the four areas of manufacturing operations: production, quality, inventory and maintenance."
   faq:
-    - q: "What is ISA-95?"
-      a: "ISA-95 is the international standard for integrating enterprise and control systems, also published as IEC 62264. ISA's SP95 committee began the work in the mid-1990s and Part 1 was published in 2000. It's mainly concerned with the boundary between business planning at level 4 and manufacturing operations at level 3, and what ERP and MES/MOM exchange."
-    - q: "What are the ISA-95 levels?"
-      a: "Level 0 is the physical process. Level 1 is sensing and manipulating it with sensors and actuators. Level 2 is monitoring and control with PLCs, DCS and SCADA. Level 3 is manufacturing operations management, where MES/MOM sits, working in shifts down to seconds. Level 4 is business planning and logistics, where ERP works in months, weeks and days."
+    - q: "What are the levels of ISA-95?"
+      a: "Level 0 is the physical process. Level 1 is sensing and manipulating it, through sensors and actuators. Level 2 is monitoring and control, through systems such as PLCs and SCADA. Level 3 is manufacturing operations management, which is MES/MOM. Level 4 is business planning and logistics, which is ERP."
     - q: "Where does MES fit in ISA-95?"
-      a: "MES/MOM sits at level 3, between ERP above and the control systems below. ERP sends down the production schedule and shared master data. MES/MOM manages the factory operations using real-time readings from levels 0 to 2, and reports an aggregated summary back to ERP while keeping the detailed data itself."
+      a: "MES/MOM sits at level 3, between ERP above and the control layer below. It receives orders and master data from ERP and manages execution on the shopfloor. A summary of actual production and consumption then goes back to ERP."
+    - q: "Is ISA-95 still relevant?"
+      a: "Yes. It gives IT and operations people a shared language, and a predictable framework for what passes between ERP and MES/MOM. Newer architectures such as IIoT and the unified namespace sit in the connectivity layer and work alongside it rather than replacing level 3."
 
-what-is-oee-overall-equipment-effectiveness:
-  summary: "OEE (overall equipment effectiveness) is availability multiplied by performance multiplied by quality. It compares the good product you made with what the line could theoretically have made in the time it was planned to run. Measure it on the bottleneck from automatically collected data, and use it to find losses rather than to compare people."
+what-is-oee:
+  summary: "OEE, overall equipment effectiveness, compares the good product a line made with what it could have made in its planned time. It's calculated as availability multiplied by performance multiplied by quality. Measure it at the bottleneck, capture the data automatically so short stops are counted, and use the components to see where the losses are."
   faq:
     - q: "How do you calculate OEE?"
-      a: "OEE equals availability multiplied by performance multiplied by quality. Availability is the time the line ran divided by the time it was planned to run. Performance compares actual output with what the target cycle time says you could have made. Quality is good quantity divided by total quantity produced. ISO 22400 defines the components formally."
-    - q: "Which machine should OEE be measured on?"
-      a: "The bottleneck, the machine with the lowest throughput in the line. If other machines stop briefly without affecting the bottleneck, the line can't produce any faster, so those stops don't change OEE. If they stop long enough to starve or block the bottleneck, they will."
-    - q: "What does a performance figure over 100% mean?"
-      a: "It means your target cycle time is wrong. The machine can run faster than the master data says. It's tempting to leave it and enjoy a higher OEE, but that works against continuous improvement. Recognise what the operators achieved, then update the target cycle time and aim higher."
-    - q: "Does rework affect OEE?"
-      a: "Rework doesn't reduce the quality rate the way scrap does, but it still affects OEE because reworked pieces take extra time to process. That shows up as lost capacity. It's one reason first-pass yield is worth measuring alongside OEE, because a line can look fine on quality rate while quietly reworking a lot of what it makes."
+      a: "Multiply availability by performance by quality. Availability is run time divided by planned time. Performance is the quantity produced divided by what the line could have made at its target speed. Quality is good quantity divided by total quantity. Together they simplify to good quantity divided by what the planned time allows at the target cycle time."
+    - q: "What is a good OEE score?"
+      a: "An OEE of 85% is often quoted as world class, a figure that comes from the total productive maintenance tradition. Many manufacturers run well below that, and a realistic target depends on your industry and starting point. An honest figure from automatic data capture is more useful than a higher manual one."
+    - q: "Why does OEE drop when data capture is automated?"
+      a: "Manual recording misses short stops of a few seconds and rounds the length of longer ones, so manual OEE is usually higher than reality. Automatic capture from the equipment counts every stop. Explain the change before it happens, so the lower figure is treated as a more accurate baseline rather than a failure."
 
-who-are-mesa-and-how-do-they-define-mes:
-  summary: "MESA International ceased operation on 30 June 2026, and ISA took on its educational programmes and community. Its best-known legacy is the MESA-11 model from 1997, eleven core MES functions that already covered quality, maintenance, labour and genealogy. That breadth is what we now call MOM."
+mesa-and-the-definition-of-mes:
+  summary: "MESA International, best known for its MESA-11 model of MES functionality, ceased operation on 30 June 2026, and ISA took on its educational programmes and content the same day. The MESA-11 model set out eleven functions, far broader than production execution, and later models connected MES to the wider business. Members can transfer to ISA free until the end of 2026."
+  faq:
+    - q: "What is the MESA-11 model?"
+      a: "Published by MESA in 1997, it set out eleven core functions of MES, including detailed sequencing, dispatching, genealogy, labour, quality, document control, performance analysis, maintenance and data collection. It was a functional map of what a factory needs managed, not a specification for a single product."
+    - q: "What happened to MESA International?"
+      a: "MESA ceased operation on 30 June 2026. The International Society of Automation took on its educational programmes and content the same day, and MESA members can transfer to ISA at no cost until the end of 2026."
+    - q: "How did MESA define MES?"
+      a: "MESA described MES as a dynamic information system that drives effective execution of manufacturing operations. Its models grew over time, from the eleven functions of 1997 to later models showing how production operations connect with business operations and strategy."
 
-who-benefits-from-an-mes:
-  summary: "Almost everyone in a manufacturing business benefits from MES/MOM. Operators get guidance and less paperwork. Supervisors and schedulers see what's happening in real time, while quality, maintenance, logistics and planning share the same data. Executives get the performance figures they need to make decisions, without waiting for someone to build a report."
+who-benefits-from-mes:
+  summary: "Almost everyone in manufacturing operations benefits from MES/MOM, in different ways. Operators get guidance and less paperwork, specialists get data to plan and improve, managers get live performance and escalations, and executives get trusted figures for cost and delivery. The breadth of benefit depends on how much of the operation the product covers."
+  faq:
+    - q: "Who uses an MES?"
+      a: "Operators, logistics staff, maintenance technicians and toolroom staff use it to do and record their work. Schedulers, quality engineers, continuous improvement engineers and maintenance engineers use its data to plan and improve. Managers use it to monitor performance, and executives usually see its data through reports or other systems."
+    - q: "How does MES help operators?"
+      a: "It guides them through the work with current instructions, and captures counts and downtime from the machine so they don't have to write them down. Error-proofing and alerts help them get it right first time."
+    - q: "Do executives use MES directly?"
+      a: "Rarely. Executives usually see MES/MOM data through reports, ERP or a data platform it feeds. They should still be involved in the buying decision, because the business case rests on cost and delivery improvements they care about."
 
-the-history-of-mes-and-digitalisation-in-manufacturing:
-  summary: "Manufacturing went from manual, disconnected processes to PLCs in the late 1960s, then to computer systems that each managed one part of the factory. MES grew out of the need to coordinate them and connect the shopfloor to the business. Today's MOM platforms are the result, and the data foundation that AI now depends on."
+history-of-mes:
+  summary: "Manufacturing systems moved from paper and skill, through PLCs in 1969 and SCADA, to ERP for the business and separate departmental systems on the shopfloor. MES emerged in the early 1990s to bring execution together, and ISA-95 in 2000 standardised the model, leading to broader MOM platforms. AI is the next step, and it depends on the same data foundation."
+  faq:
+    - q: "When did MES start?"
+      a: "The term MES emerged in the early 1990s, to describe systems that managed execution on the shopfloor between ERP and the control layer. MESA International was founded in 1992 and published its eleven-function MES model in 1997, and ISA-95 Part 1 followed in 2000."
+    - q: "What came before MES?"
+      a: "Paper records and control systems such as PLCs, alongside separate departmental systems for quality and maintenance. Each solved one department's problem, but few shared data. MES/MOM brought that operational data together with its context."
+    - q: "What comes after MES?"
+      a: "MES/MOM keeps growing in scope, connecting to IIoT devices and data platforms and building AI into everyday tools. AI that predicts and optimises operations still depends on reliable, contextualised shopfloor data, so the data foundation remains the first step."
 
 introduction-to-mes-and-smart-manufacturing:
   summary: "Smart manufacturing gets the headlines, but MES is the platform underneath it. ERP manages the business; MES coordinates, tracks and records everything that happens in the factory, across production, quality, inventory and maintenance. It connects ERP and enterprise applications to the machines, and gives decision-makers real-time data they can trust."
 
-an-overview-of-the-mes-market:
-  summary: "The MES/MOM market is growing at around 10% a year, and much of it is still untapped: over half of small and mid-sized manufacturers still run on paper or spreadsheets. Workforce pressure, AI ambitions, traceability demands and composable ERP are driving demand. My view on where the market is heading, and where I could be wrong."
+mes-market-overview:
+  summary: "The MES/MOM market is growing at around 10% a year, and many smaller manufacturers still run on paper or spreadsheets. Demand is driven by workforce change, AI ambitions, traceability and composable ERP. Legacy toolkits are giving way to two modern approaches: platforms for builders, and configurable enterprise platforms. Buyers should know which type they're choosing, and why."
+  faq:
+    - q: "How big is the MES market?"
+      a: "Estimates vary with what is counted. MarketsandMarkets puts MES software and services at around $16 billion in 2025, growing to almost $26 billion by 2030. Software-only estimates are lower, such as IoT Analytics at $5.5 billion in 2024."
+    - q: "What types of MES vendor are there?"
+      a: "Broadly, legacy toolkit applications that are heavily customised, platforms that let manufacturers build their own applications, and configurable enterprise platforms designed for standardisation across many sites. Builder platforms and enterprise platforms tend to serve different kinds of business rather than compete directly."
+    - q: "What trends are shaping the MES market?"
+      a: "Scope is broadening from MES to MOM, connected worker is increasingly built in, licensing is moving to subscription alongside cloud delivery, and AI features are appearing in products. Buyers also increasingly expect configuration and low-code rather than heavy customisation."
 
-mes-functionality-inventory-logistics-overview:
-  summary: "MES/MOM is much more than production. This is the index to the MES functionality series, organised by the four pillars of production, quality, inventory and maintenance, plus the functions beyond them such as tooling and energy. Start with What is MES/MOM? if you're new, then use this page to go function by function."
+mes-functionality-guide:
+  summary: "MES/MOM covers far more than production. Its core functions are production, quality, inventory and maintenance, on one set of data, and the broadest platforms add capabilities such as tooling and connected worker. Each function depends on the others, so when they share one platform the context is captured automatically. This guide links to a detailed article on each function."
+  faq:
+    - q: "What are the main functions of an MES?"
+      a: "Production monitoring and scheduling are the core of MES. MOM extends that across the whole operation, which ISA-95 splits into production, quality, inventory and maintenance. Many platforms also cover tooling and energy."
+    - q: "Is MES just production monitoring?"
+      a: "No. Production monitoring is the production pillar, and often the first step. Operators also perform quality checks and look after their equipment. A full MOM supports all of that on the same data, so a quality check knows which order is running."
+    - q: "Why does it matter if MES functions share one platform?"
+      a: "Because the functions depend on each other. Downtime matters to production and maintenance alike, and a material lot carries its inspection results. On one platform that context is captured automatically; across separate systems some of it is lost at each interface."
 
-mes-functionality-production-monitoring:
-  summary: "Production monitoring is the most fundamental MES function: running orders on the line and recording output and downtime, ideally straight from the equipment. The production order is the context everything else hangs off. Cheaper OEE tools can do this part, but choose with the long term in mind, because requirements always grow."
+mes-functionality-production:
+  summary: "Production monitoring is the most fundamental MES function. MES/MOM runs production orders on the line and records counts, scrap, rework, downtime and labour against each one, ideally straight from the machine. That data feeds OEE and continuous improvement. A good system also prevents mistakes as they happen, rather than only recording them afterwards."
+  faq:
+    - q: "What does MES production monitoring record?"
+      a: "It records output against each production order as it happens: good counts, scrap and rework with reasons, downtime with reasons, and the labour spent. Everything is tied to the order, so it can be analysed by product, machine, shift or operator, and summarised for ERP."
+    - q: "Why does OEE often drop when MES is introduced?"
+      a: "Because the figures become accurate. Manual recording misses short stops of a few seconds or minutes, and rounds the rest. Capturing downtime automatically from the machine reveals losses that were always there, which is the starting point for improving them."
+    - q: "Should production data be collected automatically or manually?"
+      a: "Automatically wherever the equipment allows it, usually through OPC UA or MQTT. It's real time and more accurate than manual entry. Manual entry still has a place for older machines, and for information only a person can give, such as the reason behind a stop."
 
-mes-basics-production-scheduling:
-  summary: "ERP creates the initial schedule from demand and stock, then sends production orders to MES/MOM. MES/MOM fine-tunes the sequence and equipment, and gives schedulers and operators a live view of the plan that reacts when things change on the day. Genuinely complex sequencing usually calls for a dedicated APS tool."
+mes-functionality-scheduling:
+  summary: "ERP creates production orders from demand and stock levels. MES/MOM receives them with their routings and bills of materials, lets schedulers fine-tune the sequence and the equipment, and releases orders to the shopfloor, where operators see a live plan. A dedicated APS is worth adding when sequencing itself becomes the hard problem."
+  faq:
+    - q: "Does MES do production scheduling?"
+      a: "Most MES/MOM platforms let schedulers adjust the sequence of the orders ERP has created and release them to the line. How sophisticated that is varies widely between products, from a simple dispatch list to detailed short-interval scheduling."
+    - q: "What is the difference between ERP and MES scheduling?"
+      a: "ERP plans in weeks and months, usually with simplified capacity, and decides what to make and when. MES/MOM works in shifts and minutes, sequencing and dispatching orders against real equipment and feeding back what actually happened."
+    - q: "When do you need an APS as well as MES?"
+      a: "When sequencing becomes genuinely complex: shared bottlenecks, sequence-dependent changeovers, tools shared across machines or large numbers of orders changing every day. For stable production with simple changeovers, ERP plus MES/MOM is often enough."
 
-mes-functionality-quality-operations:
-  summary: "Quality in MES/MOM means inspection plans and in-line checks triggered by what's actually running, with measurements and defects recorded against the order and material. Those results feed SPC and drive holds when something is wrong. Doing it at the point of production catches problems before they become scrap or a customer complaint."
+mes-functionality-quality:
+  summary: "MES/MOM runs quality at the point of production. It manages control plans, prompts the right inspection when it's due, captures variables and defects, often straight from gauges, applies SPC and places holds on suspect material. Every result is tied to the order and the lot, which makes traceability and root cause analysis much faster."
+  faq:
+    - q: "What quality functions does an MES include?"
+      a: "Typically quality control plans, inspections triggered by what's running, variable and defect recording, SPC, connections to gauges and inspection equipment, holds and non-conformances. Some platforms also manage documents and corrective actions, while others pass those to a QMS."
+    - q: "Can MES replace a QMS?"
+      a: "For in-process quality, MES/MOM often covers what's needed. A QMS manages the wider quality system, including CAPA, audits, complaints and controlled documents. Many manufacturers use both, with serious or repeat issues found on the line passed to the QMS."
+    - q: "What is the difference between out of specification and out of control?"
+      a: "Out of specification means a result falls outside the specification limits, so the product doesn't meet requirements. Out of control means a result falls outside the statistical control limits, a sign the process is drifting even if parts are still within specification."
 
-mes-functionality-inventory-management:
-  summary: "MES/MOM tracks inventory at the level the shopfloor needs: individual labelled units, serial items, lots and containers. It records what each order consumed and what it created, as it happens, from goods in to finished goods. That's what gives you real traceability rather than backflushed estimates."
+mes-functionality-inventory:
+  summary: "MES/MOM manages inventory once it reaches production: lots, serials, containers and handling units at each line-side location. It validates every item at the point of use against the order and its bill of materials, and records consumption at lot or serial level. ERP keeps the totals and the value; the shopfloor system keeps the detail."
+  faq:
+    - q: "Should inventory on the shopfloor be managed in ERP or MES?"
+      a: "ERP should usually own inventory at an aggregated level, by material and warehouse, valued for the balance sheet. The shopfloor needs individual lots, exact locations, quality status and consumption by order, captured in real time. That detail usually sits best in MES/MOM, which keeps ERP updated with the totals."
+    - q: "What is the difference between backflushing and recording actual consumption?"
+      a: "Backflushing assumes the bill of materials quantity was used, so nothing is recorded on the shopfloor and scrap or substitutions disappear. Recording actual consumption captures the lot or serial used and the real quantity, which keeps stock accurate and gives traceability."
+    - q: "Why print labels at the point of production?"
+      a: "Pre-printed labels lead to mislabelling and manual corrections. When MES/MOM prints the label as inventory is made, it already knows the order, material, lot and quantity, so the label is correct from the start."
 
-mes-functionality-logistics-warehousing:
-  summary: "Warehousing doesn't have to live in MES/MOM. ERP or a dedicated WMS is often the better choice, and each option has genuine pros and cons. I come from MES and still often recommend one of the others. What matters is a clean handover of inventory ownership where material moves into production."
+mes-functionality-logistics:
+  summary: "Factory logistics covers receiving goods, replenishing the line, putting finished goods away, warehouse moves and shipping. It can run in ERP, a dedicated WMS or MES/MOM. ERP suits simple warehouses, a WMS suits complex or automated ones, and MES/MOM suits flows driven by production. Many manufacturers combine them, with MES/MOM running from the supermarket to the line."
+  faq:
+    - q: "Should warehouse management sit in ERP, a WMS or MES?"
+      a: "It depends on the warehouse. ERP often suits a simple warehouse with straightforward picking. A WMS earns its place with high volumes or automation. MES/MOM suits flows driven by production, such as supermarkets and kanban, but isn't designed for a large distribution warehouse."
+    - q: "What is automated replenishment to the line?"
+      a: "The system tracks stock at each line-side location and raises requests by rule, for example when stock falls below a reorder point, or ahead of upcoming orders on the schedule. It keeps lines supplied without piling stock beside them."
+    - q: "Why relabel material at goods-in?"
+      a: "Suppliers sometimes deliver several packs under one lot code with no unique identifier. Giving each pack its own factory label and material number makes it individually traceable, and simpler to move and consume in production."
 
 mes-functionality-maintenance:
   summary: "Maintenance belongs in the same platform as production because both teams care about the same downtime. In MES/MOM, operators raise faults from the screen they already use and see the planned work and autonomous maintenance tasks for their equipment. A dedicated CMMS or EAM still makes sense for asset-heavy operations with advanced needs."
@@ -109,20 +175,48 @@ mes-functionality-tooling:
 mes-functionality-energy:
   summary: "Most factories can't see energy below the site meter. MES/MOM links consumption to the machine and the order that caused it, including idle running, so you can measure energy per piece and find waste. Start with your biggest consumers and bottleneck lines. In my experience the first improvements usually pay for the metering."
 
-implementing-kaizen-principles-with-mes-for-lean-manufacturing-success:
-  summary: "Kaizen means continuous improvement, made in small steps by everyone, at the place where the work happens. MES/MOM supports it by standardising processes and showing losses in real time from data captured automatically. Improvement then rests on facts rather than gut feel, and you can prove each change worked."
+kaizen-and-mes:
+  summary: "Kaizen is continuous improvement through small, regular changes made by everyone, with a stable standard to measure against. MES/MOM supports it by capturing losses automatically, and by showing whether an improvement has held. It won't create a Kaizen culture on its own, but it removes much of the data collection that slows improvement teams down."
+  faq:
+    - q: "What is Kaizen in manufacturing?"
+      a: "Kaizen is a Japanese word meaning change for the better. In manufacturing it describes continuous improvement through many small, low-cost changes made by people at every level, built on a standard way of working and the plan, do, check, act cycle. It's a core part of the Toyota Production System."
+    - q: "How does MES support Kaizen?"
+      a: "MES/MOM records downtime, cycle times and quality results automatically, so improvement teams can find the biggest losses without weeks of manual study. It provides a baseline for each change, and shows whether gains have held over time."
+    - q: "What is a digital morning meeting?"
+      a: "It's a daily performance meeting run from live shopfloor data rather than reports prepared by hand. Everyone sees the same figures for yesterday's performance, actions are logged against the data that prompted them, and next week's meeting shows whether they worked."
 
-food-beverage-industry-challenges:
-  summary: "Food and beverage manufacturers face food safety, allergen control, perishable materials, volatile costs, waste and a shrinking skilled workforce, often while still running on paper. Digital systems such as MES/MOM help by enforcing processes and tracking every lot, with real-time visibility of yield and downtime."
+food-and-beverage-manufacturing-challenges:
+  summary: "Food and beverage manufacturers face strict food safety demands, waste and give-away, variable yields, labour shortages and fragile supply chains. MES/MOM helps by monitoring critical parameters, enforcing recipes and procedures digitally, tracking give-away in real time and recording every ingredient lot, so traces take minutes and recalls stay narrow."
+  faq:
+    - q: "What are the biggest challenges in food and beverage manufacturing?"
+      a: "Food safety and quality come first, followed by cost and waste, including spoilage and give-away. Yield and skills shortages are also major pressures, and end-to-end traceability underpins a resilient supply chain."
+    - q: "What is give-away in food manufacturing?"
+      a: "Give-away is product packed above the declared weight to make sure packs aren't underweight. Small amounts per pack add up across millions of units. MES/MOM can measure give-away by line and product in real time, so it can be controlled rather than estimated."
+    - q: "How does MES help food and beverage traceability?"
+      a: "MES/MOM records every ingredient lot and process step against each batch as production happens. That allows forward and backward traces in minutes, and narrows recalls to the batches that actually used an affected lot."
 
 food-manufacturing-mes-barriers:
   summary: "Food MES projects rarely fail because of the technology. The barriers I see most are people and change management, starting too big, underestimating master data such as recipes and specifications, and choosing a platform that can't grow. Involve operators early and start on one line, with the data foundation right first."
 
-building-a-winning-team-for-mes-implementation-navigating-challenges-and-ensuring-success:
-  summary: "The team you build has the biggest impact on MES success. You need an executive sponsor, a strong project manager, IT and operations together, and the right external expertise, with clear roles and time freed up to do the work. Enterprise programmes do best with a centre of excellence that owns the global standard."
+mes-implementation-team:
+  summary: "MES/MOM projects succeed or fail on people more than software. You need an executive sponsor who removes barriers, a capable project manager, IT and operations involved from the start, and operators shaping the design. Add external expertise where internal experience is thin, and plan for change from day one."
+  faq:
+    - q: "Who should be on an MES implementation team?"
+      a: "An executive sponsor, a dedicated project manager, IT, and representatives from production, quality, logistics and maintenance. Operators and other experienced shopfloor people should be involved in design and testing. Most teams also include the vendor or a systems integrator, and sometimes an independent consultant."
+    - q: "What makes a good MES project manager?"
+      a: "Knowledge of MES/MOM and your production processes, strong communication, planning discipline and the ability to solve problems before they cause delays. They are the main point of contact between the internal team and external partners, and often lead the roll-out to further sites."
+    - q: "Why do MES projects fail?"
+      a: "Common reasons include weak executive sponsorship, part-time teams, unclear objectives, poor master data and too little attention to change management. Successful projects agree KPIs and fix data early, and treat MES/MOM as a business change rather than a software installation."
 
-can-mes-improve-your-bottom-line:
-  summary: "Yes. Ask what a 1% OEE improvement on your bottleneck is worth, then remember well-run projects often deliver far more. The money comes from less downtime, scrap and rework, fewer admin hours, lower inventory, narrower recalls and better ERP data. Some benefits are indirect and grow as adoption grows."
+mes-roi-bottom-line:
+  summary: "MES/MOM improves the bottom line mainly through less downtime, less scrap and rework, less admin time, lower inventory, smaller recalls, better ERP costing and lower energy use. Start by asking what 1% of OEE is worth on your bottleneck, measure your own losses, count costs honestly and phase the investment so early results fund the next stage."
+  faq:
+    - q: "What is the ROI of MES?"
+      a: "It depends on your losses today. The biggest returns usually come from extra output on bottleneck equipment, and from less scrap and rework. In Deloitte's 2025 Smart Manufacturing Survey, large manufacturers reported average output improvements of 10% to 20% from smart manufacturing initiatives."
+    - q: "How do you calculate the value of MES?"
+      a: "Quantify what downtime, scrap, overtime, late deliveries and excess inventory cost you today. Estimate realistic improvements from your own data, not vendor claims. Then count the full costs, including your own people's time, and compare them over several years."
+    - q: "What is 1% of OEE worth?"
+      a: "On a bottleneck, one point of OEE is extra output from equipment you already own, which can mean more sales or a capital project you no longer need. The 1% calculator on this site works it out from a few numbers about your line."
 
 agentic-ai-mcp-manufacturing:
   summary: "Agentic AI is given an objective and acts towards it, often by using other software. MCP (Model Context Protocol) is an open standard for connecting agents to applications and data. On the shopfloor, start with agents that gather information and recommend, with a person making the call, before letting them act within tight limits."
@@ -363,9 +457,15 @@ wms-vs-mes-inventory:
     - q: "Where should the boundary between WMS and MES sit?"
       a: "Usually at the line. The WMS owns stock until it's delivered to a line-side location, and MES/MOM owns it from there until it's consumed or produced. Whatever the split, one system should own each location, and quality status must travel with the material."
 
-the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence:
-  label: The short version
-  summary: "AI won't fix your factory on its own. Shopfloor data is your factory's internet, and AI learns from it. Defined processes, MES/MOM running them, connected machines and contextualised data come first. Get that foundation in place and AI will make the factory much, much better."
+ai-needs-shopfloor-data:
+  summary: "AI that predicts and optimises a factory learns from that factory's data, so it needs a foundation first: defined processes, MES/MOM on the shopfloor, connected equipment and contextualised data built up over time. Generative AI is different. It can start now on documents and know-how, alongside the foundation work, as long as answers are grounded and reviewed."
+  faq:
+    - q: "Why does AI need good shopfloor data?"
+      a: "Machine learning finds patterns in data to predict outcomes, so its predictions are only as good as the data it learns from. Manual or uncontextualised data produces confident-looking but unreliable results. Granular, contextualised data captured automatically is what makes operational AI work."
+    - q: "Can generative AI help before the data foundation is ready?"
+      a: "Yes. Large language models arrive already trained and work well on SOPs, manuals, maintenance notes and shift logs. They can answer questions from documents, and turn free text and paper records into structured data. They can't recover data that was never captured, and answers should be grounded and reviewed."
+    - q: "Where should a factory start with AI?"
+      a: "With a decision rather than a model. Ask which decision you'd make differently with perfect data, then work back to the data it needs and how much of it is accurate and in context today. That gap is the roadmap, and for most factories the first steps look like MES/MOM."
 
 how-to-modernise-a-factory:
   summary: "Modernise in order. Assess where you really are, map the process, put a number on the problem and build the team. Then fix the master data, choose a platform for the long term and start small with the end in mind. Connect the machines, go live, scale with a template, and add AI once the data foundation is there."

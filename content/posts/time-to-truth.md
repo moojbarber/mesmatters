@@ -1,7 +1,7 @@
 ---
 title: "Time to truth: how long does your factory take to know what happened?"
 short: "Time to truth"
-description: "Follow one stoppage through a factory and ask: how long until the truth reaches the right person, with the context to act? Seven stages, from paper and Excel to autonomous operations."
+description: "Follow one stoppage through a factory: how long until the truth reaches the right person, with context? Seven stages, from paper to autonomous operations."
 published: 2026-04-30
 category: thought-leadership
 art: ladder
@@ -87,7 +87,7 @@ With digitalised point solutions, it's modest. AI can make sense of data people 
 
 Then the curve bends. Once the truth arrives "right now", with its context, AI can learn from your own operations, spotting anomalies and finding root causes. A copilot can explain why Line 3 stopped from the facts, not a guess. With harmonious systems it predicts and optimises across the whole stack, because planning, engineering, quality and maintenance data finally line up: maintenance is planned from the bearing's condition, and the schedule moves around it. At "before anyone asks", agents prepare the action and people approve it. And at "without asking", AI acts on routine decisions within agreed limits. That only holds up because everything underneath it does.
 
-So the value roughly doubles with each stage, and most of it sits in the last few. That's why the order matters. Prediction needs history, and history needs data captured accurately and automatically, with its context. You can't get to "before it happens" from "eventually". I go further into this in [AI won't fix your factory](/post/the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence).
+So the value roughly doubles with each stage, and most of it sits in the last few. That's why the order matters. Prediction needs history, and history needs data captured accurately and automatically, with its context. You can't get to "before it happens" from "eventually". I go further into this in [AI won't fix your factory](/post/ai-needs-shopfloor-data).
 
 ## Where most factories are
 

@@ -40,7 +40,7 @@ pages:
           - What does our ERP already handle for recipes and costing, and where should MES/MOM take over?
           - Which site has the most representative lines, so the first project becomes the template?
     capabilities: [traceability, quality, execution, inventory, lims, energy]
-    posts: [food-beverage-industry-challenges, food-manufacturing-mes-barriers, manufacturing-traceability, spc-on-the-shopfloor, lot-vs-serial-traceability, discrete-vs-process-manufacturing]
+    posts: [food-and-beverage-manufacturing-challenges, food-manufacturing-mes-barriers, manufacturing-traceability, spc-on-the-shopfloor, lot-vs-serial-traceability, discrete-vs-process-manufacturing]
     tools: [readiness-check, oee-one-percent, which-systems]
     terms: [allergen-management, shelf-life, give-away, batch, recipe, recall, coa, yield, time-based-traceability, gmp]
     faq:
@@ -89,7 +89,7 @@ pages:
           - How will we connect older equipment, and what data do we actually need from it?
           - If we're replacing a legacy system, which of its quirks are real requirements and which are workarounds?
     capabilities: [execution, quality, traceability, connectivity, skills, tooling]
-    posts: [manufacturing-traceability, lot-vs-serial-traceability, spc-on-the-shopfloor, replacing-a-homegrown-mes, what-is-oee-overall-equipment-effectiveness, opc-ua-mqtt-uns-explained]
+    posts: [manufacturing-traceability, lot-vs-serial-traceability, spc-on-the-shopfloor, replacing-a-homegrown-mes, what-is-oee, opc-ua-mqtt-uns-explained]
     tools: [readiness-check, vendor-scorecard, oee-one-percent]
     terms: [iatf-16949, ppap, control-plan, first-article-inspection, serialisation, error-proofing, just-in-time, process-capability, andon, line-side-replenishment]
     faq:
@@ -134,7 +134,7 @@ pages:
           - How do specifications and artwork versions reach the machine, and who checks them?
           - Which machines can we connect quickly, and which will need extra hardware?
     capabilities: [execution, connectivity, scheduling, quality, data, inventory]
-    posts: [what-is-oee-overall-equipment-effectiveness, manufacturing-kpis-beyond-oee, aps-vs-mes-scheduling, oee-vs-teep, paperless-manufacturing, digital-work-instructions]
+    posts: [what-is-oee, manufacturing-kpis-beyond-oee, aps-vs-mes-scheduling, oee-vs-teep, paperless-manufacturing, digital-work-instructions]
     tools: [oee-one-percent, readiness-check, which-systems]
     terms: [micro-stop, speed-loss, changeover, oee, downtime-reason-codes, scrap-rate, finite-capacity-scheduling, vision-inspection, dispatch-list, throughput]
     faq:
@@ -179,7 +179,7 @@ pages:
           - How do drawings and revisions reach the operator?
           - Which machines would give us useful data if we connected them, and which wouldn't?
     capabilities: [execution, scheduling, plm, cpq, worker, tooling]
-    posts: [cpq-to-shopfloor, plm-erp-mes-digital-thread, ebom-mbom-as-built, erp-master-data-for-mes, mes-basics-production-scheduling, digital-work-instructions]
+    posts: [cpq-to-shopfloor, plm-erp-mes-digital-thread, ebom-mbom-as-built, erp-master-data-for-mes, mes-functionality-scheduling, digital-work-instructions]
     tools: [which-systems, readiness-check, vendor-scorecard]
     terms: [engineer-to-order, configure-to-order, high-mix-low-volume, routing, work-centre, labour-tracking, dispatch-list, traveller, configurable-bom, first-article-inspection]
     faq:
@@ -286,7 +286,7 @@ pages:
     sections:
       - h: The architecture
         body: |
-          Start with how the pieces fit. ERP plans and records the business. MES/MOM runs and records the shopfloor. Between them and the equipment sit the control and connectivity layers. [ISA-95](/post/what-is-the-isa-95-model-and-where-does-mes-fit) gives you a shared vocabulary, and my [integration patterns](/post/isa95-integration-patterns) article covers how to connect it all.
+          Start with how the pieces fit. ERP plans and records the business. MES/MOM runs and records the shopfloor. Between them and the equipment sit the control and connectivity layers. [ISA-95](/post/isa-95-explained) gives you a shared vocabulary, and my [integration patterns](/post/isa95-integration-patterns) article covers how to connect it all.
 
           Be deliberate about where each capability lives. The [systems picker](/tools/which-systems) starts from the problems rather than the products.
       - h: Integration and master data
@@ -336,7 +336,7 @@ pages:
       - h: In a regulated industry
         body: |
           Audit trails and electronic signatures need to be designed in from the start, with validation planned as part of the project. [MES in regulated industries](/post/mes-in-regulated-industries) covers what to look for.
-    posts: [qms-and-mes-quality, spc-on-the-shopfloor, manufacturing-traceability, lims-and-mes, mes-in-regulated-industries, mes-functionality-quality-operations]
+    posts: [qms-and-mes-quality, spc-on-the-shopfloor, manufacturing-traceability, lims-and-mes, mes-in-regulated-industries, mes-functionality-quality]
     tools: [which-systems, readiness-check, vendor-scorecard]
     terms: [spc, control-chart, capa, non-conformance, deviation, quality-hold, review-by-exception, audit-trail, electronic-signature, fpy]
     faq:

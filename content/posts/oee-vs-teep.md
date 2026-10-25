@@ -15,7 +15,7 @@ Ask a different question, such as how much capacity is hiding in the hours we do
 
 All three multiply availability, performance and quality. Performance and quality are calculated exactly the same way in each. What changes is the time you measure availability against.
 
-I explain the calculation itself in [What is OEE?](/post/what-is-oee-overall-equipment-effectiveness). This article is about the time base.
+I explain the calculation itself in [What is OEE?](/post/what-is-oee). This article is about the time base.
 
 ## Three time bases
 
@@ -55,7 +55,7 @@ Same line, same week. Three very different numbers, each one right for its quest
 
 ## Getting the data right
 
-All three depend on the same thing: accurate time data. You need to know when the line was running, stopped, in a planned stop or not scheduled at all, and you need the reasons. Recorded from memory at the end of a shift, none of these measures is worth much. Captured automatically by [MES/MOM](/post/mes-functionality-production-monitoring) from the equipment, they all fall out of the same data.
+All three depend on the same thing: accurate time data. You need to know when the line was running, stopped, in a planned stop or not scheduled at all, and you need the reasons. Recorded from memory at the end of a shift, none of these measures is worth much. Captured automatically by [MES/MOM](/post/mes-functionality-production) from the equipment, they all fall out of the same data.
 
 [ISO 22400](/post/manufacturing-kpis-beyond-oee) defines manufacturing KPIs formally, and is worth using if you compare figures across sites.
 

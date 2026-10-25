@@ -41,7 +41,7 @@ To be genuinely useful on the shopfloor, an AI assistant needs to know:
 - The current, approved procedures for this exact operation
 - Who's asking, and what they're qualified to do
 
-All of that lives in [MES/MOM](/post/what-is-mes-and-why-is-it-important-in-manufacturing). When connected worker and AI are built into the operational platform, the assistant has direct access to the context that makes its answers right. When it's a separate tool, it's guessing.
+All of that lives in [MES/MOM](/post/what-is-mes). When connected worker and AI are built into the operational platform, the assistant has direct access to the context that makes its answers right. When it's a separate tool, it's guessing.
 
 ## Keep people in charge
 

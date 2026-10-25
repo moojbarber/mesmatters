@@ -29,7 +29,7 @@ MES/MOM isn't the model, and it doesn't do the simulation. What it does is suppl
 
 ## Why MES/MOM matters to a twin
 
-Think about what a well-implemented [MES/MOM](/post/what-is-mes-and-why-is-it-important-in-manufacturing) knows at any moment:
+Think about what a well-implemented [MES/MOM](/post/what-is-mes) knows at any moment:
 
 - Every line and machine, and its current state: running, stopped, in changeover
 - Which order is running where, and how far through it is

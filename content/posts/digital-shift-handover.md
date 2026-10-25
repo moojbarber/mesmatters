@@ -44,7 +44,7 @@ This is where a digital handover changes things. Instead of relying on memory, s
 - Material shortages and pending replenishment requests
 - Open maintenance requests on the line's equipment
 
-If your [MES/MOM](/post/what-is-mes-and-why-is-it-important-in-manufacturing) is capturing the shift, most of this already exists. The handover becomes a summary generated from the data, which the outgoing supervisor reviews and adds to.
+If your [MES/MOM](/post/what-is-mes) is capturing the shift, most of this already exists. The handover becomes a summary generated from the data, which the outgoing supervisor reviews and adds to.
 
 The supervisor's job changes from remembering everything to adding the things only a person knows. "The new operator on Line 2 needs keeping an eye on." "That noise on the filler is back."
 

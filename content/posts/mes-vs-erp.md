@@ -21,7 +21,7 @@ In manufacturing, ERP is where production is *planned and accounted for*. It cre
 
 MES, and its broader form MOM, runs the shopfloor. It takes the order from ERP and executes it: which line, which operator, which material lot, what was produced and scrapped, and why the machine stopped. MOM extends that across quality, inventory and maintenance on the same data.
 
-It works at the point of work, in real time, with screens designed for operators rather than office users. More in [What is MES/MOM?](/post/what-is-mes-and-why-is-it-important-in-manufacturing)
+It works at the point of work, in real time, with screens designed for operators rather than office users. More in [What is MES/MOM?](/post/what-is-mes)
 
 ## Side by side
 
@@ -72,7 +72,7 @@ The usual pattern:
 3. MES/MOM sends back actuals: quantities produced, material consumed by lot, scrap and labour.
 4. ERP uses those actuals for costing, inventory and the next round of planning.
 
-ERP data gets *better* when MES/MOM is in place, because it receives validated actuals instead of estimates. More in [Implement MES to remove complexity from your ERP](/post/implementing-mes-can-simplify-your-erp).
+ERP data gets *better* when MES/MOM is in place, because it receives validated actuals instead of estimates. More in [Implement MES to remove complexity from your ERP](/post/mes-simplifies-erp).
 
 Master data is the bit people underestimate. MES/MOM needs more detail than most ERP routings were set up with, so fix it at the source. See [Your ERP master data isn't ready for MES](/post/erp-master-data-for-mes).
 

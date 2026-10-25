@@ -1,7 +1,7 @@
 ---
 title: "What the research says about smart factory ROI"
 short: "Smart factory ROI research"
-description: "The headline numbers from Deloitte, MarketsandMarkets, IoT Analytics, LNS Research and the Manufacturing Institute, what they show about smart factory returns, and what they don't."
+description: "What the research from Deloitte, LNS Research, IoT Analytics and others shows about smart factory returns, and what it doesn't show."
 published: 2026-08-06
 category: thought-leadership
 art: bars

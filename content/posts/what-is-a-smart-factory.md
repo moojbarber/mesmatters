@@ -81,7 +81,7 @@ Strengthen one and neglect the others, and you just move the imbalance somewhere
 
 ## Where MES/MOM fits
 
-On the shopfloor, [MES/MOM](/post/what-is-mes-and-why-is-it-important-in-manufacturing) is the system that makes most of those five things real. It runs the defined processes, connects planning to execution, puts real-time data at the point of work and creates the single source of truth. It's also where most of the data that AI depends on comes from.
+On the shopfloor, [MES/MOM](/post/what-is-mes) is the system that makes most of those five things real. It runs the defined processes, connects planning to execution, puts real-time data at the point of work and creates the single source of truth. It's also where most of the data that AI depends on comes from.
 
 It isn't the whole smart factory. ERP, PLM, connectivity, data platforms and analytics all have their place, and I break down the full picture in [The smart factory tech stack](/post/smart-factory-tech-stack). But it sits at the heart of it.
 

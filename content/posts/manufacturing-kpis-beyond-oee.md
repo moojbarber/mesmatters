@@ -1,7 +1,7 @@
 ---
 title: "Manufacturing KPIs beyond OEE"
 short: "KPIs beyond OEE"
-description: "OEE is the most widely used manufacturing KPI, but it isn't the only one that matters. First-pass yield, scrap, cycle and changeover time, OTIF, MTBF and MTTR explained."
+description: "OEE isn't the only manufacturing KPI that matters. First pass yield, scrap, changeover time, OTIF, MTBF and MTTR explained, and how to use them."
 published: 2026-06-11
 category: education
 art: rings
@@ -9,7 +9,7 @@ art: rings
 
 Improving a process only counts if you can measure it. That's what KPIs are for.
 
-[OEE](/post/what-is-oee-overall-equipment-effectiveness) gets most of the attention, and rightly so. It's probably the most widely adopted manufacturing KPI in the world. But on its own it won't tell you everything, and some of the most useful measures sit just underneath it.
+[OEE](/post/what-is-oee) gets most of the attention, and rightly so. It's probably the most widely adopted manufacturing KPI in the world. But on its own it won't tell you everything, and some of the most useful measures sit just underneath it.
 
 There's an international standard for manufacturing KPIs, ISO 22400. You don't need to memorise it, but it's worth knowing it exists, especially if you're comparing figures across sites or systems.
 
@@ -65,7 +65,7 @@ The best approach:
 - Capture counts, states and stops automatically from the equipment.
 - Calculate KPIs in one system, from one set of data, so production, quality and maintenance aren't each producing their own version.
 
-That's a big part of what [MES/MOM](/post/what-is-mes-and-why-is-it-important-in-manufacturing) does.
+That's a big part of what [MES/MOM](/post/what-is-mes) does.
 
 ## Don't measure everything
 

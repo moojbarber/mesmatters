@@ -17,7 +17,7 @@ It won't. Not without a data foundation.
 
 Most manufacturers still struggle to capture accurate, contextualised data from the shopfloor, but their expectations are already at AI level. You can't build predictive or optimising AI on manual entries, estimates and delayed ERP transactions. Generative AI can help sooner, by working on your documents, procedures, maintenance notes and shift logs. But it can't conjure up operational data that was never captured. Get the processes defined and the data flowing, run GenAI pilots alongside, and AI can deliver.
 
-More on this in [AI won't fix your factory](/post/the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence).
+More on this in [AI won't fix your factory](/post/ai-needs-shopfloor-data).
 
 ## 2. "Excel is good enough"
 
@@ -39,7 +39,7 @@ ERP manages the business. MES/MOM manages the factory.
 
 ERP works at the level of detail business planning needs. MES/MOM works at the granular, real-time level the shopfloor needs, with interfaces designed for frontline workers rather than office users. You'd never use an MES to do the job of an ERP, so why use an ERP to do the job of an MES?
 
-ERP data actually gets *better* when MES/MOM is in place, because it receives validated actuals rather than backflushed estimates. More in [MES vs ERP](/post/implementing-mes-can-simplify-your-erp).
+ERP data actually gets *better* when MES/MOM is in place, because it receives validated actuals rather than backflushed estimates. More in [MES vs ERP](/post/mes-simplifies-erp).
 
 ## 5. "IIoT replaces MES/MOM"
 
@@ -67,6 +67,6 @@ Requirements grow. The person who built it becomes the single point of failure, 
 
 ## A bonus one: "MES and MOM are just two names for the same thing"
 
-They're often used that way, and I've done it myself. But really they describe different scopes. MES is the production pillar. MOM covers production, quality, inventory and maintenance on the same data. Plenty of products sold as "MES" only cover production, so ask which pillars a system actually handles. More in [What is MES/MOM?](/post/what-is-mes-and-why-is-it-important-in-manufacturing)
+They're often used that way, and I've done it myself. But really they describe different scopes. MES is the production pillar. MOM covers production, quality, inventory and maintenance on the same data. Plenty of products sold as "MES" only cover production, so ask which pillars a system actually handles. More in [What is MES/MOM?](/post/what-is-mes)
 
 Which of these do you hear most often? And which one did I miss?

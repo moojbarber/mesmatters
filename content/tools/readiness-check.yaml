@@ -36,13 +36,13 @@ levels:
     state: Agentic, human in the loop
     line: AI agents prepare the decision and the paperwork on trusted data, and a person approves it.
     next: Track which recommendations people approve unchanged. Those are the candidates for autonomy, one decision at a time, with limits the business has agreed.
-    read: [agentic-ai-mcp-manufacturing, the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence]
+    read: [agentic-ai-mcp-manufacturing, ai-needs-shopfloor-data]
   - n: 7
     name: Without asking
     state: Autonomous
     line: Agents make routine decisions on their own, inside agreed limits. People set the rules and handle the exceptions.
     next: Very few factories are genuinely here. If your scores say you are, ask two colleagues from different departments to take the check too. If they agree, write it up. I'd like to read it.
-    read: [the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence, manufacturing-kpis-beyond-oee]
+    read: [ai-needs-shopfloor-data, manufacturing-kpis-beyond-oee]
 
 areas:
   - id: process

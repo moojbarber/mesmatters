@@ -1,7 +1,7 @@
 ---
 title: "Six technology mistakes that sink smart factory projects"
 short: "Six technology mistakes"
-description: "ERP wired to machines, coding your own platform, point solutions that can't grow, over-customisation, connected worker overlap and IIoT sold as MES. Six avoidable mistakes I see again and again."
+description: "ERP wired to machines, homegrown platforms, point solutions, over-customisation and more: six avoidable smart factory technology mistakes."
 published: 2026-07-21
 category: advice
 art: gates

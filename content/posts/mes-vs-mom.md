@@ -69,7 +69,7 @@ Those answers tell you far more than whether the brochure says MES or MOM.
 
 Use whichever your audience understands. MES is still the more common search term.
 
-On this site, **MES** means production execution, **MOM** means the whole operation, and **MES/MOM** means the category. For the full picture of what each pillar does, start with [What is MES/MOM?](/post/what-is-mes-and-why-is-it-important-in-manufacturing)
+On this site, **MES** means production execution, **MOM** means the whole operation, and **MES/MOM** means the category. For the full picture of what each pillar does, start with [What is MES/MOM?](/post/what-is-mes)
 
 ## My view
 

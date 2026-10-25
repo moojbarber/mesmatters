@@ -19,7 +19,7 @@ The fix isn't picking one winner. It's agreeing where each one's responsibility 
 
 **MES/MOM** owns inventory on the shopfloor. Line-side stock, kits, work in progress (WIP), what was consumed by which order, and which lot went into which product. It's the truth *at the point of use*.
 
-I covered the shopfloor side in [MES functionality: logistics and warehousing](/post/mes-functionality-logistics-warehousing). This article is about the boundaries.
+I covered the shopfloor side in [MES functionality: logistics and warehousing](/post/mes-functionality-logistics). This article is about the boundaries.
 
 ## Do you even need a WMS?
 
@@ -42,7 +42,7 @@ The messy part is the handover between warehouse and production. Let's walk thro
 
 **Delivery.** The warehouse picks and moves the material. WMS (or ERP) manages that task and records that stock left the warehouse.
 
-**Receipt line-side.** MES/MOM takes ownership. From here, it tracks the lot at the line, in a [supermarket](/post/mes-functionality-inventory-management) or at the machine.
+**Receipt line-side.** MES/MOM takes ownership. From here, it tracks the lot at the line, in a [supermarket](/post/mes-functionality-inventory) or at the machine.
 
 **Consumption.** MES/MOM records what was actually used, by order and by lot. That flows back to ERP for stock and cost.
 

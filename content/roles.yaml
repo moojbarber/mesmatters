@@ -6,7 +6,7 @@
 intro: "Everyone in a factory touches the same orders and machines. They just ask very different questions of them. Pick a role to see what that person is measured on, and which shopfloor applications make the biggest difference to their day."
 
 apps:
-  prod:   {name: "Production execution and OEE", short: "Production", read: what-is-mes-and-why-is-it-important-in-manufacturing, blurb: "Orders dispatched to the line and output recorded as it happens, with OEE calculated the same way everywhere."}
+  prod:   {name: "Production execution and OEE", short: "Production", read: what-is-mes, blurb: "Orders dispatched to the line and output recorded as it happens, with OEE calculated the same way everywhere."}
   qual:   {name: "Quality and SPC", short: "Quality", read: qms-and-mes-quality, blurb: "In-process checks triggered by what's running, SPC at the point of work, and holds that actually stop material moving."}
   trace:  {name: "Traceability and genealogy", short: "Traceability", read: manufacturing-traceability, blurb: "Which materials and machines went into every lot or serial number, recorded as it happens."}
   inv:    {name: "Inventory and logistics", short: "Inventory", read: wms-vs-mes-inventory, blurb: "Line-side stock and work in progress, with quality status that travels with the material."}
@@ -58,7 +58,7 @@ roles:
       - ["Capacity questions answered with estimates and a capex request", "A clear view of hidden capacity across the network, site by site"]
       - ["A recall scoped broadly, just to be safe", "A recall scoped to the exact lots and customers affected"]
     pitch: "Talk about growth and risk, not software. Show what hidden capacity is worth in revenue, and what a contained recall saves compared with a broad one. Keep it to one page."
-    reads: [can-mes-improve-your-bottom-line, smart-factory-roi-research, time-to-truth, what-is-a-smart-factory]
+    reads: [mes-roi-bottom-line, smart-factory-roi-research, time-to-truth, what-is-a-smart-factory]
     tool: oee-one-percent
     path: business-case
 
@@ -85,7 +85,7 @@ roles:
       - ["Variances explained at month end, if at all", "Cost variances visible by order as production happens"]
       - ["Business cases built on vendor promises", "Business cases built on measured losses from your own lines"]
     pitch: "Bring numbers you can defend. Measure the losses first, put a value on one point of OEE, include your own people's time in the costs, and phase the investment so each stage can fund the next."
-    reads: [mes-business-case, can-mes-improve-your-bottom-line, implementing-mes-can-simplify-your-erp, smart-factory-roi-research]
+    reads: [mes-business-case, mes-roi-bottom-line, mes-simplifies-erp, smart-factory-roi-research]
     tool: business-case-template
     also_tools: [oee-one-percent]
     path: business-case

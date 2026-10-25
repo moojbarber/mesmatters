@@ -52,7 +52,7 @@ MTBF and MTTR combine into a simple measure of availability:
 
 **Availability = MTBF ÷ (MTBF + MTTR)**
 
-With an MTBF of 200 hours and an MTTR of three hours, availability is about 98.5%. Improve either side and availability goes up. That's the same availability that feeds OEE. More in [What is OEE?](/post/what-is-oee-overall-equipment-effectiveness)
+With an MTBF of 200 hours and an MTTR of three hours, availability is about 98.5%. Improve either side and availability goes up. That's the same availability that feeds OEE. More in [What is OEE?](/post/what-is-oee)
 
 ## Where the data comes from
 

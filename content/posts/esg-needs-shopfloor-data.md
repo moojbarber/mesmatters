@@ -1,7 +1,7 @@
 ---
 title: "You can't hit ESG targets without shopfloor data"
 short: "ESG and shopfloor data"
-description: "Manufacturers publish ambitious ESG goals while their shopfloors run exactly as they did five years ago. Why sustainability needs operational data, and where it comes from."
+description: "Ambitious ESG goals, unchanged shopfloors. Why sustainability reporting needs operational data from the factory floor, and where that data comes from."
 published: 2026-07-14
 category: thought-leadership
 art: growth
@@ -41,7 +41,7 @@ When you frame ESG as a compliance exercise, it competes for budget. When you se
 
 ## Where the data comes from
 
-[MES/MOM](/post/what-is-mes-and-why-is-it-important-in-manufacturing) already knows what's being produced, on which machine, for which order, and how much was scrapped. Add energy monitoring at the machine level, and you can attribute consumption to the products that caused it. Energy per piece. Carbon per order. Waste per product line.
+[MES/MOM](/post/what-is-mes) already knows what's being produced, on which machine, for which order, and how much was scrapped. Add energy monitoring at the machine level, and you can attribute consumption to the products that caused it. Energy per piece. Carbon per order. Waste per product line.
 
 That context is what turns a utility meter into actionable data. Without it, you know the site used more energy this month. With it, you know Line 3 runs its ovens for two hours before the first order starts on Mondays.
 

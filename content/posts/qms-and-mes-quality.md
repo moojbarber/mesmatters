@@ -29,7 +29,7 @@ Quality lives in more than one system. That's not a problem in itself. The probl
 
 **ERP** handles the business consequences of quality. Stock status (available, blocked, in inspection), supplier returns, scrap cost, and quality inspections at goods receipt in many setups.
 
-I covered shopfloor quality in [MES functionality: quality operations](/post/mes-functionality-quality-operations), and SPC in [SPC on the shopfloor](/post/spc-on-the-shopfloor).
+I covered shopfloor quality in [MES functionality: quality operations](/post/mes-functionality-quality), and SPC in [SPC on the shopfloor](/post/spc-on-the-shopfloor).
 
 ## Where the loop breaks
 

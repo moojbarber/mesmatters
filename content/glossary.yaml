@@ -17,7 +17,7 @@
   body: AI is the broad category, with machine learning and generative AI as two quite different subsets. In a factory, AI is only as good as the shopfloor data it learns from, which is why the data foundation comes first.
   articles:
   - ai-ml-genai-on-the-shopfloor
-  - the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence
+  - ai-needs-shopfloor-data
   see_also:
   - ml
   - genai
@@ -28,7 +28,7 @@
   body: APS sequences work in days and hours, respecting changeovers, tooling, labour and material. Many factories don't need one. It earns its place when sequencing is genuinely hard, and many ERP suites include it as a module.
   articles:
   - aps-vs-mes-scheduling
-  - mes-basics-production-scheduling
+  - mes-functionality-scheduling
   see_also:
   - erp
   - mrp
@@ -60,7 +60,7 @@
   body: Backflushing is better than nothing, but it records what should have been used rather than what was. MES/MOM posts actual consumption by order and lot, which improves ERP costing and gives you real traceability.
   articles:
   - manufacturing-traceability
-  - implementing-mes-can-simplify-your-erp
+  - mes-simplifies-erp
   see_also:
   - bom
   - traceability
@@ -92,8 +92,8 @@
   short: The machine or operation with the lowest throughput, which limits the output of the whole line.
   body: OEE should be measured on the bottleneck, and an hour lost there is an hour lost for the whole line. When you ask what a 1% OEE improvement is worth, work it out for your bottleneck.
   articles:
-  - what-is-oee-overall-equipment-effectiveness
-  - can-mes-improve-your-bottom-line
+  - what-is-oee
+  - mes-roi-bottom-line
   see_also:
   - oee
   - cycle-time
@@ -131,7 +131,7 @@
   short: An approach where ERP focuses on core business functions and specialist applications handle the rest, connected through open integration.
   body: As ERP vendors pull back to core business functions, the shopfloor is increasingly left to applications built for it, such as MES/MOM. It's one of the forces driving demand in the MES market.
   articles:
-  - an-overview-of-the-mes-market
+  - mes-market-overview
   - what-is-erp
   see_also:
   - erp
@@ -192,7 +192,7 @@
   articles:
   - takt-time-vs-cycle-time-vs-lead-time
   - manufacturing-kpis-beyond-oee
-  - what-is-oee-overall-equipment-effectiveness
+  - what-is-oee
   see_also:
   - oee
   - changeover
@@ -261,7 +261,7 @@
   body: A good ERP is the backbone of a manufacturing business, and it deserves more credit than it gets. It plans and accounts for production rather than running it minute by minute, which is where specialist applications complement it.
   articles:
   - what-is-erp
-  - implementing-mes-can-simplify-your-erp
+  - mes-simplifies-erp
   - smart-factory-tech-stack
   see_also:
   - mes
@@ -331,7 +331,7 @@
   short: 'The third industrial revolution: electronics and automation on the factory floor, from the late 1960s onwards.'
   body: The PLC, first used by General Motors in 1969, is its symbol. It's also when manufacturing systems first appeared, each running one department, before MES brought them together.
   articles:
-  - the-history-of-mes-and-digitalisation-in-manufacturing
+  - history-of-mes
   see_also:
   - industry-4-0
   - plc
@@ -375,7 +375,7 @@
   short: The international standard for integrating enterprise and control systems, also published as IEC 62264.
   body: ISA-95 splits a factory into levels from the physical process up to ERP, with MES/MOM at level 3. Its real value is the discipline it brings to integration, starting with which system owns each piece of data.
   articles:
-  - what-is-the-isa-95-model-and-where-does-mes-fit
+  - isa-95-explained
   - isa95-integration-patterns
   see_also:
   - mom
@@ -386,7 +386,7 @@
   body: You don't need to memorise it, but it's worth knowing it exists, especially if you're comparing figures across sites or systems that might calculate them differently.
   articles:
   - manufacturing-kpis-beyond-oee
-  - what-is-oee-overall-equipment-effectiveness
+  - what-is-oee
   see_also:
   - oee
   - fpy
@@ -394,7 +394,7 @@
   short: Continuous improvement, made in small steps by everyone, at the place where the work happens.
   body: Kaizen is a core idea in the Toyota Production System. MES/MOM supports it with standardised processes and accurate data, so improvement rests on facts and you can prove each change worked.
   articles:
-  - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
+  - kaizen-and-mes
   - mes-go-live
   see_also:
   - oee
@@ -413,7 +413,7 @@
   short: A quantity of material with a unique identifier, used for tracking and traceability.
   body: Lot numbers often change by day or by production order. Knowing exactly how much of each lot went into each output is what separates full traceability from order-level estimates.
   articles:
-  - mes-functionality-inventory-management
+  - mes-functionality-inventory
   - manufacturing-traceability
   see_also:
   - batch
@@ -444,9 +444,9 @@
   short: The production pillar of manufacturing operations, running orders on the shopfloor and recording output and downtime.
   body: MES is the original term and still the one most people search for. It's one part of MOM rather than another name for it, and the difference matters most when you decide what to buy.
   articles:
-  - what-is-mes-and-why-is-it-important-in-manufacturing
+  - what-is-mes
   - mes-vs-mom
-  - mes-functionality-inventory-logistics-overview
+  - mes-functionality-guide
   see_also:
   - mom
   - erp
@@ -455,7 +455,7 @@
   short: The 1997 model from MESA International setting out eleven core functions of an MES.
   body: The list was already far broader than production execution, covering quality, maintenance, labour, documents and genealogy. That breadth is what we now call MOM. MESA ceased operation in June 2026 and ISA took on its work.
   articles:
-  - who-are-mesa-and-how-do-they-define-mes
+  - mesa-and-the-definition-of-mes
   see_also:
   - mes
   - mom
@@ -476,7 +476,7 @@
   body: The term exists because the scope grew. MOM lines up with the four areas of manufacturing operations defined in ISA-95, and the broadest platforms go further into tooling, energy, skills and connected worker.
   articles:
   - mes-vs-mom
-  - what-is-mes-and-why-is-it-important-in-manufacturing
+  - what-is-mes
   see_also:
   - mes
   - isa-95
@@ -537,9 +537,9 @@
   short: Availability multiplied by performance multiplied by quality.
   body: OEE compares the good product you made with what the line could have made in the time it was planned to run. Measure it on the bottleneck, from automatic data, and use it to find losses rather than to compare people.
   articles:
-  - what-is-oee-overall-equipment-effectiveness
+  - what-is-oee
   - manufacturing-kpis-beyond-oee
-  - can-mes-improve-your-bottom-line
+  - mes-roi-bottom-line
   see_also:
   - bottleneck
   - iso-22400
@@ -578,7 +578,7 @@
   body: PLCs sit at levels 1 and 2 of ISA-95. MES/MOM reads from them, and sometimes sends setpoints down, but ERP should never be wired to them directly.
   articles:
   - plc-vs-scada-vs-dcs-vs-mes
-  - the-history-of-mes-and-digitalisation-in-manufacturing
+  - history-of-mes
   - smart-factory-technology-mistakes
   see_also:
   - scada
@@ -660,7 +660,7 @@
   body: Scrap throws away the machine time and labour that went into the part as well as the material. In food and process industries, yield is often the biggest single profit lever.
   articles:
   - manufacturing-kpis-beyond-oee
-  - can-mes-improve-your-bottom-line
+  - mes-roi-bottom-line
   see_also:
   - fpy
   - oee
@@ -668,7 +668,7 @@
   short: Giving each individual item a unique identifier so it can be tracked on its own.
   body: Serial items are common in discrete manufacturing and essential for products you'll service later. When something fails in the field, the serial number is the key that links the service record to the as-built record.
   articles:
-  - mes-functionality-inventory-management
+  - mes-functionality-inventory
   - service-data-back-to-engineering
   see_also:
   - lot
@@ -699,7 +699,7 @@
   body: Inspection tells you a part is bad; SPC tells you it's about to be. It belongs at the line, in front of operators, not in a spreadsheet updated at the end of the week.
   articles:
   - spc-on-the-shopfloor
-  - mes-functionality-quality-operations
+  - mes-functionality-quality
   see_also:
   - control-limits
   - cpk
@@ -709,7 +709,7 @@
   body: Order-level traceability in ERP is better than nothing. Full traceability adds serials, exact lot quantities, tooling, quality results and process parameters, and it's what turns a recall from a weekend into minutes.
   articles:
   - manufacturing-traceability
-  - mes-functionality-inventory-management
+  - mes-functionality-inventory
   see_also:
   - genealogy
   - lot
@@ -732,7 +732,7 @@
   body: When you can trust real-time WIP data, you stop holding buffers to cover for not trusting it, which frees working capital. On the shopfloor, WIP is MES/MOM's responsibility.
   articles:
   - wms-vs-mes-inventory
-  - can-mes-improve-your-bottom-line
+  - mes-roi-bottom-line
   see_also:
   - wms
   - lot
@@ -742,7 +742,7 @@
   body: Many manufacturers don't need one, because ERP and MES/MOM cover simpler warehouses. A WMS earns its place when warehouse volumes or automation get complex.
   articles:
   - wms-vs-mes-inventory
-  - mes-functionality-logistics-warehousing
+  - mes-functionality-logistics
   see_also:
   - wip
   - erp
@@ -751,7 +751,7 @@
   short: The OEE factor comparing the time a line actually ran with the time it was planned to run.
   body: In an 8-hour shift with 2 hours of stops, availability is 75%. Downtime is usually the biggest single loss in OEE, which is why accurate, automatic stop detection matters so much.
   articles:
-  - what-is-oee-overall-equipment-effectiveness
+  - what-is-oee
   - oee-vs-teep
   see_also:
   - oee
@@ -762,7 +762,7 @@
   short: The OEE factor comparing actual output with what the target cycle time says you could have made in the running time.
   body: A figure above 100% means the target cycle time in your master data is wrong. Update it rather than enjoying the inflated number.
   articles:
-  - what-is-oee-overall-equipment-effectiveness
+  - what-is-oee
   see_also:
   - oee
   - availability
@@ -771,7 +771,7 @@
   short: The OEE factor comparing good output with total output.
   body: Scrap lowers the quality rate. Rework doesn't, but it still costs time, which is why first-pass yield is worth measuring alongside OEE.
   articles:
-  - what-is-oee-overall-equipment-effectiveness
+  - what-is-oee
   - manufacturing-kpis-beyond-oee
   see_also:
   - oee
@@ -800,7 +800,7 @@
   body: It's the baseline OEE availability is measured against. Agree what counts as planned and unplanned before you compare lines or sites.
   articles:
   - oee-vs-teep
-  - what-is-oee-overall-equipment-effectiveness
+  - what-is-oee
   see_also:
   - availability
   - oee
@@ -808,8 +808,8 @@
   short: A short stop, often seconds long, that operators rarely record but that adds up to a large loss.
   body: Most people are genuinely surprised when they first see their micro-stops. They only become visible when stops are detected automatically from the equipment.
   articles:
-  - what-is-mes-and-why-is-it-important-in-manufacturing
-  - can-mes-improve-your-bottom-line
+  - what-is-mes
+  - mes-roi-bottom-line
   see_also:
   - availability
   - downtime-reason-codes
@@ -818,7 +818,7 @@
   body: A list that's too long or too vague makes the data useless. Keep it short and grouped by category, and capture the reason while the stop is fresh.
   articles:
   - predictive-maintenance-data
-  - mes-functionality-production-monitoring
+  - mes-functionality-production
   see_also:
   - availability
   - micro-stop
@@ -836,7 +836,7 @@
   short: The rate at which a line or plant produces good output, such as units per hour.
   body: Throughput is set by the bottleneck. Improving anything else first rarely increases it.
   articles:
-  - what-is-oee-overall-equipment-effectiveness
+  - what-is-oee
   - aps-vs-mes-scheduling
   see_also:
   - bottleneck
@@ -857,7 +857,7 @@
   body: Rework hides in many quality figures. A line can look fine on quality rate while quietly reworking a lot of what it makes.
   articles:
   - manufacturing-kpis-beyond-oee
-  - can-mes-improve-your-bottom-line
+  - mes-roi-bottom-line
   see_also:
   - fpy
   - quality-rate
@@ -867,7 +867,7 @@
   body: Record it at the source with full context, including the order, lot, machine and a photo. Rules then decide whether it stays a local scrap or escalates to the QMS.
   articles:
   - qms-and-mes-quality
-  - mes-functionality-quality-operations
+  - mes-functionality-quality
   see_also:
   - capa
   - quality-hold
@@ -876,7 +876,7 @@
   short: A block that stops a lot or batch being used or shipped until it's released.
   body: Holds work best when they're automatic and visible everywhere the material might move. ERP usually holds the stock status; MES/MOM enforces it at the line.
   articles:
-  - mes-functionality-quality-operations
+  - mes-functionality-quality
   - lims-and-mes
   see_also:
   - non-conformance
@@ -895,7 +895,7 @@
   short: The defined set of checks for a product, with when to perform them and the limits to check against.
   body: In MES/MOM, inspections are triggered by what's actually running, so the operator doesn't have to remember which checks apply.
   articles:
-  - mes-functionality-quality-operations
+  - mes-functionality-quality
   see_also:
   - specification-limits
   - spc
@@ -904,7 +904,7 @@
   body: Inside the limits is good; outside is scrap. They're different from control limits, which describe what your process normally does.
   articles:
   - spc-on-the-shopfloor
-  - mes-functionality-quality-operations
+  - mes-functionality-quality
   see_also:
   - control-limits
   - cpk
@@ -929,7 +929,7 @@
   short: The science of measurement, and on the shopfloor the gauges and instruments used for quality checks.
   body: Connecting metrology equipment to MES/MOM removes typing errors and captures measurements against the right order and sample automatically.
   articles:
-  - mes-functionality-quality-operations
+  - mes-functionality-quality
   see_also:
   - inspection-plan
   - spc
@@ -1059,7 +1059,7 @@
   body: Digital kanban in MES/MOM raises replenishment from real consumption rather than from a plan made days earlier.
   articles:
   - wms-vs-mes-inventory
-  - mes-functionality-logistics-warehousing
+  - mes-functionality-logistics
   see_also:
   - line-side-replenishment
   - supermarket
@@ -1067,8 +1067,8 @@
   short: A small, controlled store close to the line, holding the material production needs next.
   body: Supermarkets sit between the warehouse and the line, and are restocked by replenishment signals.
   articles:
-  - mes-functionality-inventory-management
-  - mes-functionality-logistics-warehousing
+  - mes-functionality-inventory
+  - mes-functionality-logistics
   see_also:
   - kanban
   - line-side-replenishment
@@ -1077,7 +1077,7 @@
   body: Ideally MES/MOM raises the request, because it knows what's running, what's next and what's left at the line.
   articles:
   - wms-vs-mes-inventory
-  - mes-functionality-logistics-warehousing
+  - mes-functionality-logistics
   see_also:
   - kanban
   - wms
@@ -1094,7 +1094,7 @@
   short: An instruction to make a quantity of a product, with its BOM, routing and due date.
   body: ERP creates and costs it; MES/MOM executes it. In a good MES, everything that happens on the shopfloor is tied back to the order.
   articles:
-  - mes-functionality-production-monitoring
+  - mes-functionality-production
   - mes-vs-erp
   see_also:
   - order-bom
@@ -1183,7 +1183,7 @@
   body: For many factories, ERP's planning plus a good dispatch list in MES/MOM is enough without APS.
   articles:
   - aps-vs-mes-scheduling
-  - mes-basics-production-scheduling
+  - mes-functionality-scheduling
   see_also:
   - aps
   - finite-capacity-scheduling
@@ -1209,7 +1209,7 @@
   short: Designing a process or system so mistakes are prevented or caught immediately.
   body: Examples include scanning to confirm the right material before it's consumed, or blocking an order start until checks pass.
   articles:
-  - mes-functionality-inventory-management
+  - mes-functionality-inventory
   - skills-enforcement-shopfloor
   see_also:
   - digital-work-instructions
@@ -1218,7 +1218,7 @@
   short: A signal, often a light or screen, that shows a problem on the line and calls for help.
   body: A digital andon linked to MES/MOM records why help was called and how long the response took, so the data can be used to improve.
   articles:
-  - mes-functionality-production-monitoring
+  - mes-functionality-production
   see_also:
   - downtime-reason-codes
   - connected-worker
@@ -1243,7 +1243,7 @@
   body: Tracking which cavity made each part often reveals the root cause of a quality problem in minutes.
   articles:
   - mes-functionality-tooling
-  - mes-functionality-quality-operations
+  - mes-functionality-quality
   see_also:
   - tool-life
   - traceability
@@ -1289,7 +1289,7 @@
   articles:
   - plc-vs-scada-vs-dcs-vs-mes
   - isa-88-and-isa-95
-  - what-is-the-isa-95-model-and-where-does-mes-fit
+  - isa-95-explained
   - scada-vs-mes
   see_also:
   - scada
@@ -1439,7 +1439,7 @@
   body: It blends IT and OT. IT owns the application and integrations; OT owns processes, master data standards and KPIs.
   articles:
   - mes-multi-site-rollout
-  - building-a-winning-team-for-mes-implementation-navigating-challenges-and-ensuring-success
+  - mes-implementation-team
   see_also:
   - enterprise-template
   - it-ot-convergence
@@ -1524,7 +1524,7 @@
   short: A way of running operations focused on customer value and removing waste, drawn from the Toyota Production System.
   body: Lean and MES/MOM fit together well. Standardised processes and accurate data make improvement measurable.
   articles:
-  - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
+  - kaizen-and-mes
   see_also:
   - kaizen
   - gemba
@@ -1533,7 +1533,7 @@
   short: The place where the work actually happens, the shopfloor.
   body: Problems are understood by going to see them, not from a report in an office. Real-time data helps, but it doesn't replace walking the floor.
   articles:
-  - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
+  - kaizen-and-mes
   see_also:
   - kaizen
   - lean
@@ -1542,7 +1542,7 @@
   short: The improvement cycle of planning a change, trying it, checking the result and standardising it or trying again.
   body: After go-live, continuous improvement becomes the rhythm. The difference is that each cycle is now based on data rather than gut feel.
   articles:
-  - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
+  - kaizen-and-mes
   - mes-go-live
   see_also:
   - kaizen
@@ -1588,7 +1588,7 @@
   short: Recording when people clock on and off, for pay, compliance and labour planning.
   body: It usually lives in WFM or HR systems. Linking it to MES/MOM shows who was actually available on each line, which helps explain output and cost.
   articles:
-  - who-benefits-from-an-mes
+  - who-benefits-from-mes
   see_also:
   - wfm
   - labour-tracking
@@ -1596,8 +1596,8 @@
   short: Recording which people worked on which orders and operations, and for how long.
   body: It turns labour from a site-wide cost into a cost per order and per product. MES/MOM captures it as people log on to operations, rather than from timesheets afterwards.
   articles:
-  - can-mes-improve-your-bottom-line
-  - who-benefits-from-an-mes
+  - mes-roi-bottom-line
+  - who-benefits-from-mes
   see_also:
   - wfm
   - time-and-attendance
@@ -1660,7 +1660,7 @@
   short: Extra inventory held to protect against variation in demand or supply.
   body: Some safety stock is sensible. A lot of it is there because nobody trusts the inventory data, and real-time tracking lets you reduce it.
   articles:
-  - can-mes-improve-your-bottom-line
+  - mes-roi-bottom-line
   - wms-vs-mes-inventory
   see_also:
   - wip
@@ -1669,7 +1669,7 @@
   short: How many times inventory is used and replaced over a period, usually a year.
   body: Higher turns mean less working capital tied up in stock. Trustworthy, real-time inventory data is one of the simplest ways to improve them.
   articles:
-  - can-mes-improve-your-bottom-line
+  - mes-roi-bottom-line
   see_also:
   - safety-stock
   - wip
@@ -1807,7 +1807,7 @@
   short: 'A workplace organisation method: sort, set in order, shine, standardise and sustain.'
   body: 5S is often where lean starts on the shopfloor, because a tidy, organised workplace makes problems visible. Digital checklists and audits help it stick after the first enthusiasm fades.
   articles:
-  - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
+  - kaizen-and-mes
   - connected-worker-one-app-not-five
   see_also:
   - lean
@@ -1818,7 +1818,7 @@
   body: Six Sigma lives or dies on data quality. Measurements captured automatically at the line, with context, make projects faster and their conclusions more trustworthy.
   articles:
   - spc-on-the-shopfloor
-  - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
+  - kaizen-and-mes
   see_also:
   - spc
 - term: Just-in-time
@@ -1826,7 +1826,7 @@
   body: JIT relies on accurate, real-time inventory and consumption data. Without it, buffers creep back in to cover for uncertainty.
   articles:
   - wms-vs-mes-inventory
-  - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
+  - kaizen-and-mes
   see_also:
   - kanban
   - safety-stock
@@ -1834,7 +1834,7 @@
   short: The agreed, documented best way to do a task, used as the baseline for training and improvement.
   body: Without a standard, there can be no kaizen. Digital work instructions are how standard work reaches the operator at the moment it's needed.
   articles:
-  - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
+  - kaizen-and-mes
   - digital-work-instructions
   see_also:
   - digital-work-instructions
@@ -1852,7 +1852,7 @@
   body: After go-live, it becomes the rhythm. The difference with good data is that each improvement can be measured and proved.
   articles:
   - mes-go-live
-  - implementing-kaizen-principles-with-mes-for-lean-manufacturing-success
+  - kaizen-and-mes
   see_also:
   - kaizen
   - pdca
@@ -1873,7 +1873,7 @@
   body: Control plans are standard in automotive. MES/MOM turns them from a document into checks that are triggered and recorded at the line.
   articles:
   - mes-in-regulated-industries
-  - mes-functionality-quality-operations
+  - mes-functionality-quality
   see_also:
   - inspection-plan
   - ppap
@@ -1890,7 +1890,7 @@
   short: A non-measurable flaw in a product, such as a scratch or dent, usually classed by severity.
   body: Recording defects by type and location, against the order and machine, is what turns a scrap count into something you can improve.
   articles:
-  - mes-functionality-quality-operations
+  - mes-functionality-quality
   see_also:
   - non-conformance
   - scrap-rate
@@ -1916,7 +1916,7 @@
   short: Controlling allergens through production so they don't contaminate products that shouldn't contain them.
   body: It shapes the schedule and the cleaning between runs. Sequencing allergen-free products first is a classic APS rule.
   articles:
-  - food-beverage-industry-challenges
+  - food-and-beverage-manufacturing-challenges
   - aps-vs-mes-scheduling
   see_also: []
 - term: Shelf life
@@ -1924,7 +1924,7 @@
   body: Shelf-life rules differ by product and drive how stock is picked. MES/MOM tracks expiry by lot so expired material can't be consumed.
   articles:
   - food-manufacturing-mes-barriers
-  - mes-functionality-inventory-management
+  - mes-functionality-inventory
   see_also:
   - lot
 - term: FIFO
@@ -1932,14 +1932,14 @@
   short: Using or shipping the oldest stock first.
   body: Simple in principle, and easy to break without location-level inventory tracking.
   articles:
-  - mes-functionality-logistics-warehousing
+  - mes-functionality-logistics
   see_also:
   - wms
 - term: Give-away
   short: Product given away free by overfilling packs above their declared weight or volume.
   body: In food, small overfills across millions of packs add up to real money. Checkweigher data linked to the order makes it visible.
   articles:
-  - food-beverage-industry-challenges
+  - food-and-beverage-manufacturing-challenges
   see_also:
   - yield
 - term: Electronic signature
@@ -1988,7 +1988,7 @@
   short: Running slower than the target rate, and the main driver of OEE performance losses.
   body: Speed losses are easy to miss because the line looks busy. Only counts against target cycle time reveal them.
   articles:
-  - what-is-oee-overall-equipment-effectiveness
+  - what-is-oee
   see_also:
   - performance
 - term: Maintenance work order
@@ -2023,7 +2023,7 @@
   body: Controlling warehouse automation is one of the clearest reasons to have a dedicated WMS.
   articles:
   - wms-vs-mes-inventory
-  - mes-functionality-logistics-warehousing
+  - mes-functionality-logistics
   see_also:
   - wms
   - agv
@@ -2033,14 +2033,14 @@
   body: AGVs and their more flexible cousins, autonomous mobile robots, need to know what to move and where. That signal often comes from MES/MOM.
   articles:
   - wms-vs-mes-inventory
-  - mes-functionality-logistics-warehousing
+  - mes-functionality-logistics
   see_also:
   - line-side-replenishment
 - term: Goods receipt
   short: Recording the arrival of purchased material, often with a quality check before it's released for use.
   body: It's where lot traceability starts. Capture the supplier lot at receipt, or you can't trace it later.
   articles:
-  - mes-functionality-logistics-warehousing
+  - mes-functionality-logistics
   - wms-vs-mes-inventory
   see_also:
   - lot
@@ -2049,7 +2049,7 @@
   short: Moving received material into its storage location.
   body: Putaway strategies are a core WMS function. ERP handles simpler warehouses well.
   articles:
-  - mes-functionality-logistics-warehousing
+  - mes-functionality-logistics
   see_also:
   - wms
   - goods-receipt
@@ -2057,7 +2057,7 @@
   short: Taking material from storage to fulfil a production order or shipment.
   body: Pick accuracy drives whether the line gets the right material. Scanning at pick and at the line closes the loop.
   articles:
-  - mes-functionality-logistics-warehousing
+  - mes-functionality-logistics
   - wms-vs-mes-inventory
   see_also:
   - wms
@@ -2066,7 +2066,7 @@
   short: A machine-readable label, one-dimensional or two-dimensional, used to identify items, lots and locations.
   body: Scanning instead of typing is the simplest error-proofing on any shopfloor.
   articles:
-  - mes-functionality-inventory-management
+  - mes-functionality-inventory
   - lot-vs-serial-traceability
   see_also:
   - data-matrix
@@ -2084,7 +2084,7 @@
   short: Tags that can be read by radio without line of sight, used to identify and track items.
   body: Useful for returnable containers and tools. The data still needs context in MES/MOM to mean anything.
   articles:
-  - mes-functionality-inventory-management
+  - mes-functionality-inventory
   - mes-functionality-tooling
   see_also:
   - barcode

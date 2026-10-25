@@ -66,7 +66,7 @@ Some sites stretch the control layer to do more through custom code. It can work
 
 Data flows up from the control layer to MES/MOM, often through OPC UA or MQTT. MES/MOM adds the context of the order and the lot, then passes what the business needs to ERP. Instructions flow down the same path.
 
-That's the ISA-95 model in practice. More in [ISA-95 explained](/post/what-is-the-isa-95-model-and-where-does-mes-fit) and [OPC UA vs MQTT](/post/opc-ua-vs-mqtt).
+That's the ISA-95 model in practice. More in [ISA-95 explained](/post/isa-95-explained) and [OPC UA vs MQTT](/post/opc-ua-vs-mqtt).
 
 ## Which do you need?
 

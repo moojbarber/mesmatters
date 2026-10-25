@@ -1,7 +1,7 @@
 ---
 title: "Skills you can enforce, not just record"
 short: "Skills enforcement"
-description: "Most skills matrices live in a spreadsheet nobody checks at the point of work. Why skills management should block the wrong person from the wrong job, not just report it."
+description: "Most skills matrices live in a spreadsheet nobody checks at the point of work. Why skills management should block the wrong person, not just report."
 published: 2026-07-16
 category: thought-leadership
 art: badge
@@ -51,7 +51,7 @@ In regulated industries it goes further. You often have to *prove* that only qua
 
 A standalone skills tool can hold a beautiful matrix. But it can't stop someone starting an order, because it doesn't know an order is being started.
 
-Enforcement needs the operational context: which order, which operation, which machine, which material. That lives in [MES/MOM](/post/what-is-mes-and-why-is-it-important-in-manufacturing). Put skills in the same platform and the check happens naturally, at the moment it matters.
+Enforcement needs the operational context: which order, which operation, which machine, which material. That lives in [MES/MOM](/post/what-is-mes). Put skills in the same platform and the check happens naturally, at the moment it matters.
 
 It's another example of why connected worker capabilities belong inside the operational platform. I make the wider case in [Connected worker: one app, not five](/post/connected-worker-one-app-not-five).
 

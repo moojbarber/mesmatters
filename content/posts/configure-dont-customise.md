@@ -1,7 +1,7 @@
 ---
 title: "Configure, don't customise"
 short: "Configure, don't customise"
-description: "Out-of-the-box, configuration, low-code, extensions and customisation are not the same thing. Why the difference decides your total cost of ownership, and how to keep customisation down."
+description: "Configuration, low-code, extensions and customisation are not the same thing. Why the difference decides your total cost of ownership."
 published: 2026-06-04
 category: advice
 art: hexcore

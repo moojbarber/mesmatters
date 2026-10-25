@@ -13,7 +13,7 @@ tools:
     minutes: 5
     icon: ladder
     color: "#8b6cff"
-    posts: [time-to-truth, smart-factory-where-to-start, what-is-a-smart-factory, how-to-modernise-a-factory, smart-manufacturing-myths, the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence]
+    posts: [time-to-truth, smart-factory-where-to-start, what-is-a-smart-factory, how-to-modernise-a-factory, smart-manufacturing-myths, ai-needs-shopfloor-data]
 
   - id: oee-one-percent
     kind: tool
@@ -24,7 +24,7 @@ tools:
     minutes: 2
     icon: gauge
     color: "#33d4e0"
-    posts: [mes-business-case, what-is-oee-overall-equipment-effectiveness, oee-vs-teep, manufacturing-kpis-beyond-oee, smart-factory-roi-research, can-mes-improve-your-bottom-line]
+    posts: [mes-business-case, what-is-oee, oee-vs-teep, manufacturing-kpis-beyond-oee, smart-factory-roi-research, mes-roi-bottom-line]
 
   - id: which-systems
     kind: tool
@@ -46,7 +46,7 @@ tools:
     minutes: 15
     icon: scales
     color: "#ffb86b"
-    posts: [how-to-choose-an-mes, build-vs-buy-mes, replacing-a-homegrown-mes, configure-dont-customise, an-overview-of-the-mes-market]
+    posts: [how-to-choose-an-mes, build-vs-buy-mes, replacing-a-homegrown-mes, configure-dont-customise, mes-market-overview]
 
   - id: business-case-template
     kind: template
@@ -134,4 +134,4 @@ tools:
       - Use the issue log from the first hour. Triage it at the same time every day.
       - Exit hypercare on evidence, not on a date.
     format_note: Edit the checks to fit your scope. Mark anything that doesn't apply as N/A.
-    posts: [mes-go-live, manufacturing-change-management, building-a-winning-team-for-mes-implementation-navigating-challenges-and-ensuring-success]
+    posts: [mes-go-live, manufacturing-change-management, mes-implementation-team]

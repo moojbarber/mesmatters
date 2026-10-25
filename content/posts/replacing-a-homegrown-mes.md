@@ -1,7 +1,7 @@
 ---
 title: "Replacing a homegrown MES: the people problem nobody plans for"
 short: "Replacing a homegrown MES"
-description: "Replacing a homegrown MES/MOM brings challenges most manufacturers don't anticipate: the developers who built it, the 95% problem, and the urge to rebuild the old system."
+description: "Replacing a homegrown MES brings challenges few anticipate: the people who built it, and the urge to rebuild the old system feature by feature."
 published: 2026-07-30
 category: advice
 art: bridge

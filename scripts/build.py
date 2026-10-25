@@ -71,6 +71,25 @@ REDIRECTS = {
     "post/introduction-to-mes-and-smart-manufacturing": "/post/what-is-a-smart-factory",
     "post/mes-is-a-digital-twin": "/post/mes-and-digital-twins",
     "post/smart-manufacturing-maturity-model": "/post/time-to-truth",
+    "post/what-is-mes-and-why-is-it-important-in-manufacturing": "/post/what-is-mes",
+    "post/what-is-the-isa-95-model-and-where-does-mes-fit": "/post/isa-95-explained",
+    "post/who-are-mesa-and-how-do-they-define-mes": "/post/mesa-and-the-definition-of-mes",
+    "post/what-is-oee-overall-equipment-effectiveness": "/post/what-is-oee",
+    "post/the-history-of-mes-and-digitalisation-in-manufacturing": "/post/history-of-mes",
+    "post/mes-functionality-production-monitoring": "/post/mes-functionality-production",
+    "post/mes-basics-production-scheduling": "/post/mes-functionality-scheduling",
+    "post/mes-functionality-quality-operations": "/post/mes-functionality-quality",
+    "post/mes-functionality-inventory-management": "/post/mes-functionality-inventory",
+    "post/mes-functionality-logistics-warehousing": "/post/mes-functionality-logistics",
+    "post/mes-functionality-inventory-logistics-overview": "/post/mes-functionality-guide",
+    "post/implementing-kaizen-principles-with-mes-for-lean-manufacturing-success": "/post/kaizen-and-mes",
+    "post/who-benefits-from-an-mes": "/post/who-benefits-from-mes",
+    "post/can-mes-improve-your-bottom-line": "/post/mes-roi-bottom-line",
+    "post/implementing-mes-can-simplify-your-erp": "/post/mes-simplifies-erp",
+    "post/building-a-winning-team-for-mes-implementation-navigating-challenges-and-ensuring-success": "/post/mes-implementation-team",
+    "post/an-overview-of-the-mes-market": "/post/mes-market-overview",
+    "post/the-future-of-smart-manufacturing-harnessing-the-power-of-mes-intelligence": "/post/ai-needs-shopfloor-data",
+    "post/food-beverage-industry-challenges": "/post/food-and-beverage-manufacturing-challenges",
 }
 
 
@@ -377,7 +396,7 @@ def load_glossary(posts):
 FAQ_TOPICS = [
     {"id": "basics", "name": "MES, MOM and ERP basics", "blurb": "What the systems are, and how they differ.", "color": "#a594ff", "rgb": "165,148,255",
      "icon": "M4 6h16M4 12h16M4 18h10",
-     "slugs": ["what-is-mes-and-why-is-it-important-in-manufacturing", "mes-vs-mom", "what-is-erp", "mes-vs-erp", "implementing-mes-can-simplify-your-erp", "mes-mom-erp-compared"]},
+     "slugs": ["what-is-mes", "mes-vs-mom", "what-is-erp", "mes-vs-erp", "mes-simplifies-erp", "mes-mom-erp-compared"]},
     {"id": "strategy", "name": "Smart factory strategy", "blurb": "Where to start, and the order that works.", "color": "#ff8fe0", "rgb": "255,143,224",
      "icon": "M4 20l5-6 4 3 7-9M15 8h5v5",
      "slugs": ["what-is-a-smart-factory", "time-to-truth", "smart-factory-where-to-start", "how-to-modernise-a-factory"]},
@@ -389,10 +408,10 @@ FAQ_TOPICS = [
      "slugs": ["shopfloor-applications-explained", "connected-worker-one-app-not-five", "lot-vs-serial-traceability", "preventive-vs-predictive-maintenance"]},
     {"id": "performance", "name": "Measuring performance", "blurb": "OEE and the measures around it.", "color": "#ff8a70", "rgb": "255,138,112",
      "icon": "M12 21a9 9 0 1 1 9-9M12 12l5-5",
-     "slugs": ["what-is-oee-overall-equipment-effectiveness", "oee-vs-teep"]},
+     "slugs": ["what-is-oee", "oee-vs-teep"]},
     {"id": "architecture", "name": "Architecture and integration", "blurb": "ISA-95, connectivity and the systems around MES/MOM.", "color": "#7fa6ff", "rgb": "127,166,255",
      "icon": "M5 5h5v5H5zM14 14h5v5h-5zM10 7.5h4.5V14",
-     "slugs": ["what-is-the-isa-95-model-and-where-does-mes-fit", "it-vs-ot", "opc-ua-vs-mqtt", "iiot-vs-mes", "scada-vs-mes", "historian-vs-mes"]},
+     "slugs": ["isa-95-explained", "it-vs-ot", "opc-ua-vs-mqtt", "iiot-vs-mes", "scada-vs-mes", "historian-vs-mes"]},
 ]
 
 GLOSSARY_SKIP = {"ai", "erp", "mes", "mom", "batch", "lot", "routing", "edge", "smart-factory", "bottleneck", "changeover", "cycle-time", "scrap-rate",

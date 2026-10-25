@@ -13,7 +13,7 @@ Do you need both SCADA and MES? It's a common question, because the two often re
 
 **SCADA** (supervisory control and data acquisition) is for real-time control and monitoring of equipment. Process engineers and control room operators use it to see what the plant is doing and adjust it: setpoints, alarms, valve states, tank levels.
 
-**MES/MOM** is for managing operations: which order is running, what's been produced, what was scrapped and why, whether quality checks were done, what material was used, what maintenance is due. The full scope is in [What is MES/MOM?](/post/what-is-mes-and-why-is-it-important-in-manufacturing)
+**MES/MOM** is for managing operations: which order is running, what's been produced, what was scrapped and why, whether quality checks were done, what material was used, what maintenance is due. The full scope is in [What is MES/MOM?](/post/what-is-mes)
 
 So far, clearly different. But there's overlap.
 

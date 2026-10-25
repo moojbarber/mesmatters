@@ -17,7 +17,7 @@ Neither side is wrong. They're optimising for different things.
 
 **OT (operational technology)** is the hardware and software that monitors and controls physical equipment: PLCs, SCADA, DCS, sensors, drives and the machines themselves. It manages physical processes.
 
-In [ISA-95](/post/what-is-the-isa-95-model-and-where-does-mes-fit) terms, OT lives at levels 0 to 2 and IT at level 4. Level 3, manufacturing operations, sits between them. That's where MES/MOM lives.
+In [ISA-95](/post/isa-95-explained) terms, OT lives at levels 0 to 2 and IT at level 4. Level 3, manufacturing operations, sits between them. That's where MES/MOM lives.
 
 ## Side by side
 

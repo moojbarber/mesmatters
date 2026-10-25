@@ -32,7 +32,7 @@ ISA-95 is the standard for integrating enterprise and control systems. Work on i
 
 It's best known for the functional hierarchy, the familiar levels 0 to 4, and for defining the four areas of manufacturing operations: production, quality, inventory and maintenance. It also defines the objects that ERP and MES/MOM exchange: orders, materials, equipment, personnel and performance.
 
-ISA-95 lives mostly at level 3 and the boundary with level 4. More in [ISA-95 explained](/post/what-is-the-isa-95-model-and-where-does-mes-fit).
+ISA-95 lives mostly at level 3 and the boundary with level 4. More in [ISA-95 explained](/post/isa-95-explained).
 
 ## Side by side
 

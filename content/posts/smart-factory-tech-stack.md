@@ -58,7 +58,7 @@ I go into those in [Historians, data lakes and data fabric](/post/manufacturing-
 
 Two ways of looking at it help.
 
-**Vertically**, it's the [ISA-95](/post/what-is-the-isa-95-model-and-where-does-mes-fit) stack. Orders, schedules and master data flow down from ERP. Actuals, consumption and quality results flow up from the shopfloor. Each layer works at the level of detail it needs.
+**Vertically**, it's the [ISA-95](/post/isa-95-explained) stack. Orders, schedules and master data flow down from ERP. Actuals, consumption and quality results flow up from the shopfloor. Each layer works at the level of detail it needs.
 
 **Horizontally**, it's the flow of a customer order through the factory: from product design in PLM, to the order in ERP, the schedule in APS, execution and quality in MES/MOM, storage in WMS, and shipment back through ERP.
 

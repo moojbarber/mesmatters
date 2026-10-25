@@ -1,7 +1,7 @@
 ---
 title: "The smart factory glossary"
 short: "Smart factory glossary"
-description: "Every acronym from APS to UNS in one place. Plain-English definitions of the MES, MOM, smart factory and shopfloor AI terms you'll hear in projects and on LinkedIn."
+description: "Every acronym from APS to UNS in one place. Plain-English definitions of the MES, MOM, smart factory and shopfloor AI terms you'll hear."
 published: 2026-10-06
 category: education
 art: tiles
@@ -31,7 +31,7 @@ Every term also has its own page, with my take on what it means in practice and 
 | GenAI | Generative AI | AI that generates text, images or code, such as large language models. |
 | Historian | | A database designed to store high-frequency time-series data from machines and sensors. |
 | IIoT | Industrial Internet of Things | Connecting machines, sensors and devices so their data can be collected and used. See [IIoT vs MES](/post/iiot-vs-mes). |
-| ISA-95 | | The international standard for integrating enterprise and control systems. See [ISA-95](/post/what-is-the-isa-95-model-and-where-does-mes-fit). |
+| ISA-95 | | The international standard for integrating enterprise and control systems. See [ISA-95](/post/isa-95-explained). |
 | ISO 22400 | | The international standard defining manufacturing KPIs, including OEE. |
 | LIMS | Laboratory information management system | Software for managing lab samples, tests and results. |
 | Lot | | A quantity of material with a unique identifier, used for tracking and traceability. |
@@ -42,7 +42,7 @@ Every term also has its own page, with my take on what it means in practice and 
 | MQTT | | A lightweight publish-and-subscribe messaging protocol widely used for IIoT. |
 | MTBF | Mean time between failures | The average time equipment runs between breakdowns. |
 | MTTR | Mean time to repair | The average time it takes to fix equipment after a breakdown. |
-| OEE | Overall equipment effectiveness | Availability × Performance × Quality. See [What is OEE?](/post/what-is-oee-overall-equipment-effectiveness) |
+| OEE | Overall equipment effectiveness | Availability × Performance × Quality. See [What is OEE?](/post/what-is-oee) |
 | OPC UA | Open Platform Communications Unified Architecture | The industry standard for secure, structured machine-to-system communication. |
 | OT | Operational technology | The hardware and software that monitors and controls physical equipment, as opposed to IT. |
 | OTIF | On time in full | The percentage of orders delivered complete and on the promised date. |

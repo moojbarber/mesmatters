@@ -63,7 +63,7 @@ GenAI arrives already trained, so it can start earlier. It works well on the doc
 
 An agent can't safely act on information it can't trust.
 
-So for AI that predicts or acts, the data foundation comes first. For GenAI on documents and knowledge, you can start now, in parallel. On the shopfloor, [MES/MOM](/post/what-is-mes-and-why-is-it-important-in-manufacturing) is where most of that data is created and given its context: which order, which material, which machine, which shift, and why.
+So for AI that predicts or acts, the data foundation comes first. For GenAI on documents and knowledge, you can start now, in parallel. On the shopfloor, [MES/MOM](/post/what-is-mes) is where most of that data is created and given its context: which order, which material, which machine, which shift, and why.
 
 ## A practical way to start
 

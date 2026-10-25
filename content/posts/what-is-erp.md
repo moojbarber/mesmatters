@@ -1,7 +1,7 @@
 ---
 title: "What is ERP, and why every manufacturer needs a good one"
 short: "What is ERP?"
-description: "ERP is the backbone of a manufacturing business: finance, orders, purchasing, planning and costing on one set of data. What it does well, and where specialist applications take over."
+description: "ERP is the backbone of a manufacturing business, running finance and planning on one set of data. What it does well, and where specialists take over."
 published: 2026-10-08
 category: education
 art: hexcore

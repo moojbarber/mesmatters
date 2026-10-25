@@ -1,7 +1,7 @@
 ---
 title: "ERP, MES, MOM and the rest of the stack: what each one does"
 short: "The manufacturing systems stack"
-description: "ERP, MES, MOM, APS, WMS, QMS, LIMS, EAM, PLM, SCADA and IIoT side by side. What each one does, who uses it, what data it owns, and how to tell whether you need it."
+description: "ERP, MES, MOM, APS, WMS, QMS, LIMS, EAM, PLM, SCADA and IIoT side by side: what each one does, what data it owns, and whether you need it."
 published: 2026-10-15
 category: education
 art: stack
@@ -35,7 +35,7 @@ MES and MOM aren't competitors to ERP. They do a different job, at a much finer 
 | **SCADA** | Monitor and control equipment in real time | Seconds and below | Control room, process engineers | 2 |
 | **IIoT / historian** | Connect equipment and store high-frequency data | Milliseconds to years | Engineers, data teams | 1 and 2, feeding 3 |
 
-The levels refer to [ISA-95](/post/what-is-the-isa-95-model-and-where-does-mes-fit), the standard for how business and shopfloor systems fit together. Level 4 is business planning, level 3 is manufacturing operations, and levels 0 to 2 are the machines and their control.
+The levels refer to [ISA-95](/post/isa-95-explained), the standard for how business and shopfloor systems fit together. Level 4 is business planning, level 3 is manufacturing operations, and levels 0 to 2 are the machines and their control.
 
 ## MES vs ERP
 
@@ -51,7 +51,7 @@ ERP knows that 500 units of an order should be made this week, from which materi
 | **Production orders** | Creates and costs them | Executes them and reports actuals back |
 | **Consumption** | Often backflushed from the BOM | Recorded as it happens, by lot |
 
-The two work best together. MES/MOM sends ERP validated actuals instead of estimates, which improves costing, inventory and planning. And some ERPs designed with manufacturing in mind already cover more of the production side, which makes the gap smaller. More in [What is ERP](/post/what-is-erp) and [Implement MES to remove complexity from your ERP](/post/implementing-mes-can-simplify-your-erp).
+The two work best together. MES/MOM sends ERP validated actuals instead of estimates, which improves costing, inventory and planning. And some ERPs designed with manufacturing in mind already cover more of the production side, which makes the gap smaller. More in [What is ERP](/post/what-is-erp) and [Implement MES to remove complexity from your ERP](/post/mes-simplifies-erp).
 
 One firm rule: never wire ERP straight to the machines. That's what MES/MOM is for.
 

@@ -1,7 +1,7 @@
 ---
 title: "MES functionality: maintenance"
 short: "Maintenance"
-description: "Why maintenance belongs in the same platform as production: shared downtime data, autonomous maintenance by operators, and when a separate CMMS or EAM makes sense."
+description: "Why maintenance belongs on the same platform as production: shared downtime data, and when a separate CMMS or EAM still makes sense."
 published: 2026-05-14
 category: education
 art: gates
@@ -11,7 +11,7 @@ order: 7
 
 Maintenance rarely gets much attention until something breaks. By then you've lost capacity, disrupted the schedule and you're scrambling to fix something that could probably have been prevented.
 
-Downtime is usually the biggest loss in [OEE](/post/what-is-oee-overall-equipment-effectiveness). For most manufacturers it's the single largest area for improvement. That makes maintenance one of the most valuable pillars of MOM, and one of the most overlooked.
+Downtime is usually the biggest loss in [OEE](/post/what-is-oee). For most manufacturers it's the single largest area for improvement. That makes maintenance one of the most valuable pillars of MOM, and one of the most overlooked.
 
 ## What maintenance covers in MES/MOM
 
@@ -63,6 +63,6 @@ My advice:
 
 Getting maintenance onto the same data as production is also the foundation for condition-based and predictive maintenance. Models need failure history, condition data and operating context together. I cover the journey in [Predictive maintenance needs data you aren't collecting yet](/post/predictive-maintenance-data).
 
-This article is part of the [MES functionality series](/post/mes-functionality-inventory-logistics-overview).
+This article is part of the [MES functionality series](/post/mes-functionality-guide).
 
 Do your production and maintenance teams agree on last week's downtime?

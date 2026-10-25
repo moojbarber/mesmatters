@@ -47,7 +47,7 @@ Each step adds meaning. And each step depends on the one before it. You can't ca
 
 On the shopfloor, context comes from the system that knows what's *supposed* to be happening: the production order, the material, the routing, the operator, the quality plan.
 
-That's [MES/MOM](/post/what-is-mes-and-why-is-it-important-in-manufacturing). It's the central hub of contextualised operational data, sitting between ERP above and the machines below. It takes the raw signal and attaches everything around it.
+That's [MES/MOM](/post/what-is-mes). It's the central hub of contextualised operational data, sitting between ERP above and the machines below. It takes the raw signal and attaches everything around it.
 
 ## Where context gets lost
 

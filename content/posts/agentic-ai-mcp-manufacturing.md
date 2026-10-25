@@ -1,7 +1,7 @@
 ---
 title: "Agentic AI and MCP, explained for people who run factories"
 short: "Agentic AI and MCP"
-description: "Agentic AI and MCP are all over LinkedIn. What they actually are, what they could mean for the shopfloor, and what has to be in place before any agent touches production."
+description: "Agentic AI and MCP are all over LinkedIn. What they actually are, and what must be in place before any agent touches production."
 published: 2026-08-27
 category: thought-leadership
 art: network
@@ -75,7 +75,7 @@ If it's reading downtime that was typed in at the end of a shift, inventory that
 That's why agentic operations sit at the far end of [time to truth](/post/time-to-truth), the "without asking" stage. They need:
 
 - **Trustworthy, real-time data.** Captured automatically where possible, validated at the point of work.
-- **Context.** Which order, which material, which machine, which shift. That context lives in [MES/MOM](/post/what-is-mes-and-why-is-it-important-in-manufacturing).
+- **Context.** Which order, which material, which machine, which shift. That context lives in [MES/MOM](/post/what-is-mes).
 - **Systems that enforce rules.** If an agent tries to consume a quarantined lot, the operational system should stop it, just as it would stop a person.
 - **Clear guardrails and audit trails.** What the agent may do on its own, what needs approval, and a record of every action it took and why.
 

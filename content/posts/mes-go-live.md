@@ -1,7 +1,7 @@
 ---
 title: "Go-live is the starting line"
 short: "After go-live"
-description: "Go-live feels like the finish line. It isn't. Hypercare, super users and continuous improvement: what happens after MES/MOM goes live decides whether it delivers."
+description: "Go-live feels like the finish line. It isn't. How hypercare and super users decide whether MES/MOM actually delivers after go-live."
 published: 2026-07-23
 category: advice
 art: steps
@@ -47,7 +47,7 @@ There's no point at which you declare victory and say "we're done". Smart manufa
 
 Continuous improvement becomes the rhythm: small changes, driven by data, involving everyone from the shopfloor to the boardroom. Plan, do, check, act, and round again.
 
-The difference now is the data. Before, improvement was often based on gut feel and anecdotes. Now it's based on accurate, real-time, contextualised information. I cover how in [Kaizen and MES](/post/implementing-kaizen-principles-with-mes-for-lean-manufacturing-success).
+The difference now is the data. Before, improvement was often based on gut feel and anecdotes. Now it's based on accurate, real-time, contextualised information. I cover how in [Kaizen and MES](/post/kaizen-and-mes).
 
 ## Keep the system evolving
 
