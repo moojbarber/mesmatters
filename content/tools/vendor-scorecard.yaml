@@ -6,40 +6,40 @@ groups:
         good: ERP stays the master for materials, BOMs, routings and work centres. Changes flow through a standard interface, and shopfloor detail can be added in MES/MOM without breaking the link.
         flag: "\"You'll maintain it in both systems.\" Or a nightly file drop that nobody watches for failures."
       - q: How do you integrate with our existing landscape?
-        good: Documented, standard connectors for your ERP and the rest of your stack, and a customer running a similar combination. A clear answer on what flows each way and how often.
-        flag: "\"We'll build an interface for you\" as the answer to everything. Every custom interface is yours to pay for again at each upgrade."
+        good: Standard connectors where they exist, or the ability to map fields directly or through expressions using APIs. A clear answer on what flows each way, and how errors are reported back.
+        flag: Custom-coded interfaces, especially file-based ones where you never get a response to say whether a message succeeded or failed.
       - q: Can you handle our industry's requirements and compliance?
-        good: They name your regulations and show how each is met through configuration. References in your industry.
+        good: They understand your industry, with reference customers and demos that reflect how you work. Don't expect a direct competitor as a reference, but expect something similar.
         flag: A demo built for a different industry, and "we can customise that" as the answer to compliance.
   - name: User experience
     questions:
       - q: How does it work on tablets, mobiles and shopfloor terminals?
-        good: The same application on any device, designed for touch, shown on a tablet on the floor. A straight answer on what happens when the Wi-Fi drops.
-        flag: Office screens squeezed onto a tablet, or a separate mobile app that only does half the job.
+        good: The same application on any device, designed for touch, and shown on a tablet on the floor.
+        flag: Office screens squeezed onto a tablet, or a separate mobile app that only does half the job. Either way, a poor mobile experience.
       - q: Is the interface genuinely intuitive for operators?
-        good: They hand one of your operators the tablet during the demo and let them try it. Few clicks and guided steps, in the languages your people speak.
+        good: A clean, modern interface that feels like the apps operators use every day on their own phones. Each role's experience on a single screen, with data shown in friendly, meaningful formats for that user.
         flag: Screens packed with fields that only make sense to IT. "They'll get used to it."
       - q: How much training will our people need?
-        good: Role-based training and train-the-trainer for your super users. Administrators who can configure on their own afterwards.
+        good: Role-based training and train-the-trainer for your super users, plus self-serve online training. Administrators who can configure on their own afterwards.
         flag: Weeks of classroom training, and the vendor needed for every small change after go-live.
   - name: Functional scope
     questions:
       - q: How deep is your coverage beyond production?
         good: Quality, inventory, maintenance and the rest shown on one data model, with an honest answer about where the depth is thinner.
-        flag: Yes to everything, then the modules turn out to be separate products stitched together.
+        flag: The software only covers part of MOM, so other applications have to be interfaced to fill the gaps. Or the modules turn out to be separate products stitched together.
       - q: Will it stop people across departments needing multiple systems?
         good: A failed quality check is visible to production the moment it happens. One login and one data model.
         flag: A different app for each department, kept in step by a sync job.
       - q: Does it give real-time visibility across all production processes?
         good: Live status of every line and order, from machine and operator data, including the awkward manual areas.
-        flag: Dashboards refreshed overnight, or visibility only where machines happen to be connected.
+        flag: Dashboards refreshed periodically rather than in real time, or visibility only where machines happen to be connected.
   - name: Scalability and future-proofing
     questions:
       - q: What's your roadmap for AI and advanced technology?
-        good: A specific, funded roadmap. AI working on the operational data model, with use cases running in production today, and a clear line between available and planned.
+        good: A specific, funded roadmap, with AI working on the operational data model and a clear line between available and planned. An innovative application with a future, not a stale one that isn't being updated.
         flag: AI slides with nothing live. An old application with a new name.
       - q: How do you support IIoT and modern connectivity?
-        good: Native OPC UA and MQTT, with machine data put in context of order and material. A sensible story for edge and a unified namespace alongside your historian.
+        good: Data captured automatically from machines and equipment, and put in the context of the order and the material, without a custom project for every machine.
         flag: '"IIoT replaces MES." Or a custom driver for every machine.'
       - q: Will it grow with us?
         good: Start with a subset and switch on more functions later without re-implementing. A template you can roll to the next site.

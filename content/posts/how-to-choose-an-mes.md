@@ -16,14 +16,14 @@ I've seen too many selections go wrong because the focus was on price, or on a n
 ## Technical foundation
 
 1. **What's your approach to master data synchronisation with ERP?** Who owns materials, BOMs and routings, and how do changes flow?
-2. **How do you integrate with our existing landscape?** ERP, PLM, scheduling, warehouse, quality, equipment. Standard connectors, or custom work?
-3. **Can you handle our industry's specific requirements and compliance?** Show me, in a demo built for my type of manufacturing.
+2. **How do you integrate with our existing landscape?** ERP, PLM, scheduling, warehouse, quality, equipment. Standard connectors or configurable API mapping, or custom-coded interfaces that never confirm whether a message got through?
+3. **Can you handle our industry's specific requirements and compliance?** Show me, with references and a demo from a similar business. Not necessarily a direct competitor.
 
 ## User experience
 
 4. **How does it work on tablets, mobiles and shopfloor terminals?** Not just the office screens.
-5. **Is the interface genuinely intuitive for operators?** Put it in front of one of yours and watch.
-6. **How much training will our people need?** Operators, supervisors and the team who'll configure it.
+5. **Is the interface genuinely intuitive for operators?** Does it look and feel like the apps your operators use on their own phones?
+6. **How much training will our people need?** Your operators and the team who'll configure it, and is there self-serve online training?
 
 ## Functional scope
 
@@ -33,8 +33,8 @@ I've seen too many selections go wrong because the focus was on price, or on a n
 
 ## Scalability and future-proofing
 
-10. **What's your roadmap for AI and advanced technology?** And what's genuinely available today versus planned?
-11. **How do you support IIoT and modern connectivity?** OPC UA, MQTT, unified namespace, edge.
+10. **What's your roadmap for AI and advanced technology?** Is the application being actively developed, with a clear line between available and planned?
+11. **How do you support IIoT and modern connectivity?** How is machine data captured automatically, and put in context?
 12. **Will it grow with us?** Across sites, and across functions we don't need yet but will.
 
 ## Don't write a wish list
