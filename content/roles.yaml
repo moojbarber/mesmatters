@@ -127,7 +127,7 @@ roles:
     summary: "The CIO owns the architecture and the risk. The shopfloor is where IT meets OT, and where integration and security decisions have the longest consequences."
     cares: [["Architecture simplicity", null], ["Cybersecurity", iec-62443], ["Total cost of ownership", null], ["Data quality", master-data]]
     challenges:
-      - ["Point-to-point spaghetti", "Every new application adds interfaces that need maintaining at every upgrade."]
+      - ["Interface sprawl", "Every new application adds interfaces that need maintaining at every upgrade."]
       - ["OT security", "Shopfloor equipment can't be patched or scanned like office IT."]
       - ["Shadow IT on the shopfloor", "Spreadsheets and local apps grow up where central systems don't reach."]
       - ["Data that isn't fit for AI", "Raw machine data arrives with no context of the order or the operator."]

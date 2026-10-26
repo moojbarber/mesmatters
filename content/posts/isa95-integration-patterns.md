@@ -38,15 +38,15 @@ A direct link is an addition to the ERP path, not a bypass of it.
 
 ## The four patterns
 
-**Point-to-point.** System A calls system B directly. Quick to build, easy to understand. Fine for two or three integrations. With eight systems, you can end up with dozens of connections, each with its own error handling, and each one breaking when either side upgrades.
+**Point-to-point.** System A calls system B directly. Easy to understand, and often the safest option: the sending system gets a response from the receiving system, so it knows each message arrived and was accepted. As the number of systems grows, so does the number of links to maintain when either side changes.
 
-**Middleware or integration platform.** An integration layer (an ESB, or a cloud iPaaS) sits in the middle. Each system connects once. Mapping, routing, retries and monitoring live in one place. More upfront effort, much easier to run at scale.
+**Middleware or integration platform.** An integration layer (an ESB, or a cloud iPaaS) sits in the middle. Each system connects once. Mapping, routing, retries and monitoring live in one place, in exchange for another layer to run and maintain.
 
 **Event-driven.** Systems publish events ("order released", "lot on hold", "machine stopped") and anyone interested subscribes. Producers don't need to know who's listening. Excellent for decoupling and near real-time flows.
 
 **Unified namespace (UNS).** An event-driven pattern applied to the plant: a single, structured hierarchy (usually on MQTT) where every system publishes its current state and anyone can subscribe. I explain the basics in [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
 
-These aren't mutually exclusive. A common, sensible mix: a UNS for shopfloor and machine data, an integration platform for transactional flows between MES/MOM and ERP, and as few point-to-point links as you can manage.
+These aren't mutually exclusive. A common mix: direct links for transactional flows between MES/MOM and ERP, where a confirmed response matters most, with an integration platform or a UNS where many systems need the same data.
 
 ## Transactions vs telemetry
 

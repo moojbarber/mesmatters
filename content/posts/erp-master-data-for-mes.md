@@ -37,7 +37,7 @@ A part of any MES/MOM project is getting the ERP master data right. That often m
 
 The principle is simple. The system of record for each piece of master data needs enough detail for every application that relies on it. Not just MES/MOM, but warehouse, maintenance and planning systems too.
 
-Fix it at the source, once, and let it flow to everyone who needs it.
+Fix it at the source, once, and let it flow to everyone who needs it. Where a specialised application needs extra detail, add it there.
 
 ## Plan for it early
 

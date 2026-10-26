@@ -33,13 +33,13 @@ The template defines:
 
 **Easier support and upgrades.** One standard is far easier to maintain than ten variations.
 
-## The hard part: saying no to local variation
+## The hard part: managing local variation
 
 Every site will tell you it's different. Some of the time, it is. Most of the time, it's habit.
 
 Different sites often make the same or similar products with different processes. Sometimes the process even changes on the same equipment depending on who's working. That variation evolved organically, but it's a real problem if you want to standardise.
 
-Use the rollout to drive genuine consistency. Allow local differences where there's a real reason: regulation, a genuinely different process, a different product. Challenge everything else. This is where [process mapping](/post/manufacturing-process-mapping) pays for itself.
+Use the rollout to drive genuine consistency. Allow and manage local differences where there's a real reason: regulation, a genuinely different process, a different product. Remove or limit the rest, where it's really just habit. This is where [process mapping](/post/manufacturing-process-mapping) pays for itself.
 
 ## The centre of excellence
 

@@ -11,7 +11,7 @@ Companies invest millions in software, then wonder why adoption stalls.
 
 They focus on features and functionality, and ignore the human element. But your MES/MOM is only as effective as your organisation's willingness to change.
 
-Technology is the easy bit. I genuinely mean that. You can buy the best platform on the market, connect every machine, integrate it with ERP, and still fail.
+You need good technology, and choosing the right platform matters. But even the best platform can be held back by poor processes and low adoption. You can connect every machine and integrate with ERP, and still fail.
 
 ## Every project meets resistance
 

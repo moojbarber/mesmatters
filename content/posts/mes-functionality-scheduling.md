@@ -47,7 +47,7 @@ Once the schedule is agreed, orders are released to the line. Operators see what
 
 ## Do you need an APS?
 
-Often not. For many manufacturers, ERP plus MES/MOM is enough, especially where production is stable and changeovers don't drive the sequence.
+Not every manufacturer needs one. An APS is for more advanced scheduling with complex constraints. Where production is stable and changeovers don't drive the sequence, the scheduling in ERP, or an extra ERP module, alongside MES/MOM is often sufficient.
 
 An APS earns its place when sequencing becomes the hard problem:
 

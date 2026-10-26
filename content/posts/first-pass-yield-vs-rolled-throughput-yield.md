@@ -17,7 +17,7 @@ The problem is that it counts reworked units as good. A part that was fixed twic
 
 ## First pass yield: right first time, at one step
 
-**First pass yield** (FPY), sometimes called first time yield, is the share of units that pass a step without rework or scrap.
+**First pass yield** (FPY), sometimes called first time yield, is the share of units that pass a step without rework or scrap. Some manufacturers, particularly in automotive, use first time through quality (FTTQ) for a similar measure, often across a whole process and counting any repair or retest as a failure.
 
 **FPY = units passing first time ÷ units entering the step**
 

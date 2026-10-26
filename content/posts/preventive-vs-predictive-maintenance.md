@@ -27,7 +27,7 @@ There are four broad maintenance strategies, from fixing things when they break 
 | **Planned downtime** | None | Regular | When needed | When needed, scheduled ahead |
 | **Unplanned downtime** | High | Lower | Low | Lowest, when the model is good |
 | **Data needed** | Very little | Asset register and usage counters | Sensors on the right components | Condition data, failure history, maintenance actions and operating context |
-| **Best for** | Cheap, non-critical assets with spares on the shelf | Assets with predictable wear | Critical assets with a measurable sign of wear | Bottleneck and high-value assets with enough history |
+| **Best for** | Cheap, non-critical assets where downtime doesn't significantly affect production | Assets with predictable wear | Critical assets with a measurable sign of wear | Bottleneck and high-value assets with enough history |
 
 ## Choosing per asset
 

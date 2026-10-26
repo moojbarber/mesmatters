@@ -26,7 +26,7 @@ You'll find many lists of "Kaizen principles" online. These are the ideas that t
 
 1. **Continuous improvement and respect for people.** Toyota describes these as the two pillars of the Toyota Way. Improvement never stops, and it's done with the people who do the work, not to them.
 2. **Small steps, by everyone.** Many small, low-cost improvements, made continually at every level, rather than waiting for a big project.
-3. **Go to the gemba.** The gemba is where the work happens. Problems are understood by going to see them on the shopfloor, not from a report in an office.
+3. **Go to the gemba.** The gemba is where the work happens. Regular gemba walks, where leaders walk the shopfloor to see problems or potential problems first hand, beat any report read in an office.
 4. **Standardise, then improve.** A common saying in Lean circles: without a standard, there can be no Kaizen. You need a stable way of working to measure an improvement against.
 5. **Eliminate waste.** Muda, the Japanese word for waste, covers anything that doesn't add value for the customer, including waiting, defects, overproduction, excess movement and excess inventory.
 6. **Plan, do, check, act.** The PDCA cycle: plan a change, try it, check the result, then standardise it or try again.

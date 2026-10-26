@@ -1,5 +1,5 @@
 ---
-title: "Historian vs MES: what each one stores, and why you usually want both"
+title: "Historian vs MES: what each one stores, and when you need both"
 short: "Historian vs MES"
 description: "A historian stores high-frequency process values; MES/MOM records events with context and runs the work. What each stores, and how they work together."
 published: 2026-09-30
@@ -48,10 +48,10 @@ Some MES/MOM platforms include historian capabilities, and some historians have 
 
 ## Which do you need?
 
-If your main need is understanding process behaviour, a historian. If it's running orders, tracing material and managing quality and maintenance, MES/MOM. Most manufacturers past the first steps need both, connected.
+If it's running orders, tracing material and managing quality and maintenance, MES/MOM. Whether you also need a historian depends on how frequently you need data. MES/MOM can capture and record the process values most operations need. A historian earns its place when engineers need very high-frequency signals kept for long periods, which is more common in process industries.
 
 ## My view
 
-The trap is assuming a historian, or an IIoT platform full of tags, is enough to run the operation. It isn't designed to manage a production order or trace a lot. Manufacturers who try end up building those functions on top, which is effectively building a homegrown MES. I make the same argument in [IIoT vs MES](/post/iiot-vs-mes). The opposite trap is forcing MES/MOM to store every high-frequency signal. That's what the historian is for.
+The trap is assuming a historian, or an IIoT platform full of tags, is enough to run the operation. It isn't designed to manage a production order or trace a lot. Manufacturers who try end up building those functions on top, which is effectively building a homegrown MES. I make the same argument in [IIoT vs MES](/post/iiot-vs-mes). The opposite trap is forcing MES/MOM to store every high-frequency signal when nobody uses it. Where that level of detail is genuinely needed, that's what a historian is for.
 
 Does your historian know which order was running when that value spiked?

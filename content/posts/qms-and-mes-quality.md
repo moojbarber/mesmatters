@@ -27,7 +27,7 @@ Quality lives in more than one system. That's not a problem in itself. The probl
 - Holding and releasing lots
 - Linking every result to the [as-built record](/post/ebom-mbom-as-built)
 
-**ERP** handles the business consequences of quality. Stock status (available, blocked, in inspection), supplier returns, scrap cost, and quality inspections at goods receipt in many setups.
+**ERP** handles the business consequences of quality. Stock status (available, blocked, in inspection), supplier returns, scrap cost, and quality inspections at goods receipt in many setups. Some manufacturers also run the full CAPA process in ERP, once the details have been passed across from the QMS or MOM platform.
 
 I covered shopfloor quality in [MES functionality: quality operations](/post/mes-functionality-quality), and SPC in [SPC on the shopfloor](/post/spc-on-the-shopfloor).
 

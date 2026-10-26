@@ -293,7 +293,7 @@ ebom-mbom-as-built:
   summary: "The engineering BOM lives in PLM, the manufacturing BOM usually lives in ERP, each production order gets its own copy as the order BOM, and MES/MOM records the as-built: exactly which lots and serials were used. Most integration arguments come from not agreeing who owns which stage."
 
 erp-master-data-for-mes:
-  summary: "ERP master data is usually set up for costing, and MES/MOM needs more: which machines each operation runs on, realistic cycle and setup times, material by operation, and quality checks by step. Fix it once at the source so every system benefits, and plan for it early rather than discovering the gap halfway through."
+  summary: "ERP master data is usually set up for costing, and MES/MOM needs more: which machines each operation runs on, realistic cycle and setup times, material by operation, and quality checks by step. Get it right in ERP first so every system benefits, add extra detail in specialised applications where needed, and plan for it early rather than discovering the gap halfway through."
 
 esg-needs-shopfloor-data:
   summary: "ESG reporting increasingly needs evidence, and much of it starts on the shopfloor: energy per machine and product, idle consumption, scrap, yield and water. MES/MOM already knows what was made, where and for which order. Add machine-level energy data and sustainability becomes operational efficiency with a reporting benefit."
@@ -320,7 +320,7 @@ how-to-choose-an-mes:
       a: "Choose it as a platform you'll grow with for many years. Get the decision wrong and you can find yourself evaluating again within three to five years, with the added pain of migrating away from a system that didn't fit. That's why breadth across the operation and the vendor's ability to keep investing matter as much as today's feature list."
 
 iiot-vs-mes:
-  summary: "IIoT is about connecting machines and sensors so their data can be collected. MES/MOM puts that data to work: orders, traceability, quality checks, maintenance and guiding operators. Collecting machine data is basic for any MES, so you need both, with IIoT feeding MES/MOM rather than trying to replace it."
+  summary: "IIoT is about connecting machines and sensors so their data can be collected. MES/MOM puts that data to work: orders, traceability, quality checks, maintenance and guiding operators. Collecting machine data is basic for any MES, and MES/MOM often acts as the IIoT layer itself. Where a separate IIoT platform is used, it feeds MES/MOM rather than replacing it."
   faq:
     - q: "What is the difference between IIoT and MES?"
       a: "IIoT is about connecting machines, sensors and devices so their data can be collected, usually through OPC UA and increasingly MQTT. MES/MOM puts that data to work: managing orders, enforcing quality checks, tracing material, raising maintenance work with context and guiding operators. IIoT gives you data points, and MES/MOM gives you operational management."
@@ -374,7 +374,7 @@ opc-ua-mqtt-uns-explained:
   summary: "OPC UA is the standard for reading machines with structure and security built in. MQTT is a lightweight publish and subscribe protocol, and the two often work together. A unified namespace organises all operational data in one place. Connectivity moves data; MES/MOM gives it meaning and publishes the context others need."
 
 ot-cybersecurity-for-mes:
-  summary: "MES/MOM sits between IT and OT, so it's both a bridge and a security boundary. OT puts availability and safety first. Use IEC 62443 zones and conduits with an industrial DMZ, never connect the enterprise network straight to a PLC, control remote vendor access, and plan for recovery. Get a specialist involved."
+  summary: "MES/MOM sits between IT and OT, so it's both a bridge and a security boundary. OT puts availability and safety first. Use IEC 62443 zones and conduits, never connect the enterprise network straight to a PLC, control remote vendor access, and plan for recovery. Get a specialist involved."
 
 paperless-manufacturing:
   summary: "Removing paper is a great first step if you can't do everything at once. Start with the paper that hurts most, often quality check sheets or downtime logs, one line at a time. Avoid a different cheap tool for every form: choose a platform that can grow into full MES/MOM."
@@ -386,7 +386,7 @@ practical-genai-for-the-shopfloor:
   summary: "GenAI already saves time in factories in four ways: answering questions about operational data in plain English, helping configure systems, acting as a knowledge assistant on every screen, and drafting shift summaries. Every one depends on the AI having access to good, contextualised data from your shopfloor systems."
 
 predictive-maintenance-data:
-  summary: "Predictive maintenance is the last step after reactive, preventive and condition-based maintenance. Start by recording downtime accurately and automatically. Models then need condition data, failure history, maintenance actions and operating context, and the operating context usually lives in MES/MOM. Begin with your bottleneck assets."
+  summary: "Predictive maintenance is the last step after reactive, preventive and condition-based maintenance. Start by recording downtime and other sensor data accurately and automatically. Models then need condition data, failure history, maintenance actions and operating context, and the operating context usually lives in MES/MOM. Begin with your bottleneck assets."
 
 qms-and-mes-quality:
   summary: "An enterprise QMS runs CAPA, complaints, audits and supplier quality, while MES/MOM runs quality at the point of production. The loop breaks when shopfloor defects never reach the CAPA process with their context. Use rules to escalate the right non-conformances into the QMS, and send process changes back to the line."
@@ -438,7 +438,7 @@ spc-on-the-shopfloor:
   summary: "Inspection tells you a part is bad; SPC tells you it's about to be. Control limits come from your process and specification limits from the customer, so a process can drift out of control while still in spec. Put control charts and a few well-chosen rules in front of operators, at the line, in MES/MOM."
 
 what-is-a-smart-factory:
-  summary: "A smart factory is a manufacturing environment where people, processes and technology work together, supported by data, to maximise efficiency, flexibility and quality. No version number required. In practice that means defined processes, planning connected to execution, real-time data at the point of work, one source of truth for decisions, and people backed to make the call."
+  summary: "A smart factory is a manufacturing environment where people, processes and technology work together, supported by data, to maximise efficiency, flexibility and quality. In practice that means defined processes, planning connected to execution, real-time data at the point of work, one source of truth for decisions, and people backed to make the call."
   faq:
     - q: "What is a smart factory?"
       a: "My definition is a manufacturing environment where people, processes and technology work together, supported by data, to maximise efficiency, flexibility and quality. The right information reaches the right person at the right time, and decisions are based on facts rather than gut feel. It doesn't need a version number like Industry 4.0 to describe its value."
@@ -543,7 +543,7 @@ build-vs-buy-mes:
   summary: "There are four broad ways to run shopfloor systems: code a homegrown system from scratch, build your own from building blocks, stitch best-of-breed applications together (often through a unified namespace), or configure an out-of-the-box MES/MOM platform. Coding gives complete control but takes longest and leaves everything to you, including security and upgrades. Building from blocks fits exactly and starts cheaply, but you still own it for its whole life. Stitching gives depth in each area, but every boundary is an interface to maintain. A platform costs more up front, but the data is connected and in context from the start, with no integrations between shopfloor functions and the vendor maintaining it. Most factories end up with a mix, so the real choice is which one is the backbone."
   faq:
     - q: "Should we build our own MES?"
-      a: "It can work for a narrow scope and a strong internal team, and it fits exactly. The trade-off is that you own it for its whole life: upgrades, security, documentation and every new capability. Knowledge also tends to sit with a few people. For a full MES/MOM across production, quality, inventory and maintenance, most manufacturers get more value over time from configuring a platform and building only at the edges."
+      a: "It can work for a narrow scope and a strong internal team, and it can be quick to start. It is much harder to do well, particularly for user experience, performance, scalability and security. You own every upgrade and new capability for its whole life, and knowledge tends to sit with a few people. Eventually it needs replacing. For a full MES/MOM across production, quality, inventory and maintenance, most manufacturers get more value over time from configuring a platform and building only at the edges."
     - q: "Is stitching best-of-breed tools together through a UNS a good approach?"
       a: "It can be. Each department gets a tool that's very good at its job, and a well-governed unified namespace cuts point-to-point integrations. The cost is that every boundary is an interface to own and retest, some context is lost between systems, and someone has to design and govern the architecture."
     - q: "What does a homegrown MES really cost?"
@@ -566,7 +566,7 @@ historian-vs-mes:
     - q: "Is a historian the same as an MES?"
       a: "No. A historian is a time-series database that records process values at high frequency, which engineers use to see what a process was doing. MES/MOM records events with context, such as which order ran, which lot was consumed and why a machine stopped, and it manages the work. A historian watches the process; MES/MOM runs the operation."
     - q: "Do I need a historian if I have MES?"
-      a: "Often yes, especially in process industries. MES/MOM doesn't need to keep every high-frequency reading, and a historian stores them efficiently for years. The two work best linked: MES/MOM tells you which machine and which hours were involved in a problem, and the historian shows exactly what the process was doing then."
+      a: "It depends on how frequently you need data. MES/MOM can capture and record the process values most operations need. If engineers need very high-frequency readings kept for years, more common in process industries, a historian stores them efficiently. Where you have both, they work best linked: MES/MOM tells you which machine and which hours were involved in a problem, and the historian shows exactly what the process was doing then."
 
 lot-vs-serial-traceability:
   summary: "Lot traceability tracks quantities that share an identifier, serial traceability tracks every individual item, and time-based traceability traces continuous processes by time window. Lot and batch are often used interchangeably. The right level depends on the material and product, what customers and regulators require, and what a recall would cost."

@@ -91,7 +91,7 @@ pages:
     capabilities: [execution, quality, traceability, connectivity, skills, tooling]
     posts: [manufacturing-traceability, lot-vs-serial-traceability, spc-on-the-shopfloor, replacing-a-homegrown-mes, what-is-oee, opc-ua-mqtt-uns-explained]
     tools: [readiness-check, vendor-scorecard, oee-one-percent]
-    terms: [iatf-16949, ppap, control-plan, first-article-inspection, serialisation, error-proofing, just-in-time, process-capability, andon, line-side-replenishment]
+    terms: [iatf-16949, ppap, control-plan, first-article-inspection, serialisation, error-proofing, just-in-time, just-in-sequence, process-capability, andon, line-side-replenishment]
     faq:
       - q: Why do automotive suppliers use MES?
         a: Automotive customers expect just-in-time delivery and quality they can audit. MES/MOM delivers those by error-proofing each station, recording genealogy at lot or serial level, running SPC on critical characteristics and capturing OEE automatically. Many suppliers already have some form of MES. The common challenge is whether it can scale across lines and sites.
@@ -229,7 +229,7 @@ pages:
       - q: What does MES do for an injection moulder?
         a: It captures cycle times and counts straight from the presses, tracks moulds, shot counts and cavity status, monitors process parameters against limits, and links material lots to each job. The result is scrap and lost capacity you can see by tool and by press, rather than estimates at the end of the shift.
       - q: Do I need a historian as well as MES in plastics?
-        a: Often, yes. Moulding and extrusion produce high-frequency process data that a historian stores efficiently. MES/MOM adds the context, such as which job, tool, material lot and operator. Engineers use the two together to find what really drives quality.
+        a: It depends how frequently you need the data. MES/MOM can record the process values most jobs need. If engineers need every reading from moulding or extrusion at high frequency, a historian stores that efficiently. MES/MOM adds the context, such as which job, tool, material lot and operator. Engineers use the two together to find what really drives quality.
 
   # ------------------------------------------------------------------ roles
   - id: plant-managers
@@ -301,7 +301,7 @@ pages:
           Bring OT security in from the start, not as a gate at the end. [OT cybersecurity for MES](/post/ot-cybersecurity-for-mes) covers the essentials.
     posts: [isa95-integration-patterns, erp-master-data-for-mes, it-vs-ot, contextualised-manufacturing-data, ot-cybersecurity-for-mes, cloud-vs-on-premises-mes]
     tools: [which-systems, vendor-scorecard, readiness-check]
-    terms: [isa-95, purdue-model, it-ot-convergence, uns, opc-ua, mqtt, industrial-dmz, iec-62443, master-data, mdm]
+    terms: [isa-95, purdue-model, it-ot-convergence, uns, opc-ua, mqtt, iec-62443, master-data, mdm]
     faq:
       - q: What should IT know before an MES project?
         a: That the shopfloor runs in real time, on equipment that can't simply be patched or rebooted, with users wearing gloves. The key decisions are where each capability lives, who owns master data, how systems integrate and how OT security is handled. ISA-95 gives IT and operations a shared language for all of them.

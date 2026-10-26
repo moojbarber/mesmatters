@@ -23,7 +23,7 @@ They sit alongside MES/MOM, holding the raw, high-frequency data that MES/MOM do
 
 Structured databases optimised for reporting. They pull data from MES/MOM, ERP, quality and other systems, and organise it for business intelligence tools.
 
-Best for well-structured, aggregated data that answers known questions: OEE by site by month, scrap cost by product family.
+Best for well-structured, aggregated data that answers known questions: output by site by month, scrap cost by product family.
 
 ## Data lakes
 
@@ -42,7 +42,7 @@ It weaves data together rather than moving it all. Useful in large organisations
 A common pattern in mature factories:
 
 1. **MES/MOM** captures operational events and gives them context: order, material, machine, shift, reason, result.
-2. **A historian** keeps the high-frequency machine data.
+2. **A historian**, where needed, keeps very high-frequency machine data.
 3. **A data platform** (lake, warehouse or fabric) brings MES/MOM, historian, ERP and other data together for analytics and AI.
 
 The lines between these categories are blurring, and vendors increasingly offer platforms that cover more of the stack. But the roles stay roughly the same.

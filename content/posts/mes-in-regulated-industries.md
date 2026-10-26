@@ -24,7 +24,7 @@ An **electronic batch record (EBR)** in MES/MOM changes that:
 - Deviations are flagged as they happen, not found during review
 - QA can use **review by exception**, checking only what went outside the normal path
 
-Electronic records and signatures must meet **FDA 21 CFR Part 11** in the US and **EU GMP Annex 11** in Europe: secure, attributable, audit-trailed, and validated. Data integrity principles (often summarised as ALCOA+) apply to everything.
+Electronic records and signatures must meet **FDA 21 CFR Part 11** in the US and **EU GMP Annex 11** in Europe: secure, attributable, audit-trailed, and validated. Data integrity rules apply to every record.
 
 Validation is the big project overhead. Which brings me to a cautionary point: the more you customise, the more you validate. Here, [configure, don't customise](/post/configure-dont-customise) is a matter of compliance cost, not just good practice.
 

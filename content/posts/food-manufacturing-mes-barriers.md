@@ -53,7 +53,7 @@ Pick a mature, configurable MOM platform from the start. One that puts productio
 
 - Batch and lot traceability, forwards and backwards
 - Recipe and formulation control, including substitutions
-- Shelf-life, expiry and FIFO enforcement
+- Shelf-life, expiry (FEFO) and FIFO enforcement
 - Allergen management and changeover validation
 - Yield and give-away tracking at the line
 

@@ -1,7 +1,7 @@
 ---
 title: "IIoT vs MES: why IIoT doesn't replace MES"
 short: "IIoT vs MES"
-description: "IIoT platforms sound cooler than MES. But connecting sensors is a small part of running a factory. Where IIoT fits, where MES/MOM fits, and why you need both."
+description: "IIoT platforms sound cooler than MES. But connecting sensors is a small part of running a factory. Where IIoT fits, where MES/MOM fits, and when you need both."
 published: 2026-06-09
 category: education
 art: signal
@@ -31,7 +31,7 @@ IIoT gives you data points. MES/MOM gives you operational management.
 
 ## Data collection is part of MES
 
-Collecting data from devices, sensors and equipment is one of the core functions of MES/MOM. So an IIoT platform overlaps with one part of MES, the connectivity and data collection, rather than with the whole.
+Collecting data from devices, sensors and equipment is one of the core functions of MES/MOM. So an IIoT platform overlaps with one part of MES, the connectivity and data collection, rather than with the whole. MES/MOM often acts as the IIoT layer itself, connecting directly to machines, so a separate IIoT system isn't always needed.
 
 ## How to make IIoT projects succeed
 
@@ -44,7 +44,7 @@ IIoT has real value. Successful projects tend to share a few traits:
 
 ## How they work together
 
-IIoT feeds data into MES/MOM, a historian or a data platform. MES/MOM turns it into managed operations and contextualised data. A data platform makes it available for analytics and AI.
+Where a separate IIoT platform is used, it feeds data into MES/MOM, a historian or a data platform. MES/MOM turns it into managed operations and contextualised data. A data platform makes it available for analytics and AI.
 
 ## My view
 

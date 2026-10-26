@@ -49,7 +49,7 @@ End-to-end traceability, from farm to fork, helps manage those risks. It helps d
 | --- | --- |
 | **Food safety and quality** | Monitors critical parameters such as temperature and cooking time, and records every check against the batch |
 | **Waste and give-away** | Tracks give-away by line and product in real time, and flags deviations early |
-| **Yield and recipes** | Controls recipe execution and ingredient substitutions, and enforces shelf-life and FIFO rules |
+| **Yield and recipes** | Controls recipe execution and ingredient substitutions, and enforces shelf-life, FEFO and FIFO rules |
 | **Workforce** | Gives operators digital instructions at the right moment, and checks skills before work starts |
 | **Traceability** | Records every ingredient lot and process step, so forward and backward traces take minutes |
 

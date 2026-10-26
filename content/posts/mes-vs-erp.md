@@ -74,7 +74,7 @@ The usual pattern:
 
 ERP data gets *better* when MES/MOM is in place, because it receives validated actuals instead of estimates. More in [Implement MES to remove complexity from your ERP](/post/mes-simplifies-erp).
 
-Master data is the bit people underestimate. MES/MOM needs more detail than most ERP routings were set up with, so fix it at the source. See [Your ERP master data isn't ready for MES](/post/erp-master-data-for-mes).
+Master data is the bit people underestimate. MES/MOM needs more detail than most ERP routings were set up with, so get it right in ERP first, then add any extra detail in MES/MOM where it's needed. See [Your ERP master data isn't ready for MES](/post/erp-master-data-for-mes).
 
 ## Deciding where the line sits
 

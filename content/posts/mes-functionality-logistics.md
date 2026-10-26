@@ -60,13 +60,15 @@ Replenishment driven by actual consumption keeps lines supplied without piling s
 
 ## Putaway
 
+Putaway is moving material into its storage location when it first arrives in the warehouse: raw materials from suppliers, and finished goods from the line. It can be directed by ERP, a WMS or MES/MOM.
+
 At the end of production, finished inventory is labelled and moved into a warehouse. If MES/MOM doesn't own that warehouse, putaway is the point where ownership passes back to ERP or the WMS.
 
 **Handling units.** Inventory is often packed first into handling units, so a whole pallet can be put away with one scan.
 
 **Guided putaway.** Some systems recommend a location based on available space and rules such as fast movers or stock already allocated to a delivery.
 
-**AGVs.** Automated guided vehicles increasingly carry out putaway and replenishment moves.
+**AGVs and mobile robots.** Automated guided vehicles, and their more flexible cousins, autonomous mobile robots, increasingly carry out putaway and replenishment moves. They need to know what to move and where, and that signal often comes from MES/MOM or a WMS.
 
 **Automated storage and retrieval (AS/RS).** The warehouse is treated as a black box: inventory is handed over, then stored and retrieved automatically. It uses space efficiently and reduces forklift traffic, which helps safety.
 

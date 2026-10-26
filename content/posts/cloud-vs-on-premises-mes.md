@@ -64,7 +64,6 @@ So the dependency on connectivity that people associate with cloud often exists 
 
 ## Questions to ask a cloud MES vendor
 
-- What runs at the edge, and what keeps working if the connection is lost for an hour or a day?
 - How is machine data buffered, and how does it catch up?
 - Which security certifications do you hold, and how often is the platform patched?
 - How often are updates released, and can we test them before they reach production?

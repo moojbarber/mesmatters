@@ -15,11 +15,11 @@ That's the whole difference, and it's why statistical process control is one of 
 
 This is the concept people mix up most, so let's align on terminology.
 
-**Specification limits** come from the customer or engineering. A shaft must be 25.00 mm, ±0.05 mm. Inside the limits is good. Outside is scrap.
+**Specification limits** come from the customer or engineering. A shaft must be 25.00 mm, ±0.05 mm. Inside the limits is good. Outside is scrap or rework.
 
-**Control limits** come from the process itself. They're calculated from your own data, typically three standard deviations either side of the average. They describe what your process normally does.
+**Control limits** come from the process itself. They're calculated from your own data, typically three standard deviations either side of the average. They show the process's natural variation, so you can tell when something has changed.
 
-A process can be in control and still make scrap, if its natural spread is wider than the specification. And a process can be entirely within specification while going out of control, drifting steadily towards a limit. That second case is exactly what SPC exists to catch.
+A process can be in control and still make scrap, predictably, if its natural spread is wider than the specification or sits too close to one limit. And a process can be entirely within specification while going out of control, drifting steadily towards a limit. That second case is exactly what SPC exists to catch.
 
 ## Control charts
 

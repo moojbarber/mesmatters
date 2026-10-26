@@ -63,7 +63,7 @@ This is the step everyone wants to skip.
 
 ERP master data was usually set up for what costing needed. A routing with one generic operation called "Production" gives MES/MOM nothing to work with. You need to know which machines each operation runs on, realistic cycle and setup times, which material is consumed at which operation, and which quality checks apply at each step.
 
-Fix it once, at the source, so every system benefits. Rushing this to get to the exciting functionality is one of the most common causes of delay I see. More in [Your ERP master data isn't ready for MES](/post/erp-master-data-for-mes).
+Get it right in ERP first, so every system benefits, then add any extra detail in the specialised applications where it's needed. Rushing this to get to the exciting functionality is one of the most common causes of delay I see. More in [Your ERP master data isn't ready for MES](/post/erp-master-data-for-mes).
 
 **Ready to move on when:** the materials, BOMs and routings for your first area are detailed enough to run the target process, and someone owns keeping them that way.
 

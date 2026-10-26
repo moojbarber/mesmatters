@@ -57,7 +57,7 @@ It's also why ownership of MES/MOM can get political. Some businesses give it to
 
 - **Agree the architecture together.** Zones, conduits, where data is buffered, and what connects to what. IEC 62443 gives you a shared language.
 - **Use standard connectivity.** OPC UA and MQTT rather than custom interfaces. See [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
-- **Never connect the enterprise network straight to a PLC.** Go through MES/MOM or an industrial DMZ.
+- **Never connect the enterprise network straight to a PLC.** Go through MES/MOM and controlled conduits.
 - **Put people from both sides on the project team** from the start, not just at sign-off.
 
 ## My view
