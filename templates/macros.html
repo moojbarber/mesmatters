@@ -130,3 +130,24 @@
 {% macro for_roles(roles, base, label="Most useful for") -%}
 {% if roles %}<aside class="for-roles rv"><span class="micro">{{ label }}</span><div>{% for r in roles %}<a href="{{ base }}/roles/?role={{ r.id }}" style="--gc:{{ r.color }}">{{ r.name }}</a>{% endfor %}</div><a class="for-roles-all" href="{{ base }}/roles/">See every role →</a></aside>{% endif %}
 {%- endmacro %}
+
+
+{% macro recs(base, r, heading="What people say about working with me") -%}
+{% if r and r["items"] %}
+<section class="section recs">
+  <h2 class="label">Recommendations</h2>
+  <div class="section-head"><div><h3>{{ heading }}</h3><p>In their own words, from my recommendations on LinkedIn. Select a card to read each one in full.</p></div><a class="more" href="{{ r.source }}" target="_blank" rel="noopener">See them on LinkedIn →</a></div>
+  <div class="rec-grid">
+  {% for x in r["items"] %}
+    <button type="button" class="rec rv" data-rec="{{ x.id }}" aria-haspopup="dialog">
+      <span class="rec-who"><img src="{{ base }}/images/recs/{{ x.id }}.jpg" alt="" width="56" height="56" loading="lazy"><span><b>{{ x.name }}</b><small>{{ x.title }}</small></span></span>
+      <span class="rec-q">“{{ x.quote }}”</span>
+      <span class="rec-foot"><span>{{ x.date }}</span><span class="rec-more">Read in full →</span></span>
+    </button>
+    <template id="rec-{{ x.id }}"><div class="rec-dlg-head"><img src="{{ base }}/images/recs/{{ x.id }}.jpg" alt="" width="72" height="72"><div><b>{{ x.name }}</b><small>{{ x.title }}</small><small class="rec-rel">{{ x.date }} · {{ x.relation }}</small></div></div><div class="rec-dlg-body">{% for para in x.text.strip().split("\n\n") %}<p>{{ para }}</p>{% endfor %}</div><a class="rec-src" href="{{ r.source }}" target="_blank" rel="noopener">View on LinkedIn →</a></template>
+  {% endfor %}
+  </div>
+  <dialog class="rec-dlg" aria-label="Recommendation"><button type="button" class="rec-x" aria-label="Close">×</button><div class="rec-dlg-in"></div></dialog>
+</section>
+{% endif %}
+{%- endmacro %}

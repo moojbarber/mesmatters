@@ -1,12 +1,12 @@
 {% extends "base.html" %}
-{% from "macros.html" import card, hero_bg, cta, coverflow %}
+{% from "macros.html" import card, hero_bg, cta, coverflow, recs %}
 {% block main %}
 <section class="hero home-hero">
   {{ hero_bg() }}
   <div class="wide">
     <div>
       <span class="tag">Smart factory <i>/</i> Connected worker <i>/</i> Shopfloor AI <i>/</i> MES/MOM</span>
-      <h1>Building the smart factory, from the shopfloor up</h1>
+      <h1>Building your smart factory, from the shopfloor up</h1>
       <p class="kicker">Practical writing on shopfloor AI, connected worker, MES/MOM, and the broader manufacturing applications landscape. From someone who has spent his career making factory software work in real factories.</p>
       <div class="actions">
         <a class="btn" href="{{ base }}/paths/">Start learning →</a>
@@ -113,6 +113,8 @@
       {% endfor %}
     </div>
   </section>
+
+  {{ recs(base, recommendations) }}
 
   <section class="section">
     <h2 class="label">Who writes this</h2>

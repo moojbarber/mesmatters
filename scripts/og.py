@@ -39,7 +39,7 @@ def cards():
     for p in sorted((ROOT / "content" / "posts").glob("*.md")):
         fm = yaml.safe_load(p.read_text().split("---")[1])
         yield fm.get("slug", p.stem), fm.get("slug", p.stem), CATS[fm["category"]], fm["title"]
-    yield "home", "page-home", "Smart factory · Shopfloor AI", "Building the smart factory, from the shopfloor up"
+    yield "home", "page-home", "Smart factory · Shopfloor AI", "Building your smart factory, from the shopfloor up"
     yield "page-about", "page-about", "About", "Hi, I'm Matt Barber"
     yield "page-education", "page-education", "Foundations", "The systems underneath the smart factory"
     yield "page-advice", "page-advice", "Implementation", "Getting shopfloor projects over the line"

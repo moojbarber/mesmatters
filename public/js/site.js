@@ -406,3 +406,23 @@
     });
   });
 })();
+
+// recommendations: open the full text in a dialog
+(function(){
+  document.querySelectorAll('.recs').forEach(function(sec){
+    var dlg=sec.querySelector('.rec-dlg'), box=dlg&&dlg.querySelector('.rec-dlg-in');
+    if(!dlg) return;
+    var last=null;
+    sec.querySelectorAll('[data-rec]').forEach(function(b){
+      b.addEventListener('click',function(){
+        var t=document.getElementById('rec-'+b.dataset.rec); if(!t) return;
+        box.innerHTML=''; box.appendChild(t.content.cloneNode(true)); last=b;
+        if(dlg.showModal) dlg.showModal(); else dlg.setAttribute('open','');
+        dlg.scrollTop=0;
+      });
+    });
+    dlg.querySelector('.rec-x').addEventListener('click',function(){dlg.close()});
+    dlg.addEventListener('click',function(e){if(e.target===dlg) dlg.close()});
+    dlg.addEventListener('close',function(){if(last) last.focus()});
+  });
+})();

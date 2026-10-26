@@ -1,0 +1,66 @@
+# Public LinkedIn recommendations, copied verbatim (including the writers' own spelling).
+# quote must be an exact excerpt of text. Photos in public/images/recs/<id>.jpg
+source: "https://www.linkedin.com/in/mattjbarber/details/recommendations/"
+items:
+  - id: garry-marshall
+    name: Garry Marshall
+    title: Retired
+    date: September 2023
+    relation: Garry managed Matt directly
+    quote: "Matt is one of just a few people I know to be so knowledgeable on the role and function of MES"
+    text: |
+      I have worked with Matt for over 12 years. For 3 of those, Matt reported in to me as Head of Product at Lighthouse, helping to stear Shopfloor-Online (as-was - now Infor MES) to become a key player in the Manufacturing Execution System (MES) space. For the last couple of years I have continued to work alongside Matt as we have moved in to Infor.
+
+      Matt is impassioned about the role of the MES. He bring clarity of thought, strategic vision and unbounded energy to drive out the MES message. Matt is a driving force behind MES both inside Infor and beyond.
+
+      Matt is one of just a few people I know to be so knowledgeable on the role and function of MES - his background in both software implementation, system architecture and deployment, and strategic product management puts him in a unique position to be able to articulate powerfully the benefits that can come from the appropriate implementation of MES.
+  - id: brad-revell
+    name: Brad Revell
+    title: Corporate Vice President - Strategic Accounts (HyperFlow) at Blue Yonder
+    date: September 2023
+    relation: Brad was senior to Matt but didn't manage Matt directly
+    quote: "When I think of MES I think of Matt."
+    text: |
+      When I think of MES I think of Matt. Whilst that sounds slightly cliché, that is the mark that Matt has left with me during the time we worked together. Matt and I partnered on a number of customers interactions and initiatives. For example he and I were on a project together to build a manufacturing production floor demonstration powered by a manufacturing execution system (MES). There was nothing that Matt couldn't answer. Furthermore he went above and beyond his role in making sure he understood the needs and value that these capabilities would provide to the end user.
+  - id: amit-golan
+    name: Amit Golan
+    title: Owner & CEO at Magma Group leading Industry 4.0 initiatives
+    date: September 2023
+    relation: Amit worked with Matt but they were at different companies
+    quote: "I've known Matt for over a decade, and he's a true MES expert."
+    text: |
+      I've known Matt for over a decade, and he's a true MES expert. He assist us a lot in our successful Infor MES (formerly Shopfloor-Online) implementations in Israel. Matt's professionalism, expertise, and passion for MES are unmatched. He's not only a skilled professional but also a kind and supportive colleague. I highly recommend Matt as an a MES pro and as a person.
+  - id: anwen-robinson
+    name: Anwen Robinson
+    title: Innovation | Value Creation | Business Transformation | Customer-first Strategies | Non Exec Director
+    date: September 2023
+    relation: Anwen was senior to Matt but didn't manage Matt directly
+    quote: "He is commercially astute and brings an entrepreneurial viewpoint to bear on challenging projects."
+    text: |
+      I worked with Matt whilst at Infor and was/am hugely impressed by his intellect and subject matter knowledge and experience. He is commercially astute and brings an entrepreneurial viewpoint to bear on challenging projects. He is a great asset and I have no hesitation in recommending Matt. A pleasure to have worked with and known.
+  - id: amaury-carrasco
+    name: Amaury Carrasco
+    title: Technology Leader & Business Architect | Pragmatic Innovator Driving AI & Cloud Solutions for Operational Excellence
+    date: September 2023
+    relation: Amaury was senior to Matt but didn't manage Matt directly
+    quote: "…they inspire me to look at old challenges in new ways."
+    text: |
+      Matt came to Infor after Lighthouse became part of the portfolio 2 years ago.  Since then I have had the opportunity to work with him on multiple initiatives and customer engagements and have always been impressed wth his knowldge, profesionalism and ability to think outside the box in order to create real value for our customers.
+
+      I have spent the majority of my career in manufacturing, especially optimizing manufacturing execution and find that my convesations with Matt are informative and they inspire me to look at old challenges in new ways.
+  - id: dom-henry
+    name: Dom Henry
+    title: Quality Assurance Team Lead at Infor MES
+    date: September 2023
+    relation: Dom reported to Matt directly
+    quote: "Matt possesses a deep understanding of the MES landscape"
+    text: |
+      I have had the privilege of working closely with Matt over the past 2 years, as he manages our MES (Manufacturing Execution Systems) product at Infor, and I can confidently say that Matt is an exceptional MES Product Manager.
+
+      Matt possesses a deep understanding of the MES landscape, and his strategic vision for product development is truly impressive. He has an innate ability to identify emerging trends and technologies in the manufacturing industry, ensuring that our MES product remains cutting-edge and competitive.
+
+      One of Matt's standout qualities is his commitment to customer success. He consistently goes above and beyond to address client concerns and tailor our MES solutions to meet their specific needs. His dedication to customer satisfaction has resulted in long-lasting, mutually beneficial relationships.
+
+      Moreover, Matt is a natural leader who inspires his team to reach new heights. He has fostered a culture of innovation, collaboration, and excellence within our product team, which translates into tangible results and successful product launches.
+
+      In summary, Matt is an outstanding MES Product Manager with a proven track record of driving product innovation, satisfying customers, and leading high-performing teams. I have no doubt that his future endeavors will be marked by continued success and contributions to the MES industry.

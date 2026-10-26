@@ -617,6 +617,10 @@ def build(base, relative=False, include_scheduled=False):
     common = {"base": base, "nav": NAV, "linkedin": LINKEDIN, "year": dt.date.today().year, "version": version, "kit_form": KIT_FORM_ID,
               "ask_endpoint": ASK_FORM_ENDPOINT, "sfg_url": SFG_COURSE_URL,
               "categories": [], "jsonld": []}
+    recd = yaml.safe_load((ROOT / "content" / "recommendations.yaml").read_text(encoding="utf-8"))
+    for x in recd["items"]:
+        assert x["quote"].strip("…") in " ".join(x["text"].split()), f"quote not verbatim: {x['id']}"
+    common["recommendations"] = recd
 
     for c in CATEGORIES:
         c["posts"] = [p for p in posts if p["category_key"] == c["key"]]
@@ -783,7 +787,7 @@ def build(base, relative=False, include_scheduled=False):
           description="Matt Barber went from writing MES code to running a global MES business. Why he writes about the smart factory and shopfloor AI.",
           canonical=f"{SITE}/about", eyebrow="About", heading="Hi, I'm Matt.",
           kicker="I've spent my career on the shopfloor side of software. This is where I write down what I've learnt about making factories smarter.",
-          content=Markup(about), show_cta=True, og_image=f"{SITE}/images/og/page-about.png",
+          content=Markup(about), show_cta=True, show_recs=True, og_image=f"{SITE}/images/og/page-about.png",
           jsonld=[jsonld({"@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": person_full})])
     contact = (ROOT / "content" / "pages" / "contact.html").read_text(encoding="utf-8").replace("{{base}}", base).replace("{{linkedin}}", LINKEDIN)
     write("contact.html", "page.html", active="contact", seo_title="Contact | Shopfloor Matters",
