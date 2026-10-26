@@ -1,64 +1,10 @@
 # Learning paths. Each path is a set of articles, read in order.
 # "stations" lists the article slugs in reading order. Read times and "what you'll learn" lines come from the articles.
-# Order here is the order on the hub map, top to bottom. The home page shows them in `home_order`.
+# Order here is the order on the hub map, top to bottom, and the suggested order to work through them. `home_order` matches it.
 
-home_order: [foundations, strategy, beyond-erp, business-case, implementation, shopfloor-ai, connected-worker, mes-functionality, metrics, quality-traceability, maintenance, connecting-the-plant, systems-landscape]
+home_order: [foundations, mes-functionality, metrics, quality-traceability, maintenance, connected-worker, beyond-erp, systems-landscape, connecting-the-plant, shopfloor-ai, strategy, business-case, implementation]
 
 paths:
-  - id: shopfloor-ai
-    title: Shopfloor AI
-    who: Exploring AI
-    role: exploring AI
-    color: "#ff8fe0"
-    rgb: "255,143,224"
-    image: ai-needs-shopfloor-data
-    blurb: What AI needs from your shopfloor data, where it already pays off, and what agentic AI changes next.
-    stations:
-      - ai-ml-genai-on-the-shopfloor
-      - contextualised-manufacturing-data
-      - manufacturing-data-platforms
-      - ai-needs-shopfloor-data
-      - practical-genai-for-the-shopfloor
-      - agentic-ai-mcp-manufacturing
-      - predictive-maintenance-data
-
-  - id: business-case
-    title: The business case
-    who: Building support
-    role: building a business case
-    color: "#ffb86b"
-    rgb: "255,184,107"
-    image: mes-business-case
-    blurb: Who benefits, where the money comes from, how to build a case leadership will approve, and how to choose without regret.
-    stations:
-      - who-benefits-from-mes
-      - mes-roi-bottom-line
-      - mes-business-case
-      - smart-factory-roi-research
-      - how-to-choose-an-mes
-      - smart-factory-technology-mistakes
-
-  - id: beyond-erp
-    title: Beyond ERP
-    who: Choosing systems
-    role: choosing systems beyond ERP
-    color: "#ff8a70"
-    rgb: "255,138,112"
-    image: what-is-erp
-    blurb: ERP runs the business. These are the strategic systems that run the operation around it, from MES/MOM and connected worker to WMS, APS and CPQ, and how to decide what you need.
-    stations:
-      - what-is-erp
-      - erp-vs-mrp-vs-mes
-      - smart-factory-tech-stack
-      - mes-simplifies-erp
-      - mes-vs-mom
-      - connected-worker-one-app-not-five
-      - wms-vs-mes-inventory
-      - aps-vs-mes-scheduling
-      - cpq-to-shopfloor
-      - plm-erp-mes-digital-thread
-      - mes-market-overview
-
   - id: foundations
     title: MES/MOM foundations
     who: New to MES
@@ -79,61 +25,6 @@ paths:
       - what-is-oee
       - mes-vs-erp
       - smart-factory-glossary
-
-  - id: implementation
-    title: Implementation playbook
-    who: Running a project
-    role: running a project
-    color: "#33d4e0"
-    rgb: "51,212,224"
-    image: manufacturing-process-mapping
-    blurb: Every stage of a shopfloor project in the order you will hit it, from mapping the process to rolling out across sites.
-    stations:
-      - manufacturing-process-mapping
-      - mes-implementation-team
-      - erp-master-data-for-mes
-      - configure-dont-customise
-      - isa95-integration-patterns
-      - how-long-does-mes-implementation-take
-      - manufacturing-change-management
-      - paperless-manufacturing
-      - mes-go-live
-      - mes-multi-site-rollout
-
-  - id: connected-worker
-    title: Connected worker
-    who: Leading frontline teams
-    role: leading frontline teams
-    color: "#3ddc97"
-    rgb: "61,220,151"
-    image: connected-worker-one-app-not-five
-    blurb: Giving the people on the line the right instructions, skills checks and handovers, on one screen.
-    stations:
-      - connected-worker-one-app-not-five
-      - digital-work-instructions
-      - skills-enforcement-shopfloor
-      - digital-shift-handover
-      - ai-for-frontline-workers
-
-  - id: systems-landscape
-    title: The systems landscape
-    who: IT and architects
-    role: designing the architecture
-    color: "#7fa6ff"
-    rgb: "127,166,255"
-    image: opc-ua-mqtt-uns-explained
-    blurb: How the systems actually connect. Integration patterns, who owns the BOM, quality, lab and maintenance data, and the protocols that join the shopfloor up.
-    stations:
-      - shopfloor-applications-explained
-      - mes-mom-erp-compared
-      - isa95-integration-patterns
-      - ebom-mbom-as-built
-      - qms-and-mes-quality
-      - lims-and-mes
-      - eam-cmms-and-mes
-      - scada-vs-mes
-      - iiot-vs-mes
-      - opc-ua-mqtt-uns-explained
 
   - id: mes-functionality
     title: MES functionality in depth
@@ -205,6 +96,62 @@ paths:
       - mtbf-vs-mttr-vs-mttf
       - predictive-maintenance-data
 
+  - id: connected-worker
+    title: Connected worker
+    who: Leading frontline teams
+    role: leading frontline teams
+    color: "#3ddc97"
+    rgb: "61,220,151"
+    image: connected-worker-one-app-not-five
+    blurb: Giving the people on the line the right instructions, skills checks and handovers, on one screen.
+    stations:
+      - connected-worker-one-app-not-five
+      - digital-work-instructions
+      - skills-enforcement-shopfloor
+      - digital-shift-handover
+      - ai-for-frontline-workers
+
+  - id: beyond-erp
+    title: Beyond ERP
+    who: Choosing systems
+    role: choosing systems beyond ERP
+    color: "#ff8a70"
+    rgb: "255,138,112"
+    image: what-is-erp
+    blurb: ERP runs the business. These are the strategic systems that run the operation around it, from MES/MOM and connected worker to WMS, APS and CPQ, and how to decide what you need.
+    stations:
+      - what-is-erp
+      - erp-vs-mrp-vs-mes
+      - smart-factory-tech-stack
+      - mes-simplifies-erp
+      - mes-vs-mom
+      - connected-worker-one-app-not-five
+      - wms-vs-mes-inventory
+      - aps-vs-mes-scheduling
+      - cpq-to-shopfloor
+      - plm-erp-mes-digital-thread
+      - mes-market-overview
+
+  - id: systems-landscape
+    title: The systems landscape
+    who: IT and architects
+    role: designing the architecture
+    color: "#7fa6ff"
+    rgb: "127,166,255"
+    image: opc-ua-mqtt-uns-explained
+    blurb: How the systems actually connect. Integration patterns, who owns the BOM, quality, lab and maintenance data, and the protocols that join the shopfloor up.
+    stations:
+      - shopfloor-applications-explained
+      - mes-mom-erp-compared
+      - isa95-integration-patterns
+      - ebom-mbom-as-built
+      - qms-and-mes-quality
+      - lims-and-mes
+      - eam-cmms-and-mes
+      - scada-vs-mes
+      - iiot-vs-mes
+      - opc-ua-mqtt-uns-explained
+
   - id: connecting-the-plant
     title: Connecting the plant
     who: Connecting OT and IT
@@ -221,6 +168,23 @@ paths:
       - historian-vs-mes
       - ot-cybersecurity-for-mes
       - cloud-vs-on-premises-mes
+
+  - id: shopfloor-ai
+    title: Shopfloor AI
+    who: Exploring AI
+    role: exploring AI
+    color: "#ff8fe0"
+    rgb: "255,143,224"
+    image: ai-needs-shopfloor-data
+    blurb: What AI needs from your shopfloor data, where it already pays off, and what agentic AI changes next.
+    stations:
+      - ai-ml-genai-on-the-shopfloor
+      - contextualised-manufacturing-data
+      - manufacturing-data-platforms
+      - ai-needs-shopfloor-data
+      - practical-genai-for-the-shopfloor
+      - agentic-ai-mcp-manufacturing
+      - predictive-maintenance-data
 
   - id: strategy
     title: Smart factory strategy
@@ -241,3 +205,39 @@ paths:
       - replacing-a-homegrown-mes
       - mes-and-digital-twins
       - service-data-back-to-engineering
+
+  - id: business-case
+    title: The business case
+    who: Building support
+    role: building a business case
+    color: "#ffb86b"
+    rgb: "255,184,107"
+    image: mes-business-case
+    blurb: Who benefits, where the money comes from, how to build a case leadership will approve, and how to choose without regret.
+    stations:
+      - who-benefits-from-mes
+      - mes-roi-bottom-line
+      - mes-business-case
+      - smart-factory-roi-research
+      - how-to-choose-an-mes
+      - smart-factory-technology-mistakes
+
+  - id: implementation
+    title: Implementation playbook
+    who: Running a project
+    role: running a project
+    color: "#33d4e0"
+    rgb: "51,212,224"
+    image: manufacturing-process-mapping
+    blurb: Every stage of a shopfloor project in the order you will hit it, from mapping the process to rolling out across sites.
+    stations:
+      - manufacturing-process-mapping
+      - mes-implementation-team
+      - erp-master-data-for-mes
+      - configure-dont-customise
+      - isa95-integration-patterns
+      - how-long-does-mes-implementation-take
+      - manufacturing-change-management
+      - paperless-manufacturing
+      - mes-go-live
+      - mes-multi-site-rollout
