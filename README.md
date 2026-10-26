@@ -40,6 +40,5 @@ Repository variables (Settings → Secrets and variables → Actions → Variabl
 | --- | --- | --- |
 | `KIT_FORM_ID` | Newsletter form, template email gates, "email me my result" | Sign-ups hidden; template downloads shown directly |
 | `ASK_FORM_ENDPOINT` | Where Ask Matt questions are posted (e.g. Formspree or Tally) | The question is copied and LinkedIn opens |
-| `SFG_COURSE_URL` | Adds a "go deeper" link to Smart Factory Core on tool pages | No link |
 
 Kit needs custom fields named `role`, `resource`, `readiness_level`, `readiness_score`, `readiness_weakest` and `readiness_process`, `readiness_data`, `readiness_systems`, `readiness_people`, `readiness_analytics` for the gates and readiness report to carry their data. An automation keyed on `resource` sends the right download link.

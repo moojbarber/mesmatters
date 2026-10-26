@@ -34,7 +34,6 @@ jobs:
       - env:
           KIT_FORM_ID: ${{ vars.KIT_FORM_ID }}
           ASK_FORM_ENDPOINT: ${{ vars.ASK_FORM_ENDPOINT }}
-          SFG_COURSE_URL: ${{ vars.SFG_COURSE_URL }}
         run: python scripts/build.py --base "${{ vars.SITE_BASE != null && vars.SITE_BASE || '' }}"
       - uses: actions/upload-pages-artifact@v3
         with:
