@@ -19,7 +19,7 @@ ERP typically knows that a production order consumed certain materials and produ
 
 So you know roughly what went into an order. You don't know exactly which lot went into which part of it, when, or under what conditions.
 
-For a straightforward product with low risk, that may be enough. For most manufacturers, it isn't.
+ERP does that business-level job well, and for a straightforward product with low risk, that may be enough. For most manufacturers, it isn't.
 
 ## What full traceability looks like
 

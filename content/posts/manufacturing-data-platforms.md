@@ -17,7 +17,7 @@ Historians are databases built for time-series data at very high volume: machine
 
 They've been part of manufacturing IT for decades and they're still widely used, especially by engineers for troubleshooting and long-term trending. "What was the oven temperature doing in the two hours before that batch failed?"
 
-They sit alongside MES/MOM, holding the raw, high-frequency data that MES/MOM doesn't need to keep.
+Where very high-frequency data is needed, they sit alongside MES/MOM, holding the raw readings it doesn't need to keep. Often MES/MOM records the data that matters on its own.
 
 ## Data warehouses
 

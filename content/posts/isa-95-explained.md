@@ -49,7 +49,7 @@ The control layer itself is covered in [PLC vs SCADA vs DCS vs MES](/post/plc-vs
 
 **Level 2.** The control systems that run the equipment. PLCs are rugged industrial computers that read sensors and run logic, often programmed in ladder logic, one of the IEC 61131-3 languages. Process plants usually use a DCS, and many sites supervise equipment through SCADA.
 
-**Level 3.** The systems that manage operations. Where there's no MES/MOM, a collection of other applications often fills the space, such as a quality management system (QMS) or a computerised maintenance management system (CMMS). Depending on its scope, an MES/MOM may replace some of these or work alongside them. It's worth checking the breadth of any platform when buying, so it can grow with you. More in [QMS vs LIMS vs MES](/post/qms-vs-lims-vs-mes) and [CMMS vs EAM vs MES](/post/cmms-vs-eam-vs-mes).
+**Level 3.** The systems that manage operations. Where there's no MES/MOM, a collection of other applications often fills the space, such as a quality management system (QMS) or a computerised maintenance management system (CMMS). A capable MOM covers what a QMS or CMMS would; narrower MES products often work alongside them. It's worth checking the breadth of any platform when buying, so it can grow with you. More in [QMS vs LIMS vs MES](/post/qms-vs-lims-vs-mes) and [CMMS vs EAM vs MES](/post/cmms-vs-eam-vs-mes).
 
 **Level 4.** The business systems: ERP for finance and planning, alongside supply chain management (SCM) and customer relationship management (CRM) systems. More in [ERP vs MRP vs MES](/post/erp-vs-mrp-vs-mes).
 

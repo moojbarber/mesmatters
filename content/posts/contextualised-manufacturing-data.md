@@ -76,7 +76,7 @@ That's why I see MES/MOM as the foundation for AI, not a competitor to it. It cr
 
 ## Where the data lives after that
 
-Not all data lives in MES/MOM forever. High-frequency signals often sit in a historian. Analytics and AI teams often work from a data lake or data platform that pulls from MES/MOM, ERP and other sources. I explain how those fit together in [Historians, data lakes and data fabric](/post/manufacturing-data-platforms).
+Not all data lives in MES/MOM forever. Very high-frequency signals, where they're genuinely needed, often sit in a historian; MES/MOM records the process values most operations need. Analytics and AI teams often work from a data lake or data platform that pulls from MES/MOM, ERP and other sources. I explain how those fit together in [Historians, data lakes and data fabric](/post/manufacturing-data-platforms).
 
 But the context is created at the point of work. If it isn't captured there, no data platform downstream can invent it later.
 

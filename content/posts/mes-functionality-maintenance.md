@@ -46,13 +46,13 @@ But it means operators need, in the same place they run production:
 - Issues already logged against their assets, so they don't log them twice
 - A fast way to raise a new fault, with photos if needed
 
-If that sits in a separate CMMS, it's another login and another screen. Most of the time, it simply won't get used.
+If that sits in a separate CMMS, it's another login and another screen. Adoption usually suffers.
 
 ## When an EAM makes sense
 
 MOM's maintenance capability covers the ground a CMMS would. An EAM is a different case.
 
-A full EAM (Enterprise Asset Management) system makes sense for asset-heavy businesses with advanced needs: complex spare parts management, reliability engineering, linear assets, regulatory asset records across many sites.
+A full EAM (Enterprise Asset Management) system makes sense for asset-heavy businesses with advanced needs, and it's where asset lifecycle and financial data belong, rather than in MOM. Typical needs include complex spare parts management, reliability engineering, linear assets, regulatory asset records across many sites.
 
 ## The step towards predictive maintenance
 

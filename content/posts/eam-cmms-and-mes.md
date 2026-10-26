@@ -13,7 +13,7 @@ When those two views live in different systems with no link between them, you ge
 
 ## The systems involved
 
-**EAM** (Enterprise Asset Management) and **CMMS** (Computerised Maintenance Management System) manage assets over their whole life. The difference is mostly scale: EAM covers the full lifecycle and the financials across many sites; CMMS is the lighter, maintenance-team-focused version. I compare the two in more detail in [CMMS vs EAM vs MES](/post/cmms-vs-eam-vs-mes). Both handle:
+**EAM** (Enterprise Asset Management) and **CMMS** (Computerised Maintenance Management System) both manage maintenance. The difference is mostly scope: EAM covers the full lifecycle and the financials across many sites; CMMS is the lighter, maintenance-team-focused version. I compare the two in more detail in [CMMS vs EAM vs MES](/post/cmms-vs-eam-vs-mes). Both handle:
 
 - The asset register and hierarchy
 - Preventive maintenance plans and schedules
@@ -41,11 +41,11 @@ Here's where the two worlds collide:
 
 **Direct MES/MOM to EAM/CMMS, with ERP for cost and parts.** MES/MOM sends counters, conditions and breakdown requests straight to the EAM/CMMS, which raises the work order. Planned maintenance windows come back to MES/MOM so the schedule reflects them. ERP still handles spares purchasing and costs. This suits plants with frequent, condition-based triggers.
 
-**Maintenance inside MES/MOM.** For many plants, especially smaller ones, MES/MOM's own maintenance functionality is enough: operator-raised requests, simple PM schedules, autonomous maintenance checklists and downtime analysis in one place. No integration at all.
+**Maintenance inside MES/MOM.** For many plants, MES/MOM's own maintenance functionality is enough: operator-raised requests, simple PM schedules, autonomous maintenance checklists and downtime analysis in one place. No integration at all.
 
 **Hybrid by asset criticality.** Critical, complex assets are managed in full EAM. Simpler line equipment and operator-level care are handled in MES/MOM. Clear rules decide which asset lives where.
 
-None of these is universally right. I'd ask one question first: who actually raises and closes most of your maintenance tasks, technicians or operators?
+None of these is universally right for EAM, but where a MOM is in place, its maintenance capability should replace a separate CMMS. I'd ask one question first: who actually raises and closes most of your maintenance tasks, technicians or operators?
 
 ## Rules that hold in every option
 

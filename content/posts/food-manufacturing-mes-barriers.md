@@ -45,7 +45,7 @@ I'd urge anyone starting an MES/MOM project to invest properly in this phase. Ru
 
 Be wary of a cheaper solution chosen as a stop-gap.
 
-Too many food manufacturers fill one gap with one small tool. A checklist app for hygiene sign-offs. A standalone OEE dashboard. A separate quality system for lab results. Each solves today's problem. None of them talk to each other, and none of them can grow into what you'll need next year.
+Too many food manufacturers fill one gap with one small tool. A checklist app for hygiene sign-offs. A standalone OEE dashboard. A separate quality app for line checks. Each solves today's problem. Few of them share data, and none of them can grow into what you'll need next year.
 
 Food is the industry where that hurts most, because the questions that matter cut across every department at once. Which batches of finished goods contain this lot of raw material? Did it pass goods-in inspection? Which line ran it, after which clean-down, with which allergen changeover? Answer that from four disconnected systems and your two-minute recall becomes a two-day investigation.
 

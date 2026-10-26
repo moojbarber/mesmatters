@@ -30,7 +30,7 @@ Get those answers for every flow before anyone mentions an API.
 
 In most manufacturers, ERP sits between MES/MOM and the other business systems. Product data comes from PLM *via* ERP. Orders come from ERP. Inventory, cost and quality status go back to ERP. That's a sound design. ERP has to know about all of it anyway.
 
-But "usually" matters. Throughout this series I've described cases where a direct link alongside ERP makes sense: engineering drawings from PLM, high-frequency replenishment with a WMS, rich non-conformance data into a QMS, in-process lab results from LIMS. The rule I'd suggest:
+But "usually" matters. Throughout this series I've described cases where a direct link alongside ERP makes sense: engineering drawings from PLM, high-frequency replenishment with a WMS, rich non-conformance data into a QMS, where one is used, in-process lab results from LIMS. The rule I'd suggest:
 
 > **Business transactions go through ERP. Execution detail can go direct when speed or richness demands it.**
 

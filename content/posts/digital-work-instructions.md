@@ -43,7 +43,7 @@ If the system knows the order, the material, the machine and the tool, it can sh
 
 It can also respond to what's happening. A material lot changes, so a check appears. A tool hits its change limit, so the changeover instructions appear. A quality result is borderline, so the corrective steps appear.
 
-That's only possible when work instructions live inside [MES/MOM](/post/what-is-mes), alongside production, quality and inventory. A standalone instructions tool doesn't know a lot just changed.
+That works best when work instructions live inside [MES/MOM](/post/what-is-mes), alongside production, quality and inventory. A standalone instructions tool doesn't know a lot just changed.
 
 ## Onboarding in days, not months
 

@@ -49,7 +49,7 @@ Separate systems can offer more depth in one area, and each can be bought and de
 
 The trade-offs:
 
-- **Context is lost at each integration.** Usually only a subset of the data passes across.
+- **Context is lost at each integration.** Usually only a subset of the data passes across, by design, so some context stays behind in each system.
 - **Integrations need maintaining.** They need retesting with every upgrade on either side.
 - **Operators may juggle applications.** Different logins, different screens.
 - **Data can diverge.** Two systems can hold different versions of the same downtime or stock.

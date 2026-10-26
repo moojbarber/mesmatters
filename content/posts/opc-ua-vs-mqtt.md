@@ -41,7 +41,7 @@ That's why you so often see both: OPC UA at the machine, MQTT across the plant a
 
 A unified namespace is an architecture, usually built on an MQTT broker. All operational data is published to one structured place, organised by the plant hierarchy: enterprise, site, area, line, machine.
 
-Done well, it reduces the number of separate integrations. Done badly, it's a very big pile of tags with no context. More in [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
+Done well, it makes live data easy to find and reuse. Done badly, it's a very big pile of tags with no context. It also keeps no history and gives the sender no confirmation, so direct interfaces and events published by MES/MOM remain valid alternatives. More in [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
 
 ## And MES/MOM?
 

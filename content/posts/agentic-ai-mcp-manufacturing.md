@@ -53,7 +53,7 @@ Why does it matter?
 - Agents can discover and use tools in connected systems without everything being hard-coded in advance.
 - The system stays in control of what's exposed, so you decide which data and actions an agent can reach.
 
-MCP is the interoperability layer that lets agents work in real, messy IT landscapes. Which, if you've ever looked at a factory's application landscape, is exactly what's needed.
+MCP gives agents a standard way to work across the many systems a factory already runs. Which, if you've ever looked at a factory's application landscape, is exactly what's needed.
 
 ## What could agents do on the shopfloor?
 

@@ -33,7 +33,7 @@ MES and MOM aren't competitors to ERP. They do a different job, at a much finer 
 | **LIMS** | Run the lab: samples, methods, results, certificates | Hours to days | Lab analysts, QA | 3 |
 | **EAM / CMMS** | Manage assets and maintenance work | Months to hours | Maintenance and reliability | 3 and 4 |
 | **SCADA** | Monitor and control equipment in real time | Seconds and below | Control room, process engineers | 2 |
-| **IIoT / historian** | Connect equipment and store high-frequency data | Milliseconds to years | Engineers, data teams | 1 and 2, feeding 3 |
+| **IIoT / historian** | Connect equipment and store high-frequency data. MES/MOM often provides the connectivity, and a historian is optional | Milliseconds to years | Engineers, data teams | 1 and 2, feeding 3 |
 
 The levels refer to [ISA-95](/post/isa-95-explained), the standard for how business and shopfloor systems fit together. Level 4 is business planning, level 3 is manufacturing operations, and levels 0 to 2 are the machines and their control.
 
@@ -70,17 +70,17 @@ Most integration arguments I see come down to ownership. Agree this table early 
 | Product design and engineering BOM | PLM | The source of truth for what a product *is* |
 | Manufacturing BOM and routing | ERP | Restructured from the engineering BOM for how it's built. See [EBOM, MBOM, as-built](/post/ebom-mbom-as-built) |
 | Production orders | ERP creates, MES/MOM executes | The order BOM is a copy taken when the order is released |
-| Detailed sequence on the day | APS or MES/MOM | ERP's plan mostly assumes infinite capacity. See [ERP, APS and MES scheduling](/post/aps-vs-mes-scheduling) |
+| Detailed sequence on the day | APS or MES/MOM | ERP's plan often uses simplified capacity. See [ERP, APS and MES scheduling](/post/aps-vs-mes-scheduling) |
 | Inventory as a financial asset | ERP | Quantities, valuation, receipts and shipments |
 | Inventory inside the warehouse | WMS, or ERP if you don't have one | Bins, picks, cycle counts and automation. See [WMS, MES and ERP](/post/wms-vs-mes-inventory) |
 | Line-side stock, WIP and consumption | MES/MOM | The truth at the point of use |
 | As-built record and genealogy | MES/MOM | Nobody else is there when it happens |
 | In-process quality results and SPC | MES/MOM | Triggered by what's running |
-| CAPA, complaints and audits | QMS | Fed by shopfloor non-conformances. See [QMS and MES](/post/qms-and-mes-quality) |
+| CAPA, complaints and audits | QMS, or MOM where it covers the quality system | Fed by shopfloor non-conformances. See [QMS and MES](/post/qms-and-mes-quality) |
 | Lab results | LIMS | Flow back to MES/MOM against the batch. See [LIMS and MES](/post/lims-and-mes) |
 | Downtime, run hours and counters | MES/MOM | Shared with maintenance |
 | Maintenance work orders and asset history | MES/MOM, or an EAM for asset-heavy operations | See [EAM, CMMS and MES](/post/eam-cmms-and-mes) |
-| High-frequency machine signals | Historian | MES/MOM keeps the events, not every reading |
+| High-frequency machine signals | Historian, where you need one | MES/MOM keeps the events, not every reading |
 
 One owner per object. Everyone else holds a copy.
 

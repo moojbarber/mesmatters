@@ -53,7 +53,7 @@ Standard integrations from a single vendor can remove much of that effort. Where
 
 Bridging ERP's shopfloor gaps often means custom extensions. They're costly to build and maintain, and they add risk at every upgrade.
 
-With MES/MOM alongside ERP, both systems can run closer to their standard functionality. Where a manufacturing process does need something specific, MES/MOM is the natural place for it, because it owns that process. MES/MOM platforms are usually designed to be configured for different processes, which makes changes quicker than in ERP. See [Configure, don't customise](/post/configure-dont-customise).
+With MES/MOM alongside ERP, both systems can run closer to their standard functionality. Where a manufacturing process does need something specific, MES/MOM is the natural place for it, because it owns that process. MES/MOM platforms are usually designed to be configured for different processes, which makes shopfloor changes quicker, without touching ERP. See [Configure, don't customise](/post/configure-dont-customise).
 
 ## ERP keeps the data it needs, and often gets better data
 

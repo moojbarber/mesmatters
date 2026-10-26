@@ -24,7 +24,7 @@ In [ISA-95](/post/isa-95-explained) terms, OT lives at levels 0 to 2 and IT at l
 | | IT | OT |
 | --- | --- | --- |
 | **First priority** | Confidentiality and integrity of data | Availability and safety |
-| **Cost of an outage** | Inconvenience, lost productivity | Stopped production, scrap, possible safety risk |
+| **Cost of an outage** | Lost productivity, disrupted business processes | Stopped production, scrap, possible safety risk |
 | **Typical lifecycle** | A few years | Often decades |
 | **Patching** | Regular, often automatic | Planned around production, sometimes impossible |
 | **Timing** | Seconds are usually fine | Milliseconds can matter |

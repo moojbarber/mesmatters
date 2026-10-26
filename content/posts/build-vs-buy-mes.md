@@ -73,11 +73,11 @@ You see this most in smaller companies with tech-savvy teams, and some of the pl
 - **Depth where it matters.** Each department gets a tool that is very good at its job.
 - **Quick wins, one area at a time.** You can start where the pain is biggest without committing to everything at once.
 - **Freedom to swap.** If one tool disappoints, you can replace it without replacing everything.
-- **A UNS helps a lot.** Publishing to one structured place cuts point-to-point integrations and makes data far easier to find and reuse.
+- **A UNS helps a lot.** Publishing to one structured place makes live data easier to find and reuse, though it brings its own governance and history challenges.
 
 **What to watch:**
 
-- **Integration is the hard part.** Integrations between third-party systems are one of the hardest and most expensive parts of any project, and every one needs retesting whenever either side upgrades.
+- **Integration is the hard part.** Integrations between third-party systems work well when they're designed properly, and point-to-point is often the safest option. But each one is a significant part of the project, and needs an owner and retesting whenever either side upgrades.
 - **Context thins out between systems.** You can't pass all the context across every integration, so naturally you share a subset. The quality system knows a sample failed, but not necessarily what the machine was doing at the time.
 - **A UNS shows what's happening now.** It's an organisational structure on top of a broker, so you still need applications around it to add meaning and keep the history. OEE is a good example: you can't aggregate an OEE figure, you have to go back to the raw data. It's a useful pattern, but not a silver bullet.
 - **Operators juggle applications.** Switching screens and logging in and out, losing context at each step. When something goes wrong, which system do they check first? Putting one front end over several apps is possible, but it tends to become bespoke.
@@ -137,7 +137,7 @@ So the real question is which one you make the backbone.
 
 ## My view
 
-Personally, I like being part of a connected ecosystem. It's a bit like owning all Apple products: everything works together, and it gets better over time.
+Personally, I like being part of a connected ecosystem. It's a bit like a phone, laptop and watch from the same ecosystem: everything works together, and it gets better over time.
 
 Having seen all four over a lot of projects, I think a configurable platform gives the most value over time for most manufacturers. All the data is connected and in context from the moment it's captured. There are no integrations between shopfloor functions to build or maintain, and nothing waits to be transferred. And you're not building and maintaining it yourself for ten years. The vendor does that, across many customers.
 

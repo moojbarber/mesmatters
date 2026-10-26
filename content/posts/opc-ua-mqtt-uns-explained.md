@@ -34,7 +34,7 @@ OPC UA and MQTT aren't really competitors. They're often used together.
 
 A unified namespace is an architectural idea rather than a product. All operational data is published to one central, structured place, usually an MQTT broker, organised by the plant hierarchy: enterprise, site, area, line, machine.
 
-Systems publish what they know and subscribe to what they need, instead of every system integrating point-to-point with every other.
+Systems publish what they know and subscribe to what they need. It's one integration option, alongside point-to-point interfaces, which give the sender a response, and integration through ERP.
 
 Done well, it reduces point-to-point integrations and makes data easier to find and reuse. It needs a clear structure and someone to govern it, so the context travels with the data rather than a long list of tags.
 

@@ -14,7 +14,7 @@ what-is-mes:
       a: "AI needs accurate, contextualised data collected over time. A machine signal that says stopped means little on its own. MES/MOM adds the order, the material, the shift and the reason, which turns raw signals into data a model can learn from. The broader the scope, the richer that context."
 
 mes-vs-mom:
-  summary: "MES runs production: orders, counts, scrap, downtime and OEE. MOM covers all four areas ISA-95 defines for manufacturing operations, which are production, quality, inventory and maintenance, on one platform. MES is one part of MOM, not a synonym for it, and buying a separate system per pillar usually leaves you reconciling them forever."
+  summary: "MES runs production: orders, counts, scrap, downtime and OEE. MOM covers all four areas ISA-95 defines for manufacturing operations, which are production, quality, inventory and maintenance, on one platform. MES is one part of MOM, not a synonym for it, and buying a separate system per pillar often means reconciling them, unless the depth of a dedicated system justifies it."
   faq:
     - q: "Is MES the same as MOM?"
       a: "No, although the terms are used interchangeably, including by vendors and, in the past, by me. MES describes production execution. MOM describes the whole operation across production, quality, inventory and maintenance. MES is one part of MOM rather than another name for it, and the distinction matters most when you're deciding what to buy."
@@ -241,14 +241,14 @@ aps-vs-mes-scheduling:
       a: "MES/MOM mainly takes the scheduled orders and dispatches them to the line, and some platforms add basic short-interval scheduling for the next shift or day. Its biggest contribution is feeding actual cycle times and downtime back, so the next plan is built on reality."
 
 cloud-vs-on-premises-mes:
-  summary: "On-premises MES/MOM runs on servers you manage; cloud MES/MOM runs on a platform the vendor manages, usually with an edge component at each site. Most multi-site on-premises MES already runs in a central data centre that sites reach over the network. Cloud adds large-scale security, easier scaling and continuous updates. On-premises fits sites without reliable connectivity."
+  summary: "On-premises MES/MOM runs on servers you manage; cloud MES/MOM runs on a platform the vendor manages, usually with an edge component at each site. Most multi-site on-premises MES already runs in a central data centre that sites reach over the network. Cloud adds large-scale security, easier scaling and continuous updates. On-premises fits sites without reliable connectivity, and cases where data must stay in your own data centre, such as many aerospace and defence programmes."
   faq:
     - q: "Can MES run in the cloud?"
       a: "Yes, and many vendors now deliver MES/MOM as SaaS. Critical shopfloor functions and machine connectivity typically run on an edge component at each site, which buffers data and keeps production moving if the connection drops. The wider application, reporting and analytics run in the cloud."
     - q: "Is cloud MES secure?"
       a: "Major cloud platforms invest in security at a scale few manufacturers can match, with continuous monitoring, rapid patching and certifications such as ISO 27001 and SOC 2. Ask any vendor which certifications they hold, how often they patch and which regions your data can be held in."
     - q: "When does on-premises MES still make sense?"
-      a: "Mainly where a site has no reliable connectivity, or in air-gapped environments such as defence and some critical infrastructure. Some regulated sites also value full control over when changes happen."
+      a: "Mainly where a site has no reliable connectivity, or in air-gapped environments such as aerospace and defence. Some data residency rules also require data to stay in your own data centre. Some regulated sites also value full control over when changes happen."
 
 configure-dont-customise:
   summary: "Out of the box, configuration, low-code, integrations, extensions and customisation are six different things. Only true customisation changes the product, and it costs you again at every upgrade. Your manufacturing processes are probably less unique than they feel, so pick a mature, configurable platform and challenge every gap."
@@ -331,7 +331,7 @@ isa95-integration-patterns:
   summary: "Start every integration by agreeing what object moves, which system owns it, what triggers it and how fresh it must be. ERP is usually the hub: business transactions go through ERP, and execution detail can go direct when speed or richness demands it. Then choose point-to-point, middleware, event-driven or UNS."
 
 lims-and-mes:
-  summary: "LIMS runs the lab and MES/MOM runs the batch. MES/MOM should trigger the sample with its batch context attached, and LIMS results should flow straight back so the next step is released or the batch is held. ERP usually holds batch status, and final release can sit in ERP, LIMS, a QMS or MES/MOM."
+  summary: "LIMS runs the lab and MES/MOM runs the batch. MES/MOM should trigger the sample with its batch context attached, and LIMS results should flow straight back so the next step is released or the batch is held. ERP usually holds batch status, and final release can sit in ERP, LIMS or MES/MOM, or in a QMS where one is used."
 
 manufacturing-change-management:
   summary: "Every smart factory project meets resistance, because change is uncomfortable. Leadership has to set the vision, back change management, build a strong team and invest in skills. Involve operators in the design and explain why it makes their shift easier. Adoption deserves as much investment as implementation."
@@ -346,7 +346,7 @@ manufacturing-process-mapping:
   summary: "Digitise a broken process and you get a faster broken process. Before buying anything, agree the physical hierarchy, then map what really happens using a swimlane grid of departments against processes, with the people who do the work. Decide which version of a process to standardise before you build it into software."
 
 manufacturing-traceability:
-  summary: "Order-level traceability with backflushing in ERP is better than nothing, but nowhere near what's possible. MES/MOM gives you genealogy forwards and backwards, down to serials and exact lot quantities, plus tooling, quality results, context and process parameters. In a recall, that's the difference between minutes and a weekend in spreadsheets."
+  summary: "Order-level traceability in ERP does the business-level job well, but it's nowhere near what's possible at the point of work. MES/MOM gives you genealogy forwards and backwards, down to serials and exact lot quantities, plus tooling, quality results, context and process parameters. In a recall, that's the difference between minutes and a weekend in spreadsheets."
 
 mes-and-digital-twins:
   summary: "A digital twin is a virtual model kept in sync with the real factory by live data. MES/MOM doesn't do the simulation, but it supplies much of the operational reality: what's running where, material, quality, asset status and people, already in context. Without that, a twin drifts away from the factory it represents."
@@ -419,7 +419,7 @@ smart-factory-tech-stack:
 
 smart-factory-technology-mistakes:
   label: The short version
-  summary: "Don't wire ERP straight to machines, build your own MES platform, buy point solutions that can't scale, over-customise, add a lightweight connected worker app that collides with MES/MOM, or mistake an IIoT platform for an MES. I've seen every one of these repeatedly, and every one is avoidable."
+  summary: "Don't wire ERP straight to machines, underestimate what it takes to build your own MES platform, buy point solutions that can't scale, over-customise, add a lightweight connected worker app that collides with MES/MOM, or mistake an IIoT platform for an MES. I've seen every one of these repeatedly, and every one is avoidable."
 
 time-to-truth:
   summary: "Time to truth is how long it takes a factory to know what really happened, with enough context to act on it. The seven stages run from eventually (paper and Excel) and the end of the hour or shift (ERP on the shopfloor) through after the fact (digitalised point solutions), right now (automatic data capture with MES/MOM) and before it happens (harmonious systems) to before anyone asks (agentic AI with a human in the loop) and without asking (autonomous, within agreed limits). The truth arrives in order."
@@ -545,7 +545,7 @@ build-vs-buy-mes:
     - q: "Should we build our own MES?"
       a: "It can work for a narrow scope and a strong internal team, and it can be quick to start. It is much harder to do well, particularly for user experience, performance, scalability and security. You own every upgrade and new capability for its whole life, and knowledge tends to sit with a few people. Eventually it needs replacing. For a full MES/MOM across production, quality, inventory and maintenance, most manufacturers get more value over time from configuring a platform and building only at the edges."
     - q: "Is stitching best-of-breed tools together through a UNS a good approach?"
-      a: "It can be. Each department gets a tool that's very good at its job, and a well-governed unified namespace cuts point-to-point integrations. The cost is that every boundary is an interface to own and retest, some context is lost between systems, and someone has to design and govern the architecture."
+      a: "It can be. Each department gets a tool that's very good at its job, and a well-governed unified namespace makes live data easier to share, though it adds its own governance work. The cost is that every boundary is an interface to own and retest, some context is lost between systems, and someone has to design and govern the architecture."
     - q: "What does a homegrown MES really cost?"
       a: "More than it appears. There's no licence fee, but the developers' time is real money, and it grows with every new feature, upgrade and departure. Add the cost of keeping it secure and compatible, and the risk when the person who built it leaves. Compare costs over ten years, not just the first project."
     - q: "Is low-code an alternative to MES?"
@@ -561,7 +561,7 @@ preventive-vs-predictive-maintenance:
       a: "With accurate downtime data. Most factories still record stops at the end of the shift from memory, and miss short stops altogether. Capture stops automatically from the equipment with reasons added while they're fresh, then add condition sensors to bottleneck assets. Models need failure history and maintenance actions too, so the data foundation comes first."
 
 historian-vs-mes:
-  summary: "A historian stores high-frequency machine signals, often every second, for engineers to trend and troubleshoot. MES/MOM records operational events with context, such as orders, lots, stops and reasons, and manages the work itself. They link by time and equipment. A historian alone can't run orders or trace material, so most manufacturers need both."
+  summary: "A historian stores high-frequency machine signals, often every second, for engineers to trend and troubleshoot. MES/MOM records operational events with context, such as orders, lots, stops and reasons, and manages the work itself. They link by time and equipment. A historian alone can't run orders or trace material. MES/MOM records the process values most operations need, so a historian is only worth adding where engineers need very high-frequency data kept for years."
   faq:
     - q: "Is a historian the same as an MES?"
       a: "No. A historian is a time-series database that records process values at high frequency, which engineers use to see what a process was doing. MES/MOM records events with context, such as which order ran, which lot was consumed and why a machine stopped, and it manages the work. A historian watches the process; MES/MOM runs the operation."
@@ -622,7 +622,7 @@ unified-namespace-uns:
   summary: "A unified namespace (UNS) is an architecture for sharing live data: systems publish what they know to a central broker, organised by the plant hierarchy, and others subscribe. MES/MOM is an application that runs the operation, dispatching orders, enforcing checks and keeping history with its context. A UNS shows the current state rather than running the operation, and many architectures use both."
   faq:
     - q: "What is a unified namespace?"
-      a: "A unified namespace is an architectural pattern rather than a product. Every system publishes its data to one central, structured place, usually an MQTT broker, organised by enterprise, site, area, line and machine. Any system that needs the data subscribes, which cuts point-to-point integrations."
+      a: "A unified namespace is an architectural pattern rather than a product. Every system publishes its data to one central, structured place, usually an MQTT broker, organised by enterprise, site, area, line and machine. Any system that needs the data subscribes to it, instead of each pair of systems being connected directly."
     - q: "Can a unified namespace replace an MES?"
       a: "For simple visibility, such as live machine status and counts, a UNS with some light applications can cover a lot. On its own it doesn't run orders, enforce quality checks or keep genealogy, because it shows the current state rather than keeping history or running business logic."
     - q: "How do UNS and MES/MOM work together?"

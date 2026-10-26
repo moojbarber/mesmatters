@@ -31,7 +31,7 @@ In practice, for a typical plant:
 - **Site operations zone.** MES/MOM, historians, the operations side of your data platform.
 - **Control zones.** SCADA, PLCs and machines, often split by line or area.
 
-MES/MOM usually lives in the site operations zone, with tightly controlled conduits up to ERP and down to the control zones. The rule of thumb: no direct connection from the enterprise network to a PLC, ever.
+MES/MOM usually lives in the site operations zone, with tightly controlled conduits up to ERP and down to the control zones. With cloud MES, the site operations zone holds the edge connectivity, and the conduit runs outbound to the cloud. The rule of thumb: no direct connection from the enterprise network to a PLC, ever.
 
 You'll often hear this described with the Purdue model levels. Same idea, different vocabulary.
 
@@ -40,9 +40,10 @@ You'll often hear this described with the Purdue model levels. Same idea, differ
 Every integration in this series is a conduit. Every one of them is a potential path in. A few that come up often:
 
 - **Remote vendor access.** Support connections left permanently open "for convenience". Use controlled, logged, time-limited access instead.
-- **Cloud connectivity.** Cloud MES or analytics needs data to leave the plant. Make connections outbound-only from OT where you can, and never expose control systems to the internet. I discuss deployment choices in [Cloud, on-premises or hybrid](/post/cloud-vs-on-premises-mes).
 - **Shared accounts.** "Line1 / Line1" on every shopfloor terminal. Individual logins matter for security and for your audit trail. Badge or quick sign-in makes it practical.
 - **Flat networks.** Everything on one network because it was easier. One infected laptop then reaches every machine.
+
+Cloud MES is often the more secure option, because a well-run cloud platform is monitored and patched at a scale few manufacturers can match on their own servers. Design its connections well: outbound-only from OT, and never expose control systems to the internet. I discuss deployment choices in [Cloud vs on-premises MES](/post/cloud-vs-on-premises-mes).
 
 ## Basics that matter more than tools
 

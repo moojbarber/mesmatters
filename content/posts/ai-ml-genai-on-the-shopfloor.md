@@ -51,7 +51,7 @@ I go through more of these in [Practical GenAI for the shopfloor](/post/practica
 
 You'll also hear a lot about agentic AI. These are systems that don't just answer a question but plan and carry out a task: gathering information, deciding what to do, acting through other software, and learning from the result.
 
-It's exciting. It's also the top of the maturity curve, because an agent acting on your factory needs very good data and very clear guardrails. I explain it for operations leaders in [Agentic AI and MCP, explained](/post/agentic-ai-mcp-manufacturing).
+It's exciting. It's also the top of the maturity curve, because an agent acting on your operations data and transactions needs very good data and very clear guardrails. I explain it for operations leaders in [Agentic AI and MCP, explained](/post/agentic-ai-mcp-manufacturing).
 
 ## What all three need
 

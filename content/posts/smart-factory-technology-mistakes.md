@@ -15,9 +15,9 @@ This is a huge no-no.
 
 ERP isn't designed for real-time communication with shopfloor equipment. It doesn't have the data model, the transaction speed or the user interface for it. It needs aggregated data at a sensible frequency, not thousands of signals a second from a PLC.
 
-People who try it end up with custom interfaces between ERP and the equipment. They're fragile, expensive to maintain, and they make every ERP upgrade a nightmare.
+People who try it end up with custom interfaces between ERP and the equipment. They're expensive to maintain and add work to every ERP upgrade, because ERP was never meant to handle machine signals.
 
-MES/MOM exists precisely to sit between ERP and the shopfloor. Use it. And if it isn't in place yet, buffer the machine data in an IIoT platform or historian, not ERP.
+MES/MOM exists precisely to sit between ERP and the shopfloor. Use it. And if it isn't in place yet, buffer the machine data in a connectivity layer you can later feed into MES/MOM, not ERP.
 
 ## 2. Underestimating what it takes to code your own
 

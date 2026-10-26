@@ -45,7 +45,7 @@ Final batch release is often a QA decision that draws on LIMS results and the ba
 
 - **Release in ERP**, with LIMS and MES/MOM feeding the evidence. Common, and keeps stock status in one place.
 - **Release in LIMS**, which then updates ERP. Common where the lab owns the release decision.
-- **Release in a QMS**, which then updates ERP. Common where QA runs a formal disposition process.
+- **Release in a QMS**, which then updates ERP. Common where a QMS is already in place and QA runs a formal disposition process. A MOM platform can hold the disposition itself.
 - **Release in MES/MOM**, as part of [review by exception](/post/mes-in-regulated-industries) on the electronic batch record, then posted to ERP.
 
 ## Integration options

@@ -13,7 +13,7 @@ But it's usually sold as a technology you switch on. It isn't. It's the end of a
 
 ## Three ways to maintain equipment
 
-**Reactive.** Fix it when it breaks. The most expensive approach by a distance: unplanned downtime, emergency repairs, knock-on damage, missed deliveries.
+**Reactive.** Fix it when it breaks. For critical equipment, the most expensive approach by a distance: unplanned downtime, emergency repairs, knock-on damage, missed deliveries.
 
 **Preventive.** Maintain on a schedule, by time or cycle count. Better. But schedules are blunt. Sometimes you maintain too early and waste parts and labour. Sometimes too late, and it breaks anyway.
 

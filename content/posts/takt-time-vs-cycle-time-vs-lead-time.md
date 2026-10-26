@@ -59,7 +59,7 @@ The three tell a story together.
 
 ## Where the real numbers come from
 
-Most planning systems use standard cycle times that someone entered years ago. Actual cycle times drift with product mix, operators, tooling and machine condition.
+Planning systems often use standard cycle times that someone entered years ago. Actual cycle times drift with product mix, operators, tooling and machine condition.
 
 MES/MOM measures them as work happens: actual cycle times by product and machine, along with the waiting between operations. That replaces estimates with measured values, and keeps schedules realistic. More in [APS vs ERP scheduling](/post/aps-vs-mes-scheduling) and [Manufacturing KPIs beyond OEE](/post/manufacturing-kpis-beyond-oee).
 

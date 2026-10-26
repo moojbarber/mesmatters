@@ -37,7 +37,7 @@ It also *manages* the work: dispatching orders, guiding operators, enforcing che
 
 ## How they work together
 
-Many architectures use each for what it's good at:
+Where you have both, many architectures use each for what it's good at:
 
 - **The historian keeps the high-frequency signals.** MES/MOM doesn't need every reading.
 - **MES/MOM keeps the events and the context.** Orders, lots, stops, reasons and results.

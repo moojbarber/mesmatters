@@ -50,7 +50,7 @@ There's more than one way to wire this up.
 
 **Through ERP.** MES/MOM posts quality results and blocked stock to ERP. The QMS reads from ERP. Simple, one hub, but you usually lose the rich detail. ERP carries the status and quantity, not the 40 measurements and the photo.
 
-**Direct MES/MOM to QMS, with ERP for stock.** Non-conformances and inspection data go straight to the QMS with full context. Stock status changes still go through ERP, because ERP must know what's blocked. This is the pattern I see working best where quality is critical.
+**Direct MES/MOM to QMS, with ERP for stock.** Non-conformances and inspection data go straight to the QMS with full context. Stock status changes still go through ERP, because ERP must know what's blocked. Where a QMS is already in place and quality is critical, this is the pattern I see working best.
 
 **One platform.** A good MOM platform covers the QMS scope as well, so there's no separate QMS to connect. Check the depth: CAPA workflows, audits and document control should be genuinely usable, not token modules.
 

@@ -36,7 +36,7 @@ Tooling touches almost every other pillar.
 
 **Planning:** the schedule needs to know whether the tool, and the setter, are available.
 
-That's a lot of overlap. In a separate system, every one of those links becomes an integration, or a phone call.
+That's a lot of overlap. In a separate system, every one of those links becomes an integration, or a phone call. A specialist tool-management system can still make sense for very large tool rooms, with presetting and regrinding to run.
 
 ## Tooling and traceability
 
