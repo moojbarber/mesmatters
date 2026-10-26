@@ -5,7 +5,7 @@ levels:
     name: Eventually
     state: Paper and Excel
     line: Paper on the floor and spreadsheets in the office. The truth gets typed up eventually, by which time the detail has gone.
-    next: Get the basics visible. Map how one order really flows and agree what you'll measure. Then take the paper off one line. Don't buy anything until the process map is on the wall.
+    next: Get the basics visible. Map how one order really flows and agree what you'll measure. Then take the paper off one line, and use AI to read the paper history you already have. Don't buy anything until the process map is on the wall.
     read: [manufacturing-process-mapping, smart-factory-where-to-start, paperless-manufacturing]
   - n: 2
     name: End of hour or shift
@@ -17,7 +17,7 @@ levels:
     name: After the fact
     state: Digitalised
     line: Tablets and point solutions. Faster than paper, but still typed in by hand after the event, and the tools don't talk to each other.
-    next: This is where most of the value is waiting. Getting to "right now" is usually the biggest single jump, because it's where the data becomes trustworthy. Check that what you've already bought can grow into an integrated platform, rather than adding another island.
+    next: This is where most of the value is waiting. Getting to "right now" is usually the biggest single jump, because it's where the data becomes trustworthy. Check that what you've already bought can grow into an integrated platform, rather than adding another island. Pick the first AI use case now, so the data you start capturing automatically has a job from day one.
     read: [mes-business-case, shopfloor-applications-explained, how-to-choose-an-mes]
   - n: 4
     name: Right now
@@ -29,7 +29,7 @@ levels:
     name: Before it happens
     state: Harmonious systems
     line: The whole stack works as one architecture. Trends raise warnings early, and maintenance and quality move from reacting to preventing.
-    next: Pick the AI use cases with a measurable payback and run them on the foundation you've built. Keep the template disciplined as you add sites, because this stage is easy to lose one local customisation at a time.
+    next: Scale the AI use cases with a measurable payback across the stack you've connected. Keep the template disciplined as you add sites, because this stage is easy to lose one local customisation at a time.
     read: [predictive-maintenance-data, mes-multi-site-rollout, agentic-ai-mcp-manufacturing]
   - n: 6
     name: Before anyone asks
@@ -65,7 +65,7 @@ areas:
   - id: data
     name: Data
     read: contextualised-manufacturing-data
-    advice: "Your slowest area is data. Everything else, including any AI plans, depends on it. Focus on automatic capture at the point of work, and on giving every number its context: the order, the material, the operator and the reason."
+    advice: "Your slowest area is data. It's also what your AI learns from, so build the two together. Focus on automatic capture at the point of work, and on giving every number its context: the order, the material, the operator and the reason."
     items:
       - q: How is production data captured?
         lo: On paper, or typed in later
@@ -116,7 +116,7 @@ areas:
   - id: analytics
     name: Analytics and AI
     read: ai-ml-genai-on-the-shopfloor
-    advice: Your slowest area is analytics and AI. That's normal, and usually the right order of things. Get KPIs calculated automatically and consistently first. GenAI on your documents can start now, but AI that learns from operational data needs the foundation underneath it.
+    advice: Your slowest area is analytics and AI. That's common, and you can start changing it now. Get KPIs calculated automatically and consistently, and run AI alongside that work. GenAI on your documents can start straight away, and AI that learns from operational data gets more useful with every line you connect.
     items:
       - q: How are KPIs like OEE calculated?
         lo: Estimated at the end of the shift, if at all
@@ -128,5 +128,5 @@ areas:
         lo: Fix it when it breaks
         hi: Condition-based and predictive, driven by equipment data
       - q: Where is AI today?
-        lo: No data foundation to support it
+        lo: Not in use yet
         hi: Embedded in operations, with use cases running on reliable data

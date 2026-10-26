@@ -67,10 +67,10 @@ Demand for MES/MOM has grown with that shift, yet many manufacturers, especially
 
 Each step built on the one before. Control systems made automation possible, and MES/MOM later brought shopfloor data together with its context.
 
-AI follows the same pattern. Models that predict and optimise operations need reliable, contextualised data first. Most factories today sit somewhere between paper-based and partly digital, and the path forward runs through that data foundation. The stages are described in [Time to truth](/post/time-to-truth), and where AI fits in [AI will transform your factory, if you give it the right data](/post/ai-needs-shopfloor-data)
+AI is the next step, with one difference: it doesn't have to wait its turn. Models that predict and optimise operations learn from reliable, contextualised data, and they're one of the strongest reasons to build it. Most factories today sit somewhere between paper-based and partly digital, so from here the data foundation and the AI grow together. The stages are described in [Time to truth](/post/time-to-truth), and where AI fits in [AI will transform your factory, if you give it the right data](/post/ai-needs-shopfloor-data)
 
 ## My view
 
-The history of MES is a story of scope growing, from recording production to running the whole operation as MOM. It also shows there are no shortcuts. Each step depends on the one before, and I don't expect AI to be any different.
+The history of MES is a story of scope growing, from recording production to running the whole operation as MOM. It also shows that each step builds on the data the last one created. AI builds on that data too, and gives every factory a new reason to capture it well. I expect the two to grow together.
 
 Where does your factory sit on that timeline today?

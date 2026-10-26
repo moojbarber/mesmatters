@@ -14,7 +14,7 @@
 - term: AI
   stands: Artificial intelligence
   short: Systems that perform tasks normally needing human intelligence, such as recognising patterns or predicting outcomes.
-  body: AI is the broad category, with machine learning and generative AI as two quite different subsets. In a factory, AI is only as good as the shopfloor data it learns from, which is why the data foundation comes first.
+  body: AI is the broad category, with machine learning and generative AI as two quite different subsets. In a factory, AI is only as good as the shopfloor data it learns from, which is why the data foundation and the AI are best built together.
   articles:
   - ai-ml-genai-on-the-shopfloor
   - ai-needs-shopfloor-data
@@ -150,7 +150,7 @@
   - genai
 - term: Contextualised data
   short: Shopfloor data enriched with the order, material, machine, shift, operator and reason behind each event.
-  body: A signal that says a machine stopped tells you very little. Context is what turns it into decisions and, eventually, into something AI can learn from. On the shopfloor, most of that context comes from MES/MOM.
+  body: A signal that says a machine stopped tells you very little. Context is what turns it into decisions, and into something AI can learn from. On the shopfloor, most of that context comes from MES/MOM.
   articles:
   - contextualised-manufacturing-data
   - manufacturing-data-platforms

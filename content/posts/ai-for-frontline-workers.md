@@ -17,7 +17,7 @@ Imagine having your best people working all the time. On the night shift. On a b
 
 That's the opportunity. Your most experienced operators carry years of knowledge about how each machine behaves, what each product needs, and what to do when something odd happens. As they retire, that knowledge leaves with them.
 
-AI won't replace those people. But it can help capture what they know and put it in front of everyone else, at the moment they need it.
+AI is there to help those people go further. It can capture what they know and put it in front of everyone else, at the moment they need it.
 
 ## What works today
 

@@ -76,7 +76,7 @@ Together these are usually called connected worker. I'm a big believer in it. I'
 
 **Predictive maintenance and predictive quality.** Models trained on condition data, failure history, process parameters and operating context.
 
-Every one of these depends on the applications above. AI needs the order, the material, the recent stops and the approved procedure. That context lives in MES/MOM. See [AI for the frontline](/post/ai-for-frontline-workers) and [Practical GenAI for the shopfloor](/post/practical-genai-for-the-shopfloor).
+Every one of these draws on the applications above. AI needs the order, the material, the recent stops and the approved procedure. That context lives in MES/MOM. See [AI for the frontline](/post/ai-for-frontline-workers) and [Practical GenAI for the shopfloor](/post/practical-genai-for-the-shopfloor).
 
 ## Match the problem to the application
 

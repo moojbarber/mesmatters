@@ -29,7 +29,7 @@ The same event, contextualised:
 
 Same signal. Completely different value.
 
-Contextualised data is data that's been enriched with the who, what, when, where, why and how. That's what makes it useful for analysis, decisions and, eventually, AI.
+Contextualised data is data that's been enriched with the who, what, when, where, why and how. That's what makes it useful for analysis, decisions and AI.
 
 ## From signal to decision
 

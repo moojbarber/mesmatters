@@ -18,7 +18,7 @@ So this is the route I'd follow, step by step, with a simple test for each one s
 
 You'll find AI in several of the steps below, not saved for the end. That's deliberate. AI and the data foundation are best built together. AI gives the programme a clear reason to capture data well, and every step that improves the data makes the AI more capable.
 
-Generative AI can help from the first week, with procedures, shift summaries and plain-English questions. Predictive and optimising AI learns from your shopfloor data, so its value grows with every line you connect. Start it early and let it grow. More in [AI will transform your factory, if you give it the right data](/post/ai-needs-shopfloor-data).
+Generative AI can help from the first week, with procedures and plain-English questions. Predictive and optimising AI learns from your shopfloor data, so its value grows with every line you connect. Start it early. More in [AI will transform your factory, if you give it the right data](/post/ai-needs-shopfloor-data).
 
 ## Step 1: Be honest about where you are today
 

@@ -85,6 +85,6 @@ A well-implemented MES/MOM already error-proofs what people do. The same validat
 
 Be curious, not credulous.
 
-Start with agents that prepare and investigate rather than act. Make sure every action is logged and reviewable. And keep investing in the foundation, because the factories that get the most from agents will be the ones with clean, connected, contextualised data already in place.
+Start with agents that prepare and investigate rather than act. Make sure every action is logged and reviewable. And build the foundation alongside the agents. Each agent you add shows you where the data needs to be better, and the factories with clean, contextualised data will get the most from them.
 
 What's the first task you'd trust an agent with in your factory, and what would you never let it touch?

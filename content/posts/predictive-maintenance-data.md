@@ -1,7 +1,7 @@
 ---
 title: "Predictive maintenance needs data you probably aren't collecting yet"
 short: "Predictive maintenance"
-description: "From reactive to preventive to condition-based. What predictive maintenance really needs, why downtime data comes first, and where operators fit in."
+description: "From reactive to preventive to condition-based. What predictive maintenance really needs, why downtime data matters so much, and where operators fit in."
 published: 2026-07-22
 category: thought-leadership
 art: spc
@@ -65,7 +65,7 @@ You don't need sensors on every machine on day one.
 1. Get accurate downtime data, automatically, on your bottleneck assets.
 2. Move maintenance into the same system as production, so everyone sees the same picture.
 3. Add condition sensors where the cost of failure is highest.
-4. Collect failure history consistently for a period before you train anything.
+4. Collect failure history consistently. Anomaly detection can start on the condition data straight away, while the failure history builds up for a predictive model.
 5. Then pilot a predictive model on one asset type, and measure the result.
 
 Every step pays back on its own. And by the time you reach step five, you'll have the data a model actually needs.

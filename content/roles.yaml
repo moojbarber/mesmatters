@@ -47,10 +47,10 @@ roles:
       - ["Growth without capex", "Hidden capacity in existing plants is usually far cheaper than a new building, but nobody can say exactly how much there is."]
       - ["Reputation risk", "One quality escape or slow recall can undo years of brand building."]
       - ["Different numbers from every site", "Each plant measures performance its own way, so comparisons start arguments rather than decisions."]
-      - ["AI expectations", "The board wants an AI story, and most operational data isn't ready to support one."]
+      - ["AI expectations", "The board wants an AI story, and the operational data has to grow with it."]
     scores: {prod: 4, qual: 4, trace: 4, inv: 2, maint: 2, cw: 2, sched: 3, ai: 5, energy: 4}
     why:
-      ai: "AI only pays back on accurate, contextualised operational data. That foundation decides whether the AI strategy delivers or stalls in pilots."
+      ai: "AI pays back on accurate, contextualised operational data. Build that foundation with the AI strategy, and each delivers more because of the other."
       prod: "Standard OEE across sites shows where hidden capacity sits, which is usually the cheapest growth available."
       trace: "Fast, precise traceability turns a potential company-wide recall into a contained, documented event."
       energy: "Investors and customers increasingly ask for product-level carbon and energy data, which only the shopfloor can provide."
@@ -153,16 +153,16 @@ roles:
     title: Chief digital or transformation officer
     horizon: [0, 2]
     question: "How do we move from pilots to value at scale, and show it?"
-    summary: "Digital and transformation leaders are judged on outcomes, not technology. Their biggest risk is pilot purgatory: promising projects that never scale beyond one line."
+    summary: "Digital and transformation leaders are judged on outcomes, not technology. Their biggest risk is promising projects that never scale beyond one line."
     cares: [["Value delivered", null], ["Adoption", change-management], ["Speed to scale", null], ["Digital maturity", digital-transformation]]
     challenges:
-      - ["Pilot purgatory", "Proofs of concept succeed, then stall when it's time to scale."]
+      - ["Pilots that don't scale", "Proofs of concept succeed, then stall when it's time to scale."]
       - ["Adoption on the floor", "Tools that operators don't trust or use deliver nothing."]
       - ["Too many point solutions", "Each department buys its own tool, and the data never joins up."]
-      - ["Proving AI value", "AI demos impress, but production results depend on the data underneath."]
+      - ["Proving AI value", "AI demos impress, and production results grow with the data underneath."]
     scores: {prod: 4, qual: 3, trace: 3, inv: 3, maint: 3, cw: 4, sched: 3, ai: 5, energy: 3}
     why:
-      ai: "Scaling AI depends on a consistent operational data foundation, not on a better model."
+      ai: "AI and a consistent operational data foundation scale together. Each new site adds history the models can learn from."
       cw: "Frontline tools are where adoption is won or lost, and where trust in digital starts."
       prod: "Production execution is usually the backbone that other use cases build on."
       qual: "Quality use cases often show measurable value quickly, which helps fund the next phase."

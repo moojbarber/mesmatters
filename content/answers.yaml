@@ -84,14 +84,14 @@ who-benefits-from-mes:
       a: "Rarely. Executives usually see MES/MOM data through reports, ERP or a data platform it feeds. They should still be involved in the buying decision, because the business case rests on cost and delivery improvements they care about."
 
 history-of-mes:
-  summary: "Manufacturing systems moved from paper and skill, through PLCs in 1969 and SCADA, to ERP for the business and separate departmental systems on the shopfloor. MES emerged in the early 1990s to bring execution together, and ISA-95 in 2000 standardised the model, leading to broader MOM platforms. AI is the next step, and it depends on the same data foundation."
+  summary: "Manufacturing systems moved from paper and skill, through PLCs in 1969 and SCADA, to ERP for the business and separate departmental systems on the shopfloor. MES emerged in the early 1990s to bring execution together, and ISA-95 in 2000 standardised the model, leading to broader MOM platforms. AI is the next step, and it grows with the same data foundation."
   faq:
     - q: "When did MES start?"
       a: "The term MES emerged in the early 1990s, to describe systems that managed execution on the shopfloor between ERP and the control layer. MESA International was founded in 1992 and published its eleven-function MES model in 1997, and ISA-95 Part 1 followed in 2000."
     - q: "What came before MES?"
       a: "Paper records and control systems such as PLCs, alongside separate departmental systems for quality and maintenance. Each solved one department's problem, but few shared data. MES/MOM brought that operational data together with its context."
     - q: "What comes after MES?"
-      a: "MES/MOM keeps growing in scope, connecting to IIoT devices and data platforms and building AI into everyday tools. AI that predicts and optimises operations still depends on reliable, contextualised shopfloor data, so the data foundation remains the first step."
+      a: "MES/MOM keeps growing in scope, connecting to IIoT devices and data platforms and building AI into everyday tools. AI that predicts and optimises operations learns from reliable, contextualised shopfloor data, so the data foundation and the AI grow together."
 
 introduction-to-mes-and-smart-manufacturing:
   summary: "Smart manufacturing gets the headlines, but MES is the platform underneath it. ERP manages the business; MES coordinates, tracks and records everything that happens in the factory, across production, quality, inventory and maintenance. It connects ERP and enterprise applications to the machines, and gives decision-makers real-time data they can trust."
@@ -264,7 +264,7 @@ connected-worker-one-app-not-five:
       a: "The workforce problem. Experienced people are retiring with knowledge that lives in their heads, and the people replacing them tend to stay for shorter periods. Shopfloor software now has to guide a new starter to get it right on their second day, not their second year."
 
 contextualised-manufacturing-data:
-  summary: "A machine signal that says \"stopped\" tells you very little. Context adds the order, product, shift, duration and reason, and that's what turns data into decisions and eventually AI. MES/MOM is where most of that context comes from, which is why point solutions that each see one slice lose so much of the value."
+  summary: "A machine signal that says \"stopped\" tells you very little. Context adds the order, product, shift, duration and reason, and that's what turns data into decisions and AI. MES/MOM is where most of that context comes from, which is why point solutions that each see one slice lose so much of the value."
 
 cpq-to-shopfloor:
   summary: "CPQ produces a valid, priced configuration. ERP usually turns it into an order-specific BOM and routing, and MES/MOM receives a normal production order. Engineer-to-order adds PLM to the flow, plus partial release and one-off drawings, which is where a direct PLM to MES/MOM link for documents can help."
@@ -428,11 +428,11 @@ time-to-truth:
       a: "Time to truth is how long it takes your factory to know what really happened, such as a line stopping, with enough context to act on it. A plant on paper and Excel finds out eventually, whenever someone types it up. With automatic data capture through MES/MOM it knows within minutes, with the order and reason attached. A plant with harmonious, connected systems sees the problem coming before it happens."
     - q: "What are the seven stages of time to truth?"
       a: "Eventually, with paper and Excel. End of the hour or shift, with production booked into ERP on the shopfloor. After the fact, with tablets and point solutions that are still keyed in by hand. Right now, with automatic data capture through MES/MOM. Before it happens, with harmonious systems working as one architecture. Before anyone asks, with AI agents preparing decisions for a person to approve. And without asking, with agents making routine decisions on their own inside agreed limits."
-    - q: "Can you get value from AI before the data foundation is in place?"
-      a: "A little. AI adds value at every stage, but it grows sharply as the data improves. With paper and Excel it's negligible: an AI assistant can tidy and chart a spreadsheet, but it can't analyse what was never captured. AI on ERP data can forecast and spot trends, though it rarely explains why. AI that learns from your own operations, such as anomaly detection, root cause analysis, predictive quality and predictive maintenance, needs data captured automatically and with its context first, and that's where most of the value is."
+    - q: "Can you get value from AI at every stage?"
+      a: "Yes, and the value grows sharply as the data improves. With paper and Excel it's low: an AI assistant can tidy and chart a spreadsheet, but it can't analyse what was never captured. AI on ERP data can forecast and spot trends, though it rarely explains why. AI that learns from your own operations, such as anomaly detection, root cause analysis, predictive quality and predictive maintenance, gets far more capable once data is captured automatically with its context, and that's where most of the value is. So start AI where you are, and build the data alongside it."
 
 smart-manufacturing-myths:
-  summary: "AI won't solve everything without a data foundation. Excel isn't good enough to run operations. A smart factory is more than MES/MOM, ERP and MES do different jobs, and IIoT doesn't replace MES. These and three more myths come up every week, and each one falls apart once you look at how a factory actually runs."
+  summary: "AI does its best work when the data foundation grows with it. Excel isn't good enough to run operations. A smart factory is more than MES/MOM, ERP and MES do different jobs, and IIoT doesn't replace MES. These and three more myths come up every week, and each one falls apart once you look at how a factory actually runs."
 
 spc-on-the-shopfloor:
   summary: "Inspection tells you a part is bad; SPC tells you it's about to be. Control limits come from your process and specification limits from the customer, so a process can drift out of control while still in spec. Put control charts and a few well-chosen rules in front of operators, at the line, in MES/MOM."
@@ -458,22 +458,22 @@ wms-vs-mes-inventory:
       a: "Usually at the line. The WMS owns stock until it's delivered to a line-side location, and MES/MOM owns it from there until it's consumed or produced. Whatever the split, one system should own each location, and quality status must travel with the material."
 
 ai-needs-shopfloor-data:
-  summary: "AI can transform a factory once it has the right data and context to learn from, in the same way large language models needed the internet. AI that predicts and optimises learns from the factory's own data, so it needs a foundation: defined processes, MES/MOM on the shopfloor, connected equipment and contextualised data built up over time. Generative AI is different. It can start now on documents and know-how, alongside the foundation work, as long as answers are grounded and reviewed."
+  summary: "AI can transform a factory when it has the right data and context to learn from, in the same way large language models needed the internet. AI that predicts and optimises learns from the factory's own data, so it grows with the foundation: defined processes, MES/MOM on the shopfloor, connected equipment and contextualised data built up over time. The two are best built together. Generative AI can start now on documents and know-how, as long as answers are grounded and reviewed."
   faq:
     - q: "Why does AI need good shopfloor data?"
       a: "Machine learning finds patterns in data to predict outcomes, so its predictions are only as good as the data it learns from. Manual or uncontextualised data produces confident-looking but unreliable results. Granular, contextualised data captured automatically is what makes operational AI work."
-    - q: "Can generative AI help before the data foundation is ready?"
+    - q: "Can generative AI help while the data foundation is being built?"
       a: "Yes. Large language models arrive already trained and work well on SOPs, manuals, maintenance notes and shift logs. They can answer questions from documents, and turn free text and paper records into structured data. They can't recover data that was never captured, and answers should be grounded and reviewed."
     - q: "Where should a factory start with AI?"
-      a: "With a decision rather than a model. Ask which decision you'd make differently with perfect data, then work back to the data it needs and how much of it is accurate and in context today. That gap is the roadmap, and for most factories the first steps look like MES/MOM."
+      a: "With a decision rather than a model. Ask which decision you'd make differently with perfect data, then work back to the data it needs and how much of it is accurate and in context today. That gap is the roadmap for the data and the AI together, and for most factories it runs through MES/MOM."
 
 how-to-modernise-a-factory:
-  summary: "Modernise in order. Assess where you really are, map the process, put a number on the problem and build the team. Then fix the master data, choose a platform for the long term and start small with the end in mind. Connect the machines, go live, scale with a template, and add AI once the data foundation is there."
+  summary: "Modernise step by step, with AI running alongside every step. Assess where you really are, map the process, put a number on the problem and build the team. Then fix the master data, choose a platform for the long term and start small with the end in mind. Connect the machines, go live and scale with a template. AI earns more with every line you connect."
   faq:
     - q: "What is the first step in modernising a factory?"
       a: "An honest assessment of where you are today. Most factories sit between paper-driven and partly integrated, and often earlier than their board presentations suggest. Then map what really happens on the shopfloor before you look at software. Digitise a broken process and you get a faster broken process, so the order of the early steps matters more than the technology you pick."
     - q: "When should a factory invest in AI?"
-      a: "Once the data foundation is in place: defined processes, MES/MOM running them, connected machines and contextualised data you trust. Generative AI can help earlier, working on procedures and shift summaries. Predictive and optimising AI learns from your shopfloor data, so it pays back after the earlier steps, not instead of them."
+      a: "From the start, alongside the data foundation. Generative AI can help in the first weeks, working on procedures and shift summaries. Predictive and optimising AI learns from your shopfloor data, so start it on the first line you connect and let its payback grow as the foundation does: defined processes, MES/MOM running them, connected machines and contextualised data you trust."
     - q: "Should you modernise one line or the whole factory at once?"
       a: "Start with one line or area where you can show value quickly, but choose a platform and design that can grow to the whole operation. Doing everything at once multiplies the risk. Starting small with a tool that can't scale just swaps paper silos for digital ones. Once the first area works, turn it into a template and roll it out."
 
@@ -503,7 +503,7 @@ smart-factory-where-to-start:
     - q: "How do you choose the first line for a smart factory pilot?"
       a: "Look for a line where losses are measurable and worth fixing, ideally at or near the bottleneck, with a reasonably stable process and a keen supervisor. It helps if the equipment can be connected and the line is representative of others, so what you learn carries over. Avoid lines whose problems are mostly mechanical."
     - q: "What should you avoid in the first 90 days?"
-      a: "Buying software before you know your requirements, expecting operational AI to deliver before its data foundation exists, or piloting a point solution you couldn't scale. Above all, don't leave the shopfloor out. People support what they helped create, and the operators know the workarounds that never made it into the procedures."
+      a: "Buying software before you know your requirements, treating AI and the data foundation as separate projects, or piloting a point solution you couldn't scale. Above all, don't leave the shopfloor out. People support what they helped create, and the operators know the workarounds that never made it into the procedures."
 
 mes-vs-erp:
   summary: "ERP plans and accounts for production: orders, materials, costs and dates, across the business. MES/MOM runs it on the shopfloor in real time, recording what actually happened by order, lot, machine and operator. They overlap on orders and inventory, but do different jobs for different people, and most manufacturers past the simplest operations need both."

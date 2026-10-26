@@ -37,7 +37,7 @@ The complexity hasn't changed much. The capacity to cope with it informally has 
 
 **3. Real-time data at the point of work.** Timely, contextualised information where the work happens. Not just machine data. Work instructions, specifications, drawings and SOPs too, always the latest version. The operator shouldn't have to go looking.
 
-**4. Decisions made from a single source of truth.** When the morning meeting starts, the data is already there. Nobody spent two hours pulling it together from spreadsheets. As that foundation matures, AI can start supporting more of those decisions. Generative AI can help early, with procedures and know-how. AI that predicts and optimises operations needs the data first.
+**4. Decisions made from a single source of truth.** When the morning meeting starts, the data is already there. Nobody spent two hours pulling it together from spreadsheets. AI supports more of those decisions as the foundation grows, and the two develop together. Generative AI can help from day one, with procedures and know-how. AI that predicts and optimises operations learns from the data, so it gets more capable with every line you connect.
 
 **5. People backed to make the call.** Supported by structure, not relying on heroics. When processes are clear and systems are connected, people stop firefighting and start improving.
 
