@@ -75,7 +75,7 @@ Scheduling capability varies a lot between MES products. Some build it into the 
 
 ## My view
 
-The biggest win usually isn't a cleverer algorithm. It's a schedule that reflects what's really happening on the floor, built on actual cycle times rather than old standards.
+In my experience, a schedule built on actual cycle times rather than old standards does more for the floor than a cleverer algorithm.
 
 This article is part of the [MES functionality series](/post/mes-functionality-guide). Related: [The smart factory tech stack](/post/smart-factory-tech-stack).
 

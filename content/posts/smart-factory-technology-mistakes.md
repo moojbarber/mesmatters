@@ -13,7 +13,7 @@ I've seen all of these, repeatedly. Every one is avoidable if you know what to l
 
 This is a huge no-no.
 
-ERP isn't designed for real-time communication with shopfloor equipment. It doesn't have the data model, the transaction speed or the user interface for it. It needs aggregated data at a sensible frequency, not thousands of signals a second from a PLC.
+ERP is the backbone of the business, and it does that job well. It isn't designed for real-time communication with shopfloor equipment. It doesn't have the data model, the transaction speed or the user interface for it. It needs aggregated data at a sensible frequency, not thousands of signals a second from a PLC.
 
 People who try it end up with custom interfaces between ERP and the equipment. They're expensive to maintain and add work to every ERP upgrade, because ERP was never meant to handle machine signals.
 

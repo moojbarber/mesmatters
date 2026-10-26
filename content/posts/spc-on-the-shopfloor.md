@@ -73,6 +73,6 @@ I covered inspection plans and quality operations in [MES functionality: quality
 
 ## Closing the loop
 
-SPC data is gold upstream too. Engineering wants to know which characteristics are hard to hold, so they can rethink tolerances or design. Quality wants trends across sites for the [QMS](/post/qms-and-mes-quality). Where critical characteristics are defined in PLM, sending the capability results back closes the [digital thread](/post/plm-erp-mes-digital-thread).
+SPC data is gold upstream too. Engineering wants to know which characteristics are hard to hold, so they can rethink tolerances or design. Quality wants trends across sites, in MOM or in a [QMS](/post/qms-and-mes-quality) where one is used. Where critical characteristics are defined in PLM, sending the capability results back closes the [digital thread](/post/plm-erp-mes-digital-thread).
 
 Here's a question to take to your next quality review: of last month's scrap, how much showed up as a trend on a control chart first, and nobody acted on it?

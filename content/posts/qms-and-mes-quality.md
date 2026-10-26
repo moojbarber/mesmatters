@@ -37,7 +37,7 @@ A typical story goes like this. An operator finds a defect. They record it in ME
 
 The information existed. It just didn't travel.
 
-A connected loop looks different:
+Where a separate QMS is used, a connected loop looks different:
 
 1. MES/MOM records the non-conformance with full context: order, operation, lot, machine, operator, measurements, photo.
 2. Rules decide what happens next. One-off scrap stays in MES/MOM. A repeat defect, a critical characteristic or a customer-impacting issue raises a non-conformance or CAPA in the QMS automatically.
@@ -62,9 +62,9 @@ If quality blocks a lot in the QMS but MES/MOM doesn't know, the line will happi
 
 ## Don't forget the documents
 
-Document control usually sits in the QMS. Work instructions, specifications and inspection plans are approved there. But the operator reads them in MES/MOM.
+Where a QMS is used, document control usually sits there, or in the MOM platform. Work instructions, specifications and inspection plans are approved in that system. But the operator reads them in MES/MOM.
 
-So the same revision question comes up as with PLM: the operator must see the approved revision for this order, not a copy someone saved locally in 2023. Either publish from the QMS to MES/MOM, or have MES/MOM reference the QMS directly. Just don't maintain two copies.
+So the same revision question comes up as with PLM: the operator must see the approved revision for this order, not a copy someone saved locally in 2023. With a separate QMS, either publish from it to MES/MOM, or have MES/MOM reference it directly. Just don't maintain two copies.
 
 ## My view
 

@@ -32,7 +32,7 @@ So the dependency on connectivity that people associate with cloud often exists 
 | **Adding a site or capacity** | Buy and set up servers | Mostly configuration |
 | **Upgrades** | Periodic projects, often years apart | Frequent, smaller updates |
 | **New features, including AI** | Arrive when you upgrade | Arrive as they're released |
-| **If the network drops** | Sites using a central instance are affected | Edge components keep critical functions running |
+| **Network dependency** | Multi-site central instances already depend on the network | The same dependency, with machine connectivity at the edge |
 | **Control over timing of changes** | Full | Shared with the vendor, usually with test environments |
 | **Typical licensing** | Perpetual licence plus maintenance | Subscription |
 
@@ -58,13 +58,12 @@ So the dependency on connectivity that people associate with cloud often exists 
 
 ## Handling the common concerns about cloud
 
-**What if the connection drops, or latency matters?** Critical shopfloor functions and machine data can run on a local edge component that buffers data and keeps production moving, then catches up when the connection returns. Internet connectivity is now close to as reliable as power for most sites, so the edge covers a rare gap. That's the same design question a central on-premises instance raises. Real-time machine connectivity also sits at the edge, so latency isn't an issue for the equipment. The cloud handles the operational application and analytics, where milliseconds don't matter.
+**Connectivity and latency.** Internet connectivity is now close to as reliable as power for most sites, and a central on-premises instance depends on the network in the same way. Real-time machine connectivity sits at the edge, close to the equipment, so latency isn't an issue there. The cloud handles the operational application and analytics, where milliseconds don't matter.
 
 **Data residency and regulation.** Cloud regions let you keep data in the country or region you need, though some data residency requirements, and many aerospace and defence programmes, still call for your own data centre. In regulated industries, look for vendors with a validated cloud approach and clear documentation for quality and compliance teams.
 
 ## Questions to ask a cloud MES vendor
 
-- How is machine data buffered, and how does it catch up?
 - Which security certifications do you hold, and how often is the platform patched?
 - How often are updates released, and can we test them before they reach production?
 - Which regions can our data be held in?

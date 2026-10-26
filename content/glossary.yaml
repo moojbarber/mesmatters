@@ -248,7 +248,7 @@
   - review-by-exception
 - term: Edge
   short: Computing done close to the machines rather than in a central data centre or the cloud.
-  body: In a hybrid deployment, machine connectivity and critical shopfloor functions often run at the edge, with data buffered locally, so production keeps going if the connection to the cloud drops.
+  body: Machine connectivity usually runs at the edge, close to the equipment, while the main application runs centrally or in the cloud.
   articles:
   - cloud-vs-on-premises-mes
   - ai-ml-genai-on-the-shopfloor
@@ -319,7 +319,7 @@
 - term: IIoT
   stands: Industrial Internet of Things
   short: Connecting machines, sensors and devices so their data can be collected and used.
-  body: IIoT is a concept, and it lives in the connectivity layer. It feeds MES/MOM rather than replacing it, because collecting machine data is a small part of running a factory. MES/MOM often acts as the IIoT layer itself, connecting directly to machines, so you don't need a separate system.
+  body: IIoT is a concept, and it lives in the connectivity layer. It feeds MES/MOM rather than replacing it, because collecting machine data is a small part of running a factory. MES/MOM often acts as the IIoT layer itself, connecting directly to machines, so a separate IIoT platform isn't always needed.
   articles:
   - iiot-vs-mes
   - opc-ua-mqtt-uns-explained
@@ -865,7 +865,7 @@
   - non-conformance
 - term: Non-conformance
   short: A product or process that doesn't meet its specification.
-  body: Record it at the source with full context, including the order, lot, machine and a photo. Rules then decide whether it stays a local scrap or escalates to the QMS.
+  body: Record it at the source with full context, including the order, lot, machine and a photo. Rules then decide whether it stays a local scrap or escalates to CAPA, in MOM or in a QMS where one is used.
   articles:
   - qms-and-mes-quality
   - mes-functionality-quality
@@ -1151,7 +1151,7 @@
   - process-manufacturing
 - term: Finite capacity scheduling
   short: Scheduling that respects the real limits of machines, labour, tools and material.
-  body: ERP's MRP mostly assumes infinite capacity. Finite scheduling is APS's job, with MES/MOM feeding back what actually happened.
+  body: ERP's MRP mostly assumes infinite capacity. Where sequencing is complex, finite scheduling is the job of an APS; otherwise ERP, or an ERP module, is often enough. MES/MOM feeds back what actually happened.
   articles:
   - aps-vs-mes-scheduling
   see_also:
@@ -1956,7 +1956,7 @@
   - mttr
 - term: Spare parts
   short: Components kept in stock to repair equipment quickly.
-  body: Spares usually live in the maintenance stores of a CMMS or ERP. Too few and repairs wait; too many and cash sits on shelves.
+  body: Spares usually live in maintenance stores managed in ERP or in the maintenance capability of MOM. Too few and repairs wait; too many and cash sits on shelves.
   articles:
   - eam-cmms-and-mes
   see_also:

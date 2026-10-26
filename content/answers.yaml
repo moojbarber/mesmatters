@@ -231,7 +231,7 @@ ai-ml-genai-on-the-shopfloor:
   summary: "AI is the broad category. Machine learning predicts outcomes from your historical data, and has been in factories for years through SPC and predictive maintenance. Generative AI creates content such as text and code, and helps people more than machines. Each needs different data, so ask which kind before you spend money."
 
 aps-vs-mes-scheduling:
-  summary: "ERP plans in weeks and months, usually assuming infinite capacity. APS sequences in days and hours against finite capacity, changeovers and constraints. MES/MOM takes the scheduled orders, dispatches them to the line, can do some basic scheduling, and records what actually happened. Many factories manage without APS; it helps most where sequencing is genuinely complex."
+  summary: "ERP plans in weeks and months, usually assuming infinite capacity. APS sequences in days and hours against finite capacity, changeovers and constraints. MES/MOM takes the scheduled orders, dispatches them to the line, can do some basic scheduling, and records what actually happened. Not every manufacturer needs an APS; it helps most where sequencing is genuinely complex."
   faq:
     - q: "What is the difference between APS and ERP scheduling?"
       a: "ERP schedules in weeks and days, usually assuming infinite capacity, and works out what to make and when. APS sequences orders in days and hours against finite capacity, taking account of changeovers, tooling, labour and material. Many ERP suites include APS as a module."
@@ -244,7 +244,7 @@ cloud-vs-on-premises-mes:
   summary: "On-premises MES/MOM runs on servers you manage; cloud MES/MOM runs on a platform the vendor manages, usually with an edge component at each site. Most multi-site on-premises MES already runs in a central data centre that sites reach over the network. Cloud adds large-scale security, easier scaling and continuous updates. On-premises fits sites without reliable connectivity, and cases where data must stay in your own data centre, such as many aerospace and defence programmes."
   faq:
     - q: "Can MES run in the cloud?"
-      a: "Yes, and many vendors now deliver MES/MOM as SaaS. Critical shopfloor functions and machine connectivity typically run on an edge component at each site, which buffers data and keeps production moving if the connection drops. The wider application, reporting and analytics run in the cloud."
+      a: "Yes, and many vendors now deliver MES/MOM as SaaS. Machine connectivity typically runs on an edge component at each site, close to the equipment, while the wider application, reporting and analytics run in the cloud. Most multi-site MES already depends on the network, and internet connectivity is now close to as reliable as power for most sites."
     - q: "Is cloud MES secure?"
       a: "Major cloud platforms invest in security at a scale few manufacturers can match, with continuous monitoring, rapid patching and certifications such as ISO 27001 and SOC 2. Ask any vendor which certifications they hold, how often they patch and which regions your data can be held in."
     - q: "When does on-premises MES still make sense?"
@@ -389,7 +389,7 @@ predictive-maintenance-data:
   summary: "Predictive maintenance is the last step after reactive, preventive and condition-based maintenance. Start by recording downtime and other sensor data accurately and automatically. Models then need condition data, failure history, maintenance actions and operating context, and the operating context usually lives in MES/MOM. Begin with your bottleneck assets."
 
 qms-and-mes-quality:
-  summary: "An enterprise QMS runs CAPA, complaints, audits and supplier quality, while MES/MOM runs quality at the point of production. The loop breaks when shopfloor defects never reach the CAPA process with their context. Use rules to escalate the right non-conformances into the QMS, and send process changes back to the line."
+  summary: "An enterprise QMS runs CAPA, complaints, audits and supplier quality, while MES/MOM runs quality at the point of production. The loop breaks when shopfloor defects never reach the CAPA process with their context. Where a QMS is used, rules escalate the right non-conformances into it and send process changes back to the line. A good MOM platform can cover the QMS scope itself."
 
 replacing-a-homegrown-mes:
   summary: "The hardest part of replacing a homegrown MES is people. Turn the developers who built it into champions and resist the urge to replicate every quirk. Don't let the 5% the new system does differently overshadow everything it does better, and map what the old system really does before you start."
@@ -606,7 +606,7 @@ qms-vs-lims-vs-mes:
     - q: "What does MES/MOM do for quality?"
       a: "Strictly, MES covers production and MOM adds quality, inventory and maintenance. MOM quality functions run checks on the line, triggered by what's running: in-process inspections, SPC, sampling plans and holds. Every result is tied to the order, the lot and the operator, which feeds genealogy and the batch record."
     - q: "How do QMS, LIMS and MES/MOM work together?"
-      a: "MES/MOM triggers samples and records line checks. The LIMS tests samples and returns results. Out-of-spec results and serious non-conformances move into the QMS for investigation and CAPA. Batch release draws on the batch record from MES/MOM and LIMS results, and can be blocked by an open deviation in the QMS."
+      a: "MES/MOM triggers samples and records line checks. The LIMS tests samples and returns results. Out-of-spec results and serious non-conformances move into the QMS, where one is used, for investigation and CAPA. Batch release draws on the batch record from MES/MOM and LIMS results, and can be blocked by an open deviation."
 
 cmms-vs-eam-vs-mes:
   summary: "A CMMS helps a maintenance team plan and record work, such as work orders, preventive schedules and spare parts, usually at one site. An EAM does that and manages assets across their whole life and across sites, including cost and capital planning. MES/MOM knows what the equipment is doing right now, so it supplies the run hours, counts and downtime reasons that maintenance planning depends on."
@@ -669,7 +669,7 @@ first-pass-yield-vs-rolled-throughput-yield:
       a: "Final yield counts reworked units as good, so a part fixed twice looks the same as one that was right first time. The rework still costs time and capacity. FPY and RTY expose it, which is why they're widely used in Six Sigma."
 
 industry-4-0-vs-industry-5-0:
-  summary: "Industry 4.0 describes connected, data-driven manufacturing, with machines and systems integrated and analytics used to optimise operations. Industry 5.0, a European Commission concept from 2021, builds on it and adds human-centric, resilient and sustainable goals. Both depend on accurate, contextualised shopfloor data. In my view the outcomes matter more than the version numbers."
+  summary: "Industry 4.0 describes connected, data-driven manufacturing, with machines and systems integrated and analytics used to optimise operations. Industry 5.0, a European Commission concept from 2021, builds on it and adds human-centric, resilient and sustainable goals. Both depend on accurate, contextualised shopfloor data. In my view the outcomes matter more than the Industry 4.0 or 5.0 labels."
   faq:
     - q: "What is the difference between Industry 4.0 and Industry 5.0?"
       a: "Industry 4.0 focuses on connectivity, data and automation to improve efficiency and productivity. Industry 5.0 builds on it, and asks technology to serve wider goals: supporting people on the shopfloor, making operations resilient to disruption and reducing environmental impact."

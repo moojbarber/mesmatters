@@ -59,19 +59,19 @@ Its users are operators, team leaders, supervisors and quality technicians on th
 | **Time scale** | Weeks and months | Hours and days | Seconds to shifts |
 | **Core records** | CAPAs, deviations, complaints, audits, documents | Samples, tests, results, CoAs | Inspections, SPC, holds, non-conformances, genealogy |
 | **Connects to** | ERP, MES/MOM, suppliers, document systems | Instruments, ERP, MES/MOM, data platforms | Equipment, ERP, LIMS, QMS |
-| **Most essential in** | Any regulated or certified manufacturer | Process industries and materials testing | Any plant that wants quality built into the process |
+| **Most essential in** | Regulated or certified manufacturers, as a QMS or within MOM | Process industries and materials testing | Any plant that wants quality built into the process |
 
 ## Where they overlap
 
-**Out-of-spec results.** The lab finds an out-of-specification result in the LIMS. The investigation, and any CAPA that follows, belongs in the QMS. That handover is where many quality loops break.
+**Out-of-spec results.** The lab finds an out-of-specification result in the LIMS. The investigation, and any CAPA that follows, belongs in the QMS, or in MOM where it covers the quality system. That handover is where many quality loops break.
 
 **Specifications.** The LIMS holds the test limits. The QMS often controls the documents and changes that define them. Agree which system is the master.
 
-**Non-conformances.** Found on the line, recorded in MES/MOM with full context. Repeat or serious ones should raise a non-conformance or CAPA in the QMS automatically, rather than relying on someone to re-key them.
+**Non-conformances.** Found on the line, recorded in MES/MOM with full context. Where a separate QMS is used, repeat or serious ones should raise a non-conformance or CAPA there automatically, rather than relying on someone to re-key them.
 
 **Batch release.** Release draws on LIMS results and the batch record from MES/MOM, and an open deviation can block it. Depending on how you work, the decision might be recorded in the QMS, the LIMS, ERP or MES/MOM. Pick one place and stick to it.
 
-**Supplier quality.** Incoming material testing happens in the LIMS. Supplier scorecards and corrective actions live in the QMS.
+**Supplier quality.** Incoming material testing happens in the LIMS. Supplier scorecards and corrective actions live in the QMS, or in the quality capability of MOM.
 
 ## Can one replace another?
 

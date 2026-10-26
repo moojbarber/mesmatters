@@ -42,7 +42,7 @@ The systems above can be integrated through ERP, directly to MES/MOM, or a mix o
 
 ## The connectivity layer
 
-Below the operations layer sit the machines, PLCs and sensors, and the connectivity that links them upwards: OPC UA, MQTT, IIoT platforms and, increasingly, a unified namespace. I explain those in [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
+Below the operations layer sit the machines, PLCs and sensors, and the connectivity that links them upwards: OPC UA and MQTT, sometimes a separate IIoT platform, and increasingly a unified namespace. MES/MOM often provides that connectivity itself. I explain those in [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
 
 The golden rule here: don't connect ERP directly to machines. ERP needs aggregated data at sensible intervals, not thousands of signals a second. That's MES/MOM's job.
 

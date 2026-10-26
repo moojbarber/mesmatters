@@ -122,7 +122,7 @@ You see this most in smaller companies with tech-savvy teams, and some of the pl
 
 ## Most factories end up with a mix
 
-In practice very few factories are purely one type. A common and sensible pattern is a platform as the operational backbone, with specialist systems where the requirements are genuinely advanced, such as a WMS for complex warehousing or an EAM for advanced maintenance. Add a UNS or integration layer to connect it all to the wider business, and some building or coding at the edges for the things that really are unique.
+In practice very few factories are purely one type. A common and sensible pattern is a platform as the operational backbone, with specialist systems where the requirements are genuinely advanced, such as a WMS for complex warehousing or an EAM for advanced maintenance. Connect it to the wider business through direct interfaces or a UNS, and some building or coding at the edges for the things that really are unique.
 
 So the real question is which one you make the backbone.
 
