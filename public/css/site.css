@@ -1540,8 +1540,8 @@ button.ttt-label:hover{background:rgba(255,255,255,.04)}
 @media (max-width:640px){.rec-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;margin-inline:-16px;padding:4px 16px 10px;gap:14px}.rec{flex:0 0 84%;scroll-snap-align:center}.rec-q{font-size:17px}}
 
 /* follow links in the newsletter box */
-.cta .follow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:22px;font-size:14px;color:var(--dim)}
-.cta .follow>span{margin-right:4px}
+.cta .follow,.author .follow{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:22px;font-size:14px;color:var(--dim)}
+.cta .follow>span,.author .follow>span{margin-right:4px}
 .soc{display:inline-flex;align-items:center;gap:9px;height:42px;padding:0 16px 0 12px;border-radius:99px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--tx);font-weight:600;transition:border-color .2s,background .2s,transform .2s}
 .soc svg{width:20px;height:20px;flex:none}
 .soc b{font-weight:600}
@@ -1551,7 +1551,7 @@ button.ttt-label:hover{background:rgba(255,255,255,.04)}
 .soc-x svg{color:#fff}
 .soc-x:hover{border-color:rgba(255,255,255,.6)}
 .soc-instagram:hover{border-color:#d6249f}
-@media (max-width:640px){.cta .follow>span{flex-basis:100%}}
+@media (max-width:640px){.cta .follow>span,.author .follow>span{flex-basis:100%}}
 .home-hero+.wrap>.section:first-child{margin-top:8px}
 
 /* home bento: quote + role explorer on the left, learning paths full height on the right */
@@ -1602,3 +1602,5 @@ a.tag:hover{border-color:var(--b);background:rgba(51,212,224,.16)}
 .home-bento .bento-cta{display:inline-flex;align-items:center;gap:10px;padding:15px 20px;border-radius:12px;background:var(--g);color:#0a0820;font:700 15px/1 var(--body);letter-spacing:0;text-transform:none}
 .home-bento .bento-cta span{font:inherit;color:inherit;letter-spacing:inherit;text-transform:inherit}
 .gl-az a[aria-current]{background:var(--g);color:#0a0820;border-color:transparent;box-shadow:0 0 16px rgba(51,212,224,.35)}
+
+.author .follow{margin-top:16px}

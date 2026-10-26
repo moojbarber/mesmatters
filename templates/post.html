@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "macros.html" import card, hero_bg, cta, for_roles %}
+{% from "macros.html" import card, hero_bg, cta, for_roles, follow %}
 {% block main %}
 {% if p.paths %}
 {% for lp in p.paths %}
@@ -103,8 +103,9 @@
           <div>
             <span class="micro">Written by</span>
             <h3>Matt Barber</h3>
-            <p>VP &amp; General Manager for MES at Infor. Started as an MES developer, then ran projects, solution design and product. Writes about the smart factory, shopfloor AI and the MES/MOM foundations underneath them.</p>
-            <div class="links"><a class="btn sm" href="{{ linkedin }}" target="_blank" rel="me noopener">Follow on LinkedIn</a><a class="btn ghost sm" href="{{ base }}/about">About</a></div>
+            <p>VP &amp; General Manager for the shopfloor at Infor. Started as an MES developer, then ran projects, solution design and product. Writes about the smart factory, shopfloor AI and the MES/MOM foundations underneath them.</p>
+            <div class="links"><a class="btn ghost sm" href="{{ base }}/about">About me</a></div>
+            {{ follow() }}
           </div>
         </div>
         <nav class="pn" aria-label="More articles">

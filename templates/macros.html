@@ -29,7 +29,7 @@
     <h3>Get the next one in your <em class="g">inbox</em></h3>
     <p>New articles on shopfloor AI, smart factory strategy and the MES/MOM lessons I wish someone had told me before my first implementation.</p>
     {{ signup(base, form) }}
-    <div class="follow"><span>Or follow me on</span>{% for s in socials %}<a class="soc soc-{{ s.id }}" href="{{ s.url }}" target="_blank" rel="me noopener" aria-label="{{ s.name }}">{{ social_icon(s.id) }}<b>{{ s.name }}</b></a>{% endfor %}</div>
+    {{ follow("Or follow me on") }}
   </div>
   <ul>
     <li>Vendor-neutral, practical guidance</li>
@@ -158,4 +158,8 @@
 {%- elif id == 'x' -%}<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.4l-5.8-7.58-6.63 7.58H.48l8.6-9.83L0 1.15h7.59l5.24 6.93 6.07-6.93zm-1.29 19.5h2.04L6.48 3.24H4.3l13.31 17.41z"/></svg>
 {%- elif id == 'instagram' -%}<svg viewBox="0 0 24 24" aria-hidden="true"><defs><radialGradient id="igg" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#fdf497"/><stop offset=".1" stop-color="#fdf497"/><stop offset=".5" stop-color="#fd5949"/><stop offset=".68" stop-color="#d6249f"/><stop offset="1" stop-color="#285AEB"/></radialGradient></defs><rect width="24" height="24" rx="6" fill="url(#igg)"/><rect x="5" y="5" width="14" height="14" rx="4.2" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="3.3" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="16.4" cy="7.6" r="1.1" fill="#fff"/></svg>
 {%- endif -%}
+{%- endmacro %}
+
+{% macro follow(label="Follow me on") -%}
+<div class="follow"><span>{{ label }}</span>{% for s in socials %}<a class="soc soc-{{ s.id }}" href="{{ s.url }}" target="_blank" rel="me noopener" aria-label="{{ s.name }}">{{ social_icon(s.id) }}<b>{{ s.name }}</b></a>{% endfor %}</div>
 {%- endmacro %}
