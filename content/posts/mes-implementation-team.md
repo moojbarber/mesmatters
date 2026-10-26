@@ -1,14 +1,14 @@
 ---
 title: "Building the right team for an MES implementation"
 short: "Your MES project team"
-description: "Most MES projects succeed or fail on people, not software. The roles and ways of working to put in place before the first workshop."
+description: "MES projects succeed or fail on the people as much as the software. The roles and ways of working to put in place before the first workshop."
 published: 2023-07-23
 updated: 2026-10-25
 category: advice
 art: network
 ---
 
-An MES/MOM implementation touches almost every part of a manufacturing operation. The software matters, but the team behind it usually decides whether the project delivers.
+An MES/MOM implementation touches almost every part of a manufacturing operation. The software matters, and so does the team behind it. Get both right and the project delivers.
 
 This article covers the people and roles that matter most, and what successful project teams tend to have in common.
 
@@ -99,6 +99,6 @@ Related reading: [How long does an MES implementation take?](/post/how-long-does
 
 ## My view
 
-In my experience, the team you build has the biggest single impact on the success of an MES deployment. The strongest programmes I've seen are defined at enterprise level, with a centre of excellence for global standards and stakeholders at every level across operations and IT. I can't stress enough how important it is to involve operators: they're the people the system is meant to help, and they know how the process really runs.
+In my experience, the team you build matters as much to the success of an MES deployment as the platform you choose. The strongest programmes I've seen are defined at enterprise level, with a centre of excellence for global standards and stakeholders at every level across operations and IT. I can't stress enough how important it is to involve operators: they're the people the system is meant to help, and they know how the process really runs.
 
 Who on your current or next project would you least like to lose?

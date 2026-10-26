@@ -99,7 +99,7 @@ areas:
   - id: people
     name: People
     read: manufacturing-change-management
-    advice: Your slowest area is people. This is the hardest part of every programme I've seen, and the one that's easiest to underfund. Find a visible sponsor and give someone the job full time. Then bring operators in from the first workshop, not the last.
+    advice: Your slowest area is people. It needs as much attention as the technology in every programme I've seen, and it's the part that's easiest to underfund. Find a visible sponsor and give someone the job full time. Then bring operators in from the first workshop, not the last.
     items:
       - q: Who sponsors the programme?
         lo: Nobody, or nobody senior

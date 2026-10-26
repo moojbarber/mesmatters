@@ -259,7 +259,7 @@ pages:
           Start with one line and let its results fund the next phase. The [business case article](/post/mes-business-case) and the [template](/tools/business-case-template) give you the structure.
       - h: Making it stick
         body: |
-          The hardest part of every programme is people, not technology. Bring operators in early and free up super users properly. Then be visible on the floor at go-live. Expect the first weeks to be messy. Every go-live has a learning curve.
+          People need as much attention as the technology in every programme, and they're the part most often underfunded. Bring operators in early and free up super users properly. Then be visible on the floor at go-live. Expect the first weeks to be messy. Every go-live has a learning curve.
 
           Read [resistance to change is guaranteed](/post/manufacturing-change-management) and [go-live is the starting line](/post/mes-go-live) before you plan the project, not after.
     posts: [smart-factory-where-to-start, mes-business-case, time-to-truth, manufacturing-change-management, mes-go-live, how-to-modernise-a-factory]

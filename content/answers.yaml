@@ -199,7 +199,7 @@ food-manufacturing-mes-barriers:
   summary: "Food MES projects depend on the people as much as the technology. The barriers I see most are underestimating the people and change management, starting too big, underestimating master data such as recipes and specifications, and choosing a platform that can't grow. Involve operators early and start on one line, with the data foundation right first."
 
 mes-implementation-team:
-  summary: "MES/MOM projects succeed or fail on people more than software. You need an executive sponsor who removes barriers, a capable project manager, IT and operations involved from the start, and operators shaping the design. Add external expertise where internal experience is thin, and plan for change from day one."
+  summary: "MES/MOM projects succeed or fail on the people as much as the software. You need an executive sponsor who removes barriers, a capable project manager, IT and operations involved from the start, and operators shaping the design. Add external expertise where internal experience is thin, and plan for change from day one."
   faq:
     - q: "Who should be on an MES implementation team?"
       a: "An executive sponsor, a dedicated project manager, IT, and representatives from production, quality, logistics and maintenance. Operators and other experienced shopfloor people should be involved in design and testing. Most teams also include the vendor or a systems integrator, and sometimes an independent consultant."
@@ -392,7 +392,7 @@ qms-and-mes-quality:
   summary: "An enterprise QMS runs CAPA, complaints, audits and supplier quality, while MES/MOM runs quality at the point of production. The loop breaks when shopfloor defects never reach the CAPA process with their context. Rules escalate the right non-conformances into ERP, or into a QMS where one is used, and send process changes back to the line. With MOM and ERP working together, a separate QMS is rarely needed."
 
 replacing-a-homegrown-mes:
-  summary: "The hardest part of replacing a homegrown MES is people. Turn the developers who built it into champions and resist the urge to replicate every quirk. Don't let the 5% the new system does differently overshadow everything it does better, and map what the old system really does before you start."
+  summary: "Replacing a homegrown MES needs as much planning for the people as for the technology. Turn the developers who built it into champions and resist the urge to replicate every quirk. Don't let the 5% the new system does differently overshadow everything it does better, and map what the old system really does before you start."
 
 scada-vs-mes:
   summary: "SCADA controls and supervises equipment in real time; MES/MOM manages the operation. If SCADA is mainly there for visibility, MES/MOM can often cover it and leave you with fewer systems to run. In heavier process industries with real control loops, keep both and agree a clear boundary between them."
@@ -471,7 +471,7 @@ how-to-modernise-a-factory:
   summary: "Modernise step by step, with AI running alongside every step. Assess where you really are, map the process, put a number on the problem and build the team. Then fix the master data, choose a platform for the long term and start small with the end in mind. Connect the machines, go live and scale with a template. AI earns more with every line you connect."
   faq:
     - q: "What is the first step in modernising a factory?"
-      a: "An honest assessment of where you are today. Most factories sit between paper-driven and partly integrated, and often earlier than their board presentations suggest. Then map what really happens on the shopfloor before you look at software. Digitise a broken process and you get a faster broken process, so the order of the early steps matters more than the technology you pick."
+      a: "An honest assessment of where you are today. Most factories sit between paper-driven and partly integrated, and often earlier than their board presentations suggest. Then map what really happens on the shopfloor before you look at software. Digitise a broken process and you get a faster broken process, so the order of the early steps matters as much as the technology you pick."
     - q: "When should a factory invest in AI?"
       a: "From the start, alongside the data foundation. Generative AI can help in the first weeks, working on procedures and shift summaries. Predictive and optimising AI learns from your shopfloor data, so start it on the first line you connect and let its payback grow as the foundation does: defined processes, MES/MOM running them, connected machines and contextualised data you trust."
     - q: "Should you modernise one line or the whole factory at once?"

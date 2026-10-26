@@ -9,7 +9,7 @@ art: orbits
 
 Companies invest millions in software, then wonder why adoption stalls.
 
-They focus on features and functionality, and ignore the human element. But your MES/MOM is only as effective as your organisation's willingness to change.
+They focus on features and functionality, which matter, but give the human element far less attention. But your MES/MOM is only as effective as your organisation's willingness to change.
 
 You need good technology, and choosing the right platform matters. But even the best platform can be held back by poor processes and low adoption. You can connect every machine and integrate with ERP, and still fail.
 

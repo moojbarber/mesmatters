@@ -9,7 +9,7 @@ art: bridge
 
 Don't underestimate the complexity of replacing a homegrown MES/MOM.
 
-When you've built something in-house, moving to a commercial platform brings challenges most manufacturers don't see coming. And the biggest ones usually aren't technical.
+When you've built something in-house, moving to a commercial platform brings challenges most manufacturers don't see coming. The technical work is significant, and the people side is just as big. It's the part most plans leave out.
 
 ## The developers who built it
 
