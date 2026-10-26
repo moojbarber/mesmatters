@@ -54,7 +54,7 @@ So in a UNS architecture, MES/MOM is both a consumer of machine data and one of 
 
 ## A few practical rules
 
-- **Don't connect ERP directly to machines.** ERP needs aggregated data at sensible intervals, not thousands of signals a second.
+- **Don't connect ERP directly to machines.** ERP needs aggregated data at sensible intervals, not raw machine signals.
 - **Start with what you'll use.** Connect bottleneck assets and the signals you need for counts, states and key parameters first.
 - **Agree a naming standard early.** Asset hierarchies and tag names are dull, and they decide whether the data is usable later.
 - **Treat OT security as part of the design.** Not an afterthought once everything's connected.
