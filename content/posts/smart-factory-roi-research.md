@@ -58,7 +58,7 @@ Be careful with averages.
 - **They lag.** Surveys capture what happened over the last year or two, in a market moving quickly.
 - **They don't tell you how.** The same technology delivers very different returns depending on the processes underneath it, the team running it and whether the data is trusted.
 
-In my experience, the difference between a 2% and a 20% improvement comes from getting the technology and the people right together: the right platform, processes fixed first, data that's trusted, and leadership that stays committed after go-live.
+In my experience, the difference between a small improvement and a big one comes from getting the technology and the people right together: the right platform, processes fixed first, data that's trusted, and leadership that stays committed after go-live.
 
 ## Use the research, then build your own case
 
