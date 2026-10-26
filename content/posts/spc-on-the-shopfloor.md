@@ -38,7 +38,7 @@ For **attribute data** (things you count), the choice depends on two questions:
 
 ## The rules that matter
 
-A point outside the control limits is the obvious signal. But patterns inside the limits often tell you more. The Western Electric and Nelson rules formalise them. The ones I'd teach every operator:
+A point outside the control limits is the obvious signal. But patterns inside the limits often tell you more. The ones I'd teach every operator:
 
 - **One point beyond the control limits.** Something just changed.
 - **Seven or more points in a row on one side of the average.** The process has shifted.

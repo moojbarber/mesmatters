@@ -30,8 +30,8 @@ Warehouse management can sit in ERP, a dedicated warehouse management system (WM
 | | Strengths | Watch out for |
 | --- | --- | --- |
 | **ERP** | Already the master of stock and its value, and often includes reasonable warehousing functions. No extra system to buy | Screens are usually designed for office users. Less depth than a WMS. Needs a clear handover to MES/MOM when material enters production. Often tracks only at lot level |
-| **WMS** | Deep warehousing functions, strong in distribution and designed for mobile scanners. Suits complex supply chains and warehouse automation | Another system to license and integrate. Can be more than many warehouses need |
-| **MES/MOM** | One application for logistics and production, so no handover at the line, and usually the friendliest for operational users. Can work with automated storage without a full WMS | Only sensible if you need MES/MOM for production anyway. Covers general warehousing rather than advanced distribution, and some narrower MES products don't cover logistics at all |
+| **WMS** | Deep warehousing functions, strong in distribution and designed for mobile scanners. Suits complex supply chains and warehouse automation | Another system to license and integrate |
+| **MES/MOM** | One application for logistics and production, so no handover at the line, and usually the friendliest for operational users. Can work with automated storage in simpler set-ups | Only sensible if you need MES/MOM for production anyway. Covers general warehousing rather than advanced distribution, and some narrower MES products don't cover logistics at all |
 
 Many manufacturers combine them, for example ERP or a WMS for the main warehouse and MES/MOM from the supermarket to the line. The boundaries and integration options are covered in [WMS vs MES vs ERP: who owns inventory once it reaches the line?](/post/wms-vs-mes-inventory)
 
@@ -89,7 +89,7 @@ Outbound deliveries, whether customer shipments or transfers to other plants, ar
 
 **ERP** often suits a simple warehouse: a few aisles of racking and straightforward picking, with replenishment on a daily or shift rhythm. It gets harder with high-frequency line-side replenishment, or when you need more detail about each lot and location than ERP holds.
 
-**A WMS** earns its place when the warehouse is complex in its own right: high volumes, optimised pick paths, multiple storage zones, automation such as AS/RS, or a distribution operation alongside manufacturing. Many ERP suites include a WMS module, so it doesn't have to mean another vendor. The trade-off is another boundary to manage.
+**A WMS** is the most advanced option, and adds the most value when the warehouse is complex in its own right: high volumes, optimised pick paths, multiple storage zones, automation such as AS/RS, or a distribution operation alongside manufacturing. Many ERP suites include a WMS module, so it doesn't have to mean another vendor. The trade-off is another boundary to manage.
 
 **MES/MOM** suits flows driven by production: supermarkets feeding the lines, kitting and kanban, just-in-time replenishment triggered by actual consumption, and finished goods taken off the line. It isn't designed to run a large distribution warehouse.
 

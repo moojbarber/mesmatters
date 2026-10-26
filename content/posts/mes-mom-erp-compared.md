@@ -92,7 +92,7 @@ Not every factory needs every system. The skill is adding depth where the operat
 | --- | --- | --- |
 | **MES/MOM** | You're running on paper, spreadsheets or a set of disconnected point solutions, and you want real-time, trustworthy shopfloor data | Honestly, very few manufacturers beyond the smallest |
 | **APS** | Sequence-dependent changeovers, shared tools, a bottleneck that drives everything, or hundreds of orders a day competing for resources | A handful of lines with stable products and simple changeovers |
-| **WMS** | High volumes, warehouse automation, several storage zones with different rules, or distribution alongside manufacturing | A few aisles of racking with simple picking |
+| **WMS** | High volumes, warehouse automation, several storage zones with different rules, or distribution alongside manufacturing | Simpler warehousing, where ERP and the inventory and logistics capability of MOM are enough |
 | **QMS** | Your MES doesn't cover CAPA, complaints and supplier quality | Your MOM platform covers the quality system as well as in-process checks |
 | **LIMS** | A lab running samples, methods and certificates, common in process and regulated industries | Line-side checks such as weight or pH are enough |
 | **EAM / CMMS** | Asset-heavy operations with advanced maintenance, spares and lifecycle cost needs | Maintenance needs are well covered by MES/MOM on the same downtime data |

@@ -730,7 +730,7 @@
 - term: WIP
   stands: Work in progress
   short: Material that has started production but isn't finished.
-  body: When you can trust real-time WIP data, you stop holding buffers to cover for not trusting it, which frees working capital. On the shopfloor, WIP is MES/MOM's responsibility.
+  body: WIP covers two different things. It can be a semi-finished material with its own material number in ERP, tracked and costed like any other stock. Or it can be material part-way through its routing, with some operations complete, that hasn't yet become a semi-finished or finished material. The second kind is usually only visible in MES/MOM. When you can trust real-time WIP data, you stop holding buffers to cover for not trusting it, which frees working capital.
   articles:
   - wms-vs-mes-inventory
   - mes-roi-bottom-line
@@ -740,7 +740,7 @@
 - term: WMS
   stands: Warehouse management system
   short: Software for warehouse operations such as receiving, putaway, picking and storage.
-  body: Many manufacturers don't need one, because ERP and MES/MOM cover simpler warehouses. A WMS earns its place when warehouse volumes or automation get complex.
+  body: There are several options for warehousing. For the most complex requirements, particularly distribution centres, a WMS is the most advanced option and adds the most value. For simpler warehousing, ERP combined with the inventory and logistics capability of a MOM platform can be enough.
   articles:
   - wms-vs-mes-inventory
   - mes-functionality-logistics
@@ -917,15 +917,6 @@
   see_also:
   - spc
   - control-limits
-  - western-electric-rules
-- term: Western Electric rules
-  short: A set of rules for spotting non-random patterns on control charts, later extended by the Nelson rules.
-  body: The ones worth teaching every operator include a point beyond the limits, a run of points on one side of the average, and a steady trend up or down.
-  articles:
-  - spc-on-the-shopfloor
-  see_also:
-  - control-chart
-  - spc
 - term: Metrology
   short: The science of measurement, and on the shopfloor the gauges and instruments used for quality checks.
   body: Connecting metrology equipment to MES/MOM removes typing errors and captures measurements against the right order and sample automatically.
@@ -973,7 +964,6 @@
   articles:
   - mes-in-regulated-industries
   see_also:
-  - udi
   - dhr
 - term: 21 CFR Part 11
   short: The US FDA regulation for electronic records and electronic signatures.
@@ -1016,18 +1006,8 @@
   articles:
   - mes-in-regulated-industries
   see_also:
-  - udi
   - iso-13485
   - as-built-record
-- term: UDI
-  stands: Unique device identification
-  short: A system for identifying medical devices through distribution and use with a unique code on the label.
-  body: Labelling should be linked to the as-built record, so the identifier on the box leads straight back to how that device was made.
-  articles:
-  - mes-in-regulated-industries
-  see_also:
-  - dhr
-  - serialisation
 - term: Recall
   short: Withdrawing products from customers or the market because of a safety or quality problem.
   body: Traceability decides how big a recall has to be. Exact genealogy lets you identify the affected units rather than quarantining a week of production.
@@ -1475,7 +1455,7 @@
   - connected-worker
 - term: Vision inspection
   short: Cameras and trained models that spot defects automatically, often running at the edge.
-  body: It works best flagging likely defects for a person to confirm, so judgement stays with the operator.
+  body: On high-volume lines, such as can ends, the system photographs every item and rejects defects automatically, because no operator could review them at that speed. Where a defect is harder to judge, or volumes are lower, it can flag likely defects for a person to confirm instead.
   articles:
   - ai-ml-genai-on-the-shopfloor
   - ai-for-frontline-workers
@@ -1548,7 +1528,7 @@
 - term: WFM
   stands: Workforce management
   short: 'Software for planning and managing people: shift patterns, rosters, time and attendance, absence and labour costs.'
-  body: WFM decides who is scheduled to work. MES/MOM decides what they work on and checks they're qualified for it, so the two should share people and skills data rather than keep separate copies.
+  body: It's typically used by HR and operations to make sure the right number of people, with the right skills, are scheduled for each shift, while keeping to working time rules and controlling labour cost.
   articles:
   - skills-enforcement-shopfloor
   - connected-worker-one-app-not-five

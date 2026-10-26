@@ -37,7 +37,7 @@ For MES/MOM, that means:
 - Serial or lot-level genealogy for every device and critical component
 - Proof that operators were trained and qualified for the operation, at the time
 - Equipment calibration status checked before use
-- Labelling linked to the as-built record, including unique device identification (UDI) where it applies
+- Labelling linked to the as-built record
 
 Complaints and field issues must trace back to the build record quickly. I cover that end of the chain in [Service data back to engineering](/post/service-data-back-to-engineering).
 

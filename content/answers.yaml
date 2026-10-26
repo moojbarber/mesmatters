@@ -448,12 +448,12 @@ what-is-a-smart-factory:
       a: "MES/MOM is the operational backbone. It connects the business systems to the machines, runs the defined processes on the shopfloor and creates the contextualised data that analytics and AI depend on. A smart factory is broader than MES/MOM, but without it most of the other technology has no reliable operational data to work with."
 
 wms-vs-mes-inventory:
-  summary: "ERP owns inventory as a business asset and WMS owns it inside the warehouse. MES/MOM owns it on the shopfloor, including line-side stock and work in progress. Many manufacturers don't need a WMS at all. The boundary that matters is the line, so agree who requests, delivers, receives and records consumption."
+  summary: "ERP owns inventory as a business asset and WMS owns it inside the warehouse. MES/MOM owns it on the shopfloor, including line-side stock and work in progress. For the most complex warehousing, particularly distribution centres, a WMS adds the most value; for simpler warehousing, ERP with the inventory and logistics capability of MOM can be enough. The boundary that matters is the line, so agree who requests, delivers, receives and records consumption."
   faq:
     - q: "What is the difference between a WMS and MES?"
       a: "A WMS manages the warehouse: receiving, putaway, storage, picking and shipping. MES/MOM manages material once it reaches production: line-side stock and work in progress, with consumption recorded by order and lot. ERP stays the financial owner of the stock."
     - q: "Do I need a WMS if I have MES?"
-      a: "Not always. Many plants with simple warehousing manage with ERP inventory plus MES/MOM at the line. A WMS earns its place with high volumes, complex storage, automation or demanding picking, where warehouse execution needs its own system."
+      a: "It depends on how complex your warehousing is. A WMS is the most advanced option and adds the most value with high volumes, complex storage, automation, demanding picking or a distribution centre. For simpler warehousing, ERP combined with the inventory and logistics capability of MOM can be enough."
     - q: "Where should the boundary between WMS and MES sit?"
       a: "Usually at the line. The WMS owns stock until it's delivered to a line-side location, and MES/MOM owns it from there until it's consumed or produced. Whatever the split, one system should own each location, and quality status must travel with the material."
 
@@ -485,7 +485,7 @@ mes-mom-erp-compared:
     - q: "Which system should own inventory?"
       a: "ERP owns inventory as a financial asset. A WMS, or ERP if you don't have one, owns inventory inside the warehouse. MES/MOM owns line-side stock, work in progress and what each order consumed. The handover at the line is where most problems start, so agree who requests, delivers and records consumption."
     - q: "Do I need a WMS, QMS or APS as well as MES?"
-      a: "Not always. A WMS earns its place with high volumes or warehouse automation, a QMS only if your MES doesn't cover the quality system, and APS with genuinely hard sequencing. Many ERP suites include these as modules, so needing the capability doesn't always mean another vendor."
+      a: "It depends. A WMS adds the most value with complex warehousing, particularly distribution centres, a QMS only if your MES doesn't cover the quality system, and APS with genuinely hard sequencing. Many ERP suites include these as modules, so needing the capability doesn't always mean another vendor."
 
 shopfloor-applications-explained:
   summary: "Shopfloor applications cover production execution and OEE, in-process quality and SPC, inventory and traceability, maintenance, tooling, energy, and connected worker tools such as work instructions, handover and skills. AI builds on all of them. Match the application to the problem that hurts most, but solve it on a platform that can grow into the rest."

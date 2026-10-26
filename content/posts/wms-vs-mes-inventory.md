@@ -21,16 +21,16 @@ The fix isn't picking one winner. It's agreeing where each one's responsibility 
 
 I covered the shopfloor side in [MES functionality: logistics and warehousing](/post/mes-functionality-logistics). This article is about the boundaries.
 
-## Do you even need a WMS?
+## Which option fits your warehouse?
 
-Not always. Plenty of manufacturers run their warehouse perfectly well on ERP's inventory and warehouse functions, with MES/MOM handling the shopfloor. If your warehouse is a few aisles of racking with simple picking, ERP plus MES/MOM is usually enough.
-
-A dedicated WMS earns its place when you have:
+There are several options for warehousing. For the most complex requirements, particularly distribution centres, a WMS is the most advanced option and adds the most value. It makes the most sense when you have:
 
 - High volumes and complex pick strategies
 - Warehouse automation to control
 - Multiple storage zones with different rules: temperature, hazardous, high-value
 - A distribution operation alongside manufacturing
+
+For simpler warehousing, ERP combined with the inventory and logistics capability of a MOM platform can be enough, with MOM running material from receipt to the line.
 
 Most ERP suites include a capable WMS module, so "WMS" doesn't necessarily mean another vendor. It means deeper warehouse functionality, wherever it comes from.
 

@@ -27,7 +27,7 @@ AI won't replace those people. But it can help capture what they know and put it
 
 **Real-time coaching.** When process data drifts towards a known problem, the system suggests the corrective action an experienced operator would take, before it becomes scrap.
 
-**Visual inspection support.** Image recognition flagging likely defects for the operator to confirm, so judgement stays with the person but nothing gets missed.
+**Visual inspection support.** On high-volume lines, vision systems reject defects automatically, because no operator could keep up. Where a defect is harder to judge, image recognition can flag it for the operator to confirm, so nothing gets missed.
 
 ## Why context decides whether it's useful
 
