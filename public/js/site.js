@@ -461,3 +461,27 @@
   if(clear) clear.addEventListener('click',function(){sel=[];apply(true)});
   apply(false);
 })();
+
+// glossary: highlight the letter you're currently reading in the A-Z bar
+(function(){
+  var bar=document.querySelector('.gl-az'); if(!bar) return;
+  var links=[].slice.call(bar.querySelectorAll('a[href^="#gl-"]'));
+  var groups=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1))});
+  var cur=-1, ticking=false;
+  function update(){
+    ticking=false;
+    var line=bar.getBoundingClientRect().bottom+24, i=-1;
+    for(var k=0;k<groups.length;k++){ if(groups[k] && groups[k].getBoundingClientRect().top<=line) i=k; else break; }
+    if(i===cur) return;
+    if(cur>-1) links[cur].removeAttribute('aria-current');
+    cur=i;
+    if(i>-1){
+      var a=links[i]; a.setAttribute('aria-current','true');
+      // keep the active letter visible when the bar scrolls sideways (small screens); moves the bar only, not the page
+      if(bar.scrollWidth>bar.clientWidth){var l=a.offsetLeft-bar.clientWidth/2+a.offsetWidth/2;bar.scrollLeft=Math.max(0,l);}
+    }
+  }
+  addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(update);}},{passive:true});
+  addEventListener('resize',update);
+  update();
+})();

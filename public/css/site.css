@@ -1601,3 +1601,4 @@ a.tag:hover{border-color:var(--b);background:rgba(51,212,224,.16)}
 .ro-banner:hover .bento-cta i{transform:translateX(4px)}
 .home-bento .bento-cta{display:inline-flex;align-items:center;gap:10px;padding:15px 20px;border-radius:12px;background:var(--g);color:#0a0820;font:700 15px/1 var(--body);letter-spacing:0;text-transform:none}
 .home-bento .bento-cta span{font:inherit;color:inherit;letter-spacing:inherit;text-transform:inherit}
+.gl-az a[aria-current]{background:var(--g);color:#0a0820;border-color:transparent;box-shadow:0 0 16px rgba(51,212,224,.35)}
