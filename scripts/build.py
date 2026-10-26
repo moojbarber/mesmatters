@@ -29,6 +29,12 @@ ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / "dist"
 SITE = "https://www.shopfloormatters.com"
 LINKEDIN = "https://www.linkedin.com/in/mattjbarber/"
+# Social profiles shown in the newsletter box. Leave a url empty to hide that network.
+SOCIALS = [
+    {"id": "linkedin", "name": "LinkedIn", "url": LINKEDIN},
+    {"id": "x", "name": "X", "url": "https://x.com/moojbarber"},
+    {"id": "instagram", "name": "Instagram", "url": "https://www.instagram.com/matt.barber.me/"},
+]
 # Kit (kit.com) form ID for the newsletter sign-up. Set the KIT_FORM_ID repo variable; empty = sign-ups not open yet.
 KIT_FORM_ID = os.environ.get("KIT_FORM_ID", "").strip()
 # Where "Ask Matt" questions are POSTed (e.g. a Formspree or Tally endpoint). Empty = copy the question and open LinkedIn.
@@ -613,6 +619,7 @@ def build(base, relative=False, include_scheduled=False):
                 shutil.copy2(src, DIST / "images" / "legacy" / img)
 
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=True, trim_blocks=True, lstrip_blocks=True)
+    env.globals["socials"] = [s for s in SOCIALS if s["url"]]
     version = dt.datetime.now().strftime("%Y%m%d%H%M")
     common = {"base": base, "nav": NAV, "linkedin": LINKEDIN, "year": dt.date.today().year, "version": version, "kit_form": KIT_FORM_ID,
               "ask_endpoint": ASK_FORM_ENDPOINT, "sfg_url": SFG_COURSE_URL,
