@@ -62,7 +62,7 @@ That's where [digital work instructions that know what's running](/post/digital-
 | Configure-to-order, complex visual assembly | CPQ → ERP → MES/MOM | Often useful for option-specific instructions |
 | Engineer-to-order | CPQ → ERP and PLM → ERP → MES/MOM | Common, for order-specific drawings |
 
-Some manufacturers also feed the configuration straight to MES/MOM so it can select instructions by option code. That works, but keep ERP's order BOM as the authority. Two systems interpreting the same configuration independently will, eventually, disagree.
+CPQ itself connects to ERP, not to MES/MOM. The configuration reaches the shopfloor as part of the order, with its BOM, routing and option codes, so MES/MOM can select the right instructions. Keep ERP's order BOM as the authority. Two systems interpreting the same configuration independently will, eventually, disagree.
 
 ## Closing the loop
 

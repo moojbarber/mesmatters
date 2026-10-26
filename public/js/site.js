@@ -369,7 +369,7 @@
         ['erp', 'mes'].forEach(function (r) {
           var d = info.querySelector('.imap-routes .' + r), on = A.module || R.indexOf(r) >= 0;
           d.classList.add(on ? 'on' : 'off');
-          d.querySelector('b').textContent = A.module ? (r === 'erp' ? 'Where ERP fits' : 'What it replaces') : (r === 'erp' ? 'Via ERP' : 'Direct to MOM');
+          d.querySelector('b').textContent = A.labels ? A.labels[r === 'erp' ? 0 : 1] : A.module ? (r === 'erp' ? 'Where ERP fits' : 'What it replaces') : (r === 'erp' ? 'Via ERP' : 'Direct to MOM');
           d.querySelector('span').textContent = (on ? '' : 'Not used in this pattern. ') + A[r];
         });
         var a = info.querySelector('a'); a.href = (window.LP_BASE || '').replace(/\/\.$/, '') + A.link + (window.LP_EXT || ''); a.textContent = 'Read: ' + A.read + ' →';

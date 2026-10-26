@@ -12,30 +12,30 @@
   </div>
   <p class="imap-mode-note" aria-live="polite"></p>
   <div class="imap-stage">
-    <svg viewBox="0 0 1000 630" role="img" aria-label="Diagram with ERP at the top, MOM in the centre containing MES, QMS, IMS and CMMS, the specialist applications either side, and machines and people below">
+    <svg viewBox="0 0 1000 720" role="img" aria-label="Diagram wrapped in a data and AI layer, with ERP at the top, MOM in the centre containing MES, QMS, IMS, CMMS and optionally connected worker, the specialist applications either side, and machines and people below">
       <defs>
         <radialGradient id="imapGlow"><stop offset="0" stop-color="#33d4e0" stop-opacity=".45"/><stop offset="1" stop-color="#33d4e0" stop-opacity="0"/></radialGradient>
         <linearGradient id="imapMes" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b6cff"/><stop offset="1" stop-color="#33d4e0"/></linearGradient>
       </defs>
+      <g class="imap-dataframe"><rect x="8" y="24" width="984" height="688" rx="30"/></g>
+      <g class="imap-app imap-datapill" data-app="data" tabindex="0" role="button" aria-label="Data and AI"><rect x="370" y="4" width="260" height="42" rx="21"/><text x="500" y="23" class="t1">Data and AI</text><text x="500" y="38" class="t2">Connects to everything</text></g>
+      <g transform="translate(0,60)">
       <g class="imap-edges">
         <path class="imap-edge core" d="M500,106 L500,200" data-app="core" data-route="core"/>
-        <path class="imap-edge floor" d="M500,440 L500,558" data-app="floor" data-route="floor"/>
+        <path class="imap-edge floor" d="M500,486 L500,578" data-app="floor" data-route="floor"/>
         <path class="imap-edge" data-app="plm" data-route="erp" d="M188,108 C300,108 320,62 400,62"/>
         <path class="imap-edge" data-app="plm" data-route="mes" d="M188,108 C290,108 260,262 330,262"/>
         <path class="imap-edge" data-app="cpq" data-route="erp" d="M188,238 C300,238 330,74 400,74"/>
-        <path class="imap-edge" data-app="cpq" data-route="mes" d="M188,238 C270,238 270,312 330,312"/>
         <path class="imap-edge" data-app="aps" data-route="erp" d="M188,368 C300,368 340,86 400,86"/>
-        <path class="imap-edge" data-app="aps" data-route="mes" d="M188,368 C270,368 270,372 330,372"/>
+        <path class="imap-edge" data-app="aps" data-route="mes" d="M188,368 C270,368 270,350 330,350"/>
         <path class="imap-edge" data-app="lims" data-route="erp" d="M188,498 C290,498 350,98 400,98"/>
-        <path class="imap-edge" data-app="lims" data-route="mes" d="M188,498 C280,498 270,420 330,420"/>
-        <path class="imap-edge" data-app="wms" data-route="erp" d="M812,108 C700,108 680,62 600,62"/>
-        <path class="imap-edge" data-app="wms" data-route="mes" d="M812,108 C710,108 740,262 670,262"/>
-        <path class="imap-edge" data-app="eam" data-route="erp" d="M812,238 C700,238 670,74 600,74"/>
-        <path class="imap-edge" data-app="eam" data-route="mes" d="M812,238 C730,238 730,312 670,312"/>
-        <path class="imap-edge" data-app="cw" data-route="erp" d="M812,368 C700,368 660,86 600,86"/>
-        <path class="imap-edge" data-app="cw" data-route="mes" d="M812,368 C730,368 730,372 670,372"/>
-        <path class="imap-edge" data-app="data" data-route="erp" d="M812,498 C710,498 650,98 600,98"/>
-        <path class="imap-edge" data-app="data" data-route="mes" d="M812,498 C720,498 730,420 670,420"/>
+        <path class="imap-edge" data-app="lims" data-route="mes" d="M188,498 C280,498 270,440 330,440"/>
+        <path class="imap-edge" data-app="wms" data-route="erp" d="M812,173 C700,173 680,62 600,62"/>
+        <path class="imap-edge" data-app="wms" data-route="mes" d="M812,173 C730,173 740,270 670,270"/>
+        <path class="imap-edge" data-app="eam" data-route="erp" d="M812,303 C700,303 670,80 600,80"/>
+        <path class="imap-edge" data-app="eam" data-route="mes" d="M812,303 C730,303 730,345 670,345"/>
+        <path class="imap-edge" data-app="cw" data-route="erp" d="M812,433 C700,433 660,98 600,98"/>
+        <path class="imap-edge" data-app="cw" data-route="mes" d="M812,433 C730,433 730,452 670,452"/>
       </g>
       <g class="imap-dots"></g>
 
@@ -45,8 +45,8 @@
         <text x="500" y="90" class="t2">Runs the business</text>
       </g>
       <g class="imap-hub mes">
-        <ellipse cx="500" cy="320" rx="230" ry="170" fill="url(#imapGlow)" class="halo"/>
-        <rect x="330" y="200" width="340" height="240" rx="26" class="ring"/>
+        <ellipse cx="500" cy="343" rx="230" ry="185" fill="url(#imapGlow)" class="halo"/>
+        <rect x="330" y="200" width="340" height="286" rx="26" class="ring"/>
         <text x="500" y="228" class="t1">MOM</text>
         <text x="500" y="246" class="t2">Runs the operation, on one set of data</text>
       </g>
@@ -54,20 +54,21 @@
       <g class="imap-app imap-mod" data-app="qms" tabindex="0" role="button" aria-label="QMS, quality"><rect x="504" y="260" width="150" height="76" rx="14"/><text x="579" y="294" class="t1">QMS</text><text x="579" y="313" class="t2">Quality</text></g>
       <g class="imap-app imap-mod" data-app="ims" tabindex="0" role="button" aria-label="IMS, inventory"><rect x="346" y="346" width="150" height="76" rx="14"/><text x="421" y="380" class="t1">IMS</text><text x="421" y="399" class="t2">Inventory</text></g>
       <g class="imap-app imap-mod" data-app="cmms" tabindex="0" role="button" aria-label="CMMS, maintenance"><rect x="504" y="346" width="150" height="76" rx="14"/><text x="579" y="380" class="t1">CMMS</text><text x="579" y="399" class="t2">Maintenance</text></g>
+      <g class="imap-app imap-cwin" data-app="cw" tabindex="0" role="button" aria-label="Connected worker, built into MOM"><rect x="346" y="432" width="308" height="42" rx="12"/><text x="500" y="450" class="t1">Connected worker</text><text x="500" y="466" class="t2">Built into MOM, or standalone</text></g>
       <g class="imap-floor">
-        <rect x="270" y="560" width="460" height="52" rx="14"/>
-        <text x="500" y="583" class="t1">Machines, PLCs and people</text>
-        <text x="500" y="601" class="t2">OPC UA, MQTT and other protocols</text>
+        <rect x="270" y="580" width="460" height="52" rx="14"/>
+        <text x="500" y="603" class="t1">Machines, PLCs and people</text>
+        <text x="500" y="621" class="t2">OPC UA, MQTT and other protocols</text>
       </g>
 
       <g class="imap-app" data-app="plm" tabindex="0" role="button" aria-label="PLM"><rect x="36" y="80" width="152" height="56" rx="14"/><text x="112" y="106" class="t1">PLM</text><text x="112" y="123" class="t2">Product definition</text></g>
       <g class="imap-app" data-app="cpq" tabindex="0" role="button" aria-label="CPQ"><rect x="36" y="210" width="152" height="56" rx="14"/><text x="112" y="236" class="t1">CPQ</text><text x="112" y="253" class="t2">Configure and quote</text></g>
       <g class="imap-app" data-app="aps" tabindex="0" role="button" aria-label="APS"><rect x="36" y="340" width="152" height="56" rx="14"/><text x="112" y="366" class="t1">APS</text><text x="112" y="383" class="t2">Advanced scheduling</text></g>
       <g class="imap-app" data-app="lims" tabindex="0" role="button" aria-label="LIMS"><rect x="36" y="470" width="152" height="56" rx="14"/><text x="112" y="496" class="t1">LIMS</text><text x="112" y="513" class="t2">Regulated labs</text></g>
-      <g class="imap-app" data-app="wms" tabindex="0" role="button" aria-label="WMS"><rect x="812" y="80" width="152" height="56" rx="14"/><text x="888" y="106" class="t1">WMS</text><text x="888" y="123" class="t2">Complex warehousing</text></g>
-      <g class="imap-app" data-app="eam" tabindex="0" role="button" aria-label="EAM"><rect x="812" y="210" width="152" height="56" rx="14"/><text x="888" y="236" class="t1">EAM</text><text x="888" y="253" class="t2">Asset lifecycle</text></g>
-      <g class="imap-app" data-app="cw" tabindex="0" role="button" aria-label="Connected worker"><rect x="812" y="340" width="152" height="56" rx="14"/><text x="888" y="366" class="t1">Connected worker</text><text x="888" y="383" class="t2">Frontline apps</text></g>
-      <g class="imap-app" data-app="data" tabindex="0" role="button" aria-label="Data platform and AI"><rect x="812" y="470" width="152" height="56" rx="14"/><text x="888" y="496" class="t1">Data and AI</text><text x="888" y="513" class="t2">Analytics and models</text></g>
+      <g class="imap-app" data-app="wms" tabindex="0" role="button" aria-label="WMS"><rect x="812" y="145" width="152" height="56" rx="14"/><text x="888" y="171" class="t1">WMS</text><text x="888" y="188" class="t2">Complex warehousing</text></g>
+      <g class="imap-app" data-app="eam" tabindex="0" role="button" aria-label="EAM"><rect x="812" y="275" width="152" height="56" rx="14"/><text x="888" y="301" class="t1">EAM</text><text x="888" y="318" class="t2">Asset lifecycle</text></g>
+      <g class="imap-app imap-cwout" data-app="cw" tabindex="0" role="button" aria-label="Connected worker, standalone"><rect x="812" y="405" width="152" height="56" rx="14"/><text x="888" y="431" class="t1">Connected worker</text><text x="888" y="448" class="t2">Standalone option</text></g>
+      </g>
     </svg>
   </div>
   <div class="imap-legend" aria-hidden="true"><span class="lg-erp">Via ERP</span><span class="lg-mes">Direct to MOM</span><span class="lg-core">Orders down, actuals up</span></div>
@@ -77,11 +78,11 @@
   <script type="application/json" class="imap-data">{
     "modes": {
       "erp": {"note": "Every specialist talks to ERP, and ERP passes what it needs down to MOM. One integration hub, simple to govern, and often the safest choice for transactional data. The catch: real-time shopfloor data waits for ERP, and ERP ends up holding detail it doesn't need.",
-              "routes": {"plm": ["erp"], "cpq": ["erp"], "aps": ["erp"], "lims": ["erp"], "wms": ["erp"], "eam": ["erp"], "cw": ["erp"], "data": ["erp"]}},
+              "routes": {"plm": ["erp"], "cpq": ["erp"], "aps": ["erp"], "lims": ["erp"], "wms": ["erp"], "eam": ["erp"], "cw": ["erp"]}},
       "hybrid": {"note": "The pattern I see work best. ERP is the backbone for business data: orders, costs and master data. Execution data, such as schedules, results, instructions and events, goes straight to MOM. Each system owns what it's good at.",
-              "routes": {"plm": ["erp", "mes"], "cpq": ["erp", "mes"], "aps": ["erp", "mes"], "lims": ["mes"], "wms": ["erp", "mes"], "eam": ["erp", "mes"], "cw": ["mes"], "data": ["erp", "mes"]}},
-      "mes": {"note": "Specialists connect straight to MOM, which becomes the operational hub and reports up to ERP. Fast and real-time. It needs clear ownership of master data, or you end up with two versions of the truth.",
-              "routes": {"plm": ["mes"], "cpq": ["mes"], "aps": ["mes"], "lims": ["mes"], "wms": ["mes"], "eam": ["mes"], "cw": ["mes"], "data": ["mes"]}}
+              "routes": {"plm": ["erp", "mes"], "cpq": ["erp"], "aps": ["erp", "mes"], "lims": ["mes"], "wms": ["erp", "mes"], "eam": ["erp", "mes"], "cw": ["mes"]}},
+      "mes": {"note": "Specialists connect straight to MOM, which becomes the operational hub and reports up to ERP. Fast and real-time. It needs clear ownership of master data, or you end up with two versions of the truth. CPQ still goes through ERP, because it deals in orders and prices.",
+              "routes": {"plm": ["mes"], "cpq": ["erp"], "aps": ["mes"], "lims": ["mes"], "wms": ["mes"], "eam": ["mes"], "cw": ["mes"]}}
     },
     "apps": {
       "mes": {"name": "MES: production", "module": true, "what": "The production part of MOM: dispatching orders, recording counts, scrap and downtime as they happen, OEE, and guided work instructions.",
@@ -106,7 +107,7 @@
               "link": "/post/plm-erp-mes-digital-thread", "read": "PLM, ERP and MES"},
       "cpq": {"name": "CPQ", "what": "Configures complex products and prices them correctly.",
               "erp": "The configured order lands in ERP with its pricing, and ERP plans and costs it.",
-              "mes": "The buildable configuration (options, parameters, test limits) reaches MOM so the line builds exactly what was sold.",
+              "mes": "CPQ doesn't connect to MOM directly. The configuration reaches the shopfloor through ERP, as part of the order, its BOM and routing.",
               "link": "/post/cpq-to-shopfloor", "read": "CPQ to shopfloor"},
       "aps": {"name": "APS", "what": "Builds detailed, constraint-based schedules when scheduling gets genuinely hard. Not every manufacturer needs one: ERP planning plus MOM's own sequencing is often enough.",
               "erp": "Takes demand and orders from ERP and returns planned dates.",
@@ -124,13 +125,13 @@
               "erp": "Asset values, spares purchasing and maintenance costs live with ERP.",
               "mes": "Run hours, counts and downtime from MOM trigger condition-based work, and maintenance windows feed back into the schedule.",
               "link": "/post/cmms-vs-eam-vs-mes", "read": "CMMS vs EAM vs MES"},
-      "cw": {"name": "Connected worker", "what": "Puts instructions, checklists, skills and handover in front of frontline people. Best built into MOM, on the same data.",
+      "cw": {"name": "Connected worker", "what": "Puts instructions, checklists, skills and handover in front of frontline people. It can be a standalone app, or part of MOM. Built into MOM, it works on the same data as everything else.",
              "erp": "Bought standalone and wired to ERP, it knows the order but not what the line is actually doing.",
              "mes": "Built into or tightly linked with MOM, every checklist and instruction knows the order, the machine and the operator.",
              "link": "/post/connected-worker-one-app-not-five", "read": "Connected worker"},
-      "data": {"name": "Data and AI", "what": "A data platform brings shopfloor and business data together for analytics and AI. AI and the data foundation are best built together.",
-             "erp": "Business data: orders, costs, customers and suppliers.",
-             "mes": "Contextualised operational data from MOM, every event tied to its order, material, machine and operator. That context is what makes AI useful.",
+      "data": {"name": "Data and AI", "module": true, "labels": ["From the business", "From the shopfloor"], "what": "Wraps around everything. A data platform brings data from every one of these systems together for analytics and AI, and AI can work across all of them. AI and the data foundation are best built together.",
+             "erp": "ERP, PLM, CPQ and the other business systems: orders, costs, customers, suppliers and product definitions.",
+             "mes": "MOM and the systems around it: contextualised operational data, every event tied to its order, material, machine and operator, plus machine data from below. That context is what makes AI useful.",
              "link": "/post/manufacturing-data-platforms", "read": "Where shopfloor data lives"}
     }
   }</script>
