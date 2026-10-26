@@ -1346,8 +1346,8 @@
   - data-lake
   - uns
 - term: Time-series data
-  short: Values recorded against time, such as a temperature reading every second.
-  body: Historians are built for it at very high frequency. MES/MOM records events with context and can capture the process values most operations need. Where both are used, they link by time and equipment.
+  short: Values recorded against time at a regular interval, such as an oven temperature read at a consistent frequency.
+  body: The interval depends on how quickly the value changes and what it's used for, from fractions of a second to every few minutes. Historians are built for it at very high frequency. MES/MOM records events with context and can capture the process values most operations need. Where both are used, they link by time and equipment.
   articles:
   - historian-vs-mes
   - manufacturing-data-platforms
