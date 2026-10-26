@@ -88,8 +88,8 @@ Some ERP vendors offer genuinely best-of-breed options for several of these. Oth
 
 Be wary of anyone who tells you it has to be one or the other. The best-run manufacturers I see treat ERP as the backbone and add specialists where the operation genuinely needs them.
 
-## Next on the line
+## Where this learning path goes next
 
 That's the core. The rest of this learning path looks at each of the specialists around it: what they do and where the boundary with ERP sits, so you can decide whether you actually need one.
 
-Next stop, the [smart factory tech stack](/post/smart-factory-tech-stack), system by system. Which of these is your business already stretching ERP to do?
+Next up is the [smart factory tech stack](/post/smart-factory-tech-stack), system by system. Which of these is your business already stretching ERP to do?

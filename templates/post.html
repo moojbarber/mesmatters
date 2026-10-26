@@ -86,7 +86,7 @@
             <img src="{{ base }}/images/art/{{ lp.next.slug }}.svg" alt="" width="1600" height="900" loading="lazy">
             <span><small>Up next, article {{ lp.index + 1 }} of {{ lp.n }} / {{ lp.next.read_time }} min read</small><b>{{ lp.next.short }}</b><span>{{ lp.next.description }}</span><em>Continue the path</em></span>
           </a>
-          <p class="lp-next-links">{% if lp.prev %}<a href="{{ base }}/post/{{ lp.prev.slug }}?path={{ lp.id }}">Previous: {{ lp.prev.short }}</a>{% else %}<span></span>{% endif %}<a href="{{ base }}/paths/{{ lp.id }}">See the whole line</a></p>
+          <p class="lp-next-links">{% if lp.prev %}<a href="{{ base }}/post/{{ lp.prev.slug }}?path={{ lp.id }}">Previous: {{ lp.prev.short }}</a>{% else %}<span></span>{% endif %}<a href="{{ base }}/paths/{{ lp.id }}">See the whole path</a></p>
           {% else %}
           <div class="lp-done" data-lp-done>
             <div class="lp-done-hero">
