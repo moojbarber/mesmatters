@@ -53,7 +53,7 @@ I make the wider case in [You can't hit ESG targets without shopfloor data](/pos
 
 ## Start with the big consumers
 
-You don't need to meter everything. Start with your largest energy users and your bottleneck lines, link them to production data, and look for the obvious waste first. In my experience, the first improvements usually pay for the metering.
+You don't need to meter everything. Start with your largest energy users and your bottleneck lines, link them to production data, and look for the obvious waste first. In my experience, the first improvements can often pay for the metering.
 
 This article is part of the [MES functionality series](/post/mes-functionality-guide).
 

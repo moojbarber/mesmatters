@@ -47,7 +47,7 @@ pages:
       - q: Do food manufacturers need MES?
         a: Not every site needs a full MES on day one, but most food and beverage sites need what it provides. Fast batch traceability, quality checks recorded at source, give-away control and accurate yield are the usual starting points. The question is whether paper and spreadsheets can still deliver those reliably as volume and audit pressure grow.
       - q: How does MES help with a food recall?
-        a: MES/MOM records which raw material lots went into which batches, on which line, at what time and with which results. That genealogy lets you trace a suspect lot forward to every affected batch and customer, and back to the supplier, in minutes rather than the day or more a paper-based mock recall often takes.
+        a: MES/MOM records which raw material lots went into which batches, on which line, at what time and with which results. That genealogy lets you trace a suspect lot forward to every affected batch and customer, and back to the supplier, in minutes, which is exactly what a mock recall tests.
       - q: Is MES different for process manufacturing like food?
         a: The principles are the same, but the detail differs. Food works with recipes, batches, units of measure that change through the process, and losses at every step. A system built for discrete assembly can struggle with that, so ask vendors to demonstrate a real recipe from your plant, including a rework or a quality hold.
 
@@ -332,7 +332,7 @@ pages:
 
           **Put SPC where the process is.** Control charts on the line, seen by the operator, catch drift before it becomes scrap. See [SPC on the shopfloor](/post/spc-on-the-shopfloor).
 
-          **Make traceability a search, not a project.** If a mock recall takes a day, that's where to start. See [manufacturing traceability](/post/manufacturing-traceability).
+          **Make traceability a search, not a project.** If a mock recall is slow, that's where to start. See [manufacturing traceability](/post/manufacturing-traceability).
       - h: In a regulated industry
         body: |
           Audit trails and electronic signatures need to be designed in from the start, with validation planned as part of the project. [MES in regulated industries](/post/mes-in-regulated-industries) covers what to look for.
