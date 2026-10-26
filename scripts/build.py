@@ -139,9 +139,10 @@ def load_paths(posts):
     HX, END, T, K = 190, 850, 10, 0.55  # K: horizontal run per unit of vertical drop on the branch
     N = len(data["paths"])
     STEP = 80 if N <= 8 else 62
-    TOP = 180 if N <= 8 else 70
+    TOP = 180 if N <= 8 else 160   # room above the first line for its angled station labels
+    BOTTOM = 180 if N <= 8 else 70
     HY = TOP + (N - 1) * STEP / 2
-    map_h = int(2 * TOP + (N - 1) * STEP + (0 if N <= 8 else 20))
+    map_h = int(TOP + (N - 1) * STEP + BOTTOM)
     paths = []
     for i, d in enumerate(data["paths"]):
         missing = [s for s in d["stations"] if s not in by_slug]
