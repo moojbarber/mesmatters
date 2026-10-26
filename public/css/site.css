@@ -1552,3 +1552,5 @@ button.ttt-label:hover{background:rgba(255,255,255,.04)}
 .soc-x:hover{border-color:rgba(255,255,255,.6)}
 .soc-instagram:hover{border-color:#d6249f}
 @media (max-width:640px){.cta .follow>span{flex-basis:100%}}
+.home-hero+.wrap>.section:first-child{margin-top:8px}
+.home-hero+.wrap>.section:nth-child(2){margin-top:28px}
