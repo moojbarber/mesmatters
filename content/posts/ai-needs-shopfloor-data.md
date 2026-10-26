@@ -16,7 +16,7 @@ Large language models show why. The technology is remarkable, but on its own it 
 
 A common goal on strategy slides is a single line: "Use AI to optimise the factory."
 
-Behind that line sits a long list of prerequisites:
+Behind that line sit all the things that make it work:
 
 - Defined, documented processes
 - An MES/MOM platform running those processes on the shopfloor
@@ -27,7 +27,7 @@ Behind that line sits a long list of prerequisites:
 - A team that trusts the numbers
 - A use case and a hypothesis to test
 
-AI is the line that delivers the biggest gains, and the lines above it are what make those gains possible. The organisations that get the most from AI invest in both.
+AI is the line that delivers the biggest gains, and the lines above it are what make those gains possible. They aren't a queue to clear before AI gets a turn. The organisations getting the most from AI work on the whole list at once, and the AI and the data each move faster because of the other.
 
 ## AI isn't a black box
 
@@ -58,7 +58,7 @@ Newer applications are real too:
 
 Each depends on good data, collected over time, with context.
 
-## Where generative AI doesn't have to wait
+## Where generative AI delivers from day one
 
 Generative AI is different from AI that learns from operational data. Large language models arrive already trained, so they don't need years of a factory's own data to be useful. They also work well on information most factories already have, however messy: SOPs, work instructions, equipment manuals, maintenance work orders, shift logs and free-text comments.
 
@@ -76,9 +76,9 @@ The limits:
 - **It can sound right and be wrong.** Answers should be grounded in your own documents, show their source, and be reviewed by a person when they matter.
 - **Acting is different from answering.** Once AI recommends or takes actions on live operations, data quality and guardrails matter again. More in [Agentic AI and MCP](/post/agentic-ai-mcp-manufacturing).
 
-## The path for operational AI
+## Building operational AI and the foundation together
 
-Most manufacturers are somewhere between paper-based and partially digital. For AI that predicts and optimises operations, the route goes through the foundation: defined processes, MES/MOM on the shopfloor, connected equipment and contextualised data built up over time. GenAI pilots on documents and know-how can run alongside that work, so people see value early. [Time to truth](/post/time-to-truth) describes the stages.
+Most manufacturers are somewhere between paper-based and partially digital. AI that predicts and optimises operations grows with the foundation: defined processes, MES/MOM on the shopfloor, connected equipment and contextualised data built up over time. You don't wait for that to be finished. Start a model on the first line you connect, and let what it needs set the priorities for what to capture next. GenAI on documents and know-how can start straight away, so people see value early. [Time to truth](/post/time-to-truth) describes the stages.
 
 ## Where to start
 
@@ -86,6 +86,6 @@ Start with a question rather than a model: what decision would you make differen
 
 ## My view
 
-I'm genuinely excited about what AI will do for manufacturing. AI will fix your factory, provided you give it the right data and context, in the same way that large language models only became useful once they had the internet to learn from. The manufacturers who'll get the most from it are the ones building that foundation now: defined processes, MES/MOM on the shopfloor and contextualised data that builds up over time. Start GenAI on your documents today, and build the data that lets AI predict and optimise alongside it.
+I'm genuinely excited about what AI will do for manufacturing. AI will fix your factory, provided you give it the right data and context, in the same way that large language models only became useful once they had the internet to learn from. The manufacturers who'll get the most from it are the ones building that foundation and their AI together, starting now: defined processes, MES/MOM on the shopfloor and contextualised data that builds up over time. Start GenAI on your documents today, and build the data that lets AI predict and optimise alongside it.
 
 What's the one decision in your factory you'd most like AI to help with, and do you have the data for it yet?

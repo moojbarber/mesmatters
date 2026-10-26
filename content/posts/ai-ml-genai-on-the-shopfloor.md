@@ -51,7 +51,7 @@ I go through more of these in [Practical GenAI for the shopfloor](/post/practica
 
 You'll also hear a lot about agentic AI. These are systems that don't just answer a question but plan and carry out a task: gathering information, deciding what to do, acting through other software, and learning from the result.
 
-It's exciting. It's also the top of the maturity curve, because an agent acting on your operations data and transactions needs very good data and very clear guardrails. I explain it for operations leaders in [Agentic AI and MCP, explained](/post/agentic-ai-mcp-manufacturing).
+It's exciting. It also asks the most of your data, because an agent acting on your operations data and transactions needs very good data and very clear guardrails. I explain it for operations leaders in [Agentic AI and MCP, explained](/post/agentic-ai-mcp-manufacturing).
 
 ## What all three need
 
@@ -63,17 +63,17 @@ GenAI arrives already trained, so it can start earlier. It works well on the doc
 
 An agent can't safely act on information it can't trust.
 
-So for AI that predicts or acts, the data foundation comes first. For GenAI on documents and knowledge, you can start now, in parallel. On the shopfloor, [MES/MOM](/post/what-is-mes) is where most of that data is created and given its context: which order, which material, which machine, which shift, and why.
+So AI that predicts or acts grows with the data foundation, and the two are best built together. Each use case shows you which data to capture next, and each improvement in the data makes the model better. GenAI on documents and knowledge can start now. On the shopfloor, [MES/MOM](/post/what-is-mes) is where most of that data is created and given its context: which order, which material, which machine, which shift, and why.
 
 ## A practical way to start
 
-Don't start with the technology. Start with a decision you'd like to make better.
+Start with a decision you'd like to make better, and work on the AI and the data for it together.
 
 - Which failure would you most like to see coming?
 - Which quality defect costs you most?
 - Which report do people spend hours building every week?
 - Which question do new starters ask most often?
 
-Then ask whether you have the data that decision needs, at the right granularity, with the right context. If you do, there's probably an AI use case worth piloting. If you don't, you've just found your first project, and it isn't an AI project.
+Then ask whether you have the data that decision needs, at the right granularity, with the right context. If you do, there's probably an AI use case worth piloting. If you don't, you've found both the data to build and the AI use case that justifies building it. Capture the data on one line, and start the model there as the history grows.
 
 Which of these three is closest to what your business is asking for right now?

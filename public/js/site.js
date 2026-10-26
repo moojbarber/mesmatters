@@ -178,7 +178,7 @@
 (function () {
   var el = document.getElementById('lp-data');
   if (!el) return;
-  var PATHS = JSON.parse(el.textContent), BASE = window.LP_BASE || '';
+  var PATHS = JSON.parse(el.textContent), BASE = (window.LP_BASE || '').replace(/\/\.$/, '');
   var byId = {}; PATHS.forEach(function (p) { byId[p.id] = p; });
   var KEY = 'sm-paths-v1';
   function load() { try { return JSON.parse(localStorage.getItem(KEY)) || { read: {}, last: null }; } catch (e) { return { read: {}, last: null }; } }
@@ -187,7 +187,7 @@
   function isRead(slug) { return !!S.read[slug]; }
   function doneCount(p) { return p.slugs.filter(isRead).length; }
   function nextIndex(p) { for (var i = 0; i < p.slugs.length; i++) if (!isRead(p.slugs[i])) return i; return -1; }
-  function postUrl(slug, pid) { return BASE + '/post/' + slug + '?path=' + pid; }
+  function postUrl(slug, pid) { return BASE + '/post/' + slug + (window.LP_EXT || '') + '?path=' + pid; }
   function current() {
     if (S.last && byId[S.last]) { var p = byId[S.last], d = doneCount(p); if (d > 0 && d < p.slugs.length) return p; }
     var best = null; PATHS.forEach(function (p) { var d = doneCount(p); if (d > 0 && d < p.slugs.length && (!best || d > doneCount(best))) best = p; });
@@ -346,7 +346,7 @@
           d.classList.add(on ? 'on' : 'off');
           d.querySelector('span').textContent = (on ? '' : 'Not used in this pattern. ') + A[r];
         });
-        var a = info.querySelector('a'); a.href = (window.LP_BASE || '') + A.link; a.textContent = 'Read: ' + A.read + ' →';
+        var a = info.querySelector('a'); a.href = (window.LP_BASE || '').replace(/\/\.$/, '') + A.link + (window.LP_EXT || ''); a.textContent = 'Read: ' + A.read + ' →';
       }
       spawn();
     }

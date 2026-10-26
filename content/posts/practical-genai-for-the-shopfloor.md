@@ -1,15 +1,13 @@
 ---
 title: "Practical GenAI for the shopfloor: four uses that save time today"
 short: "Practical GenAI"
-description: "Forget the hype. Four practical ways generative AI already saves time in factories, and the one condition that decides whether any of them work."
+description: "Four practical ways generative AI already saves time in factories, and the one condition that decides how much each of them delivers."
 published: 2026-06-25
 category: thought-leadership
 art: signal
 ---
 
-Generative AI gets talked about as if it will run the factory by next year.
-
-It won't. But it is already genuinely useful for people who work in and around the shopfloor, as long as it's pointed at the right problems and fed the right data.
+Generative AI is already genuinely useful for people who work in and around the shopfloor. Point it at the right problems and give it the right data, and it saves time from the first week.
 
 Here are four uses I think are practical today.
 
@@ -47,7 +45,7 @@ Shift handover is usually verbal, or a few lines in a log. Detail gets lost and 
 
 GenAI can write the handover from what actually happened: which orders ran, where the stops were, which quality checks are outstanding, what's waiting. The outgoing supervisor reviews it and adds the things only a person knows. I cover handover in more depth in [Shift handover is a process](/post/digital-shift-handover).
 
-## The condition that decides whether any of this works
+## The condition that decides how much this delivers
 
 Every one of these depends on the same thing: the AI has to have access to good, contextualised operational data.
 

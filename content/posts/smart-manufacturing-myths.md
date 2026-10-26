@@ -1,7 +1,7 @@
 ---
 title: "Eight smart manufacturing myths that refuse to die"
 short: "Eight smart manufacturing myths"
-description: "AI will solve everything. Excel is good enough. IIoT replaces MES. Eight myths I hear in boardrooms and on LinkedIn every week, and why they're wrong."
+description: "AI will solve everything on its own. Excel is good enough. IIoT replaces MES. Eight myths I hear in boardrooms and on LinkedIn every week, and why they're wrong."
 published: 2026-08-20
 category: thought-leadership
 art: mesh
@@ -11,11 +11,11 @@ Some ideas in this industry just won't go away. I hear them in boardrooms, at tr
 
 If you can explain why each of these is wrong, you'll be ahead of most people in the room.
 
-## 1. "AI will solve everything"
+## 1. "AI will solve everything on its own"
 
-It won't. Not without a data foundation.
+AI can do a remarkable amount in a factory. What it can't do is learn from data that was never captured.
 
-Most manufacturers still struggle to capture accurate, contextualised data from the shopfloor, but their expectations are already at AI level. You can't build predictive or optimising AI on manual entries, estimates and delayed ERP transactions. Generative AI can help sooner, by working on your documents, procedures, maintenance notes and shift logs. But it can't conjure up operational data that was never captured. Get the processes defined and the data flowing, run GenAI pilots alongside, and AI can deliver.
+Most manufacturers still struggle to capture accurate, contextualised data from the shopfloor, while their ambitions for AI grow fast. That's healthy, as long as the two move together. Predictive and optimising AI learns from your operations, so it gets better as the data does. Manual entries and delayed ERP transactions give it little to work with. Automatic capture with context gives it a great deal. Generative AI can help from day one, working on your documents, procedures, maintenance notes and shift logs, and even turning messy history into usable data. Build the data and the AI together, and each makes the other worth more.
 
 More on this in [AI will transform your factory, if you give it the right data](/post/ai-needs-shopfloor-data).
 

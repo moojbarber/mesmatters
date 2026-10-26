@@ -87,7 +87,7 @@ With digitalised point solutions, it's modest. AI can make sense of data people 
 
 Then the curve bends. Once the truth arrives "right now", with its context, AI can learn from your own operations, spotting anomalies and finding root causes. A copilot can explain why Line 3 stopped from the facts, not a guess. With harmonious systems it predicts and optimises across the whole stack, because planning, engineering, quality and maintenance data finally line up: maintenance is planned from the bearing's condition, and the schedule moves around it. At "before anyone asks", agents prepare the action and people approve it. And at "without asking", AI acts on routine decisions within agreed limits. That only holds up because everything underneath it does.
 
-So the value grows with each stage, and most of it sits in the last few. That's why the order matters. Prediction needs history, and history needs data captured accurately and automatically, with its context. You can't get to "before it happens" from "eventually". I go further into this in [AI will transform your factory, if you give it the right data](/post/ai-needs-shopfloor-data).
+So the value grows with each stage, and most of it sits in the last few. That's why AI and the data belong in the same plan, from the start. Prediction needs history, and history needs data captured accurately and automatically, with its context. Put AI to work at whatever stage you're at, and let it pull the data forward: every gap it runs into tells you what to capture next, and every stage you move up makes it more capable. I go further into this in [AI will transform your factory, if you give it the right data](/post/ai-needs-shopfloor-data).
 
 ## Where most factories are
 

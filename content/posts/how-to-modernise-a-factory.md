@@ -10,9 +10,15 @@ guide: true
 
 People ask me some version of the same question all the time. "We know we need to modernise. Where do we actually start?"
 
-There's no single answer, because every factory starts from a different place. But there is an order that works, and most of the expensive mistakes I see come from doing the steps out of sequence. Buying software before mapping the process. Chasing AI before the downtime data is right. Customising the software to match every old quirk. Rolling out to ten sites before the first one works.
+There's no single answer, because every factory starts from a different place. But there is an order that works, and most of the expensive mistakes I see come from doing the steps out of sequence. Buying software before mapping the process. Running AI and the data work as separate projects. Customising the software to match every old quirk. Rolling out to ten sites before the first one works.
 
 So this is the route I'd follow, step by step, with a simple test for each one so you know when you're ready to move on.
+
+## AI runs alongside every step
+
+You'll find AI in several of the steps below, not saved for the end. That's deliberate. AI and the data foundation are best built together. AI gives the programme a clear reason to capture data well, and every step that improves the data makes the AI more capable.
+
+Generative AI can help from the first week, with procedures, shift summaries and plain-English questions. Predictive and optimising AI learns from your shopfloor data, so its value grows with every line you connect. Start it early and let it grow. More in [AI will transform your factory, if you give it the right data](/post/ai-needs-shopfloor-data).
 
 ## Step 1: Be honest about where you are today
 
@@ -36,7 +42,7 @@ Do it with operators, quality technicians, maintenance engineers and logistics i
 
 ## Step 3: Put a number on the problem
 
-Leadership approves business impact, not features. So take the pain you found in step 2 and put money on it:
+Leadership approves business impact, not features. So take the pain you found in step 2 and put money on it, including the AI use cases you want to run on the data you'll capture:
 
 - What do scrap, rework and complaints cost a year?
 - What's an hour of lost production on your bottleneck worth?
@@ -84,7 +90,7 @@ Use the [12 questions](/post/how-to-choose-an-mes) to structure the evaluation, 
 
 ## Step 7: Start small, with the end in mind
 
-Pick one line or area where you can show value quickly. Often the best first move is removing the paper that hurts most: quality check sheets, downtime logs, work instructions or travellers. Get the wins on the board and build confidence before you grow.
+Pick one line or area where you can show value quickly. Often the best first move is removing the paper that hurts most: quality check sheets, downtime logs, work instructions or travellers. Get the wins on the board and build confidence before you grow. Pick an AI use case for the same area, so the data you capture has a purpose from day one.
 
 Small doesn't mean narrow-minded. The end state should still be clear on day one, even if you only use part of the platform at first. That's the difference between a pilot that scales and a pilot that becomes another silo. More in [Going paperless](/post/paperless-manufacturing).
 
@@ -94,7 +100,7 @@ Small doesn't mean narrow-minded. The end state should still be clear on day one
 
 Automatic data capture is what turns MES/MOM from a place where people type things in into a real-time view of the factory.
 
-Start with your bottleneck assets. Use standard connectivity, usually OPC UA, with MQTT and a unified namespace if they fit your architecture. Detect stops automatically and let operators add the reason while it's fresh. Most people are genuinely surprised when they first see their micro-stops. See [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
+Start with your bottleneck assets. Use standard connectivity, usually OPC UA, with MQTT and a unified namespace if they fit your architecture. Detect stops automatically and let operators add the reason while it's fresh. Most people are genuinely surprised when they first see their micro-stops. This is also where predictive AI gets its first clean history, so start the models here, on the bottleneck, rather than waiting for every line. See [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
 
 And treat every new connection as a security decision. MES/MOM sits between IT and OT. Keep the enterprise network away from the PLCs. See [OT cybersecurity for MES/MOM](/post/ot-cybersecurity-for-mes).
 
@@ -110,13 +116,7 @@ Then measure what the business case promised, against the baseline you set befor
 
 ## Step 10: Scale with a template
 
-Once the first area works, turn what you built into a template: standard processes, master data rules, KPIs, screens and integrations. Roll it out area by area and site by site, allowing local differences only where there's a genuine reason. Later sites go much faster. See [Rolling out across sites](/post/mes-multi-site-rollout).
-
-## Step 11: Now AI starts to pay back
-
-Notice where AI sits in this list.
-
-That isn't because I'm sceptical about it. I believe AI can genuinely transform manufacturing. But it learns from your shopfloor data, and until steps 1 to 10 are in place, there isn't much reliable data to learn from. GenAI can help earlier, with shift summaries and plain-English questions about your procedures. Predictive and optimising AI needs the foundation first. More in [AI will transform your factory, if you give it the right data](/post/ai-needs-shopfloor-data).
+Once the first area works, turn what you built into a template: standard processes, master data rules, KPIs, screens and integrations. Roll it out area by area and site by site, allowing local differences only where there's a genuine reason. Later sites go much faster, and the AI use cases travel with the template. Each new site adds history, so the models get better as you scale. See [Rolling out across sites](/post/mes-multi-site-rollout).
 
 ## The checklist
 
@@ -132,6 +132,6 @@ That isn't because I'm sceptical about it. I believe AI can genuinely transform 
 | 8. Connect the machines | Bottleneck downtime and output come from the equipment |
 | 9. Go live and measure | The promised improvement shows up in numbers leadership accepts |
 | 10. Scale | Later sites deploy from a template with only justified local differences |
-| 11. Add AI | Use cases are built on data you already trust |
+| Alongside every step: AI | Each phase has an AI use case, and the models get better as the data does |
 
 Which step is your factory on right now, and which one are you tempted to skip?

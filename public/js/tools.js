@@ -1,7 +1,7 @@
 /* Shopfloor Matters tools: readiness check, 1% calculator, systems picker, vendor scorecard, email gates, Ask Matt */
 (function () {
   var d = document;
-  var BASE = window.LP_BASE || '';
+  var BASE = (window.LP_BASE || '').replace(/\/\.$/, '');
   function $(s, r) { return (r || d).querySelector(s); }
   function $$(s, r) { return [].slice.call((r || d).querySelectorAll(s)); }
   function store(k, v) { try { if (v === undefined) return JSON.parse(localStorage.getItem('sm-tool-' + k) || 'null'); localStorage.setItem('sm-tool-' + k, JSON.stringify(v)); } catch (e) { return null; } }

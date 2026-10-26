@@ -100,7 +100,7 @@
   </div>
 </footer>
 {% if paths_json %}<script type="application/json" id="lp-data">{{ paths_json|safe }}</script>{% endif %}
-<script>window.LP_BASE="{{ base }}";</script>
+<script>window.LP_BASE="{{ base }}/.";window.LP_EXT="{{ '.html' if base == '@REL@' else '' }}";</script>
 <script src="{{ base }}/js/site.js?v={{ version }}" defer></script>
 {% if tools_js %}<script src="{{ base }}/js/tools.js?v={{ version }}" defer></script>{% endif %}
 </body>
