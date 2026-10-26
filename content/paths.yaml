@@ -2,7 +2,7 @@
 # "stations" lists the article slugs in reading order. Read times and "what you'll learn" lines come from the articles.
 # Order here is the order on the hub map, top to bottom. The home page shows them in `home_order`.
 
-home_order: [foundations, beyond-erp, business-case, implementation, shopfloor-ai, connected-worker, systems-landscape]
+home_order: [foundations, strategy, beyond-erp, business-case, implementation, shopfloor-ai, connected-worker, mes-functionality, metrics, quality-traceability, maintenance, connecting-the-plant, systems-landscape]
 
 paths:
   - id: shopfloor-ai
@@ -48,6 +48,7 @@ paths:
     blurb: ERP runs the business. These are the strategic systems that run the operation around it, from MES/MOM and connected worker to WMS, APS and CPQ, and how to decide what you need.
     stations:
       - what-is-erp
+      - erp-vs-mrp-vs-mes
       - smart-factory-tech-stack
       - mes-simplifies-erp
       - mes-vs-mom
@@ -68,12 +69,16 @@ paths:
     blurb: What MES and MOM actually do, how ISA-95 fits the systems together, how OEE is measured, and where ERP should stop.
     stations:
       - what-is-mes
+      - history-of-mes
+      - mesa-and-the-definition-of-mes
       - mes-vs-mom
       - isa-95-explained
+      - discrete-vs-process-manufacturing
       - mes-functionality-guide
       - mes-functionality-production
       - what-is-oee
       - mes-vs-erp
+      - smart-factory-glossary
 
   - id: implementation
     title: Implementation playbook
@@ -119,6 +124,8 @@ paths:
     image: opc-ua-mqtt-uns-explained
     blurb: How the systems actually connect. Integration patterns, who owns the BOM, quality, lab and maintenance data, and the protocols that join the shopfloor up.
     stations:
+      - shopfloor-applications-explained
+      - mes-mom-erp-compared
       - isa95-integration-patterns
       - ebom-mbom-as-built
       - qms-and-mes-quality
@@ -127,3 +134,109 @@ paths:
       - scada-vs-mes
       - iiot-vs-mes
       - opc-ua-mqtt-uns-explained
+
+  - id: mes-functionality
+    title: MES functionality in depth
+    who: Learning what MES does
+    role: learning what MES/MOM does
+    color: "#c9a2ff"
+    rgb: "201,162,255"
+    image: mes-functionality-guide
+    blurb: One function at a time, from scheduling and quality to inventory, maintenance and energy, with what each looks like when it runs in MES/MOM.
+    stations:
+      - mes-functionality-guide
+      - mes-functionality-scheduling
+      - mes-functionality-quality
+      - mes-functionality-inventory
+      - mes-functionality-logistics
+      - mes-functionality-maintenance
+      - mes-functionality-tooling
+      - mes-functionality-energy
+
+  - id: metrics
+    title: Metrics that matter
+    who: Measuring performance
+    role: measuring performance
+    color: "#ffd166"
+    rgb: "255,209,102"
+    image: manufacturing-kpis-beyond-oee
+    blurb: How the common shopfloor measures are calculated, and how to use them to improve performance rather than just report it.
+    stations:
+      - what-is-oee
+      - oee-vs-teep
+      - takt-time-vs-cycle-time-vs-lead-time
+      - first-pass-yield-vs-rolled-throughput-yield
+      - mtbf-vs-mttr-vs-mttf
+      - manufacturing-kpis-beyond-oee
+      - kaizen-and-mes
+      - esg-needs-shopfloor-data
+
+  - id: quality-traceability
+    title: Quality and traceability
+    who: Owning quality
+    role: responsible for quality and compliance
+    color: "#ff6b9a"
+    rgb: "255,107,154"
+    image: manufacturing-traceability
+    blurb: Traceability that stands up to a recall, quality systems compared, SPC on the line and what regulated industries need on top.
+    stations:
+      - manufacturing-traceability
+      - lot-vs-serial-traceability
+      - qms-vs-lims-vs-mes
+      - spc-on-the-shopfloor
+      - mes-in-regulated-industries
+      - isa-88-and-isa-95
+      - food-and-beverage-manufacturing-challenges
+      - food-manufacturing-mes-barriers
+
+  - id: maintenance
+    title: Maintenance and reliability
+    who: Keeping lines running
+    role: responsible for maintenance and reliability
+    color: "#9be564"
+    rgb: "155,229,100"
+    image: preventive-vs-predictive-maintenance
+    blurb: Maintenance strategies compared, the systems that support them, the reliability metrics behind them and the data predictive maintenance depends on.
+    stations:
+      - preventive-vs-predictive-maintenance
+      - mes-functionality-maintenance
+      - cmms-vs-eam-vs-mes
+      - mtbf-vs-mttr-vs-mttf
+      - predictive-maintenance-data
+
+  - id: connecting-the-plant
+    title: Connecting the plant
+    who: Connecting OT and IT
+    role: connecting machines and systems
+    color: "#5fe0ff"
+    rgb: "95,224,255"
+    image: plc-vs-scada-vs-dcs-vs-mes
+    blurb: From PLCs and SCADA up to MES/MOM, the protocols in between, where data is stored and how to keep it all secure.
+    stations:
+      - it-vs-ot
+      - plc-vs-scada-vs-dcs-vs-mes
+      - opc-ua-vs-mqtt
+      - unified-namespace-uns
+      - historian-vs-mes
+      - ot-cybersecurity-for-mes
+      - cloud-vs-on-premises-mes
+
+  - id: strategy
+    title: Smart factory strategy
+    who: Setting direction
+    role: setting smart factory strategy
+    color: "#ff9f5a"
+    rgb: "255,159,90"
+    image: what-is-a-smart-factory
+    blurb: What a smart factory really is, the myths to ignore, where to start and how to modernise without betting the plant.
+    stations:
+      - what-is-a-smart-factory
+      - smart-manufacturing-myths
+      - industry-4-0-vs-industry-5-0
+      - time-to-truth
+      - smart-factory-where-to-start
+      - how-to-modernise-a-factory
+      - build-vs-buy-mes
+      - replacing-a-homegrown-mes
+      - mes-and-digital-twins
+      - service-data-back-to-engineering

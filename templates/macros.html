@@ -140,11 +140,11 @@
   <div class="rec-grid">
   {% for x in r["items"] %}
     <button type="button" class="rec rv" data-rec="{{ x.id }}" aria-haspopup="dialog">
-      <span class="rec-who"><img src="{{ base }}/images/recs/{{ x.id }}.jpg" alt="" width="56" height="56" loading="lazy"><span><b>{{ x.name }}</b><small>{{ x.title }}</small></span></span>
+      <span class="rec-who"><img src="{{ x.img }}" alt="" width="56" height="56" loading="lazy"><span><b>{{ x.name }}</b><small>{{ x.title }}</small></span></span>
       <span class="rec-q">“{{ x.quote }}”</span>
       <span class="rec-foot"><span>{{ x.date }}</span><span class="rec-more">Read in full →</span></span>
     </button>
-    <template id="rec-{{ x.id }}"><div class="rec-dlg-head"><img src="{{ base }}/images/recs/{{ x.id }}.jpg" alt="" width="72" height="72"><div><b>{{ x.name }}</b><small>{{ x.title }}</small><small class="rec-rel">{{ x.date }} · {{ x.relation }}</small></div></div><div class="rec-dlg-body">{% for para in x.text.strip().split("\n\n") %}<p>{{ para }}</p>{% endfor %}</div><a class="rec-src" href="{{ r.source }}" target="_blank" rel="noopener">View on LinkedIn →</a></template>
+    <template id="rec-{{ x.id }}"><div class="rec-dlg-head"><img src="{{ x.img }}" alt="" width="72" height="72"><div><b>{{ x.name }}</b><small>{{ x.title }}</small><small class="rec-rel">{{ x.date }} · {{ x.relation }}</small></div></div><div class="rec-dlg-body">{% for para in x.text.strip().split("\n\n") %}<p>{{ para }}</p>{% endfor %}</div><a class="rec-src" href="{{ r.source }}" target="_blank" rel="noopener">View on LinkedIn →</a></template>
   {% endfor %}
   </div>
   <dialog class="rec-dlg" aria-label="Recommendation"><button type="button" class="rec-x" aria-label="Close">×</button><div class="rec-dlg-in"></div></dialog>

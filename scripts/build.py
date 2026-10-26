@@ -136,17 +136,27 @@ def load_paths(posts):
     """Learning paths: lines of articles. Adds hub-map geometry and per-post path context."""
     data = yaml.safe_load((ROOT / "content" / "paths.yaml").read_text(encoding="utf-8"))
     by_slug = {p["slug"]: p for p in posts}
-    HX, HY, END, T = 190, 420, 880, 10
+    HX, END, T, K = 190, 850, 10, 0.55  # K: horizontal run per unit of vertical drop on the branch
+    N = len(data["paths"])
+    STEP = 80 if N <= 8 else 62
+    TOP = 180 if N <= 8 else 70
+    HY = TOP + (N - 1) * STEP / 2
+    map_h = int(2 * TOP + (N - 1) * STEP + (0 if N <= 8 else 20))
     paths = []
     for i, d in enumerate(data["paths"]):
-        st = [by_slug[s] for s in d["stations"] if s in by_slug]
-        y = 180 + i * 80
-        dy, x0 = y - HY, HX + abs(y - HY)
+        missing = [s for s in d["stations"] if s not in by_slug]
+        assert not missing, f"path {d['id']} has unknown slugs {missing}"
+        st = [by_slug[s] for s in d["stations"]]
+        y = TOP + i * STEP
+        dy = y - HY
+        dx = abs(dy) * K
+        x0 = HX + dx
         n = len(st)
         gap = (END - x0 - 80) / (n - 1)
         segs = []
         if dy:
-            segs.append(f"left:{HX}px;top:{HY - T / 2}px;width:{abs(dy) * 2 ** .5:.1f}px;transform-origin:0 50%;transform:rotate({-45 if dy < 0 else 45}deg)")
+            ang = math.degrees(math.atan2(dy, dx))
+            segs.append(f"left:{HX}px;top:{HY - T / 2}px;width:{math.hypot(dx, dy):.1f}px;transform-origin:0 50%;transform:rotate({ang:.2f}deg)")
         segs.append(f"left:{x0 - T / 2}px;top:{y - T / 2}px;width:{END - x0 + T}px")
         stations = [{"post": q, "n": k + 1, "x": round(x0 + 80 + k * gap, 1), "y": y} for k, q in enumerate(st)]
         paths.append(dict(d, stations=stations, n=n, minutes=sum(q["read_time"] for q in st), y=y, x0=x0, end=END,
@@ -159,7 +169,7 @@ def load_paths(posts):
                                               "prev": path["stations"][k - 1]["post"] if k else None,
                                               "next": path["stations"][k + 1]["post"] if k + 1 < path["n"] else None})
     for path in paths:
-        path["hub"] = {"x": HX, "y": HY}
+        path["hub"] = {"x": HX, "y": HY, "h": map_h}
     order = {k: i for i, k in enumerate(data["home_order"])}
     return paths, sorted(paths, key=lambda p: order.get(p["id"], 99))
 
@@ -625,7 +635,9 @@ def build(base, relative=False, include_scheduled=False):
               "ask_endpoint": ASK_FORM_ENDPOINT, "sfg_url": SFG_COURSE_URL,
               "categories": [], "jsonld": []}
     recd = yaml.safe_load((ROOT / "content" / "recommendations.yaml").read_text(encoding="utf-8"))
+    import base64
     for x in recd["items"]:
+        x["img"] = "data:image/jpeg;base64," + base64.b64encode((ROOT / "public" / "images" / "recs" / f"{x['id']}.jpg").read_bytes()).decode()
         assert x["quote"].strip("…") in " ".join(x["text"].split()), f"quote not verbatim: {x['id']}"
     common["recommendations"] = recd
 

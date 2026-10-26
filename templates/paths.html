@@ -15,7 +15,7 @@
     </div>
 
     <div class="lp-mapbox">
-      <div class="lp-map" role="group" aria-label="Learning path map">
+      <div class="lp-map" role="group" aria-label="Learning path map" style="height:{{ paths[0].hub.h }}px">
         {% for p in paths %}
         <div class="lp-line" data-line="{{ p.id }}" style="--c:{{ p.color }};--rgb:{{ p.rgb }}">
           {% for s in p.segs %}<span class="lp-seg" style="{{ s }}" aria-hidden="true"></span>{% endfor %}
