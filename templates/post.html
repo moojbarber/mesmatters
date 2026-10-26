@@ -88,8 +88,31 @@
           </a>
           <p class="lp-next-links">{% if lp.prev %}<a href="{{ base }}/post/{{ lp.prev.slug }}?path={{ lp.id }}">Previous: {{ lp.prev.short }}</a>{% else %}<span></span>{% endif %}<a href="{{ base }}/paths/{{ lp.id }}">See the whole line</a></p>
           {% else %}
-          <p class="lp-next-msg"><span class="n">{{ lp.index }}</span>You've finished the {{ lp.title }} path. Nice work.</p>
-          <p class="lp-next-links"><a href="{{ base }}/paths/{{ lp.id }}">Back to the path</a><a href="{{ base }}/paths/">Choose your next path</a></p>
+          <div class="lp-done" data-lp-done>
+            <div class="lp-done-hero">
+              <div class="lp-confetti" aria-hidden="true"></div>
+              <div class="lp-medal" aria-hidden="true"><svg viewBox="0 0 120 120"><defs><linearGradient id="md-{{ lp.id }}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".45" stop-color="{{ lp.color }}"/><stop offset="1" stop-color="#33d4e0"/></linearGradient></defs><circle cx="60" cy="60" r="54" fill="none" stroke="rgba({{ lp.rgb }},.25)" stroke-width="6"/><circle class="lp-medal-ring" cx="60" cy="60" r="54" fill="none" stroke="url(#md-{{ lp.id }})" stroke-width="6" stroke-linecap="round" transform="rotate(-90 60 60)"/><circle cx="60" cy="60" r="40" fill="url(#md-{{ lp.id }})"/><path class="lp-medal-tick" d="M42 61l12 12 25-27" fill="none" stroke="#06051a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+              <span class="lp-done-kicker">Path complete</span>
+              <h2 class="lp-done-title">You've finished {{ lp.title }}</h2>
+              <p class="lp-done-sub">{{ lp.n }} articles read. That's a whole learning path done.</p>
+              <span class="lp-done-line" aria-hidden="true">{% for sl in lp.slugs %}<i style="--d:{{ loop.index0 * 70 }}ms"></i>{% endfor %}</span>
+            </div>
+            {% if lp.after %}
+            <p class="lp-done-up">Keep going. Your next path:</p>
+            {% for o in lp.after %}
+            <a class="lp-next-card lp-pick" data-pick="{{ o.id }}" href="{{ base }}/post/{{ o.first }}?path={{ o.id }}" style="--c:{{ o.color }};--rgb:{{ o.rgb }}"{% if not loop.first %} hidden{% endif %}>
+              <img src="{{ base }}/images/art/{{ o.image }}.svg" alt="" width="1600" height="900" loading="lazy">
+              <span><small>Next path / {{ o.n }} articles, about {{ o.minutes }} min</small><b>{{ o.title }}</b><span>{{ o.blurb }}</span><em>Start this path →</em></span>
+            </a>
+            {% endfor %}
+            <div class="lp-alts">
+              <span class="micro">Or pick another</span>
+              {% for o in lp.after %}<a class="lp-alt" data-alt="{{ o.id }}" href="{{ base }}/post/{{ o.first }}?path={{ o.id }}" style="--c:{{ o.color }};--rgb:{{ o.rgb }}"{% if loop.index0 not in [1, 2] %} hidden{% endif %}><i></i><b>{{ o.title }}</b><small>{{ o.n }} articles</small></a>{% endfor %}
+              <a class="lp-alt lp-alt-all" href="{{ base }}/paths/"><b>See all learning paths</b><small>with your progress</small></a>
+            </div>
+            {% endif %}
+            <p class="lp-next-links"><a href="{{ base }}/paths/{{ lp.id }}">Review this path</a></p>
+          </div>
           {% endif %}
         </div>
         {% endfor %}

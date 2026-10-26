@@ -167,6 +167,12 @@ def load_paths(posts):
                                               "n": path["n"], "index": k + 1, "slugs": path["slugs"],
                                               "prev": path["stations"][k - 1]["post"] if k else None,
                                               "next": path["stations"][k + 1]["post"] if k + 1 < path["n"] else None})
+    # at the end of a path, suggest the others in the suggested sequence, starting from the one after it
+    for i, path in enumerate(paths):
+        after = paths[i + 1:] + paths[:i]
+        path["stations"][-1]["post"]["paths"][[e["id"] for e in path["stations"][-1]["post"]["paths"]].index(path["id"])]["after"] = [
+            {"id": o["id"], "title": o["title"], "color": o["color"], "rgb": o["rgb"], "blurb": o["blurb"], "who": o.get("who", ""),
+             "n": o["n"], "minutes": o["minutes"], "image": o.get("image") or o["slugs"][0], "first": o["slugs"][0]} for o in after]
     for path in paths:
         path["hub"] = {"x": HX, "y": HY, "h": map_h}
     order = {k: i for i, k in enumerate(data["home_order"])}

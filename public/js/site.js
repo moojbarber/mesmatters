@@ -288,6 +288,30 @@
       [].forEach.call(bar.querySelectorAll('i[data-slug]'), function (i) { if (isRead(i.dataset.slug) && !i.classList.contains('here')) i.classList.add('done'); });
       var card = document.querySelector('[data-lp-next-card="' + pid + '"]'); if (card) card.hidden = false;
       [].forEach.call(document.querySelectorAll('[data-pn]'), function (n) { n.hidden = true; });
+      var done = card && card.querySelector('[data-lp-done]');
+      if (done) {
+        // recommend the first path in the sequence that isn't finished yet, then two more
+        var picks = [].slice.call(done.querySelectorAll('[data-pick]')), alts = [].slice.call(done.querySelectorAll('[data-alt]'));
+        var open = picks.map(function (a) { return a.dataset.pick; }).filter(function (id) { var q = byId[id]; return q && doneCount(q) < q.slugs.length; });
+        if (open.length) {
+          picks.forEach(function (a) { a.hidden = a.dataset.pick !== open[0]; });
+          alts.forEach(function (a) { a.hidden = open.slice(1, 3).indexOf(a.dataset.alt) < 0; });
+          var p0 = byId[open[0]], ni = nextIndex(p0);
+          if (ni > 0) { var a0 = done.querySelector('[data-pick="' + open[0] + '"]'); a0.href = postUrl(p0.slugs[ni], p0.id); a0.querySelector('em').textContent = 'Carry on with this path →'; }
+        }
+        var burst = function () {
+          done.classList.add('go');
+          if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          var box = done.querySelector('.lp-confetti'), cols = [getComputedStyle(card).getPropertyValue('--c').trim() || '#a594ff', '#33d4e0', '#ff7ac6', '#ffd36e', '#ffffff'];
+          for (var i = 0; i < 90; i++) {
+            var c = document.createElement('i');
+            c.style.cssText = 'left:' + (Math.random() * 100) + '%;background:' + cols[i % cols.length] + ';--x:' + (Math.random() * 160 - 80) + 'px;--r:' + (Math.random() * 720 - 360) + 'deg;--t:' + (1.6 + Math.random() * 1.6) + 's;--dl:' + (Math.random() * .6) + 's';
+            box.appendChild(c);
+          }
+        };
+        if ('IntersectionObserver' in window) new IntersectionObserver(function (es, o) { es.forEach(function (en) { if (en.isIntersecting) { burst(); o.disconnect(); } }); }, { threshold: .4 }).observe(done.querySelector('.lp-done-hero'));
+        else burst();
+      }
       // reaching the end of the article counts as read
       var end = document.querySelector('.post-end');
       if (end && 'IntersectionObserver' in window) {
