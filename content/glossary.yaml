@@ -1558,7 +1558,7 @@
   - skills-matrix
 - term: Time and attendance
   short: Recording when people clock on and off, for pay, compliance and labour planning.
-  body: It usually lives in WFM or HR systems. Linking it to MES/MOM shows who was actually available on each line, which helps explain output and cost.
+  body: Basic time and attendance, such as who clocked in and out and who was working on each line, can be managed in MES/MOM where it's available. Rules for pay, overtime, breaks and working time differ from country to country, and once those rules get complex, a WFM, HR or ERP system makes more sense. Either way, linking it to MES/MOM shows who was actually available on each line, which helps explain output and cost.
   articles:
   - who-benefits-from-mes
   see_also:
