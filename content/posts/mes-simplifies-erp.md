@@ -70,9 +70,11 @@ The quality of ERP data usually improves:
 
 ## An analogy: the menu and the fitness app
 
-Reading the calories on a restaurant menu is like ERP on the shopfloor. It's useful, high-level information, and for some people that's enough.
+Reading the calories on a restaurant menu is like ERP on the shopfloor. It's useful, high-level information: one number per meal, after the fact. For some people that's enough.
 
-Logging everything you eat and tracking trends over time is like MES/MOM. It works at a far greater level of detail.
+A good fitness app is like MES/MOM. It doesn't just count calories. It tracks your macros, your steps and workouts, how much water you drink, how well you slept and your heart rate, as the day goes on. On their own, each one is just a number. Brought together, they show you things you'd never spot otherwise: that you train worse after a short night, or that your energy dips on the days you skip breakfast. And it nudges you while you can still do something about it, not at the end of the month.
+
+MES/MOM does the same for a factory. Machine states, counts, scrap, quality results, material lots, operator skills, tool life, maintenance history and energy are all captured as they happen, and all tied to the same order. Put together, they show why one line runs slower on nights, or that a defect only appears when a particular supplier's lot meets a particular mould cavity. No single system, and no summary in ERP, would show you that.
 
 ERP can tell you that you made 1,000 widgets yesterday. MES/MOM can tell you that widget 847 failed its quality check at 14:32, and what needs to happen next. Manufacturing execution happens in seconds and minutes, which is why the shopfloor needs a system built for it.
 
