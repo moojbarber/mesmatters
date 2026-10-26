@@ -36,7 +36,7 @@ Alongside it, depending on how much depth you need:
 
 ## How they connect
 
-The systems above can be integrated through ERP, directly to MES/MOM, or a mix of both. Pick a pattern and an application to see what flows where.
+The systems above can be integrated through ERP, directly to MOM, or a mix of both. In the middle sits MOM, covering production, quality, inventory and maintenance on one set of data. Pick a pattern, an application or a part of MOM to see what it does and what flows where.
 
 ::block integration-map
 

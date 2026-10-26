@@ -80,7 +80,7 @@ A good ERP becomes even more valuable when it's surrounded by the right speciali
 - **CPQ** configures complex products and quotes them accurately, and passes a buildable specification downstream.
 - **PLM** owns the product definition and engineering changes before they reach ERP.
 
-How they connect is a choice in itself. Some go through ERP, some go straight to MES/MOM, and most manufacturers end up with a mix. Have a play with the patterns below.
+How they connect is a choice in itself. Some go through ERP, some go straight to MOM, and most manufacturers end up with a mix. Have a play with the patterns below.
 
 ::block integration-map
 

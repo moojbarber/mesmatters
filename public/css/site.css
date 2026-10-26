@@ -705,9 +705,12 @@ form.signup p.fine{font:400 13px/1.5 var(--body);letter-spacing:0;max-width:none
 .imap.focus .imap-edge.on:not(.sel){opacity:.15}
 .imap-dots circle{filter:drop-shadow(0 0 4px currentColor)}
 .imap-hub.erp rect{fill:rgba(255,184,107,.12);stroke:#ffb86b;stroke-width:2}
-.imap-hub.mes .ring{fill:#120f33;stroke:url(#imapMes);stroke-width:4}
-.imap-hub.mes .t1{font-size:18px}
-.imap-hub.mes .halo{animation:imapbreathe 4s ease-in-out infinite;transform-origin:500px 352px}
+.imap-hub.mes .ring{fill:#120f33;stroke:url(#imapMes);stroke-width:3.5}
+.imap-hub.mes .t1{font-size:20px;letter-spacing:.06em}
+.imap-hub.mes .halo{animation:imapbreathe 4s ease-in-out infinite;transform-origin:500px 320px}
+.imap-app.imap-mod rect{fill:rgba(139,108,255,.14);stroke:rgba(165,148,255,.5)}
+.imap-mod .t1{font-size:17px}
+.imap-app.imap-mod:hover rect,.imap-app.imap-mod:focus-visible rect{fill:rgba(139,108,255,.26);stroke:#c9bcff}
 @keyframes imapbreathe{0%,100%{opacity:.55;transform:scale(.92)}50%{opacity:1;transform:scale(1.05)}}
 .imap-floor rect{fill:rgba(165,148,255,.08);stroke:rgba(165,148,255,.4);stroke-width:1.5;stroke-dasharray:4 4}
 .imap-app{cursor:pointer;outline:none}

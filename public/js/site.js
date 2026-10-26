@@ -363,12 +363,13 @@
       [].forEach.call(fig.querySelectorAll('.imap-app'), function (g) { g.classList.toggle('sel', g.dataset.app === sel); g.setAttribute('aria-pressed', g.dataset.app === sel ? 'true' : 'false'); });
       if (sel) {
         var A = D.apps[sel], R = D.modes[mode].routes[sel] || [];
-        info.innerHTML = '<h4></h4><p></p><div class="imap-routes"><div class="erp"><b>Via ERP</b><span></span></div><div class="mes"><b>Direct to MES/MOM</b><span></span></div></div><a></a>';
+        info.innerHTML = '<h4></h4><p></p><div class="imap-routes"><div class="erp"><b></b><span></span></div><div class="mes"><b></b><span></span></div></div><a></a>';
         info.querySelector('h4').textContent = A.name;
         info.querySelector('p').textContent = A.what;
         ['erp', 'mes'].forEach(function (r) {
-          var d = info.querySelector('.imap-routes .' + r), on = R.indexOf(r) >= 0;
+          var d = info.querySelector('.imap-routes .' + r), on = A.module || R.indexOf(r) >= 0;
           d.classList.add(on ? 'on' : 'off');
+          d.querySelector('b').textContent = A.module ? (r === 'erp' ? 'Where ERP fits' : 'What it replaces') : (r === 'erp' ? 'Via ERP' : 'Direct to MOM');
           d.querySelector('span').textContent = (on ? '' : 'Not used in this pattern. ') + A[r];
         });
         var a = info.querySelector('a'); a.href = (window.LP_BASE || '').replace(/\/\.$/, '') + A.link + (window.LP_EXT || ''); a.textContent = 'Read: ' + A.read + ' →';

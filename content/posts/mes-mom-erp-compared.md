@@ -103,7 +103,7 @@ Many ERP suites include APS, WMS, EAM or service modules, so needing the capabil
 
 ## How they connect
 
-Business transactions usually go through ERP. Execution detail can go direct when speed or richness demands it, such as rich non-conformance data into a QMS, or drawings from PLM to the operator. Have a play with the patterns below.
+Business transactions usually go through ERP. Execution detail can go direct when speed or richness demands it, such as drawings from PLM to the operator, or schedules from an APS to the line. Have a play with the patterns below.
 
 ::block integration-map
 
