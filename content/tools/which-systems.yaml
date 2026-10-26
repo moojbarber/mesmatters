@@ -8,7 +8,7 @@ capabilities:
     read: mes-functionality-production
   scheduling:
     name: Finite scheduling
-    where: APS, or the scheduling module in MES/MOM
+    where: ERP or an ERP scheduling module, MES/MOM scheduling, or APS for advanced constraints
     what: A plan that respects real capacity, changeovers, material and labour, re-run when something changes rather than rebuilt by hand.
     read: aps-vs-mes-scheduling
   quality:
@@ -23,7 +23,7 @@ capabilities:
     read: qms-and-mes-quality
   lims:
     name: Laboratory management (LIMS)
-    where: LIMS, connected to MES/MOM
+    where: LIMS where your process or regulations need one, connected to MES/MOM
     what: Samples, lab tests, instruments and certificates of analysis, with results flowing back to the batch.
     read: lims-and-mes
   traceability:
@@ -38,7 +38,7 @@ capabilities:
     read: wms-vs-mes-inventory
   wms:
     name: Warehouse management (WMS)
-    where: WMS, or warehouse functions in ERP
+    where: WMS for complex warehousing and distribution centres, or ERP with MOM inventory and logistics
     what: Receiving, put-away, picking and shipping, with locations and stock levels you don't have to count to believe.
     read: mes-functionality-logistics
   maintenance:
@@ -48,12 +48,12 @@ capabilities:
     read: eam-cmms-and-mes
   connectivity:
     name: Machine connectivity
-    where: Connectivity layer (OPC UA, MQTT, edge), feeding MES/MOM and a historian
+    where: Connectivity layer (OPC UA, MQTT, edge), feeding MES/MOM
     what: Counts, states, alarms and process values read straight from equipment instead of written down.
     read: opc-ua-mqtt-uns-explained
   historian:
     name: Process data history
-    where: Historian or time-series platform
+    where: MES/MOM for most process data, or a historian for very high-frequency data kept long-term
     what: High-frequency process values stored over time, for engineers investigating a problem or training a model.
     read: historian-vs-mes
   worker:

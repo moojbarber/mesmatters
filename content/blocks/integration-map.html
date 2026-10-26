@@ -53,7 +53,7 @@
       <g class="imap-floor">
         <rect x="270" y="540" width="460" height="52" rx="14"/>
         <text x="500" y="563" class="t1">Machines, PLCs and people</text>
-        <text x="500" y="581" class="t2">OPC UA, MQTT and a unified namespace</text>
+        <text x="500" y="581" class="t2">OPC UA, MQTT and other protocols</text>
       </g>
 
       <g class="imap-app" data-app="plm" tabindex="0" role="button" aria-label="PLM"><rect x="36" y="82" width="152" height="56" rx="14"/><text x="112" y="108" class="t1">PLM</text><text x="112" y="125" class="t2">Product definition</text></g>
@@ -92,7 +92,7 @@
               "erp": "Takes demand and orders from ERP and returns planned dates.",
               "mes": "Sends the sequenced schedule to MES/MOM and gets real progress back, so the next schedule starts from reality.",
               "link": "/post/aps-vs-mes-scheduling", "read": "APS vs MES scheduling"},
-      "lims": {"name": "LIMS", "what": "Runs the lab: samples, tests, results and certificates.",
+      "lims": {"name": "LIMS", "what": "Runs the lab, where the process or regulations call for one: samples, tests, results and certificates.",
                "erp": "Batch release status and certificates can be passed to ERP for shipping and stock status.",
                "mes": "Sample requests and results are tied to the batch and the process step in MES/MOM, which can hold or release product in real time.",
                "link": "/post/lims-and-mes", "read": "LIMS and MES"},
@@ -100,11 +100,11 @@
               "erp": "Stock levels, receipts and shipments are reconciled with ERP for valuation and orders.",
               "mes": "Material is staged and replenished to the line from what MES/MOM says it's about to consume.",
               "link": "/post/wms-vs-mes-inventory", "read": "WMS vs MES inventory"},
-      "qms": {"name": "QMS", "what": "Runs enterprise quality: complaints, CAPA, audits and document control.",
+      "qms": {"name": "QMS", "what": "Runs enterprise quality where one is used: complaints, CAPA, audits and document control. A capable MOM platform covers this itself.",
               "erp": "Supplier and customer quality issues can be linked to ERP's orders and partners.",
               "mes": "Non-conformances raised on the shopfloor feed CAPA directly, with the full context of the order, batch and machine.",
               "link": "/post/qms-and-mes-quality", "read": "QMS and MES quality"},
-      "eam": {"name": "EAM / CMMS", "what": "Manages assets and maintenance work.",
+      "eam": {"name": "EAM / CMMS", "what": "EAM manages the asset lifecycle and its costs, mostly in asset-heavy, multi-site operations. CMMS-type maintenance is often covered inside MOM.",
               "erp": "Spares, purchasing and maintenance costs post to ERP.",
               "mes": "Machine hours, counts and downtime from MES/MOM trigger condition-based work, and maintenance windows feed back into the schedule.",
               "link": "/post/eam-cmms-and-mes", "read": "EAM, CMMS and MES"},

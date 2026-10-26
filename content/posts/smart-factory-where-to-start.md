@@ -16,7 +16,7 @@ This is how I'd use them.
 
 ## Before day one: agree what "smart" means here
 
-A smart factory doesn't need science fiction or an "Industry 4.0" label. My definition: a manufacturing environment where people, processes and technology work together, supported by data, to maximise efficiency, flexibility and quality. See [What is a smart factory?](/post/what-is-a-smart-factory)
+A smart factory isn't science fiction, and it doesn't need an "Industry 4.0" label. My definition: a manufacturing environment where people, processes and technology work together, supported by data, to maximise efficiency, flexibility and quality. See [What is a smart factory?](/post/what-is-a-smart-factory)
 
 Put that, or your own version, in front of leadership and get agreement on it. It stops the programme turning into "buy some AI" on week two.
 

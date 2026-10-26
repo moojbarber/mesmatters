@@ -98,7 +98,7 @@ pages:
       - q: Does every automotive part need serial traceability?
         a: No. Safety-critical and high-value parts often need serial-level genealogy, while many others are well served by lot traceability. Deciding part by part keeps the system simpler and the data more useful. Your customer requirements will set the minimum for each part.
       - q: How does MES support PPAP and IATF 16949?
-        a: MES/MOM doesn't replace your quality management system, but it produces much of the evidence. Control plan checks executed and recorded at source, SPC on the characteristics that matter, first-article results and traceability records all come from the shopfloor. Pulled together, they make audits and PPAP submissions far less painful.
+        a: MES/MOM produces much of the evidence your quality management system relies on. Control plan checks executed and recorded at source, SPC on the characteristics that matter, first-article results and traceability records all come from the shopfloor. Pulled together, they make audits and PPAP submissions far less painful.
 
   - id: packaging
     kind: industry
@@ -115,7 +115,7 @@ pages:
     sections:
       - h: Where the value usually is
         body: |
-          **Downtime and micro-stops.** On a fast line, stops of a few seconds add up to hours. They almost never get written down. Automatic capture from the machine is often the single biggest eye-opener, and it's normal for measured OEE to drop when it goes in. That's the truth emerging, not performance getting worse.
+          **Downtime and micro-stops.** On a fast line, stops of a few seconds add up to hours. They almost never get written down. Automatic capture from the machine is often the single biggest eye-opener, and it's normal for measured OEE to drop when it goes in. Those losses were always there. Now they're being measured.
 
           **Changeovers.** Short runs mean lots of changeovers. Measuring each one, by product pair and by crew, shows where the time goes and gives you a baseline to improve against.
 
@@ -136,12 +136,12 @@ pages:
     capabilities: [execution, connectivity, scheduling, quality, data, inventory]
     posts: [what-is-oee, manufacturing-kpis-beyond-oee, aps-vs-mes-scheduling, oee-vs-teep, paperless-manufacturing, digital-work-instructions]
     tools: [oee-one-percent, readiness-check, which-systems]
-    terms: [micro-stop, speed-loss, changeover, oee, downtime-reason-codes, scrap-rate, finite-capacity-scheduling, vision-inspection, dispatch-list, throughput]
+    terms: [micro-stop, speed-loss, changeover, oee, downtime-reason-codes, scrap-rate, finite-capacity-scheduling, vision-inspection, throughput]
     faq:
       - q: What does MES do for a packaging manufacturer?
         a: Mostly the basics, done well. Automatic downtime and micro-stop capture from the machines, changeovers measured job by job, specifications and artwork checked before a job starts, and waste tracked by job and cause. On fast lines with short runs, those basics are where most of the value sits.
       - q: Why does OEE drop when packaging lines are connected?
-        a: Manual OEE misses short stops and rounds everything off. When counts and states come straight from the machine, the micro-stops and speed losses that were always there finally show up. A drop of 10 or more points is common. It's a more accurate starting point, not a sign that performance got worse.
+        a: Manual OEE misses short stops and rounds everything off. When counts and states come straight from the machine, the micro-stops and speed losses that were always there finally show up. A drop of 10 or more points is common. Performance hasn't got worse. You now have an accurate starting point.
       - q: Can MES help with packaging changeovers?
         a: Yes, in two ways. It measures every changeover automatically, so you can see which product pairs and crews take longest. And it guides the changeover itself with digital checklists and specification checks, so the first good output arrives sooner and the wrong job doesn't run.
 
@@ -181,7 +181,7 @@ pages:
     capabilities: [execution, scheduling, plm, cpq, worker, tooling]
     posts: [cpq-to-shopfloor, plm-erp-mes-digital-thread, ebom-mbom-as-built, erp-master-data-for-mes, mes-functionality-scheduling, digital-work-instructions]
     tools: [which-systems, readiness-check, vendor-scorecard]
-    terms: [engineer-to-order, configure-to-order, high-mix-low-volume, routing, work-centre, labour-tracking, dispatch-list, traveller, configurable-bom, first-article-inspection]
+    terms: [engineer-to-order, configure-to-order, high-mix-low-volume, routing, work-centre, labour-tracking, traveller, configurable-bom, first-article-inspection]
     faq:
       - q: Is MES worth it for a job shop or fabricator?
         a: It can be, if the problems are visibility and control rather than speed. Real-time job status by operation, actual labour and machine time against estimates, a dispatch list people trust and the right drawing revision at the workstation are the usual wins. Start with the jobs and operations that cause the most late deliveries.
@@ -212,7 +212,7 @@ pages:
           **Material and regrind.** Resin, masterbatch, additives and regrind tracked by job, with lot traceability back to the material supplier.
       - h: What makes it harder here
         body: |
-          Machine data is plentiful, so the risk is collecting everything and using none of it. Decide which signals answer real questions before connecting every parameter. A historian may be the right home for the high-frequency data, with MES/MOM holding the context. See [historian vs MES](/post/historian-vs-mes).
+          Machine data is plentiful, so the risk is collecting everything and using none of it. Decide which signals answer real questions before connecting every parameter. MES/MOM records the process data most jobs need. A historian only earns its place for very high-frequency data you need to keep long-term. See [historian vs MES](/post/historian-vs-mes).
 
           Multi-cavity tools complicate counting and quality. If a cavity is blocked off, standard rates and quality checks need to know.
       - h: Questions to settle before you look at vendors
@@ -229,7 +229,7 @@ pages:
       - q: What does MES do for an injection moulder?
         a: It captures cycle times and counts straight from the presses, tracks moulds, shot counts and cavity status, monitors process parameters against limits, and links material lots to each job. The result is scrap and lost capacity you can see by tool and by press, rather than estimates at the end of the shift.
       - q: Do I need a historian as well as MES in plastics?
-        a: It depends how frequently you need the data. MES/MOM can record the process values most jobs need. If engineers need every reading from moulding or extrusion at high frequency, a historian stores that efficiently. MES/MOM adds the context, such as which job, tool, material lot and operator. Engineers use the two together to find what really drives quality.
+        a: It depends how frequently you need the data. MES/MOM can record the process values most jobs need. A historian is only worth adding if engineers need every reading from moulding or extrusion at high frequency, kept for the long term. In that case MES/MOM adds the context, such as which job, tool, material lot and operator, so engineers can find what really drives quality.
 
   # ------------------------------------------------------------------ roles
   - id: plant-managers
@@ -254,12 +254,12 @@ pages:
           My [first 90 days](/post/smart-factory-where-to-start) guide goes through it step by step.
       - h: Getting it funded
         body: |
-          Speak business, not features. Work out [what 1% of OEE is worth](/tools/oee-one-percent) to your site. Put a number on the paper. Then reframe the risk: the bigger risk isn't the investment, it's the quality escape, the failed audit, the lost customer and the knowledge walking out of the door.
+          Speak business, not features. Work out [what 1% of OEE is worth](/tools/oee-one-percent) to your site. Put a number on the paper. Then reframe the risk. The quality escape, the failed audit, the lost customer and the knowledge walking out of the door are all bigger risks than the investment.
 
           Start with one line and let its results fund the next phase. The [business case article](/post/mes-business-case) and the [template](/tools/business-case-template) give you the structure.
       - h: Making it stick
         body: |
-          The hardest part of every programme is people, not technology. Bring operators in early and free up super users properly. Then be visible on the floor at go-live. Expect the first weeks to be messy. That's a learning curve, not a failure.
+          The hardest part of every programme is people, not technology. Bring operators in early and free up super users properly. Then be visible on the floor at go-live. Expect the first weeks to be messy. Every go-live has a learning curve.
 
           Read [resistance to change is guaranteed](/post/manufacturing-change-management) and [go-live is the starting line](/post/mes-go-live) before you plan the project, not after.
     posts: [smart-factory-where-to-start, mes-business-case, time-to-truth, manufacturing-change-management, mes-go-live, how-to-modernise-a-factory]
@@ -293,10 +293,10 @@ pages:
         body: |
           Decide who owns materials, BOMs, routings and work centres, and how changes flow. Most delays I've seen come from master data, not software. Read [the ERP master data MES needs](/post/erp-master-data-for-mes).
 
-          Watch the number of point-to-point interfaces. Every custom interface is yours to maintain at every upgrade.
+          Point-to-point interfaces are often the safest option, because the sending system gets a response. Keep them to a standard pattern and documented, so upgrades stay predictable.
       - h: Data and security
         body: |
-          AI on operational data needs contextualised data captured at the point of work. ERP sees an order start and finish, and very little in between. That's where MES/MOM and a deliberate data architecture come in. See [contextualised data](/post/contextualised-manufacturing-data) and [OPC UA, MQTT and UNS explained](/post/opc-ua-mqtt-uns-explained).
+          AI on operational data needs contextualised data captured at the point of work. ERP holds the business context for every order, but on the shopfloor it sees the order start and finish and very little in between. That's where MES/MOM and a deliberate data architecture come in. See [contextualised data](/post/contextualised-manufacturing-data) and [OPC UA, MQTT and UNS explained](/post/opc-ua-mqtt-uns-explained).
 
           Bring OT security in from the start, not as a gate at the end. [OT cybersecurity for MES](/post/ot-cybersecurity-for-mes) covers the essentials.
     posts: [isa95-integration-patterns, erp-master-data-for-mes, it-vs-ot, contextualised-manufacturing-data, ot-cybersecurity-for-mes, cloud-vs-on-premises-mes]
@@ -304,9 +304,9 @@ pages:
     terms: [isa-95, purdue-model, it-ot-convergence, uns, opc-ua, mqtt, iec-62443, master-data, mdm]
     faq:
       - q: What should IT know before an MES project?
-        a: That the shopfloor runs in real time, on equipment that can't simply be patched or rebooted, with users wearing gloves. The key decisions are where each capability lives, who owns master data, how systems integrate and how OT security is handled. ISA-95 gives IT and operations a shared language for all of them.
+        a: That the shopfloor runs in real time, on equipment that can't simply be patched or rebooted, with users wearing gloves. The big decisions are where each capability lives, who owns master data, how systems integrate and how OT security is handled. ISA-95 gives IT and operations a shared language for all of them.
       - q: Is ERP enough to support AI on the shopfloor?
-        a: Usually not on its own. ERP records an order starting and finishing, but very little of what happens in between. AI that learns from operations needs real-time, contextualised data from the point of work, which is what MES/MOM and the connectivity layer provide.
+        a: Usually not on its own. ERP gives AI the business context, but it records an order starting and finishing and very little of what happens in between. AI that learns from operations needs real-time, contextualised data from the point of work, which is what MES/MOM and the connectivity layer provide.
 
   - id: quality-managers
     kind: role
@@ -323,7 +323,7 @@ pages:
     sections:
       - h: Where each system fits
         body: |
-          MES/MOM runs quality on the shopfloor: checks triggered at the right moment, results recorded at source, SPC on the line and holds that stop bad product moving on. Quality as a system, from complaints and CAPA to audits and document control, sits in a QMS, or in a MOM platform that covers it. A LIMS runs the lab, where your industry needs one.
+          MES/MOM runs quality on the shopfloor: checks triggered at the right moment, results recorded at source, SPC on the line and holds that stop bad product moving on. A capable MOM platform also covers the wider quality system, from complaints and CAPA to audits and document control, so a separate QMS rarely makes sense. Where one is used, MOM integrates with it. A LIMS runs the lab, where your industry or regulations call for one. Many manufacturers manage without.
 
           They overlap, and the boundaries matter. I go through them in [QMS and MES](/post/qms-and-mes-quality) and [LIMS and MES](/post/lims-and-mes).
       - h: What to fix first
@@ -341,6 +341,6 @@ pages:
     terms: [spc, control-chart, capa, non-conformance, deviation, quality-hold, review-by-exception, audit-trail, electronic-signature, fpy]
     faq:
       - q: What is the difference between QMS and MES for quality?
-        a: MES/MOM handles quality as it happens on the shopfloor, triggering checks, recording results at source, running SPC and placing holds. A QMS manages the wider quality system, such as complaints, CAPA, audits, document control and supplier quality. A good MOM platform covers both, which removes the need for a separate QMS. Where one already exists, connect them with clear rules about which owns what.
+        a: MES/MOM handles quality as it happens on the shopfloor, triggering checks, recording results at source, running SPC and placing holds. A QMS manages the wider quality system, such as complaints, CAPA, audits, document control and supplier quality. A good MOM platform covers both, which removes the need for a separate QMS. Where one is used, connect them with clear rules about which owns what.
       - q: How does MES improve quality?
         a: By moving quality from inspection after the fact to prevention during production. Checks happen at the right moment and can't be skipped, results are captured at source, control charts show drift while parts are still good, and traceability links every result to its batch, operator and equipment.

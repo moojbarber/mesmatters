@@ -2,11 +2,11 @@
 talks:
   - title: "AI won't fix your factory. Your data might."
     tag: Shopfloor AI
-    abstract: Every board is asking for an AI plan. Most factories don't yet have the data to feed one. This talk separates the AI that works on today's documents and know-how from the AI that needs reliable, contextualised shopfloor data, and shows what has to be in place before each pays back.
+    abstract: Every board is asking for an AI plan. Most factories don't yet have the data to feed one. This talk separates the AI that works on today's documents and know-how from the AI that needs reliable, contextualised shopfloor data, and shows how the value of each grows as the data foundation improves.
     takeaways:
       - Why most shopfloor AI pilots stall before the algorithm matters
       - Where generative AI can start now, alongside the foundation work
-      - The stage where AI on operational data starts to pay back
+      - How the payback from AI on operational data grows, stage by stage
       - What to fix first, and what to stop buying
   - title: "MES, MOM and ERP: who does what in the smart factory"
     tag: Systems

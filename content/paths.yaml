@@ -66,7 +66,7 @@ paths:
     color: "#a594ff"
     rgb: "165,148,255"
     image: what-is-mes
-    blurb: What MES and MOM actually do, how ISA-95 fits the systems together, how OEE is measured, and where ERP should stop.
+    blurb: What MES and MOM actually do, how ISA-95 fits the systems together, how OEE is measured, and how MES/MOM works alongside ERP.
     stations:
       - what-is-mes
       - history-of-mes

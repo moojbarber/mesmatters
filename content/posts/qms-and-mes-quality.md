@@ -62,7 +62,7 @@ If quality blocks a lot in the QMS but MES/MOM doesn't know, the line will happi
 
 ## Don't forget the documents
 
-Where a QMS is used, document control usually sits there, or in the MOM platform. Work instructions, specifications and inspection plans are approved in that system. But the operator reads them in MES/MOM.
+Document control sits in the MOM platform, or in the QMS where one is used. Work instructions, specifications and inspection plans are approved there. But the operator reads them in MES/MOM.
 
 So the same revision question comes up as with PLM: the operator must see the approved revision for this order, not a copy someone saved locally in 2023. With a separate QMS, either publish from it to MES/MOM, or have MES/MOM reference it directly. Just don't maintain two copies.
 

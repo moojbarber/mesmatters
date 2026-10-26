@@ -123,7 +123,7 @@ roles:
     name: CIO
     title: Chief information officer
     horizon: [0, 1]
-    question: "How do we connect the shopfloor to the business securely, without creating a tangle of systems we can't support?"
+    question: "How do we connect the shopfloor to the business securely, with an architecture we can support for years?"
     summary: "The CIO owns the architecture and the risk. The shopfloor is where IT meets OT, and where integration and security decisions have the longest consequences."
     cares: [["Architecture simplicity", null], ["Cybersecurity", iec-62443], ["Total cost of ownership", null], ["Data quality", master-data]]
     challenges:
@@ -464,7 +464,7 @@ roles:
     cares: [["Uptime of shopfloor systems", null], ["Number of interfaces", point-to-point-integration], ["Security posture", iec-62443], ["Data latency", null]]
     challenges:
       - ["Legacy equipment", "Machines of every age, speaking different protocols."]
-      - ["Interfaces that break at upgrade", "Custom integrations need retesting every time either side changes."]
+      - ["Retesting at every upgrade", "Interfaces need retesting every time either side changes, unless they follow a standard pattern."]
       - ["Security without downtime", "Protecting OT without stopping production for patches."]
       - ["Raw tags with no meaning", "Data from machines has no context, so every consumer has to work out what it means."]
     scores: {prod: 3, qual: 2, trace: 3, inv: 2, maint: 3, cw: 2, sched: 2, ai: 5, energy: 3}
@@ -474,9 +474,9 @@ roles:
       maint: "Machine connectivity serves maintenance and production from the same connection."
       trace: "Genealogy depends on reliable, time-synchronised data from the equipment."
     shift:
-      - ["A custom interface for every pairing", "A standard connectivity layer, using OPC UA and MQTT"]
+      - ["Every interface designed from scratch", "Standard interface patterns, with OPC UA and MQTT at the machine layer"]
       - ["Security reviewed at the end of the project", "Security designed into the architecture from the start"]
-    pitch: "Talk standards and supportability: OPC UA and MQTT, with clear ISA-95 layering and security zones. Show how many interfaces the design removes."
+    pitch: "Talk standards and supportability: OPC UA and MQTT, with clear ISA-95 layering and security zones. Show which interface pattern each connection uses, and why."
     reads: [opc-ua-vs-mqtt, plc-vs-scada-vs-dcs-vs-mes, unified-namespace-uns, ot-cybersecurity-for-mes]
     tool: which-systems
     also_tools: [go-live-checklist]

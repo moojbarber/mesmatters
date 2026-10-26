@@ -23,7 +23,7 @@ levels:
     name: Right now
     state: Automatic data capture
     line: MES/MOM captures what happens as it happens, from the machine and the operator, with the context attached.
-    next: Widen the architecture. Connect PLM, scheduling, quality and your data platform deliberately, so there's one source of truth beyond the shopfloor. This is also the stage where AI on operational data finally has something to learn from.
+    next: Widen the architecture. Connect PLM, scheduling, quality and your data platform deliberately, so there's one source of truth beyond the shopfloor. This is also the stage where AI on operational data has much more to learn from, so its value grows quickly.
     read: [isa95-integration-patterns, contextualised-manufacturing-data, ai-ml-genai-on-the-shopfloor]
   - n: 5
     name: Before it happens
