@@ -1553,4 +1553,15 @@ button.ttt-label:hover{background:rgba(255,255,255,.04)}
 .soc-instagram:hover{border-color:#d6249f}
 @media (max-width:640px){.cta .follow>span{flex-basis:100%}}
 .home-hero+.wrap>.section:first-child{margin-top:8px}
-.home-hero+.wrap>.section:nth-child(2){margin-top:28px}
+
+/* home bento: quote + role explorer on the left, learning paths full height on the right */
+.home-bento{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto auto;gap:18px}
+.home-bento .bento-quote{grid-column:1;grid-row:1;display:flex;flex-direction:column;justify-content:center;gap:14px;padding:30px 32px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(150deg,rgba(255,255,255,.06),rgba(255,255,255,.015))}
+.home-bento .bento-quote .micro{color:var(--b)}
+.home-bento .big{font-size:clamp(26px,3vw,38px);max-width:none}
+.home-bento .ro-banner{grid-column:1;grid-row:2;margin:0;padding:28px 32px;border-radius:24px;align-content:center}
+.home-bento .ro-banner strong{font-size:clamp(18px,1.7vw,21px)}
+.home-bento .lp-teaser{grid-column:2;grid-row:1/span 2;grid-template-columns:1fr;align-content:space-between;gap:10px;padding:30px 32px 22px}
+.home-bento .lp-teaser p{max-width:none;margin-bottom:20px}
+.home-bento .lp-teaser-art{max-height:230px}
+@media (max-width:900px){.home-bento{grid-template-columns:1fr}.home-bento .bento-quote,.home-bento .ro-banner,.home-bento .lp-teaser{grid-column:1;grid-row:auto}.home-bento .lp-teaser-art{order:0}}
