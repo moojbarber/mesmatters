@@ -312,6 +312,7 @@ h2.label:after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var
 
 /* series box, end matter */
 .series{margin:0 0 2.2em;border-radius:18px;border:1px solid rgba(51,212,224,.3);background:linear-gradient(160deg,rgba(139,108,255,.14),rgba(51,212,224,.04));padding:20px 22px}
+.series a.series-name{display:block;margin-top:6px;padding:0;font:700 19px var(--disp);color:var(--tx)}.series a.series-name:before{content:none}.series a.series-name:hover{background:none;color:var(--b)}
 .series ol{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:4px;counter-reset:sr}
 .series li{counter-increment:sr}
 .series a{display:flex;gap:12px;align-items:center;padding:8px 10px;border-radius:10px;color:var(--mut);font-size:15px;transition:.2s}

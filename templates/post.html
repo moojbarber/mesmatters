@@ -43,9 +43,10 @@
     </aside>
     <div>
       {% if series_posts %}
-      <nav class="series" aria-label="MES Functionality series">
-        <span class="micro">MES functionality series</span>
-        <ol>{% for s in series_posts %}<li><a href="{{ base }}/post/{{ s.slug }}"{% if s.slug == p.slug %} aria-current="page"{% endif %}>{{ s.short }}</a></li>{% endfor %}</ol>
+      <nav class="series" aria-label="Learning path: MES functionality in depth">
+        <span class="micro">Learning path</span>
+        <a class="series-name" href="{{ base }}/paths/mes-functionality">MES functionality in depth</a>
+        <ol>{% for s in series_posts %}<li><a href="{{ base }}/post/{{ s.slug }}?path=mes-functionality"{% if s.slug == p.slug %} aria-current="page"{% endif %}>{{ s.short }}</a></li>{% endfor %}</ol>
       </nav>
       {% endif %}
       {% if p.summary %}
@@ -108,10 +109,12 @@
             {{ follow() }}
           </div>
         </div>
-        <nav class="pn" aria-label="More articles">
-          {% if prev %}<a href="{{ base }}/post/{{ prev.slug }}"><span class="micro">← Previous</span><b>{{ prev.short }}</b></a>{% else %}<span></span>{% endif %}
-          {% if next %}<a class="next" href="{{ base }}/post/{{ next.slug }}"><span class="micro">Next →</span><b>{{ next.short }}</b></a>{% endif %}
+        {% for lp in p.paths or [] %}
+        <nav class="pn" data-pn="{{ lp.id }}" aria-label="More in the {{ lp.title }} learning path"{% if not loop.first %} hidden{% endif %}>
+          {% if lp.prev %}<a href="{{ base }}/post/{{ lp.prev.slug }}?path={{ lp.id }}"><span class="micro">← Previous in {{ lp.title }}</span><b>{{ lp.prev.short }}</b></a>{% else %}<a href="{{ base }}/paths/{{ lp.id }}"><span class="micro">← Learning path</span><b>{{ lp.title }}</b></a>{% endif %}
+          {% if lp.next %}<a class="next" href="{{ base }}/post/{{ lp.next.slug }}?path={{ lp.id }}"><span class="micro">Next in {{ lp.title }} →</span><b>{{ lp.next.short }}</b></a>{% else %}<a class="next" href="{{ base }}/paths/"><span class="micro">End of the {{ lp.title }} path →</span><b>Choose your next learning path</b></a>{% endif %}
         </nav>
+        {% endfor %}
       </div>
     </div>
   </div>

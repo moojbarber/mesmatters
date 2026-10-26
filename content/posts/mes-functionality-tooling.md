@@ -52,6 +52,6 @@ When tool requirements, availability, setup and setter readiness are tracked tog
 
 In high-mix environments, that alone can recover a surprising amount of capacity.
 
-This article is part of the [MES functionality series](/post/mes-functionality-guide).
+This article is part of the [MES functionality in depth](/paths/mes-functionality) learning path.
 
 How do you know today whether the tool for tomorrow's first order is ready?

@@ -64,6 +64,6 @@ A good MES/MOM with maintenance capability replaces the need for a CMMS, and I'd
 
 If your MES covers production only, it can feed a separate CMMS, but a full MOM is the better overall solution.
 
-This article is part of the [MES functionality series](/post/mes-functionality-guide).
+This article is part of the [MES functionality in depth](/paths/mes-functionality) learning path.
 
 Do your production and maintenance teams agree on last week's downtime?

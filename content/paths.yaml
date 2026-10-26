@@ -145,6 +145,7 @@ paths:
     blurb: One function at a time, from scheduling and quality to inventory, maintenance and energy, with what each looks like when it runs in MES/MOM.
     stations:
       - mes-functionality-guide
+      - mes-functionality-production
       - mes-functionality-scheduling
       - mes-functionality-quality
       - mes-functionality-inventory

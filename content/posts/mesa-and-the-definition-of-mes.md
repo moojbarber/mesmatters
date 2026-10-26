@@ -43,7 +43,7 @@ Two things stand out when you read that list today.
 
 **It's far broader than production execution.** Quality, maintenance, labour and genealogy are all in there. That breadth is what the term MOM describes now. More in [MES vs MOM](/post/mes-vs-mom).
 
-**It was a functional map, not a product specification.** It described what a factory needs managed. It didn't say one application had to do all of it, which is the decision buyers face when choosing a platform.
+**It was a functional map, not a product specification.** It described what a factory needs managed.
 
 ## How the model grew
 

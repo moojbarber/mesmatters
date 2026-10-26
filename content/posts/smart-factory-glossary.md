@@ -9,7 +9,7 @@ art: tiles
 
 Manufacturing is full of jargon. This glossary explains the terms you'll hear most in smart factory projects, in a line or two each. Bookmark it and come back whenever a term comes up that you want to pin down.
 
-Every term also has its own page, with my take on what it means in practice and the articles that go deeper, in the [full glossary](/glossary/).
+This page covers the essentials. The [full glossary](/glossary/) has over 200 terms, each with its own page explaining what it means in practice, with links to the articles that go deeper.
 
 | Term | Stands for | What it means |
 | --- | --- | --- |
@@ -58,4 +58,4 @@ Every term also has its own page, with my take on what it means in practice and 
 | WIP | Work in progress | Material that has started production but isn't finished. |
 | WMS | Warehouse management system | Software for managing warehouse operations such as receiving, storage and picking. |
 
-Is there a term you keep hearing that isn't here? Let me know and I'll add it.
+Want more? [Browse the full glossary](/glossary/), from A to Z. Is there a term you keep hearing that isn't there? Let me know and I'll add it.

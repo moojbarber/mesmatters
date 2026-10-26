@@ -91,7 +91,7 @@ Automatic collection is usually preferable where the equipment allows it. Manual
 
 The most common standard for machine data is OPC UA, which replaced the older OPC DA. OPC UA is more secure, using certificates for authentication. MQTT is widely used too, particularly for moving data from many devices to many systems, and MTConnect is common on machine tools. More in [OPC UA vs MQTT](/post/opc-ua-vs-mqtt).
 
-Connection can work in both directions. In more advanced processes, starting an order in MES can send the right program and parameters to the machine, so it runs the correct job. That should always go through the control layer, which keeps responsibility for safe operation. More in [PLC vs SCADA vs DCS vs MES](/post/plc-vs-scada-vs-dcs-vs-mes).
+Connection can work in both directions. In more advanced processes, starting an order in MES can send the right program and parameters to the machine, so it runs the correct job. MES/MOM usually writes these values to tags through an OPC server, with a handshake: the tags are read back and compared with what was sent, and the job only starts when they match. More in [PLC vs SCADA vs DCS vs MES](/post/plc-vs-scada-vs-dcs-vs-mes).
 
 ## What happens to the data
 
@@ -112,6 +112,6 @@ The detailed data is valuable for continuous improvement, and increasingly for a
 
 Think about where your requirements are heading before you choose. A standalone monitoring tool can be a quick win, but if you'll need the other pillars on the same data within a few years, I'd start on a platform that can grow into them rather than replace a stop-gap later.
 
-This article is part of the [MES functionality series](/post/mes-functionality-guide). Related: [Manufacturing KPIs beyond OEE](/post/manufacturing-kpis-beyond-oee).
+This article is part of the [MES functionality in depth](/paths/mes-functionality) learning path. Related: [Manufacturing KPIs beyond OEE](/post/manufacturing-kpis-beyond-oee).
 
 How many of your short stops are being recorded today?

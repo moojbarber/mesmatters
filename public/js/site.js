@@ -287,6 +287,7 @@
       var bar = document.querySelector('[data-lp-bar="' + pid + '"]'); bar.hidden = false;
       [].forEach.call(bar.querySelectorAll('i[data-slug]'), function (i) { if (isRead(i.dataset.slug) && !i.classList.contains('here')) i.classList.add('done'); });
       var card = document.querySelector('[data-lp-next-card="' + pid + '"]'); if (card) card.hidden = false;
+      [].forEach.call(document.querySelectorAll('[data-pn]'), function (n) { n.hidden = true; });
       // reaching the end of the article counts as read
       var end = document.querySelector('.post-end');
       if (end && 'IntersectionObserver' in window) {

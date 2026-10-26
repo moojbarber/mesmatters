@@ -4,7 +4,7 @@
 # Rules: 40-60 words, the answer first, written as Matt, nothing invented.
 
 what-is-mes:
-  summary: "MES, a manufacturing execution system, runs production: dispatching orders and recording output and downtime as they happen. MOM, manufacturing operations management, covers the whole operation that ISA-95 defines, from production and quality to inventory and maintenance, on the same data. The difference decides what you buy, and whether everyone in operations works from one version of the truth."
+  summary: "MES, a manufacturing execution system, runs production: dispatching orders and recording output and downtime as they happen. MOM, manufacturing operations management, covers the whole operation that ISA-95 defines, from production and quality to inventory and maintenance. A MOM platform does it all on the same data. The difference decides what you buy, and whether everyone in operations works from one version of the truth."
   faq:
     - q: "What does MES stand for?"
       a: "MES stands for manufacturing execution system. It's the software that gets the right order onto the right line and records what actually happened, including output and downtime, ideally straight from the equipment. It sits between ERP, which plans the business, and the machines and control systems on the shopfloor."
@@ -14,7 +14,7 @@ what-is-mes:
       a: "AI needs accurate, contextualised data collected over time. A machine signal that says stopped means little on its own. MES/MOM adds the order, the material, the shift and the reason, which turns raw signals into data a model can learn from. The broader the scope, the richer that context."
 
 mes-vs-mom:
-  summary: "MES runs production: orders, counts, scrap, downtime and OEE. MOM covers all four areas ISA-95 defines for manufacturing operations, which are production, quality, inventory and maintenance, on one platform. MES is one part of MOM, not a synonym for it, and buying a separate system per pillar often means reconciling them, unless the depth of a dedicated system justifies it."
+  summary: "MES runs production: orders, counts, scrap, downtime and OEE. MOM covers all four areas ISA-95 defines for manufacturing operations, which are production, quality, inventory and maintenance. A MOM platform covers them on one system. MES is one part of MOM, not a synonym for it, and buying a separate system per pillar often means reconciling them, unless the depth of a dedicated system justifies it."
   faq:
     - q: "Is MES the same as MOM?"
       a: "No, although the terms are used interchangeably, including by vendors and, in the past, by me. MES describes production execution. MOM describes the whole operation across production, quality, inventory and maintenance. MES is one part of MOM rather than another name for it, and the distinction matters most when you're deciding what to buy."
@@ -481,7 +481,7 @@ mes-mom-erp-compared:
   summary: "ERP runs the business, MES runs production on the shopfloor, and MOM runs the whole operation across production, quality, inventory and maintenance. APS, WMS, QMS, LIMS, EAM, PLM and SCADA each add depth in one area. Agree which system owns each piece of data, and add specialists only where the operation genuinely needs them."
   faq:
     - q: "What is the difference between MES, MOM and ERP?"
-      a: "ERP runs the business side: finance, orders, purchasing, planning and costing, working in months, weeks and days. MES executes production on the shopfloor in shifts, minutes and seconds. MOM covers the whole operation, adding quality, inventory and maintenance to production on the same data. ERP plans and accounts for production, while MES/MOM runs it and reports actuals back."
+      a: "ERP runs the business side: finance, orders, purchasing, planning and costing, working in months, weeks and days. MES executes production on the shopfloor in shifts, minutes and seconds. MOM covers the whole operation, adding quality, inventory and maintenance to production, and a MOM platform does that on the same data. ERP plans and accounts for production, while MES/MOM runs it and reports actuals back."
     - q: "Which system should own inventory?"
       a: "ERP owns inventory as a financial asset. A WMS, or ERP if you don't have one, owns inventory inside the warehouse. MES/MOM owns line-side stock, work in progress and what each order consumed. The handover at the line is where most problems start, so agree who requests, delivers and records consumption."
     - q: "Do I need a WMS, QMS or APS as well as MES?"

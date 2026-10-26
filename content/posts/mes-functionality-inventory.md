@@ -136,6 +136,6 @@ Genealogy is only the start. When the same system also records quality results a
 
 Inventory in production belongs in MES/MOM wherever you have one. It's the system that knows the order and its bill of materials, so it's the one that can validate what's used and record what's made. Let ERP own the totals and the value, and let the shopfloor system own the detail.
 
-This article is part of the [MES functionality series](/post/mes-functionality-guide).
+This article is part of the [MES functionality in depth](/paths/mes-functionality) learning path.
 
 How confident are you that the stock your system shows at the line is what's actually there?

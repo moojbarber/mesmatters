@@ -741,7 +741,7 @@ def build(base, relative=False, include_scheduled=False):
         groups = []
         if c["key"] == "education":
             groups.append({"label": "Start here", "posts": start, "numbered": True})
-            groups.append({"label": "The MES functionality series", "posts": series, "numbered": True})
+            groups.append({"label": "Learning path: MES functionality in depth", "posts": series, "numbered": True})
             rest = [p for p in cposts if p not in start and p not in series]
             if rest:
                 groups.append({"label": "More fundamentals", "posts": rest})

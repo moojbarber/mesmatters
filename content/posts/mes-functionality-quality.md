@@ -105,6 +105,6 @@ Quality data is most valuable when it sits on the same platform as production an
 
 An MES focused on production can feed a separate QMS instead, but a full MOM is the better overall solution.
 
-This article is part of the [MES functionality series](/post/mes-functionality-guide). Related: [Your traceability probably isn't as good as you think](/post/manufacturing-traceability).
+This article is part of the [MES functionality in depth](/paths/mes-functionality) learning path. Related: [Your traceability probably isn't as good as you think](/post/manufacturing-traceability).
 
 How many of your quality checks are still recorded on paper?

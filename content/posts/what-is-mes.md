@@ -52,7 +52,7 @@ More on the difference in [MES vs MOM](/post/mes-vs-mom).
 
 ## Why scope matters: shared data
 
-The practical difference between MES and MOM is whether everyone in operations works from the same data.
+The practical difference between an MES and a MOM platform is whether everyone in operations works from the same data.
 
 Many concerns overlap between departments. Production and maintenance both care about downtime. If they record it in separate systems, meetings can start with a debate about whose numbers are right. Quality needs to know what's being made, and from which batch of raw material. Inventory needs to know whether that batch has passed inspection before it moves. Planning needs to know a line is down before the schedule goes stale.
 

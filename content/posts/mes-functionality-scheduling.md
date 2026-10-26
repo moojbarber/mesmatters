@@ -77,6 +77,6 @@ Scheduling capability varies a lot between MES products. Some build it into the 
 
 In my experience, a schedule built on actual cycle times rather than old standards does more for the floor than a cleverer algorithm.
 
-This article is part of the [MES functionality series](/post/mes-functionality-guide). Related: [The smart factory tech stack](/post/smart-factory-tech-stack).
+This article is part of the [MES functionality in depth](/paths/mes-functionality) learning path. Related: [The smart factory tech stack](/post/smart-factory-tech-stack).
 
 When did your schedule last survive a whole shift unchanged?

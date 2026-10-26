@@ -29,9 +29,9 @@ It works at the point of work, in real time, with screens designed for operators
 | --- | --- | --- |
 | **Main job** | Run the business | Run the operation on the shopfloor |
 | **Time horizon** | Months, weeks and days | Shifts, minutes and seconds |
-| **Main users** | Finance, sales, planning, purchasing | Operators, supervisors, quality, maintenance, logistics |
+| **Main users** | Finance, sales, planning, purchasing | Operators, supervisors, quality, maintenance, engineers |
 | **Production orders** | Creates, plans and costs them | Executes them and reports actuals |
-| **Material consumption** | Often backflushed from the BOM | Recorded as it happens, by lot |
+| **Material consumption** | Often backflushed from the BOM | Recorded as it happens, by lot, serial, item and more |
 | **Data** | Transactions and summaries | Events, measurements, genealogy and test results |
 | **Connection to machines** | None, and there shouldn't be | Direct, through PLCs, OPC UA or a connectivity layer |
 | **Typical question** | What should we make, and what did it cost? | What's happening right now, and is it right? |
@@ -45,6 +45,8 @@ The overlap is real, and it's where most of the confusion comes from.
 
 **Inventory.** ERP owns stock as a financial asset. MES/MOM owns line-side stock, work in progress and what each order consumed.
 
+**Quality.** MES/MOM runs quality on the shopfloor. It manages the inspection plan, triggers checks from what's running, records the results and puts material on hold when something fails. ERP needs a view of some of that, usually aggregated: results on critical characteristics, defects and scrap for costing, supplier quality issues, and non-conformances that need managing through to closure. MES/MOM captures the detail and passes ERP what it needs.
+
 **Shopfloor reporting.** Many ERPs can record operation completions and quantities, and some ERPs designed with manufacturing in mind cover detailed routings and shopfloor reporting well. That makes the gap to MES/MOM smaller.
 
 What MES/MOM adds is a different layer of data: finer detail, captured in real time at the point of work, with every event tied to its order, batch, machine and operator.
@@ -56,10 +58,20 @@ For a small, simple operation, ERP's shopfloor reporting may be enough. Plenty o
 It stops being enough when you need any of these:
 
 - Real-time data straight from the machines, including short stops
-- Lot-level traceability with quality results and process parameters attached
+- Downtime reasons captured at the point of work, with OEE by line, shift and product
+- Lot and serial traceability down to which component went into which finished item, with quality results and process parameters attached
+- Material validated at the point of use: right item, right status, in date and next in FIFO sequence
 - In-process quality checks and SPC triggered by what's running
+- Labels printed at the moment inventory is created, rather than pre-printed
 - Guided work instructions and error-proofing for operators
+- Operator skills and certifications checked before a job can start
+- Tool life counted from real production
+- Recipes and setpoints sent to the machine for the order being run
+- Electronic batch or device history records for regulated products
 - Maintenance working from the same downtime data as production
+- Energy use linked to the order and product that caused it
+
+ERP can be extended to cover some of these, but that usually means custom code, which then has to be maintained and retested through every upgrade.
 
 Standard ISA-95 practice is also not to connect ERP directly to the machines. MES/MOM, or a connectivity layer, sits between them.
 

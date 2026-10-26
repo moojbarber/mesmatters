@@ -39,7 +39,7 @@ For most MES/MOM discussions, levels 0 to 2 can be treated together as the contr
 
 **MES/MOM to ERP.** MES/MOM reports back what ERP needs: quantities produced and materials consumed. It usually sends a summary rather than every detail, because MES/MOM is better suited to storing and analysing the detailed operational data.
 
-**MES/MOM and the control layer.** MES/MOM reads data from PLCs and other control systems, typically through OPC UA or MQTT. Some MES/MOM platforms also send instructions down, such as starting an order or sending machine setpoints, so operators don't have to enter them by hand. That always goes through the control layer, which stays responsible for safe operation.
+**MES/MOM and the control layer.** MES/MOM reads data from PLCs and other control systems, typically through OPC UA or MQTT. Some MES/MOM platforms also send instructions down, such as starting an order or sending machine setpoints, so operators don't have to enter them by hand. That's usually done by writing to tags through an OPC server, with a handshake that reads the values back and confirms they match what was sent before the machine runs.
 
 The control layer itself is covered in [PLC vs SCADA vs DCS vs MES](/post/plc-vs-scada-vs-dcs-vs-mes), and the protocols in [OPC UA vs MQTT](/post/opc-ua-vs-mqtt).
 

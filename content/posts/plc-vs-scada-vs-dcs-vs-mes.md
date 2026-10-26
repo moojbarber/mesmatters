@@ -54,7 +54,7 @@ Its focus is the order, the material, the people and the evidence. Its time scal
 
 **Recipes.** A DCS batch manager runs the control steps of a recipe. MES/MOM manages the order and material side: which lots are used, and the batch record. The boundary is the batch, and getting it right matters in regulated industries. More in [ISA-88 and ISA-95: how the two standards fit together](/post/isa-88-and-isa-95).
 
-**Sending data down.** Some MES/MOM platforms send setpoints and recipes to the machine, as well as reading data up. That should always go through the control layer, which keeps responsibility for safe operation.
+**Sending data down.** Some MES/MOM platforms send setpoints and recipes to the machine, as well as reading data up. Typically MES/MOM writes the values to tags through an OPC server, using a proper handshake. It sends the data, the values are copied into the tags, then the tags are read back and compared with what was sent. Only when they match is the machine cleared to run.
 
 ## Doesn't the control layer already do this?
 

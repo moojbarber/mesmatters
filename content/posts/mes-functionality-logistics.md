@@ -106,6 +106,6 @@ Where MES/MOM does run logistics, there are some specific advantages:
 
 I come from a world of MES, but I often recommend ERP or a WMS for warehousing, depending on the situation. There's no one-size-fits-all answer. What matters is making the decision deliberately, with advice from someone who'll lay out the strengths of each option before recommending one.
 
-This article is part of the [MES functionality series](/post/mes-functionality-guide).
+This article is part of the [MES functionality in depth](/paths/mes-functionality) learning path.
 
 Where does ownership of material change hands in your factory, and does everyone agree where that line is?
