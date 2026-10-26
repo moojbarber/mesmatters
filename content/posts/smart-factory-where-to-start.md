@@ -79,7 +79,7 @@ Two cautions. Don't pick a line purely because it's the worst performer if its p
 ## What not to do in the first 90 days
 
 - **Don't buy software in month one.** You don't know your requirements yet.
-- **Don't start with AI.** It needs the data foundation you haven't built yet. Run GenAI experiments on documents if you like, but don't make them the plan. See [AI won't fix your factory](/post/ai-needs-shopfloor-data).
+- **Plan for AI, and build what it needs first.** AI that predicts and optimises needs the data foundation you're about to build. GenAI on your documents can start straight away, alongside it. See [AI will transform your factory, if you give it the right data](/post/ai-needs-shopfloor-data).
 - **Don't pilot a point solution you couldn't scale.** A pilot that becomes a silo costs you twice.
 - **Don't leave the shopfloor out.** People support what they helped create. See [Resistance to change is guaranteed](/post/manufacturing-change-management).
 

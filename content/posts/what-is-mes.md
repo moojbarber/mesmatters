@@ -103,7 +103,7 @@ Who benefits, role by role, is covered in [Who benefits from MES?](/post/who-ben
 
 AI and machine learning need accurate, contextualised data collected over time. A machine signal that says "stopped" means little on its own. MES/MOM turns it into "Line 7 stopped at 14:23 during order 4521, on night shift, for 12 minutes, because of a jam at station 2, for the third time in 48 hours." That's data a model can learn from.
 
-The broader the scope, the richer the context. Quality results linked to process parameters and maintenance history are the data that predictive quality and predictive maintenance are built on. More in [AI won't fix your factory. Data will.](/post/ai-needs-shopfloor-data)
+The broader the scope, the richer the context. Quality results linked to process parameters and maintenance history are the data that predictive quality and predictive maintenance are built on. More in [AI will transform your factory, if you give it the right data](/post/ai-needs-shopfloor-data)
 
 ## Which term should you use?
 

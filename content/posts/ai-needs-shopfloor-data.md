@@ -1,16 +1,16 @@
 ---
-title: "AI won't fix your factory. Data will."
+title: "AI will transform your factory, if you give it the right data"
 short: "AI on the shopfloor"
-description: "AI that predicts and optimises operations learns from shopfloor data. What a good data foundation looks like, and where AI already delivers."
+description: "AI can transform a factory when it has the right data and context to learn from. What a good data foundation looks like, and where AI already delivers."
 published: 2023-07-22
 updated: 2026-10-25
 category: thought-leadership
 art: mesh
 ---
 
-AI can genuinely transform manufacturing. But AI that predicts and optimises a factory learns from that factory's data, and in most plants that data is incomplete or missing its context.
+AI will transform manufacturing. It can predict failures before they happen, find the settings that cut scrap and help every operator work like your best one. What it needs from you is the right data, with the right context.
 
-Large language models are a useful comparison. They learned from decades of text that people put online. Without that material, even the most advanced model would have nothing to learn from. A factory works the same way: its shopfloor data is what AI learns from. Without it, AI can tell you a lot about factories in general, and very little about yours.
+Large language models show why. The technology is remarkable, but on its own it would be close to useless. What made it so capable was the internet: decades of text that people put online for it to learn from. Your shopfloor data plays the same role for your factory. Give AI accurate, contextualised data about your operation and it can do remarkable things with it. Without that data, it can tell you a lot about factories in general, and very little about yours.
 
 ## The slide everyone wants
 
@@ -27,7 +27,7 @@ Behind that line sits a long list of prerequisites:
 - A team that trusts the numbers
 - A use case and a hypothesis to test
 
-AI is the last line. Many organisations want to invest in it before the processes and data that let it succeed, while still struggling to record downtime reasons accurately.
+AI is the line that delivers the biggest gains, and the lines above it are what make those gains possible. The organisations that get the most from AI invest in both.
 
 ## AI isn't a black box
 
@@ -86,6 +86,6 @@ Start with a question rather than a model: what decision would you make differen
 
 ## My view
 
-I believe AI can genuinely transform manufacturing, but only if the basics are right first. I've sat through many conferences where everyone talks about AI, and then the question about MES/MOM strategy, or how shopfloor data is collected, meets silence or a slide about a pilot. AI won't fix your factory. The data foundation makes it possible, and then AI makes it much better. Skip the foundation for operational AI and you're likely to be back at the start in two years, with an expensive pilot to explain.
+I'm genuinely excited about what AI will do for manufacturing. AI will fix your factory, provided you give it the right data and context, in the same way that large language models only became useful once they had the internet to learn from. The manufacturers who'll get the most from it are the ones building that foundation now: defined processes, MES/MOM on the shopfloor and contextualised data that builds up over time. Start GenAI on your documents today, and build the data that lets AI predict and optimise alongside it.
 
 What's the one decision in your factory you'd most like AI to help with, and do you have the data for it yet?

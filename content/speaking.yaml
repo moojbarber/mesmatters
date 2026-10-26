@@ -1,10 +1,10 @@
 # Speaking page. Talk titles are proposals for Matt to approve or rewrite.
 talks:
-  - title: "AI won't fix your factory. Your data might."
+  - title: "AI will transform your factory. Give it the right data."
     tag: Shopfloor AI
-    abstract: Every board is asking for an AI plan. Most factories don't yet have the data to feed one. This talk separates the AI that works on today's documents and know-how from the AI that needs reliable, contextualised shopfloor data, and shows how the value of each grows as the data foundation improves.
+    abstract: Every board is asking for an AI plan, and AI can deliver one, once it has the right data and context to learn from. This talk separates the AI that works on today's documents and know-how from the AI that needs reliable, contextualised shopfloor data, and shows how the value of each grows as the data foundation improves.
     takeaways:
-      - Why most shopfloor AI pilots stall before the algorithm matters
+      - What shopfloor AI needs to deliver, and why the data and context matter as much as the model
       - Where generative AI can start now, alongside the foundation work
       - How the payback from AI on operational data grows, stage by stage
       - What to fix first, and what to stop buying

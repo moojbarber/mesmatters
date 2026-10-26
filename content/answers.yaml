@@ -458,7 +458,7 @@ wms-vs-mes-inventory:
       a: "Usually at the line. The WMS owns stock until it's delivered to a line-side location, and MES/MOM owns it from there until it's consumed or produced. Whatever the split, one system should own each location, and quality status must travel with the material."
 
 ai-needs-shopfloor-data:
-  summary: "AI that predicts and optimises a factory learns from that factory's data, so it needs a foundation first: defined processes, MES/MOM on the shopfloor, connected equipment and contextualised data built up over time. Generative AI is different. It can start now on documents and know-how, alongside the foundation work, as long as answers are grounded and reviewed."
+  summary: "AI can transform a factory once it has the right data and context to learn from, in the same way large language models needed the internet. AI that predicts and optimises learns from the factory's own data, so it needs a foundation: defined processes, MES/MOM on the shopfloor, connected equipment and contextualised data built up over time. Generative AI is different. It can start now on documents and know-how, alongside the foundation work, as long as answers are grounded and reviewed."
   faq:
     - q: "Why does AI need good shopfloor data?"
       a: "Machine learning finds patterns in data to predict outcomes, so its predictions are only as good as the data it learns from. Manual or uncontextualised data produces confident-looking but unreliable results. Granular, contextualised data captured automatically is what makes operational AI work."
@@ -503,7 +503,7 @@ smart-factory-where-to-start:
     - q: "How do you choose the first line for a smart factory pilot?"
       a: "Look for a line where losses are measurable and worth fixing, ideally at or near the bottleneck, with a reasonably stable process and a keen supervisor. It helps if the equipment can be connected and the line is representative of others, so what you learn carries over. Avoid lines whose problems are mostly mechanical."
     - q: "What should you avoid in the first 90 days?"
-      a: "Buying software before you know your requirements, starting with AI before the data foundation exists, and piloting a point solution you couldn't scale. Above all, don't leave the shopfloor out. People support what they helped create, and the operators know the workarounds that never made it into the procedures."
+      a: "Buying software before you know your requirements, expecting operational AI to deliver before its data foundation exists, or piloting a point solution you couldn't scale. Above all, don't leave the shopfloor out. People support what they helped create, and the operators know the workarounds that never made it into the procedures."
 
 mes-vs-erp:
   summary: "ERP plans and accounts for production: orders, materials, costs and dates, across the business. MES/MOM runs it on the shopfloor in real time, recording what actually happened by order, lot, machine and operator. They overlap on orders and inventory, but do different jobs for different people, and most manufacturers past the simplest operations need both."

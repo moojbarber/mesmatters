@@ -116,7 +116,7 @@ Once the first area works, turn what you built into a template: standard process
 
 Notice where AI sits in this list.
 
-That isn't because I'm sceptical about it. I believe AI can genuinely transform manufacturing. But it learns from your shopfloor data, and until steps 1 to 10 are in place, there isn't much reliable data to learn from. GenAI can help earlier, with shift summaries and plain-English questions about your procedures. Predictive and optimising AI needs the foundation first. More in [AI won't fix your factory](/post/ai-needs-shopfloor-data).
+That isn't because I'm sceptical about it. I believe AI can genuinely transform manufacturing. But it learns from your shopfloor data, and until steps 1 to 10 are in place, there isn't much reliable data to learn from. GenAI can help earlier, with shift summaries and plain-English questions about your procedures. Predictive and optimising AI needs the foundation first. More in [AI will transform your factory, if you give it the right data](/post/ai-needs-shopfloor-data).
 
 ## The checklist
 

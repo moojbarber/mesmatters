@@ -67,7 +67,7 @@ Demand for MES/MOM has grown with that shift, yet many manufacturers, especially
 
 Each step built on the one before. Control systems made automation possible, and MES/MOM later brought shopfloor data together with its context.
 
-AI follows the same pattern. Models that predict and optimise operations need reliable, contextualised data first. Most factories today sit somewhere between paper-based and partly digital, and the path forward runs through that data foundation. The stages are described in [Time to truth](/post/time-to-truth), and where AI fits in [AI won't fix your factory. Data will.](/post/ai-needs-shopfloor-data)
+AI follows the same pattern. Models that predict and optimise operations need reliable, contextualised data first. Most factories today sit somewhere between paper-based and partly digital, and the path forward runs through that data foundation. The stages are described in [Time to truth](/post/time-to-truth), and where AI fits in [AI will transform your factory, if you give it the right data](/post/ai-needs-shopfloor-data)
 
 ## My view
 
