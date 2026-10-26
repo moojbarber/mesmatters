@@ -467,19 +467,28 @@
   var bar=document.querySelector('.gl-az'); if(!bar) return;
   var links=[].slice.call(bar.querySelectorAll('a[href^="#gl-"]'));
   var groups=links.map(function(a){return document.getElementById(a.getAttribute('href').slice(1))});
-  var cur=-1, ticking=false;
-  function update(){
-    ticking=false;
-    var line=bar.getBoundingClientRect().bottom+24, i=-1;
-    for(var k=0;k<groups.length;k++){ if(groups[k] && groups[k].getBoundingClientRect().top<=line) i=k; else break; }
+  var cur=-1, ticking=false, lock=-1;
+  // a letter you click stays highlighted until the jump finishes, even if the section can't reach the top (e.g. near the end of the page)
+  links.forEach(function(a,k){a.addEventListener('click',function(){lock=k;set(k);});});
+  function unlock(){if(lock>-1){lock=-1;requestAnimationFrame(update);}}
+  addEventListener('wheel',unlock,{passive:true});
+  addEventListener('touchmove',unlock,{passive:true});
+  addEventListener('keydown',function(e){if(/^(Arrow|Page|Home|End| )/.test(e.key))unlock();});
+  function set(i){
     if(i===cur) return;
     if(cur>-1) links[cur].removeAttribute('aria-current');
     cur=i;
     if(i>-1){
       var a=links[i]; a.setAttribute('aria-current','true');
-      // keep the active letter visible when the bar scrolls sideways (small screens); moves the bar only, not the page
       if(bar.scrollWidth>bar.clientWidth){var l=a.offsetLeft-bar.clientWidth/2+a.offsetWidth/2;bar.scrollLeft=Math.max(0,l);}
     }
+  }
+  function update(){
+    ticking=false;
+    if(lock>-1) return;
+    var line=bar.getBoundingClientRect().bottom+80, i=-1;
+    for(var k=0;k<groups.length;k++){ if(groups[k] && groups[k].getBoundingClientRect().top<=line) i=k; else break; }
+    set(i);
   }
   addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(update);}},{passive:true});
   addEventListener('resize',update);
