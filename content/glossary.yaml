@@ -826,7 +826,7 @@
   - mtbf
 - term: Takt time
   short: The pace of production needed to meet customer demand, calculated as available time divided by demand.
-  body: Takt is set by the customer; cycle time is what the process actually achieves. If cycle time is longer than takt on the bottleneck, you can't meet demand.
+  body: Takt is set by the customer; cycle time is what the process actually achieves. On a paced line, such as a moving automotive assembly line, the line is set to advance at takt, so each unit spends that fixed time at every station, and line balancing spreads the work so each station's tasks fit within it. If cycle time is longer than takt on the bottleneck, you can't meet demand.
   articles:
   - takt-time-vs-cycle-time-vs-lead-time
   - manufacturing-kpis-beyond-oee

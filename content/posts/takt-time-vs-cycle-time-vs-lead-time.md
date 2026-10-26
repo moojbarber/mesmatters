@@ -21,6 +21,8 @@ If a line runs for 450 minutes a shift and customers need 900 units a shift, tak
 
 Takt time is a target set by the market. It doesn't measure your process at all.
 
+On a paced line, such as a moving automotive assembly line, you'll often hear takt used for the fixed time each unit spends at every station. That's takt in practice: the line is set to advance at takt time, sometimes slightly faster to allow for losses. Line balancing then spreads the work across stations so each one's tasks fit within that time, with as little idle time as possible. When demand changes, takt changes, and the line is re-balanced or the shift pattern adjusted.
+
 ## Cycle time: how fast you actually work
 
 **Cycle time** is how long it actually takes to complete one unit, or one step, from start to finish. You measure it on the line.
