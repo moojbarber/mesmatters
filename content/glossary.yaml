@@ -169,13 +169,24 @@
 - term: Cpk
   stands: Process capability index
   short: A measure of how well a process stays within its specification limits.
-  body: Cpk compares the natural spread of a process with the specification, and takes into account how well centred it is. It's a common question for a knowledge assistant at the line, because few people remember the calculation.
+  body: Cpk compares the short-term spread of a process, within subgroups, with the specification, and takes into account how well centred it is. Cp asks the same question as if the process were perfectly centred. Both show the process's potential; Ppk shows its actual performance over time. It's a common question for a knowledge assistant at the line, because few people remember the calculation.
   articles:
   - spc-on-the-shopfloor
   - practical-genai-for-the-shopfloor
   see_also:
+  - ppk
   - spc
   - control-limits
+- term: Ppk
+  stands: Process performance index
+  short: A measure of how well a process has actually performed against its specification limits over time.
+  body: Ppk compares the overall spread of all the data, including shifts between subgroups such as a new material lot or a different shift, with the specification, and takes into account how well centred the process is. Pp asks the same question as if the process were perfectly centred. Cpk uses only the short-term spread within subgroups, so it shows potential, while Ppk shows what the customer actually received. If Cpk is much higher than Ppk, the process is moving between subgroups. Ppk is often required in initial studies of a new process, such as automotive PPAP.
+  articles:
+  - spc-on-the-shopfloor
+  see_also:
+  - cpk
+  - process-capability
+  - ppap
 - term: CPQ
   stands: Configure, price, quote
   short: Software that lets sales or customers configure a product from options and rules, and produces a valid, priced quote.
@@ -865,7 +876,7 @@
   - non-conformance
 - term: Non-conformance
   short: A product or process that doesn't meet its specification.
-  body: Record it at the source with full context, including the order, lot, machine and a photo. Rules then decide whether it stays a local scrap or escalates to CAPA, in MOM or in a QMS where one is used.
+  body: Record it at the source with full context, including the order, lot, machine and a photo. Rules then decide whether it stays a local scrap or escalates to a non-conformance and CAPA process, usually in ERP.
   articles:
   - qms-and-mes-quality
   - mes-functionality-quality
@@ -1830,12 +1841,13 @@
   - inspection-plan
   - ppap
 - term: Process capability
-  short: How well a process can produce output within its specification limits, usually expressed as Cp or Cpk.
+  short: How well a process can produce output within its specification limits, usually expressed as Cp, Cpk, Pp or Ppk.
   body: Stability and capability are different questions. A stable process varies by the same amount around the same average, and SPC tells you whether that's true. Capability compares that variation with the specification limits. If the natural spread is wider than the tolerance, or sits too close to one limit, a perfectly stable process will still produce out-of-spec parts, predictably.
   articles:
   - spc-on-the-shopfloor
   see_also:
   - cpk
+  - ppk
   - control-limits
   - specification-limits
 - term: Defect

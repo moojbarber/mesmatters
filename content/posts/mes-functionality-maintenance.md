@@ -52,7 +52,9 @@ If that sits in a separate CMMS, it's another login and another screen. Adoption
 
 MOM's maintenance capability covers the ground a CMMS would. An EAM is a different case.
 
-A full EAM (Enterprise Asset Management) system makes sense for asset-heavy businesses with advanced needs, and it's where asset lifecycle and financial data belong, rather than in MOM. Typical needs include complex spare parts management, reliability engineering, linear assets, regulatory asset records across many sites.
+A full EAM (Enterprise Asset Management) system makes sense for asset-heavy businesses with advanced needs, and it's where asset lifecycle and financial data belong, rather than in MOM. Typical needs include complex spare parts management, reliability engineering, linear assets and regulatory asset records across many sites.
+
+It doesn't always have to be a separate EAM. ERP can do a fair amount of this too. Most ERPs already hold the asset register, depreciation, capital projects and maintenance costs, and some include a full EAM module. Check what your ERP covers before buying another system.
 
 ## The step towards predictive maintenance
 
@@ -60,7 +62,7 @@ Getting maintenance onto the same data as production is also the foundation for 
 
 ## My view
 
-A good MES/MOM with maintenance capability replaces the need for a CMMS, and I'd only add an EAM where asset management genuinely goes beyond it. If you do, draw the boundary carefully, so operators and production still see downtime and maintenance status in MES/MOM. Running a MOM and a CMMS side by side just creates another interface, and another version of the truth.
+A good MES/MOM with maintenance capability replaces the need for a CMMS. For asset lifecycle and financials, look to your ERP first, and only add an EAM where asset management genuinely goes beyond what MOM and ERP cover together. If you do, draw the boundary carefully, so operators and production still see downtime and maintenance status in MES/MOM. Running a MOM and a CMMS side by side just creates another interface, and another version of the truth.
 
 If your MES covers production only, it can feed a separate CMMS, but a full MOM is the better overall solution.
 

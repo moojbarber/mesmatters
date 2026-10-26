@@ -19,14 +19,15 @@ ERP typically knows that a production order consumed certain materials and produ
 
 So you know roughly what went into an order. You don't know exactly which lot went into which part of it, when, or under what conditions.
 
-ERP does that business-level job well, and for a straightforward product with low risk, that may be enough. For most manufacturers, it isn't.
+ERP does that business-level job well, and some ERPs go further on traceability than others. For a straightforward product with low risk, that may be enough. For most manufacturers, a proper MOM gives the most detailed view.
 
 ## What full traceability looks like
 
-With [MES/MOM](/post/what-is-mes), traceability can go much deeper:
+With [MES/MOM](/post/what-is-mes), traceability can go much deeper. It tracks the tooling, process parameters, quality checks and the skills of the people doing the work, alongside a far tighter record of what was made, when, and from what. Start with the genealogy:
 
 - **Serialised items**, tracked individually
 - **Specific lot quantities**, so you know exactly how much of each lot went into each output
+- **Exactly what was created, and when**, so the window you search when tracing backwards or forwards is as tight as possible
 - **Time-based traceability** for continuous processes, matching the materials consumed in a time window with the output produced in that window, offset by the time material takes to travel through the line
 - **Bi-directional** tracing: forwards from a raw material lot to every finished product it touched, and backwards from a finished product to everything that went into it
 
@@ -39,6 +40,7 @@ The difference between adequate and excellent traceability is everything you cap
 - **Tooling** used at each operation
 - **Quality results** at every level: goods-in inspection, in-process checks, final inspection
 - **Context**: operator, timestamp, machine and machine position
+- **Skills** of the people who did the work, and whether they were certified for it at the time
 - **Process parameters** at the time the item or batch was made: temperatures, pressures, speeds
 
 When a quality issue is detected, this is what makes root cause analysis straightforward instead of guesswork. You can see that every failed part came from the same cavity of the same mould, during the same two hours, when the temperature drifted.
@@ -69,6 +71,6 @@ None of this replaces ERP. MES/MOM holds the detail and sends ERP what it needs,
 
 Pick a finished product shipped last month. Ask your team how long it would take to tell you every raw material lot in it, the inspection results at each stage, and the machine conditions when it was made.
 
-If the answer is measured in days, your traceability isn't as good as you think. If it's measured in minutes, congratulations. You're in the minority.
+If the answer isn't measured in minutes, your traceability isn't as good as you think. If it is, congratulations. You're in the minority.
 
 When did you last run a mock recall, and how long did it take?

@@ -18,7 +18,7 @@ Details get lost. And the new crew starts the shift partly blind.
 A good handover answers a short list of questions, every time:
 
 - What's running, and how is it going against plan?
-- What stopped, why, and is it fixed?
+- What were the big stops, why, and are they fixed?
 - What's waiting: orders, material, quality results, maintenance work?
 - Are there any quality issues or holds the next shift needs to know about?
 - Any safety concerns?
@@ -36,15 +36,17 @@ And nothing is recorded in a way anyone can search later. When a customer compla
 
 ## Build the handover from real data
 
-This is where a digital handover changes things. Instead of relying on memory, start from what actually happened:
+This is where a digital handover changes things. Instead of relying on memory, start from what actually happened.
 
-- Orders run and quantities produced, against plan
-- Every stop, with its duration and reason
-- Quality checks completed, failed or outstanding, and anything on hold
-- Material shortages and pending replenishment requests
-- Open maintenance requests on the line's equipment
+That doesn't mean replaying every detail of the shift. The system holds all of that if anyone needs it. A good handover surfaces the insights, the exceptions and the escalations, the things the next crew needs to act on:
 
-If your [MES/MOM](/post/what-is-mes) is capturing the shift, most of this already exists. The handover becomes a summary generated from the data, which the outgoing supervisor reviews and adds to.
+- Performance against plan, and any orders that fell behind
+- Insight into downtime: the biggest losses, repeat stops and anything still unresolved
+- Quality exceptions: failed or outstanding checks, and anything on hold
+- Material shortages that will hit the next shift
+- Escalations, and open maintenance requests on the line's equipment
+
+If your [MES/MOM](/post/what-is-mes) is capturing the shift, the data behind all of this already exists. The handover becomes a summary generated from it, highlighting what matters, which the outgoing supervisor reviews and adds to.
 
 The supervisor's job changes from remembering everything to adding the things only a person knows. "The new operator on Line 2 needs keeping an eye on." "That noise on the filler is back."
 
@@ -67,7 +69,7 @@ When handover is part of the same platform as production, quality and maintenanc
 
 ## Where AI fits
 
-Generative AI is genuinely useful here. Give it the shift's data and it can draft a clear, readable summary in seconds. The supervisor checks and edits it rather than writing it from scratch.
+Generative AI is genuinely useful here. Give it the shift's data and it can draft a clear summary of what matters in seconds, pulling out the exceptions rather than listing everything. The supervisor checks and edits it rather than writing it from scratch.
 
 It's a good first AI use case: frequent, time-consuming, low-risk if a person reviews it, and easy to measure. More examples in [Practical GenAI for the shopfloor](/post/practical-genai-for-the-shopfloor).
 

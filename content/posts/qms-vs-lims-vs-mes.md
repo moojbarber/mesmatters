@@ -1,7 +1,7 @@
 ---
 title: "QMS vs LIMS vs MES: which quality system does what?"
 short: "QMS vs LIMS vs MES"
-description: "A QMS runs the quality system, a LIMS runs the lab and MES/MOM runs quality on the line. What each one does, where they overlap, and which you need."
+description: "A QMS runs the quality system, a LIMS runs the lab and MES/MOM runs quality on the line. What each one does, where they meet, and which you actually need."
 published: 2026-10-24
 category: education
 art: badge
@@ -17,8 +17,7 @@ A quick note on terms. Strictly, MES covers production. MOM, manufacturing opera
 
 A **QMS** (Quality Management System) runs the processes that keep quality under control across the business. It works over weeks and months, and across sites and suppliers:
 
-- CAPA (corrective and preventive action) and root cause investigations
-- Deviations and non-conformances
+- Root cause investigations, CAPA (corrective and preventive action) and non-conformances
 - Customer complaints
 - Audits and certifications, such as ISO 9001, IATF 16949 or GMP
 - Document control, change control and training records
@@ -32,7 +31,7 @@ A **LIMS** (Laboratory Information Management System) runs the lab. It works in 
 
 - Samples, labels and chain of custody
 - Test methods, specifications and limits
-- Results, often captured directly from instruments
+- Results, often captured directly from lab instruments
 - Analyst workload and lab scheduling
 - Certificates of analysis (CoA) and stability studies
 
@@ -42,59 +41,74 @@ Its users are lab analysts and lab managers, with QA reviewing the results. Its 
 
 **MES/MOM** runs quality at the point of production, in real time and against the order that's running:
 
-- In-process inspections, triggered by what's actually being made
-- SPC on critical characteristics
+- Inspection plans and sampling, triggered by what's actually happening on the line
+- In-process checks and SPC on critical characteristics
+- Goods-in inspection of incoming material
 - Non-conformances recorded at the source, with the order, lot, machine and operator attached
 - Holding and releasing lots, so suspect material can't be consumed
-- Triggering samples for the lab, with the batch context attached
+- Batch release, drawing on the batch record and the test results
 
 Its users are operators, team leaders, supervisors and quality technicians on the floor. Its output is quality data with full production context, captured as it happens.
+
+### Sampling triggered by events
+
+This is one of the strongest reasons to run quality in MOM. Because MOM sees production, quality, inventory and maintenance events as they happen, any of them can add a check to the operator's list:
+
+- An order starts, or the first part comes off after a changeover
+- A tool is changed, or a mould goes back in after maintenance
+- Inventory is created, or a new lot of material is consumed
+- An out-of-spec measurement or a critical defect is recorded
+- A process parameter trends above a threshold
+
+The check arrives with everything already filled in: the order, material, lot, machine and operator. Nobody has to type any of it, and nobody has to remember to do the check.
 
 ## Side by side
 
 | | QMS | LIMS | MES/MOM |
 | --- | --- | --- | --- |
-| **Main job** | Manage and improve the quality system | Manage samples and test results | Control quality during production |
+| **Main job** | Manage and improve the quality system | Manage samples and test results in the lab | Control quality during production |
 | **Typical users** | QA, quality managers, auditors, process owners | Lab analysts, lab managers | Operators, team leaders, supervisors, quality technicians |
 | **Time scale** | Weeks and months | Hours and days | Seconds to shifts |
-| **Core records** | CAPAs, deviations, complaints, audits, documents | Samples, tests, results, CoAs | Inspections, SPC, holds, non-conformances, genealogy |
-| **Connects to** | ERP, MES/MOM, suppliers, document systems | Instruments, ERP, MES/MOM, data platforms | Equipment, ERP, LIMS, QMS |
-| **Most essential in** | Regulated or certified manufacturers, as a QMS or within MOM | Process industries and materials testing | Any plant that wants quality built into the process |
+| **Core records** | CAPAs, complaints, audits, documents | Samples, tests, results, CoAs | Inspections, sampling, SPC, holds, non-conformances, genealogy |
+| **Connects to** | ERP, MES/MOM, suppliers, document systems | Instruments, ERP, MES/MOM | Equipment, ERP, and a QMS or LIMS where one is used |
+| **Who needs it** | Some regulated or certified manufacturers, though MOM plus ERP often covers it | A minority, mainly lab-heavy industries | Any plant that wants quality built into the process |
 
-## Where they overlap
+## Where they meet
 
-**Out-of-spec results.** The lab finds an out-of-specification result in the LIMS. The investigation, and any CAPA that follows, belongs in the QMS, or in MOM where it covers the quality system. That handover is where many quality loops break.
+**Non-conformances and CAPA.** A non-conformance is found on the line and recorded in MES/MOM with full context. Serious or repeat issues, and the CAPA that follows, are best escalated into ERP, where the cost, supplier and customer sides are handled. They shouldn't be managed entirely inside MES/MOM, or a QMS on its own.
 
-**Specifications.** The LIMS holds the test limits. The QMS often controls the documents and changes that define them. Agree which system is the master.
+**Incoming material.** Goods-in inspection can run in MES/MOM. Results that affect how the supplier is paid, or that need taking up with the supplier, pass to ERP, which handles the commercial side. You don't need a LIMS for that.
 
-**Non-conformances.** Found on the line, recorded in MES/MOM with full context. Where a separate QMS is used, repeat or serious ones should raise a non-conformance or CAPA there automatically, rather than relying on someone to re-key them.
+**Batch release.** MES/MOM can release batches, drawing on the batch record and the test results, and an open deviation can block release. Pick one system for the decision and stick to it.
 
-**Batch release.** Release draws on LIMS results and the batch record from MES/MOM, and an open deviation can block it. Depending on how you work, the decision might be recorded in the QMS, the LIMS, ERP or MES/MOM. Pick one place and stick to it.
+**Specifications.** Where a LIMS is used, it holds the lab test limits. MES/MOM holds the in-process limits. Agree which system is the master for each.
 
-**Supplier quality.** Incoming material testing happens in the LIMS. Supplier scorecards and corrective actions live in the QMS, or in the quality capability of MOM.
+## When you need a LIMS
 
-## Can one replace another?
+The main reason for a LIMS is a lab with a heavy sample load, many instruments and strict regulations around them. That's mostly found in a few industries:
 
-Some QMS products include basic sample and test management, and some LIMS products include deviation or CAPA modules. A strong MOM platform covers a lot of in-process and even lab-style testing, and in some plants that's enough without a separate LIMS. If your lab is small and your testing simple, fewer systems may well do the job.
+- Pharmaceuticals and biotech
+- Chemicals and petrochemicals
+- Food and dairy plants with their own microbiology labs
+- Metals, mining and materials testing
 
-A good MOM platform can also cover the QMS scope: CAPA, deviations, audits and controlled documents, alongside in-process quality. A LIMS is a different question. A lab with instruments and a heavy sample load usually needs one, which depends largely on your industry and regulations. Many manufacturers get by without a LIMS at all.
+Even there, a LIMS isn't always needed. Where the testing is simple, or done by an external lab, MOM can record the samples and results itself.
 
 There's more on the boundaries with MES/MOM in [QMS and MES: closing the quality loop](/post/qms-and-mes-quality) and [LIMS and MES: getting lab results to the line](/post/lims-and-mes).
 
 ## Which do you need?
 
-- **Defects found too late, or quality data without context?** Start with quality in MES/MOM.
-- **Certified or regulated, with little lab testing?** QMS capability, either in a MOM platform that covers it or in a dedicated QMS.
-- **Heavy lab testing, especially in process industries?** A LIMS, alongside MES/MOM.
-- **Mostly testing incoming materials?** A LIMS connected to ERP may be enough, and many manufacturers manage without one.
-- **A regulated process plant?** MES/MOM with full quality capability, usually plus a LIMS.
+- **Defects found too late, or quality data without context?** Start with quality in MOM.
+- **Certified or regulated?** MOM, with non-conformances and CAPA escalated into ERP. A separate QMS rarely adds enough to justify it.
+- **Testing incoming materials?** Goods-in inspection in MOM, with supplier issues passed to ERP.
+- **A large regulated lab?** That's when a LIMS earns its place.
 
 ## My view
 
-A good MOM platform replaces the need for a separate QMS. It covers quality on the line, and the quality system around it, from non-conformances and deviations to CAPA, audits and controlled documents, all tied to the order and the lot. Running a MOM and a separate QMS side by side makes little sense: you pay for the same capability twice, then stitch the two together.
+A good MOM platform is the place to run quality. It manages the inspection plan, triggers checks from what's actually happening, captures every result with full context, and holds and releases material. Serious non-conformances and CAPA then escalate into ERP, where the business side is handled. With MOM and ERP working together, a separate QMS adds little.
 
 If you run an MES that covers production only, it can feed a separate QMS with non-conformances and results, and that works. But a full MOM is the better overall solution.
 
-A LIMS is different. Whether you need one depends on your industry and regulations, and plenty of manufacturers get by without.
+A LIMS is a specialist tool for a heavy, regulated lab, in a handful of industries. Most manufacturers don't need one.
 
 Where does an out-of-spec result go in your business today, and how long does it take to get there?

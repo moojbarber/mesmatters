@@ -142,7 +142,7 @@ mes-functionality-quality:
     - q: "What quality functions does an MES include?"
       a: "Typically quality control plans, inspections triggered by what's running, variable and defect recording, SPC, connections to gauges and inspection equipment, holds and non-conformances. Some platforms also manage documents and corrective actions, while others pass those to a QMS."
     - q: "Can MES replace a QMS?"
-      a: "A good MOM platform can. Beyond in-process checks, it covers the wider quality system, including CAPA, audits, complaints and controlled documents, so a separate QMS isn't needed. MES on its own, focused on production, usually covers only in-process quality."
+      a: "Usually, yes. A good MOM platform runs quality on the line, from inspection plans and event-triggered sampling to holds and batch release, and escalates serious non-conformances and CAPA into ERP. With MOM and ERP working together, a separate QMS usually isn't needed. MES on its own, focused on production, usually covers only in-process quality."
     - q: "What is the difference between out of specification and out of control?"
       a: "Out of specification means a result falls outside the specification limits, so the product doesn't meet requirements. Out of control means a result falls outside the statistical control limits, a sign the process is drifting even if parts are still within specification."
 
@@ -196,7 +196,7 @@ food-and-beverage-manufacturing-challenges:
       a: "MES/MOM records every ingredient lot and process step against each batch as production happens. That allows forward and backward traces in minutes, and narrows recalls to the batches that actually used an affected lot."
 
 food-manufacturing-mes-barriers:
-  summary: "Food MES projects rarely fail because of the technology. The barriers I see most are people and change management, starting too big, underestimating master data such as recipes and specifications, and choosing a platform that can't grow. Involve operators early and start on one line, with the data foundation right first."
+  summary: "Food MES projects depend on the people as much as the technology. The barriers I see most are underestimating the people and change management, starting too big, underestimating master data such as recipes and specifications, and choosing a platform that can't grow. Involve operators early and start on one line, with the data foundation right first."
 
 mes-implementation-team:
   summary: "MES/MOM projects succeed or fail on people more than software. You need an executive sponsor who removes barriers, a capable project manager, IT and operations involved from the start, and operators shaping the design. Add external expertise where internal experience is thin, and plan for change from day one."
@@ -389,7 +389,7 @@ predictive-maintenance-data:
   summary: "Predictive maintenance is the last step after reactive, preventive and condition-based maintenance. Start by recording downtime and other sensor data accurately and automatically. Models then need condition data, failure history, maintenance actions and operating context, and the operating context usually lives in MES/MOM. Begin with your bottleneck assets."
 
 qms-and-mes-quality:
-  summary: "An enterprise QMS runs CAPA, complaints, audits and supplier quality, while MES/MOM runs quality at the point of production. The loop breaks when shopfloor defects never reach the CAPA process with their context. Where a QMS is used, rules escalate the right non-conformances into it and send process changes back to the line. A good MOM platform can cover the QMS scope itself."
+  summary: "An enterprise QMS runs CAPA, complaints, audits and supplier quality, while MES/MOM runs quality at the point of production. The loop breaks when shopfloor defects never reach the CAPA process with their context. Rules escalate the right non-conformances into ERP, or into a QMS where one is used, and send process changes back to the line. With MOM and ERP working together, a separate QMS is rarely needed."
 
 replacing-a-homegrown-mes:
   summary: "The hardest part of replacing a homegrown MES is people. Turn the developers who built it into champions and resist the urge to replicate every quirk. Don't let the 5% the new system does differently overshadow everything it does better, and map what the old system really does before you start."
@@ -599,24 +599,26 @@ erp-vs-mrp-vs-mes:
       a: "For a small, simple operation, ERP shopfloor reporting may be enough. Real-time machine data, lot-level genealogy with quality results, in-process checks and guided work instructions are MES/MOM functions. ERP and MRP plan in days and weeks, while MES/MOM works in minutes."
 
 qms-vs-lims-vs-mes:
-  summary: "A QMS runs the quality management system across the business, including CAPA, deviations, audits and controlled documents. A LIMS runs the lab, from samples to results and certificates of analysis. MES/MOM runs quality at the point of production, and a good MOM platform covers the QMS scope too. Whether you need a LIMS depends on your industry and regulations."
+  summary: "A QMS runs the quality management system across the business, a LIMS runs the lab, and MES/MOM runs quality at the point of production, including event-triggered sampling, holds and batch release. Serious non-conformances and CAPA are best escalated into ERP. Most manufacturers need MOM and ERP; a LIMS is mainly for lab-heavy, regulated industries."
   faq:
     - q: "What is the difference between a QMS and a LIMS?"
-      a: "A QMS manages the quality system: CAPAs, deviations, complaints, audits and controlled documents, over weeks and months. A LIMS manages the lab: samples, tests and results, over hours and days. One proves the system works and improves it; the other produces a trustworthy result for every sample."
+      a: "A QMS manages the quality system: CAPAs, complaints, audits and controlled documents, over weeks and months. A LIMS manages the lab: samples, tests and results, over hours and days. One proves the system works and improves it; the other produces a trustworthy result for every sample."
     - q: "What does MES/MOM do for quality?"
-      a: "Strictly, MES covers production and MOM adds quality, inventory and maintenance. MOM quality functions run checks on the line, triggered by what's running: in-process inspections, SPC, sampling plans and holds. Every result is tied to the order, the lot and the operator, which feeds genealogy and the batch record."
-    - q: "How do QMS, LIMS and MES/MOM work together?"
-      a: "MES/MOM triggers samples and records line checks. The LIMS tests samples and returns results. Out-of-spec results and serious non-conformances move into the QMS, where one is used, for investigation and CAPA. Batch release draws on the batch record from MES/MOM and LIMS results, and can be blocked by an open deviation."
+      a: "MOM runs quality on the line: the inspection plan, checks triggered by events such as an order starting, a tool change, a new lot or an out-of-spec result, SPC, goods-in inspection, holds and batch release. Every result is tied to the order, the lot and the operator automatically."
+    - q: "Do I need a LIMS as well as MES/MOM?"
+      a: "Usually not. A LIMS earns its place in labs with heavy, regulated testing, mostly in pharmaceuticals and biotech, chemicals, food and dairy plants with their own microbiology labs, and metals and materials testing. Even there it isn't always needed. Incoming material testing alone isn't a reason for one."
+    - q: "Where should CAPA and non-conformances be managed?"
+      a: "They're recorded at the source in MES/MOM, with full context. Serious or repeat issues, and the CAPA that follows, are best escalated into ERP, where the cost, supplier and customer sides are handled."
 
 cmms-vs-eam-vs-mes:
-  summary: "A CMMS helps a maintenance team plan and record work, such as work orders, preventive schedules and spare parts, usually at one site. An EAM does that and manages assets across their whole life and across sites, including cost and capital planning. MES/MOM knows what the equipment is doing right now, so it supplies the run hours, counts and downtime reasons that maintenance planning depends on."
+  summary: "A CMMS helps a maintenance team plan and record work, such as work orders, preventive schedules and spare parts, usually at one site. An EAM does that and manages assets across their whole life and across sites, including cost and capital planning. ERP covers a fair amount of that too, from the asset register and depreciation to capital spend. MES/MOM knows what the equipment is doing right now, so it supplies the run hours, counts and downtime reasons that maintenance planning depends on."
   faq:
     - q: "What is the difference between a CMMS and an EAM?"
       a: "A CMMS focuses on maintenance work: requests, work orders, preventive schedules, labour and parts. An EAM covers the whole asset lifecycle, from acquisition to disposal, including asset value and capital planning, usually across many sites. An EAM includes CMMS capability, but not the other way round."
     - q: "Where does MES/MOM fit with CMMS and EAM?"
       a: "Strictly, MES covers production and MOM adds maintenance. A good MOM platform handles day-to-day maintenance itself, from operator requests to work orders and preventive maintenance on actual run hours, which replaces the need for a CMMS. An MES focused on production only can instead feed a CMMS with run hours, counts and downtime, and either can feed an EAM for asset management."
     - q: "Do I need a CMMS or an EAM?"
-      a: "If you run a MOM platform with maintenance capability, you don't need a CMMS. Without one, a CMMS is often enough for getting preventive maintenance done. An EAM suits businesses with many sites and expensive assets, where leadership needs lifecycle cost and replacement planning. If you already run an ERP suite, its EAM module may cover what you need."
+      a: "If you run a MOM platform with maintenance capability, you don't need a CMMS. Without one, a CMMS is often enough for getting preventive maintenance done. For asset value, depreciation and capital spend, check what your ERP covers first; it often handles them already. A full EAM suits asset-heavy businesses with advanced needs, such as complex spare parts, reliability engineering or regulatory asset records across many sites."
 
 unified-namespace-uns:
   summary: "A unified namespace (UNS) is an architecture for sharing live data: systems publish what they know to a central broker, organised by the plant hierarchy, and others subscribe. MES/MOM is an application that runs the operation, dispatching orders, enforcing checks and keeping history with its context. A UNS shows the current state rather than running the operation, and many architectures use both."

@@ -27,7 +27,7 @@ Quality lives in more than one system. That's not a problem in itself. The probl
 - Holding and releasing lots
 - Linking every result to the [as-built record](/post/ebom-mbom-as-built)
 
-**ERP** handles the business consequences of quality. Stock status (available, blocked, in inspection), supplier returns, scrap cost, and quality inspections at goods receipt in many setups. Some manufacturers also run the full CAPA process in ERP, once the details have been passed across from the QMS or MOM platform.
+**ERP** handles the business consequences of quality. Stock status (available, blocked, in inspection), supplier returns, scrap cost, and quality inspections at goods receipt in many setups. It's also the best place for serious non-conformances and the CAPA process, once MES/MOM has passed the details across, because that's where the cost, supplier and customer sides already live.
 
 I covered shopfloor quality in [MES functionality: quality operations](/post/mes-functionality-quality), and SPC in [SPC on the shopfloor](/post/spc-on-the-shopfloor).
 
@@ -37,22 +37,22 @@ A typical story goes like this. An operator finds a defect. They record it in ME
 
 The information existed. It just didn't travel.
 
-Where a separate QMS is used, a connected loop looks different:
+A connected loop looks different:
 
 1. MES/MOM records the non-conformance with full context: order, operation, lot, machine, operator, measurements, photo.
-2. Rules decide what happens next. One-off scrap stays in MES/MOM. A repeat defect, a critical characteristic or a customer-impacting issue raises a non-conformance or CAPA in the QMS automatically.
-3. The QMS owns the investigation, root cause and action.
+2. Rules decide what happens next. One-off scrap stays in MES/MOM. A repeat defect, a critical characteristic or a customer-impacting issue escalates automatically, into ERP, or into the QMS where one is used.
+3. That system owns the investigation, root cause and action, with a link back to the full record in MES/MOM.
 4. Actions that change the process come back to the shopfloor: a new inspection, a tighter limit, a revised instruction.
 
 ## Integration options
 
 There's more than one way to wire this up.
 
-**Through ERP.** MES/MOM posts quality results and blocked stock to ERP. The QMS reads from ERP. Simple, one hub, but you usually lose the rich detail. ERP carries the status and quantity, not the 40 measurements and the photo.
+**MOM and ERP, no separate QMS.** MOM runs quality on the line and holds the detail. Serious non-conformances and CAPA escalate into ERP, along with stock status, scrap cost and supplier issues. ERP carries the status and the summary, and links back to MOM for the 40 measurements and the photo. This is the pattern I'd choose.
 
-**Direct MES/MOM to QMS, with ERP for stock.** Non-conformances and inspection data go straight to the QMS with full context. Stock status changes still go through ERP, because ERP must know what's blocked. Where a QMS is already in place and quality is critical, this is the pattern I see working best.
+**Direct MES/MOM to QMS, with ERP for stock.** Where a QMS is already in place, non-conformances and inspection data go straight to it with full context. Stock status changes still go through ERP, because ERP must know what's blocked.
 
-**One platform.** A good MOM platform covers the QMS scope as well, so there's no separate QMS to connect. Check the depth: CAPA workflows, audits and document control should be genuinely usable, not token modules.
+**Through ERP to a QMS.** MES/MOM posts quality results and blocked stock to ERP, and the QMS reads from ERP. Simple, but you lose the most detail this way.
 
 ## Holds must be everywhere at once
 
@@ -68,7 +68,7 @@ So the same revision question comes up as with PLM: the operator must see the ap
 
 ## My view
 
-A good MOM platform replaces the need for a separate QMS, and that's the option I'd choose. Running both means paying twice for the same capability, and losing context at the boundary. If a QMS is already in place, connect it directly, so non-conformances arrive with their full context.
+A good MOM platform, with serious non-conformances and CAPA escalated into ERP, replaces the need for a separate QMS, and that's the option I'd choose. Adding a QMS on top means paying twice for much of the same capability, and losing context at the boundary. If a QMS is already in place, connect it directly, so non-conformances arrive with their full context.
 
 With an MES that covers production only, feeding a QMS through one of the options above works well enough. But a full MOM is the better overall solution.
 

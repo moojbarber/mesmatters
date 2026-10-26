@@ -9,7 +9,7 @@ art: rings
 
 Improving a process only counts if you can measure it. That's what KPIs are for.
 
-[OEE](/post/what-is-oee) gets most of the attention, and rightly so. It's probably the most widely adopted manufacturing KPI in the world. But on its own it won't tell you everything, and some of the most useful measures sit just underneath it.
+[OEE](/post/what-is-oee) gets most of the attention. It's probably the most widely adopted manufacturing KPI in the world, though not everyone rates it as the best measure, and on its own it won't tell you everything. Some of the most useful measures sit just underneath it,
 
 There's an international standard for manufacturing KPIs, ISO 22400. You don't need to memorise it, but it's worth knowing it exists, especially if you're comparing figures across sites or systems.
 

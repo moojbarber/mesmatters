@@ -57,9 +57,18 @@ The daily performance meeting is one of the most practical places to see Kaizen 
 
 In many factories the morning meeting takes a long time to prepare. Data comes from ERP, spreadsheets, separate reports and handwritten notes, and the first part of the meeting is spent agreeing whose numbers are right.
 
-With connected operations, the meeting starts from one screen showing yesterday's performance: OEE by line, top downtime reasons, quality issues and schedule adherence, with maintenance and safety items alongside. Nobody needs to prepare it.
+A typical agenda runs in a set order:
 
-Actions are logged against the data that prompted them, so next week you can see whether they worked. That's PDCA running every day. More on the data behind it in [Time to truth](/post/time-to-truth).
+1. **Health and safety.** Accidents and near misses first, always.
+2. **Quality.** Defects, holds and customer issues.
+3. **Performance.** Output, OEE and the biggest downtime losses.
+4. **Big issues and projects.** Anything that needs escalating or a decision.
+5. **The day ahead.** What's planned today, and what could get in the way.
+6. **Actions.** New actions logged with an owner, and last time's actions followed up.
+
+With connected operations, the meeting runs from one screen that follows the same agenda, with yesterday's data already in it. Nobody needs to prepare it.
+
+Actions are logged against the data that prompted them, and the open ones come back at the next meeting until they're closed, so you can see whether they worked. That's PDCA running every day. More on the data behind it in [Time to truth](/post/time-to-truth).
 
 ## Benefits and challenges
 

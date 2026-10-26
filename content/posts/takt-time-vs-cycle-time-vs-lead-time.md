@@ -19,15 +19,17 @@ Each one answers a different question.
 
 If a line runs for 450 minutes a shift and customers need 900 units a shift, takt time is 30 seconds. To keep up, you need to finish one unit every 30 seconds.
 
-Takt time is a target set by the market. It doesn't measure your process at all.
+Takt time comes from demand, not from the process. It's the target the line has to hit, and the starting point for line balancing.
 
-On a paced line, such as a moving automotive assembly line, you'll often hear takt used for the fixed time each unit spends at every station. That's takt in practice: the line is set to advance at takt time, sometimes slightly faster to allow for losses. Line balancing then spreads the work across stations so each one's tasks fit within that time, with as little idle time as possible. When demand changes, takt changes, and the line is re-balanced or the shift pattern adjusted.
+Line balancing is how you meet it. It spreads the work across stations so each one's tasks fit within takt time, with as little idle time as possible, so material flows from station to station without piling up or running dry. On a paced line, such as a moving automotive assembly line, the line is then set to advance at that pace, sometimes slightly faster to allow for losses, and you'll often hear "takt" used for the fixed time each unit spends at every station. When demand changes, takt changes, and the line is re-balanced or the shift pattern adjusted.
 
 ## Cycle time: how fast you actually work
 
 **Cycle time** is how long it actually takes to complete one unit, or one step, from start to finish. You measure it on the line.
 
 People use it in slightly different ways. It can mean the time for one operation, or for a unit to pass through the whole line. Agree which one you mean before you compare numbers.
+
+In batch and process manufacturing, cycle time is often a fixed time rather than a time per piece: the planned time for the recipe or batch, such as a mixing, cooking or curing step. There, you compare the actual batch time with the recipe's planned time.
 
 If cycle time is longer than takt time, you can't keep up with demand without overtime or more capacity. If it's well under takt time, you have spare capacity, or more resources than you need.
 

@@ -1,7 +1,7 @@
 ---
 title: "The biggest barriers to MES success in food manufacturing"
 short: "MES barriers in food manufacturing"
-description: "Food manufacturers rarely fail at MES because of the technology. The people, the scope, the master data and the platform choice are where projects stumble."
+description: "MES success in food depends on the people as much as the technology. The team, the scope, the master data and the platform choice are where projects succeed or stumble."
 published: 2026-08-04
 category: advice
 art: gates
@@ -11,11 +11,11 @@ Food and beverage manufacturers face pressures most other industries don't. Stri
 
 MES/MOM should be the answer to a lot of that. When it's implemented well, it is.
 
-But too many food projects stumble, and in my experience the reasons are rarely technical. These are the four barriers I see most often, and what to do about each.
+But too many food projects stumble. The technology matters, and choosing the right platform is one of the biggest decisions you'll make. The people matter just as much, and they're the part that's most often underestimated. These are the four barriers I see most often, and what to do about each.
 
-## 1. People, not technology, are the biggest risk
+## 1. People need as much attention as the technology
 
-The team you build has the biggest impact on your success. The technology works. The processes can be mapped. But without the right people in the right roles, and a sponsor who'll clear the way, you're fighting uphill from day one.
+Most project plans are built around the technology: the platform, the integrations, the configuration. That work is essential. But the team you build, and how you bring the shopfloor with you, has just as big an impact on your success. Without the right people in the right roles, and a sponsor who'll clear the way, even the best system will struggle to deliver.
 
 I speak to many food manufacturers who underestimate the change management. Operators have run the same process for years, sometimes decades. Ask them to adopt a new digital system without involving them in the design, or explaining why, and you'll get resistance. Sometimes quiet, sometimes not.
 

@@ -29,7 +29,7 @@ A **batch** is a quantity made in one production run, usually under one order an
 
 A **lot** is a quantity that shares one identity for traceability, whether you made it or bought it. A supplier's delivery of resin is a lot. A batch you produce becomes a lot once it's identified and stored.
 
-The two don't always line up one to one. A large batch might be split into several lots for packing or release, and a lot of finished goods might be blended from more than one batch. In US pharmaceutical regulations, for example, a lot can be a whole batch or an identified portion of one.
+The two don't always line up one to one. A large batch might be split into several lots for packing or release, and a lot can be made up of several batches, for example when finished goods are blended or packed together from more than one production run. In US pharmaceutical regulations, for example, a lot can be a whole batch or an identified portion of one.
 
 What matters is that your MES/MOM can record both, and the links between them, so that you can trace from any lot back to the batches and raw material lots that went into it.
 
@@ -47,7 +47,7 @@ What matters is that your MES/MOM can record both, and the links between them, s
 
 Ask these for each material and product:
 
-- **What do customers or regulators require?** Medical devices and aerospace parts often need serial-level records. Food usually needs lot-level, done fast.
+- **What do customers or regulators require?** Medical devices and aerospace parts often need serial-level records. Food usually needs lot-level.
 - **What does a recall cost?** If one bad component means recalling a whole week's production, finer traceability pays for itself quickly.
 - **Will you service the product?** Field failures trace back through the serial number to the [as-built record](/post/ebom-mbom-as-built). See [Service data back to engineering](/post/service-data-back-to-engineering).
 - **Can the process support it?** Serialising thousands of small parts a minute needs marking and scanning at line speed. Sometimes lot level with tight lot sizes is the practical answer.
@@ -56,7 +56,9 @@ Ask these for each material and product:
 
 The level of granularity is only half the story. The difference between adequate and excellent traceability is what you capture alongside the genealogy: the tooling used, quality results at every stage, the operator, the machine, and the process parameters at the time.
 
-That's what turns a recall from quarantining a week of production into identifying exactly which units contain the suspect material. More in [Your traceability probably isn't as good as you think](/post/manufacturing-traceability).
+That's what turns a recall from quarantining a week of production into identifying exactly which units contain the suspect material.
+
+It also pays off long after the recall. The more context you capture, the easier it is to find the root cause of a problem and stop it happening again, which makes traceability data one of the best inputs to continuous improvement. More in [Your traceability probably isn't as good as you think](/post/manufacturing-traceability).
 
 ## Where it lives
 

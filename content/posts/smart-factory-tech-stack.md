@@ -32,7 +32,7 @@ Alongside it, depending on how much depth you need:
 - **WMS (Warehouse Management System)** for complex warehousing: optimised picking, storage strategies, automation, yard and dock management. It's the most advanced option for the most complex warehousing, particularly distribution centres. For simpler warehousing, ERP and the inventory and logistics capability of MOM can be enough.
 - **EAM** for asset lifecycle management in asset-heavy operations with advanced needs. Day-to-day maintenance belongs in MES/MOM, which replaces the need for a separate CMMS and keeps production and maintenance on the same data.
 - **LIMS (Laboratory Information Management System)** for lab testing, sample management and certificates, especially in process and regulated industries.
-- **QMS (Quality Management System)** for enterprise quality processes: complaints, CAPA, audits, document control. A good MOM platform covers these as well as shopfloor checks and SPC, which replaces the need for a separate QMS.
+- **QMS (Quality Management System)** for enterprise quality processes: complaints, CAPA, audits, document control. A good MOM platform covers most of this alongside shopfloor checks and SPC, with serious non-conformances and CAPA escalated into ERP, which replaces the need for a separate QMS.
 
 ## How they connect
 

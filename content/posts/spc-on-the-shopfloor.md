@@ -7,9 +7,20 @@ category: education
 art: signal
 ---
 
+99.99% sounds great. Until you see what it means at scale:
+
+- About 37 million commercial flights took off in 2024, roughly 100,000 a day. At 99.99%, ten of them wouldn't land safely. Every day.
+- Pharmacies in England dispense about 1.16 billion prescription items a year. At 99.99%, more than 300 people a day would get the wrong medicine.
+- Your heart beats about 100,000 times a day. At 99.99%, it would miss ten.
+- A line making a million parts a week would ship 100 bad ones, every week.
+
+You can't inspect your way to that level of quality. Checking every part is expensive and slow, and when the test destroys the part, it's impossible.
+
+SPC is the alternative. Instead of inspecting everything, you measure a sample at the right frequency and use statistics to show how capable the process is, and whether it's changing. It keeps the number of inspections down while keeping quality high, and it gives you a level of confidence you can trust.
+
 Inspection tells you a part is bad. SPC tells you a part is *about to be* bad.
 
-That's the whole difference, and it's why statistical process control is one of the most valuable things you can put in front of an operator. Yet in a lot of plants, SPC still means a quality engineer updating a spreadsheet at the end of the week. By then, the scrap is already in the bin.
+That's the other big difference, and it's why statistical process control is one of the most valuable things you can put in front of an operator. Yet in a lot of plants, SPC still means a quality engineer updating a spreadsheet at the end of the week. By then, the scrap is already in the bin.
 
 ## Specification limits vs control limits
 
@@ -47,12 +58,27 @@ A point outside the control limits is the obvious signal. But patterns inside th
 
 Don't switch on every rule. Too many alarms and operators learn to ignore them. Start with a few, then add more where they prove useful.
 
-## Capability: Cp and Cpk
+## Capability: Cp, Cpk, Pp and Ppk
 
 Capability compares your process spread with the specification.
 
 - **Cp** asks: if the process were perfectly centred, would it fit within the specification?
 - **Cpk** asks: given where the process actually sits, does it fit?
+
+**Pp** and **Ppk** ask the same two questions, but measure the spread differently.
+
+Cp and Cpk use the variation *within* subgroups, the short-term spread you'd see in five parts made one after another. That's the process's potential when nothing else moves.
+
+Pp and Ppk use the *overall* variation across all the data, including the shifts between subgroups: a new lot of material, a different shift, a tool change. That's what the customer actually receives.
+
+| | Uses | Tells you |
+| --- | --- | --- |
+| **Cp** | Short-term spread | Potential, if perfectly centred |
+| **Cpk** | Short-term spread and centring | Potential, where the process actually sits |
+| **Pp** | Overall spread | Actual performance, if perfectly centred |
+| **Ppk** | Overall spread and centring | Actual performance, where the process actually sits |
+
+On a stable process, the two sets of numbers are close. If Cpk is much higher than Ppk, the process is moving between subgroups, and that's where to look. Ppk is often used for initial studies of a new process, and Cpk for ongoing production once it's proven stable.
 
 A Cpk of 1.33 is a common minimum for ongoing production. Automotive customers often ask for 1.67 on safety and critical characteristics, and for a Ppk of 1.67 in the initial study before production approval. Check your own customers' requirements; they vary. If your Cp is good but your Cpk is poor, you don't need a better machine. You need to centre the process.
 

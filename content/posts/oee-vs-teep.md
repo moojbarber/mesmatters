@@ -7,7 +7,7 @@ category: education
 art: rings
 ---
 
-OEE gets all the attention, and rightly so. But it answers one specific question: how well did we use the time we *planned* to run?
+OEE gets most of the attention. It answers one specific question: how well did we use the time we *planned* to run?
 
 Ask a different question, such as how much capacity is hiding in the hours we don't run at all, and you need a different measure. That's where OOE and TEEP come in.
 

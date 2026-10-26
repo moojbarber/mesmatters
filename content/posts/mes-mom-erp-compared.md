@@ -76,7 +76,7 @@ Most integration arguments I see come down to ownership. Agree this table early 
 | Line-side stock, WIP and consumption | MES/MOM | The truth at the point of use |
 | As-built record and genealogy | MES/MOM | Nobody else is there when it happens |
 | In-process quality results and SPC | MES/MOM | Triggered by what's running |
-| CAPA, complaints and audits | QMS, or MOM where it covers the quality system | Fed by shopfloor non-conformances. See [QMS and MES](/post/qms-and-mes-quality) |
+| CAPA, complaints and audits | ERP, fed by MOM, or a QMS where one is used | Fed by shopfloor non-conformances with full context. See [QMS and MES](/post/qms-and-mes-quality) |
 | Lab results | LIMS | Flow back to MES/MOM against the batch. See [LIMS and MES](/post/lims-and-mes) |
 | Downtime, run hours and counters | MES/MOM | Shared with maintenance |
 | Maintenance work orders and asset history | MES/MOM, or an EAM for asset-heavy operations | See [EAM, CMMS and MES](/post/eam-cmms-and-mes) |
@@ -93,7 +93,7 @@ Not every factory needs every system. The skill is adding depth where the operat
 | **MES/MOM** | You're running on paper, spreadsheets or a set of disconnected point solutions, and you want real-time, trustworthy shopfloor data | Honestly, very few manufacturers beyond the smallest |
 | **APS** | Sequence-dependent changeovers, shared tools, a bottleneck that drives everything, or hundreds of orders a day competing for resources | A handful of lines with stable products and simple changeovers |
 | **WMS** | High volumes, warehouse automation, several storage zones with different rules, or distribution alongside manufacturing | Simpler warehousing, where ERP and the inventory and logistics capability of MOM are enough |
-| **QMS** | Your MES doesn't cover CAPA, complaints and supplier quality | Your MOM platform covers the quality system as well as in-process checks |
+| **QMS** | Your MES doesn't cover CAPA, complaints and supplier quality | Your MOM platform runs quality on the line and escalates non-conformances and CAPA into ERP |
 | **LIMS** | A lab running samples, methods and certificates, common in process and regulated industries | Line-side checks such as weight or pH are enough |
 | **EAM / CMMS** | Asset-heavy operations with advanced maintenance, spares and lifecycle cost needs | Maintenance needs are well covered by MES/MOM on the same downtime data |
 | **SCADA** | Real control of continuous or safety-critical processes | It's mainly used for visibility that MES/MOM could provide. See [Do you need both SCADA and MES?](/post/scada-vs-mes) |

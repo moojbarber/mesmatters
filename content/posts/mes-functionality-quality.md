@@ -74,7 +74,7 @@ Quality connects closely to the other MES functions, which is why context matter
 
 **Holds.** Suspect material is put on hold and blocked from being consumed or shipped. The hold needs to be visible in every system that could move the material.
 
-**Non-conformances.** When problems are found, MES/MOM can raise a non-conformance with full context. Some platforms manage the follow-up actions themselves; others pass serious or repeat issues to a QMS for investigation and CAPA.
+**Non-conformances.** When problems are found, MES/MOM can raise a non-conformance with full context. Serious or repeat issues, and the CAPA that follows, are best escalated into ERP, where the cost, supplier and customer sides are handled.
 
 **Documents.** Document management is usually a quality function, and MES products handle it in different ways.
 
@@ -88,7 +88,7 @@ It only works if quality results are linked to the production and process data a
 
 ## MES/MOM and QMS
 
-MES on its own runs quality at the point of production, with in-process checks and holds tied to the order and the lot. A good MOM platform goes further, and covers the quality system as well, including CAPA, audits, complaints and controlled documents. That replaces the need for a separate QMS.
+MES on its own runs quality at the point of production, with in-process checks and holds tied to the order and the lot. A good MOM platform goes further, with event-triggered sampling, goods-in inspection and batch release, and escalates serious non-conformances and CAPA into ERP. With MOM and ERP working together, a separate QMS adds little.
 
 Platforms with a narrower quality scope pass serious or repeat issues to a separate QMS instead. The full comparison is in [QMS vs LIMS vs MES](/post/qms-vs-lims-vs-mes), and the connections between them in [QMS and MES](/post/qms-and-mes-quality).
 
