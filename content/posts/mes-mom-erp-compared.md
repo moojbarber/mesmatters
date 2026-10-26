@@ -31,7 +31,8 @@ MES and MOM aren't competitors to ERP. They do a different job, at a much finer 
 | **WMS** | Run the warehouse: putaway, picking, storage, automation | Hours to minutes | Warehouse and logistics | 3 |
 | **QMS** | Enterprise quality: CAPA, complaints, audits, supplier quality | Weeks to months | Quality and compliance | 4, sometimes 3 |
 | **LIMS** | Run the lab: samples, methods, results, certificates | Hours to days | Lab analysts, QA | 3 |
-| **EAM / CMMS** | Manage assets and maintenance work | Months to hours | Maintenance and reliability | 3 and 4 |
+| **EAM** | Manage assets across their whole life, including their costs | Years to weeks | Asset management, engineering, finance | 4 |
+| **CMMS** | Plan and record maintenance work | Weeks to hours | Maintenance | 3 |
 | **SCADA** | Monitor and control equipment in real time | Seconds and below | Control room, process engineers | 2 |
 | **IIoT / historian** | Connect equipment and store high-frequency data. MES/MOM often provides the connectivity, and a historian is optional | Milliseconds to years | Engineers, data teams | 1 and 2, feeding 3 |
 
