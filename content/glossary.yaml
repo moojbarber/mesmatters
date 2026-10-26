@@ -1038,8 +1038,8 @@
   - traceability
   - genealogy
 - term: Time-based traceability
-  short: Tracing continuous processes by time window, using the actual lead time through the line.
-  body: It's the practical answer where material doesn't arrive in neat lots, as in extrusion and many continuous food lines.
+  short: Linking inputs to outputs by time, matching the materials consumed in a time window with the materials produced in the same window.
+  body: MES/MOM records when each input lot was being fed into the line and when each output was produced. To trace an output, you look up which inputs were being consumed while it was made. The window is usually shifted by the time material takes to travel through the line, so the output is matched with what went in at the start rather than at the same moment. It's the practical answer where material doesn't arrive in neat lots, as in extrusion and many continuous food lines.
   articles:
   - lot-vs-serial-traceability
   - manufacturing-traceability

@@ -17,7 +17,7 @@ The answer changes the cost of the project and the work operators do every shift
 
 **Serial traceability.** Every individual item has its own identifier, usually a printed or engraved barcode or a data matrix. You know exactly which components went into exactly which unit. Common for high-value and regulated products.
 
-**Time-based traceability.** In continuous processes, material doesn't arrive in neat lots. You trace by time window instead, using the actual lead time through the line to work out which input was in which output. It's how extrusion and many continuous food lines do it.
+**Time-based traceability.** In continuous processes, material doesn't arrive in neat lots. You trace by time window instead. MES/MOM records when each input lot was being consumed and when each output was produced, then matches the two. The window is usually offset by the time material takes to travel through the line, so an output made at 10:30 is matched with what went in at the start of the line, say at 10:00, rather than at 10:30. It's how extrusion and many continuous food lines do it.
 
 Many manufacturers use a mix, such as serialised finished goods built from lot-tracked components.
 

@@ -27,7 +27,7 @@ With [MES/MOM](/post/what-is-mes), traceability can go much deeper:
 
 - **Serialised items**, tracked individually
 - **Specific lot quantities**, so you know exactly how much of each lot went into each output
-- **Time-based traceability** for continuous processes, using actual lead times through the line
+- **Time-based traceability** for continuous processes, matching the materials consumed in a time window with the output produced in that window, offset by the time material takes to travel through the line
 - **Bi-directional** tracing: forwards from a raw material lot to every finished product it touched, and backwards from a finished product to everything that went into it
 
 That's the genealogy. But it's only the start.
