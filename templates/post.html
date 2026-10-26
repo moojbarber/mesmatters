@@ -19,7 +19,7 @@
   <div class="wrap">
     <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ base }}/">Home</a><span class="sep">/</span><a href="{{ base }}/articles">Articles</a><span class="sep">/</span><a href="{{ base }}/{{ p.category_slug }}">{{ p.category_label }}</a></nav>
     <div class="tags">
-      <span class="tag">{{ p.category_label }}</span>
+      {% for t in p.tags %}<a class="tag" href="{{ base }}/articles?tags={{ t.id }}">{{ t.name }}</a>{% endfor %}
       {% if p.series %}<span class="tag pink">MES functionality <i>/</i> {{ '%02d' % p.order }}</span>{% endif %}
       {% if p.start %}<span class="tag pink">Start here <i>/</i> {{ '%02d' % p.start }}</span>{% endif %}
     </div>

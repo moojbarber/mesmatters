@@ -426,3 +426,38 @@
     dlg.addEventListener('close',function(){if(last) last.focus()});
   });
 })();
+
+// articles page: multi-select topic filter (articles must have every selected tag)
+(function(){
+  var box=document.querySelector('[data-tagfilter]'); if(!box) return;
+  var chips=[].slice.call(box.querySelectorAll('[data-tag]'));
+  var cards=[].slice.call(document.querySelectorAll('.card[data-tags]'));
+  var count=document.querySelector('[data-tag-count]'), empty=document.querySelector('[data-tag-empty]'), clear=box.querySelector('[data-tag-clear]');
+  var tagsOf=function(c){return (c.getAttribute('data-tags')||'').split(' ')};
+  var sel=[];
+  try{var q=new URLSearchParams(location.search).get('tags'); if(q) sel=q.split(',').filter(function(t){return chips.some(function(c){return c.dataset.tag===t})});}catch(e){}
+  function matches(c,s){var t=tagsOf(c);return s.every(function(x){return t.indexOf(x)>-1})}
+  function apply(push){
+    var shown=0;
+    cards.forEach(function(c){var ok=matches(c,sel);c.hidden=!ok;if(ok){shown++;c.classList.add('in','vis','show')}});
+    document.querySelectorAll('.wrap > section.section').forEach(function(s){
+      var cs=s.querySelectorAll('.card[data-tags]'); if(!cs.length) return;
+      s.hidden=![].some.call(cs,function(c){return !c.hidden});
+      var h=s.querySelector('h2.label'); if(h) h.hidden=sel.length>0;
+    });
+    chips.forEach(function(ch){
+      var on=sel.indexOf(ch.dataset.tag)>-1; ch.setAttribute('aria-pressed',on);
+      var n=on?shown:cards.filter(function(c){return matches(c,sel.concat(ch.dataset.tag))}).length;
+      ch.querySelector('span').textContent=n; ch.disabled=!on&&n===0;
+    });
+    if(count){count.hidden=!sel.length;count.textContent=shown+(shown===1?' article':' articles')+' match';}
+    if(empty) empty.hidden=!(sel.length&&!shown);
+    if(clear) clear.hidden=!sel.length;
+    if(push){try{var u=new URL(location.href);if(sel.length)u.searchParams.set('tags',sel.join(','));else u.searchParams.delete('tags');history.replaceState(null,'',u)}catch(e){}}
+  }
+  chips.forEach(function(ch){ch.addEventListener('click',function(){
+    var t=ch.dataset.tag,i=sel.indexOf(t); if(i>-1) sel.splice(i,1); else sel.push(t); apply(true);
+  })});
+  if(clear) clear.addEventListener('click',function(){sel=[];apply(true)});
+  apply(false);
+})();

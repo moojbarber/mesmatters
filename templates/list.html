@@ -7,13 +7,20 @@
     <span class="tag">{{ eyebrow }}</span>
     <h1>{{ heading }}</h1>
     <p class="kicker">{{ kicker }}</p>
-    <nav class="filters" aria-label="Topics">
-      <a class="chip" href="{{ base }}/articles"{% if active == 'articles' %} aria-current="page"{% endif %}>All<span>{{ all_count }}</span></a>
-      {% for c in categories %}<a class="chip" href="{{ base }}/{{ c.slug }}"{% if active == c.slug %} aria-current="page"{% endif %}>{{ c.name }}<span>{{ c.posts|length }}</span></a>{% endfor %}
-    </nav>
+    {% if tag_list %}
+    <div class="tagf" data-tagfilter>
+      <div class="tagf-head"><span class="micro">Filter by topic</span><span class="tagf-hint">Pick one or more. Articles must match them all.</span><button type="button" class="tagf-clear" data-tag-clear hidden>Clear filters</button></div>
+      <div class="filters" role="group" aria-label="Filter articles by topic">
+        {% for t in tag_list %}<button type="button" class="chip tchip" data-tag="{{ t.id }}" aria-pressed="false">{{ t.name }}<span>{{ t.n }}</span></button>{% endfor %}
+      </div>
+    </div>
+    {% else %}
+    <nav class="filters" aria-label="Articles"><a class="chip" href="{{ base }}/articles">All articles<span>{{ all_count }}</span></a></nav>
+    {% endif %}
   </div>
 </section>
 <div class="wrap">
+  {% if tag_list %}<p class="tagf-count" data-tag-count role="status" aria-live="polite" hidden></p><p class="tagf-empty" data-tag-empty hidden>No articles have all of those topics. Try removing one.</p>{% endif %}
   {% if featured %}
   <section class="section tight">
     <div class="grid" style="--min:300px">

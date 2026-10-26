@@ -621,6 +621,15 @@ def build(base, relative=False, include_scheduled=False):
     seo = yaml.safe_load((ROOT / "content" / "seo.yaml").read_text(encoding="utf-8")) or {}
     blocks = {p.stem: p.read_text(encoding="utf-8") for p in (ROOT / "content" / "blocks").glob("*.html")}
     posts = load_posts(base, blocks, seo, include_scheduled)
+    tagd = yaml.safe_load((ROOT / "content" / "tags.yaml").read_text(encoding="utf-8"))
+    for p in posts:
+        ids = tagd["articles"].get(p["slug"])
+        assert ids, f"article has no tags in content/tags.yaml: {p['slug']}"
+        bad = [t for t in ids if t not in tagd["tags"]]
+        assert not bad, f"unknown tags {bad} on {p['slug']}"
+        p["tags"] = [{"id": t, "name": tagd["tags"][t]} for t in ids]
+        p["tag_ids"] = " ".join(ids)
+    tag_list = [{"id": k, "name": v, "n": sum(1 for p in posts if k in p["tag_ids"].split())} for k, v in tagd["tags"].items()]
     for p in posts:
         for img in re.findall(r'/images/legacy/([^"\')\s]+)', p["body"]):
             src = ROOT / "public" / "images" / "legacy" / img
@@ -723,7 +732,7 @@ def build(base, relative=False, include_scheduled=False):
           seo_title="All articles | Shopfloor Matters", description="Every article on the smart factory, shopfloor AI, implementation and the MES and MOM foundations underneath them.",
           canonical=f"{SITE}/articles", eyebrow=f"Library / {len(posts)} articles", heading="Every article, in one place",
           kicker="Guides, explainers and opinion on the smart factory, shopfloor AI and MES/MOM. Newest first.",
-          all_count=len(posts), featured=posts[0],
+          all_count=len(posts), featured=posts[0], tag_list=tag_list,
           groups=[g for g in ({"label": "The essential guides", "posts": [q for q in posts[1:] if q.get("guide")]},
                               {"label": "Everything else", "posts": [q for q in posts[1:] if not q.get("guide")]}) if g["posts"]])
 
@@ -757,12 +766,13 @@ def build(base, relative=False, include_scheduled=False):
         i = seq.index(p)
         prev = seq[i - 1] if i > 0 else None
         nxt = seq[i + 1] if i + 1 < len(seq) else None
-        related = [q for q in same if q["category_key"] == p["category_key"] and q not in (prev, nxt)]
-        related = (related + [q for q in same if q not in related and q not in (prev, nxt)])[:3]
+        mine = set(p["tag_ids"].split())
+        pool = [q for q in same if q not in (prev, nxt)]
+        related = sorted(pool, key=lambda q: -len(mine & set(q["tag_ids"].split())))[:3]
         ld = {"@context": "https://schema.org", "@type": "BlogPosting", "headline": p["title"], "description": p["description"],
               "datePublished": p["published_iso"], "dateModified": p["updated_iso"], "author": person, "publisher": org,
               "mainEntityOfPage": p["canonical"], "url": p["canonical"], "image": f"{SITE}/images/og/{p['slug']}.png",
-              "articleSection": p["category_label"], "wordCount": p["words"], "inLanguage": "en-GB"}
+              "articleSection": p["category_label"], "keywords": ", ".join(t["name"] for t in p["tags"]), "wordCount": p["words"], "inLanguage": "en-GB"}
         if p["summary"]:
             ld["abstract"] = p["summary"]
         extra_ld = []

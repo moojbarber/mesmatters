@@ -1,0 +1,125 @@
+# Topic tags. Every article gets a few. The articles page filters on them (select several to narrow down: articles must have all of them).
+# Order of `tags` is the order of the filter chips.
+tags:
+  foundations: MES/MOM basics
+  ai: AI
+  data: Shopfloor data
+  quality: Quality
+  traceability: Traceability
+  compliance: Regulated industries
+  maintenance: Maintenance
+  production: Production and scheduling
+  inventory: Inventory and logistics
+  metrics: Metrics and KPIs
+  connected-worker: Connected worker
+  lean: Lean and improvement
+  erp: ERP and business systems
+  integration: Integration and architecture
+  automation: Automation and connectivity
+  implementation: Implementation
+  business-case: Business case and ROI
+  strategy: Smart factory strategy
+  standards: Standards
+  food: Food and beverage
+  energy: Energy and ESG
+  comparisons: Comparisons
+
+articles:
+  agentic-ai-mcp-manufacturing: [ai, integration, strategy]
+  ai-for-frontline-workers: [ai, connected-worker, quality]
+  ai-ml-genai-on-the-shopfloor: [ai, data, quality, foundations]
+  ai-needs-shopfloor-data: [ai, data, quality, strategy]
+  aps-vs-mes-scheduling: [production, erp, comparisons]
+  build-vs-buy-mes: [strategy, implementation, business-case, comparisons]
+  cloud-vs-on-premises-mes: [integration, strategy, comparisons]
+  cmms-vs-eam-vs-mes: [maintenance, erp, comparisons]
+  configure-dont-customise: [implementation, strategy]
+  connected-worker-one-app-not-five: [connected-worker, foundations, comparisons]
+  contextualised-manufacturing-data: [data, ai, integration]
+  cpq-to-shopfloor: [erp, integration, production]
+  digital-shift-handover: [connected-worker, production]
+  digital-work-instructions: [connected-worker, quality, production]
+  discrete-vs-process-manufacturing: [foundations, production, comparisons]
+  eam-cmms-and-mes: [maintenance, integration, erp]
+  ebom-mbom-as-built: [erp, integration, traceability]
+  erp-master-data-for-mes: [erp, implementation, data]
+  erp-vs-mrp-vs-mes: [erp, foundations, comparisons]
+  esg-needs-shopfloor-data: [energy, data, metrics]
+  first-pass-yield-vs-rolled-throughput-yield: [metrics, quality, comparisons]
+  food-and-beverage-manufacturing-challenges: [food, quality, traceability]
+  food-manufacturing-mes-barriers: [food, implementation]
+  historian-vs-mes: [data, automation, comparisons]
+  history-of-mes: [foundations, standards]
+  how-long-does-mes-implementation-take: [implementation]
+  how-to-choose-an-mes: [business-case, implementation, strategy]
+  how-to-modernise-a-factory: [strategy, implementation]
+  iiot-vs-mes: [automation, data, comparisons]
+  industry-4-0-vs-industry-5-0: [strategy, connected-worker, comparisons]
+  isa-88-and-isa-95: [standards, compliance, production]
+  isa-95-explained: [standards, foundations, integration]
+  isa95-integration-patterns: [integration, standards, erp]
+  it-vs-ot: [automation, integration, comparisons]
+  kaizen-and-mes: [lean, metrics]
+  lims-and-mes: [quality, integration, compliance]
+  lot-vs-serial-traceability: [traceability, compliance, comparisons]
+  manufacturing-change-management: [implementation, connected-worker]
+  manufacturing-data-platforms: [data, integration, ai]
+  manufacturing-kpis-beyond-oee: [metrics, lean]
+  manufacturing-process-mapping: [implementation, lean]
+  manufacturing-traceability: [traceability, quality, compliance]
+  mes-and-digital-twins: [data, strategy, ai]
+  mes-business-case: [business-case]
+  mes-functionality-energy: [energy, foundations]
+  mes-functionality-guide: [foundations]
+  mes-functionality-inventory: [inventory, foundations, traceability]
+  mes-functionality-logistics: [inventory, foundations]
+  mes-functionality-maintenance: [maintenance, foundations]
+  mes-functionality-production: [production, foundations, metrics]
+  mes-functionality-quality: [quality, foundations]
+  mes-functionality-scheduling: [production, foundations]
+  mes-functionality-tooling: [maintenance, production, foundations]
+  mes-go-live: [implementation]
+  mes-implementation-team: [implementation]
+  mes-in-regulated-industries: [compliance, quality, traceability]
+  mes-market-overview: [strategy, foundations]
+  mes-mom-erp-compared: [foundations, erp, comparisons]
+  mes-multi-site-rollout: [implementation, strategy]
+  mes-roi-bottom-line: [business-case, metrics]
+  mes-simplifies-erp: [erp, integration]
+  mes-vs-erp: [erp, foundations, comparisons]
+  mes-vs-mom: [foundations, comparisons]
+  mesa-and-the-definition-of-mes: [standards, foundations]
+  mtbf-vs-mttr-vs-mttf: [maintenance, metrics, comparisons]
+  oee-vs-teep: [metrics, comparisons]
+  opc-ua-mqtt-uns-explained: [automation, integration, data]
+  opc-ua-vs-mqtt: [automation, integration, comparisons]
+  ot-cybersecurity-for-mes: [automation, integration]
+  paperless-manufacturing: [connected-worker, quality, implementation]
+  plc-vs-scada-vs-dcs-vs-mes: [automation, foundations, comparisons]
+  plm-erp-mes-digital-thread: [erp, integration, traceability]
+  practical-genai-for-the-shopfloor: [ai, connected-worker]
+  predictive-maintenance-data: [maintenance, ai, data]
+  preventive-vs-predictive-maintenance: [maintenance, comparisons]
+  qms-and-mes-quality: [quality, integration]
+  qms-vs-lims-vs-mes: [quality, compliance, comparisons]
+  replacing-a-homegrown-mes: [implementation, strategy]
+  scada-vs-mes: [automation, comparisons]
+  service-data-back-to-engineering: [data, integration, quality]
+  shopfloor-applications-explained: [foundations, erp]
+  skills-enforcement-shopfloor: [connected-worker, quality, compliance]
+  smart-factory-glossary: [foundations]
+  smart-factory-roi-research: [business-case, strategy]
+  smart-factory-tech-stack: [strategy, integration, erp]
+  smart-factory-technology-mistakes: [strategy, implementation]
+  smart-factory-where-to-start: [strategy, business-case]
+  smart-manufacturing-myths: [strategy, ai]
+  spc-on-the-shopfloor: [quality, metrics]
+  takt-time-vs-cycle-time-vs-lead-time: [metrics, lean, comparisons]
+  time-to-truth: [data, strategy, metrics]
+  unified-namespace-uns: [automation, data, integration]
+  what-is-a-smart-factory: [strategy, foundations]
+  what-is-erp: [erp, foundations]
+  what-is-mes: [foundations]
+  what-is-oee: [metrics, foundations, lean]
+  who-benefits-from-mes: [business-case, foundations]
+  wms-vs-mes-inventory: [inventory, erp, comparisons]

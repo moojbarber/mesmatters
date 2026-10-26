@@ -1565,3 +1565,39 @@ button.ttt-label:hover{background:rgba(255,255,255,.04)}
 .home-bento .lp-teaser p{max-width:none;margin-bottom:20px}
 .home-bento .lp-teaser-art{max-height:230px}
 @media (max-width:900px){.home-bento{grid-template-columns:1fr}.home-bento .bento-quote,.home-bento .ro-banner,.home-bento .lp-teaser{grid-column:1;grid-row:auto}.home-bento .lp-teaser-art{order:0}}
+
+/* topic tag filter */
+.tagf{margin-top:30px}
+.tagf-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
+.tagf-head .micro{color:var(--b)}
+.tagf-hint{font-size:13px;color:var(--dim)}
+.tagf-clear{margin-left:auto;font:600 13px var(--body);color:var(--b);background:none;border:0;cursor:pointer;padding:4px 0}
+.tagf .filters{margin-top:14px}
+.tchip{cursor:pointer}
+.tchip[aria-pressed="true"]{color:#d9fbff;border-color:rgba(51,212,224,.7);background:rgba(51,212,224,.16);box-shadow:0 0 18px -4px rgba(51,212,224,.5)}
+.tchip[aria-pressed="true"]:before{content:"✓ ";color:var(--b)}
+.tchip:disabled{opacity:.35;cursor:default}
+.tagf-count{margin:34px 0 -60px;font:600 14px var(--body);color:var(--mut)}
+.tagf-empty{margin:40px 0;color:var(--mut)}
+a.tag:hover{border-color:var(--b);background:rgba(51,212,224,.16)}
+
+/* bento v2: quote with photo, matching CTAs pinned to card bottoms */
+.home-bento .bento-quote{margin:0;justify-content:space-between;gap:22px;padding:30px 32px}
+.home-bento .bento-quote blockquote{margin:0}
+.home-bento .bento-quote .big{position:relative;text-indent:-.42em}
+.q-mark{font-family:Georgia,'Times New Roman',serif;font-weight:700;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:0}
+.q-mark:not(.close){font-size:1.35em;vertical-align:-.12em;margin-right:.04em}
+.q-mark.close{font-size:1.35em;vertical-align:-.12em;margin-left:.04em}
+.bento-quote figcaption{display:flex;align-items:center;gap:13px}
+.bento-quote figcaption img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid rgba(51,212,224,.5)}
+.bento-quote figcaption b{display:block;font:700 16px/1.2 var(--disp)}
+.bento-quote figcaption small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--b);margin-top:3px}
+.home-bento .ro-banner,.home-bento .lp-teaser{display:flex;flex-direction:column;align-items:flex-start;padding:30px 32px}
+.home-bento .ro-banner{gap:10px}
+.home-bento .lp-teaser{gap:6px}
+.home-bento .lp-teaser-art{align-self:stretch;margin:auto 0 8px;max-height:200px}
+.home-bento .bento-cta{margin-top:auto}
+.home-bento .ro-banner strong{margin-bottom:12px}
+.ro-banner:hover .bento-cta i{transform:translateX(4px)}
+.home-bento .bento-cta{display:inline-flex;align-items:center;gap:10px;padding:15px 20px;border-radius:12px;background:var(--g);color:#0a0820;font:700 15px/1 var(--body);letter-spacing:0;text-transform:none}
+.home-bento .bento-cta span{font:inherit;color:inherit;letter-spacing:inherit;text-transform:inherit}
