@@ -71,8 +71,6 @@ It stops being enough when you need any of these:
 - Maintenance working from the same downtime data as production
 - Energy use linked to the order and product that caused it
 
-ERP can be extended to cover some of these, but that usually means custom code, which then has to be maintained and retested through every upgrade.
-
 Standard ISA-95 practice is also not to connect ERP directly to the machines. MES/MOM, or a connectivity layer, sits between them.
 
 ## How they work together
