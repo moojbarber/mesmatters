@@ -16,12 +16,6 @@
     {% include ("tools/template.html" if t.kind == "template" else "tools/" ~ t.id ~ ".html") %}
   </div>
 
-  {% if sfg_url %}
-  <aside class="tk-deeper rv">
-    <span class="micro">Want to go deeper?</span>
-    <p>A fuller version of this sits inside <a href="{{ sfg_url }}" rel="noopener" target="_blank">Smart Factory Core</a>, the vendor-neutral course I built with Kunal Wagh.</p>
-  </aside>
-  {% endif %}
 
   {{ for_roles(t.for_roles, base) }}
 

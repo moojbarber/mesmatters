@@ -39,8 +39,6 @@ SOCIALS = [
 KIT_FORM_ID = os.environ.get("KIT_FORM_ID", "").strip()
 # Where "Ask Matt" questions are POSTed (e.g. a Formspree or Tally endpoint). Empty = copy the question and open LinkedIn.
 ASK_FORM_ENDPOINT = os.environ.get("ASK_FORM_ENDPOINT", "").strip()
-# Optional link to the Smart Factory Core course on tool pages. Empty = not shown.
-SFG_COURSE_URL = os.environ.get("SFG_COURSE_URL", "").strip()
 
 CATEGORIES = [
     {"key": "thought-leadership", "slug": "thought-leadership", "name": "Smart Factory & AI", "eyebrow": "Think", "art": "thought-leadership",
@@ -642,7 +640,7 @@ def build(base, relative=False, include_scheduled=False):
     env.globals["socials"] = [s for s in SOCIALS if s["url"]]
     version = dt.datetime.now().strftime("%Y%m%d%H%M")
     common = {"base": base, "nav": NAV, "linkedin": LINKEDIN, "year": dt.date.today().year, "version": version, "kit_form": KIT_FORM_ID,
-              "ask_endpoint": ASK_FORM_ENDPOINT, "sfg_url": SFG_COURSE_URL,
+              "ask_endpoint": ASK_FORM_ENDPOINT,
               "categories": [], "jsonld": []}
     recd = yaml.safe_load((ROOT / "content" / "recommendations.yaml").read_text(encoding="utf-8"))
     import base64
