@@ -1,0 +1,36 @@
+<div class="tk-intro rv">
+  <div>
+    <h2>Draw what you actually run</h2>
+    <p>Most manufacturers have never seen their systems on one page. Pick what you use, say how each one is connected, and add anything that isn't listed. The map redraws as you go.</p>
+    <p class="dimmed">It's a conversation starter, not an architecture document. Everything stays in this browser, and you can share a link or download the picture.</p>
+  </div>
+  <div class="oc-how">
+    <b>How to read it</b>
+    <p><strong>Orange lines</strong> go through ERP. <strong>Cyan lines</strong> go straight to MOM. A <strong>dashed box</strong> is a system that isn't connected to anything.</p>
+    <p>Underneath the map you'll find what I'd look at first in a landscape like yours.</p>
+  </div>
+</div>
+
+<div class="ls" id="ls">
+  <div class="ls-panel rv" id="ls-panel" aria-label="Your systems"></div>
+  <div class="ls-main">
+    <div class="ls-canvas">
+      <div class="ls-canvas-head">
+        <b>Your systems landscape</b>
+        <span class="ls-stats" id="ls-stats"></span>
+      </div>
+      <div class="ls-stage" id="ls-stage"></div>
+      <div class="imap-legend ls-legend" aria-hidden="true"><span class="lg-erp">Through ERP</span><span class="lg-mes">Direct to MOM</span><span class="lg-core">Orders down, actuals up</span><span class="lg-alone">Not connected</span></div>
+      <div class="ls-actions">
+        <button type="button" class="btn sm" id="ls-png">Download image</button>
+        <button type="button" class="btn ghost sm" id="ls-share">Copy share link</button>
+        <button type="button" class="btn ghost sm" id="ls-reset">Start again</button>
+      </div>
+    </div>
+    <section class="ls-insights" aria-live="polite">
+      <h2>What I'd look at first</h2>
+      <div id="ls-insights"></div>
+    </section>
+  </div>
+</div>
+<script src="{{ base }}/js/landscape.js?v={{ version }}" defer></script>

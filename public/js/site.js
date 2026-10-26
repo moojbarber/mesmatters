@@ -327,7 +327,9 @@
   if (!maps.length) return;
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   var NS = 'http://www.w3.org/2000/svg';
+  var d0 = document;
   [].forEach.call(maps, function (fig) {
+    [].forEach.call(fig.querySelectorAll('[data-imap-link]'), function (l) { l.href = (window.LP_BASE || '').replace(/\/\.$/, '') + l.dataset.imapLink + (window.LP_EXT || ''); });
     var D = JSON.parse(fig.querySelector('.imap-data').textContent);
     var svg = fig.querySelector('svg'), dotsG = fig.querySelector('.imap-dots');
     var edges = [].slice.call(fig.querySelectorAll('.imap-edge'));
@@ -337,6 +339,7 @@
     function active(e) {
       var a = e.dataset.app, r = e.dataset.route;
       if (a === 'core' || a === 'floor') return true;
+      if (r === 'side') return sel === a;
       return (D.modes[mode].routes[a] || []).indexOf(r) >= 0;
     }
     function spawn() {
@@ -370,8 +373,9 @@
           var d = info.querySelector('.imap-routes .' + r), on = A.module || R.indexOf(r) >= 0;
           d.classList.add(on ? 'on' : 'off');
           d.querySelector('b').textContent = A.labels ? A.labels[r === 'erp' ? 0 : 1] : A.module ? (r === 'erp' ? 'Where ERP fits' : 'What it replaces') : (r === 'erp' ? 'Via ERP' : 'Direct to MOM');
-          d.querySelector('span').textContent = (on ? '' : 'Not used in this pattern. ') + A[r];
+          d.querySelector('span').textContent = (on || (r === 'mes' && A.nomes) ? '' : 'Not used in this pattern. ') + A[r];
         });
+        if (A.also) { var al = d0.createElement('p'); al.className = 'imap-also'; al.textContent = A.also; info.querySelector('.imap-routes').after(al); }
         var a = info.querySelector('a'); a.href = (window.LP_BASE || '').replace(/\/\.$/, '') + A.link + (window.LP_EXT || ''); a.textContent = 'Read: ' + A.read + ' →';
       }
       spawn();
@@ -397,6 +401,7 @@
       });
       requestAnimationFrame(tick);
     }
+    var st = fig.querySelector('.imap-stage'); if (st && st.scrollWidth > st.clientWidth) st.scrollLeft = (st.scrollWidth - st.clientWidth) / 2;
     paint();
     if (!reduce) requestAnimationFrame(tick);
   });

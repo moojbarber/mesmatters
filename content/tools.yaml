@@ -37,6 +37,17 @@ tools:
     color: "#ff6fd8"
     posts: [shopfloor-applications-explained, mes-mom-erp-compared, smart-factory-tech-stack, mes-vs-erp, mes-vs-mom, wms-vs-mes-inventory, qms-and-mes-quality, lims-and-mes, eam-cmms-and-mes, aps-vs-mes-scheduling, historian-vs-mes, iiot-vs-mes, scada-vs-mes]
 
+  - id: systems-landscape
+    kind: tool
+    title: Map your systems landscape
+    short: Landscape builder
+    eyebrow: Draw your own
+    blurb: Pick the systems you run and how they connect. See your landscape drawn live, with the overlaps and gaps worth a conversation.
+    minutes: 5
+    icon: nodes
+    color: "#a594ff"
+    posts: [smart-factory-tech-stack, shopfloor-applications-explained, isa95-integration-patterns, mes-mom-erp-compared, what-is-erp]
+
   - id: vendor-scorecard
     kind: tool
     title: MES vendor scorecard

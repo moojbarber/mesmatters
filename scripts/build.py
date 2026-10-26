@@ -182,6 +182,7 @@ def load_paths(posts):
 ICONS = {
     "ladder": '<svg viewBox="0 0 24 24"><path d="M5 20h4v-4h4v-4h4V8h3"/><path d="M5 20V4"/></svg>',
     "gauge": '<svg viewBox="0 0 24 24"><path d="M4 16a8 8 0 1 1 16 0"/><path d="M12 16l4-5"/><circle cx="12" cy="16" r="1.5"/></svg>',
+    "nodes": '<svg viewBox="0 0 24 24"><rect x="8" y="9" width="8" height="6" rx="1.5"/><rect x="9" y="2" width="6" height="3.5" rx="1"/><rect x="2" y="17" width="6" height="4" rx="1"/><rect x="16" y="17" width="6" height="4" rx="1"/><path d="M12 5.5V9M9 15l-4 2M15 15l4 2"/></svg>',
     "stack": '<svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/><path d="M3 17.5l9 5 9-5" opacity=".5"/></svg>',
     "scales": '<svg viewBox="0 0 24 24"><path d="M12 4v16M6 20h12M5 8h14"/><path d="M5 8l-3 6h6zM19 8l-3 6h6z"/></svg>',
     "chart": '<svg viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><path d="M8 16v-4M12 16V8M16 16v-6"/></svg>',
@@ -727,7 +728,7 @@ def build(base, relative=False, include_scheduled=False):
     write("index.html", "home.html", active="home",
           seo_title="Shopfloor Matters | The smart factory, shopfloor AI and MES",
           description="Practical, vendor-neutral writing on the smart factory and shopfloor AI, and the MES and MOM systems underneath them. By Matt Barber.",
-          canonical=f"{SITE}/", posts=posts, series=series, start=start, latest=posts[:5],
+          canonical=f"{SITE}/", posts=posts, series=series, start=start, latest=posts[:5], imap_block=blocks.get("integration-map", ""),
           start_minutes=sum(p["read_time"] for p in start), total_words_k=round(total_words / 1000),
           jsonld=[jsonld({"@context": "https://schema.org", "@type": "WebSite", "name": "Shopfloor Matters", "url": SITE,
                           "description": "Practical guides to MES, MOM and smart manufacturing", "author": person, "publisher": org})])
@@ -899,7 +900,7 @@ def build(base, relative=False, include_scheduled=False):
     tool_list = {"@context": "https://schema.org", "@type": "ItemList", "name": "Shopfloor Matters tools and templates",
                  "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f"{SITE}/tools/{x['id']}", "name": x["title"]} for i, x in enumerate(tools)]}
     write("tools/index.html", "tools-hub.html", active="tools", seo_title="Free smart factory and MES tools | Shopfloor Matters",
-          description="Free, vendor-neutral tools: a smart factory readiness check, a 1% OEE value calculator, a systems picker, an MES vendor scorecard and Excel templates.",
+          description="Free, vendor-neutral tools: a smart factory readiness check, a 1% OEE value calculator, a systems picker, a systems landscape builder, an MES vendor scorecard and Excel templates.",
           canonical=f"{SITE}/tools/", icons=ICONS, tools_js=True, og_image=f"{SITE}/images/og/page-advice.png", jsonld=[jsonld(tool_list)])
     for x in tools:
         if x["kind"] == "tool":

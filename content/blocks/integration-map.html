@@ -11,6 +11,7 @@
     </div>
   </div>
   <p class="imap-mode-note" aria-live="polite"></p>
+  <p class="imap-swipe">Swipe sideways to see the whole map.</p>
   <div class="imap-stage">
     <svg viewBox="0 0 1000 720" role="img" aria-label="Diagram wrapped in a data and AI layer, with ERP at the top, MOM in the centre containing MES, QMS, IMS, CMMS and optionally connected worker, the specialist applications either side, and machines and people below">
       <defs>
@@ -36,6 +37,8 @@
         <path class="imap-edge" data-app="eam" data-route="mes" d="M812,303 C730,303 730,345 670,345"/>
         <path class="imap-edge" data-app="cw" data-route="erp" d="M812,433 C700,433 660,98 600,98"/>
         <path class="imap-edge" data-app="cw" data-route="mes" d="M812,433 C730,433 730,452 670,452"/>
+        <path class="imap-edge side" data-app="cw" data-route="side" d="M964,426 C994,426 994,180 964,180"/>
+        <path class="imap-edge side" data-app="cw" data-route="side" d="M840,461 C760,560 300,560 150,526"/>
       </g>
       <g class="imap-dots"></g>
 
@@ -71,7 +74,7 @@
       </g>
     </svg>
   </div>
-  <div class="imap-legend" aria-hidden="true"><span class="lg-erp">Via ERP</span><span class="lg-mes">Direct to MOM</span><span class="lg-core">Orders down, actuals up</span></div>
+  <div class="imap-legend" aria-hidden="true"><span class="lg-erp">Via ERP</span><span class="lg-mes">Direct to MOM</span><span class="lg-core">Orders down, actuals up</span><a class="imap-own" data-imap-link="/tools/systems-landscape">Map your own landscape →</a></div>
   <div class="imap-info" aria-live="polite">
     <p class="imap-hint">Pick an application, or a part of MOM, to see what it does, where it overlaps and what flows where.</p>
   </div>
@@ -107,7 +110,7 @@
               "link": "/post/plm-erp-mes-digital-thread", "read": "PLM, ERP and MES"},
       "cpq": {"name": "CPQ", "what": "Configures complex products and prices them correctly.",
               "erp": "The configured order lands in ERP with its pricing, and ERP plans and costs it.",
-              "mes": "CPQ doesn't connect to MOM directly. The configuration reaches the shopfloor through ERP, as part of the order, its BOM and routing.",
+              "mes": "CPQ doesn't connect to MOM directly. The configuration reaches the shopfloor through ERP, as part of the order with its BOM and routing.", "nomes": true,
               "link": "/post/cpq-to-shopfloor", "read": "CPQ to shopfloor"},
       "aps": {"name": "APS", "what": "Builds detailed, constraint-based schedules when scheduling gets genuinely hard. Not every manufacturer needs one: ERP planning plus MOM's own sequencing is often enough.",
               "erp": "Takes demand and orders from ERP and returns planned dates.",
@@ -125,7 +128,7 @@
               "erp": "Asset values, spares purchasing and maintenance costs live with ERP.",
               "mes": "Run hours, counts and downtime from MOM trigger condition-based work, and maintenance windows feed back into the schedule.",
               "link": "/post/cmms-vs-eam-vs-mes", "read": "CMMS vs EAM vs MES"},
-      "cw": {"name": "Connected worker", "what": "Puts instructions, checklists, skills and handover in front of frontline people. It can be a standalone app, or part of MOM. Built into MOM, it works on the same data as everything else.",
+      "cw": {"name": "Connected worker", "what": "Puts instructions, checklists, skills and handover in front of frontline people. It can be a standalone app, or part of MOM. Built into MOM, it works on the same data as everything else.", "also": "It can also connect to a WMS, for warehouse tasks on mobile devices, and to a LIMS, for sampling and lab tasks.",
              "erp": "Bought standalone and wired to ERP, it knows the order but not what the line is actually doing.",
              "mes": "Built into or tightly linked with MOM, every checklist and instruction knows the order, the machine and the operator.",
              "link": "/post/connected-worker-one-app-not-five", "read": "Connected worker"},

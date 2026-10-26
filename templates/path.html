@@ -28,7 +28,7 @@
       </ol>
     </div>
 
-    {% if path.id == "beyond-erp" %}{{ integration_map|safe }}{% endif %}
+    {% if path.id in ["beyond-erp", "systems-landscape"] %}{{ integration_map|safe }}{% endif %}
     <ol class="lp-stations">
       {% for s in path.stations %}
       <li class="lp-st" data-slug="{{ s.post.slug }}">
