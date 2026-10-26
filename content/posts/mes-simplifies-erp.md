@@ -38,7 +38,7 @@ The shopfloor is fast-moving, with many machines and people working together. Ca
 
 Expectations of ERP have changed. Gartner's idea of "composable ERP" describes ERP as a strong core that integrates with specialist applications, rather than trying to do everything itself.
 
-That creates room for MES/MOM to take on shopfloor execution. Moving those functions out of ERP can simplify ERP deployments and roll-outs, and lower its cost of ownership.
+Shopfloor execution is one of those specialist areas, and it's best practice for MES/MOM to handle it. Keeping it out of ERP also simplifies ERP deployments and roll-outs, and lowers its cost of ownership.
 
 It also means choosing the right application for each area. Some vendors offer both ERP and MES/MOM, and many manufacturers successfully run ERP from one vendor and MES/MOM from another. Either way, the integration between them deserves careful attention:
 
