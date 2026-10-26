@@ -18,7 +18,7 @@ This is how I'd use them.
 
 A smart factory isn't science fiction, and it doesn't need an "Industry 4.0" label. My definition: a manufacturing environment where people, processes and technology work together, supported by data, to maximise efficiency, flexibility and quality. See [What is a smart factory?](/post/what-is-a-smart-factory)
 
-Put that, or your own version, in front of leadership and get agreement on it. It stops the programme turning into "buy some AI" on week two.
+Put that, or your own version, in front of leadership and get agreement on it. It keeps the programme pointed at outcomes, and gives AI a clear job inside it from the start.
 
 ## Days 1 to 30: understand where you really are
 
@@ -79,7 +79,7 @@ Two cautions. Don't pick a line purely because it's the worst performer if its p
 ## What not to do in the first 90 days
 
 - **Don't buy software in month one.** You don't know your requirements yet.
-- **Plan for AI, and build what it needs first.** AI that predicts and optimises needs the data foundation you're about to build. GenAI on your documents can start straight away, alongside it. See [AI will transform your factory, if you give it the right data](/post/ai-needs-shopfloor-data).
+- **Plan the AI and the data together.** AI that predicts and optimises learns from the data foundation you're about to build, so choose an AI use case for the first line and let it shape what you capture. GenAI on your documents can start straight away. See [AI will transform your factory, if you give it the right data](/post/ai-needs-shopfloor-data).
 - **Don't pilot a point solution you couldn't scale.** A pilot that becomes a silo costs you twice.
 - **Don't leave the shopfloor out.** People support what they helped create. See [Resistance to change is guaranteed](/post/manufacturing-change-management).
 
