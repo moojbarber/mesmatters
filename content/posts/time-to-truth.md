@@ -79,7 +79,7 @@ Autonomy here is earned decision by decision. It's never switched on for the who
 
 You don't have to wait for "without asking" to get value from AI. What changes from stage to stage is how much it can do.
 
-With paper and Excel, the value is negligible. AI can help you read the data you have, but it can't analyse what was never captured. An AI assistant on a spreadsheet can tidy it up and chart it more clearly, and that's about it.
+With paper and Excel, the value is low. AI can help you read the data you have, but it can't analyse what was never captured. An AI assistant on a spreadsheet can tidy it up and chart it more clearly, and that's about it.
 
 With ERP on the shopfloor, AI can spot trends in the totals, but it can't explain them without shopfloor context. AI can find trends in transactional data and forecast from them, such as a product whose scrap cost is creeping up across orders. But it sees totals rather than causes, so it can tell you what happened far more often than why.
 
