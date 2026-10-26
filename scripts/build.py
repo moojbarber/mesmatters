@@ -665,7 +665,7 @@ def build(base, relative=False, include_scheduled=False):
                              "ERP and MES integration", "Industry 4.0", "Manufacturing digital transformation"],
               "image": f"{SITE}/images/matt-barber.jpg",
               "award": "Infor Circle of Excellence, 2024", "alumniOf": [{"@type": "CollegeOrUniversity", "name": "The University of Sheffield"}, {"@type": "CollegeOrUniversity", "name": "The London School of Economics and Political Science"}], "hasOccupation": {"@type": "Occupation", "name": "MES software executive",
-              "description": "Involved in hundreds of MES projects across food and beverage, automotive, packaging, metal and plastics fabrication and industrial manufacturing."}}
+              "description": "Involved in countless MES projects across food and beverage, automotive, packaging, metal and plastics fabrication and industrial manufacturing."}}
     person_full = {**person, "description": "Matt Barber studied computer science at the University of Sheffield, started as an MES software engineer and has been VP & General Manager, MES at Infor since 2024. He writes Shopfloor Matters, about the smart factory, shopfloor AI and MES/MOM.",
                    "subjectOf": [{"@type": {"podcast": "PodcastEpisode", "webinar": "CreativeWork"}.get(it.get("type"), "Article"),
                                   "name": it["title"], "url": next((l["url"] for l in it.get("links", [])), None),
