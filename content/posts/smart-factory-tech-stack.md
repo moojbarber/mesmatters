@@ -21,6 +21,8 @@ Let's go through it layer by layer.
 
 **APS (Advanced Planning and Scheduling)** produces detailed, constraint-based schedules when ERP's planning isn't enough. Useful where you have complex sequencing, shared resources or tight changeover constraints.
 
+**EAM (Enterprise Asset Management)** manages physical assets across their whole life, including their costs, for asset-heavy businesses with advanced needs. ERP often covers the asset register, depreciation and capital spend already, so check what it does first. Day-to-day maintenance belongs in MES/MOM, which replaces the need for a separate CMMS and keeps production and maintenance on the same data.
+
 ## The operations layer
 
 **MES/MOM** runs the factory. It receives orders from ERP, executes them on the shopfloor, enforces quality checks, tracks inventory and traceability, supports maintenance, guides operators and sends actuals back. I explain the distinction between MES and MOM in [MES vs MOM](/post/mes-vs-mom).
@@ -30,7 +32,6 @@ It sits at the heart of the stack, because it's the system that connects the bus
 Alongside it, depending on how much depth you need:
 
 - **WMS (Warehouse Management System)** for complex warehousing: optimised picking, storage strategies, automation, yard and dock management. It's the most advanced option for the most complex warehousing, particularly distribution centres. For simpler warehousing, ERP and the inventory and logistics capability of MOM can be enough.
-- **EAM** for asset lifecycle management in asset-heavy operations with advanced needs. Day-to-day maintenance belongs in MES/MOM, which replaces the need for a separate CMMS and keeps production and maintenance on the same data.
 - **LIMS (Laboratory Information Management System)** for lab testing, sample management and certificates, especially in process and regulated industries.
 - **QMS (Quality Management System)** for enterprise quality processes: complaints, CAPA, audits, document control. A good MOM platform covers most of this alongside shopfloor checks and SPC, with serious non-conformances and CAPA escalated into ERP, which replaces the need for a separate QMS.
 
