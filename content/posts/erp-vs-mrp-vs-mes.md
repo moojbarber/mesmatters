@@ -7,7 +7,7 @@ category: education
 art: gantt
 ---
 
-ERP, MRP and MES get muddled all the time. They all deal with production, and two of them often come from the same vendor.
+ERP, MRP and MES get muddled all the time. They all deal with production, and MRP is usually a function of ERP.
 
 The quickest way to separate them is by the question each one answers.
 
