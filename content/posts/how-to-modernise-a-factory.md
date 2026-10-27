@@ -102,7 +102,7 @@ Automatic data capture is what turns MES/MOM from a place where people type thin
 
 Start with your bottleneck assets. Use standard connectivity, usually OPC UA, with MQTT where it fits your architecture. Detect stops automatically and let operators add the reason while it's fresh. Most people are genuinely surprised when they first see their micro-stops. This is also where predictive AI gets its first clean history, so start the models here, on the bottleneck, rather than waiting for every line. See [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
 
-And treat every new connection as a security decision. MES/MOM sits between IT and OT. Keep the enterprise network away from the PLCs. See [OT cybersecurity for MES/MOM](/post/ot-cybersecurity-for-mes).
+And treat every new connection as a security decision. MES/MOM sits between IT and OT. Keep the enterprise network away from the PLCs.
 
 **Ready to move on when:** downtime and output on the bottleneck come from the equipment, not from memory at the end of the shift.
 

@@ -323,7 +323,7 @@
   short: The main international standard for industrial automation and OT cybersecurity.
   body: Its core idea is grouping assets into zones with similar security needs and controlling the conduits between them. MES/MOM usually sits in the site operations zone, between the enterprise network and the control zones.
   articles:
-  - ot-cybersecurity-for-mes
+  - it-vs-ot
   see_also:
   - ot
   - isa-95
@@ -571,7 +571,7 @@
   short: The hardware and software that monitors and controls physical equipment, as opposed to IT.
   body: In OT the priority is availability and safety rather than confidentiality. You can't patch a PLC on a Tuesday afternoon because a bulletin came out, and security has to respect that.
   articles:
-  - ot-cybersecurity-for-mes
+  - it-vs-ot
   see_also:
   - iec-62443
   - plc
@@ -1299,7 +1299,7 @@
   short: A reference model that layers industrial networks from the physical process up to enterprise systems.
   body: 'It splits a plant into levels: the physical process at level 0, sensors and controllers at levels 1 and 2, site operations such as MES/MOM at level 3, and business systems such as ERP at levels 4 and 5. It''s mostly used in OT security, to decide which systems can talk to which, and the levels line up closely with ISA-95.'
   articles:
-  - ot-cybersecurity-for-mes
+  - it-vs-ot
   see_also:
   - isa-95
   - iec-62443

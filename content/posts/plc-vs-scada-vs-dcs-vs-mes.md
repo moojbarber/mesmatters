@@ -46,7 +46,7 @@ Its focus is the order, the material, the people and the evidence. Its time scal
 | **Time scale** | Milliseconds | Seconds | Milliseconds to seconds | Minutes to shifts |
 | **Typical users** | Controls engineers | Control room operators, engineers | Control room operators, process engineers | Operators, supervisors, quality, planners |
 | **Knows about** | Signals and logic | Equipment states and alarms | Process variables, recipes | Orders, materials, quality, downtime reasons |
-| **Typical setting** | Every machine | Discrete plants, utilities | Large process plants | Every plant that wants to run on facts |
+| **Typical setting** | Every machine | Utilities and widely spread sites, some discrete plants | Large process plants | Every plant that wants to run on facts |
 
 ## Where they overlap
 
@@ -71,8 +71,8 @@ That's the ISA-95 model in practice. More in [ISA-95 explained](/post/isa-95-exp
 ## Which do you need?
 
 - **Every plant** has PLCs, because the machines come with them.
-- **Large process plants** almost always run a DCS.
-- **Discrete plants and utilities** often use SCADA to supervise their equipment.
+- **Large process plants** are more likely to run a DCS.
+- **Utilities**, such as water and energy networks, typically use SCADA to supervise equipment spread over a wide area. **Discrete plants** more often rely on PLCs with an HMI at each machine, though some use SCADA to supervise a line or a whole site.
 - **Anyone who wants to manage orders, quality and traceability on facts** needs MES/MOM above the control layer.
 
 If batch records are still assembled on paper, or downtime reasons still live on a whiteboard, it's the MES/MOM layer that's missing, not more control.

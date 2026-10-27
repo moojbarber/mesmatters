@@ -39,7 +39,7 @@ A standalone CMMS does the day-to-day maintenance job well. Maintenance built in
 
 ## The overlap
 
-Here's where the two worlds collide:
+This is where the two worlds collide:
 
 - **Downtime.** MES/MOM records that the machine stopped, for how long, and the reason. Maintenance needs exactly that to plan and to measure MTBF and MTTR.
 - **Usage-based maintenance.** "Service every 50,000 cycles" needs a counter. MES/MOM has it. EAM/CMMS has the plan.
@@ -52,21 +52,19 @@ Here's where the two worlds collide:
 
 **Direct MES/MOM to EAM/CMMS, with ERP for cost and parts.** MES/MOM sends counters, conditions and breakdown requests straight to the EAM/CMMS, which raises the work order. Planned maintenance windows come back to MES/MOM so the schedule reflects them. ERP still handles spares purchasing and costs. This suits plants with frequent, condition-based triggers.
 
-**Maintenance inside MES/MOM.** For many plants, MES/MOM's own maintenance functionality is enough: operator-raised requests, simple PM schedules, autonomous maintenance checklists and downtime analysis in one place. No integration at all.
+**Maintenance inside MES/MOM.** A MOM platform's own maintenance capability covers the full job, simple or complex: operator-raised requests, work orders, preventive maintenance on real usage, autonomous maintenance, spare parts and downtime analysis, all in one place. No integration at all.
 
-**Hybrid by asset criticality.** Critical, complex assets are managed in full EAM. Simpler line equipment and operator-level care are handled in MES/MOM. Clear rules decide which asset lives where.
+None of these is universally right for EAM, but where a MOM is in place, its maintenance capability should replace a separate CMMS.
 
-None of these is universally right for EAM, but where a MOM is in place, its maintenance capability should replace a separate CMMS. I'd ask one question first: who actually raises and closes most of your maintenance tasks, technicians or operators?
+## Whichever option you choose
 
-## Rules that hold in every option
+**Downtime reasons should live in one system.** In almost every case that's MES/MOM, because that's where the stop is recorded as it happens. If maintenance re-codes a stop in the EAM, send the change back. If you don't, production and maintenance will report different numbers, and both will be right according to their own system.
 
-**One system owns downtime reasons.** Usually MES/MOM, because that's where the stop is recorded as it happens. If maintenance re-codes downtime in EAM, feed it back. Otherwise production and maintenance will report different numbers, and both will be right according to their own system.
+**The work order should live in one system.** A request can be raised from anywhere, but the work order, its status and its history belong in one place.
 
-**One system owns the work order.** Raising a request can happen anywhere. But the work order, its status and its history belong in one place.
+**Operators shouldn't need a second system.** Ask an operator to leave MES/MOM and open the CMMS to report a breakdown, and they'll shout across the shopfloor instead. The request should start where they already work. I make the same argument in [connected worker: one app, not five](/post/connected-worker-one-app-not-five).
 
-**Operators don't log into a second system.** If raising a breakdown means leaving MES/MOM and opening the CMMS, operators will shout across the shop instead. The request should start where they already work. I make the same argument in [connected worker: one app, not five](/post/connected-worker-one-app-not-five).
-
-**Maintenance windows are visible to production.** A planned stop that the schedule doesn't know about is just unplanned downtime with extra paperwork.
+**Production must be able to see maintenance windows.** If the schedule doesn't know about a planned stop, it's just unplanned downtime with extra paperwork.
 
 ## Where this goes next
 

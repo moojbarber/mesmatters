@@ -34,7 +34,7 @@ So the dependency on connectivity that people associate with cloud often exists 
 | **New features, including AI** | Arrive when you upgrade | Arrive as they're released |
 | **Network dependency** | Multi-site central instances already depend on the network | The same dependency, with machine connectivity at the edge |
 | **Control over timing of changes** | Full | Shared with the vendor, usually with test environments |
-| **Typical licensing** | Perpetual licence plus maintenance | Subscription |
+| **Typical licensing** | Perpetual or subscription licence | SaaS subscription, including hosting cost |
 
 ## What cloud brings
 
@@ -54,29 +54,28 @@ So the dependency on connectivity that people associate with cloud often exists 
 
 **Full control over timing.** You decide exactly when changes happen, which some regulated sites value. If you've recently invested in data centre capacity and skills, on-premises also makes use of them.
 
-**Working without connectivity.** A site with no reliable connection, or an air-gapped environment in defence and some critical infrastructure, may need everything on site.
+**Working without connectivity.** A site with no reliable connection, or an air-gapped environment in defence and some critical infrastructure, may need everything on site. But honestly, very few manufacturers actually operate this way.
 
 ## Handling the common concerns about cloud
 
-**Connectivity and latency.** Internet connectivity is now close to as reliable as power for most sites, and a central on-premises instance depends on the network in the same way. Real-time machine connectivity sits at the edge, close to the equipment, so latency isn't an issue there. The cloud handles the operational application and analytics, where milliseconds don't matter.
+**Connectivity and latency.** Internet connectivity is now close to as reliable as power for most sites, and a central on-premises instance depends on the network in the same way. Real-time machine connectivity sits at the edge, close to the equipment, so latency isn't an issue there. The cloud handles the operational application and analytics.
 
-**Data residency and regulation.** Cloud regions let you keep data in the country or region you need, though some data residency requirements, and many aerospace and defence programmes, still call for your own data centre. In regulated industries, look for vendors with a validated cloud approach and clear documentation for quality and compliance teams.
+**Data residency and regulation.** Cloud regions let you keep data in the country or region you need, though some data residency requirements, and some aerospace and defence programmes, still call for your own data centre. In regulated industries, look for vendors with a validated cloud approach and clear documentation for quality and compliance teams.
 
 ## Questions to ask a cloud MES vendor
 
-- Which security certifications do you hold, and how often is the platform patched?
+- How often is the platform patched?
 - How often are updates released, and can we test them before they reach production?
 - Which regions can our data be held in?
-- What does a new site cost to stand up, in time and effort?
 
 ## Licensing
 
-Cloud usually comes with subscription licensing, and on-premises with a perpetual licence plus annual maintenance. Compare the total cost over the life of the system, including infrastructure and the upgrade projects each model involves.
+On-premises can be licensed perpetually or by subscription. Cloud is usually a SaaS subscription, with the hosting cost included. Compare the total cost over the life of the system, including infrastructure and the upgrade projects each model involves.
 
 ## My view
 
 I think cloud is now the right default for most manufacturers. If your MES/MOM already runs in a central data centre, you carry the network dependency without the security and scalability benefits the cloud adds. Subscription licensing also gives vendors the predictable revenue to keep investing in a product you'll rely on for a decade or more.
 
-On-premises still has a place where connectivity really isn't available. Many aerospace and defence programmes, and some data residency rules, also call for your own data centre. For everyone else, I'd want a good reason not to choose cloud.
+On-premises still has a place where connectivity really isn't available. Some aerospace and defence programmes, and some data residency rules, also call for your own data centre. For everyone else, I'd want a good reason not to choose cloud.
 
 If your MES/MOM already runs in a central data centre, what's keeping it out of the cloud?

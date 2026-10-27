@@ -7,7 +7,7 @@ category: education
 art: network
 ---
 
-Without a connection to the equipment, MES/MOM is just another application where people type things in. The real value comes from automatic, real-time data exchange with the machines.
+Even without a connection to the equipment, MES/MOM is useful. When people enter data, it's still captured against the order, the material and the machine, so the context is there. But it's far more valuable when the data is collected automatically from the machines, in real time, and that's what manufacturers should be aiming for.
 
 That's the connectivity layer. And it's surrounded by acronyms and strong opinions. I won't go down every rabbit hole, but you need enough to have a sensible conversation.
 

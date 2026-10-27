@@ -25,7 +25,7 @@ In [ISA-95](/post/isa-95-explained) terms, OT lives at levels 0 to 2 and IT at l
 | --- | --- | --- |
 | **First priority** | Confidentiality and integrity of data | Availability and safety |
 | **Cost of an outage** | Lost productivity, disrupted business processes | Stopped production, scrap, possible safety risk |
-| **Typical lifecycle** | A few years | Often decades |
+| **Typical lifecycle** | Years | Decades |
 | **Patching** | Regular, often automatic | Planned around production, sometimes impossible |
 | **Timing** | Seconds are usually fine | Milliseconds can matter |
 | **Typical owner** | CIO and IT team | Engineering, controls and operations |
@@ -39,7 +39,7 @@ In [ISA-95](/post/isa-95-explained) terms, OT lives at levels 0 to 2 and IT at l
 
 **Timing.** Most IT systems are happy with a response in a second or two. A control loop may need an answer in milliseconds, every time.
 
-**Security.** In IT, you scan networks and patch quickly. In OT, an aggressive network scan can knock over a 20-year-old controller, and a patch may need the line stopped and the process revalidated. More in [OT cybersecurity for MES/MOM](/post/ot-cybersecurity-for-mes).
+**Security.** In IT, you scan networks and patch quickly. In OT, an aggressive network scan can knock over a 20-year-old controller, and a patch may need the line stopped and the process revalidated.
 
 ## Why convergence matters now
 
@@ -55,9 +55,9 @@ It's also why ownership of MES/MOM can get political. Some businesses give it to
 
 ## Making it work
 
-- **Agree the architecture together.** Zones, conduits, where data is buffered, and what connects to what. IEC 62443 gives you a shared language.
+- **Agree the architecture together.** IT and operations teams both need to be involved as key stakeholders, and aligned on what connects to what and where the data goes.
 - **Use standard connectivity.** OPC UA and MQTT rather than custom interfaces. See [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
-- **Never connect the enterprise network straight to a PLC.** Go through MES/MOM and controlled conduits.
+- **Never connect the enterprise network straight to a PLC.** Go through MES/MOM, with controlled connections between the two networks.
 - **Put people from both sides on the project team** from the start, not just at sign-off.
 
 ## My view

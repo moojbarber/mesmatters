@@ -1,7 +1,7 @@
 ---
-title: "Historian vs MES: what each one stores, and when you need both"
+title: "Historian vs MES: what each one stores, and whether you need both"
 short: "Historian vs MES"
-description: "A historian stores high-frequency process values; MES/MOM records events with context and runs the work. What each stores, and how they work together."
+description: "A historian stores high-frequency process values. MES/MOM reads values too, adds context and runs the work. For most manufacturers, MES/MOM removes the need for a separate historian."
 published: 2026-09-30
 category: education
 art: pipeline
@@ -21,13 +21,15 @@ Engineers love historians, rightly, for troubleshooting and long-term trending. 
 
 MES/MOM records operational events and gives them context. An order started on Line 3. 2,400 good parts, 60 scrapped for short shots. A 12-minute stop, reason: jam at station 2. Lot 7781 consumed into order 4521. A quality check failed and the lot was put on hold.
 
+MES/MOM also reads time-series values from tags, usually over OPC UA. The important difference is that it contextualises that data, so every value is tied to the order, material and machine it belongs to.
+
 It also *manages* the work: releasing orders, guiding operators, enforcing checks and recording genealogy. A historian watches the process; MES/MOM runs the operation.
 
 ## Side by side
 
 | | Historian | MES/MOM |
 | --- | --- | --- |
-| **Stores** | Time-series values from tags | Events and transactions with context |
+| **Stores** | Time-series values from tags | Events, transactions and time-series values, all with context |
 | **Typical frequency** | Sub-second to seconds | When something happens |
 | **Context** | Tag, timestamp, value and a quality flag | Order, material, lot, machine, shift, operator, reason |
 | **Main users** | Process and controls engineers | Operators, supervisors, quality, maintenance, planners |
@@ -37,7 +39,7 @@ It also *manages* the work: releasing orders, guiding operators, enforcing check
 
 ## How they work together
 
-Where you have both, many architectures use each for what it's good at:
+In the rare cases where you have both, use each for what it's good at:
 
 - **The historian keeps the high-frequency signals.** MES/MOM doesn't need every reading.
 - **MES/MOM keeps the events and the context.** Orders, lots, stops, reasons and results.
@@ -48,7 +50,9 @@ Some MES/MOM platforms include historian capabilities, and some historians have 
 
 ## Which do you need?
 
-If it's running orders, tracing material and managing quality and maintenance, MES/MOM. Whether you also need a historian depends on how frequently you need data. MES/MOM can capture and record the process values most operations need. A historian earns its place when engineers need very high-frequency signals kept for long periods, which is more common in process industries.
+Normally, you don't need both. MES/MOM isn't designed to hold the same volume of data as a historian, or to capture it at the same frequency. But for most manufacturers, the level of data MES/MOM captures is absolutely fine, and it removes the need for a separate historian.
+
+In some rare cases you might need both, usually in process industries where engineers need very high-frequency signals kept for long periods.
 
 ## My view
 

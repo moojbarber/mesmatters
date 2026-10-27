@@ -298,8 +298,8 @@ pages:
         body: |
           AI on operational data needs contextualised data captured at the point of work. ERP holds the business context for every order, but on the shopfloor it sees the order start and finish and very little in between. That's where MES/MOM and a deliberate data architecture come in. See [contextualised data](/post/contextualised-manufacturing-data) and [OPC UA, MQTT and UNS explained](/post/opc-ua-mqtt-uns-explained).
 
-          Bring OT security in from the start, not as a gate at the end. [OT cybersecurity for MES](/post/ot-cybersecurity-for-mes) covers the essentials.
-    posts: [isa95-integration-patterns, erp-master-data-for-mes, it-vs-ot, contextualised-manufacturing-data, ot-cybersecurity-for-mes, cloud-vs-on-premises-mes]
+          Bring OT security in from the start, not as a gate at the end.
+    posts: [isa95-integration-patterns, erp-master-data-for-mes, it-vs-ot, contextualised-manufacturing-data, cloud-vs-on-premises-mes]
     tools: [which-systems, vendor-scorecard, readiness-check]
     terms: [isa-95, purdue-model, it-ot-convergence, uns, opc-ua, mqtt, iec-62443, master-data, mdm]
     faq:

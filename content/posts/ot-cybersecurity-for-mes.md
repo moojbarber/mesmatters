@@ -4,6 +4,7 @@ short: "OT cybersecurity"
 description: "MES/MOM sits between IT and OT, which makes it a security boundary. The practical basics: zones, conduits, access, patching, cloud and recovery."
 published: 2026-09-29
 category: advice
+draft: true
 art: gates
 ---
 

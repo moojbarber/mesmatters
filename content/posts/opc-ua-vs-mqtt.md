@@ -7,7 +7,7 @@ category: education
 art: network
 ---
 
-OPC UA versus MQTT generates more heat on LinkedIn than almost any other shopfloor topic. Both are widely used, and they're designed for different jobs. This article compares them, and shows where each one fits.
+OPC UA versus MQTT is a debate that comes up regularly. Both are widely used, and they're designed for different jobs. This article compares them, and shows where each one fits.
 
 ## OPC UA in one paragraph
 

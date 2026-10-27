@@ -141,7 +141,7 @@ roles:
       - ["ERP wired to PLCs through custom code", "A layered architecture with a clear role for each system"]
       - ["Every site with its own integrations", "A standard integration pattern reused at every site"]
     pitch: "Talk architecture and cost of ownership. Show where each capability will live, how integrations follow a standard, and how OT security is designed in from the start."
-    reads: [isa95-integration-patterns, it-vs-ot, ot-cybersecurity-for-mes, cloud-vs-on-premises-mes]
+    reads: [isa95-integration-patterns, it-vs-ot, cloud-vs-on-premises-mes]
     tool: which-systems
     also_tools: [vendor-scorecard]
     path: systems-landscape
@@ -477,7 +477,7 @@ roles:
       - ["Every interface designed from scratch", "Standard interface patterns, with OPC UA and MQTT at the machine layer"]
       - ["Security reviewed at the end of the project", "Security designed into the architecture from the start"]
     pitch: "Talk standards and supportability: OPC UA and MQTT, with clear ISA-95 layering and security zones. Show which interface pattern each connection uses, and why."
-    reads: [opc-ua-vs-mqtt, plc-vs-scada-vs-dcs-vs-mes, unified-namespace-uns, ot-cybersecurity-for-mes]
+    reads: [opc-ua-vs-mqtt, plc-vs-scada-vs-dcs-vs-mes, unified-namespace-uns]
     tool: which-systems
     also_tools: [go-live-checklist]
     path: systems-landscape

@@ -19,7 +19,7 @@ A unified namespace is an architectural pattern rather than a product. It's a re
 
 The idea is that each system connects once, to the namespace, rather than to each other. But point-to-point interfaces have strengths a UNS doesn't: the sender gets a response, so it knows each message arrived and was accepted, and a failure stays contained to one link.
 
-At heart, though, a UNS is an organisational structure on top of a broker. It shows what's happening right now.
+Strip it back and a UNS is a way of organising data on top of a broker. It shows what's happening right now.
 
 ## What MES/MOM is
 

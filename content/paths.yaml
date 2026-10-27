@@ -159,14 +159,13 @@ paths:
     color: "#5fe0ff"
     rgb: "95,224,255"
     image: plc-vs-scada-vs-dcs-vs-mes
-    blurb: From PLCs and SCADA up to MES/MOM, the protocols in between, where data is stored and how to keep it all secure.
+    blurb: From PLCs and SCADA up to MES/MOM, the protocols in between, and where the data is stored.
     stations:
       - it-vs-ot
       - plc-vs-scada-vs-dcs-vs-mes
       - opc-ua-vs-mqtt
       - unified-namespace-uns
       - historian-vs-mes
-      - ot-cybersecurity-for-mes
       - cloud-vs-on-premises-mes
 
   - id: shopfloor-ai
