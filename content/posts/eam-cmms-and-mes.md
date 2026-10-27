@@ -13,7 +13,7 @@ When those two views live in different systems with no link between them, you ge
 
 ## The systems involved
 
-**EAM** (Enterprise Asset Management) and **CMMS** (Computerised Maintenance Management System) both manage maintenance. The difference is mostly scope: EAM covers the full lifecycle and the financials across many sites; CMMS is the lighter, maintenance-team-focused version. I compare the two in more detail in [CMMS vs EAM vs MES](/post/cmms-vs-eam-vs-mes). Both handle:
+**EAM** (Enterprise Asset Management) and **CMMS** (Computerised Maintenance Management System) both manage maintenance, from different angles. EAM covers the full asset lifecycle and the financials across many sites. A CMMS is more focused on actually looking after and managing the assets from an operational point of view: it's the tool the maintenance team uses day to day. I compare the two in more detail in [CMMS vs EAM vs MES](/post/cmms-vs-eam-vs-mes). Both handle:
 
 - The asset register and hierarchy
 - Preventive maintenance plans and schedules
@@ -25,6 +25,17 @@ When those two views live in different systems with no link between them, you ge
 **MES/MOM** knows what the asset is doing right now. Run hours, cycle counts, downtime and its reasons, speed losses, the product being made, and what the operator just reported.
 
 I covered the shopfloor side in [MES functionality: maintenance](/post/mes-functionality-maintenance). This one's about the boundary.
+
+## Why maintenance belongs in the MOM
+
+A standalone CMMS does the day-to-day maintenance job well. Maintenance built into a MOM platform does the same job, and adds what a standalone system can't:
+
+- **One version of downtime.** The stop the operator records is the stop maintenance works from. Nobody reconciles two sets of numbers.
+- **Work triggered by real usage.** Cycle counts, run hours and machine conditions are already there, so preventive maintenance follows what the machine actually did, not the calendar.
+- **Requests from the screen operators already use.** A breakdown is raised in a couple of taps, with the order, product and stop already attached.
+- **Maintenance and production planned together.** Maintenance windows appear in the production schedule, and production can see when a machine is due to come down.
+- **Autonomous maintenance on the same platform.** Operator checks and technician work orders sit side by side, on the same asset history.
+- **No interface to maintain.** Nothing to retest at every upgrade, and no context lost at a boundary.
 
 ## The overlap
 

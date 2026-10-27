@@ -118,7 +118,7 @@
 - term: CMMS
   stands: Computerised maintenance management system
   short: Software for managing maintenance work orders and spare parts.
-  body: A CMMS is the lighter, maintenance-team version of EAM. A good MOM platform covers the same ground, which replaces the need for a separate CMMS and keeps production and maintenance on the same downtime data. An MES focused on production can feed a CMMS instead.
+  body: A CMMS is the tool the maintenance team uses day to day to look after and manage assets from an operational point of view, where EAM covers the whole asset lifecycle and its financials. A good MOM platform covers the same ground, which replaces the need for a separate CMMS and keeps production and maintenance on the same downtime data. An MES focused on production can feed a CMMS instead.
   articles:
   - cmms-vs-eam-vs-mes
   - eam-cmms-and-mes
@@ -728,8 +728,8 @@
   - serialisation
 - term: UNS
   stands: Unified namespace
-  short: An architecture where operational data is published to one central place, organised by the plant hierarchy.
-  body: Done well, a UNS reduces point-to-point integrations and makes data easy to find and reuse. It shows what's happening now, so you still need applications around it to keep the history and add context. MES/MOM is one of the most valuable publishers into it.
+  short: A real-time view of operational data that connected applications have published to a central broker, organised by the plant hierarchy.
+  body: A UNS shows what's happening now. It gives the sender no confirmation that data arrived or was processed, keeps no history on its own and needs strict governance, so it's a poor fit for transactions such as orders and quality status. For those, interfaces that confirm each message are usually the safer option.
   articles:
   - unified-namespace-uns
   - opc-ua-mqtt-uns-explained

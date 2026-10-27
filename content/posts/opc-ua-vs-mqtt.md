@@ -1,7 +1,7 @@
 ---
-title: "OPC UA vs MQTT: which one, when, and why the answer is often both"
+title: "OPC UA vs MQTT: which one, and when"
 short: "OPC UA vs MQTT"
-description: "OPC UA brings structured, secure machine data; MQTT moves data efficiently to many systems. How they compare, where each fits, and why plants use both."
+description: "OPC UA brings structured, secure machine data; MQTT moves data efficiently to many systems. How they compare, and how to pick the right one for each job."
 published: 2026-07-15
 category: education
 art: network
@@ -33,21 +33,21 @@ MQTT is a lightweight messaging protocol. Devices and systems *publish* messages
 
 **OPC UA is usually the first hop.** Many machines and PLCs speak it natively, and gateways translate older protocols into it. If you want to read structured data from a machine with its meaning intact, OPC UA is the natural choice.
 
-**MQTT is usually the distribution layer.** Once data is collected, MQTT moves it efficiently to everyone who needs it: MES/MOM, a historian, a data platform, an analytics tool. Many systems subscribe without each one connecting to every machine.
+**MQTT can be the distribution layer.** Once data is collected, MQTT moves it efficiently to everyone who needs it: MES/MOM, a historian, a data platform, an analytics tool. Many systems subscribe without each one connecting to every machine.
 
-That's why you so often see both: OPC UA at the machine, MQTT across the plant and up to the cloud.
+Both can be used in the same factory. Pick the right one for each job, rather than assuming you need both.
 
 ## Where UNS comes in
 
-A unified namespace is an architecture, usually built on an MQTT broker. All operational data is published to one structured place, organised by the plant hierarchy: enterprise, site, area, line, machine.
+A unified namespace is an architecture, usually built on an MQTT broker. It's a real-time view of whatever operational data connected applications have published to it, organised by the plant hierarchy: enterprise, site, area, line, machine.
 
-Done well, it makes live data easy to find and reuse. Done badly, it's a very big pile of tags with no context. It also keeps no history and gives the sender no confirmation, so direct interfaces and events published by MES/MOM remain valid alternatives. More in [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
+It carries real risks. The sender gets no confirmation that the data arrived or was processed, so data can fail to reach the systems it's meant for without anyone noticing. It keeps no history, and without strict governance it quickly becomes a very big pile of tags with no context. Direct interfaces, which confirm each message, are often the safer choice. More in [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
 
 ## And MES/MOM?
 
 Connectivity moves data. MES/MOM gives it meaning.
 
-A broker can tell you a machine changed state. MES/MOM knows which order was running, which material, which shift, and that the operator entered the reason as a jam. In a UNS, MES/MOM is both a consumer of machine data and a publisher of contextualised data. More in [Raw machine data is worthless](/post/contextualised-manufacturing-data).
+A broker can tell you a machine changed state. MES/MOM knows which order was running, which material, which shift, and that the operator entered the reason as a jam. Where a UNS is used, MES/MOM can consume machine data from it and publish contextualised data to it. More in [Raw machine data is worthless](/post/contextualised-manufacturing-data).
 
 ## Questions to ask vendors
 
@@ -59,6 +59,6 @@ A broker can tell you a machine changed state. MES/MOM knows which order was run
 
 ## My view
 
-I don't think it's a contest. They solve different problems, and both earn their place. OPC UA brings meaning and security at the machine. MQTT moves data efficiently to everyone who needs it. Most of the modern architectures I see use both.
+I don't think it's a contest. They solve different problems. OPC UA brings meaning and security at the machine. MQTT moves data efficiently to many consumers. Both can sit in the same factory, so pick the one that fits each job.
 
-Which camp are you in, and has it ever actually been a problem to use both?
+Which camp are you in, and why?

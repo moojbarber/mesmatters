@@ -78,7 +78,7 @@ capabilities:
     read: cpq-to-shopfloor
   data:
     name: Data platform and reporting
-    where: Data platform or unified namespace, fed by MES/MOM
+    where: Data platform, fed by MES/MOM
     what: KPIs and reports built from contextualised data automatically, instead of a spreadsheet someone rebuilds every morning.
     read: manufacturing-data-platforms
   energy:

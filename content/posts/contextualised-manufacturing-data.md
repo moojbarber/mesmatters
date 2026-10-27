@@ -64,7 +64,7 @@ When those live in one application, every piece of data carries all of that cont
 
 When they're spread across separate systems and integrated, you lose some of it at every boundary. You can't pass everything through an integration, so you pass a subset. The quality system knows a sample failed, but not what the machine was doing. The CMMS knows a fault was logged, but not that the line was mid-changeover.
 
-Integrating separate applications nearly always loses some context. A well-designed unified namespace or integration layer can carry more of it, but someone has to model that context and keep it consistent. In a single platform it's there by default. I compare the approaches in [Code, build, stitch or configure](/post/build-vs-buy-mes).
+Integrating separate applications nearly always loses some context. A well-designed integration layer can carry more of it, but someone has to model that context and keep it consistent. In a single platform it's there by default. I compare the approaches in [Code, build, stitch or configure](/post/build-vs-buy-mes).
 
 ## Context is what AI really needs
 

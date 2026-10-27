@@ -28,21 +28,25 @@ MQTT is a lightweight messaging protocol. Instead of a system asking each machin
 
 It's simple, efficient and works well over unreliable networks, which is why it's popular for IIoT and edge devices. On its own, MQTT doesn't define what the data means. Extensions such as Sparkplug add that structure.
 
-OPC UA and MQTT aren't really competitors. They're often used together.
+OPC UA and MQTT aren't really competitors. Both can be used in the same factory, so pick the right one for each job.
 
 ## Unified namespace (UNS)
 
-A unified namespace is an architectural idea rather than a product. All operational data is published to one central, structured place, usually an MQTT broker, organised by the plant hierarchy: enterprise, site, area, line, machine.
+A unified namespace is an architectural pattern rather than a product. It's a real-time view of whatever operational data connected applications have published to it, usually through an MQTT broker, organised by the plant hierarchy: enterprise, site, area, line, machine.
 
-Systems publish what they know and subscribe to what they need. It's one integration option, alongside point-to-point interfaces, which give the sender a response, and integration through ERP.
+Systems publish what they know, and others can subscribe. It's one integration option, alongside point-to-point interfaces, which give the sender a response, and integration through ERP.
 
-Done well, it reduces point-to-point integrations and makes data easier to find and reuse. It needs a clear structure and someone to govern it, so the context travels with the data rather than a long list of tags.
+It's worth being clear about its limitations:
 
-It's worth being clear about what a UNS is, though. At heart it's an organisational structure on top of a broker, showing what's happening right now. On its own it doesn't keep the history, and it doesn't add the meaning. You still need applications around it to do that.
+- **No confirmation for the sender.** Data is published, and the publisher doesn't know whether the system that needed it received or processed it. Errors as data moves between platforms aren't visible.
+- **Data can fail to arrive where it's meant to be.** Without that confirmation, a missed production confirmation or stock movement can go unnoticed until someone finds the numbers don't match.
+- **No history by default.** It shows what's happening right now. On its own it doesn't keep the history, and it doesn't add the meaning. You still need applications around it to do that.
+- **It can get messy quickly.** It needs a strict structure, strong governance of who publishes what, and a broker to run and secure.
+- **Fewer point-to-point interfaces isn't always better.** For transactions between systems, a point-to-point interface with a confirmed response is often the safest option.
 
-OEE is a good example. You can publish the current OEE to a UNS, but you can't aggregate OEE figures by order or shift. For that you have to go back to the raw data, stored somewhere that keeps it.
+OEE is a good example of the history point. You can publish the current OEE to a UNS, but you can't aggregate OEE figures by order or shift. For that you have to go back to the raw data, stored somewhere that keeps it.
 
-So a UNS is a useful pattern, and for many factories a very good one. It's not a silver bullet, and it works best alongside the systems that hold the history and context.
+So a UNS can be used to share real-time data with systems that only need the latest value. For anything that must arrive, such as orders, consumption or quality status, use an integration that confirms it did.
 
 ## Where MES/MOM fits
 
@@ -50,7 +54,7 @@ Connectivity moves data. MES/MOM gives it meaning.
 
 A UNS can tell you a machine's state changed. MES/MOM knows which order was running, which material, which shift, and that the operator just entered the reason as a jam. That contextualised data is often exactly what other systems want to subscribe to.
 
-So in a UNS architecture, MES/MOM is both a consumer of machine data and one of the most valuable publishers of contextualised operational data. More on why that context matters in [Raw machine data is worthless](/post/contextualised-manufacturing-data).
+Where a UNS is used, MES/MOM can consume machine data from it and publish contextualised operational data to it. More on why that context matters in [Raw machine data is worthless](/post/contextualised-manufacturing-data).
 
 ## A few practical rules
 

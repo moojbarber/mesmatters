@@ -100,7 +100,7 @@ Small doesn't mean narrow-minded. The end state should still be clear on day one
 
 Automatic data capture is what turns MES/MOM from a place where people type things in into a real-time view of the factory.
 
-Start with your bottleneck assets. Use standard connectivity, usually OPC UA, with MQTT and a unified namespace if they fit your architecture. Detect stops automatically and let operators add the reason while it's fresh. Most people are genuinely surprised when they first see their micro-stops. This is also where predictive AI gets its first clean history, so start the models here, on the bottleneck, rather than waiting for every line. See [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
+Start with your bottleneck assets. Use standard connectivity, usually OPC UA, with MQTT where it fits your architecture. Detect stops automatically and let operators add the reason while it's fresh. Most people are genuinely surprised when they first see their micro-stops. This is also where predictive AI gets its first clean history, so start the models here, on the bottleneck, rather than waiting for every line. See [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
 
 And treat every new connection as a security decision. MES/MOM sits between IT and OT. Keep the enterprise network away from the PLCs. See [OT cybersecurity for MES/MOM](/post/ot-cybersecurity-for-mes).
 

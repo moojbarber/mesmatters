@@ -331,7 +331,7 @@ isa95-integration-patterns:
   summary: "Start every integration by agreeing what object moves, which system owns it, what triggers it, how fresh it must be and whether the sender needs confirmation that it was processed. ERP is usually the hub: business transactions go through ERP, and execution detail can go direct when speed or richness demands it. Then choose the pattern. Point-to-point is often the safest for transactions, because the sender gets a response."
 
 lims-and-mes:
-  summary: "LIMS runs the lab and MES/MOM runs the batch. MES/MOM should trigger the sample with its batch context attached, and LIMS results should flow straight back so the next step is released or the batch is held. ERP usually holds batch status, and final release can sit in ERP, LIMS or MES/MOM, or in a QMS where one is used."
+  summary: "A good MOM handles sampling, lab results, SPC and certificates of analysis itself, with the batch context attached, which is the simpler option. A separate LIMS earns its place in heavy, regulated labs in certain industries, and then needs integration so samples carry their context and results flow straight back to hold or release the batch. ERP usually holds batch status for the business."
 
 manufacturing-change-management:
   summary: "Every smart factory project meets resistance, because change is uncomfortable. Leadership has to set the vision, back change management, build a strong team and invest in skills. Involve operators in the design and explain why it makes their shift easier. Adoption deserves as much investment as implementation."
@@ -371,7 +371,7 @@ mes-multi-site-rollout:
   summary: "Build an enterprise template that defines standard processes, master data, KPIs, screens and integrations, then roll it out site by site, allowing local differences only where there's a real reason. A centre of excellence blending IT and OT owns the template, and later sites go live much faster."
 
 opc-ua-mqtt-uns-explained:
-  summary: "OPC UA is the standard for reading machines with structure and security built in. MQTT is a lightweight publish and subscribe protocol, and the two often work together. A unified namespace organises all operational data in one place. Connectivity moves data; MES/MOM gives it meaning and publishes the context others need."
+  summary: "OPC UA is the standard for reading machines with structure and security built in. MQTT is a lightweight publish and subscribe protocol, and both can be used in the same factory, each where it fits. A unified namespace is a real-time view of operational data that applications have published to a broker, with real risks: no confirmation to the sender and no history. Connectivity moves data; MES/MOM gives it meaning."
 
 ot-cybersecurity-for-mes:
   summary: "MES/MOM sits between IT and OT, so it's both a bridge and a security boundary. OT puts availability and safety first. Use IEC 62443 zones and conduits, never connect the enterprise network straight to a PLC, control remote vendor access, and plan for recovery. Get a specialist involved."
@@ -389,7 +389,7 @@ predictive-maintenance-data:
   summary: "Predictive maintenance is the last step after reactive, preventive and condition-based maintenance. Start by recording downtime and other sensor data accurately and automatically. Models then need condition data, failure history, maintenance actions and operating context, and the operating context usually lives in MES/MOM. Begin with your bottleneck assets."
 
 qms-and-mes-quality:
-  summary: "An enterprise QMS runs CAPA, complaints, audits and supplier quality, while MES/MOM runs quality at the point of production. The loop breaks when shopfloor defects never reach the CAPA process with their context. Rules escalate the right non-conformances into ERP, or into a QMS where one is used, and send process changes back to the line. With MOM and ERP working together, a separate QMS is rarely needed."
+  summary: "A good MOM does everything a standalone QMS does, including CAPA, customer and supplier complaints, sampling and SPC, with the production context a QMS never has. A separate QMS means a poor experience for operators, lost context and holds out of step, so it's almost always the wrong choice. Serious non-conformances escalate into ERP for the cost, supplier and customer sides."
 
 replacing-a-homegrown-mes:
   summary: "Replacing a homegrown MES needs as much planning for the people as for the technology. Turn the developers who built it into champions and resist the urge to replicate every quirk. Don't let the 5% the new system does differently overshadow everything it does better, and map what the old system really does before you start."
@@ -524,10 +524,10 @@ it-vs-ot:
       a: "Both. MES/MOM sits at level 3 of ISA-95, between ERP above and the control systems below. It talks to business systems and the cloud on one side and to PLCs and SCADA on the other, which makes it a bridge and a security boundary. It works best when IT owns the application and security, and operations owns the processes and master data standards."
 
 opc-ua-vs-mqtt:
-  summary: "OPC UA is the standard for reading machines, with structure, meaning and security built in. MQTT is a lightweight publish-subscribe protocol that moves data efficiently through a broker to many consumers. They aren't really competitors: OPC UA is often the first hop at the machine, and MQTT the distribution layer across the plant and up to the cloud."
+  summary: "OPC UA is the standard for reading machines, with structure, meaning and security built in. MQTT is a lightweight publish-subscribe protocol that moves data efficiently through a broker to many consumers. They aren't really competitors. Both can be used in the same factory, so pick the right one for each job."
   faq:
     - q: "Should I use OPC UA or MQTT?"
-      a: "Often both. OPC UA is the natural choice for reading structured data from machines and PLCs, many of which support it natively. MQTT is better at distributing data efficiently to many systems through a broker. A common pattern collects data with OPC UA at the machine and publishes it over MQTT across the plant."
+      a: "It depends on the job. OPC UA is the natural choice for reading structured data from machines and PLCs, many of which support it natively. MQTT is better at distributing data efficiently to many systems through a broker. Both can be used in the same factory, so pick the right one for each flow."
     - q: "What is Sparkplug B?"
       a: "Sparkplug B is a specification that sits on top of MQTT. Plain MQTT doesn't define what a message means. Sparkplug B adds a defined payload format and a way to track whether each device is online, so different systems can understand the same messages without custom agreements."
 
@@ -540,12 +540,12 @@ oee-vs-teep:
       a: "When someone proposes a new line or another big capital investment. A low TEEP alongside a reasonable OEE often means the capacity already exists in unused hours. Before buying a new machine, it's worth asking whether an extra shift would do the same job."
 
 build-vs-buy-mes:
-  summary: "There are four broad ways to run shopfloor systems: code a homegrown system from scratch, build your own from building blocks, stitch best-of-breed applications together (often through a unified namespace), or configure an out-of-the-box MES/MOM platform. Coding gives complete control but takes longest and leaves everything to you, including security and upgrades. Building from blocks fits exactly and starts cheaply, but you still own it for its whole life. Stitching gives depth in each area, but every boundary is an interface to maintain. A platform costs more up front, but the data is connected and in context from the start, with no integrations between shopfloor functions and the vendor maintaining it. Most factories end up with a mix, so the real choice is which one is the backbone."
+  summary: "There are four broad ways to run shopfloor systems: code a homegrown system from scratch, build your own from building blocks, stitch best-of-breed applications together, or configure an out-of-the-box MES/MOM platform. Coding gives complete control but takes longest and leaves everything to you, including security and upgrades. Building from blocks fits exactly and starts cheaply, but you still own it for its whole life. Stitching gives depth in each area, but every boundary is an interface to maintain. A platform costs more up front, but the data is connected and in context from the start, with no integrations between shopfloor functions and the vendor maintaining it. Most factories end up with a mix, so the real choice is which one is the backbone."
   faq:
     - q: "Should we build our own MES?"
       a: "It can work for a narrow scope and a strong internal team, and it can be quick to start. It is much harder to do well, particularly for user experience, performance, scalability and security. You own every upgrade and new capability for its whole life, and knowledge tends to sit with a few people. Eventually it needs replacing. For a full MES/MOM across production, quality, inventory and maintenance, most manufacturers get more value over time from configuring a platform and building only at the edges."
-    - q: "Is stitching best-of-breed tools together through a UNS a good approach?"
-      a: "It can be. Each department gets a tool that's very good at its job, and a well-governed unified namespace makes live data easier to share, though it adds its own governance work. The cost is that every boundary is an interface to own and retest, some context is lost between systems, and someone has to design and govern the architecture."
+    - q: "Is stitching best-of-breed tools together a good approach?"
+      a: "It can work. Each department gets a tool that's very good at its job. Connecting them through a unified namespace is risky, because the sender gets no confirmation that data arrived. The cost is that every boundary is an interface to own and retest, some context is lost between systems, and someone has to design and govern the architecture."
     - q: "What does a homegrown MES really cost?"
       a: "More than it appears. There's no licence fee, but the developers' time is real money, and it grows with every new feature, upgrade and departure. Add the cost of keeping it secure and compatible, and the risk when the person who built it leaves. Compare costs over ten years, not just the first project."
     - q: "Is low-code an alternative to MES?"
@@ -621,14 +621,14 @@ cmms-vs-eam-vs-mes:
       a: "If you run a MOM platform with maintenance capability, you don't need a CMMS. Without one, a CMMS is often enough for getting preventive maintenance done. For asset value, depreciation and capital spend, check what your ERP covers first; it often handles them already. A full EAM suits asset-heavy businesses with advanced needs, such as complex spare parts, reliability engineering or regulatory asset records across many sites."
 
 unified-namespace-uns:
-  summary: "A unified namespace (UNS) is an architecture for sharing live data: systems publish what they know to a central broker, organised by the plant hierarchy, and others subscribe. MES/MOM is an application that runs the operation, releasing orders, enforcing checks and keeping history with its context. A UNS shows the current state rather than running the operation, and many architectures use both."
+  summary: "A unified namespace (UNS) is an architecture for sharing live data: systems publish what they know to a central broker, organised by the plant hierarchy, and others subscribe. MES/MOM is an application that runs the operation, releasing orders, enforcing checks and keeping history with its context. A UNS shows the current state rather than running the operation, and it gives the sender no confirmation that data arrived, so it's a poor fit for transactions."
   faq:
     - q: "What is a unified namespace?"
-      a: "A unified namespace is an architectural pattern rather than a product. Every system publishes its data to one central, structured place, usually an MQTT broker, organised by enterprise, site, area, line and machine. Any system that needs the data subscribes to it, instead of each pair of systems being connected directly."
+      a: "A unified namespace is an architectural pattern rather than a product. It's a real-time view of whatever operational data connected applications have published to a central broker, usually MQTT, organised by enterprise, site, area, line and machine. Systems that need the data subscribe to it. It gives the sender no confirmation and keeps no history on its own."
     - q: "Can a unified namespace replace an MES?"
-      a: "For simple visibility, such as live machine status and counts, a UNS with some light applications can cover a lot. On its own it doesn't run orders, enforce quality checks or keep genealogy, because it shows the current state rather than keeping history or running business logic."
+      a: "No. For live machine status and counts, a UNS with some light applications can show some of that. On its own it doesn't run orders, enforce quality checks or keep genealogy, because it shows the current state rather than keeping history or running business logic."
     - q: "How do UNS and MES/MOM work together?"
-      a: "Machines publish to the namespace. MES/MOM subscribes to the machine data it needs, adds the context of the order, material lot and operator, and publishes that contextualised data back. Other systems, such as data platforms and AI applications, can then subscribe to operational events rather than raw signals."
+      a: "Where a UNS is used, MES/MOM can subscribe to the machine data it needs, add the context of the order, material lot and operator, and publish that contextualised data back. Anything that must arrive, such as order releases, confirmations and quality status, should still go through interfaces that confirm it did."
 
 plc-vs-scada-vs-dcs-vs-mes:
   summary: "A PLC controls a machine in milliseconds. SCADA supervises equipment, showing operators what it's doing and raising alarms. A DCS controls whole process plants as one integrated system. MES/MOM sits above them all at ISA-95 level 3, managing orders, materials, quality and genealogy. Most plants have PLCs, and use SCADA or a DCS depending on the process, with MES/MOM above the control layer."

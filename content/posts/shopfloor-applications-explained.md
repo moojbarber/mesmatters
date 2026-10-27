@@ -101,7 +101,7 @@ Every one of these draws on the applications above. AI needs the order, the mate
 
 You can buy most of these as separate products. An OEE tool here, a checklist app there, a standalone quality system, a CMMS.
 
-That has real advantages. Each department gets a tool that's very good at its job, and you can start where the pain is biggest. Modern integration options, from standard APIs and point-to-point interfaces to a unified namespace, make connecting them easier than it used to be.
+That has real advantages. Each department gets a tool that's very good at its job, and you can start where the pain is biggest. Modern integration options, such as standard APIs and point-to-point interfaces, make connecting them easier than it used to be.
 
 The trade-off shows up as the problems overlap. Quality needs to know what's running. Inventory needs to know whether a lot passed inspection. Maintenance needs production's downtime. The operator needs one screen, not five logins. Every boundary becomes an interface to own and retest, and some context gets lost at each one.
 

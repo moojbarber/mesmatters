@@ -7,7 +7,7 @@ category: advice
 art: gates
 ---
 
-Every so often a manufacturer with a strong internal IT team asks me whether they should just write their own MES. Some want to build applications on a low-code platform instead. Others ask whether they should buy the best tool for each job and connect them through a unified namespace. Others have already decided on a single platform and want to know how to choose one.
+Every so often a manufacturer with a strong internal IT team asks me whether they should just write their own MES. Some want to build applications on a low-code platform instead. Others ask whether they should buy the best tool for each job and connect them together. Others have already decided on a single platform and want to know how to choose one.
 
 They're all asking the same underlying question: what kind of shopfloor systems do we want to run for the next ten years?
 
@@ -66,14 +66,14 @@ You see this most in smaller companies with tech-savvy teams, and some of the pl
 
 ## 3. Stitch together best-of-breed applications
 
-**What it is.** You buy the best specialist tool for each job and connect them. An OEE tool, a quality system, a CMMS, a connected worker app, a scheduling tool. Increasingly they're joined through a unified namespace (UNS), where each application publishes what it knows and subscribes to what it needs.
+**What it is.** You buy the best specialist tool for each job and connect them. An OEE tool, a quality system, a CMMS, a connected worker app, a scheduling tool. Sometimes they're joined through a unified namespace (UNS), where each application publishes what it knows and subscribes to what it needs.
 
 **Where it works well:**
 
 - **Depth where it matters.** Each department gets a tool that is very good at its job.
 - **Quick wins, one area at a time.** You can start where the pain is biggest without committing to everything at once.
 - **Freedom to swap.** If one tool disappoints, you can replace it without replacing everything.
-- **A UNS helps a lot.** Publishing to one structured place makes live data easier to find and reuse, though it brings its own governance and history challenges.
+- **A UNS isn't a shortcut.** The sender gets no confirmation that data arrived, so data can quietly fail to reach the systems that need it, and it brings its own governance and history challenges.
 
 **What to watch:**
 
@@ -115,14 +115,14 @@ You see this most in smaller companies with tech-savvy teams, and some of the pl
 | **Time to first value** | Longest | Fast for narrow use cases | Fast in each area | Moderate, then fast to extend |
 | **Cost on day one** | Low licences, high effort | Lowest | Moderate, spread across tools | Highest |
 | **Cost over ten years** | Grows with every feature, fix and departure | Grows with every feature and departure | Grows with every interface and upgrade | Most predictable |
-| **Connected, contextualised data** | Only if you design it | Only if you model it | Partly, across interfaces or a UNS | Built in |
-| **Integrations to maintain** | All of them, written by you | Yours, between everything you build | One per boundary, or UNS governance | Mainly to ERP, PLM and equipment |
+| **Connected, contextualised data** | Only if you design it | Only if you model it | Partly, across interfaces | Built in |
+| **Integrations to maintain** | All of them, written by you | Yours, between everything you build | One per boundary | Mainly to ERP, PLM and equipment |
 | **Upgrades and security** | All yours, down to the infrastructure | Mostly yours | Spread across several vendors | Mostly the vendor's |
 | **Who you depend on** | A few developers | A few internal people | Several vendors, plus your integrators | One vendor |
 
 ## Most factories end up with a mix
 
-In practice very few factories are purely one type. A common and sensible pattern is a platform as the operational backbone, with specialist systems where the requirements are genuinely advanced, such as a WMS for complex warehousing or an EAM for advanced maintenance. Connect it to the wider business through direct interfaces or a UNS, and some building or coding at the edges for the things that really are unique.
+In practice very few factories are purely one type. A common and sensible pattern is a platform as the operational backbone, with specialist systems where the requirements are genuinely advanced, such as a WMS for complex warehousing or an EAM for advanced maintenance. Connect it to the wider business through direct interfaces, and some building or coding at the edges for the things that really are unique.
 
 So the real question is which one you make the backbone.
 
@@ -141,7 +141,7 @@ Personally, I like being part of a connected ecosystem. It's a bit like a phone,
 
 Having seen all four over a lot of projects, I think a configurable platform gives the most value over time for most manufacturers. All the data is connected and in context from the moment it's captured. There are no integrations between shopfloor functions to build or maintain, and nothing waits to be transferred. And you're not building and maintaining it yourself for ten years. The vendor does that, across many customers.
 
-That's a view, not a law. A truly niche process can justify writing your own code, and a smaller company with a strong digital team can do very well building from blocks. Building and configuring aren't really competing, because they suit different kinds of business. A site with good specialist tools already in place, and the discipline to govern a UNS, can get a lot from stitching.
+That's a view, not a law. A truly niche process can justify writing your own code, and a smaller company with a strong digital team can do very well building from blocks. Building and configuring aren't really competing, because they suit different kinds of business. A site with good specialist tools already in place, and the discipline to govern the integrations between them, can get a lot from stitching.
 
 Whichever you choose, start small, but start small on the right path, with the destination in mind.
 

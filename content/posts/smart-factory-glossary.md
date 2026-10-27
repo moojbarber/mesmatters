@@ -54,7 +54,7 @@ This page covers the essentials. The [full glossary](/glossary/) has over 200 te
 | Serialisation | | Giving each individual item a unique identifier so it can be tracked on its own. |
 | SPC | Statistical process control | Using statistics to monitor a process and detect drift before it produces defects. |
 | Traceability | | The ability to trace material forwards and backwards through production. See [Traceability](/post/manufacturing-traceability). |
-| UNS | Unified namespace | An architecture where operational data is published to one central, structured place. See [OPC UA, MQTT and UNS](/post/opc-ua-mqtt-uns-explained). |
+| UNS | Unified namespace | A real-time view of operational data that connected applications have published to a central broker. See [OPC UA, MQTT and UNS](/post/opc-ua-mqtt-uns-explained). |
 | WIP | Work in progress | Material that has started production but isn't finished. |
 | WMS | Warehouse management system | Software for managing warehouse operations such as receiving, storage and picking. |
 
