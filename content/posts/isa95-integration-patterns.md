@@ -7,7 +7,7 @@ category: advice
 art: network
 ---
 
-Ask anyone who has run an MES project where the time went, and integration will be near the top of the list. Not because it's technically complicated, but because getting the right people to decide what data actually needs to be moved, and how it needs to be mapped, is time consuming. And then you have to maintain it forever, through upgrades on both sides.
+Ask anyone who has run an MES project where the time went, and integration will be near the top of the list. Not because it's technically complicated (although it can be), but because getting the right people to decide what data actually needs to be moved, and how it needs to be mapped, is time consuming. And then you have to maintain it forever, through upgrades on both sides.
 
 This article pulls together the patterns behind the rest of this series: [PLM](/post/plm-erp-mes-digital-thread), [CPQ](/post/cpq-to-shopfloor), [WMS](/post/wms-vs-mes-inventory), [APS](/post/aps-vs-mes-scheduling), [QMS](/post/qms-and-mes-quality), [EAM](/post/eam-cmms-and-mes) and [LIMS](/post/lims-and-mes).
 
@@ -45,7 +45,7 @@ A direct link is an addition to the ERP path, not a bypass of it.
 
 **Event-driven.** Systems publish events ("order released", "lot on hold", "machine stopped") and anyone interested subscribes. Producers don't need to know who's listening, which decouples the systems and suits near real-time flows. The flip side is that the publisher doesn't know whether anyone received or processed what it sent.
 
-**Unified namespace (UNS).** An event-driven pattern applied to the plant: a single, structured hierarchy (usually on MQTT) where systems publish their current state and others can subscribe. It has real limitations for business data. The sender gets no confirmation that the data arrived or was processed, there's no history by default, and it needs strong governance of the hierarchy, plus a broker to run and secure. I explain the basics, and the alternatives, in [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
+**Unified namespace (UNS).** An event-driven pattern applied to the plant: a single, structured hierarchy (usually on MQTT) where systems publish their current state and others can subscribe. It has some limitations for business data. The sender gets no confirmation that the data arrived or was processed, there's no history by default, and it needs strong governance of the hierarchy, plus a broker to run and secure. I explain the basics, and the alternatives, in [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
 
 These aren't mutually exclusive. A common mix: direct links for transactional flows between MES/MOM and ERP, where a confirmed response matters most, with an integration platform or a UNS where many systems need the same data.
 

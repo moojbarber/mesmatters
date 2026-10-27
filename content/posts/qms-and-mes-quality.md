@@ -7,7 +7,7 @@ category: education
 art: badge
 ---
 
-Quality often lives in more than one system. The problem comes when a defect found on the shopfloor never makes it into the process that's meant to stop it happening again. More often than not, that's because quality has been split between an MES on the line and a separate QMS in the office.
+Quality often lives in more than one system. The problem comes when a defect found on the shopfloor never makes it into the process that's meant to stop it happening again. Sometimes that's because quality has been split between an MES on the line and a separate QMS in the office.
 
 ## What a standalone QMS does
 
@@ -47,7 +47,7 @@ With quality inside the MOM, the loop looks different:
 
 1. The non-conformance is recorded once, at the source, with full context: order, operation, lot, machine, operator, measurements and photo.
 2. Rules decide what happens next. One-off scrap stays where it is. A repeat defect, a critical characteristic or a customer-impacting issue raises a CAPA automatically, and escalates into ERP where there's a cost, supplier or customer impact.
-3. The investigation and actions run on the same data, with nothing re-keyed.
+3. The investigation and actions work from the same record the operator created, so the team investigating sees exactly what happened on the line.
 4. Actions that change the process come straight back to the line: a new inspection, a tighter limit, a revised instruction.
 
 ## If you already have a QMS
