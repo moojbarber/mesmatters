@@ -49,16 +49,18 @@ The lines between these categories are blurring, and vendors increasingly offer 
 
 ## Which layer does AI read from?
 
-Usually the data platform. That's where data from many sources can be combined, at scale, for training models.
+AI can pull data from anywhere. It can look across MES/MOM, ERP, a data lake or a data fabric, and combine what it finds. That's one of its real strengths.
 
-But the *context* that makes the data valuable is created upstream, at the point of work, by MES/MOM. A data lake full of uncontextualised machine signals won't give a model much to learn from. One that includes which order, which material and which shift was involved, linked to quality outcomes and maintenance history, will.
+But to add value, AI needs to understand the data model: what each piece of data means, and how it relates to the rest. The *context* that makes the data valuable is created upstream, at the point of work, by MES/MOM. A data lake full of uncontextualised machine signals won't give a model much to learn from. One that includes which order, which material and which shift was involved, linked to quality outcomes and maintenance history, will.
+
+To go further and actually execute transactions, such as raising a maintenance request or putting a lot on hold, AI also needs to understand what it can do with that data model. That's where MCP comes in. I explain it in [Agentic AI and MCP](/post/agentic-ai-mcp-manufacturing).
 
 I explain why in [Raw machine data is worthless](/post/contextualised-manufacturing-data).
 
-## Don't start with the platform
+## Build the data and the platform together
 
 I've seen manufacturers build impressive data platforms before they have reliable data to put in them. The lake fills up. Nobody trusts what's in it. The data science team spends most of its time cleaning.
 
-Start at the source. Get accurate, contextualised data captured on the shopfloor. Then build the platform to make it available.
+Don't do one and then the other. Capture accurate, contextualised data on the shopfloor and build the platform at the same time, so the data foundation is there and ready for the technology.
 
 Where does most of your shopfloor data live today?

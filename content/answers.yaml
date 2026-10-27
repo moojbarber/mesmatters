@@ -337,7 +337,7 @@ manufacturing-change-management:
   summary: "Every smart factory project meets resistance, because change is uncomfortable. Leadership has to set the vision, back change management, build a strong team and invest in skills. Involve operators in the design and explain why it makes their shift easier. Adoption deserves as much investment as implementation."
 
 manufacturing-data-platforms:
-  summary: "Historians hold high-frequency machine data, warehouses hold structured data for reporting, lakes hold raw data at scale, and data fabric connects data where it already lives. AI usually reads from the data platform, but the context that makes the data valuable is created upstream by MES/MOM at the point of work."
+  summary: "Warehouses hold structured data for reporting, lakes hold raw data at scale, and data fabric connects data where it already lives. MES/MOM reads and contextualises time-series data, so a separate historian is only needed in rare cases. AI can pull from all of these, but it needs to understand the data model, and the context that makes the data valuable is created by MES/MOM at the point of work."
 
 manufacturing-kpis-beyond-oee:
   summary: "OEE matters, but it doesn't tell you everything. Make sure you can also measure first-pass yield, scrap rate, cycle time, changeover time, OTIF, MTBF and MTTR, calculated consistently and ideally to ISO 22400. Every one depends on accurate, granular data captured as it happens, not reconstructed at the end of the shift."
