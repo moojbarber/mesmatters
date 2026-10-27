@@ -169,7 +169,7 @@ roles:
     shift:
       - ["A portfolio of disconnected pilots", "A platform that each new use case builds on"]
       - ["Value claimed in slides", "Value measured on the line, before and after"]
-    pitch: "Show a roadmap from first line to network, with measures agreed up front. Emphasise the platform decision, because it decides how cheaply each next use case can scale."
+    pitch: "Show a roadmap from first site to network, with measures agreed up front. Emphasise the platform decision, because it decides how cheaply each next use case can scale."
     reads: [time-to-truth, build-vs-buy-mes, practical-genai-for-the-shopfloor, smart-factory-technology-mistakes]
     tool: readiness-check
     also_tools: [vendor-scorecard]
@@ -226,7 +226,7 @@ roles:
     shift:
       - ["The morning meeting starts with an argument about the numbers", "The morning meeting starts with yesterday's top losses, agreed"]
       - ["A complaint takes three days to trace", "A complaint traced before the customer call ends"]
-    pitch: "Start with one line and one painful problem. Put a value on it, and let that line's results fund the next."
+    pitch: "Start with one site and the problems that hurt most. Put a value on them, and let that site's results fund the next."
     reads: [smart-factory-where-to-start, mes-business-case, manufacturing-change-management, mes-go-live]
     tool: readiness-check
     also_tools: [oee-one-percent, go-live-checklist]

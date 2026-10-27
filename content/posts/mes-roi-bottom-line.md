@@ -61,7 +61,7 @@ MES/MOM often follows a similar pattern. Manufacturers usually invest for one or
 1. **Quantify current costs:** downtime, scrap, overtime, late deliveries and inventory.
 2. **Estimate realistic improvements** for each, based on your own data rather than vendor claims.
 3. **Count the costs honestly**, including your own people's time and ongoing support.
-4. **Phase the investment**, so an early phase on one line can fund the next.
+4. **Phase the investment**, so an early phase on one site can fund the next.
 
 [How to build an MES business case leadership will sign](/post/mes-business-case) walks through it in detail, with a [template](/tools/business-case-template). [What the research says about smart factory ROI](/post/smart-factory-roi-research) pulls together the wider evidence.
 

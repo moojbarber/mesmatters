@@ -473,9 +473,9 @@ how-to-modernise-a-factory:
     - q: "What is the first step in modernising a factory?"
       a: "An honest assessment of where you are today. Most factories sit between paper-driven and partly integrated, and often earlier than their board presentations suggest. Then map what really happens on the shopfloor before you look at software. Digitise a broken process and you get a faster broken process, so the order of the early steps matters as much as the technology you pick."
     - q: "When should a factory invest in AI?"
-      a: "From the start, alongside the data foundation. Generative AI can help in the first weeks, working on procedures and shift summaries. Predictive and optimising AI learns from your shopfloor data, so start it on the first line you connect and let its payback grow as the foundation does: defined processes, MES/MOM running them, connected machines and contextualised data you trust."
-    - q: "Should you modernise one line or the whole factory at once?"
-      a: "Start with one line or area where you can show value quickly, but choose a platform and design that can grow to the whole operation. Doing everything at once multiplies the risk. Starting small with a tool that can't scale just swaps paper silos for digital ones. Once the first area works, turn it into a template and roll it out."
+      a: "From the start, alongside the data foundation. Generative AI can help in the first weeks, working on procedures and shift summaries. Predictive and optimising AI learns from your shopfloor data, so start it on the first site you connect and let its payback grow as the foundation does: defined processes, MES/MOM running them, connected machines and contextualised data you trust."
+    - q: "Should you modernise one line or the whole site at once?"
+      a: "Commit to a whole site rather than a single line, and choose a platform and design that can grow to the whole operation. Within the site you can phase what you switch on first. Starting small with a tool that can't scale just swaps paper silos for digital ones. Once the first site works, turn it into a template and roll it out."
 
 mes-mom-erp-compared:
   summary: "ERP runs the business, MES runs production on the shopfloor, and MOM runs the whole operation across production, quality, inventory and maintenance. APS, WMS, QMS, LIMS, EAM, PLM and SCADA each add depth in one area. Agree which system owns each piece of data, and add specialists only where the operation genuinely needs them."
@@ -496,12 +496,12 @@ shopfloor-applications-explained:
       a: "You can buy most of them separately, but the problems overlap. Quality needs to know what's running, maintenance needs production's downtime, and operators need one screen rather than several logins. Every boundary is an integration to build and retest, and context gets lost at each one. I'd solve the most painful problem first, on a platform that can grow."
 
 smart-factory-where-to-start:
-  summary: "Use the first 30 days to understand where you really are: walk every shift, assess maturity and put numbers on the biggest losses. Use the next 30 to choose the first line, map its process and check its master data. In the last 30, build the business case, secure a sponsor, name the team and land one visible quick win."
+  summary: "Use the first 30 days to understand where you really are: walk every shift, assess maturity and put numbers on the biggest losses. Use the next 30 to choose the first site, map its processes and check its master data. In the last 30, build the business case on ROI and value, create a vision people buy into, secure a sponsor and build the team."
   faq:
     - q: "Where should a smart factory programme start?"
-      a: "With understanding, not buying. Walk the shopfloor on every shift, assess your maturity honestly and put numbers on the biggest losses. Then pick a first line, map its process and check its master data before you write requirements. Talking to vendors comes after that, once you know what you actually need."
-    - q: "How do you choose the first line for a smart factory pilot?"
-      a: "Look for a line where losses are measurable and worth fixing, ideally at or near the bottleneck, with a reasonably stable process and a keen supervisor. It helps if the equipment can be connected and the line is representative of others, so what you learn carries over. Avoid lines whose problems are mostly mechanical."
+      a: "With understanding, not buying. Walk the shopfloor on every shift, assess your maturity honestly and put numbers on the biggest losses. Then pick a first site, map its processes and check its master data before you write requirements. Talking to vendors comes after that, once you know what you actually need."
+    - q: "How do you choose the first site for a smart factory programme?"
+      a: "Commit to a whole site rather than a single line. Look for a site where losses are measurable and worth fixing, with reasonably stable processes and keen site leadership. It helps if the equipment can be connected and the site is representative of others, so what you learn becomes the template. Avoid sites whose problems are mostly mechanical."
     - q: "What should you avoid in the first 90 days?"
       a: "Buying software before you know your requirements, treating AI and the data foundation as separate projects, or piloting a point solution you couldn't scale. Above all, don't leave the shopfloor out. People support what they helped create, and the operators know the workarounds that never made it into the procedures."
 

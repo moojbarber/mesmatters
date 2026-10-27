@@ -57,7 +57,7 @@ The best business cases I've seen reframe the conversation completely.
 
 **Transformation as risk mitigation.** The bigger risk isn't the investment. It's the quality escape, the failed audit, the experienced operator retiring with all the knowledge in their head.
 
-**Phased delivery.** Start with one line or one site. Prove the value. Let the results fund the next phase.
+**Phased delivery.** Start with one site. Prove the value. Let the results fund the next phase.
 
 **The cost of doing nothing.** Your competitors are moving. Customers are getting less patient with quality issues and late deliveries. Every year you delay has a cost, and it's usually bigger than people assume.
 

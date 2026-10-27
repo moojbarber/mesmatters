@@ -105,7 +105,7 @@ You see this most in smaller companies with tech-savvy teams, and some of the pl
 - **Integrations still need work.** Configuration reduces customisation, but rarely removes it entirely, especially for equipment and third-party software.
 - **You depend on a vendor.** Their roadmap and commercial health matter, so choose carefully. See [How to choose an MES](/post/how-to-choose-an-mes).
 
-**A typical example:** a manufacturer goes live with production and quality on one line, then switches on inventory and maintenance on the same platform the following year, without building an interface between them.
+**A typical example:** a manufacturer goes live with production and quality on its first site, then switches on inventory and maintenance on the same platform the following year, without building an interface between them.
 
 ## Side by side
 

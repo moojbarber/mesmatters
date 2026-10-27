@@ -39,7 +39,7 @@ Measure it from day one, against the baseline you set before the project. Share 
 
 When an operator sees their own downtime data for the first time, or a quality manager traces a batch in seconds instead of hours, that's when adoption accelerates.
 
-Make those moments visible. They build momentum, and momentum is what carries a project from a pilot line to an enterprise standard.
+Make those moments visible. They build momentum, and momentum is what carries a project from the first site to an enterprise standard.
 
 ## Then keep improving
 

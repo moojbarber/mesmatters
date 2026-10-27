@@ -18,7 +18,7 @@ So this is the route I'd follow, step by step, with a simple test for each one s
 
 You'll find AI in several of the steps below, not saved for the end. That's deliberate. AI and the data foundation are best built together. AI gives the programme a clear reason to capture data well, and every step that improves the data makes the AI more capable.
 
-Generative AI can help from the first week, with procedures and plain-English questions. Predictive and optimising AI learns from your shopfloor data, so its value grows with every line you connect. Start it early. More in [AI will transform your factory, if you give it the right data](/post/ai-needs-shopfloor-data).
+Generative AI can help from the first week, with procedures and plain-English questions. Predictive and optimising AI learns from your shopfloor data, so its value grows with everything you connect. Start it early. More in [AI will transform your factory, if you give it the right data](/post/ai-needs-shopfloor-data).
 
 ## Step 1: Be honest about where you are today
 
@@ -88,13 +88,13 @@ Use the [12 questions](/post/how-to-choose-an-mes) to structure the evaluation, 
 
 **Ready to move on when:** you've seen the system run your process, in a demo built for your type of manufacturing, and your operators have used it.
 
-## Step 7: Start small, with the end in mind
+## Step 7: Start with one site, with the end in mind
 
-Pick one line or area where you can show value quickly. Often the best first move is removing the paper that hurts most: quality check sheets, downtime logs, work instructions or travellers. Get the wins on the board and build confidence before you grow. Pick an AI use case for the same area, so the data you capture has a purpose from day one.
+Commit to a whole site rather than a single production line. Within that site you can still phase what you switch on first. Often the best first move is removing the paper that hurts most: quality check sheets, downtime logs, work instructions or travellers. Pick an AI use case for the same site, so the data you capture has a purpose from day one.
 
-Small doesn't mean narrow-minded. The end state should still be clear on day one, even if you only use part of the platform at first. That's the difference between a pilot that scales and a pilot that becomes another silo. More in [Going paperless](/post/paperless-manufacturing).
+Phasing doesn't mean narrow-minded. The end state should still be clear on day one, even if you only use part of the platform at first. That's the difference between a pilot that scales and a pilot that becomes another silo. More in [Going paperless](/post/paperless-manufacturing).
 
-**Ready to move on when:** the first area runs on the new system every shift, including nights and weekends, with no paper fallback.
+**Ready to move on when:** the first site runs on the new system every shift, including nights and weekends, with no paper fallback.
 
 ## Step 8: Connect the machines
 

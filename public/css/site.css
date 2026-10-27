@@ -1231,7 +1231,8 @@ form.signup p.fine{font:400 13px/1.5 var(--body);letter-spacing:0;max-width:none
 
 /* ================= time to truth graphic ================= */
 .ttt{--ev:24%;margin:40px 0;padding:clamp(20px,3vw,34px);border-radius:26px;border:1px solid rgba(139,108,255,.4);background:radial-gradient(120% 80% at 0% 0%,rgba(139,108,255,.22),transparent 55%),radial-gradient(90% 70% at 100% 100%,rgba(51,212,224,.16),transparent 60%),#0d0a26;position:relative;overflow:hidden;font-family:var(--body)}
-.prose .ttt{margin-inline:calc(-1 * min(80px,6vw))}
+.prose .ttt{margin-inline:0}
+@media(min-width:1101px){.post-layout .prose .ttt{margin-right:calc(-1 * min(160px,(100vw - 1014px) / 2 - 24px))}}
 .ttt:before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.08) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(180deg,#000,transparent 70%);-webkit-mask-image:linear-gradient(180deg,#000,transparent 70%);pointer-events:none}
 .ttt>*{position:relative}
 .ttt-event{display:flex;gap:16px;align-items:center;font-size:15.5px;line-height:1.45;color:var(--mut)}

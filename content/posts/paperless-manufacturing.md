@@ -39,7 +39,7 @@ Pick the paper that hurts most. Often that's:
 - Work instructions, where version control is a constant battle
 - Travellers, where finding out where an order is means walking the floor
 
-It can be phased. One process, one line, one form at a time.
+It can be phased. One process, one form at a time.
 
 ## The one mistake to avoid
 
