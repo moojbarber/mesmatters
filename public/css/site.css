@@ -503,7 +503,9 @@ form.signup p.fine{font:400 13px/1.5 var(--body);letter-spacing:0;max-width:none
 .lp-head .kicker{max-width:52ch}
 .lp-welcome{display:flex;flex-direction:column;gap:10px;padding:18px 20px;border-radius:18px;border:1px solid rgba(165,148,255,.45);background:rgba(139,108,255,.1);max-width:360px}
 .lp-welcome p{margin:0;font-size:15px;color:#c9c4f0}.lp-welcome b{color:#fff}
-.lp-welcome .btn{align-self:flex-start}
+.lp-welcome .btn{align-self:stretch;max-width:100%;white-space:normal;text-align:left;justify-content:flex-start;flex-direction:column;align-items:flex-start;gap:2px;line-height:1.3;height:auto;padding-top:10px;padding-bottom:11px}
+.lp-welcome .btn small{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+.lp-welcome .btn span{overflow-wrap:anywhere}
 .lp-welcome[hidden]{display:none}
 .lp-mapbox{margin-top:52px;border-radius:28px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,rgba(18,15,51,.85),rgba(8,7,26,.95));box-shadow:0 40px 120px -40px rgba(0,0,0,.9),inset 0 1px 0 rgba(255,255,255,.06);overflow-x:auto;-webkit-overflow-scrolling:touch}
 .lp-map{position:relative;width:1230px;height:780px;margin:0 auto}
@@ -511,13 +513,13 @@ form.signup p.fine{font:400 13px/1.5 var(--body);letter-spacing:0;max-width:none
 .lp-flow{position:absolute;height:4px;border-radius:4px;z-index:5;opacity:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.9) 0 6px,transparent 6px 40px);transition:opacity .45s}
 .lp-stn{position:absolute;width:0;height:0;z-index:3;color:inherit}
 .lp-stn i{position:absolute;left:-7px;top:-7px;width:14px;height:14px;border-radius:50%;box-sizing:border-box;background:#06051a;border:4px solid var(--c);opacity:.35;transition:all .45s}
-.lp-stn span{position:absolute;left:-4px;bottom:16px;transform-origin:0 100%;transform:rotate(-38deg);white-space:nowrap;font-size:13px;font-weight:500;color:#c9c4f0;text-shadow:0 2px 8px #06051a;opacity:0;pointer-events:none;transition:opacity .35s}
+.lp-stn span{position:absolute;left:-4px;bottom:16px;transform-origin:0 100%;transform:rotate(-56deg);white-space:nowrap;font-size:13px;font-weight:500;color:#c9c4f0;text-shadow:0 2px 8px #06051a;opacity:0;pointer-events:none;transition:opacity .35s}
 .lp-stn.done i{background:var(--c);border-color:#fff}
-.lp-tag{position:absolute;height:50px;min-width:240px;display:flex;align-items:center;gap:12px;padding:0 16px;border-radius:14px;z-index:9;text-align:left;cursor:pointer;font:inherit;background:rgba(255,255,255,.04);color:var(--tx);border:1px solid rgba(255,255,255,.14);transition:background .3s,color .3s,box-shadow .3s,transform .3s}
+.lp-tag{position:absolute;height:50px;width:280px;box-sizing:border-box;display:flex;align-items:center;gap:12px;padding:0 16px;border-radius:14px;z-index:9;text-align:left;cursor:pointer;font:inherit;background:rgba(255,255,255,.04);color:var(--tx);border:1px solid rgba(255,255,255,.14);transition:background .3s,color .3s,box-shadow .3s,transform .3s}
 .lp-tag:hover{transform:translateX(3px)}
 .lp-tag i{flex:none;width:14px;height:14px;border-radius:50%;background:var(--c);box-shadow:0 0 10px var(--c)}
-.lp-tag span{display:flex;flex-direction:column;line-height:1.15}
-.lp-tag b{font:700 15px var(--disp);white-space:nowrap}.lp-tag small{font-size:12px;opacity:.8}
+.lp-tag span{display:flex;flex-direction:column;line-height:1.15;min-width:0}
+.lp-tag b{font:700 15px var(--disp);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.lp-tag small{font-size:12px;opacity:.8}
 .lp-tag:focus-visible,.lp-stn:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .lp-line.on .lp-seg{opacity:1;box-shadow:0 0 18px var(--c),0 0 4px var(--c);z-index:4}
 .lp-line.on .lp-flow{opacity:.55;animation:lpflow 1.2s linear infinite}

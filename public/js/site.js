@@ -237,7 +237,7 @@
     if (c && w) {
       var ni = nextIndex(c);
       w.querySelector('[data-lp-welcome]').textContent = "You're " + doneCount(c) + ' article' + (doneCount(c) === 1 ? '' : 's') + ' into ' + c.title + '.';
-      var a = w.querySelector('[data-lp-continue]'); a.href = postUrl(c.slugs[ni], c.id); a.textContent = 'Continue: ' + c.titles[ni];
+      var a = w.querySelector('[data-lp-continue]'); a.href = postUrl(c.slugs[ni], c.id); a.textContent = ''; var lb = document.createElement('small'); lb.textContent = 'Continue'; var tt = document.createElement('span'); tt.textContent = c.titles[ni]; a.appendChild(lb); a.appendChild(tt); a.setAttribute('aria-label', 'Continue: ' + c.titles[ni]);
       w.hidden = false;
     }
   }

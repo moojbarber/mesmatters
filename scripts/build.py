@@ -134,10 +134,10 @@ def load_paths(posts):
     """Learning paths: lines of articles. Adds hub-map geometry and per-post path context."""
     data = yaml.safe_load((ROOT / "content" / "paths.yaml").read_text(encoding="utf-8"))
     by_slug = {p["slug"]: p for p in posts}
-    HX, END, T, K = 190, 850, 10, 0.55  # K: horizontal run per unit of vertical drop on the branch
+    HX, END, T, K = 190, 800, 10, 0.55  # K: horizontal run per unit of vertical drop on the branch
     N = len(data["paths"])
     STEP = 80 if N <= 8 else 62
-    TOP = 180 if N <= 8 else 160   # room above the first line for its angled station labels
+    TOP = 180 if N <= 8 else 215   # room above the first line for its angled station labels
     BOTTOM = 180 if N <= 8 else 70
     HY = TOP + (N - 1) * STEP / 2
     map_h = int(TOP + (N - 1) * STEP + BOTTOM)
