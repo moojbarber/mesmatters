@@ -1,7 +1,7 @@
 ---
 title: "WMS vs MES vs ERP: who owns inventory once it reaches the line?"
 short: "WMS vs MES inventory"
-description: "ERP, WMS and MES/MOM all track stock. Where the boundaries sit for warehouse, line-side and WIP inventory, and the integration options that work."
+description: "ERP, WMS and MES/MOM all track stock. Where the boundaries sit for warehouse, line-side and WIP inventory, and how material is handed over between them."
 published: 2026-09-08
 category: education
 art: bins
@@ -9,7 +9,7 @@ art: bins
 
 Three systems can all claim to know where your stock is. ERP, the warehouse management system (WMS) and MES/MOM. In a lot of factories, all three are a bit right and a bit wrong at the same time.
 
-The fix isn't picking one winner. It's agreeing where each one's responsibility starts and stops.
+The fix is agreeing where each one's responsibility starts and stops, rather than picking one winner.
 
 ## What each one is for
 
@@ -32,13 +32,11 @@ There are several options for warehousing. For the most complex requirements, pa
 
 For simpler warehousing, ERP combined with the inventory and logistics capability of a MOM platform can be enough, with MOM running material from receipt to the line.
 
-Most ERP suites include a capable WMS module, so "WMS" doesn't necessarily mean another vendor. It means deeper warehouse functionality, wherever it comes from.
-
 ## The boundary that matters: the line
 
 The messy part is the handover between warehouse and production. Let's walk through it.
 
-**Replenishment.** The line needs material. Who asks for it? Ideally MES/MOM, because it knows what's running, what's next and what's left line-side. It raises a replenishment request based on real consumption or kanban signals, rather than ERP pushing kits days in advance.
+**Replenishment.** The line needs material. Who asks for it? There are two good options. MES/MOM can raise the request, because it knows what's running, what's next and what's left line-side, so replenishment follows real consumption or kanban signals. Or ERP or a WMS can plan it from upcoming orders, picking and staging material ahead of time, which keeps warehouse work planned and suits stable schedules.
 
 **Delivery.** The warehouse picks and moves the material. WMS (or ERP) manages that task and records that stock left the warehouse.
 
@@ -46,32 +44,17 @@ The messy part is the handover between warehouse and production. Let's walk thro
 
 **Consumption.** MES/MOM records what was actually used, by order and by lot. That flows back to ERP for stock and cost.
 
-**Output.** Finished goods are declared in MES/MOM, labelled, and handed back to the warehouse for putaway.
+**Output.** Finished goods are created and labelled in MES/MOM, then put away in the warehouse and handed over to ERP or WMS.
 
 ::block supermarket-flow
-
-## Integration options
-
-Here's where you have choices. Two common patterns:
-
-| | Through ERP | ERP plus direct WMS link |
-| --- | --- | --- |
-| Replenishment requests | MES/MOM → ERP → WMS | MES/MOM → WMS directly |
-| Material moved | WMS → ERP → MES/MOM | WMS → MES/MOM directly, ERP updated in parallel |
-| Consumption and output | MES/MOM → ERP | MES/MOM → ERP |
-| Best for | Lower volumes, slower replenishment cycles | High-frequency, just-in-time replenishment |
-
-The ERP route is simpler and keeps one hub. The direct route reduces latency. If you're replenishing a line every 20 minutes, a round trip through ERP can be the difference between a delivery arriving on time and an idle line.
-
-Whichever you pick, ERP stays the financial owner of the stock. A direct link is about speed of execution, not a second set of books.
 
 ## Where it goes wrong
 
 - **Backflushing hides reality.** ERP deducts standard quantities when output is declared. Scrap, overuse and substitutions disappear. Record actual consumption in MES/MOM where it matters.
 - **Line-side stock is a black hole.** Material leaves the warehouse and "vanishes" until the next stock count. Give it a location in MES/MOM.
-- **Two systems manage the same bins.** If WMS and MES/MOM both think they own the supermarket, they'll both be wrong. Draw the line on a map, literally.
+- **Two systems manage the same bins.** If WMS and MES/MOM both think they own the supermarket, they'll both be wrong. It needs clear ownership and handover in both directions.
 - **Quality status doesn't travel.** A lot put on hold by quality must be blocked in every system that could move or consume it. More on that in [QMS and MES](/post/qms-and-mes-quality).
 
 ## A simple test
 
-Pick a component and ask three people where all of it is right now: the warehouse manager, the line supervisor and the finance controller. Do the answers add up to the same number?
+Pick a component and ask three people where all of it is right now: the warehouse manager, the line supervisor and the finance controller. Do the answers match?

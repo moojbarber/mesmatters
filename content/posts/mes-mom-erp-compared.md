@@ -29,7 +29,7 @@ MES and MOM aren't competitors to ERP. They do a different job, at a much finer 
 | **MES** | Execute production orders and record what happened | Shifts to seconds | Operators, supervisors | 3 |
 | **MOM** | Run production, quality, inventory and maintenance on one set of data | Shifts to seconds | Everyone in operations | 3 |
 | **WMS** | Run the warehouse: putaway, picking, storage, automation | Hours to minutes | Warehouse and logistics | 3 |
-| **QMS** | Enterprise quality: CAPA, complaints, audits, supplier quality | Weeks to months | Quality and compliance | 4, sometimes 3 |
+| **QMS** | Enterprise quality: CAPA, complaints, audits, supplier quality | Weeks to months | Quality and compliance | 3 |
 | **LIMS** | Run the lab: samples, methods, results, certificates | Hours to days | Lab analysts, QA | 3 |
 | **EAM** | Manage assets across their whole life, including their costs | Years to weeks | Asset management, engineering, finance | 4 |
 | **CMMS** | Plan and record maintenance work | Weeks to hours | Maintenance | 3 |
@@ -95,7 +95,7 @@ Not every factory needs every system. The skill is adding depth where the operat
 | **APS** | Sequence-dependent changeovers, shared tools, a bottleneck that drives everything, or hundreds of orders a day competing for resources | A handful of lines with stable products and simple changeovers |
 | **WMS** | High volumes, warehouse automation, several storage zones with different rules, or distribution alongside manufacturing | Simpler warehousing, where ERP and the inventory and logistics capability of MOM are enough |
 | **QMS** | Your MES doesn't cover CAPA, complaints and supplier quality | Your MOM platform runs quality on the line and escalates non-conformances and CAPA into ERP |
-| **LIMS** | A lab running samples, methods and certificates, common in process and regulated industries | Line-side checks such as weight or pH are enough |
+| **LIMS** | A heavy, regulated lab running samples, methods and certificates, mainly in pharma, chemicals, food and materials testing | You're not in a highly regulated industry |
 | **EAM / CMMS** | Asset-heavy operations with advanced maintenance, spares and lifecycle cost needs | Maintenance needs are well covered by MES/MOM on the same downtime data |
 | **SCADA** | Real control of continuous or safety-critical processes | It's mainly used for visibility that MES/MOM could provide. See [Do you need both SCADA and MES?](/post/scada-vs-mes) |
 | **CPQ** | Configured or engineer-to-order products with complex rules | Standard products from a catalogue |

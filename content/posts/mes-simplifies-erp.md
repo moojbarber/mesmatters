@@ -42,7 +42,7 @@ Shopfloor execution is one of those specialist areas, and it's best practice for
 
 It also means choosing the right application for each area. Some vendors offer both ERP and MES/MOM, and many manufacturers successfully run ERP from one vendor and MES/MOM from another. Either way, the integration between them deserves careful attention:
 
-- **Building and maintaining the interface.** Orders, master data, confirmations, consumption and stock movements all have to flow reliably, in both directions, for years.
+- **Building and maintaining the interface.** Orders, master data, confirmations, consumption and stock movements all have to flow reliably, in both directions.
 - **Upgrades.** Every upgrade on either side means retesting the integration, and the two roadmaps won't always line up.
 - **Ownership when something breaks.** When a confirmation goes missing, someone has to own the problem end to end.
 - **Master data alignment.** Materials, BOMs, routings and units of measure have to mean the same thing in both systems.
@@ -70,11 +70,11 @@ The quality of ERP data usually improves:
 
 ## An analogy: the menu and the fitness app
 
-Reading the calories on a restaurant menu is like ERP on the shopfloor. It's useful, high-level information: one number per meal, after the fact. For some people that's enough.
+Reading the calories on a restaurant menu is like ERP on the shopfloor. It's useful, high-level information: one number per meal. For some people that's enough.
 
 A good fitness app is like MES/MOM. It doesn't just count calories. It tracks your macros, your steps and workouts, how much water you drink, how well you slept and your heart rate, as the day goes on. On their own, each one is just a number. Brought together, they show you things you'd never spot otherwise: that you train worse after a short night, or that your energy dips on the days you skip breakfast. And it nudges you while you can still do something about it, not at the end of the month.
 
-MES/MOM does the same for a factory. Machine states, counts, scrap, quality results, material lots, operator skills, tool life, maintenance history and energy are all captured as they happen, and all tied to the same order. Put together, they show why one line runs slower on nights, or that a defect only appears when a particular supplier's lot meets a particular mould cavity. No single system, and no summary in ERP, would show you that.
+MES/MOM does the same for a factory. Machine states, counts, scrap, quality results, material lots, operator skills, tool life, maintenance history and energy are all captured as they happen, and all tied to the same order. Put together, they show why one line runs slower on nights, or that a defect only appears when a particular supplier's lot meets a particular mould cavity.
 
 ERP can tell you that you made 1,000 widgets yesterday. MES/MOM can tell you that widget 847 failed its quality check at 14:32, and what needs to happen next. Manufacturing execution happens in seconds and minutes, which is why the shopfloor needs a system built for it.
 
@@ -83,7 +83,7 @@ ERP can tell you that you made 1,000 widgets yesterday. MES/MOM can tell you tha
 A few questions help decide where a function belongs:
 
 - Who uses it: people in the office, or people on the shopfloor?
-- How fresh does the data need to be: overnight, or right now?
+- How fresh does the data need to be: right now, or later?
 - Does it need context from the machine or the operator?
 - Does it need more detail than the business needs for costing and planning?
 

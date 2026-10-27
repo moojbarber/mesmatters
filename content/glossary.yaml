@@ -505,7 +505,7 @@
 - term: MRP
   stands: Material requirements planning
   short: The ERP process that works out what to make and buy, and when, from demand, stock and lead times.
-  body: MRP mostly assumes infinite capacity, or uses rough-cut checks. When sequencing needs to respect real constraints, that's the job of APS or a dispatch list in MES/MOM.
+  body: MRP mostly assumes infinite capacity, or uses rough-cut checks. When sequencing needs to respect real constraints, that's the job of APS or the sequencing in MES/MOM.
   articles:
   - erp-vs-mrp-vs-mes
   - what-is-erp

@@ -74,10 +74,11 @@
       </g>
     </svg>
   </div>
-  <div class="imap-legend" aria-hidden="true"><span class="lg-erp">Via ERP</span><span class="lg-mes">Direct to MOM</span><span class="lg-core">Orders down, actuals up</span><a class="imap-own" data-imap-link="/tools/systems-landscape">Map your own landscape →</a></div>
+  <div class="imap-legend" aria-hidden="true"><span class="lg-erp">Via ERP</span><span class="lg-mes">Direct to MOM</span><span class="lg-core">Orders down, actuals up</span></div>
   <div class="imap-info" aria-live="polite">
     <p class="imap-hint">Pick an application, or a part of MOM, to see what it does, where it overlaps and what flows where.</p>
   </div>
+  <div class="imap-cta"><a class="btn" data-imap-link="/tools/systems-landscape">Map your own landscape →</a><span>Pick your systems and how they connect, and see what to look at first.</span></div>
   <script type="application/json" class="imap-data">{
     "modes": {
       "erp": {"note": "Every specialist talks to ERP, and ERP passes what it needs down to MOM. One integration hub, simple to govern, and often the safest choice for transactional data. The catch: real-time shopfloor data waits for ERP, and ERP ends up holding detail it doesn't need.",
@@ -88,7 +89,7 @@
               "routes": {"plm": ["mes"], "cpq": ["erp"], "aps": ["mes"], "lims": ["mes"], "wms": ["mes"], "eam": ["mes"], "cw": ["mes"]}}
     },
     "apps": {
-      "mes": {"name": "MES: production", "module": true, "what": "The production part of MOM: dispatching orders, recording counts, scrap and downtime as they happen, OEE, and guided work instructions.",
+      "mes": {"name": "MES: production", "module": true, "what": "The production part of MOM: releasing orders, recording counts, scrap and downtime as they happen, OEE, and guided work instructions.",
               "erp": "ERP plans and costs the order, and some ERPs record operation completions. MES captures the detail in real time and reports actuals back.",
               "mes": "Paper, spreadsheets and standalone point solutions such as OEE dashboards.",
               "link": "/post/mes-functionality-production", "read": "MES functionality: production monitoring"},

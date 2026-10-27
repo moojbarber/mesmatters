@@ -4,7 +4,7 @@
 # Rules: 40-60 words, the answer first, written as Matt, nothing invented.
 
 what-is-mes:
-  summary: "MES, a manufacturing execution system, runs production: dispatching orders and recording output and downtime as they happen. MOM, manufacturing operations management, covers the whole operation that ISA-95 defines, from production and quality to inventory and maintenance. A MOM platform does it all on the same data. The difference decides what you buy, and whether everyone in operations works from one version of the truth."
+  summary: "MES, a manufacturing execution system, runs production: releasing orders and recording output and downtime as they happen. MOM, manufacturing operations management, covers the whole operation that ISA-95 defines, from production and quality to inventory and maintenance. A MOM platform does it all on the same data. The difference decides what you buy, and whether everyone in operations works from one version of the truth."
   faq:
     - q: "What does MES stand for?"
       a: "MES stands for manufacturing execution system. It's the software that gets the right order onto the right line and records what actually happened, including output and downtime, ideally straight from the equipment. It sits between ERP, which plans the business, and the machines and control systems on the shopfloor."
@@ -97,10 +97,10 @@ introduction-to-mes-and-smart-manufacturing:
   summary: "Smart manufacturing gets the headlines, but MES is the platform underneath it. ERP manages the business; MES coordinates, tracks and records everything that happens in the factory, across production, quality, inventory and maintenance. It connects ERP and enterprise applications to the machines, and gives decision-makers real-time data they can trust."
 
 mes-market-overview:
-  summary: "The MES/MOM market is growing at around 10% a year, and many smaller manufacturers still run on paper or spreadsheets. Demand is driven by workforce change, AI ambitions, traceability and composable ERP. Legacy toolkits are giving way to two modern approaches: platforms for builders, and configurable enterprise platforms. Buyers should know which type they're choosing, and why."
+  summary: "The MES/MOM market is growing steadily, and most of it is still untapped: only 8% of plants use a commercial MES, and 54% still run on paper or spreadsheets. Demand is driven by workforce change, AI ambitions, traceability and composable ERP. Legacy toolkits are giving way to two modern approaches: platforms for builders, and configurable enterprise platforms. Buyers should know which type they're choosing, and why."
   faq:
     - q: "How big is the MES market?"
-      a: "Estimates vary with what is counted. MarketsandMarkets puts MES software and services at around $16 billion in 2025, growing to almost $26 billion by 2030. Software-only estimates are lower, such as IoT Analytics at $5.5 billion in 2024."
+      a: "Estimates vary with what is counted. MarketsandMarkets puts MES software and services at around $16 billion in 2025, growing to almost $26 billion by 2030. Software-only estimates are lower, such as IoT Analytics at $5.5 billion in 2024. The same research finds only 8% of plants use a commercial MES, so there's a lot of room to grow."
     - q: "What types of MES vendor are there?"
       a: "Broadly, legacy toolkit applications that are heavily customised, platforms that let manufacturers build their own applications, and configurable enterprise platforms designed for standardisation across many sites. Builder platforms and enterprise platforms tend to serve different kinds of business rather than compete directly."
     - q: "What trends are shaping the MES market?"
@@ -130,9 +130,9 @@ mes-functionality-scheduling:
   summary: "ERP creates production orders from demand and stock levels. MES/MOM receives them with their routings and bills of materials, lets schedulers fine-tune the sequence and the equipment, and releases orders to the shopfloor, where operators see a live plan. A dedicated APS is worth adding when sequencing itself becomes the hard problem."
   faq:
     - q: "Does MES do production scheduling?"
-      a: "Most MES/MOM platforms let schedulers adjust the sequence of the orders ERP has created and release them to the line. How sophisticated that is varies widely between products, from a simple dispatch list to detailed short-interval scheduling."
+      a: "Most MES/MOM platforms let schedulers adjust the sequence of the orders ERP has created and release them to the line. How sophisticated that is varies widely between products, from a simple prioritised order list to detailed short-interval scheduling."
     - q: "What is the difference between ERP and MES scheduling?"
-      a: "ERP plans in weeks and months, usually with simplified capacity, and decides what to make and when. MES/MOM works in shifts and minutes, sequencing and dispatching orders against real equipment and feeding back what actually happened."
+      a: "ERP plans in weeks and months, usually with simplified capacity, and decides what to make and when. MES/MOM works in shifts and minutes, sequencing and releasing orders against real equipment and feeding back what actually happened."
     - q: "When do you need an APS as well as MES?"
       a: "When sequencing becomes genuinely complex: shared bottlenecks, sequence-dependent changeovers, tools shared across machines or large numbers of orders changing every day. For stable production with simple changeovers, ERP plus MES/MOM is often enough."
 
@@ -231,14 +231,14 @@ ai-ml-genai-on-the-shopfloor:
   summary: "AI is the broad category. Machine learning predicts outcomes from your historical data, and has been in factories for years through SPC and predictive maintenance. Generative AI creates content such as text and code, and helps people more than machines. Each needs different data, so ask which kind before you spend money."
 
 aps-vs-mes-scheduling:
-  summary: "ERP plans in weeks and months, usually assuming infinite capacity. APS sequences in days and hours against finite capacity, changeovers and constraints. MES/MOM takes the scheduled orders, dispatches them to the line, can do some basic scheduling, and records what actually happened. Not every manufacturer needs an APS; it helps most where sequencing is genuinely complex."
+  summary: "ERP plans in weeks and months, usually assuming infinite capacity. APS sequences in days and hours against finite capacity, changeovers and constraints. MES/MOM takes the scheduled orders, releases them to the line, can do some basic scheduling, and records what actually happened. Not every manufacturer needs an APS; it helps most where sequencing is genuinely complex."
   faq:
     - q: "What is the difference between APS and ERP scheduling?"
       a: "ERP schedules in weeks and days, usually assuming infinite capacity, and works out what to make and when. APS sequences orders in days and hours against finite capacity, taking account of changeovers, tooling, labour and material. Many ERP suites include APS as a module."
     - q: "When is ERP scheduling enough?"
-      a: "More often than people expect. With a handful of lines, stable products and simple changeovers, ERP scheduling plus a dispatch list in MES/MOM can cover most needs. APS helps most where sequencing is genuinely complex, such as sequence-dependent changeovers or shared tools."
+      a: "More often than people expect. With a handful of lines, stable products and simple changeovers, ERP scheduling plus a prioritised order list in MES/MOM can cover most needs. APS helps most where sequencing is genuinely complex, such as sequence-dependent changeovers or shared tools."
     - q: "Does MES do scheduling?"
-      a: "MES/MOM mainly takes the scheduled orders and dispatches them to the line, and some platforms add basic short-interval scheduling for the next shift or day. Its biggest contribution is feeding actual cycle times and downtime back, so the next plan is built on reality."
+      a: "MES/MOM mainly takes the scheduled orders and releases them to the line, and some platforms add basic short-interval scheduling for the next shift or day. Its biggest contribution is feeding actual cycle times and downtime back, so the next plan is built on reality."
 
 cloud-vs-on-premises-mes:
   summary: "On-premises MES/MOM runs on servers you manage; cloud MES/MOM runs on a platform the vendor manages, usually with an edge component at each site. Most multi-site on-premises MES already runs in a central data centre that sites reach over the network. Cloud adds large-scale security, easier scaling and continuous updates. On-premises fits sites without reliable connectivity, and cases where data must stay in your own data centre, such as many aerospace and defence programmes."
@@ -257,7 +257,7 @@ connected-worker-one-app-not-five:
   summary: "Connected worker tools digitise frontline work: checklists, shift handover, skills, work instructions and safety sign-offs. MES/MOM runs production and quality. Connected worker can be bought as a standalone app, which is quick to start but lacks production context, or built into MES/MOM on the same data. My preference is built in."
   faq:
     - q: "What is a connected worker platform?"
-      a: "Connected worker is the digital layer between frontline people and everything they need to do their job. In practice that's digital checklists and tasks, structured shift handover, skills and certification tracking, always-current documents and work instructions, and health and safety sign-offs."
+      a: "Connected worker is about guiding frontline workers, supporting them in their daily activities and giving them the information and insights they need about the work to be done and the assets they look after. It's the digital layer between frontline people and everything they need to do their job. In practice that's digital checklists and tasks, structured shift handover, skills and certification tracking, always-current documents and work instructions, and health and safety sign-offs."
     - q: "Should connected worker be separate from MES?"
       a: "Both approaches are used. A standalone app is quick to start, but doesn't know which order is running unless it's integrated. Built into MES/MOM, checklists and skills can react to what's actually happening and block actions. My preference is built in, so operators work in one application."
     - q: "Why is connected worker growing so fast?"
@@ -328,7 +328,7 @@ iiot-vs-mes:
       a: "Not if you need MES functionality. Collecting machine data is a basic requirement for any MES, so an IIoT platform covers one small part of it. Manufacturers who start with IIoT alone often discover they still can't manage a production order or trace a lot, and end up building a homegrown MES on top or buying one and integrating."
 
 isa95-integration-patterns:
-  summary: "Start every integration by agreeing what object moves, which system owns it, what triggers it and how fresh it must be. ERP is usually the hub: business transactions go through ERP, and execution detail can go direct when speed or richness demands it. Then choose point-to-point, middleware, event-driven or UNS."
+  summary: "Start every integration by agreeing what object moves, which system owns it, what triggers it, how fresh it must be and whether the sender needs confirmation that it was processed. ERP is usually the hub: business transactions go through ERP, and execution detail can go direct when speed or richness demands it. Then choose the pattern. Point-to-point is often the safest for transactions, because the sender gets a response."
 
 lims-and-mes:
   summary: "LIMS runs the lab and MES/MOM runs the batch. MES/MOM should trigger the sample with its batch context attached, and LIMS results should flow straight back so the next step is released or the batch is held. ERP usually holds batch status, and final release can sit in ERP, LIMS or MES/MOM, or in a QMS where one is used."
@@ -380,7 +380,7 @@ paperless-manufacturing:
   summary: "Removing paper is a great first step if you can't do everything at once. Start with the paper that hurts most, often quality check sheets or downtime logs, one line at a time. Avoid a different cheap tool for every form: choose a platform that can grow into full MES/MOM."
 
 plm-erp-mes-digital-thread:
-  summary: "PLM owns what a product is, ERP owns the business of making it, and MES/MOM owns execution. In most manufacturers product data reaches the shopfloor through ERP, which is a sound design. A direct PLM to MES/MOM link makes sense for rich content that ERP isn't built to carry, such as 3D models and illustrated instructions."
+  summary: "PLM owns what a product is, ERP owns the business of making it, and MES/MOM owns execution. In most manufacturers product data reaches the shopfloor through ERP, which is a sound design. A direct PLM to MES/MOM link makes sense for rich content that ERP isn't built to carry, such as 3D models and illustrated instructions, though a central document repository that every system reads from is usually the better option for documents."
 
 practical-genai-for-the-shopfloor:
   summary: "GenAI already saves time in factories in four ways: answering questions about operational data in plain English, helping configure systems, acting as a knowledge assistant on every screen, and drafting shift summaries. Every one depends on the AI having access to good, contextualised data from your shopfloor systems."
@@ -621,7 +621,7 @@ cmms-vs-eam-vs-mes:
       a: "If you run a MOM platform with maintenance capability, you don't need a CMMS. Without one, a CMMS is often enough for getting preventive maintenance done. For asset value, depreciation and capital spend, check what your ERP covers first; it often handles them already. A full EAM suits asset-heavy businesses with advanced needs, such as complex spare parts, reliability engineering or regulatory asset records across many sites."
 
 unified-namespace-uns:
-  summary: "A unified namespace (UNS) is an architecture for sharing live data: systems publish what they know to a central broker, organised by the plant hierarchy, and others subscribe. MES/MOM is an application that runs the operation, dispatching orders, enforcing checks and keeping history with its context. A UNS shows the current state rather than running the operation, and many architectures use both."
+  summary: "A unified namespace (UNS) is an architecture for sharing live data: systems publish what they know to a central broker, organised by the plant hierarchy, and others subscribe. MES/MOM is an application that runs the operation, releasing orders, enforcing checks and keeping history with its context. A UNS shows the current state rather than running the operation, and many architectures use both."
   faq:
     - q: "What is a unified namespace?"
       a: "A unified namespace is an architectural pattern rather than a product. Every system publishes its data to one central, structured place, usually an MQTT broker, organised by enterprise, site, area, line and machine. Any system that needs the data subscribes to it, instead of each pair of systems being connected directly."
@@ -636,7 +636,7 @@ plc-vs-scada-vs-dcs-vs-mes:
     - q: "What is the difference between PLC, SCADA and DCS?"
       a: "A PLC is a rugged controller for a machine or a section of a line. SCADA sits above PLCs to monitor and supervise equipment, often across a plant or a wide area. A DCS combines control and supervision in one integrated system designed for large continuous and batch process plants."
     - q: "Where does MES fit with PLC, SCADA and DCS?"
-      a: "MES/MOM sits above the control layer at ISA-95 level 3. It reads data from PLCs, SCADA or the DCS, adds the context of the order and the lot, and manages the operation: dispatching orders, guiding operators and recording quality and genealogy. It passes results up to ERP."
+      a: "MES/MOM sits above the control layer at ISA-95 level 3. It reads data from PLCs, SCADA or the DCS, adds the context of the order and the lot, and manages the operation: releasing orders, guiding operators and recording quality and genealogy. It passes results up to ERP."
     - q: "Does a DCS replace an MES?"
       a: "No. A DCS controls the process. It typically doesn't manage material status and genealogy across the plant, handle orders from ERP or produce a complete electronic batch record. In batch plants, the DCS batch manager runs the recipe's control steps while MES/MOM handles the order, the materials and the batch record."
 

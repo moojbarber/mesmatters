@@ -78,7 +78,7 @@ Standard ISA-95 practice is also not to connect ERP directly to the machines. ME
 The usual pattern:
 
 1. ERP releases a production order, with its BOM and routing, to MES/MOM.
-2. MES/MOM dispatches it on the shopfloor and captures what happens as it runs.
+2. MES/MOM releases it to the shopfloor and captures what happens as it runs.
 3. MES/MOM sends back actuals: quantities produced, material consumed by lot, scrap and labour.
 4. ERP uses those actuals for costing, inventory and the next round of planning.
 

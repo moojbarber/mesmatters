@@ -27,7 +27,7 @@ MRP mostly assumes infinite capacity, which is why many manufacturers add an APS
 
 ## What MES/MOM does
 
-**MES/MOM** runs the work on the shopfloor. It dispatches the orders the plan creates to lines and operators, and guides people through each step. It records what was actually made and what went into it, along with downtime, scrap, quality results and the genealogy of every lot.
+**MES/MOM** runs the work on the shopfloor. It releases the orders the plan creates to lines and operators, and guides people through each step. It records what was actually made and what went into it, along with downtime, scrap, quality results and the genealogy of every lot.
 
 MES/MOM thinks in seconds and minutes. Its output is the truth about what actually happened, with the context attached.
 
@@ -44,7 +44,7 @@ MES/MOM thinks in seconds and minutes. Its output is the truth about what actual
 
 ## MRP vs ERP
 
-If you're a small manufacturer choosing between standalone MRP software and an ERP, the difference is breadth. MRP covers planning and materials. ERP adds finance, sales, purchasing, costing and much more on the same data. Many companies start with MRP and move to ERP as they grow.
+If you're a small manufacturer choosing between standalone MRP software and an ERP, the difference is breadth. MRP covers planning and materials. ERP adds finance, sales, purchasing, costing and much more on the same data.
 
 Either way, neither one is designed to run the shopfloor in real time.
 
@@ -60,6 +60,6 @@ Master data matters just as much. All three depend on the same BOMs, routings, u
 
 Some manufacturers book production straight into ERP at a terminal, typically every hour or at the end of the job or shift. It's a real step forward from paper, and ERP knows the order started and finished.
 
-What it doesn't capture is what happened in between: the short stops, the reason for the scrap, which lot went into which product, whether the check was done. That isn't ERP's job, and it's exactly what MES/MOM is for. More in [MES vs ERP](/post/mes-vs-erp).
+What it doesn't capture is what happened in between: the short stops, the reason for the scrap, detail on traceability and actual consumption, whether the check was done. That isn't ERP's job, and it's exactly what MES/MOM is for. More in [MES vs ERP](/post/mes-vs-erp).
 
 How accurate is the data your MRP plans from today?

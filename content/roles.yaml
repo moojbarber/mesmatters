@@ -6,13 +6,13 @@
 intro: "Everyone in a factory touches the same orders and machines. They just ask very different questions of them. Pick a role to see what that person is measured on, and which shopfloor applications make the biggest difference to their day."
 
 apps:
-  prod:   {name: "Production execution and OEE", short: "Production", read: what-is-mes, blurb: "Orders dispatched to the line and output recorded as it happens, with OEE calculated the same way everywhere."}
+  prod:   {name: "Production execution and OEE", short: "Production", read: what-is-mes, blurb: "Orders released to the line and output recorded as it happens, with OEE calculated the same way everywhere."}
   qual:   {name: "Quality and SPC", short: "Quality", read: qms-and-mes-quality, blurb: "In-process checks triggered by what's running, SPC at the point of work, and holds that actually stop material moving."}
   trace:  {name: "Traceability and genealogy", short: "Traceability", read: manufacturing-traceability, blurb: "Which materials and machines went into every lot or serial number, recorded as it happens."}
   inv:    {name: "Inventory and logistics", short: "Inventory", read: wms-vs-mes-inventory, blurb: "Line-side stock and work in progress, with quality status that travels with the material."}
   maint:  {name: "Maintenance", short: "Maintenance", read: mes-functionality-maintenance, blurb: "Downtime and usage from the equipment feeding maintenance, with operators raising faults from the screen they already use."}
   cw:     {name: "Connected worker", short: "Connected worker", read: connected-worker-one-app-not-five, blurb: "Digital work instructions, checklists, skills and shift handover, built around the work rather than the paperwork."}
-  sched:  {name: "Scheduling and dispatch", short: "Scheduling", read: aps-vs-mes-scheduling, blurb: "The right job on the right line at the right time, and real cycle times flowing back to keep the plan honest."}
+  sched:  {name: "Scheduling and release", short: "Scheduling", read: aps-vs-mes-scheduling, blurb: "The right job on the right line at the right time, and real cycle times flowing back to keep the plan honest."}
   ai:     {name: "Data and AI", short: "Data and AI", read: contextualised-manufacturing-data, blurb: "Contextualised operational data that analytics and AI can actually learn from, rather than raw tags."}
   energy: {name: "Energy and ESG", short: "Energy", read: esg-needs-shopfloor-data, blurb: "Energy and scrap measured by machine and product, instead of estimated once a year."}
 
@@ -277,7 +277,7 @@ roles:
     scores: {prod: 5, qual: 3, trace: 3, inv: 4, maint: 3, cw: 4, sched: 5, ai: 3, energy: 2}
     why:
       prod: "Live line status and downtime reasons let you act within the shift, not the day after."
-      sched: "A dispatch list that reflects reality shows what to run next and why it changed."
+      sched: "A prioritised list of released orders that reflects reality shows what to run next and why it changed."
       cw: "Skills checks and digital handover keep every shift starting from the same picture."
       inv: "Line-side material visibility stops lines waiting for parts the system thought were there."
     shift:
@@ -528,7 +528,7 @@ roles:
       cw: "Digital handover and skills visibility mean you start the shift knowing what's waiting and who can do what."
       prod: "Live line status with downtime reasons shows where to go first."
       maint: "Faults raised from the line go straight to maintenance, with the context they need."
-      sched: "A clear dispatch list removes the guesswork about what to run next."
+      sched: "A clear, prioritised list of released orders removes the guesswork about what to run next."
     shift:
       - ["An hour of paperwork after every shift", "The shift record built automatically as you go"]
       - ["Finding out about a stopped line on a walk round", "Alerts as soon as a line stops, with the reason"]

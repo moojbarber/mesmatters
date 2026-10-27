@@ -23,7 +23,7 @@ Where scheduling itself is complex, a dedicated APS (advanced planning and sched
 | **Main job** | Create orders from demand and stock | Sequence and execute orders | Build detailed, constraint-based schedules |
 | **Horizon** | Weeks to months | Shifts to minutes | Days to hours |
 | **Capacity** | Mostly simplified | Real, as it is now | Finite, with constraints |
-| **Output** | Orders and due dates | Dispatched jobs and actuals | Optimised sequence |
+| **Output** | Orders and due dates | Released jobs and actuals | Optimised sequence |
 
 The full comparison, including the options for connecting them, is in [APS vs ERP scheduling](/post/aps-vs-mes-scheduling).
 

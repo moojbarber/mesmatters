@@ -26,7 +26,7 @@ That's different from ERP, which runs the business from the office, and from SCA
 
 **OEE and performance.** Availability, performance and quality on the bottleneck, calculated from automatic data rather than end-of-shift estimates. Most people are genuinely surprised when they first see their micro-stops. See [What is OEE?](/post/what-is-oee) and [KPIs beyond OEE](/post/manufacturing-kpis-beyond-oee).
 
-**Scheduling and dispatch.** ERP plans the orders. On the shopfloor, the job is fine-tuning the sequence and showing the line what to run next, and adjusting when a machine goes down. Complex sequencing may need APS on top. See [Production scheduling](/post/mes-functionality-scheduling).
+**Scheduling and release.** ERP plans the orders. On the shopfloor, the job is fine-tuning the sequence and showing the line what to run next, and adjusting when a machine goes down. Complex sequencing may need APS on top. See [Production scheduling](/post/mes-functionality-scheduling).
 
 ## Quality
 

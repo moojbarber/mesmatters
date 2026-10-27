@@ -12,9 +12,11 @@ The MES/MOM market is going through a period of growth and transformation. This 
 
 ## The market is growing, and much of it is untapped
 
-Estimates of market size vary with what's counted. MarketsandMarkets puts the global MES market, software and services together, at around $16 billion in 2025, growing at about 10% a year to almost $26 billion by 2030 ([MarketsandMarkets](https://www.marketsandmarkets.com/Market-Reports/manufacturing-execution-systems-market-536.html)). Services make up the larger share, which reflects how much implementation and integration work sits behind each project.
+Estimates of market size vary with what's counted. MarketsandMarkets puts the global MES market, software and services together, at around $16 billion in 2025, rising to almost $26 billion by 2030 ([MarketsandMarkets](https://www.marketsandmarkets.com/Market-Reports/manufacturing-execution-systems-market-536.html)). Services make up the larger share, which reflects how much implementation and integration work sits behind each project.
 
-Software-only estimates are lower. IoT Analytics puts MES software at $5.5 billion in 2024 ([IoT Analytics, 2025](https://iot-analytics.com/?p=224641)). The same research reports that 54.4% of small and medium-sized manufacturers still rely on manual methods, such as paper or spreadsheets.
+The bigger opportunity is how much of the market hasn't started yet. IoT Analytics estimates that only 8% of plants use a commercial MES. 54% still run production with pen and paper or spreadsheets, and the rest use an extension of their ERP or SCADA, or a homegrown system ([IoT Analytics, 2025](https://iot-analytics.com/?p=224641)). Very few markets this established have so many potential customers still to go.
+
+Adjacent markets are moving faster still. MarketsandMarkets expects the connected worker market to grow at 18.5% a year, from $8.6 billion in 2025 to around $20 billion by 2030 ([MarketsandMarkets, 2025](https://www.marketsandmarkets.com/PressReleases/connected-worker.asp)).
 
 Compare that with ERP. Most manufacturers are on their second or third ERP system, while many are buying MES/MOM for the first time. It helps explain why ERP knowledge is widespread in the industry, and MES knowledge much less so.
 

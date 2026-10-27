@@ -21,7 +21,7 @@ Engineers love historians, rightly, for troubleshooting and long-term trending. 
 
 MES/MOM records operational events and gives them context. An order started on Line 3. 2,400 good parts, 60 scrapped for short shots. A 12-minute stop, reason: jam at station 2. Lot 7781 consumed into order 4521. A quality check failed and the lot was put on hold.
 
-It also *manages* the work: dispatching orders, guiding operators, enforcing checks and recording genealogy. A historian watches the process; MES/MOM runs the operation.
+It also *manages* the work: releasing orders, guiding operators, enforcing checks and recording genealogy. A historian watches the process; MES/MOM runs the operation.
 
 ## Side by side
 

@@ -61,6 +61,8 @@ It tends to make sense when:
 
 If you make high-volume, stable products with simple instructions, the ERP-only route is often all you need. Don't build an integration you won't use.
 
+There's a better option for documents and drawings than a direct link, though. A central document repository stores every drawing, instruction and specification in one place, tagged by product, revision, operation and equipment. Every application in the landscape reads from it: PLM publishes to it, ERP references it and MES/MOM shows the operator the right revision for the order that's running. That's my preferred solution, and it removes the need for a direct PLM to MES/MOM link for documents at all. Each document is stored once, and every system sees the same approved version.
+
 ## The hard part: changes and effectivity
 
 Whichever option you choose, engineering changes are where the thread snaps.

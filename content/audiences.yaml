@@ -164,7 +164,7 @@ pages:
 
           **Real labour and machine time.** Actual time against estimated time, by operation. Quotes and costing get better, and you find out which jobs really make money.
 
-          **A dispatch list people trust.** Supervisors and operators working from the same prioritised list, rather than whoever shouts loudest.
+          **An order list people trust.** Supervisors and operators working from the same prioritised list, rather than whoever shouts loudest.
 
           **Drawings and revisions at the workstation.** The right revision of the drawing, on a screen at the machine, removes one of the most expensive mistakes in fabrication.
       - h: What makes it harder here
@@ -184,7 +184,7 @@ pages:
     terms: [engineer-to-order, configure-to-order, high-mix-low-volume, routing, work-centre, labour-tracking, traveller, configurable-bom, first-article-inspection]
     faq:
       - q: Is MES worth it for a job shop or fabricator?
-        a: It can be, if the problems are visibility and control rather than speed. Real-time job status by operation, actual labour and machine time against estimates, a dispatch list people trust and the right drawing revision at the workstation are the usual wins. Start with the jobs and operations that cause the most late deliveries.
+        a: It can be, if the problems are visibility and control rather than speed. Real-time job status by operation, actual labour and machine time against estimates, an order list people trust and the right drawing revision at the workstation are the usual wins. Start with the jobs and operations that cause the most late deliveries.
       - q: How does MES handle high-mix, low-volume production?
         a: By tracking each job through its own routing, operation by operation, rather than counting output from a fixed line. That needs good master data for routings and standard times, which is often the hardest part of the project in a fabrication shop.
 

@@ -23,7 +23,7 @@ At heart, though, a UNS is an organisational structure on top of a broker. It sh
 
 ## What MES/MOM is
 
-MES/MOM is an application that runs the operation. It releases and dispatches orders, guides operators through the work, enforces checks, records what was made from what, and stores the history with its context: the order, the material lot, the operator, the reason.
+MES/MOM is an application that runs the operation. It releases orders, guides operators through the work, enforces checks, records what was made from what, and stores the history with its context: the order, the material lot, the operator, the reason.
 
 It also makes decisions in the moment. It can stop someone consuming a quarantined lot, or trigger an inspection because the material changed.
 

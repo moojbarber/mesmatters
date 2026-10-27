@@ -7,7 +7,7 @@ category: education
 art: stack
 ---
 
-Your IT landscape isn't, and shouldn't be, a single system.
+Your IT landscape isn't, and shouldn't be, a single system. But it shouldn't be lots of systems stitched together either. You need to get the balance right.
 
 A smart factory runs on several applications working together. The skill is knowing what each one is for, where the boundaries sit, and when you actually need it. Get that wrong and you either over-buy or stretch a system into a job it was never designed for.
 
@@ -15,13 +15,13 @@ Let's go through it layer by layer.
 
 ## The enterprise layer
 
-**ERP (Enterprise Resource Planning)** runs the business. Finance, procurement, sales orders, costing, high-level planning and inventory valuation. It's where production orders are usually created, based on demand and stock.
+**ERP (Enterprise Resource Planning)** runs the business. Finance, procurement, sales orders, costing, high-level planning and inventory valuation. It's where production orders are usually created, based on demand and stock. More in [What is ERP?](/post/what-is-erp)
 
-**PLM (Product Lifecycle Management)** holds the product definition. Engineering designs, specifications, bills of materials, changes and their approvals. It's the source of truth for what a product *is*.
+**PLM (Product Lifecycle Management)** holds the product definition. Engineering designs, specifications, bills of materials, changes and their approvals. It's the source of truth for what a product *is*. More in [PLM, ERP and MES](/post/plm-erp-mes-digital-thread).
 
-**APS (Advanced Planning and Scheduling)** produces detailed, constraint-based schedules when ERP's planning isn't enough. Useful where you have complex sequencing, shared resources or tight changeover constraints.
+**APS (Advanced Planning and Scheduling)** produces detailed, constraint-based schedules when ERP's planning isn't enough. Useful where you have complex sequencing, shared resources or tight changeover constraints. More in [APS vs ERP scheduling](/post/aps-vs-mes-scheduling).
 
-**EAM (Enterprise Asset Management)** manages physical assets across their whole life, including their costs, for asset-heavy businesses with advanced needs. ERP often covers the asset register, depreciation and capital spend already, so check what it does first. Day-to-day maintenance belongs in MES/MOM, which replaces the need for a separate CMMS and keeps production and maintenance on the same data.
+**EAM (Enterprise Asset Management)** manages physical assets across their whole life, including their costs, for asset-heavy businesses with advanced needs. ERP often covers the asset register, depreciation and capital spend already, so check what it does first. Day-to-day maintenance belongs in either a MOM platform or a standalone CMMS. A MOM platform is preferable, because it keeps production and maintenance on the same data. More in [CMMS vs EAM vs MES](/post/cmms-vs-eam-vs-mes).
 
 ## The operations layer
 
@@ -31,9 +31,9 @@ It sits at the heart of the stack, because it's the system that connects the bus
 
 Alongside it, depending on how much depth you need:
 
-- **WMS (Warehouse Management System)** for complex warehousing: optimised picking, storage strategies, automation, yard and dock management. It's the most advanced option for the most complex warehousing, particularly distribution centres. For simpler warehousing, ERP and the inventory and logistics capability of MOM can be enough.
-- **LIMS (Laboratory Information Management System)** for lab testing, sample management and certificates, especially in process and regulated industries.
-- **QMS (Quality Management System)** for enterprise quality processes: complaints, CAPA, audits, document control. A good MOM platform covers most of this alongside shopfloor checks and SPC, with serious non-conformances and CAPA escalated into ERP, which replaces the need for a separate QMS.
+- **WMS (Warehouse Management System)** for complex warehousing: optimised picking, storage strategies, automation, yard and dock management. It's the most advanced option for the most complex warehousing, particularly distribution centres. For simpler warehousing, ERP or the inventory capability of MOM can be enough, but it really depends on the situation. More in [WMS vs MES vs ERP](/post/wms-vs-mes-inventory).
+- **LIMS (Laboratory Information Management System)** for lab testing, sample management and certificates, mainly in lab-heavy, regulated industries. Most manufacturers don't need one. More in [LIMS and MES](/post/lims-and-mes).
+- **QMS (Quality Management System)** for enterprise quality processes: complaints, CAPA, audits, document control. A good MOM platform covers most of this alongside shopfloor checks and SPC, with serious non-conformances and CAPA escalated into ERP, which replaces the need for a separate QMS. More in [QMS vs LIMS vs MES](/post/qms-vs-lims-vs-mes).
 
 ## How they connect
 
@@ -49,7 +49,7 @@ The golden rule here: don't connect ERP directly to machines. ERP needs aggregat
 
 ## The data layer
 
-**Historians** store high-frequency time-series data: every temperature reading, every pressure, every second. They're needed where engineers want every reading; often MES/MOM already records the data that matters.
+**Historians** store high-frequency time-series data: every temperature reading, every pressure, every second. They're needed where engineers want every reading; often MES/MOM already records the data that matters. More in [Historian vs MES](/post/historian-vs-mes).
 
 **Data warehouses, lakes and platforms** bring data together from MES/MOM, ERP, historians and other sources for reporting, analytics and AI.
 

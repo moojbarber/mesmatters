@@ -15,6 +15,8 @@ The sale is won in **CPQ** (Configure, Price, Quote). The product is built on th
 
 CPQ lets sales, or the customer directly, configure a product from a set of options and rules. It knows that option A rules out option B, that the large frame needs the heavy-duty base, and what the whole thing costs. It produces a valid, priced quote.
 
+It's particularly good for products with lots of options that have to fit together. Configuring a new car is a good example: the model, engine, trim, colour, wheels and option packs, where some choices rule others out and every combination has its own price. Windows and doors are another. Each one is made to measure, with choices of frame material, glazing, colour, opening style, handles and locks, so no two orders are quite the same. CPQ makes sure the configuration is valid and correctly priced, so sales can quote with confidence and the factory receives something it can actually build.
+
 When the quote is accepted, you have a configuration. A list of choices. That's not something the shopfloor can build from. Yet.
 
 ## Configuration to order: ERP sits in the middle
@@ -52,7 +54,7 @@ The configuration should change what the operator sees. Not as a list of option 
 - Option-specific checks, such as wiring tests for the export voltage
 - Clear flags for anything unusual, like a customer-special part
 
-That's where [digital work instructions that know what's running](/post/digital-work-instructions) earn their keep. If every operator reads a generic instruction and mentally filters it for the options on the traveller, you're relying on memory. Error-proof it instead: let MES/MOM show only what applies, and scan components against the order BOM.
+That's where [digital work instructions that know what's running](/post/digital-work-instructions) help. If every operator reads a generic instruction and mentally filters it for the options on the traveller, you're relying on memory. Error-proof it instead: let MES/MOM show only what applies, and scan components against the order BOM.
 
 ## Options at a glance
 

@@ -7,7 +7,7 @@ category: advice
 art: network
 ---
 
-Ask anyone who has run an MES project where the time went, and integration will be near the top of the list. Not because it's hard to move data between two systems. Because it's hard to keep doing it reliably for ten years, through upgrades on both sides.
+Ask anyone who has run an MES project where the time went, and integration will be near the top of the list. Not because it's technically complicated, but because getting the right people to decide what data actually needs to be moved, and how it needs to be mapped, is time consuming. And then you have to maintain it forever, through upgrades on both sides.
 
 This article pulls together the patterns behind the rest of this series: [PLM](/post/plm-erp-mes-digital-thread), [CPQ](/post/cpq-to-shopfloor), [WMS](/post/wms-vs-mes-inventory), [APS](/post/aps-vs-mes-scheduling), [QMS](/post/qms-and-mes-quality), [EAM](/post/eam-cmms-and-mes) and [LIMS](/post/lims-and-mes).
 
@@ -23,14 +23,15 @@ The useful part isn't the diagram. It's the discipline. For every integration, a
 - **Which system owns it?** One owner. Everyone else holds a copy.
 - **What triggers the move?** An event, a schedule, a request.
 - **How fresh does it need to be?** Seconds, minutes or overnight changes the design entirely.
+- **Does the sending system need confirmation?** Does it need to know the receiving system processed the data successfully, or hit an error? For most transactions it does, and that rules some patterns out.
 
 Get those answers for every flow before anyone mentions an API.
 
-## ERP is usually the hub. Usually.
+## ERP is usually the hub
 
 In most manufacturers, ERP sits between MES/MOM and the other business systems. Product data comes from PLM *via* ERP. Orders come from ERP. Inventory, cost and quality status go back to ERP. That's a sound design. ERP has to know about all of it anyway.
 
-But "usually" matters. Throughout this series I've described cases where a direct link alongside ERP makes sense: engineering drawings from PLM, high-frequency replenishment with a WMS, rich non-conformance data into a QMS, where one is used, in-process lab results from LIMS. The rule I'd suggest:
+There are exceptions. Throughout this series I've described cases where a direct link alongside ERP makes sense: engineering drawings from PLM, high-frequency replenishment with a WMS, rich non-conformance data into a QMS, where one is used, in-process lab results from LIMS. The rule I'd suggest:
 
 > **Business transactions go through ERP. Execution detail can go direct when speed or richness demands it.**
 
@@ -42,9 +43,9 @@ A direct link is an addition to the ERP path, not a bypass of it.
 
 **Middleware or integration platform.** An integration layer (an ESB, or a cloud iPaaS) sits in the middle. Each system connects once. Mapping, routing, retries and monitoring live in one place, in exchange for another layer to run and maintain.
 
-**Event-driven.** Systems publish events ("order released", "lot on hold", "machine stopped") and anyone interested subscribes. Producers don't need to know who's listening. Excellent for decoupling and near real-time flows.
+**Event-driven.** Systems publish events ("order released", "lot on hold", "machine stopped") and anyone interested subscribes. Producers don't need to know who's listening, which decouples the systems and suits near real-time flows. The flip side is that the publisher doesn't know whether anyone received or processed what it sent.
 
-**Unified namespace (UNS).** An event-driven pattern applied to the plant: a single, structured hierarchy (usually on MQTT) where every system publishes its current state and anyone can subscribe. I explain the basics in [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
+**Unified namespace (UNS).** An event-driven pattern applied to the plant: a single, structured hierarchy (usually on MQTT) where systems publish their current state and others can subscribe. It has real limitations for business data. The sender gets no confirmation that the data arrived or was processed, there's no history by default, and it needs strong governance of the hierarchy, plus a broker to run and secure. I explain the basics, and the alternatives, in [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
 
 These aren't mutually exclusive. A common mix: direct links for transactional flows between MES/MOM and ERP, where a confirmed response matters most, with an integration platform or a UNS where many systems need the same data.
 

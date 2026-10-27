@@ -706,7 +706,8 @@ form.signup p.fine{font:400 13px/1.5 var(--body);letter-spacing:0;max-width:none
 .imap-swipe{display:none;margin:8px 0 0;font-size:13px;color:var(--dim)}
 @media (max-width:700px){.imap-swipe{display:block}}
 .imap-also{margin:12px 0 0;color:#c9c4f0;font-size:15px}
-.imap-own{margin-left:auto;font-weight:600;color:var(--b)}
+.imap-cta{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:18px}.imap-cta span{color:var(--dim);font-size:14.5px}
+.prose .imap-cta a.btn,.prose .imap-cta a.btn:hover{text-decoration:none;color:var(--bg);border-bottom:0;background:var(--g)}
 .imap-edge.floor{stroke:rgba(165,148,255,.4);stroke-width:4;stroke-dasharray:2 8;stroke-linecap:round}
 .imap.focus .imap-edge.on:not(.sel){opacity:.15}
 .imap-dots circle{filter:drop-shadow(0 0 4px currentColor)}

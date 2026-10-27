@@ -13,6 +13,8 @@ Connected worker tools and MES/MOM both put software in front of operators, so i
 
 ## What is connected worker?
 
+Connected worker is about guiding frontline workers and supporting them in their daily activities. It's also about giving them access to the information and insights they need about the work to be done and the assets they look after.
+
 A connected worker capability is the digital layer between your frontline people and everything they need to do their job well. In practice:
 
 - Digital checklists and task management
@@ -33,7 +35,7 @@ And the gap is getting wider. Deloitte and the Manufacturing Institute estimate 
 
 That changes the job of shopfloor software. It's no longer enough to record what happened. It has to guide a new starter through the process so they get it right on their second day, not their second year.
 
-Connected worker capabilities are designed to do that, and spending on them is growing fast, with Verdantix expecting the market to reach $3 billion by 2026, driven largely by labour shortages ([Verdantix](https://marketing.verdantix.com/blog/spending-on-connected-worker-solutions-market-set-to-reach-3-0-billion-by-2026-driven-by-the-need-to-tackle-labour-shortages-at-industrial-facilities)).
+Connected worker capabilities are designed to do that, and spending on them is growing fast. MarketsandMarkets puts the connected worker market at $8.6 billion in 2025, growing at 18.5% a year to around $20 billion by 2030 ([MarketsandMarkets, 2025](https://www.marketsandmarkets.com/PressReleases/connected-worker.asp)).
 
 ## What MES/MOM does for operators
 
@@ -59,7 +61,7 @@ Many MES/MOM platforms now include connected worker capabilities as well, such a
 
 ## Two ways to buy connected worker
 
-**A standalone app.** Quick to get going, with good mobile screens and easy configuration. It handles the people side well. On its own it doesn't know which order is running, so it can't trigger a quality check when the material changes, or stop someone consuming a quarantined lot. When those needs arrive, the app is integrated with MES/MOM, or used alongside it. Operators then work across two systems, and each boundary is an interface to own. Some factories run this well for years, especially with a unified namespace connecting the apps to the rest of the stack. Some connected worker platforms also aim to be a single front end across several back-end applications, which can work, though the front end can become bespoke and fall behind the products underneath.
+**A standalone app.** Quick to get going, with good mobile screens and easy configuration. It handles the people side well. On its own it doesn't know which order is running, so it can't trigger a quality check when the material changes, or stop someone consuming a quarantined lot. When those needs arrive, the app is integrated with MES/MOM, or worse (and more common) used alongside it. Operators then work across two systems, and each boundary is an interface to own. Some connected worker platforms also aim to be a single front end across several back-end applications, which can work, though the front end can become bespoke and fall behind the products underneath.
 
 **Built into MES/MOM.** Checklists and skills sit on the same platform and data as production and quality. That gives them context:
 
@@ -68,7 +70,7 @@ Many MES/MOM platforms now include connected worker capabilities as well, such a
 - **Skills are enforced, not just recorded.** An operator who isn't qualified on a machine can't start an order on it.
 - **Shift handover is built from real data.** The incoming crew sees what ran, what stopped and what's waiting.
 
-The trade-off is a bigger platform decision up front, and the depth of the connected worker features varies by vendor. Both routes are covered more broadly in [Code, build, stitch or configure](/post/build-vs-buy-mes).
+But you must make the right decision up front to allow you to grow into a broader and more capable system over time, rather than opting for a point solution now as a quick fix. Both routes are covered more broadly in [Code, build, stitch or configure](/post/build-vs-buy-mes).
 
 ## Questions to ask vendors
 
