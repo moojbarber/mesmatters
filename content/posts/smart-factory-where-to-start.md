@@ -10,15 +10,19 @@ guide: true
 
 You've been given the job of making the factory smarter. Maybe it came from the board. Maybe it came from your own frustration with paper and spreadsheets.
 
-Either way, the first 90 days matter more than they look. Get them right and you'll have a funded first phase with a team behind it. Get them wrong and you'll spend a year piloting a tool that never scales.
+Either way, the first 90 days matter more than they look. Get them right and you'll have a funded first phase with a team behind it. Get them wrong and you'll spend a year on a tool that never scales.
 
 This is how I'd use them.
 
 ## Before day one: agree what "smart" means here
 
-A smart factory isn't science fiction, and it doesn't need an "Industry 4.0" label. My definition: a manufacturing environment where people, processes and technology work together, supported by data, to maximise efficiency, flexibility and quality. See [What is a smart factory?](/post/what-is-a-smart-factory)
+A smart factory isn't science fiction, and it doesn't need an "Industry 4.0" label. My definition:
 
-Put that, or your own version, in front of leadership and get agreement on it. It keeps the programme pointed at outcomes, and gives AI a clear job inside it from the start.
+> *A manufacturing environment where people, processes and technology work together, supported by data, to maximise efficiency, flexibility and quality.*
+
+More in [What is a smart factory?](/post/what-is-a-smart-factory)
+
+Put that, or your own version, in front of leadership and get agreement on it. It keeps the programme pointed at outcomes.
 
 ## Days 1 to 30: understand where you really are
 
@@ -79,11 +83,11 @@ Two cautions. Don't pick a site purely because it's the worst performer if its p
 
 - **Don't buy software in month one.** You don't know your requirements yet.
 - **Plan the AI and the data together.** AI that predicts and optimises learns from the data foundation you're about to build, so choose an AI use case for the first site and let it shape what you capture. GenAI on your documents can start straight away. See [AI will transform your factory, if you give it the right data](/post/ai-needs-shopfloor-data).
-- **Don't pilot a point solution you couldn't scale.** A pilot that becomes a silo costs you twice.
+- **Don't start with a point solution you couldn't scale.** A Phase 1 that becomes a silo costs you twice.
 - **Don't leave the shopfloor out.** People support what they helped create. See [Resistance to change is guaranteed](/post/manufacturing-change-management).
 
 ## After day 90
 
-From here the work moves into implementation, and then into rolling out what you've built to your other sites. I go through both in [How to modernise a factory](/post/how-to-modernise-a-factory) and [Rolling out across sites](/post/mes-multi-site-rollout).
+The next step is a formal process to review software vendors, built on the requirements you've just written. That's a subject in its own right, so I won't go into it here. [How to choose an MES](/post/how-to-choose-an-mes) has the questions I'd ask.
 
 What's the first thing you'd want to know about your own factory, if you had 30 days to find out?
