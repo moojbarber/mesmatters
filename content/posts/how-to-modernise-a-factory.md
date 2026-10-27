@@ -10,15 +10,9 @@ guide: true
 
 People ask me some version of the same question all the time. "We know we need to modernise. Where do we actually start?"
 
-There's no single answer, because every factory starts from a different place. But there is an order that works, and most of the expensive mistakes I see come from doing the steps out of sequence. Buying software before mapping the process. Running AI and the data work as separate projects. Customising the software to match every old quirk. Rolling out to ten sites before the first one works.
+There's no single answer, because every factory starts from a different place. But there is an order that works, and most of the expensive mistakes I see come from doing the steps out of sequence. Buying software before mapping the process. Customising the software to match every old quirk.
 
 So this is the route I'd follow, step by step, with a simple test for each one so you know when you're ready to move on.
-
-## AI runs alongside every step
-
-You'll find AI in several of the steps below, not saved for the end. That's deliberate. AI and the data foundation are best built together. AI gives the programme a clear reason to capture data well, and every step that improves the data makes the AI more capable.
-
-Generative AI can help from the first week, with procedures and plain-English questions. Predictive and optimising AI learns from your shopfloor data, so its value grows with everything you connect. Start it early. More in [AI will transform your factory, if you give it the right data](/post/ai-needs-shopfloor-data).
 
 ## Step 1: Be honest about where you are today
 
@@ -38,11 +32,11 @@ Start with the physical structure: enterprise, site, area, line, machine. Then m
 
 Do it with operators, quality technicians, maintenance engineers and logistics in the room, not just managers. You'll almost certainly find two sites, or two shifts, making the same product in different ways. Decide which way you're going to standardise on before you build it into software. More in [Process before technology](/post/manufacturing-process-mapping).
 
-**Ready to move on when:** you have current-state maps for the area you'll start with, and you've agreed the target process for it.
+**Ready to move on when:** you have current-state maps for the site you'll start with, and you've agreed the target process for it.
 
 ## Step 3: Put a number on the problem
 
-Leadership approves business impact, not features. So take the pain you found in step 2 and put money on it, including the AI use cases you want to run on the data you'll capture:
+Leadership approves business impact, not features. So take the pain you found in step 2 and put money on it:
 
 - What do scrap, rework and complaints cost a year?
 - What's an hour of lost production on your bottleneck worth?
@@ -55,7 +49,7 @@ Then show how the risk will be managed: phased delivery, measures and points whe
 
 ## Step 4: Build the team
 
-The team you build has more impact on success than the software you choose.
+The team you build matters as much as the software you choose.
 
 You need an executive sponsor who'll clear the way, a project manager who's properly freed up, IT and operations working as one team, and the right external expertise where you don't have it in-house. Bring in super users from the shopfloor early. If you're a multi-site business, think now about who will own the global standard later, usually a centre of excellence blending IT and OT.
 
@@ -69,9 +63,9 @@ This is the step everyone wants to skip.
 
 ERP master data was usually set up for what costing needed. A routing with one generic operation called "Production" gives MES/MOM nothing to work with. You need to know which machines each operation runs on, realistic cycle and setup times, which material is consumed at which operation, and which quality checks apply at each step.
 
-Get it right in ERP first, so every system benefits, then add any extra detail in the specialised applications where it's needed. Rushing this to get to the exciting functionality is one of the most common causes of delay I see. More in [Your ERP master data isn't ready for MES](/post/erp-master-data-for-mes).
+Get it right in ERP first, so every system benefits, then add any extra detail in the specialised applications where it's needed. More in [Your ERP master data isn't ready for MES](/post/erp-master-data-for-mes).
 
-**Ready to move on when:** the materials, BOMs and routings for your first area are detailed enough to run the target process, and someone owns keeping them that way.
+**Ready to move on when:** the materials, BOMs and routings for your first site are detailed enough to run the target process, and someone owns keeping them that way.
 
 ## Step 6: Choose a platform for the long term
 
@@ -90,9 +84,9 @@ Use the [12 questions](/post/how-to-choose-an-mes) to structure the evaluation, 
 
 ## Step 7: Start with one site, with the end in mind
 
-Commit to a whole site rather than a single production line. Within that site you can still phase what you switch on first. Often the best first move is removing the paper that hurts most: quality check sheets, downtime logs, work instructions or travellers. Pick an AI use case for the same site, so the data you capture has a purpose from day one.
+Commit to a whole site rather than a single production line. Within that site you can still phase what you switch on first. Often the best first move is removing the paper that hurts most: quality check sheets, downtime logs, work instructions or travellers.
 
-Phasing doesn't mean narrow-minded. The end state should still be clear on day one, even if you only use part of the platform at first. That's the difference between a pilot that scales and a pilot that becomes another silo. More in [Going paperless](/post/paperless-manufacturing).
+Phasing doesn't mean narrow-minded. The end state should still be clear on day one, even if you only use part of the platform at first. That's the difference between a first phase that scales and one that becomes another silo. More in [Going paperless](/post/paperless-manufacturing).
 
 **Ready to move on when:** the first site runs on the new system every shift, including nights and weekends, with no paper fallback.
 
@@ -100,7 +94,7 @@ Phasing doesn't mean narrow-minded. The end state should still be clear on day o
 
 Automatic data capture is what turns MES/MOM from a place where people type things in into a real-time view of the factory.
 
-Start with your bottleneck assets. Use standard connectivity, usually OPC UA, with MQTT where it fits your architecture. Detect stops automatically and let operators add the reason while it's fresh. Most people are genuinely surprised when they first see their micro-stops. This is also where predictive AI gets its first clean history, so start the models here, on the bottleneck, rather than waiting for every line. See [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
+Start with your bottleneck assets. Detect stops automatically and let operators add the reason while it's fresh. Most people are genuinely surprised when they first see their micro-stops. More on the connectivity options in [OPC UA, MQTT and UNS in plain English](/post/opc-ua-mqtt-uns-explained).
 
 And treat every new connection as a security decision. MES/MOM sits between IT and OT. Keep the enterprise network away from the PLCs.
 
@@ -116,22 +110,25 @@ Then measure what the business case promised, against the baseline you set befor
 
 ## Step 10: Scale with a template
 
-Once the first area works, turn what you built into a template: standard processes, master data rules, KPIs, screens and integrations. Roll it out area by area and site by site, allowing local differences only where there's a genuine reason. Later sites go much faster, and the AI use cases travel with the template. Each new site adds history, so the models get better as you scale. See [Rolling out across sites](/post/mes-multi-site-rollout).
+Once the first site works, turn what you built into a template: standard processes, master data rules, KPIs, screens and integrations. Roll it out site by site, allowing local differences only where there's a genuine reason. Later sites go much faster. See [Rolling out across sites](/post/mes-multi-site-rollout).
 
 ## The checklist
 
 | Step | You're ready to move on when |
 | --- | --- |
 | 1. Know where you are | Data capture on each line is described with evidence, and everyone agrees the time to truth by area |
-| 2. Map the process | Current-state maps exist for the first area and the target process is agreed |
+| 2. Map the process | Current-state maps exist for the first site and the target process is agreed |
 | 3. Put a number on it | A sponsor is in place and the first phase is funded |
 | 4. Build the team | Named people have the time, with day jobs backfilled |
 | 5. Fix the master data | Materials, BOMs and routings can run the target process, and have an owner |
 | 6. Choose the platform | You've seen it run your process, and operators have used it |
-| 7. Start small | The first area runs on the system every shift with no paper fallback |
+| 7. Start with one site | The first site runs on the system every shift with no paper fallback |
 | 8. Connect the machines | Bottleneck downtime and output come from the equipment |
 | 9. Go live and measure | The promised improvement shows up in numbers leadership accepts |
 | 10. Scale | Later sites deploy from a template with only justified local differences |
-| Alongside every step: AI | Each phase has an AI use case, and the models get better as the data does |
+
+## Where AI fits
+
+You don't have to wait until the end for AI. Generative AI can help with procedures and plain-English questions early on, and once accurate, contextualised data is flowing from the shopfloor, predictive and optimising AI has something real to learn from. More in [AI will transform your factory, if you give it the right data](/post/ai-needs-shopfloor-data).
 
 Which step is your factory on right now, and which one are you tempted to skip?

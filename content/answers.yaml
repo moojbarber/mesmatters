@@ -468,7 +468,7 @@ ai-needs-shopfloor-data:
       a: "With a decision rather than a model. Ask which decision you'd make differently with perfect data, then work back to the data it needs and how much of it is accurate and in context today. That gap is the roadmap for the data and the AI together, and for most factories it runs through MES/MOM."
 
 how-to-modernise-a-factory:
-  summary: "Modernise step by step, with AI running alongside every step. Assess where you really are, map the process, put a number on the problem and build the team. Then fix the master data, choose a platform for the long term and start small with the end in mind. Connect the machines, go live and scale with a template. AI earns more with everything you connect."
+  summary: "Modernise step by step. Assess where you really are, map the process, put a number on the problem and build the team. Then fix the master data, choose a platform for the long term and start with one site, with the end in mind. Connect the machines, go live and scale with a template."
   faq:
     - q: "What is the first step in modernising a factory?"
       a: "An honest assessment of where you are today. Most factories sit between paper-driven and partly integrated, and often earlier than their board presentations suggest. Then map what really happens on the shopfloor before you look at software. Digitise a broken process and you get a faster broken process, so the order of the early steps matters as much as the technology you pick."
