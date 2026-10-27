@@ -72,11 +72,11 @@ Everyone wants AI on the shopfloor. Very few have the data to feed it.
 
 Machine learning models learn from patterns. Give them context-free signals and the patterns they find are shallow. Give them stops linked to products, shifts, materials, maintenance history and quality outcomes, and they can start to find causes, not just correlations.
 
-That's why I see MES/MOM as the foundation for AI, not a competitor to it. It creates the contextualised data set that makes AI worth doing.
+That's why I see MES/MOM as the foundation for AI. It creates the contextualised data set that makes AI worth doing.
 
 ## Where the data lives after that
 
-Not all data lives in MES/MOM forever. Very high-frequency signals, where they're genuinely needed, often sit in a historian; MES/MOM records the process values most operations need. Analytics and AI teams often work from a data lake or data platform that pulls from MES/MOM, ERP and other sources. I explain how those fit together in [Historians, data lakes and data fabric](/post/manufacturing-data-platforms).
+The contextualised data lives in MES/MOM for as long as you need it. Analytics and AI teams often also work from a data lake, or use a data fabric, to bring it together with data from ERP and other sources across many sites. I explain how those fit together in [Historians, data lakes and data fabric](/post/manufacturing-data-platforms).
 
 But the context is created at the point of work. If it isn't captured there, no data platform downstream can invent it later.
 

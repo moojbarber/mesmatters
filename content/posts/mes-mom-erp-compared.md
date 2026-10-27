@@ -34,7 +34,7 @@ MES and MOM aren't competitors to ERP. They do a different job, at a much finer 
 | **EAM** | Manage assets across their whole life, including their costs | Years to weeks | Asset management, engineering, finance | 4 |
 | **CMMS** | Plan and record maintenance work | Weeks to hours | Maintenance | 3 |
 | **SCADA** | Monitor and control equipment in real time | Seconds and below | Control room, process engineers | 2 |
-| **IIoT / historian** | Connect equipment and store high-frequency data. MES/MOM often provides the connectivity, and a historian is optional | Milliseconds to years | Engineers, data teams | 1 and 2, feeding 3 |
+| **IIoT / historian** | Connect equipment and store high-frequency data. MES/MOM often provides the connectivity, and a historian is rarely needed | Milliseconds to years | Engineers, data teams | 1 and 2, feeding 3 |
 
 The levels refer to [ISA-95](/post/isa-95-explained), the standard for how business and shopfloor systems fit together. Level 4 is business planning, level 3 is manufacturing operations, and levels 0 to 2 are the machines and their control.
 
@@ -81,7 +81,7 @@ Most integration arguments I see come down to ownership. Agree this table early 
 | Lab results | LIMS | Flow back to MES/MOM against the batch. See [LIMS and MES](/post/lims-and-mes) |
 | Downtime, run hours and counters | MES/MOM | Shared with maintenance |
 | Maintenance work orders and asset history | MES/MOM, or an EAM for asset-heavy operations | See [EAM, CMMS and MES](/post/eam-cmms-and-mes) |
-| High-frequency machine signals | Historian, where you need one | MES/MOM keeps the events, not every reading |
+| Machine signals over time | MES/MOM for most manufacturers, a historian only in rare cases | MES/MOM reads time-series values and adds context. See [Historian vs MES](/post/historian-vs-mes) |
 
 One owner per object. Everyone else holds a copy.
 

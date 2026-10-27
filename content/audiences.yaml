@@ -212,7 +212,7 @@ pages:
           **Material and regrind.** Resin, masterbatch, additives and regrind tracked by job, with lot traceability back to the material supplier.
       - h: What makes it harder here
         body: |
-          Machine data is plentiful, so the risk is collecting everything and using none of it. Decide which signals answer real questions before connecting every parameter. MES/MOM records the process data most jobs need. A historian only earns its place for very high-frequency data you need to keep long-term. See [historian vs MES](/post/historian-vs-mes).
+          Machine data is plentiful, so the risk is collecting everything and using none of it. Decide which signals answer real questions before connecting every parameter. MES/MOM reads and contextualises the process data most jobs need, so a separate historian is rarely needed. See [historian vs MES](/post/historian-vs-mes).
 
           Multi-cavity tools complicate counting and quality. If a cavity is blocked off, standard rates and quality checks need to know.
       - h: Questions to settle before you look at vendors
@@ -229,7 +229,7 @@ pages:
       - q: What does MES do for an injection moulder?
         a: It captures cycle times and counts straight from the presses, tracks moulds, shot counts and cavity status, monitors process parameters against limits, and links material lots to each job. The result is scrap and lost capacity you can see by tool and by press, rather than estimates at the end of the shift.
       - q: Do I need a historian as well as MES in plastics?
-        a: It depends how frequently you need the data. MES/MOM can record the process values most jobs need. A historian is only worth adding if engineers need every reading from moulding or extrusion at high frequency, kept for the long term. In that case MES/MOM adds the context, such as which job, tool, material lot and operator, so engineers can find what really drives quality.
+        a: Normally not. MES/MOM reads time-series values and adds context, and for most plastics plants that's absolutely fine. A historian is only worth adding in rare cases, if engineers need every reading from moulding or extrusion at high frequency, kept for the long term. In that case MES/MOM adds the context, such as which job, tool, material lot and operator, so engineers can find what really drives quality.
 
   # ------------------------------------------------------------------ roles
   - id: plant-managers

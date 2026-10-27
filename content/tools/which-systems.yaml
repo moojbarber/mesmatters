@@ -53,7 +53,7 @@ capabilities:
     read: opc-ua-mqtt-uns-explained
   historian:
     name: Process data history
-    where: MES/MOM for most process data, or a historian for very high-frequency data kept long-term
+    where: MES/MOM for most manufacturers, or a historian in rare cases with very high-frequency data
     what: High-frequency process values stored over time, for engineers investigating a problem or training a model.
     read: historian-vs-mes
   worker:

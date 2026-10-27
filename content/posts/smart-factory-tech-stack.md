@@ -49,7 +49,7 @@ The golden rule here: don't connect ERP directly to machines. ERP needs aggregat
 
 ## The data layer
 
-**Historians** store high-frequency time-series data: every temperature reading, every pressure, every second. They're needed where engineers want every reading; often MES/MOM already records the data that matters. More in [Historian vs MES](/post/historian-vs-mes).
+**Historians** store high-frequency time-series data: every temperature reading, every pressure, every second. MES/MOM also reads time-series values and adds context, and for most manufacturers that removes the need for a separate historian. Only in rare cases do you need both. More in [Historian vs MES](/post/historian-vs-mes).
 
 **Data warehouses, lakes and platforms** bring data together from MES/MOM, ERP, historians and other sources for reporting, analytics and AI.
 

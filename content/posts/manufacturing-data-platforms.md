@@ -17,7 +17,7 @@ Historians are databases built for time-series data at very high volume: machine
 
 They've been part of manufacturing IT for decades and they're still widely used, especially by engineers for troubleshooting and long-term trending. "What was the oven temperature doing in the two hours before that batch failed?"
 
-Where very high-frequency data is needed, they sit alongside MES/MOM, holding the raw readings it doesn't need to keep. Often MES/MOM records the data that matters on its own.
+MES/MOM also reads time-series values from the machines, usually over OPC UA, and adds the context: which order, material and machine each value belongs to. It isn't designed to hold the same volume of data as a historian, or to capture it at the same frequency. But for most manufacturers, what MES/MOM captures is absolutely fine, and it removes the need for a separate historian. Only in rare cases do you need both. More in [Historian vs MES](/post/historian-vs-mes).
 
 ## Data warehouses
 
@@ -42,8 +42,8 @@ It weaves data together rather than moving it all. Useful in large organisations
 A common pattern in mature factories:
 
 1. **MES/MOM** captures operational events and gives them context: order, material, machine, shift, reason, result.
-2. **A historian**, where needed, keeps very high-frequency machine data.
-3. **A data platform** (lake, warehouse or fabric) brings MES/MOM, historian, ERP and other data together for analytics and AI.
+2. **A historian**, in the rare cases it's needed, keeps very high-frequency machine data.
+3. **A data platform** (lake, warehouse or fabric) brings MES/MOM, ERP and other data together for analytics and AI.
 
 The lines between these categories are blurring, and vendors increasingly offer platforms that cover more of the stack. But the roles stay roughly the same.
 

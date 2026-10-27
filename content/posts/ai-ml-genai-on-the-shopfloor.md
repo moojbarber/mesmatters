@@ -17,7 +17,7 @@ They don't. If you're going to spend money on any of them, it's worth knowing wh
 
 **Machine learning (ML)** is a subset of AI. You train an algorithm on historical data so it can predict an outcome from new data, faster and more consistently than a person could. The key word is *train*. You need a data set and a model, and you train, test and refine it before you trust it. It's not magic. It's statistics at scale.
 
-**Generative AI (GenAI)** is a different subset. Large language models that generate text, images, code and other content. This is what most people mean when they say "AI" today. GenAI doesn't predict from your operational data in the same way. It generates content from patterns learned across enormous amounts of training data.
+**Generative AI (GenAI)** is a different subset. Large language models that generate text, images, code and other content. This is what most people mean when they say "AI" today.
 
 So when someone says "we're doing AI on the shopfloor", the first question is: which kind?
 
@@ -29,7 +29,7 @@ Machine learning and statistical methods have been in MES/MOM for longer than mo
 
 **Predictive maintenance** uses algorithms to find patterns in vibration, temperature, current or cycle counts that come before a failure. Proven, practical, and paying back in factories today. I cover the data it needs in [Predictive maintenance needs data you aren't collecting yet](/post/predictive-maintenance-data).
 
-The newer ML applications need more maturity, but they're very real:
+Newer ML applications are opening up even more:
 
 - **Process parameter optimisation.** Finding the speeds, temperatures and pressures that minimise scrap for each product and material.
 - **Predictive quality.** Predicting whether a part or batch will pass inspection before it's inspected, so you can act while it's still on the line.

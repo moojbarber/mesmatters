@@ -313,7 +313,7 @@
   - serialisation
 - term: Historian
   short: A database designed to store high-frequency time-series data from machines and sensors.
-  body: Historians hold the raw, high-frequency data that MES/MOM doesn't need to keep, and engineers use them for troubleshooting and trends. They sit alongside MES/MOM rather than replacing it. Depending on how frequently you need data, you often don't need a historian at all, because MES/MOM can capture and record what's relevant.
+  body: Engineers use historians for troubleshooting and long-term trends. MES/MOM also reads time-series values from tags and adds context, and for most manufacturers that removes the need for a separate historian. Only in rare cases, usually in process industries with very high-frequency data, do you need both.
   articles:
   - manufacturing-data-platforms
   see_also:
