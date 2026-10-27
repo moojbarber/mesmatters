@@ -23,7 +23,7 @@ Agentic AI goes further. An agent is given an objective and works towards it wit
 - **Acts.** Carries out the steps, often by using other software tools.
 - **Learns.** Reviews the result and gets better over time.
 
-The important word is *acts*. An agent doesn't just tell you the line is running behind. It might re-sequence the schedule, raise a maintenance request or notify the planner. That's powerful. It's also why you need to think hard before you let one loose.
+The important word is *acts*. An agent doesn't just tell you the line is running behind. It might re-sequence the schedule, raise a maintenance request or notify the planner. That's a big step up from a dashboard, so it needs careful thought before any agent is allowed to act.
 
 ## Copilots vs agents
 
@@ -64,7 +64,7 @@ Some plausible examples, roughly in order of risk:
 - **Recommend.** Suggest a revised schedule after a breakdown, showing the impact on each order.
 - **Act within limits.** Raise a maintenance work order when a condition threshold is crossed, or put a suspect lot on hold pending inspection.
 
-Notice that the first three still end with a person making the call. That's where I'd start.
+Notice that the first three still end with a person making the call.
 
 ## The catch: agents are only as good as what they connect to
 
@@ -79,12 +79,12 @@ That's why agentic operations sit at the far end of [time to truth](/post/time-t
 - **Systems that enforce rules.** If an agent tries to consume a quarantined lot, the operational system should stop it, just as it would stop a person.
 - **Clear guardrails and audit trails.** What the agent may do on its own, what needs approval, and a record of every action it took and why.
 
-A well-implemented MES/MOM already error-proofs what people do. The same validation protects you from what agents do.
+You need to work up to a point where the decisions being made are trusted. Then you can take the human out of the loop and let the system automate the decision making.
 
 ## My advice
 
 Be curious, not credulous.
 
-Start with agents that prepare and investigate rather than act. Make sure every action is logged and reviewable. And build the foundation alongside the agents. Each agent you add shows you where the data needs to be better, and the factories with clean, contextualised data will get the most from them.
+Start with agents that prepare, investigate, and act only when approved by a person. Work towards agents making decisions automatically once they've built up trust inside your organisation. Make sure every action is logged and reviewable. And build the foundation alongside the agents. Each agent you add shows you where the data needs to be better, and the factories with clean, contextualised data will get the most from them.
 
 What's the first task you'd trust an agent with in your factory, and what would you never let it touch?
