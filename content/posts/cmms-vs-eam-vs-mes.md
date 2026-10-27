@@ -75,7 +75,7 @@ On top of that, you get the work orders, labour, spare parts and maintenance his
 ## Which do you need?
 
 - **Running, or choosing, a MOM platform?** Its maintenance capability replaces the need for a CMMS.
-- **An MES for production only, or no shopfloor system yet, and the main problem is getting PMs done?** A CMMS, fed with run hours and downtime from the MES where there is one.
+- **An MES for production only, or no shopfloor system yet, and the main problem is getting PMs done?** A CMMS, fed with run hours and downtime from the MES where there is one, will work. But be aware that you'd be adding to a point solution architecture, which I advise against. The better option is to step back and re-evaluate your long-term vision for the shopfloor first.
 - **Leadership asking about asset value, replacement and capital spend?** Check what your ERP covers first. It often handles the asset finances already.
 - **Asset-heavy, with advanced needs such as complex spare parts, reliability engineering, linear assets or regulatory asset records across many sites?** That's where a full EAM earns its place.
 - **Unsure?** Start with the problems. If nobody is asking about asset value or lifecycle cost, you probably don't need an EAM.
