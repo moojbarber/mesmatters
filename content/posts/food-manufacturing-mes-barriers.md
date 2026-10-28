@@ -27,7 +27,7 @@ The second mistake is trying to do everything at once. Production, quality, inve
 
 It's doable. But it multiplies the risk, and food is not an industry that forgives a bad week on the line.
 
-Start small, but start on the right path. Pick one line or area where you can show value quickly. Get the wins on the board. Build confidence in the system and the team. Then scale.
+Phase the delivery, and get early wins on the board, but make the decision as a company.
 
 The manufacturers who succeed think big and start pragmatically. They know the end state. They just don't try to get there in one leap.
 

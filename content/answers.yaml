@@ -209,7 +209,7 @@ mes-implementation-team:
       a: "Common reasons include weak executive sponsorship, part-time teams, unclear objectives, poor master data and too little attention to change management. Successful projects agree KPIs and fix data early, and treat MES/MOM as a business change rather than a software installation."
 
 mes-roi-bottom-line:
-  summary: "MES/MOM improves the bottom line mainly through less downtime, less scrap and rework, less admin time, lower inventory, smaller recalls, better ERP costing and lower energy use. Start by asking what 1% of OEE is worth on your bottleneck, measure your own losses, count costs honestly and phase the investment so early results fund the next stage."
+  summary: "MES/MOM improves the bottom line mainly through less downtime, less scrap and rework, less admin time, lower inventory, smaller recalls, better ERP costing and lower energy use. Start by asking what 1% of OEE is worth on your bottleneck, measure your own losses, count costs honestly, and make it one decision for the whole programme with the delivery phased."
   faq:
     - q: "What is the ROI of MES?"
       a: "It depends on your losses today. The biggest returns usually come from extra output on bottleneck equipment, and from less scrap and rework. In Deloitte's 2025 Smart Manufacturing Survey, large manufacturers reported average output improvements of 10% to 20% from smart manufacturing initiatives."

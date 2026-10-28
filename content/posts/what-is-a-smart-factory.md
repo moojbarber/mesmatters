@@ -87,7 +87,7 @@ It isn't the whole smart factory. ERP, PLM, connectivity, data platforms and ana
 
 ## Where to start
 
-Be honest about where you are today. Asking [how long your factory takes to know what happened](/post/time-to-truth) is a good way to do that. Then pick the problems that hurt most, start small, and start with the end in mind.
+Be honest about where you are today. Asking [how long your factory takes to know what happened](/post/time-to-truth) is a good way to do that. Then pick the problems that hurt most. You have the option to start as big or small as you like, but always start with the end in mind.
 
 Everyone wants to cross the finish line without running the race. The manufacturers who get there are the ones who start running.
 
