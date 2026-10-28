@@ -11,10 +11,10 @@ carousel:   # order of the home-page "Featured in" carousel (image ids)
   - unplugged
   - elevatiq-panel
   - factory-forward
-  - messy-mondays
   - md-lifetime
   - md-deep-dive
   - manufacturing-it
+  - messy-mondays
 
 items:
   - title: How MES transforms manufacturing operations and slashes costs
@@ -119,19 +119,6 @@ items:
     links:
       - {kind: read, url: "https://manufacturingdigital.com/smart-manufacturing/a-deep-dive-into-mes-functionality-at-infor"}
 
-  - title: "MESsy Mondays #001: Matt Barber"
-    image: messy-mondays
-    label: Video interview
-    outlet: MESsy Mondays
-    show: MESsy Mondays with Kunal Wagh · Episode 1
-    type: podcast
-    role: Guest
-    date: 2025-01-06
-    with: Host Kunal Wagh
-    blurb: The first episode of the series, on educating the industry about MES and its role in smart manufacturing, Industry 4.0 and sustainability.
-    links:
-      - {kind: youtube, url: "https://www.youtube.com/watch?v=gt7Rv8z5Yh8"}
-
   - title: Interview with Matt Barber
     image: manufacturing-it
     label: Podcast
@@ -144,3 +131,16 @@ items:
     links:
       - {kind: apple, url: "https://podcasts.apple.com/gb/podcast/podcast-interview-with-matt-barber-vp-and-general/id1571505095?i=1000644631030"}
       - {kind: spotify, url: "https://creators.spotify.com/pod/profile/manufacturingitpodcast/episodes/Podcast-interview-with-Matt-Barber--VP-and-General-Manager-of-MES-at-Infor-e2fh79n"}
+
+  - title: "MESsy Mondays #001: Matt Barber"
+    image: messy-mondays
+    label: Video interview
+    outlet: MESsy Mondays
+    show: MESsy Mondays with Kunal Wagh · Episode 1
+    type: podcast
+    role: Guest
+    date: 2025-01-06
+    with: Host Kunal Wagh
+    blurb: The first episode of the series, on educating the industry about MES and its role in smart manufacturing, Industry 4.0 and sustainability.
+    links:
+      - {kind: youtube, url: "https://www.youtube.com/watch?v=gt7Rv8z5Yh8"}
