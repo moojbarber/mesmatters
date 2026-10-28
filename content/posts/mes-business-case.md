@@ -1,13 +1,13 @@
 ---
 title: "How to build an MES business case leadership will sign"
 short: "The MES business case"
-description: "Your factory runs on paper and Excel, and leadership hasn't approved the fix. How to build an MES business case around impact and the cost of waiting."
+description: "Your factory runs on paper, Excel or an outdated homegrown system, and leadership hasn't approved the fix. How to build an MES business case around impact and the cost of waiting."
 published: 2026-05-20
 category: advice
 art: growth
 ---
 
-You know your factory runs on paper and Excel. You know that's a problem. Yet you're struggling to get leadership to invest.
+You know your factory runs on paper and Excel, or an outdated homegrown system that you can't scale, maintain or innovate on. You know that's a problem. Yet you're struggling to get leadership to invest.
 
 I hear this constantly. And I know how it feels. It's infuriating.
 
