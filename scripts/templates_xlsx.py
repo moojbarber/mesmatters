@@ -115,10 +115,10 @@ def business_case():
         "1. What the problems cost today, in money (Baseline).",
         "2. What will improve, by how much and when (Benefits).",
         "3. Realistic costs and timeline, including your own people, not just licences and services (Costs).",
-        "4. How the risk is managed: phases, measures and decision points (Phasing).",
+        "4. How the risk is managed: a phased rollout plan with measures and milestones (Rollout plan).",
         "How to use it:",
         "Fill in Baseline with numbers finance will recognise. Set deliberately modest improvements on Benefits. Fill in every cost line, then read Cash flow.",
-        "Keep the first phase small: one line or one area. Let its results fund the next phase.",
+        "Make the decision once, for the whole programme, then phase the delivery: by function, by site, or both.",
         "The example values describe a fictional mid-size site so you can see how it works. They are not a forecast. Replace them all.",
         "Every amount is in your own currency. Percentages are entered as percentages (35% not 0.35 is fine, Excel handles both).",
     ])
@@ -243,12 +243,12 @@ def business_case():
     ws.conditional_formatting.add("B8:E8", CellIsRule(operator="lessThan", formula=["0"], font=Font(name=F, bold=True, color="C0392B")))
     widths(ws, [30, 15, 15, 15, 15])
 
-    ws = wb.create_sheet("Phasing")
-    title(ws, "Phasing: how the risk is managed", "The section boards read most closely. Each phase has a scope, a measure and a decision point. The next phase only starts when the measure says so.")
-    header(ws, 4, ["Phase", "Scope", "Duration", "Success measure", "Decision point", "Owner"])
-    ph = [("1. Pilot", "One line, production and quality", "4 to 6 months", "OEE up 3 points against baseline; scrap down 10%", "Steering group review at month 6", "Operations director"),
-          ("2. Site", "Remaining lines on the site", "6 to 9 months", "Benefits on Benefits sheet reached at 80% ramp", "Before committing to site 2", "Site lead"),
-          ("3. Template", "Second site from the same template", "4 to 6 months", "Go-live on time with under 10% local change", "Before wider roll-out", "Programme lead")]
+    ws = wb.create_sheet("Rollout plan")
+    title(ws, "Rollout plan: how the risk is managed", "The section boards read most closely. The decision covers the whole programme. Each phase has a scope, a measure and a milestone, so progress is visible all the way.")
+    header(ws, 4, ["Phase", "Scope", "Duration", "Success measure", "Milestone", "Owner"])
+    ph = [("1. Production and quality", "First sites in the rollout plan", "6 to 9 months", "OEE up 3 points against baseline; scrap down 10%", "Live on every shift at the first sites", "Operations director"),
+          ("2. Remaining sites", "Production and quality at every other site, from the template", "12 to 24 months", "Go-live on time with under 10% local change", "Each site live on every shift", "Programme lead"),
+          ("3. Inventory and maintenance", "Switched on across every site", "6 to 12 months", "Benefits on Benefits sheet reached at 80% ramp", "Live at every site", "Programme lead")]
     for i, row in enumerate(ph, start=5):
         for j, v in enumerate(row):
             inp(ws.cell(row=i, column=1 + j), v)
@@ -343,7 +343,7 @@ def first_line():
     ])
     ws = wb.create_sheet("Scorecard")
     title(ws, "First-line scorecard", "1 = poor fit, 5 = strong fit. Weights default to 1. Raise one to 2 only if the whole team agrees it matters more at your site.", 11)
-    qs = [("How much does its downtime or scrap cost?", "Value you can measure is what funds the next phase."),
+    qs = [("How much does its downtime or scrap cost?", "Value you can measure is what builds momentum for the programme."),
           ("Is it the bottleneck, or close to it?", "An hour gained on the bottleneck is an hour gained for the whole site."),
           ("Is the process reasonably stable and documented?", "You want to prove the system, not fight the process at the same time."),
           ("Is the supervisor keen?", "A champion on the line makes adoption much faster."),

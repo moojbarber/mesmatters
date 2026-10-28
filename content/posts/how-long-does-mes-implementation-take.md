@@ -39,7 +39,7 @@ The key factors were:
 1. **The customer knew what they were buying.** They were well educated on MES before they started.
 2. **The team was superb.** The right people were available. It was their top priority, and everything else fell in behind it.
 3. **The product was highly configurable.** The implementation was almost entirely out of the box, with very little custom work.
-4. **The initial scope was small to medium.** Not a full-blown MOM on day one. Start, learn, prove the return, then grow.
+4. **The initial scope was small to medium.** Not a full-blown MOM on day one. Start with the core, then grow into the rest.
 
 None of those are about the software being installed faster. They're about preparation, people and scope.
 
@@ -55,9 +55,11 @@ The usual culprits:
 
 ## Big bang or phased?
 
-Starting small, proving value and then expanding is one of the best ways to de-risk an MES project and win support at every level.
+Phasing the delivery is usually the sensible way to run it. That might mean production and quality first, then inventory and maintenance, or rolling out site by site, or both.
 
-Sometimes a bigger bang is right, depending on the situation. But even then, think big and start pragmatically. Have the end state in mind without trying to get there in one leap.
+What I'd avoid is treating the first site as a trial that has to earn the next. Make the decision once, at company level, then plan the phases. A strategic decision gets real executive attention, and executives who've committed to it make sure it succeeds. It also makes the programme company-wide, so you get standards and benchmarking across sites, and a stronger centre of excellence. And nobody has to persuade each factory to take it on, because it's the company's strategic direction.
+
+Sometimes a bigger bang is right, depending on the situation. Either way, think big and start pragmatically. Have the end state in mind without trying to get there in one leap.
 
 ## The most important variable is you
 
