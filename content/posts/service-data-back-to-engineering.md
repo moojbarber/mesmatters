@@ -63,6 +63,6 @@ This loop shouldn't only run during a recall. Field data, linked to build data, 
 - Whether a design change actually fixed the problem
 - What a quality escape really cost, from scrap to service visit
 
-That last one is powerful when you're building an [MES business case](/post/mes-business-case). The cost of poor quality isn't the scrap bin. It's the technician's van outside a customer's site.
+That last one is powerful when you're building an [MES business case](/post/mes-business-case).
 
 So, pick your most expensive warranty issue from last year. Could you link every failed unit back to how it was built, in an afternoon?
