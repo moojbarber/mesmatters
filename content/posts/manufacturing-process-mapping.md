@@ -1,5 +1,5 @@
 ---
-title: "Process before technology: map your as-is before you buy anything"
+title: "Map your processes: know your as-is before you buy anything"
 short: "Process mapping"
 description: "Digitise a broken process and you get a faster broken process. How to map what really happens on your shopfloor with swimlanes, then design something better."
 published: 2026-05-05

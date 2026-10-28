@@ -11,13 +11,13 @@ Selecting MES/MOM is one of the most consequential decisions in any smart factor
 
 Get it right, and you have a platform that grows with you for years. Get it wrong, and you'll be evaluating again in three to five years, this time with the added pain of migrating away from a system that didn't fit.
 
-I've seen too many selections go wrong because the focus was on price, or on a narrow set of today's problems. Here are the questions I'd ask every vendor.
+I've seen too many selections go wrong because the focus was on price, or on a narrow set of today's problems. Or on a massive list of requirements that didn't reflect the real need, with a scoring system that eliminated the best fit on a technicality, or because some vendors scored higher on less important requirements. Here are the questions I'd ask every vendor.
 
 ## Technical foundation
 
 1. **What's your approach to master data synchronisation with ERP?** Who owns materials, BOMs and routings, and how do changes flow?
-2. **How do you integrate with our existing landscape?** ERP, PLM, scheduling, warehouse, quality, equipment. Standard connectors or configurable API mapping, or custom-coded interfaces that never confirm whether a message got through?
-3. **Can you handle our industry's specific requirements and compliance?** Show me, with references and a demo from a similar business. Not necessarily a direct competitor.
+2. **How do you integrate with our existing landscape?** What methods of communication do you use for integrations, and how flexible are they?
+3. **Can you handle our industry's specific requirements and compliance?**
 
 ## User experience
 
@@ -29,11 +29,11 @@ I've seen too many selections go wrong because the focus was on price, or on a n
 
 7. **How deep is your coverage beyond production?** Quality, inventory and traceability, maintenance, tooling, energy, connected worker.
 8. **Will it stop people across departments needing multiple systems?** One application, one data model, or several products integrated together?
-9. **Does it give real-time visibility across all production processes?** Including the awkward ones.
+9. **Does it give real-time visibility across all production processes?**
 
 ## Scalability and future-proofing
 
-10. **What's your roadmap for AI and advanced technology?** Is the application being actively developed, with a clear line between available and planned?
+10. **What's your roadmap for AI and advanced technology?** Is the application being actively developed, and which capabilities are available today rather than still on the roadmap?
 11. **How do you support IIoT and modern connectivity?** How is machine data captured automatically, and put in context?
 12. **Will it grow with us?** Across sites, and across functions we don't need yet but will.
 
@@ -48,7 +48,7 @@ My advice:
 - **Focus on your real requirements**, and document them accurately.
 - **Be clear about what you need now**, and separate it from what you might need later.
 - **Think about future needs** at the level of platform capability, not detailed features.
-- **Base it on your process maps.** If you've done the work in [Process before technology](/post/manufacturing-process-mapping), your requirements will be specific and vendors can answer properly.
+- **Base it on your process maps.** If you've done the work in [Map your processes](/post/manufacturing-process-mapping), your requirements will be specific and vendors can answer properly.
 
 Going overboard makes it harder for everyone, gives you misleading answers, and slows the whole process down. If you're working with an adviser or systems integrator on the RFP, use their experience to keep it focused. The good ones have seen hundreds of these, and they know which requirements genuinely separate one platform from another.
 
@@ -56,7 +56,7 @@ Going overboard makes it harder for everyone, gives you misleading answers, and 
 
 Written answers to 400 RFP questions will mostly say "yes". Demonstrations tell you far more.
 
-Give shortlisted vendors your real scenarios: one of your products, one of your processes, one of your awkward exceptions. Ask them to configure it, not just present slides. And ask to speak to customers who look like you.
+Give shortlisted vendors your real scenarios: one of your products, one of your processes. Ask them to demo it, not just present slides. And towards the end of the selection process, ask to speak to customers who are similar to you.
 
 ## Choose the partner too
 

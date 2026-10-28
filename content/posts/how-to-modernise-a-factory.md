@@ -30,7 +30,7 @@ Digitise a broken process and you get a faster broken process.
 
 Start with the physical structure: enterprise, site, area, line, machine. Then map what really happens, warts and all, rather than what the manual says. I like a swimlane grid with departments across the top and manufacturing processes down the side. Every handoff and every gap becomes visible.
 
-Do it with operators, quality technicians, maintenance engineers and logistics in the room, not just managers. You'll almost certainly find two sites, or two shifts, making the same product in different ways. Decide which way you're going to standardise on before you build it into software. More in [Process before technology](/post/manufacturing-process-mapping).
+Do it with operators, quality technicians, maintenance engineers and logistics in the room, not just managers. You'll almost certainly find two sites, or two shifts, making the same product in different ways. Decide which way you're going to standardise on before you build it into software. More in [Map your processes](/post/manufacturing-process-mapping).
 
 **Ready to move on when:** you have current-state maps for the site you'll start with, and you've agreed the target process for it.
 

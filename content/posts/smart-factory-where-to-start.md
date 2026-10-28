@@ -42,7 +42,7 @@ The first month is about listening and looking, not buying.
 
 **Pick the first site.** Commit to a whole site rather than a single production line. One line on its own leaves people working two ways at once, and the value of production, quality, inventory and maintenance working from the same data only shows up across a site. Not necessarily the worst site, and not necessarily the easiest. Use the scorecard below.
 
-**Map its processes.** Current state first, with the people who do the work, then the target. Digitise a broken process and you get a faster broken process. See [Process before technology](/post/manufacturing-process-mapping).
+**Map its processes.** Current state first, with the people who do the work, then the target. Digitise a broken process and you get a faster broken process. See [Map your processes](/post/manufacturing-process-mapping).
 
 **Check the master data for that site.** Are the routings detailed enough to say which machine each operation runs on, with realistic cycle times? If ERP has one operation called "Production", you've found your first work package. See [Your ERP master data isn't ready for MES](/post/erp-master-data-for-mes).
 
