@@ -269,7 +269,7 @@ pages:
       - q: Where should a plant manager start with a smart factory?
         a: With an honest assessment of where the plant is today, and a map of how one real order flows through it. Those two things show where the losses are and what the requirements really are. Only then pick a first site and build the case. Technology comes after that.
       - q: How do I get a smart factory project approved?
-        a: Show what the problems cost today in money, what will improve and when, the realistic costs including your own people, and how the risk will be managed through a clear rollout plan, milestones and measures. Most boards worry about the risk more than the return, so a small first phase that funds the next one is usually easier to approve.
+        a: Show what the problems cost today in money, what will improve and when, the realistic costs including your own people, and how the risk will be managed through a clear rollout plan, milestones and measures. Most boards worry about the risk more than the return, so make the risk plan the strongest part of the case.
 
   - id: it-leaders
     kind: role
