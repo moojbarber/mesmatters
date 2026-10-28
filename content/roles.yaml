@@ -84,7 +84,7 @@ roles:
     shift:
       - ["Variances explained at month end, if at all", "Cost variances visible by order as production happens"]
       - ["Business cases built on vendor promises", "Business cases built on measured losses from your own lines"]
-    pitch: "Bring numbers you can defend. Measure the losses first, put a value on one point of OEE, include your own people's time in the costs, and make the case for every site as one programme."
+    pitch: "Bring numbers you can defend. Measure the losses first, put a value on one point of OEE, include your own people's time in the costs, and phase the investment so each stage can fund the next."
     reads: [mes-business-case, mes-roi-bottom-line, mes-simplifies-erp, smart-factory-roi-research]
     tool: business-case-template
     also_tools: [oee-one-percent]
@@ -165,7 +165,7 @@ roles:
       ai: "AI and a consistent operational data foundation scale together. Each new site adds history the models can learn from."
       cw: "Frontline tools are where adoption is won or lost, and where trust in digital starts."
       prod: "Production execution is usually the backbone that other use cases build on."
-      qual: "Quality use cases often show measurable value quickly, which keeps the programme's momentum up."
+      qual: "Quality use cases often show measurable value quickly, which helps fund the next phase."
     shift:
       - ["A portfolio of disconnected pilots", "A platform that each new use case builds on"]
       - ["Value claimed in slides", "Value measured on the line, before and after"]
@@ -226,7 +226,7 @@ roles:
     shift:
       - ["The morning meeting starts with an argument about the numbers", "The morning meeting starts with yesterday's top losses, agreed"]
       - ["A complaint takes three days to trace", "A complaint traced before the customer call ends"]
-    pitch: "Focus on the problems that hurt most. Put a value on them across every site, and make the case as one programme."
+    pitch: "Start with one site and the problems that hurt most. Put a value on them, and let that site's results fund the next."
     reads: [smart-factory-where-to-start, mes-business-case, manufacturing-change-management, mes-go-live]
     tool: readiness-check
     also_tools: [oee-one-percent, go-live-checklist]

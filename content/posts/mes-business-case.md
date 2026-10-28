@@ -47,23 +47,23 @@ Business cases get approved faster when they clearly show:
 1. **Current-state costs.** What the problems cost today, in money.
 2. **Future-state benefits.** What will improve, by how much, and when.
 3. **Realistic implementation costs and timeline.** Including your internal people, not just licences and services.
-4. **How the risk is managed.** A clear rollout plan across your sites, with milestones and measures.
+4. **How the risk is managed.** Phases, milestones, measures and decision points.
 
 I'd spend the most time on the fourth point, because it deals with the fear.
 
 ## Reframe the risk
 
-The strongest business cases reframe the conversation completely.
+The best business cases I've seen reframe the conversation completely.
 
 **Transformation as risk mitigation.** The bigger risk isn't the investment. It's the quality escape, the failed audit, the experienced operator retiring with all the knowledge in their head.
 
-**Commit to every site.** Make the case for the whole programme: licences for all your sites, a template built on the first, and a clear plan for rolling it out to the rest. A case for one site at a time invites a fresh debate after every site, and the programme often stalls before it reaches the sites with the most to gain.
+**Phased delivery.** Start with one site. Prove the value. Let the results fund the next phase.
 
 **The cost of doing nothing.** Your competitors are moving. Customers are getting less patient with quality issues and late deliveries. Every year you delay has a cost, and it's usually bigger than people assume.
 
 ## Use the 1% question
 
-I always ask: what would a 1% improvement in OEE be worth to your business? Or what would a 1% reduction in scrap mean, and so on.
+I always ask: what would a 1% improvement in OEE be worth to your business?
 
 Work it out. For most manufacturers it's a very significant number. Then compare it with the improvements the research reports. Deloitte's 2025 survey found average improvements of 10% to 20% in production output among large manufacturers investing in smart manufacturing. I pull together more of the research in [What the research says about smart factory ROI](/post/smart-factory-roi-research).
 
@@ -73,7 +73,7 @@ Use outside research to make the conversation credible. Use your own numbers to 
 
 Don't promise transformation overnight. Set milestones. Show quick wins. Build momentum.
 
-Some companies pay for their MES in months rather than years, on tangible benefits alone, such as less scrap and more uptime. There are intangible benefits too, like happier customers and less firefighting.
+I've seen companies pay for their MES in months rather than years, and that's on tangible benefits alone: less scrap, more uptime, more throughput. The intangibles, like happier customers and less firefighting, come on top.
 
 Your leadership doesn't need perfection. It needs confidence that you understand the risks and have a plan to manage them.
 

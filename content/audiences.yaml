@@ -256,7 +256,7 @@ pages:
         body: |
           Speak business, not features. Work out [what 1% of OEE is worth](/tools/oee-one-percent) to your site. Put a number on the paper. Then reframe the risk. The quality escape, the failed audit, the lost customer and the knowledge walking out of the door are all bigger risks than the investment.
 
-          Make the case for all your sites as one programme, with a clear rollout plan. The [business case article](/post/mes-business-case) and the [template](/tools/business-case-template) give you the structure.
+          Start with one site and let its results fund the next phase. The [business case article](/post/mes-business-case) and the [template](/tools/business-case-template) give you the structure.
       - h: Making it stick
         body: |
           People need as much attention as the technology in every programme, and they're the part most often underfunded. Bring operators in early and free up super users properly. Then be visible on the floor at go-live. Expect the first weeks to be messy. Every go-live has a learning curve.
@@ -269,7 +269,7 @@ pages:
       - q: Where should a plant manager start with a smart factory?
         a: With an honest assessment of where the plant is today, and a map of how one real order flows through it. Those two things show where the losses are and what the requirements really are. Only then pick a first site and build the case. Technology comes after that.
       - q: How do I get a smart factory project approved?
-        a: Show what the problems cost today in money, what will improve and when, the realistic costs including your own people, and how the risk will be managed through a clear rollout plan. Most boards worry about the risk more than the return, so a small first phase that funds the next one is usually easier to approve.
+        a: Show what the problems cost today in money, what will improve and when, the realistic costs including your own people, and how the risk will be managed through phases and decision points. Most boards worry about the risk more than the return, so a small first phase that funds the next one is usually easier to approve.
 
   - id: it-leaders
     kind: role
