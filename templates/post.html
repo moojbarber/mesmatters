@@ -8,7 +8,8 @@
     <a class="lp-bar-name" href="{{ base }}/paths/{{ lp.id }}"><small>Learning path</small><b>{{ lp.title }}</b></a>
     <span class="lp-bar-line" aria-hidden="true">{% for sl in lp.slugs %}<i class="{% if loop.index < lp.index %}done{% elif loop.index == lp.index %}here{% endif %}" data-slug="{{ sl }}"></i>{% endfor %}<em style="width:calc((100% - 16px) * {{ ((lp.index - 1) / (lp.n - 1)) | round(4) }})"></em></span>
     <span class="lp-bar-pos">Article {{ lp.index }} of {{ lp.n }}</span>
-    {% if lp.next %}<a class="lp-bar-next" href="{{ base }}/post/{{ lp.next.slug }}?path={{ lp.id }}">Next article</a>{% else %}<a class="lp-bar-next" href="{{ base }}/paths/{{ lp.id }}">Path complete</a>{% endif %}
+    <span class="lp-bar-nav">{% if lp.prev %}<a class="lp-bar-next lp-bar-prev" href="{{ base }}/post/{{ lp.prev.slug }}?path={{ lp.id }}" aria-label="Previous article: {{ lp.prev.short or lp.prev.title }}">← Previous</a>{% endif %}
+    {% if lp.next %}<a class="lp-bar-next" href="{{ base }}/post/{{ lp.next.slug }}?path={{ lp.id }}">Next article →</a>{% else %}<a class="lp-bar-next" href="{{ base }}/paths/{{ lp.id }}">Path complete</a>{% endif %}</span>
   </div>
 </div>
 {% endfor %}

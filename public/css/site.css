@@ -633,6 +633,8 @@ form.signup p.fine{font:400 13px/1.5 var(--body);letter-spacing:0;max-width:none
 .lp-bar-pos{font-size:14px;color:#c9c4f0;margin-left:auto}
 .lp-bar-next{height:40px;display:inline-flex;align-items:center;padding:0 14px;border-radius:99px;border:1px solid rgba(255,255,255,.2);color:#fff;font-size:14px;font-weight:600}
 .lp-bar-next:hover{border-color:var(--c);color:#fff}
+.lp-bar-nav{display:flex;gap:10px}
+.lp-bar-prev{color:#c9c4f0;border-color:rgba(255,255,255,.12)}
 .lp-next{margin:8px 0 36px}
 .lp-next[hidden]{display:none}
 .lp-next-msg{display:flex;align-items:center;gap:12px;margin:0 0 16px;font-size:16px;color:#c9c4f0}
