@@ -352,14 +352,14 @@ mes-and-digital-twins:
   summary: "A digital twin is a virtual model kept in sync with the real factory by live data. MES/MOM doesn't do the simulation, but it supplies much of the operational reality: what's running where, material, quality, asset status and people, already in context. Without that, a twin drifts away from the factory it represents."
 
 mes-business-case:
-  summary: "Business cases usually stall because of fear of overrun and failure, not the idea itself. Put money on today's pain in quality, downtime, labour, delivery and inventory, and show realistic costs including your internal people. Spend most effort on how risk is managed, through phased delivery and an honest view of the cost of doing nothing."
+  summary: "Business cases usually stall because of fear of overrun and failure, not the idea itself. Put money on today's pain in quality, downtime, labour, delivery and inventory, and show realistic costs including your internal people. Spend most effort on how risk is managed, and give an honest view of the cost of doing nothing."
   faq:
     - q: "How do you build a business case for MES?"
       a: "Speak business, not features. Put a value on today's pain in quality, downtime, labour, delivery and inventory, then connect each number to what the system will change. Show realistic costs and timeline, including your own people's time, not just licences and services. Then spend most of your effort on how the risk will be managed, because fear of failure is usually what's really blocking approval."
     - q: "Why do MES business cases get rejected?"
-      a: "In my experience it's rarely the idea that's rejected. It's the way it's presented. Leadership hears technical features instead of business impact, or a past project went badly and nobody wants a repeat. Underneath most objections is fear of overrun and failure, so the case has to address that directly, with phased delivery and clear points where leadership can decide whether to continue."
+      a: "In my experience it's rarely the idea that's rejected. It's the way it's presented. Leadership hears technical features instead of business impact, or a past project went badly and nobody wants a repeat. Underneath most objections is fear of overrun and failure, so the case has to address that directly, with milestones, measures and clear decision points."
     - q: "What is the cost of doing nothing?"
-      a: "It's the risk you carry by staying as you are. Quality escapes, failed audits, experienced operators retiring with the knowledge in their heads, and competitors who are already moving. Framing the investment as risk mitigation, delivered in phases where each one proves value and funds the next, often changes the conversation with leadership completely."
+      a: "It's the risk you carry by staying as you are. Quality escapes, failed audits, experienced operators retiring with the knowledge in their heads, and competitors who are already moving. Framing the investment as risk mitigation often changes the conversation with leadership completely."
 
 mes-go-live:
   summary: "Go-live is the starting line. Plan hypercare with support on every shift and visible super users, and fix issues fast enough to keep people's trust. Measure what the business case promised against the baseline and celebrate the quick wins. The value comes from improving and extending the system after go-live."
