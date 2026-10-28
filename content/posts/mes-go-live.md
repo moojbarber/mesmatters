@@ -33,7 +33,7 @@ The goal is to fix things fast enough that people keep trusting the system. Lose
 
 Go back to the business case. What did you say would improve? Scrap, downtime, OEE, batch release time, traceability?
 
-Measure it from day one, against the baseline you set before the project. Share the results, good and bad. That evidence is what keeps leadership committed, and it's what funds the next phase.
+Measure it from day one, against the baseline you set before the project. Share the results, good and bad. That evidence is what keeps leadership committed as the rollout reaches your other sites.
 
 ## Celebrate the quick wins
 

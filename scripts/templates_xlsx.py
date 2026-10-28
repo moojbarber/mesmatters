@@ -115,10 +115,10 @@ def business_case():
         "1. What the problems cost today, in money (Baseline).",
         "2. What will improve, by how much and when (Benefits).",
         "3. Realistic costs and timeline, including your own people, not just licences and services (Costs).",
-        "4. How the risk is managed: phases, measures and decision points (Phasing).",
+        "4. How the risk is managed: a clear rollout plan across every site, with milestones and measures (Rollout).",
         "How to use it:",
         "Fill in Baseline with numbers finance will recognise. Set deliberately modest improvements on Benefits. Fill in every cost line, then read Cash flow.",
-        "Keep the first phase small: one line or one area. Let its results fund the next phase.",
+        "Make the case for every site as one programme: licences for all your sites, a template built on the first, and a clear plan for the rest.",
         "The example values describe a fictional mid-size site so you can see how it works. They are not a forecast. Replace them all.",
         "Every amount is in your own currency. Percentages are entered as percentages (35% not 0.35 is fine, Excel handles both).",
     ])
@@ -243,12 +243,12 @@ def business_case():
     ws.conditional_formatting.add("B8:E8", CellIsRule(operator="lessThan", formula=["0"], font=Font(name=F, bold=True, color="C0392B")))
     widths(ws, [30, 15, 15, 15, 15])
 
-    ws = wb.create_sheet("Phasing")
-    title(ws, "Phasing: how the risk is managed", "The section boards read most closely. Each phase has a scope, a measure and a decision point. The next phase only starts when the measure says so.")
-    header(ws, 4, ["Phase", "Scope", "Duration", "Success measure", "Decision point", "Owner"])
-    ph = [("1. Pilot", "One line, production and quality", "4 to 6 months", "OEE up 3 points against baseline; scrap down 10%", "Steering group review at month 6", "Operations director"),
-          ("2. Site", "Remaining lines on the site", "6 to 9 months", "Benefits on Benefits sheet reached at 80% ramp", "Before committing to site 2", "Site lead"),
-          ("3. Template", "Second site from the same template", "4 to 6 months", "Go-live on time with under 10% local change", "Before wider roll-out", "Programme lead")]
+    ws = wb.create_sheet("Rollout")
+    title(ws, "Rollout: how the risk is managed", "The section boards read most closely. The programme covers every site. Each stage has a scope, a measure and a milestone, so progress is visible all the way.")
+    header(ws, 4, ["Stage", "Scope", "Duration", "Success measure", "Milestone", "Owner"])
+    ph = [("1. First site", "The whole site, starting with production and quality", "6 to 9 months", "OEE up 3 points against baseline; scrap down 10%", "First site live on every shift", "Operations director"),
+          ("2. Template", "Standard processes, master data rules, KPIs and screens from the first site", "2 to 3 months", "Template signed off by the centre of excellence", "Template ready for the next site", "Programme lead"),
+          ("3. Remaining sites", "Every other site, from the same template", "4 to 6 months per site", "Go-live on time with under 10% local change; benefits on Benefits sheet reached", "Each site live on every shift", "Programme lead")]
     for i, row in enumerate(ph, start=5):
         for j, v in enumerate(row):
             inp(ws.cell(row=i, column=1 + j), v)

@@ -72,7 +72,7 @@ tools:
       - {name: Baseline, text: "What the problems cost today, including the value of one OEE point."}
       - {name: Benefits, text: "Five levers with modest default improvements and a ramp over three years."}
       - {name: Costs, text: "Every line from licences to your internal team, with contingency set on purpose."}
-      - {name: Cash flow and phasing, text: "Payback, three-year ROI, the cost of doing nothing, and how each phase earns the next."}
+      - {name: Cash flow and rollout, text: "Payback, three-year ROI, the cost of doing nothing, and the rollout plan across every site."}
     howto:
       - Fill in Baseline with numbers finance will recognise. Measure the paper hours on the floor rather than guessing.
       - Keep the improvements on Benefits at the modest end. A board trusts a case that under-promises.

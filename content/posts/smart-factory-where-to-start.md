@@ -10,7 +10,7 @@ guide: true
 
 You've been given the job of making the factory smarter. Maybe it came from the board. Maybe it came from your own frustration with paper and spreadsheets.
 
-Either way, the first 90 days matter more than they look. Get them right and you'll have a funded first phase with a team behind it. Get them wrong and you'll spend a year on a tool that never scales.
+Either way, the first 90 days matter more than they look. Get them right and you'll have a funded programme with a team behind it. Get them wrong and you'll spend a year on a tool that never scales.
 
 This is how I'd use them.
 
@@ -52,7 +52,7 @@ The first month is about listening and looking, not buying.
 
 ## Days 61 to 90: build the case and the team
 
-**Write the business case.** The most important thing is to calculate the ROI and articulate the value. Don't present cost in the absence of value. Set out current costs, expected benefits, realistic costs including your own people's time, and how the risk is managed through phases and decision points. Leadership approves business impact, not features. See [How to build an MES business case](/post/mes-business-case).
+**Write the business case.** The most important thing is to calculate the ROI and articulate the value. Don't present cost in the absence of value. Set out current costs, expected benefits, realistic costs including your own people's time, and how the risk is managed through a clear rollout plan with milestones and measures. Leadership approves business impact, not features. See [How to build an MES business case](/post/mes-business-case).
 
 **Create a vision people buy into.** A business case gets the money. A vision gets people behind it. Describe what the site will look like when it's done, in terms the shopfloor and the board would both recognise, and keep coming back to it.
 
@@ -62,7 +62,7 @@ The first month is about listening and looking, not buying.
 
 **Write requirements from your process maps**, not a wish list. Separate what you need now from what you might need later. Then you're ready to talk to vendors. See [How to choose an MES](/post/how-to-choose-an-mes).
 
-**By day 90 you should have:** an approved first phase, a vision people support, a sponsor, a team that can grow into a centre of excellence, and requirements based on real processes.
+**By day 90 you should have:** an approved programme covering all your sites, a vision people support, a sponsor, a team that can grow into a centre of excellence, and requirements based on real processes.
 
 ## Choosing the first site: a scorecard
 

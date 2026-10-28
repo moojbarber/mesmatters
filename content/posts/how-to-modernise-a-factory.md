@@ -43,9 +43,9 @@ Leadership approves business impact, not features. So take the pain you found in
 - How many hours a week go on manual data entry and chasing information?
 - How much working capital is tied up in buffers you hold because you don't trust the data?
 
-Then show how the risk will be managed: phased delivery, measures and points where leadership can decide whether to continue. In my experience, fear of overrun and failure is what really blocks most business cases. Address it directly. More in [How to build an MES business case leadership will sign](/post/mes-business-case).
+Then show how the risk will be managed: a clear rollout plan across your sites, with milestones and measures. In my experience, fear of overrun and failure is what really blocks most business cases. Address it directly. More in [How to build an MES business case leadership will sign](/post/mes-business-case).
 
-**Ready to move on when:** you have a sponsor with the authority to allocate resources, and a first phase that's funded.
+**Ready to move on when:** you have a sponsor with the authority to allocate resources, and a programme that's funded for all your sites.
 
 ## Step 4: Build the team
 
@@ -104,7 +104,7 @@ And treat every new connection as a security decision. MES/MOM sits between IT a
 
 Go-live is the starting line. Plan hypercare with extra support on every shift, including nights, and super users who are visible and have time to help. Fix things quickly enough that people keep trusting the system.
 
-Then measure what the business case promised, against the baseline you set before you started, and share the results. That evidence keeps leadership committed and funds the next phase. More in [Go-live is the starting line](/post/mes-go-live).
+Then measure what the business case promised, against the baseline you set before you started, and share the results. That evidence keeps leadership committed as you roll out to the rest of your sites. More in [Go-live is the starting line](/post/mes-go-live).
 
 **Ready to move on when:** you can show the improvement you promised, in numbers leadership accepts.
 
@@ -118,7 +118,7 @@ Once the first site works, turn what you built into a template: standard process
 | --- | --- |
 | 1. Know where you are | Data capture on each line is described with evidence, and everyone agrees the time to truth by area |
 | 2. Map the process | Current-state maps exist for the first site and the target process is agreed |
-| 3. Put a number on it | A sponsor is in place and the first phase is funded |
+| 3. Put a number on it | A sponsor is in place and the programme is funded for all sites |
 | 4. Build the team | Named people have the time, with day jobs backfilled |
 | 5. Fix the master data | Materials, BOMs and routings can run the target process, and have an owner |
 | 6. Choose the platform | You've seen it run your process, and operators have used it |
