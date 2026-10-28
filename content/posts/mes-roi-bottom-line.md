@@ -52,14 +52,14 @@ Include these in a business case, but lead with the hard numbers. Finance teams 
 
 ## The benefits grow over time
 
-Think about your first smartphone. You probably bought it to make calls. Now calls are near the bottom of what you use it for.
+Think about your first smartphone. You probably bought it to make calls. Today, making calls is one of the least important things you use it for.
 
-MES/MOM often follows a similar pattern. Manufacturers usually invest for one or two reasons, such as efficiency or compliance. Those who adopt it fully tend to find more value each year, as they use more of the data and extend into new areas.
+MES/MOM often follows a similar pattern. Manufacturers usually invest for one or two reasons, such as efficiency or compliance. Those who adopt it fully tend to find more value each year, as they use more of the data and extend into new areas. And much like a mobile phone, once you're used to everything MES/MOM does, it's hard to imagine going back to not having one.
 
 ## Turn it into a business case
 
 1. **Quantify current costs:** downtime, scrap, overtime, late deliveries and inventory.
-2. **Estimate realistic improvements** for each, based on your own data rather than vendor claims.
+2. **Estimate realistic improvements** for each, based on your own data.
 3. **Count the costs honestly**, including your own people's time and ongoing support.
 4. **Phase the investment**, so an early phase on one site can fund the next.
 
