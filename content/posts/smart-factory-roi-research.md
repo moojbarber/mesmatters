@@ -32,7 +32,7 @@ The same survey asked respondents what they'd seen from their smart manufacturin
 
 Those are big numbers, and they line up with what I see in real projects. More output from the same equipment. Less time spent on manual data entry and chasing information. Capacity that was always there, hidden in micro-stops and slow changeovers.
 
-To put capacity in context: what would just a 1% improvement in OEE mean for your business? For most manufacturers it's a very significant number. A 10% improvement can be the difference between building a new line and not needing one.
+To put capacity in context: what would just a 1% improvement in OEE mean for your business? For most manufacturers it's a very significant number, and it's not uncommon for improvements to be in the 10% to 20% range.
 
 ## Most manufacturers haven't started
 
@@ -53,10 +53,12 @@ When you can't hire your way out of a problem, you have to make the people you'v
 
 Be careful with averages.
 
-- **They describe large companies.** Deloitte's sample is manufacturers with over $500 million revenue. Your results may differ, in either direction.
+- **They describe large companies.** This survey focused on manufacturers with over $500 million revenue. Your results may differ, in either direction.
 - **They're self-reported.** Respondents say what they've seen. That's useful, but it isn't an audited result.
 - **They lag.** Surveys capture what happened over the last year or two, in a market moving quickly.
 - **They don't tell you how.** The same technology delivers very different returns depending on the processes underneath it, the team running it and whether the data is trusted.
+
+None of that takes away from the research. Studies like Deloitte's are one of the best views we have of what manufacturers are actually achieving, at scale, and the message is clear and encouraging: the returns are real, and they're there for the taking.
 
 In my experience, the difference between a small improvement and a big one comes from getting the technology and the people right together: the right platform, processes fixed first, data that's trusted, and leadership that stays committed after go-live.
 
