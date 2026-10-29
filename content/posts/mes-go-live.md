@@ -25,7 +25,7 @@ Plan for it:
 - **Super users** visible and available, with time freed up to help
 - **A fast route for issues**, with someone deciding priorities daily
 - **Daily reviews** of what went wrong and what's been fixed
-- **Leaders on the shopfloor**, seeing it for themselves
+- **Leaders on the shopfloor**, seeing it for themselves and showing the teams this is a priority
 
 The goal is to fix things fast enough that people keep trusting the system. Lose that trust in the first month and adoption is very hard to win back.
 
@@ -51,13 +51,13 @@ The difference now is the data. Before, improvement was often based on gut feel 
 
 ## Keep the system evolving
 
-The most successful manufacturers I work with don't implement MES/MOM and stand still. They:
+Successful manufacturers don't implement MES/MOM and stand still. They:
 
 - Review configuration regularly as processes change
 - Extend scope into new pillars and new sites
 - Explore new capabilities as the product evolves, including AI
 - Keep a small, permanent team that owns the system and its roadmap
 
-Everyone is investing in smart manufacturing. It's not enough to implement a project and stop. You need to keep evolving.
+Your competitors are investing in smart manufacturing. It's not enough to implement a project and stop. You need to keep evolving.
 
 What happened in the first month after your last go-live?
