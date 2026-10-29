@@ -34,14 +34,20 @@ And of course, you'll be working closely with your vendor's or systems integrato
 
 ## The project manager
 
-Strong project leadership is one of the clearest predictors of success. The MES project manager oversees the implementation and, in multi-site businesses, the roll-out to further plants and warehouses.
+Strong project leadership is one of the clearest predictors of success. The project manager oversees the implementation and, in multi-site businesses, the roll-out to further plants and warehouses.
 
-A good MES project manager typically brings:
+It's a complex role. A good project manager typically brings:
 
 - **Domain knowledge.** An understanding of MES/MOM and your production processes, including the challenges specific to your industry.
 - **Communication skills.** The ability to manage expectations and keep stakeholders informed, including those who aren't yet convinced the project is a good idea.
 - **Planning discipline.** A plan, built with the vendor or integrator, that sets out milestones and dependencies.
 - **Problem-solving.** Anticipating roadblocks, and resolving issues before they cause delays.
+- **People management.** Leading a cross-functional team, many of whom don't report to them, and keeping it motivated.
+- **Budget management.** Tracking spend against the plan, including your own people's time, and raising overruns early.
+- **Risk management.** A live view of risks and issues, each with an owner and a plan to deal with it.
+- **Time management.** Keeping the plan moving and protecting the critical path.
+- **Scope control.** Saying no, or not yet, to changes that would derail the plan.
+- **Supplier management.** Holding the vendor and any integrators to what was agreed, and working with them as one team.
 
 They also act as the main point of contact between the internal team, stakeholders, the vendor and any consultants.
 
