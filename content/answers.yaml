@@ -334,7 +334,7 @@ lims-and-mes:
   summary: "A good MOM handles sampling, lab results, SPC and certificates of analysis itself, with the batch context attached, which is the simpler option. A separate LIMS earns its place in heavy, regulated labs in certain industries, and then needs integration so samples carry their context and results flow straight back to hold or release the batch. ERP usually holds batch status for the business."
 
 manufacturing-change-management:
-  summary: "Every smart factory project meets resistance, because change is uncomfortable. Leadership has to set the vision, back change management, build a strong team and invest in skills. Involve operators in the design and explain why it makes their shift easier. Adoption deserves as much investment as implementation."
+  summary: "Every smart factory project meets resistance, because change is uncomfortable. Leadership has to set the vision, back change management, build a strong team, invest in skills and give the likely detractors real responsibility. Programmes across the whole landscape tend to meet less resistance than small pilots. Involve operators in the design and explain why it makes their shift easier. Adoption deserves as much investment as implementation."
 
 manufacturing-data-platforms:
   summary: "Warehouses hold structured data for reporting, lakes hold raw data at scale, and data fabric connects data where it already lives. MES/MOM reads and contextualises time-series data, so a separate historian is only needed in rare cases. AI can pull from all of these, but it needs to understand the data model, and the context that makes the data valuable is created by MES/MOM at the point of work."
