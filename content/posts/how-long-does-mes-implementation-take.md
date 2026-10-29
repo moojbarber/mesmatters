@@ -13,11 +13,11 @@ The honest answer is: it depends. But that's not very helpful, so let me be more
 
 ## The typical range
 
-For a first site, most MES/MOM implementations I've seen take somewhere between six and eighteen months from kick-off to go-live.
+For a first site, most MES/MOM implementations take somewhere between six and eighteen months from kick-off to go-live.
 
-When I ran a poll on LinkedIn a while ago, the most common experience among the people who answered was 12 to 18 months for the first factory. A focused deployment, covering production and quality on a few lines, can be done in around six months. A broad programme covering several pillars, complex integration and many lines takes longer.
+When I ran a poll on LinkedIn a while ago, the most common experience among the people who answered was 12 to 18 months for the first factory. A focused deployment, covering production and quality at one site, can be done in around six months. A broad programme covering several pillars, complex integration and many lines takes longer.
 
-Subsequent sites are usually much faster, especially if you build a template. More on that in [Rolling out across sites](/post/mes-multi-site-rollout).
+Subsequent sites are usually much faster, especially if you build a template, and several sites can be done in parallel. More on that below, and in [Rolling out across sites](/post/mes-multi-site-rollout).
 
 ## Why it isn't just a software install
 
@@ -60,6 +60,12 @@ Phasing the delivery is usually the sensible way to run it. That might mean prod
 What I'd avoid is treating the first site as a trial that has to earn the next. Make the decision once, at company level, then plan the phases. A strategic decision gets real executive attention, and executives who've committed to it make sure it succeeds. It also makes the programme company-wide, so you get standards and benchmarking across sites, and a stronger centre of excellence. And nobody has to persuade each factory to take it on, because it's the company's strategic direction.
 
 Sometimes a bigger bang is right, depending on the situation. Either way, think big and start pragmatically. Have the end state in mind without trying to get there in one leap.
+
+## Later sites, in parallel
+
+Once the template is in place, you don't have to roll out one site at a time. Group sites into batches, and bring their teams together for training and for reviewing and managing master data. Then either go live in parallel, or stagger the go-live weeks across the batch.
+
+Over time, your own team should be able to run most of these rollouts, if not all of them, if you want to. You don't have to. You can also choose a systems integrator or the vendor to do everything.
 
 ## The most important variable is you
 

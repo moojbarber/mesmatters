@@ -300,10 +300,10 @@ esg-needs-shopfloor-data:
 
 how-long-does-mes-implementation-take:
   label: The short version
-  summary: "For a first site, usually six to eighteen months, and twelve to eighteen was the most common answer when I polled people. I've seen it done in four, with an educated customer, a superb team, a configurable product and a focused scope. Later sites are much faster with a template."
+  summary: "For a first site, usually six to eighteen months, and twelve to eighteen was the most common answer when I polled people. It can be done in four, with an educated customer, a superb team, a configurable product and a focused scope. Later sites are much faster with a template, and several sites can be done in parallel."
   faq:
     - q: "How long does an MES implementation take?"
-      a: "For a first site, most implementations I've seen take between six and eighteen months from kick-off to go-live. When I polled people, twelve to eighteen months was the most common experience. A focused deployment on a few lines can be done in around six months, while a broad programme with complex integration takes longer. Later sites are much faster with a template."
+      a: "For a first site, most implementations take between six and eighteen months from kick-off to go-live. When I polled people, twelve to eighteen months was the most common experience. A focused deployment at one site can be done in around six months, while a broad programme with complex integration takes longer. Later sites are much faster with a template, and several can be rolled out in parallel."
     - q: "What makes MES projects run late?"
       a: "The usual causes are scope creep, master data that turns out not to be detailed enough, under-resourcing because the people you need are already the busiest in the business, customising to match old quirks instead of simplifying, and legacy equipment that's harder to connect than expected. None of them are about the software install itself."
     - q: "Can an MES go live faster than six months?"
