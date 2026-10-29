@@ -7,7 +7,7 @@ category: advice
 art: hexcore
 ---
 
-I see the same confusion every day when people talk about MES customisation.
+There's a lot of confusion when people talk about MES customisation.
 
 This article is about making a bought platform fit. If you're weighing that against writing your own, building from building blocks or stitching specialist tools together, I compare all four in [Code, build, stitch or configure](/post/build-vs-buy-mes).
 
@@ -21,7 +21,7 @@ Everyone wants a system that "fits our processes". Vendors say their product is 
 
 **Low-code and no-code.** Drag-and-drop builders for business logic, screens, dashboards and reports. Great for more complex needs without writing actual code.
 
-**Integrations.** MES/MOM connects to almost everything: ERP, APS, WMS, automated vehicles, shopfloor equipment, sensors, metrology. Some integration work is inevitable. Pick a system with strong, standard integration options.
+**Integrations.** MES/MOM connects to almost everything: ERP, APS, WMS, automated vehicles, shopfloor equipment, sensors, metrology. Some integration work is inevitable. Pick a system with strong, flexible integration capabilities.
 
 **Extensions.** Overrides that change behaviour without touching the underlying product code, and work in a standardised, supported way.
 
@@ -39,7 +39,7 @@ In software, almost anything is possible. But what's possible now can become ver
 
 ## Your processes probably aren't unique
 
-I hate to break it to you, but unless you're doing something truly niche, your manufacturing processes are not unique.
+I hate to break it to you, but unless your processes aren't handled well by any of the main software vendors, your manufacturing processes are not unique.
 
 What might be unique are your business processes around manufacturing. And a lot of what feels unique is habit, comfort and workarounds that grew over the years.
 
@@ -51,7 +51,7 @@ So you have a choice. Adapt to the system, have the system adapt to you, or a mi
 
 **Assess every gap with an open mind.** For each point where you'd need to deviate from how the software works, ask: is this business-critical and must work exactly as before? Or could a process change or some training close the gap, so we use the software the standard way?
 
-**Adopt best practice.** A mature MES/MOM is built around what works across hundreds of factories. Insisting on your own way for everything usually costs more than it returns.
+**Adopt best practice.** A mature MES/MOM is built around what works across many factories. Insisting on your own way for everything usually costs more than it returns.
 
 **Have strong project management on both sides.** Vendor and manufacturer. Someone needs to say no, politely and often, to requests that recreate the old system in the new one.
 
@@ -59,7 +59,7 @@ So you have a choice. Adapt to the system, have the system adapt to you, or a mi
 
 If a vendor tells you everything needs to be custom-built, be wary. That's a sign of an immature product, or of requirements that haven't been challenged.
 
-Some products are really toolkits, which need a lot of coding to fit together. Others are configurable through master data and low-code tools, so your own team can build screens and reports without going back to the vendor. Ask which you're looking at.
+Some products are really toolkits, which need a lot of coding to fit together, or a number of acquired applications that aren't well integrated. Others are configurable through master data and low-code tools, so your own team can build screens and reports without going back to the vendor. Ask which you're looking at.
 
 And if your own team is pushing for heavy customisation, challenge them. Are we customising because the process genuinely requires it, or because we're unwilling to change the process?
 
