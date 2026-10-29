@@ -1,5 +1,5 @@
 ---
-title: "Going paperless: start small, but start with the end in mind"
+title: "Going paperless: start with the end in mind"
 short: "Going paperless"
 description: "If you can't do everything at once, do something. Why removing paper from the shopfloor is a great first step, and the mistake to avoid."
 published: 2026-06-18
@@ -9,7 +9,7 @@ art: document
 
 MES/MOM is often a journey. If you aren't ready to go all in, that's fine.
 
-But don't get left behind. If you can't do everything, at least do something. Start small.
+But don't get left behind. If you can't do everything, at least do something.
 
 A great first step is removing paper from the shopfloor.
 
@@ -43,7 +43,7 @@ It can be phased. One process, one form at a time.
 
 ## The one mistake to avoid
 
-Start small. But start with the end in mind.
+Start as big or small as you like, but always start with the end in mind.
 
 The trap is choosing a quick, cheap tool to digitise one form, then another tool for the next, then another. Each one works. None of them talk to each other. And none can grow into production execution, traceability or maintenance.
 

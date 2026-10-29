@@ -377,7 +377,7 @@ ot-cybersecurity-for-mes:
   summary: "MES/MOM sits between IT and OT, so it's both a bridge and a security boundary. OT puts availability and safety first. Use IEC 62443 zones and conduits, never connect the enterprise network straight to a PLC, control remote vendor access, and plan for recovery. Get a specialist involved."
 
 paperless-manufacturing:
-  summary: "Removing paper is a great first step if you can't do everything at once. Start with the paper that hurts most, often quality check sheets or downtime logs, one line at a time. Avoid a different cheap tool for every form: choose a platform that can grow into full MES/MOM."
+  summary: "Removing paper is a great first step if you can't do everything at once. Start with the paper that hurts most, often quality check sheets or downtime logs, one process at a time. Avoid a different cheap tool for every form: choose a platform that can grow into full MES/MOM."
 
 plm-erp-mes-digital-thread:
   summary: "PLM owns what a product is, ERP owns the business of making it, and MES/MOM owns execution. In most manufacturers product data reaches the shopfloor through ERP, which is a sound design. A direct PLM to MES/MOM link makes sense for rich content that ERP isn't built to carry, such as 3D models and illustrated instructions, though a central document repository that every system reads from is usually the better option for documents."
