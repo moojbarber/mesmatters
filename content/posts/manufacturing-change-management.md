@@ -15,7 +15,7 @@ You need good technology, and choosing the right platform matters. But even the 
 
 ## Every project meets resistance
 
-In my experience, every single one does. If someone tells you their project met no resistance, they either weren't paying attention or they're not being honest.
+In my experience, every project meets at least some push back. If someone tells you their project met no resistance, they either weren't paying attention or they're not being honest.
 
 People resist change not because they're difficult or don't care, but because change is uncomfortable. It disrupts routines and challenges expertise.
 
@@ -62,12 +62,12 @@ If the only message is "management wants more data", expect resistance. If the m
 
 ## Invest in adoption, not just implementation
 
-Implementation ends at go-live. Adoption starts there.
+Implementation ends at go-live. Adoption should have started before go-live, but it certainly doesn't end there.
 
 - Super users on every shift, trained early and given time to support others
 - Quick wins made visible, like an operator seeing their own downtime data for the first time
 - Feedback channels that actually lead to changes
-- Leaders on the shopfloor, using the system themselves
+- Leaders on the shopfloor, visible and showing support
 
 Ask yourself honestly: do we have the internal capability to make this work? Have we prepared our people? Are we ready to invest in adoption, not just implementation?
 
