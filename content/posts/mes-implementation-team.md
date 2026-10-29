@@ -110,6 +110,6 @@ Related reading: [How long does an MES implementation take?](/post/how-long-does
 
 ## My view
 
-In my experience, the team you build matters as much to the success of an MES deployment as the platform you choose. The strongest programmes are defined at enterprise level, with a centre of excellence for global standards and stakeholders at every level across operations and IT. I can't stress enough how important it is to involve operators: they're the people the system is meant to help, and they know how the process really runs.
+In my experience, the team you build matters as much to the success of an MES deployment as the platform you choose. The strongest programmes are defined at enterprise level, with a centre of excellence for global standards and stakeholders at every level across operations and IT. I can't stress enough how important it is to involve frontline workers: they're the people the system is meant to help, and they know how the process really runs.
 
 Who on your current or next project would you least like to lose?
