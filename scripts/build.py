@@ -28,7 +28,8 @@ from jinja2 import Environment, FileSystemLoader
 ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / "dist"
 SITE = "https://www.shopfloormatters.com"
-SHOW_SPEAKING = False  # speaking page held back for launch; review on the speaking-page branch
+SHOW_SPEAKING = False
+SHOW_TOOLS = False  # tools held back for launch; review on the tools branch  # speaking page held back for launch; review on the speaking-page branch
 LINKEDIN = "https://www.linkedin.com/in/mattjbarber/"
 # Social profiles shown in the newsletter box. Leave a url empty to hide that network.
 SOCIALS = [
@@ -64,6 +65,7 @@ NAV = [
     {"key": "glossary", "label": "Glossary", "desc": "Shopfloor jargon in plain English", "href": "/glossary/"},
     {"key": "about", "label": "About", "desc": "Who I am and why I write this", "href": "/about"},
 ]
+NAV = [n for n in NAV if SHOW_TOOLS or n["key"] != "tools"]
 
 # Old Wix URLs that should point somewhere new
 REDIRECTS = {
@@ -531,7 +533,6 @@ def write_llms(posts, paths, glossary, tools=(), audiences=()):
            f"- [Role explorer]({SITE}/roles/): what MES/MOM means for each role, from CEO to operator: KPIs, challenges and the applications that matter most",
            f"- [MES compared]({SITE}/compare/): straight answers to MES vs ERP, MOM, MRP, SCADA, historian, IIoT, UNS, low-code and other comparisons",
            f"- [Glossary]({SITE}/glossary/): definitions of MES, MOM, OEE, ISA-95, UNS and other shopfloor terms",
-           f"- [Tools]({SITE}/tools/): free, vendor-neutral tools and templates",
            f"- [About Matt Barber]({SITE}/about): background and credentials",
            f"- [Podcasts, interviews and press]({SITE}/featured)",
            f"- [Full text of every article]({SITE}/llms-full.txt)", ""]
@@ -540,8 +541,8 @@ def write_llms(posts, paths, glossary, tools=(), audiences=()):
         for p in ps:
             out.append(f"- [{p['title']}]({p['canonical']}): {p['summary'] or p['description']}")
         out.append("")
-    out += ["## Tools and templates", ""]
-    for x in tools:
+    if SHOW_TOOLS: out += ["## Tools and templates", ""]
+    for x in (tools if SHOW_TOOLS else []):
         out.append(f"- [{x['title']}]({SITE}/tools/{x['id']}): {x['blurb']}")
     out += ["", "## By industry and role", ""]
     for a in audiences:
@@ -626,6 +627,8 @@ def build(base, relative=False, include_scheduled=False):
     # only ship legacy images that are actually referenced
     seo = yaml.safe_load((ROOT / "content" / "seo.yaml").read_text(encoding="utf-8")) or {}
     blocks = {p.stem: p.read_text(encoding="utf-8") for p in (ROOT / "content" / "blocks").glob("*.html")}
+    if not SHOW_TOOLS:
+        blocks = {k: re.sub(r'\s*<div class="imap-cta">.*?</div>', "", v, flags=re.S) for k, v in blocks.items()}
     posts = load_posts(base, blocks, seo, include_scheduled)
     tagd = yaml.safe_load((ROOT / "content" / "tags.yaml").read_text(encoding="utf-8"))
     for p in posts:
@@ -724,6 +727,7 @@ def build(base, relative=False, include_scheduled=False):
                                         "titles": [st["post"]["short"] for st in p["stations"]]} for p in paths], separators=(",", ":"))
     common["featured_carousel"] = featured["carousel"]
     common["show_speaking"] = SHOW_SPEAKING
+    common["show_tools"] = SHOW_TOOLS
 
     # home
     write("index.html", "home.html", active="home",
@@ -900,10 +904,10 @@ def build(base, relative=False, include_scheduled=False):
     # tools
     tool_list = {"@context": "https://schema.org", "@type": "ItemList", "name": "Shopfloor Matters tools and templates",
                  "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f"{SITE}/tools/{x['id']}", "name": x["title"]} for i, x in enumerate(tools)]}
-    write("tools/index.html", "tools-hub.html", active="tools", seo_title="Free smart factory and MES tools | Shopfloor Matters",
+    if SHOW_TOOLS: write("tools/index.html", "tools-hub.html", active="tools", seo_title="Free smart factory and MES tools | Shopfloor Matters",
           description="Free, vendor-neutral tools: a smart factory readiness check, a 1% OEE value calculator, a systems picker, a systems landscape builder, an MES vendor scorecard and Excel templates.",
           canonical=f"{SITE}/tools/", icons=ICONS, tools_js=True, og_image=f"{SITE}/images/og/page-advice.png", jsonld=[jsonld(tool_list)])
-    for x in tools:
+    for x in (tools if SHOW_TOOLS else []):
         if x["kind"] == "tool":
             ld = {"@context": "https://schema.org", "@type": "WebApplication", "name": x["title"], "url": f"{SITE}/tools/{x['id']}",
                   "description": x["blurb"], "applicationCategory": "BusinessApplication", "operatingSystem": "Any (runs in the browser)",
@@ -1027,7 +1031,7 @@ def build(base, relative=False, include_scheduled=False):
     urls += [(f"{SITE}/{c['slug']}", None) for c in CATEGORIES]
     urls += [(f"{SITE}/featured", None), (f"{SITE}/paths/", None)] + [(f"{SITE}/paths/{x['id']}", None) for x in paths]
     urls += [(f"{SITE}/faq/", None), (f"{SITE}/glossary/", None)] + [(f"{SITE}/glossary/{g['slug']}", None) for g in glossary]
-    urls += [(f"{SITE}/tools/", None)] + [(f"{SITE}/tools/{x['id']}", None) for x in tools]
+    if SHOW_TOOLS: urls += [(f"{SITE}/tools/", None)] + [(f"{SITE}/tools/{x['id']}", None) for x in tools]
     urls += [(f"{SITE}/for/", None)] + [(f"{SITE}/for/{a['id']}", None) for a in audiences]
     urls += ([(f"{SITE}/speaking", None)] if SHOW_SPEAKING else []) + [(f"{SITE}/ask", None), (f"{SITE}/compare/", None), (f"{SITE}/roles/", None)]
     urls += [(p["canonical"], p["updated"]) for p in posts]

@@ -68,7 +68,7 @@
         {% endfor %}
       </section>
       {% endif %}
-      {% if p.tool %}
+      {% if p.tool and show_tools %}
       <a class="tk-practice" href="{{ base }}/tools/{{ p.tool.id }}" style="--c:{{ p.tool.color }}">
         <span class="micro">Put it into practice</span>
         <b>{{ p.tool.title }}</b>

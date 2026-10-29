@@ -10,7 +10,7 @@ art: growth
 
 A useful place to start is one question: what would a 1% improvement in OEE mean for your business?
 
-Work it out for your bottleneck. More output from equipment you already own, and perhaps a capital project you no longer need. For most manufacturers it's a significant number. The [1% OEE calculator](/tools/oee-one-percent) does the sums for you.
+Work it out for your bottleneck. More output from equipment you already own, and perhaps a capital project you no longer need. For most manufacturers it's a significant number.
 
 Well-implemented programmes often go well beyond 1%. In Deloitte's 2025 Smart Manufacturing Survey, large manufacturers reported average improvements of 10% to 20% in production output and 10% to 15% in unlocked capacity from smart manufacturing initiatives ([Deloitte, 2025](https://www.deloitte.com/us/en/insights/industry/manufacturing-industrial-products/2025-smart-manufacturing-survey.html)).
 
@@ -63,7 +63,7 @@ MES/MOM often follows a similar pattern. Manufacturers usually invest for one or
 3. **Count the costs honestly**, including your own people's time and ongoing support.
 4. **Make it one decision for the whole programme**, and phase the delivery.
 
-[How to build an MES business case leadership will sign](/post/mes-business-case) walks through it in detail, with a [template](/tools/business-case-template). [What the research says about smart factory ROI](/post/smart-factory-roi-research) pulls together the wider evidence.
+[How to build an MES business case leadership will sign](/post/mes-business-case) walks through it in detail. [What the research says about smart factory ROI](/post/smart-factory-roi-research) pulls together the wider evidence.
 
 ## My view
 

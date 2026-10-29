@@ -20,12 +20,12 @@
       {% if a.caps %}
       <div class="au-box"><span class="micro">Capabilities that matter most</span>
         <ul>{% for c in a.caps %}<li><b>{{ c.name }}</b><span>{{ c.where }}</span></li>{% endfor %}</ul>
-        <a href="{{ base }}/tools/which-systems">Map your own in the systems picker →</a>
+        {% if show_tools %}<a href="{{ base }}/tools/which-systems">Map your own in the systems picker →</a>{% endif %}
       </div>
       {% endif %}
-      <div class="au-box"><span class="micro">Tools for this</span>
+      {% if show_tools %}<div class="au-box"><span class="micro">Tools for this</span>
         <ul class="au-tools">{% for t in a.tool_list %}<li><a href="{{ base }}/tools/{{ t.id }}" style="--c:{{ t.color }}">{{ t.title }}</a></li>{% endfor %}</ul>
-      </div>
+      </div>{% endif %}
       {% if a.term_list %}
       <div class="au-box"><span class="micro">Terms you'll hear</span>
         <div class="au-terms">{% for g in a.term_list %}<a href="{{ base }}/glossary/{{ g.slug }}" title="{{ g.short }}">{{ g.term }}</a>{% endfor %}</div>

@@ -247,16 +247,16 @@ pages:
     sections:
       - h: Where to start
         body: |
-          Be honest about where you are. Ask how long your plant takes to know what happened when a line stops. Most factories answer ["eventually" or "after the fact"](/post/time-to-truth), and that's fine. Take the [readiness check](/tools/readiness-check) with a couple of colleagues from different departments and compare answers.
+          Be honest about where you are. Ask how long your plant takes to know what happened when a line stops. Most factories answer ["eventually" or "after the fact"](/post/time-to-truth), and that's fine. Ask a couple of colleagues from different departments the same question and compare answers.
 
-          Then follow one order through the factory. Map what actually happens, not the procedure. It's the best requirements document you'll ever write, and the [swimlane template](/tools/swimlane-template) will help.
+          Then follow one order through the factory. Map what actually happens, not the procedure. It's the best requirements document you'll ever write. See [Map your processes](/post/manufacturing-process-mapping).
 
           My [first 90 days](/post/smart-factory-where-to-start) guide goes through it step by step.
       - h: Getting it funded
         body: |
-          Speak business, not features. Work out [what 1% of OEE is worth](/tools/oee-one-percent) to your site. Put a number on the paper. Then reframe the risk. The quality escape, the failed audit, the lost customer and the knowledge walking out of the door are all bigger risks than the investment.
+          Speak business, not features. Work out what 1% of OEE is worth to your site. Put a number on the paper. Then reframe the risk. The quality escape, the failed audit, the lost customer and the knowledge walking out of the door are all bigger risks than the investment.
 
-          Make it a company-wide decision rather than a series of site experiments, then phase the delivery. The [business case article](/post/mes-business-case) and the [template](/tools/business-case-template) give you the structure.
+          Make it a company-wide decision rather than a series of site experiments, then phase the delivery. The [business case article](/post/mes-business-case) gives you the structure.
       - h: Making it stick
         body: |
           People need as much attention as the technology in every programme, and they're the part most often underfunded. Bring operators in early and free up super users properly. Then be visible on the floor at go-live. Expect the first weeks to be messy. Every go-live has a learning curve.
@@ -288,7 +288,7 @@ pages:
         body: |
           Start with how the pieces fit. ERP plans and records the business. MES/MOM runs and records the shopfloor. Between them and the equipment sit the control and connectivity layers. [ISA-95](/post/isa-95-explained) gives you a shared vocabulary, and my [integration patterns](/post/isa95-integration-patterns) article covers how to connect it all.
 
-          Be deliberate about where each capability lives. The [systems picker](/tools/which-systems) starts from the problems rather than the products.
+          Be deliberate about where each capability lives.
       - h: Integration and master data
         body: |
           Decide who owns materials, BOMs, routings and work centres, and how changes flow. Most delays I've seen come from master data, not software. Read [the ERP master data MES needs](/post/erp-master-data-for-mes).

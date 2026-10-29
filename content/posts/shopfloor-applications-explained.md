@@ -105,7 +105,7 @@ That has real advantages. Each department gets a tool that's very good at its jo
 
 The trade-off shows up as the problems overlap. Quality needs to know what's running. Inventory needs to know whether a lot passed inspection. Maintenance needs production's downtime. The operator needs one screen, not five logins. Every boundary becomes an interface to own and retest, and some context gets lost at each one.
 
-The map below shows how the pieces fit together, with MOM covering production, quality, inventory and maintenance in the middle. To draw your own, try the [systems landscape tool](/tools/systems-landscape).
+The map below shows how the pieces fit together, with MOM covering production, quality, inventory and maintenance in the middle.
 
 ::block integration-map
 

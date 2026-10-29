@@ -132,7 +132,7 @@ Start by measuring it accurately. Then work on the biggest losses.
 
 **Speed and quality losses** often come from running below the target rate to avoid problems, or from problems caught too late. Accurate target cycle times make speed losses visible, and in-process checks with SPC at the line catch quality problems early. More in [SPC on the shopfloor](/post/spc-on-the-shopfloor).
 
-To put a value on improvement, try the [What is 1% of OEE worth?](/tools/oee-one-percent) calculator.
+To put a value on improvement, work out what a 1% improvement in OEE would be worth to your business.
 
 ## Summary
 

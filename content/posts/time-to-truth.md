@@ -101,7 +101,7 @@ It's common to find machine stops logged "right now" while quality checks still 
 
 The slowest area sets the pace. Fast machine data doesn't help much if the reason, the quality result or the person who should act on it arrives a day later.
 
-So ask the question area by area: process, data, systems, people, and analytics. The [readiness check](/tools/readiness-check) does exactly that, and gives you a time to truth for each one.
+So ask the question area by area: process, data, systems, people, and analytics.
 
 ## How to use it
 
