@@ -28,6 +28,7 @@ from jinja2 import Environment, FileSystemLoader
 ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / "dist"
 SITE = "https://www.shopfloormatters.com"
+SHOW_SPEAKING = False  # speaking page held back for launch; review on the speaking-page branch
 LINKEDIN = "https://www.linkedin.com/in/mattjbarber/"
 # Social profiles shown in the newsletter box. Leave a url empty to hide that network.
 SOCIALS = [
@@ -532,7 +533,6 @@ def write_llms(posts, paths, glossary, tools=(), audiences=()):
            f"- [Glossary]({SITE}/glossary/): definitions of MES, MOM, OEE, ISA-95, UNS and other shopfloor terms",
            f"- [Tools]({SITE}/tools/): free, vendor-neutral tools and templates",
            f"- [About Matt Barber]({SITE}/about): background and credentials",
-           f"- [Speaking]({SITE}/speaking): talk topics, bio and recent appearances",
            f"- [Podcasts, interviews and press]({SITE}/featured)",
            f"- [Full text of every article]({SITE}/llms-full.txt)", ""]
     for cat, ps in by_cat.items():
@@ -723,6 +723,7 @@ def build(base, relative=False, include_scheduled=False):
     common["paths_json"] = json.dumps([{"id": p["id"], "title": p["title"], "slugs": p["slugs"],
                                         "titles": [st["post"]["short"] for st in p["stations"]]} for p in paths], separators=(",", ":"))
     common["featured_carousel"] = featured["carousel"]
+    common["show_speaking"] = SHOW_SPEAKING
 
     # home
     write("index.html", "home.html", active="home",
@@ -1011,7 +1012,7 @@ def build(base, relative=False, include_scheduled=False):
 
     # speaking and Ask Matt
     sp = yaml.safe_load((ROOT / "content" / "speaking.yaml").read_text(encoding="utf-8"))
-    write("speaking.html", "speaking.html", active="about", seo_title="Speaking: Matt Barber on MES, the smart factory and shopfloor AI | Shopfloor Matters",
+    if SHOW_SPEAKING: write("speaking.html", "speaking.html", active="about", seo_title="Speaking: Matt Barber on MES, the smart factory and shopfloor AI | Shopfloor Matters",
           description="Invite Matt Barber to speak on the smart factory, shopfloor AI and MES/MOM. Talk topics, formats, recent appearances, bio and photo.",
           canonical=f"{SITE}/speaking", sp=sp, appearances=featured["items"][:6], tools_js=True, og_image=f"{SITE}/images/og/page-about.png",
           jsonld=[jsonld({"@context": "https://schema.org", "@type": "ProfilePage", "url": f"{SITE}/speaking", "mainEntity": person_full})])
@@ -1028,7 +1029,7 @@ def build(base, relative=False, include_scheduled=False):
     urls += [(f"{SITE}/faq/", None), (f"{SITE}/glossary/", None)] + [(f"{SITE}/glossary/{g['slug']}", None) for g in glossary]
     urls += [(f"{SITE}/tools/", None)] + [(f"{SITE}/tools/{x['id']}", None) for x in tools]
     urls += [(f"{SITE}/for/", None)] + [(f"{SITE}/for/{a['id']}", None) for a in audiences]
-    urls += [(f"{SITE}/speaking", None), (f"{SITE}/ask", None), (f"{SITE}/compare/", None), (f"{SITE}/roles/", None)]
+    urls += ([(f"{SITE}/speaking", None)] if SHOW_SPEAKING else []) + [(f"{SITE}/ask", None), (f"{SITE}/compare/", None), (f"{SITE}/roles/", None)]
     urls += [(p["canonical"], p["updated"]) for p in posts]
     sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u, d in urls:

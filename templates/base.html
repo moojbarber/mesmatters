@@ -85,7 +85,7 @@
         <h4>Connect</h4>
         <ul>
           <li><a href="{{ base }}/ask">Ask Matt</a></li>
-          <li><a href="{{ base }}/speaking">Speaking</a></li>
+          {% if show_speaking %}<li><a href="{{ base }}/speaking">Speaking</a></li>{% endif %}
           <li><a href="{{ base }}/about">About Matt</a></li>
           <li><a href="{{ base }}/subscribe">Newsletter</a></li>
           <li><a href="{{ base }}/contact">Contact</a></li>
