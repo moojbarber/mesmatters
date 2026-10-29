@@ -199,7 +199,7 @@ food-manufacturing-mes-barriers:
   summary: "Food MES projects depend on the people as much as the technology. The barriers I see most are underestimating the people and change management, starting too big, underestimating master data such as recipes and specifications, and choosing a platform that can't grow. Involve operators early and start on one line, with the data foundation right first."
 
 mes-implementation-team:
-  summary: "MES/MOM projects succeed or fail on the people as much as the software. You need an executive sponsor who removes barriers, a capable project manager, IT and operations involved from the start, and operators shaping the design. Add external expertise where internal experience is thin, and plan for change from day one."
+  summary: "MES/MOM projects succeed or fail on the people as much as the software. You need an executive sponsor who removes barriers, a capable project manager, IT and operations involved from the start, and operators shaping the design. Work closely with your vendor or systems integrator throughout, and plan for change from day one."
   faq:
     - q: "Who should be on an MES implementation team?"
       a: "An executive sponsor, a dedicated project manager, IT, and representatives from production, quality, logistics and maintenance. Operators and other experienced shopfloor people should be involved in design and testing. Most teams also include the vendor or a systems integrator, and sometimes an independent consultant."

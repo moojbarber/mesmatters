@@ -10,7 +10,7 @@ art: network
 
 An MES/MOM implementation touches almost every part of a manufacturing operation. The software matters, and so does the team behind it. Get both right and the project delivers.
 
-This article covers the people and roles that matter most, and what successful project teams tend to have in common.
+This article covers the people you need on your side, and what successful project teams tend to have in common.
 
 ## Identify the stakeholders and decision makers early
 
@@ -27,6 +27,10 @@ IT is responsible for the technical side: deployment options, infrastructure, in
 ### Operations
 
 Representatives from production, quality, logistics and maintenance. These are the people whose work changes most, and who know how the process really runs. Operators in particular hold detailed process knowledge that rarely appears in procedures. Without their input, requirements tend to describe the process on paper rather than the process on the shopfloor.
+
+### Your vendor or systems integrator
+
+And of course, you'll be working closely with your vendor's or systems integrator's team throughout. The rest of this article is about the people on your side.
 
 ## The project manager
 
@@ -47,11 +51,11 @@ Internal process knowledge is often overlooked. Experienced people on the shopfl
 
 They don't all need to be on the core team. Involve them when processes are being designed and tested, and make it easy for them to raise questions or suggestions. It improves the requirements and builds support for the change. It also lets external partners spend their time where their expertise adds the most.
 
-## External expertise
+## Choosing your delivery partner
 
-Where MES/MOM experience is thin internally, external help fills the gap. That can be an independent consultant, or the vendor's own team and its systems integration partners.
+Your vendor or systems integrator brings the product knowledge and implementation experience. Where your own MES/MOM experience is thin, an independent consultant can also help on your side.
 
-When choosing external support, look for:
+When choosing who you'll work with, look for:
 
 - A track record of MES/MOM delivery, ideally in your industry
 - Hands-on implementation experience, not only advisory work
@@ -69,8 +73,9 @@ Define each team member's role and responsibilities at the start, and share them
 Some resistance is normal in any implementation. Address it directly:
 
 - **Explain the reasons.** Show how the project supports business goals, and how it makes daily work easier. The executive sponsor can help carry that message.
-- **Involve people.** Ask for feedback, include users in testing and pilots, and act on what they say.
+- **Involve people.** Ask for feedback, include users in testing, and act on what they say.
 - **Train properly.** Make sure people have the skills and support to use the new system with confidence.
+- **Give detractors a stake.** Find the people most likely to resist, particularly anyone who built the system being replaced, and give them real responsibility for making the new one succeed.
 - **Celebrate progress.** Recognise early wins publicly, so people can see the change working.
 
 More in [Resistance to change is guaranteed. Plan for it.](/post/manufacturing-change-management)
@@ -99,6 +104,6 @@ Related reading: [How long does an MES implementation take?](/post/how-long-does
 
 ## My view
 
-In my experience, the team you build matters as much to the success of an MES deployment as the platform you choose. The strongest programmes I've seen are defined at enterprise level, with a centre of excellence for global standards and stakeholders at every level across operations and IT. I can't stress enough how important it is to involve operators: they're the people the system is meant to help, and they know how the process really runs.
+In my experience, the team you build matters as much to the success of an MES deployment as the platform you choose. The strongest programmes are defined at enterprise level, with a centre of excellence for global standards and stakeholders at every level across operations and IT. I can't stress enough how important it is to involve operators: they're the people the system is meant to help, and they know how the process really runs.
 
 Who on your current or next project would you least like to lose?
