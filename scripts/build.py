@@ -30,7 +30,7 @@ DIST = ROOT / "dist"
 SITE = "https://www.shopfloormatters.com"
 SHOW_SPEAKING = False  # speaking page held back for launch; review on the speaking-page branch
 # Tools are brought back one at a time as they're reviewed. Full set is on the tools branch.
-ENABLED_TOOLS = ["readiness-check"]
+ENABLED_TOOLS = []
 SHOW_TOOLS = bool(ENABLED_TOOLS)
 LINKEDIN = "https://www.linkedin.com/in/mattjbarber/"
 # Social profiles shown in the newsletter box. Leave a url empty to hide that network.

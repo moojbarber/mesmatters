@@ -247,7 +247,7 @@ pages:
     sections:
       - h: Where to start
         body: |
-          Be honest about where you are. Ask how long your plant takes to know what happened when a line stops. Most factories answer ["eventually" or "after the fact"](/post/time-to-truth), and that's fine. Take the [readiness check](/tools/readiness-check) with a couple of colleagues from different departments and compare answers.
+          Be honest about where you are. Ask how long your plant takes to know what happened when a line stops. Most factories answer ["eventually" or "after the fact"](/post/time-to-truth), and that's fine. Ask a couple of colleagues from different departments the same question and compare answers.
 
           Then follow one order through the factory. Map what actually happens, not the procedure. It's the best requirements document you'll ever write. See [Map your processes](/post/manufacturing-process-mapping).
 
