@@ -30,7 +30,7 @@ Representatives from production, quality, logistics and maintenance. These are t
 
 ### Your vendor or systems integrator
 
-And of course, you'll be working closely with your vendor's or systems integrator's team throughout. The rest of this article is about the people on your side.
+And of course, you'll be working closely with your vendor's or systems integrator's team throughout.
 
 ## The project manager
 
