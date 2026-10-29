@@ -27,7 +27,6 @@
     { id: 'eam', name: 'EAM', sub: 'Asset lifecycle', side: 'R' },
     { id: 'scada', name: 'SCADA', sub: 'Supervisory control', side: 'R' },
     { id: 'hist', name: 'Historian', sub: 'Time-series data', side: 'R' },
-    { id: 'uns', name: 'UNS', sub: 'Unified namespace', side: 'R' },
     { id: 'xls', name: 'Spreadsheets', sub: 'The unofficial systems', side: 'R' }
   ];
   var LINKS = [['off', 'Not used'], ['part', 'Part of MOM platform'], ['alone', 'Used, not connected'], ['erp', 'Connected to ERP'], ['mom', 'Connected to MOM'], ['both', 'Connected to both']];
@@ -254,7 +253,6 @@
     if (a('wms') !== 'off') add('idea', 'WMS and the line', 'A WMS is the right tool for complex warehousing and distribution. Drive line-side replenishment from what the shopfloor is about to consume.', 'wms-vs-mes-inventory', 'WMS vs MES vs ERP');
     if (a('lims') === 'erp' || a('lims') === 'alone') add('watch', 'Lab results reach the line late', 'Results that only go to ERP, or nowhere, can\'t hold or release a batch in real time. Connect the LIMS to MOM, or let MOM handle sampling if the lab is simple.', 'lims-and-mes', 'LIMS and MES');
     if (a('hist') !== 'off' && hasMom()) add('idea', 'A historian alongside MOM', 'MES/MOM reads time-series values from the machines, often over OPC UA, and puts them in context. Normally you don\'t need a historian as well. There are rare cases where you need both, so be clear what the historian does that MOM doesn\'t.', 'historian-vs-mes', 'Historian vs MES');
-    if (a('uns') !== 'off') add('idea', 'A unified namespace', 'A UNS can make data easier to share across systems, but it needs strong governance and someone to own it. Point-to-point is often the safest option, so be clear what the UNS solves that direct connections don\'t.', 'unified-namespace-uns', 'Unified namespace');
     if (a('aps') === 'erp' && hasMom()) add('idea', 'Schedule from reality', 'Feed your APS with actual progress from the shopfloor, so each new schedule starts from what really happened.', 'aps-vs-mes-scheduling', 'APS vs ERP scheduling');
     if (separate('cw') && hasMom() && a('cw') !== 'mom' && a('cw') !== 'both') add('watch', 'Frontline apps without the line', 'A connected worker app that isn\'t linked to the shopfloor system knows the order, but not what the line is actually doing.', 'connected-worker-one-app-not-five', 'Connected worker');
     if (a('xls') !== 'off') add('watch', 'The spreadsheets are a system too', 'If people rely on them, they hold data nobody else can see. Find out what they\'re used for. It often shows exactly what\'s missing.', 'manufacturing-process-mapping', 'Map your processes');
