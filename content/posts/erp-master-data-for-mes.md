@@ -23,7 +23,8 @@ Most ERP implementations had enough to worry about. Often the routing detail was
 
 But MES/MOM needs to know things like:
 
-- Which machines or lines each operation can actually run on
+- The individual machine in the line that each operation runs on, not just the work centre
+- Semi-finished material numbers at the right level of detail, as material moves through the operations
 - Realistic cycle times and setup times, by product and machine
 - Which materials are consumed at which operation, not just in the order overall
 - Units of measure that convert correctly between operations
@@ -39,11 +40,11 @@ The principle is simple. The system of record for each piece of master data need
 
 Fix it at the source, once, and let it flow to everyone who needs it. Where a specialised application needs extra detail, add it there.
 
-## Plan for it early
+## Plan for it early, ideally with your ERP project
 
-The most successful projects I've seen don't assume their data is MES-ready. They invest time to clean and standardise materials, BOMs and routings early, rather than trying to fix it later in the project.
+Successful projects don't assume their data is MES-ready. They invest time to clean and standardise materials, BOMs and routings early, rather than trying to fix it later in the project.
 
-If you're implementing or upgrading ERP, and you're looking ahead to MES/MOM, think about this now. Otherwise you'll do the master data work twice.
+If you're implementing or upgrading ERP, plan MES/MOM alongside it, even if MES/MOM goes live later. Design the master data once, at the level of detail both need. Otherwise you'll rework it later, and master data rework takes time, costs money and has a knock-on impact on other modelling decisions, such as costing and planning.
 
 ## Don't rush it
 
