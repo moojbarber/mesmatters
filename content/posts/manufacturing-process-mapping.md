@@ -11,13 +11,11 @@ Before you buy software, evaluate a vendor or connect a single machine, you need
 
 Otherwise you'll just digitise a mess. And if you digitise a broken process, you get a faster broken process.
 
-This is the work most manufacturers skip. It's also the work that makes the biggest difference.
+It's easy to skip this work, and it makes a big difference.
 
 ## Same product, different process
 
-Here's something I've seen in almost every manufacturer.
-
-Two factories making the same product, using different processes. Not slightly different: different routings, different quality checks, different changeover steps, even different words for the same thing.
+It's very common to find two factories making the same product, using different processes. Not slightly different: different routings, different quality checks, different changeover steps, even different words for the same thing.
 
 It's not just between sites. Inside one factory, day shift and night shift often do things differently. Both acceptable, so nobody questions it. But the data isn't comparable, and nobody can say which way is better.
 
@@ -52,7 +50,7 @@ Map with operators, quality technicians, maintenance engineers and logistics, no
 
 They know the workarounds. They know the tribal knowledge. They know the step that's in the procedure but never happens, and the one that always happens but isn't written down anywhere.
 
-And be honest. If the map is messy, that's what you're going to fix. A perfect-looking diagram of a process that doesn't exist is worse than useless.
+And be honest. If the map is messy, that's what you're going to fix. A perfect-looking diagram of a process that doesn't exist is counterproductive.
 
 ## Then question everything
 
