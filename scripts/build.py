@@ -28,8 +28,10 @@ from jinja2 import Environment, FileSystemLoader
 ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / "dist"
 SITE = "https://www.shopfloormatters.com"
-SHOW_SPEAKING = False
-SHOW_TOOLS = False  # tools held back for launch; review on the tools branch  # speaking page held back for launch; review on the speaking-page branch
+SHOW_SPEAKING = False  # speaking page held back for launch; review on the speaking-page branch
+# Tools are brought back one at a time as they're reviewed. Full set is on the tools branch.
+ENABLED_TOOLS = ["readiness-check"]
+SHOW_TOOLS = bool(ENABLED_TOOLS)
 LINKEDIN = "https://www.linkedin.com/in/mattjbarber/"
 # Social profiles shown in the newsletter box. Leave a url empty to hide that network.
 SOCIALS = [
@@ -205,6 +207,8 @@ def load_tools(posts):
     by_slug = {p["slug"]: p for p in posts}
     tools = []
     for t in data["tools"]:
+        if t["id"] not in ENABLED_TOOLS and t["id"] != "which-systems":
+            continue
         t = dict(t)
         f = ROOT / "content" / "tools" / f"{t['id']}.yaml"
         t["data"] = yaml.safe_load(f.read_text(encoding="utf-8")) if f.exists() else None
@@ -228,11 +232,13 @@ def load_tools(posts):
             js = {"n": sum(len(g["questions"]) for g in d["groups"])}
         t["json"] = json.dumps(js, separators=(",", ":")).replace("</", "<\\/") if js is not None else "null"
         tools.append(t)
+    caps_src = next((t for t in tools if t["id"] == "which-systems"), None)
+    tools = [t for t in tools if t["id"] in ENABLED_TOOLS]
     for t in tools:
         for s in t.get("posts", []):
             if s in by_slug and not by_slug[s].get("tool"):
                 by_slug[s]["tool"] = t
-    return tools
+    return tools, caps_src
 
 
 def load_audiences(posts, glossary, tools, caps, base):
@@ -627,7 +633,7 @@ def build(base, relative=False, include_scheduled=False):
     # only ship legacy images that are actually referenced
     seo = yaml.safe_load((ROOT / "content" / "seo.yaml").read_text(encoding="utf-8")) or {}
     blocks = {p.stem: p.read_text(encoding="utf-8") for p in (ROOT / "content" / "blocks").glob("*.html")}
-    if not SHOW_TOOLS:
+    if "systems-landscape" not in ENABLED_TOOLS:
         blocks = {k: re.sub(r'\s*<div class="imap-cta">.*?</div>', "", v, flags=re.S) for k, v in blocks.items()}
     posts = load_posts(base, blocks, seo, include_scheduled)
     tagd = yaml.safe_load((ROOT / "content" / "tags.yaml").read_text(encoding="utf-8"))
@@ -701,8 +707,8 @@ def build(base, relative=False, include_scheduled=False):
     glossary = load_glossary(posts)
     autolink_glossary(posts, glossary, base)
     glossary_mentions(posts, glossary)
-    tools = load_tools(posts)
-    caps = next(t for t in tools if t["id"] == "which-systems")["data"]["capabilities"]
+    tools, _caps_src = load_tools(posts)
+    caps = _caps_src["data"]["capabilities"]
     audiences = load_audiences(posts, glossary, tools, caps, base)
     # which roles each article and tool is recommended for (from the role explorer)
     _ro = yaml.safe_load((ROOT / "content" / "roles.yaml").read_text(encoding="utf-8"))
@@ -728,6 +734,7 @@ def build(base, relative=False, include_scheduled=False):
     common["featured_carousel"] = featured["carousel"]
     common["show_speaking"] = SHOW_SPEAKING
     common["show_tools"] = SHOW_TOOLS
+    common["enabled_tools"] = ENABLED_TOOLS
 
     # home
     write("index.html", "home.html", active="home",

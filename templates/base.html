@@ -76,9 +76,7 @@
         <h4>Use</h4>
         <ul>
           <li><a href="{{ base }}/tools/">All tools</a></li>
-          <li><a href="{{ base }}/tools/readiness-check">Readiness check</a></li>
-          <li><a href="{{ base }}/tools/oee-one-percent">What is 1% of OEE worth?</a></li>
-          <li><a href="{{ base }}/tools/vendor-scorecard">MES vendor scorecard</a></li>
+          {% for t in tools[:3] %}<li><a href="{{ base }}/tools/{{ t.id }}">{{ t.short or t.title }}</a></li>{% endfor %}
         </ul>
       </div>{% endif %}
       <div>
