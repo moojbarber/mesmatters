@@ -13,9 +13,9 @@ The honest answer is: it depends. But that's not very helpful, so let me be more
 
 ## The typical range
 
-For a first site, most MES/MOM implementations take somewhere between six and eighteen months from kick-off to go-live.
+For a first site, my answer is between six and twelve months from kick-off to go-live.
 
-When I ran a poll on LinkedIn a while ago, the most common experience among the people who answered was 12 to 18 months for the first factory. A focused deployment, covering production and quality at one site, can be done in around six months. A broad programme covering several pillars, complex integration and many lines takes longer.
+Other people's experience varies. When I ran a poll on LinkedIn a while ago, the most common answer for the first factory was 12 to 18 months. A focused deployment, covering production and quality at one site, can be done in around six months. A broad programme covering several pillars, complex integration and many lines takes longer.
 
 Subsequent sites are usually much faster, especially if you build a template, and several sites can be done in parallel. More on that below, and in [Rolling out across sites](/post/mes-multi-site-rollout).
 
