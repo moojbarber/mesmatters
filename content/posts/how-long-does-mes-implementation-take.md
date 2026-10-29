@@ -43,15 +43,15 @@ The key factors were:
 
 None of those are about the software being installed faster. They're about preparation, people and scope.
 
-## What makes projects run long
+## What makes projects overrun?
 
 The usual culprits:
 
-- **Scope creep.** Trying to implement every suggestion, especially when recreating an old or homegrown system.
+- **Scope creep.** Trying to implement every suggestion, especially when recreating an old or homegrown system. See [Replacing a homegrown MES](/post/replacing-a-homegrown-mes).
 - **Master data.** Discovering halfway through that routings and BOMs aren't detailed enough. See [Your ERP master data isn't ready for MES](/post/erp-master-data-for-mes).
-- **Under-resourcing.** The people the project needs are already the busiest in the business.
-- **Unchallenged processes.** Customising to match every existing quirk instead of simplifying first.
-- **Integration surprises.** Legacy equipment and systems that are harder to connect than expected.
+- **Under-resourcing.** The people the project needs are already the busiest in the business. See [Building the right team](/post/mes-implementation-team).
+- **Unchallenged processes.** Customising to match every existing quirk instead of simplifying first. See [Map your processes](/post/manufacturing-process-mapping) and [Configure, don't customise](/post/configure-dont-customise).
+- **Integration surprises.** Legacy equipment and systems that are harder to connect than expected. See [Connecting MES/MOM to everything else](/post/isa95-integration-patterns).
 
 ## Big bang or phased?
 
@@ -59,7 +59,7 @@ Phasing the delivery is usually the sensible way to run it. That might mean prod
 
 What I'd avoid is treating the first site as a trial that has to earn the next. Make the decision once, at company level, then plan the phases. A strategic decision gets real executive attention, and executives who've committed to it make sure it succeeds. It also makes the programme company-wide, so you get standards and benchmarking across sites, and a stronger centre of excellence. And nobody has to persuade each factory to take it on, because it's the company's strategic direction.
 
-Sometimes a bigger bang is right, depending on the situation. Either way, think big and start pragmatically. Have the end state in mind without trying to get there in one leap.
+Sometimes a bigger bang is right, depending on the situation. Either way, think big and start pragmatically. Have the end state in mind even if you are starting smaller.
 
 ## Later sites, in parallel
 
