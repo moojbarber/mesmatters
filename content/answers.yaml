@@ -293,7 +293,7 @@ ebom-mbom-as-built:
   summary: "The engineering BOM lives in PLM, the manufacturing BOM usually lives in ERP, each production order gets its own copy as the order BOM, and MES/MOM records the as-built: exactly which lots and serials were used. Most integration arguments come from not agreeing who owns which stage."
 
 erp-master-data-for-mes:
-  summary: "ERP master data is usually set up for costing, and MES/MOM needs more: which machines each operation runs on, realistic cycle and setup times, material by operation, and quality checks by step. Get it right in ERP first so every system benefits, add extra detail in specialised applications where needed, and plan for it early rather than discovering the gap halfway through."
+  summary: "ERP master data is usually set up for costing, and MES/MOM needs more detail. ERP often has a work centre where MES/MOM needs the individual machine in the line, and it doesn't always have semi-finished material numbers at the right level as material moves through the operations. Get it right in ERP first so every system benefits, and plan MES/MOM alongside any ERP implementation or upgrade, so you don't have to rework the master data later."
 
 esg-needs-shopfloor-data:
   summary: "ESG reporting increasingly needs evidence, and much of it starts on the shopfloor: energy per machine and product, idle consumption, scrap, yield and water. MES/MOM already knows what was made, where and for which order. Add machine-level energy data and sustainability becomes operational efficiency with a reporting benefit."

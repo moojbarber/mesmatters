@@ -50,6 +50,6 @@ If you're implementing or upgrading ERP, plan MES/MOM alongside it, even if MES/
 
 Master data isn't glamorous. Everyone wants to get to real-time OEE, automated traceability and SPC. But those all sit on top of the basics.
 
-Rushing data preparation to get to the exciting functionality is one of the most common causes of delay and rework I see. Get the data right first. Everything else follows.
+Get the data right first. Everything else follows.
 
 Where do you see the most confusion around master data between ERP and the shopfloor?
