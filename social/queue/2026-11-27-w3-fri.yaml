@@ -42,7 +42,7 @@ x:
   - 'Four questions to find your first shopfloor AI use case:
 
 
-    Which failure would you most like to see coming?
+    Which failure would you like to see coming?
 
     Which defect costs you most?
 
@@ -51,7 +51,7 @@ x:
     Which question do new starters ask most?
 
 
-    Then check the data it needs. If it''s missing, build it alongside the AI.'
+    Then check the data. If it''s missing, build it alongside the AI.'
   needs_text: false
 instagram:
   at: '18:30'

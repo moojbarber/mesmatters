@@ -95,7 +95,7 @@ Either way, you can start now. GenAI can work on the procedures, manuals, mainte
 Which of the four would make the biggest difference in your factory?
 
 #ShopfloorAI #SmartManufacturing""",
-x=["Four questions to find your first shopfloor AI use case:\n\nWhich failure would you most like to see coming?\nWhich defect costs you most?\nWhich report takes hours every week?\nWhich question do new starters ask most?\n\nThen check the data it needs. If it's missing, build it alongside the AI."],
+x=["Four questions to find your first shopfloor AI use case:\n\nWhich failure would you like to see coming?\nWhich defect costs you most?\nWhich report takes hours every week?\nWhich question do new starters ask most?\n\nThen check the data. If it's missing, build it alongside the AI."],
 ig_format="Carousel, 6 slides",
 slides=[("cover", "Start with a decision", "Four questions to find your first AI use case"),
         ("num", "1", "Which failure would you most like to see coming?"),
