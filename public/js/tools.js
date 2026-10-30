@@ -159,7 +159,7 @@
     var s = store('oee2') || {};
     $$('input,select', of).forEach(function (i) { if (s[i.name] != null) i.value = s[i.name]; });
     var last;
-    function money(v, cur) { var a = Math.abs(v); var t = a >= 1e9 ? (a / 1e9).toFixed(2) + 'bn' : a >= 1e6 ? (a / 1e6).toFixed(a >= 1e7 ? 1 : 2) + 'm' : a >= 1e4 ? Math.round(a / 1e3) + 'k' : Math.round(a).toLocaleString('en-GB'); return (v < 0 ? '−' : '') + cur + t; }
+    function money(v, cur) { var a = Math.abs(v); var t = a >= 1e9 ? (a / 1e9).toFixed(2) + 'bn' : a >= 1e6 ? (a / 1e6).toFixed(a >= 1e8 ? 0 : a >= 1e7 ? 1 : 2) + 'm' : a >= 1e4 ? Math.round(a / 1e3) + 'k' : Math.round(a).toLocaleString('en-GB'); return (v < 0 ? '−' : '') + cur + t; }
     function num(v) { var n = parseFloat(v); return isNaN(n) ? null : Math.max(0, n); }
     function val(o, pct) {
       var x = pct / 100, made = o.rev * o.made / 100;
