@@ -166,12 +166,13 @@
       var margin = o.cm != null ? o.cm / 100 : (o.rev ? o.gp / o.rev : 0);
       var cap = made * x;
       var sold = cap * (o.sell / 100) * margin;
-      var save = o.conv != null ? o.conv * (x / (1 + x)) * (1 - o.sell / 100) : 0;
-      return { cap: cap, sold: sold, save: save, total: sold + save, margin: margin };
+      var conv = o.conv != null ? o.conv : Math.max(0, (o.rev - o.gp) - o.rev * o.mat / 100);
+      var save = conv * (x / (1 + x)) * (1 - o.sell / 100);
+      return { cap: cap, sold: sold, save: save, total: sold + save, margin: margin, conv: conv };
     }
     function read() {
       var o = { cur: of.cur.value };
-      ['rev', 'gp', 'imp', 'made', 'sell'].forEach(function (k) { o[k] = num(of[k].value) || 0; });
+      ['rev', 'gp', 'imp', 'made', 'sell', 'mat'].forEach(function (k) { o[k] = num(of[k].value) || 0; });
       o.cm = num(of.cm.value); o.conv = num(of.conv.value);
       o.made = Math.min(100, o.made); o.sell = Math.min(100, o.sell); o.imp = Math.min(25, Math.max(1, o.imp || 1));
       return o;
@@ -188,16 +189,17 @@
       $('[data-oc=revt]').textContent = money(o.rev, o.cur);
       $('[data-oc=sell]').textContent = money(v.sold, o.cur);
       $('[data-oc=cap]').textContent = money(v.cap, o.cur);
-      if (o.conv == null && o.sell >= 100) { $('[data-oc=save]').textContent = money(0, o.cur); $('[data-oc=savel]').textContent = 'from costs you no longer incur, as you can sell it all'; }
-      else if (o.conv == null) { $('[data-oc=save]').textContent = '–'; $('[data-oc=savel]').textContent = o.sell < 100 ? 'add conversion costs to value the output you can’t sell' : 'from costs you no longer incur'; }
-      else { $('[data-oc=save]').textContent = money(v.save, o.cur); $('[data-oc=savel]').textContent = 'from costs you no longer incur'; }
+      $('[data-oc=save]').textContent = money(v.save, o.cur);
+      $('[data-oc=savel]').textContent = o.sell >= 100 ? 'from costs you no longer incur, as you can sell it all' : 'from costs you no longer incur';
+      of.cm.placeholder = 'Uses your gross margin: ' + (o.rev ? Math.round(o.gp / o.rev * 1000) / 10 : 0) + '%';
+      of.conv.placeholder = 'Estimated: ' + money(v.conv, o.cur);
       var rows = [1, 5, 10, 25]; if (rows.indexOf(o.imp) < 0) { rows.push(o.imp); rows.sort(function (a, b) { return a - b; }); }
       $('[data-oc=table]').innerHTML = rows.map(function (p) {
         var r = val(o, p); return '<tr' + (p === o.imp ? ' class="on"' : '') + '><td>+' + p + '%</td><td>' + money(r.cap, o.cur) + '</td><td><b>' + money(r.total, o.cur) + '</b></td></tr>';
       }).join('');
     }
     csvRows = function () {
-      var o = last.o, rows = [['Shopfloor Matters: what is 1% of OEE worth?', new Date().toISOString().slice(0, 10)], ['Annual revenue', o.rev], ['Gross profit', o.gp], ['Share of revenue from products you make %', o.made], ['Share of extra output you could sell %', o.sell], ['Contribution margin %', o.cm == null ? 'not entered (gross margin used)' : o.cm], ['Annual conversion costs', o.conv == null ? 'not entered' : o.conv], [], ['Improvement %', 'Extra capacity (sales value)', 'From selling more', 'From costs no longer incurred', 'Total per year']];
+      var o = last.o, rows = [['Shopfloor Matters: what is 1% of OEE worth?', new Date().toISOString().slice(0, 10)], ['Annual revenue', o.rev], ['Gross profit', o.gp], ['Share of revenue from products you make %', o.made], ['Share of extra output you could sell %', o.sell], ['Contribution margin %', o.cm == null ? 'not entered (gross margin used)' : o.cm], ['Materials as % of revenue', o.mat], ['Annual conversion costs', o.conv == null ? 'estimated: ' + Math.round(last.v.conv) : o.conv], [], ['Improvement %', 'Extra capacity (sales value)', 'From selling more', 'From costs no longer incurred', 'Total per year']];
       [1, 5, 10, 25].concat([1, 5, 10, 25].indexOf(o.imp) < 0 ? [o.imp] : []).sort(function (a, b) { return a - b; }).forEach(function (p) { var v = val(o, p); rows.push([p, Math.round(v.cap), Math.round(v.sold), Math.round(v.save), Math.round(v.total)]); });
       return rows;
     };

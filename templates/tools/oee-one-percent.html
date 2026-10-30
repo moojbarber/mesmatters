@@ -27,11 +27,13 @@
         <input id="oc-imp" name="imp" type="range" min="1" max="25" step="1" value="1"><small>Slide from 1% to 25%. More good output from the equipment and people you already have.</small></label>
     </fieldset>
     <fieldset>
-      <legend>Make it more accurate (optional)</legend>
-      <label>Share of revenue from products you make <span class="u">%</span><input name="made" type="number" min="0" max="100" step="any" value="100"><small>Leave out services and goods you buy in and resell. The segment notes in the annual report often show the split.</small></label>
-      <label>Share of the extra output you could sell <span class="u">%</span><input name="sell" type="number" min="0" max="100" step="any" value="100"><small>100% if demand outstrips capacity. 0% if you can't sell another unit. Sales will have a view.</small></label>
-      <label>Contribution margin <span class="u">%</span><input name="cm" type="number" min="0" max="100" step="any" placeholder="Uses gross margin if left blank"><small>Revenue minus variable costs. Finance will have it. It's usually higher than gross margin, because gross margin includes fixed factory costs.</small></label>
-      <label>Annual conversion costs <input name="conv" type="number" inputmode="decimal" min="0" step="any" placeholder="Optional"><small>Production labour, energy, maintenance and factory overheads, excluding materials. Staff costs in the notes to the accounts are a starting point. Finance can give you the production share.</small></label>
+      <legend>Make it more accurate</legend>
+      <p class="oc-hint">These start at typical values. Change any you know.</p>
+      <label>Share of revenue from products you make <span class="u">%</span><input name="made" type="number" min="0" max="100" step="any" value="100"><small>Default 100%. Leave out services and goods you buy in and resell. The segment notes in the annual report often show the split.</small></label>
+      <label>Share of the extra output you could sell <span class="u">%</span><input name="sell" type="number" min="0" max="100" step="any" value="50"><small>Default 50%, a neutral starting point. Use 100% if demand outstrips capacity, and 0% if you can't sell another unit. Sales will have a view.</small></label>
+      <label>Contribution margin <span class="u">%</span><input name="cm" type="number" min="0" max="100" step="any" placeholder="Uses your gross margin" data-ph="gm"><small>Defaults to your gross margin, which is cautious. Contribution margin (revenue minus variable costs) is usually higher, because gross margin includes fixed factory costs. Finance will have it.</small></label>
+      <label>Materials as a share of revenue <span class="u">%</span><input name="mat" type="number" min="0" max="100" step="any" value="55"><small>Default 55%. In US Census data, materials run from about 44% of shipments in chemicals to about 66% in transport equipment, with food around 61%. It's used to estimate your conversion costs: cost of sales minus materials.</small></label>
+      <label>Annual conversion costs <input name="conv" type="number" inputmode="decimal" min="0" step="any" placeholder="Estimated" data-ph="conv"><small>Production labour, energy, maintenance and factory overheads, excluding materials. Estimated from the figures above unless you enter your own. Finance can give you the real number.</small></label>
     </fieldset>
   </form>
 
@@ -56,7 +58,7 @@
   <summary>How it's calculated</summary>
   <p>An improvement of X% in OEE gives X% more good output from the same equipment and hours.</p>
   <p><b>Selling more:</b> revenue × share you make × X% × share you could sell × margin. It uses contribution margin if you enter it, and gross margin if you don't.</p>
-  <p><b>Costs you no longer incur:</b> the output you can't sell is made in less time instead. That saves conversion costs × X ÷ (100 + X), on the share you can't sell. It only shows when you enter conversion costs.</p>
+  <p><b>Costs you no longer incur:</b> the output you can't sell is made in less time instead. That saves conversion costs × X ÷ (100 + X), on the share you can't sell. If you don't enter conversion costs, they're estimated as cost of sales (revenue minus gross profit) minus materials.</p>
   <p>The value is the sum of the two. It counts nothing for inventory, scrap or quality escapes avoided, so the real number is usually bigger.</p>
 </details>
 <div class="tk-actions">
