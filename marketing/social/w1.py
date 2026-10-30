@@ -45,7 +45,7 @@ I've compared the two routes in an article on my new site, Shopfloor Matters. Li
 
 Have you bought a standalone connected worker tool and then needed MES/MOM on top? How did that go?""",
 li_comment="Full article: " + URL + "?utm_source=linkedin&utm_medium=social",
-x=["Your operators don't need another app. They need fewer.\n\nA short thread on connected worker, and why how you buy it makes a difference:",
+x=["Your operators don't need another app. They need fewer.",
    "Connected worker is the digital layer between frontline people and what they need to do the job: checklists, handover, skills and work instructions.\n\nIn most factories, all four still run on paper.",
    "As a standalone app, it's quick to start and good on the people side.\n\nOn its own, though, it doesn't know which order is running. It can't trigger a quality check when the material changes, or stop a quarantined lot being used.",
    "Built into MES/MOM, it shares the production data.\n\nChecklists appear for this order on this line, and an unqualified operator can't start the job.",
@@ -87,7 +87,7 @@ That changes the job of shopfloor software. Recording what happened is no longer
 
 In practice that means instructions at the point of work, and checks that stop the wrong person starting the wrong job.
 
-How long does it take a new operator in your factory to work without someone looking over their shoulder?
+How long does it take a new operator in your factory to work confidently on their own?
 
 #ConnectedWorker #Manufacturing""",
 x=["72% of industrial organisations say frontline workforce issues have hurt their performance (LNS Research).\n\nShopfloor software now has to guide a new starter to get it right on their second day, not their second year."],
@@ -96,6 +96,6 @@ slides=[("stat", "72%", "of industrial organisations say frontline workforce iss
         ("stat", "1.9m", "US manufacturing jobs that could go unfilled between 2024 and 2033"),
         ("point", "Recording what happened isn't enough any more", "Shopfloor software has to guide people through the work."),
         ("quote", "Get it right on their second day, not their second year.", ""),
-        ("cta", "How long until a new operator works without someone watching?", "Sources: LNS Research 2023; Deloitte and the Manufacturing Institute 2024")],
+        ("cta", "How long until a new operator works confidently on their own?", "Sources: LNS Research 2023; Deloitte and the Manufacturing Institute 2024")],
 ig="Frontline workforce issues are hurting performance in most industrial businesses, and the gap is getting wider. Shopfloor software has to help new starters get it right on their second day.\n\nHow long does it take where you work?\n\n" + IGTAGS),
 ]}

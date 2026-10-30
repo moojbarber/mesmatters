@@ -15,22 +15,22 @@ In practice, five things define one:
 4. Decisions made from a single source of truth.
 5. People backed to make the call, instead of firefighting.
 
-Only one of the five is really about technology. The other four are why the technology works.
+Only one of the five is mainly about technology, and none of them works without the people and the processes.
 
 Which of the five does your factory struggle with most?
 
 #SmartFactory #SmartManufacturing""",
-x=["Five things that define a smart factory:\n\n1. Defined processes\n2. Planning connected to execution\n3. Real-time data at the point of work\n4. One source of truth\n5. People backed to make the call\n\nOnly one is really about technology."],
+x=["Five things that define a smart factory:\n\n1. Defined processes\n2. Planning connected to execution\n3. Real-time data at the point of work\n4. One source of truth\n5. People backed to make the call\n\nOnly one is mainly about technology."],
 ig_format="Carousel, 8 slides",
-slides=[("cover", "What makes a factory smart?", "Five things, and only one is about technology"),
+slides=[("cover", "What makes a factory smart?", "Five things, and only one is mainly about technology"),
         ("num", "1", "Defined processes, rather than “ask Dave, he knows how it works”."),
         ("num", "2", "Planning connected to execution. When a machine goes down, the planner knows."),
         ("num", "3", "Real-time data at the point of work. The operator shouldn't have to go looking."),
         ("num", "4", "One source of truth. The morning meeting starts with the facts."),
         ("num", "5", "People backed to make the call, instead of firefighting."),
-        ("point", "Only one of the five is really about technology", "The other four are why the technology works."),
+        ("point", "Only one of the five is mainly about technology", "None of them works without the people and the processes."),
         ("cta", "Which of the five does your factory struggle with most?", "")],
-ig="Five things define a smart factory, and only one of them is really about technology. Swipe through.\n\nWhich one does your factory struggle with most?\n\n" + IGTAGS),
+ig="Five things define a smart factory, and only one of them is mainly about technology. Swipe through.\n\nWhich one does your factory struggle with most?\n\n" + IGTAGS),
 
 dict(id="w2-tue", day="Tue 17 Nov", type="Article", title="What is a smart factory?", li_media=None,
 li="""Industry 4.0. Smart manufacturing. The digital factory. The connected enterprise.
@@ -55,14 +55,14 @@ x=["Industry 4.0. 5.0. I recently saw 6.0.\n\nWe shouldn't need a version number
    "A smart factory won't make manufacturing simpler, but it increases your capacity to handle the complexity you already have.",
    "The five things that define one, and where MES/MOM fits: " + URL + "?utm_source=x&utm_medium=social"],
 ig_format="Carousel, 7 slides",
-slides=[("cover", "What is a smart factory?", "A practical definition, without the version numbers"),
+slides=[("cover", "What is a smart factory?", "A practical definition"),
         ("quote", "People, processes and technology working together, supported by data.", ""),
         ("point", "The old way relied on stability", "Fewer products, predictable demand, reliable supply and people who stayed for decades."),
         ("point", "That stability has gone", "More variety, higher costs, full traceability and experienced people retiring."),
         ("point", "The complexity is what it is", "A smart factory increases your capacity to handle it."),
-        ("point", "Where MES/MOM fits", "It runs the processes, connects planning to the floor and creates one source of truth."),
+        ("point", "Where MES/MOM fits", "It runs the processes, connects planning to the floor, puts real-time data at the point of work and creates one source of truth."),
         ("cta", "Read the full article", "Link in bio · shopfloormatters.com")],
-ig="A smart factory, without the version numbers: people, processes and technology working together, supported by data.\n\nFull article: link in bio.\n\n" + IGTAGS),
+ig="A smart factory, in plain terms: people, processes and technology working together, supported by data.\n\nFull article: link in bio.\n\n" + IGTAGS),
 
 dict(id="w2-thu", day="Thu 19 Nov", type="Quote", title="Two things", li_media="image",
 li="""Everything a smart factory delivers comes back to two things: selling more, or improving margin. Ideally both.
@@ -87,7 +87,7 @@ video="""TALKING TO CAMERA, 60–75 SECONDS. Plain background or your office. On
 "For me it's simple. People, processes and technology working together, supported by data. The right information gets to the right person at the right time, and decisions are made on facts rather than gut feel."
 
 [20–45s]
-"And when you break it down, there are five things: defined processes, planning connected to what's actually happening on the floor, real-time data where the work happens, one source of truth, and people who are backed to make the call. Only one of those is really about technology."
+"And when you break it down, there are five things: defined processes, planning connected to what's actually happening on the floor, real-time data where the work happens, one source of truth, and people who are backed to make the call. Only one of those is mainly about technology."
 
 [45–60s]
 "A smart factory won't make manufacturing simpler. It gives you the capacity to handle the complexity you've already got."
@@ -98,15 +98,15 @@ video="""TALKING TO CAMERA, 60–75 SECONDS. Plain background or your office. On
 ON-SCREEN TEXT (optional): "5 things that make a factory smart" at the start; the five items as captions while you list them.""",
 li="""What actually makes a factory smart? I recorded a minute on it.
 
-People, processes and technology working together, supported by data. Five things define it, and only one of them is really about technology.
+People, processes and technology working together, supported by data. Five things define it, and only one of them is mainly about technology.
 
 The full article is on shopfloormatters.com if you want the long version.
 
 Which of the five does your factory struggle with most?
 
 #SmartFactory #SmartManufacturing""",
-x=["What actually makes a factory smart?\n\nPeople, processes and technology working together, supported by data. Five things define it, and only one is really about technology.\n\n" + URL + "?utm_source=x&utm_medium=social"],
+x=["What actually makes a factory smart?\n\nPeople, processes and technology working together, supported by data. Five things define it, and only one is mainly about technology.\n\n" + URL + "?utm_source=x&utm_medium=social"],
 ig_format="Reel: 60–75 seconds talking to camera",
 slides=[],
-ig="What actually makes a factory smart? Five things, and only one of them is about technology.\n\nWhich one does your factory struggle with most?\n\n" + IGTAGS),
+ig="What actually makes a factory smart? Five things, and only one of them is mainly about technology.\n\nWhich one does your factory struggle with most?\n\n" + IGTAGS),
 ]}

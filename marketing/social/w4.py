@@ -9,7 +9,7 @@ When does the right person find out, and do they know why?
 
 I call it time to truth: how long it takes your factory to know what really happened, with enough context to act on it. Following one event like this tells you more about where you are than most maturity frameworks.
 
-The carousel walks the same stoppage through seven stages, from a downtime sheet in a tray to an agent that books the repair into the next planned stop for a supervisor to approve.
+The carousel walks the same stoppage through seven stages, from a downtime sheet in a tray to routine decisions made inside limits the business has agreed.
 
 Where would your factory find out about it?
 
@@ -22,7 +22,7 @@ slides=[("cover", "Line 3 stops at 02:14", "When does the right person find out,
         ("level", "3", "After the fact. Keyed into a tablet once the stop is over, rounded and late."),
         ("level", "4", "Right now. Logged at 02:14 from the machine, with the order already attached."),
         ("level", "5", "Before it happens. The temperature trend raises a warning at 23:40."),
-        ("level", "6", "Before anyone asks. An agent books the repair, and a supervisor approves it."),
+        ("level", "6", "Before anyone asks. An agent prepares the work order for the next planned stop, and a supervisor approves it."),
         ("level", "7", "Without asking. Routine decisions made inside limits the business agreed."),
         ("point", "AI adds value at every stage", "And the value climbs much faster once the truth arrives right now."),
         ("cta", "Where would your factory find out?", "")],
@@ -88,7 +88,7 @@ video="""TALKING TO CAMERA, 60–90 SECONDS. Same setup as the week 2 video.
 [70–85s, close]
 "So, if your line stopped at two-fourteen tonight, when would you know? Tell me in the comments."
 
-ON-SCREEN TEXT (optional): "Line 3 stops at 02:14" at the start; "Eventually / End of shift / Right now" as captions in the middle section.""",
+ON-SCREEN TEXT (optional): "Line 3 stops at 02:14" at the start; "Eventually / End of shift / After the fact / Right now" as captions in the middle section.""",
 li="""Line 3 stops at 02:14. When would you know?
 
 I recorded a short video on why I ask this question instead of asking people to rate their maturity, and what changes when the truth arrives "right now".

@@ -80,12 +80,12 @@ weekly:
 # newsletter, keyed by article slug. Markdown links are fine; site links can start with /.
 notes:
   connected-worker-one-app-not-five:
-    note: "Welcome to the first Shopfloor Matters newsletter. Every Tuesday I'll send you one article from the site, on the smart factory, shopfloor AI and the MES/MOM foundations underneath them.\n\nWe're starting with the people on the shopfloor, and the tools we give them."
+    note: "Welcome to the first Shopfloor Matters newsletter. Every Tuesday I'll send you one article from the site, on the smart factory and shopfloor AI, and the MES/MOM that makes them work.\n\nWe're starting with the people on the shopfloor, and the tools we give them."
   what-is-a-smart-factory:
     note: "This week is my definition of a smart factory, and the five things that define one. Only one of the five is really about technology."
     ps: "P.S. If you'd like to put a number on it, the [1% OEE calculator](/tools/oee-one-percent) on the site works from two figures in your annual report."
   ai-ml-genai-on-the-shopfloor:
-    note: "This week is a plain-English guide to the different kinds of AI on the shopfloor, where each one earns its keep, and what each one needs."
+    note: "This week is a plain-English guide to the different kinds of AI on the shopfloor, and where each one earns its keep."
   time-to-truth:
     note: "This week is the question I'd ask instead of a maturity score, and why AI adds value at every stage of the answer."
     ps: "P.S. To see how your systems fit together today, try the [systems landscape builder](/tools/systems-landscape) on the site."

@@ -13,7 +13,7 @@ linkedin:
     If you''re going to spend money on any of them, it''s worth knowing which is which.
 
 
-    Machine learning has been in MES/MOM for longer than most people realise. Statistical process control has been spotting drifting processes for decades, and predictive maintenance is paying back in factories today. Newer applications like predictive quality and vision inspection are opening up much more.
+    Machine learning and statistical methods have been in MES/MOM for longer than most people realise. Statistical process control, from the same family of thinking, has been spotting drifting processes for decades, and predictive maintenance is paying back in factories today. Newer applications like predictive quality and vision inspection are opening up much more.
 
 
     Generative AI is useful in different ways. Ask for a one-page summary of OEE on Line 4 for the CI manager. Get the shift summary written for the incoming crew. Ask "what is this screen telling me?" and get a straight answer. Ask it to set up a new packing line, and it tells you what it needs to know.
@@ -25,7 +25,7 @@ linkedin:
     They all depend on data, and the best way to build it is alongside the AI. Each use case shows you which data to capture next, and each improvement in the data makes the model better.
 
 
-    The full article explains each one, and a practical way to start. Link in the first comment.
+    The full article explains each one in more detail. Link in the first comment.
 
 
     Which kind of AI is your business asking for right now?'
@@ -34,14 +34,11 @@ linkedin:
 x:
   at: 08:30
   posts:
-  - 'AI, ML and GenAI get used as if they mean the same thing. If you''re spending money on any of them, it''s worth knowing which is which.
-
-
-    A quick guide for people who run factories:'
+  - AI, ML and GenAI get used as if they mean the same thing. If you're spending money on any of them, it's worth knowing which is which.
   - 'Machine learning predicts outcomes from your own operational data.
 
 
-    SPC has done a version of this for decades. Predictive maintenance pays back today, and predictive quality and vision inspection are opening up more.'
+    SPC, from the same family of thinking, has done a version of this for decades. Predictive maintenance pays back today, and predictive quality and vision inspection are opening up more.'
   - 'Generative AI arrives already trained. Its sweet spot is helping people.
 
 
