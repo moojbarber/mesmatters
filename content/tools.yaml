@@ -19,8 +19,8 @@ tools:
     kind: tool
     title: What is 1% of OEE worth?
     short: The 1% calculator
-    eyebrow: The question I always ask
-    blurb: Five numbers from your site. See what a single point of OEE is worth in sales or in hours, and what five or ten points would mean.
+    eyebrow: The question worth asking
+    blurb: Two numbers from your annual report. See what a 1% improvement in OEE is worth to your business, and what 5%, 10% or 25% would mean.
     minutes: 2
     icon: gauge
     color: "#33d4e0"

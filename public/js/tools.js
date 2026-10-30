@@ -156,34 +156,49 @@
     var of = $('#oc-form');
     var defaults = {};
     $$('input,select', of).forEach(function (i) { defaults[i.name] = i.value; });
-    var s = store('oee') || {};
+    var s = store('oee2') || {};
     $$('input,select', of).forEach(function (i) { if (s[i.name] != null) i.value = s[i.name]; });
     var last;
-    function money(v, cur) { var a = Math.abs(v); var t = a >= 1e6 ? (a / 1e6).toFixed(a >= 1e7 ? 1 : 2) + 'm' : a >= 1e4 ? Math.round(a / 1e3) + 'k' : Math.round(a).toLocaleString('en-GB'); return (v < 0 ? '−' : '') + cur + t; }
-    function val(o, pts) {
-      var cur = o.oee / 100, nw = Math.min(1, cur + pts / 100), gain = nw / cur - 1;
-      var sold = o.rev * gain * (o.sell / 100) * (o.margin / 100);
-      var hrs = o.hours * (1 - cur / nw) * (1 - o.sell / 100);
-      return { nw: nw, sold: sold, hrs: hrs, save: hrs * o.cost, total: sold + hrs * o.cost };
+    function money(v, cur) { var a = Math.abs(v); var t = a >= 1e9 ? (a / 1e9).toFixed(2) + 'bn' : a >= 1e6 ? (a / 1e6).toFixed(a >= 1e7 ? 1 : 2) + 'm' : a >= 1e4 ? Math.round(a / 1e3) + 'k' : Math.round(a).toLocaleString('en-GB'); return (v < 0 ? '−' : '') + cur + t; }
+    function num(v) { var n = parseFloat(v); return isNaN(n) ? null : Math.max(0, n); }
+    function val(o, pct) {
+      var x = pct / 100, made = o.rev * o.made / 100;
+      var margin = o.cm != null ? o.cm / 100 : (o.rev ? o.gp / o.rev : 0);
+      var cap = made * x;
+      var sold = cap * (o.sell / 100) * margin;
+      var save = o.conv != null ? o.conv * (x / (1 + x)) * (1 - o.sell / 100) : 0;
+      return { cap: cap, sold: sold, save: save, total: sold + save, margin: margin };
+    }
+    function read() {
+      var o = { cur: of.cur.value };
+      ['rev', 'gp', 'imp', 'made', 'sell'].forEach(function (k) { o[k] = num(of[k].value) || 0; });
+      o.cm = num(of.cm.value); o.conv = num(of.conv.value);
+      o.made = Math.min(100, o.made); o.sell = Math.min(100, o.sell); o.imp = Math.min(25, Math.max(1, o.imp || 1));
+      return o;
     }
     function calc() {
-      var o = {}; $$('input,select', of).forEach(function (i) { o[i.name] = i.tagName === 'SELECT' ? i.value : Math.max(0, parseFloat(i.value) || 0); });
-      store('oee', o);
-      if (!o.oee) return;
-      var one = val(o, 1);
-      last = { o: o, one: one };
-      $('[data-oc=point]').textContent = money(one.total, o.cur);
-      $('[data-oc=oee]').textContent = o.oee + '%';
-      $('[data-oc=sell]').textContent = money(one.sold, o.cur);
-      $('[data-oc=save]').textContent = money(one.save, o.cur);
-      $('[data-oc=hrs]').textContent = Math.round(o.hours * (1 - o.oee / 100 / one.nw)).toLocaleString('en-GB');
-      $('[data-oc=table]').innerHTML = [1, 3, 5, 10].filter(function (p) { return o.oee + p <= 100; }).map(function (p) {
-        var v = val(o, p); return '<tr><td>+' + p + ' point' + (p > 1 ? 's' : '') + '</td><td>' + (v.nw * 100).toFixed(0) + '%</td><td><b>' + money(v.total, o.cur) + '</b></td></tr>';
+      var o = read(), raw = {};
+      $$('input,select', of).forEach(function (i) { raw[i.name] = i.value; });
+      store('oee2', raw);
+      var v = val(o, o.imp);
+      last = { o: o, v: v };
+      $('[data-oc=impv]').textContent = o.imp + '%';
+      $('[data-oc=impt]').textContent = o.imp + '%';
+      $('[data-oc=point]').textContent = money(v.total, o.cur);
+      $('[data-oc=revt]').textContent = money(o.rev, o.cur);
+      $('[data-oc=sell]').textContent = money(v.sold, o.cur);
+      $('[data-oc=cap]').textContent = money(v.cap, o.cur);
+      if (o.conv == null && o.sell >= 100) { $('[data-oc=save]').textContent = money(0, o.cur); $('[data-oc=savel]').textContent = 'from costs you no longer incur, as you can sell it all'; }
+      else if (o.conv == null) { $('[data-oc=save]').textContent = '–'; $('[data-oc=savel]').textContent = o.sell < 100 ? 'add conversion costs to value the output you can’t sell' : 'from costs you no longer incur'; }
+      else { $('[data-oc=save]').textContent = money(v.save, o.cur); $('[data-oc=savel]').textContent = 'from costs you no longer incur'; }
+      var rows = [1, 5, 10, 25]; if (rows.indexOf(o.imp) < 0) { rows.push(o.imp); rows.sort(function (a, b) { return a - b; }); }
+      $('[data-oc=table]').innerHTML = rows.map(function (p) {
+        var r = val(o, p); return '<tr' + (p === o.imp ? ' class="on"' : '') + '><td>+' + p + '%</td><td>' + money(r.cap, o.cur) + '</td><td><b>' + money(r.total, o.cur) + '</b></td></tr>';
       }).join('');
     }
     csvRows = function () {
-      var o = last.o, rows = [['Shopfloor Matters: what is 1% of OEE worth?', new Date().toISOString().slice(0, 10)], ['Revenue in scope', o.rev], ['Contribution margin %', o.margin], ['Current OEE %', o.oee], ['Share of extra output sellable %', o.sell], ['Planned hours / year', o.hours], ['Running cost per hour', o.cost], [], ['Gain (points)', 'New OEE %', 'From selling more', 'From hours saved', 'Total per year']];
-      [1, 3, 5, 10].forEach(function (p) { if (o.oee + p <= 100) { var v = val(o, p); rows.push([p, (v.nw * 100).toFixed(1), Math.round(v.sold), Math.round(v.save), Math.round(v.total)]); } });
+      var o = last.o, rows = [['Shopfloor Matters: what is 1% of OEE worth?', new Date().toISOString().slice(0, 10)], ['Annual revenue', o.rev], ['Gross profit', o.gp], ['Share of revenue from products you make %', o.made], ['Share of extra output you could sell %', o.sell], ['Contribution margin %', o.cm == null ? 'not entered (gross margin used)' : o.cm], ['Annual conversion costs', o.conv == null ? 'not entered' : o.conv], [], ['Improvement %', 'Extra capacity (sales value)', 'From selling more', 'From costs no longer incurred', 'Total per year']];
+      [1, 5, 10, 25].concat([1, 5, 10, 25].indexOf(o.imp) < 0 ? [o.imp] : []).sort(function (a, b) { return a - b; }).forEach(function (p) { var v = val(o, p); rows.push([p, Math.round(v.cap), Math.round(v.sold), Math.round(v.save), Math.round(v.total)]); });
       return rows;
     };
     of.addEventListener('input', calc);

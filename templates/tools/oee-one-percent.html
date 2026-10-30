@@ -1,61 +1,67 @@
 <div class="tk-intro rv">
   <div>
     <h2>Why this question</h2>
-    <p>In every business case conversation I ask the same thing: what would a 1% improvement in OEE be worth to your business? Most people have never worked it out. For most manufacturers it's a very significant number.</p>
-    <p class="dimmed">Use your own figures. The defaults describe an example mid-size site so you can see how it works. They're not a forecast.</p>
+    <p>What would a 1% improvement in OEE be worth to your business? Most people have never worked it out. For most manufacturers it's a very significant number.</p>
+    <p>You only need two figures from your annual report to start. Then add what you know to make the estimate sharper.</p>
+    <p class="dimmed">The defaults describe an example company so you can see how it works. They're not a forecast.</p>
   </div>
   <div class="oc-how">
-    <b>Two ways a point of OEE pays</b>
-    <p><strong>If you can sell more:</strong> the same lines make more good product in the same hours. That's extra contribution margin.</p>
-    <p><strong>If you can't:</strong> you make the same output in fewer hours. That's overtime or weekend shifts you no longer need.</p>
+    <b>You don't need to know your OEE</b>
+    <p>Here, a 1% improvement means 1% more good output from the same equipment and hours. That's deliberately cautious. At 50% OEE, one extra point of OEE is actually 2% more output.</p>
+    <p>If you do have an OEE figure and it's captured by hand, treat it with care. Manual OEE usually misses short stops and slow running, so it tends to look better than it really is.</p>
   </div>
 </div>
 
 <div class="oc">
   <form class="oc-in rv" id="oc-form" novalidate>
     <fieldset>
-      <legend>Your lines</legend>
+      <legend>From your annual report</legend>
       <label>Currency
         <select name="cur"><option value="£">£ GBP</option><option value="$">$ USD</option><option value="€">€ EUR</option></select></label>
-      <label>Annual revenue from the lines in scope <input name="rev" type="number" inputmode="decimal" min="0" step="any" value="25000000"><small>Sales value of what these lines make. Start with one area, not the whole business.</small></label>
-      <label>Contribution margin <span class="u">%</span><input name="margin" type="number" min="0" max="100" step="any" value="35"><small>Revenue minus variable costs. Finance will have it.</small></label>
-      <label>Current OEE <span class="u">%</span><input name="oee" type="number" min="1" max="100" step="any" value="55"><small>Many plants sit between 40% and 60%. If it's measured by hand, the real figure is probably lower.</small></label>
+      <label>Annual revenue <input name="rev" type="number" inputmode="decimal" min="0" step="any" value="50000000"><small>Also called turnover or sales. It's the first line of the income statement.</small></label>
+      <label>Gross profit <input name="gp" type="number" inputmode="decimal" min="0" step="any" value="15000000"><small>Revenue minus cost of sales, on the income statement.</small></label>
     </fieldset>
     <fieldset>
-      <legend>How the gain is used</legend>
-      <label>Share of extra output you could sell <span class="u">%</span><input name="sell" type="number" min="0" max="100" step="any" value="50"><small>100% if demand outstrips capacity. 0% if you can't sell another unit.</small></label>
-      <label>Planned production hours per year <input name="hours" type="number" min="0" step="any" value="6000"><small>Across the lines in scope, excluding time you never meant to run.</small></label>
-      <label>Running cost per line hour <input name="cost" type="number" min="0" step="any" value="450"><small>Labour, energy, maintenance and overheads you'd save by not running. Overtime rates if that's what you'd cut.</small></label>
+      <legend>OEE improvement</legend>
+      <label for="oc-imp">Improvement in OEE <b class="oc-imp-val" data-oc="impv">1%</b>
+        <input id="oc-imp" name="imp" type="range" min="1" max="25" step="1" value="1"><small>Slide from 1% to 25%. More good output from the equipment and people you already have.</small></label>
+    </fieldset>
+    <fieldset>
+      <legend>Make it more accurate (optional)</legend>
+      <label>Share of revenue from products you make <span class="u">%</span><input name="made" type="number" min="0" max="100" step="any" value="100"><small>Leave out services and goods you buy in and resell. The segment notes in the annual report often show the split.</small></label>
+      <label>Share of the extra output you could sell <span class="u">%</span><input name="sell" type="number" min="0" max="100" step="any" value="100"><small>100% if demand outstrips capacity. 0% if you can't sell another unit. Sales will have a view.</small></label>
+      <label>Contribution margin <span class="u">%</span><input name="cm" type="number" min="0" max="100" step="any" placeholder="Uses gross margin if left blank"><small>Revenue minus variable costs. Finance will have it. It's usually higher than gross margin, because gross margin includes fixed factory costs.</small></label>
+      <label>Annual conversion costs <input name="conv" type="number" inputmode="decimal" min="0" step="any" placeholder="Optional"><small>Production labour, energy, maintenance and factory overheads, excluding materials. Staff costs in the notes to the accounts are a starting point. Finance can give you the production share.</small></label>
     </fieldset>
   </form>
 
   <div class="oc-out rv" aria-live="polite">
-    <span class="micro">One point of OEE is worth</span>
+    <span class="micro">A <span data-oc="impt">1%</span> improvement in OEE is worth</span>
     <p class="oc-big" data-oc="point">–</p>
-    <p class="oc-sub">a year, at your current OEE of <b data-oc="oee">–</b></p>
+    <p class="oc-sub">a year, for a business with <b data-oc="revt">–</b> of revenue</p>
     <div class="oc-split">
-      <div><b data-oc="sell">–</b><span>from selling more</span></div>
-      <div><b data-oc="save">–</b><span>from hours you no longer run</span></div>
-      <div><b data-oc="hrs">–</b><span>line hours a point frees, if you don't need the extra output</span></div>
+      <div><b data-oc="sell">–</b><span>from selling the extra output</span></div>
+      <div><b data-oc="save">–</b><span data-oc="savel">from costs you no longer incur</span></div>
+      <div><b data-oc="cap">–</b><span>of extra output capacity, in sales value</span></div>
     </div>
     <table class="oc-table">
-      <thead><tr><th>Gain</th><th>New OEE</th><th>Value a year</th></tr></thead>
+      <thead><tr><th>Improvement</th><th>Extra capacity</th><th>Value a year</th></tr></thead>
       <tbody data-oc="table"></tbody>
     </table>
-    <p class="oc-note">Research on smart manufacturing programmes reports output gains well beyond a few points. Deloitte's 2025 survey found 10% to 20% improvements in production output among large manufacturers. I pull the studies together in <a href="{{ base }}/post/smart-factory-roi-research">What the research says about smart factory ROI</a>.</p>
+    <p class="oc-note">Research on smart manufacturing programmes reports gains well beyond a few percent. Deloitte's 2025 survey found 10% to 20% improvements in production output among large manufacturers. I pull the studies together in <a href="{{ base }}/post/smart-factory-roi-research">What the research says about smart factory ROI</a>.</p>
   </div>
 </div>
 
 <details class="tk-maths rv">
   <summary>How it's calculated</summary>
-  <p>Output is proportional to OEE, so one extra point raises good output by 1 ÷ current OEE. At 55% that's about 1.8% more output from the same hours.</p>
-  <p><b>Selling more:</b> revenue × (1 ÷ OEE) × share you can sell × contribution margin.</p>
-  <p><b>Fewer hours:</b> the share you can't sell is made in fewer hours instead. Hours freed = planned hours × (1 − OEE ÷ (OEE + 1 point)), multiplied by the unsold share and your running cost per hour.</p>
-  <p>The value is the sum of the two. It counts nothing for inventory or quality escapes avoided, so the real number is usually bigger.</p>
+  <p>An improvement of X% in OEE gives X% more good output from the same equipment and hours.</p>
+  <p><b>Selling more:</b> revenue × share you make × X% × share you could sell × margin. It uses contribution margin if you enter it, and gross margin if you don't.</p>
+  <p><b>Costs you no longer incur:</b> the output you can't sell is made in less time instead. That saves conversion costs × X ÷ (100 + X), on the share you can't sell. It only shows when you enter conversion costs.</p>
+  <p>The value is the sum of the two. It counts nothing for inventory, scrap or quality escapes avoided, so the real number is usually bigger.</p>
 </details>
 <div class="tk-actions">
   <button class="btn ghost sm" type="button" data-print>Print or save as PDF</button>
   <button class="btn ghost sm" type="button" data-csv="oee">Download (CSV)</button>
   <button class="btn ghost sm" type="button" data-reset>Reset to the example</button>
 </div>
-{{ gate(base, kit_form, "business-case-template", "Take it into a business case", "Get the business case template: current-state costs and five benefit levers, with a three-year cash flow and payback.", "Send me the template") }}
+{% if "business-case-template" in enabled_tools %}{{ gate(base, kit_form, "business-case-template", "Take it into a business case", "Get the business case template: current-state costs and five benefit levers, with a three-year cash flow and payback.", "Send me the template") }}{% endif %}
