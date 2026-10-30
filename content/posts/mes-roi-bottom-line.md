@@ -10,7 +10,7 @@ art: growth
 
 A useful place to start is one question: what would a 1% improvement in OEE mean for your business?
 
-Work it out for your bottleneck. More output from equipment you already own, and perhaps a capital project you no longer need. For most manufacturers it's a significant number.
+Work it out for your bottleneck. More output from equipment you already own, and perhaps a capital project you no longer need. For most manufacturers it's a significant number. The [1% OEE calculator](/tools/oee-one-percent) does the sums for you.
 
 Well-implemented programmes often go well beyond 1%. In Deloitte's 2025 Smart Manufacturing Survey, large manufacturers reported average improvements of 10% to 20% in production output and 10% to 15% in unlocked capacity from smart manufacturing initiatives ([Deloitte, 2025](https://www.deloitte.com/us/en/insights/industry/manufacturing-industrial-products/2025-smart-manufacturing-survey.html)).
 
