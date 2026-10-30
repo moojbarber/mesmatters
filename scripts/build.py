@@ -912,7 +912,7 @@ def build(base, relative=False, include_scheduled=False):
     tool_list = {"@context": "https://schema.org", "@type": "ItemList", "name": "Shopfloor Matters tools and templates",
                  "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f"{SITE}/tools/{x['id']}", "name": x["title"]} for i, x in enumerate(tools)]}
     if SHOW_TOOLS: write("tools/index.html", "tools-hub.html", active="tools", seo_title="Free smart factory and MES tools | Shopfloor Matters",
-          description="Free, vendor-neutral tools: a smart factory readiness check, a 1% OEE value calculator, a systems picker, a systems landscape builder, an MES vendor scorecard and Excel templates.",
+          description="Free, vendor-neutral smart factory tools: " + "; ".join(x["title"].rstrip("?") for x in tools) + ".",
           canonical=f"{SITE}/tools/", icons=ICONS, tools_js=True, og_image=f"{SITE}/images/og/page-advice.png", jsonld=[jsonld(tool_list)])
     for x in (tools if SHOW_TOOLS else []):
         if x["kind"] == "tool":
