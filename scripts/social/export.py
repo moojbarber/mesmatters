@@ -25,9 +25,6 @@ from reel import make_reel  # noqa: E402
 
 YEAR_START = dt.date(2026, 10, 1)
 TIMES = {"linkedin": "08:15", "x": "08:30", "x_extra": "12:30", "instagram": "18:30"}
-# Instagram format per weekday, from the growth research: reels reach far more
-# non-followers for small accounts, carousels convert. Tuesday stays a carousel.
-IG_KIND = {"Mon": "reel", "Tue": "carousel", "Thu": "image", "Fri": "reel"}
 
 
 def load(path, name="WEEK"):
@@ -97,24 +94,30 @@ def export_week(name, force=False):
         item["linkedin"] = {"at": TIMES["linkedin"], "text": p["li"], "needs_text": needs_text}
         if p.get("li_comment"):
             item["linkedin"]["comment"] = p["li_comment"]
-        if p.get("li_poll"):
-            q = [l for l in p["li"].strip().split("\n") if l.strip()][-1]
-            item["linkedin"]["poll"] = {"question": q[:140], "options": p["li_poll"][:4]}
         d = media_dir(W["n"], p["id"])
-        pdf = d and os.path.join(d, f"{p['id']}-linkedin.pdf")
-        if pdf and os.path.exists(pdf) and not p.get("li_poll"):
-            item["linkedin"]["document"] = rel(pdf)
-            item["linkedin"]["document_title"] = p["title"]
-        x = {"at": TIMES["x"], "posts": p["x"], "needs_text": needs_text or "[Short version" in p["x"][0]}
-        if p.get("x_poll"):
-            x["poll"] = p["x_poll"]
-        item["x"] = x
-        kind, media = ig_media(p["id"], IG_KIND.get(day, "carousel"))
-        if p.get("reel"):
-            item["instagram"] = {"at": TIMES["instagram"], "kind": "manual_reel", "caption": p["ig"],
-                                 "script": p["reel"], "needs_text": True}
-        elif kind:
-            item["instagram"] = {"at": TIMES["instagram"], "kind": kind, "caption": p["ig"], "media": media}
+        lm = p.get("li_media", "document")
+        if lm == "document":
+            pdf = d and os.path.join(d, f"{p['id']}-linkedin.pdf")
+            if pdf and os.path.exists(pdf):
+                item["linkedin"]["document"] = rel(pdf)
+                item["linkedin"]["document_title"] = p["title"]
+        elif lm == "image":
+            png = d and os.path.join(d, f"{p['id']}-01.png")
+            if png and os.path.exists(png):
+                item["linkedin"]["image"] = rel(png)
+        elif lm == "video":
+            # Matt records this one and posts it himself as a native video
+            item["linkedin"]["manual"] = True
+            item["linkedin"]["video_script"] = p["video"]
+        item["x"] = {"at": TIMES["x"], "posts": p["x"], "needs_text": needs_text}
+        if p.get("video"):
+            item["instagram"] = {"at": TIMES["instagram"], "kind": "manual_reel", "caption": p["ig"], "script": p["video"]}
+        else:
+            fmt = p.get("ig_format", "").lower()
+            want = "image" if fmt.startswith("quote") else "reel" if fmt.startswith("reel") else "carousel"
+            kind, media = ig_media(p["id"], want)
+            if kind:
+                item["instagram"] = {"at": TIMES["instagram"], "kind": kind, "caption": p["ig"], "media": media}
         path = os.path.join(QUEUE, f"{date.isoformat()}-{p['id']}.yaml")
         write(path, item, force)
         out.append(path)

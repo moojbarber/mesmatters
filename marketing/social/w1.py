@@ -1,99 +1,101 @@
-URL="https://www.shopfloormatters.com/post/connected-worker-one-app-not-five"
-IGTAGS="#smartmanufacturing #manufacturing #MES #industry40 #connectedworker #shopfloor #digitaltransformation #operationalexcellence"
-WEEK={"n":1,"title":"Week 1 (26–30 Oct): connected worker","article":"Connected worker: why your operators need one app, not five","url":URL,"posts":[
-dict(id="w1-mon",day="Mon 26 Oct",type="Stat",title="72% of industrial organisations",
-li="""72% of industrial organisations say frontline workforce issues have hurt their operational performance.
+URL = "https://www.shopfloormatters.com/post/connected-worker-one-app-not-five"
+IGTAGS = "#connectedworker #smartmanufacturing #manufacturing #MES #shopfloor #frontlineworkers #digitaltransformation #industry40"
+WEEK = {"n": 1, "title": "Week 1 (9–13 Nov): connected worker", "article": "Connected worker vs MES: standalone app or built into MES/MOM?", "url": URL, "posts": [
 
-That's from LNS Research. No surprise to anyone who has spent time on a shopfloor.
+dict(id="w1-mon", day="Mon 9 Nov", type="Carousel", title="Four jobs that still run on paper", li_media="document",
+li="""Walk onto most shopfloors and you'll still find four jobs running on paper, whiteboards or memory.
 
-The problem isn't effort. Operators work hard. The problem is what we give them to work with.
+Checklists on a clipboard.
+Shift handover as a quick chat at the door.
+A skills matrix in a spreadsheet that nobody checks before a job starts.
+Work instructions printed months ago, and possibly out of date.
 
-Paper checklists. A whiteboard for handover. A skills matrix in a spreadsheet nobody checks. And a handful of apps that don't talk to each other.
+Each one is a small risk on its own. Together they decide whether a new starter gets it right on their second day or their second year.
 
-Meanwhile the experienced people who held it all together are retiring. Median tenure in US manufacturing is 4.9 years, so new starters won't stay long enough to learn the job the old way.
+This is what connected worker is for. I've put the four side by side in the carousel, with what changes when each one goes digital.
 
-That changes the job of shopfloor software. Recording what happened isn't enough any more. It has to guide someone through the work on their second day, not their second year.
+Which of the four is still on paper in your factory?
 
-How many screens does an operator in your factory touch in a single shift?
+#ConnectedWorker #SmartManufacturing""",
+x=["Four jobs that still run on paper in most factories:\n\nChecklists on a clipboard\nHandover as a chat at the door\nA skills matrix nobody checks\nWork instructions printed months ago\n\nWhich one is still on paper where you work?"],
+ig_format="Carousel, 7 slides",
+slides=[("cover", "Four jobs that still run on paper", "And what changes when they go digital"),
+        ("point", "Checklists", "From a clipboard to a checklist that appears because this order is starting on this line."),
+        ("point", "Shift handover", "From a chat at the door to a handover built from what actually ran, stopped and is waiting."),
+        ("point", "Skills", "From a spreadsheet to a check that stops an unqualified operator starting the job."),
+        ("point", "Work instructions", "From a printout in a folder to the latest version, on the screen, at the point of work."),
+        ("quote", "The goal: a new starter gets it right on their second day, not their second year.", ""),
+        ("cta", "Which of the four is still on paper in your factory?", "")],
+ig="Four jobs that still run on paper in most factories, and what changes when each one goes digital. Swipe through.\n\nWhich one is still on paper where you work?\n\n" + IGTAGS),
 
-#SmartManufacturing #ConnectedWorker""",
-x=["72% of industrial organisations say frontline workforce issues have hurt operational performance (LNS Research).\n\nThe problem usually isn't effort. It's paper, and apps that don't talk to each other.\n\nHow many screens does your operator touch in one shift?"],
-ig_format="Carousel, 6 slides",
-slides=[("stat","72%","of industrial organisations say frontline workforce issues have hurt their performance"),
-        ("point","The experienced people are retiring","And the knowledge that keeps your lines running lives in their heads, not in a system."),
-        ("stat","4.9 years","Median tenure in US manufacturing. New starters won't stay long enough to learn the old way."),
-        ("list","What most operators still work with","Paper checklists|Whiteboard handovers|Spreadsheet skills matrices|Apps that don't talk to each other"),
-        ("point","The job of shopfloor software has changed","Recording what happened isn't enough. It has to guide people through the work."),
-        ("cta","How many screens does your operator touch in one shift?","Sources: LNS Research 2023, USAFacts")],
-ig="72% of industrial organisations say frontline workforce issues have hurt their performance. The tools we give operators are a big part of the problem.\n\nHow many screens does your operator touch in one shift? Tell me in the comments.\n\n"+IGTAGS),
-dict(id="w1-tue",day="Tue 27 Oct",type="Article",title="Your operators don't need another app",
+dict(id="w1-tue", day="Tue 10 Nov", type="Article", title="Connected worker vs MES/MOM", li_media=None,
 li="""Your operators don't need another app. They need fewer.
 
-Connected worker is one of the most useful ideas in manufacturing right now. Digital checklists. Proper shift handover. Skills enforced at the point of work. The latest work instruction, every time.
+Connected worker is one of the most useful ideas in manufacturing right now. Digital checklists, proper shift handover, skills checked at the point of work and the latest work instruction every time. I'm a big believer in it.
 
-I'm a big believer. But how you buy it matters more than most people think.
+How you buy it makes a big difference, though.
 
-Bought as a standalone tool, it delivers quick wins. Then it hits a ceiling. It doesn't know which order is running. It has no idea what the line just produced. It can't trigger a quality check when the material changes. And it can't stop someone consuming a quarantined lot.
+As a standalone app, it's quick to get going and handles the people side well. On its own it doesn't know which order is running, so it can't trigger a quality check when the material changes, or stop someone consuming a quarantined lot. When those needs arrive, it either gets integrated with MES/MOM or used alongside it, and operators end up switching between screens.
 
-So you add MES/MOM alongside it. Now operators juggle two systems, and someone has to integrate them.
+Built into MES/MOM, the same capabilities share the production data. A start-up checklist appears because this order is starting on this line. A quality check fires when the material changes. An operator who isn't qualified on a machine can't start an order on it. And handover is built from what actually happened on the shift.
 
-Built into MES/MOM, the same capabilities know the context. Checklists appear because this order is starting on this line. Quality checks fire when the material changes. Skills block the wrong person from the wrong job. Handover is built from real data.
+Connected worker is the front door. MOM is the house behind it. Make sure the door you buy is attached to a house.
 
-Connected worker is the front door. MOM is the house behind it. Make sure your door is attached to a house.
+I've compared the two routes in an article on my new site, Shopfloor Matters. Link in the first comment.
 
-The full article is on my new site, Shopfloor Matters (formerly MES Matters). Link in the first comment.
-
-Have you bought a standalone connected worker tool and then needed MES on top? How did that go?""",
-li_comment="Full article: "+URL+"?utm_source=linkedin&utm_medium=social",
-x=["Your operators don't need another app. They need fewer.\n\nA short thread on connected worker, and why how you buy it matters:",
-   "Connected worker is the digital layer between frontline people and what they need: checklists, handover, skills, work instructions.\n\nIn most factories, all four still run on paper.",
-   "Bought standalone, it delivers quick wins fast.\n\nThen it hits a ceiling. No idea which order is running. No link to quality or materials.",
-   "So you add MES/MOM alongside it.\n\nTwo systems. Two logins. An integration nobody budgeted for. And operators switching screens all shift.",
-   "Built into MES/MOM, checklists know the context, quality checks fire on real events, skills block the wrong person and handover is built from real data.",
-   "Connected worker is the front door. MOM is the house behind it.\n\nFull article: "+URL+"?utm_source=x&utm_medium=social"],
+Have you bought a standalone connected worker tool and then needed MES/MOM on top? How did that go?""",
+li_comment="Full article: " + URL + "?utm_source=linkedin&utm_medium=social",
+x=["Your operators don't need another app. They need fewer.\n\nA short thread on connected worker, and why how you buy it makes a difference:",
+   "Connected worker is the digital layer between frontline people and what they need to do the job: checklists, handover, skills and work instructions.\n\nIn most factories, all four still run on paper.",
+   "As a standalone app, it's quick to start and good on the people side.\n\nOn its own, though, it doesn't know which order is running. It can't trigger a quality check when the material changes, or stop a quarantined lot being used.",
+   "Built into MES/MOM, it shares the production data.\n\nChecklists appear for this order on this line, and an unqualified operator can't start the job.",
+   "Connected worker is the front door. MOM is the house behind it.\n\nFull article: " + URL + "?utm_source=x&utm_medium=social"],
 ig_format="Carousel, 8 slides",
-slides=[("cover","Your operators don't need another app.","They need fewer."),
-        ("point","Connected worker is real","Checklists, handover, skills and work instructions, finally off paper."),
-        ("point","But bought standalone…","It doesn't know which order is running. It can't stop a quarantined lot being used."),
-        ("point","So you add MES/MOM","Two systems. Two logins. Operators switching screens all shift."),
-        ("point","Built in, it knows the context","Checklists appear by order. Quality checks fire when the material changes."),
-        ("point","And skills are enforced","The wrong person can't start the wrong job. Handover comes from real data."),
-        ("quote","Connected worker is the front door.","MOM is the house behind it."),
-        ("cta","Read the full article","Link in bio · shopfloormatters.com")],
-ig="Connected worker is one of the most useful ideas in manufacturing right now. How you buy it decides whether your operators get one screen or five.\n\nFull article: link in bio.\n\n"+IGTAGS),
-dict(id="w1-thu",day="Thu 29 Oct",type="Poll",title="How many apps per shift?",
-li="""Quick one for anyone running a shopfloor.
+slides=[("cover", "Your operators don't need another app", "They need fewer."),
+        ("point", "Connected worker", "Checklists, handover, skills and work instructions, finally off paper."),
+        ("point", "As a standalone app", "Quick to start and good on the people side. But it doesn't know which order is running."),
+        ("point", "So it gets added alongside MES/MOM", "And operators end up switching between screens."),
+        ("point", "Built into MES/MOM", "Checklists appear because this order is starting on this line."),
+        ("point", "Skills are enforced", "An operator who isn't qualified on a machine can't start an order on it."),
+        ("quote", "Connected worker is the front door. MOM is the house behind it.", "Make sure your door is attached to a house."),
+        ("cta", "Read the full article", "Link in bio · shopfloormatters.com")],
+ig="Your operators don't need another app. They need fewer. What connected worker does, and why it works best built into MES/MOM.\n\nFull article: link in bio.\n\n" + IGTAGS),
 
-Every time an operator switches app, context gets lost. Which order. Which batch. Which machine. Which shift.
+dict(id="w1-thu", day="Thu 12 Nov", type="Quote", title="The front door and the house", li_media="image",
+li="""Connected worker is the front door. MOM is the house behind it.
 
-I'd like to know where most factories really are. I'll share what I find.
+The front door is what operators see every day: the checklist, the handover, the skills check and the instruction on the screen. It's often the best place to start, because going paperless there delivers value in weeks.
 
-How many different apps does an operator use in a single shift in your factory?""",
-li_poll=["1–2","3–4","5 or more","Never counted"],
-x=["How many different apps does an operator use in a single shift in your factory?"],
-x_poll=["1–2","3–4","5 or more","Never counted"],
-ig_format="Story poll, plus a quote graphic in the feed",
-ig_story="How many apps do your operators use per shift?  Options: 1–2 / 3 or more",
-slides=[("quote","Every app switch is a moment where context gets lost.","shopfloormatters.com")],
-ig="Every time an operator switches app, context gets lost. How many apps do yours use in a shift? Vote in my story.\n\n"+IGTAGS),
-dict(id="w1-fri",day="Fri 30 Oct",type="Contrarian",title="A new silo with a nicer UI",
-li="""A connected worker platform that duplicates your MES isn't digital transformation. It's a new silo with a nicer UI.
+The house is what makes it useful for years: the orders, materials, quality and maintenance data the door opens onto.
 
-I like good UI. Operators deserve it. But a beautiful checklist app that doesn't know what's running on the line gives you two versions of the truth about the same shift.
+Start with the end in mind, and make sure the door you buy is attached to a house.
 
-Quality sees one thing. Production sees another. And the integration bill lands on IT a year later.
+#ConnectedWorker #MES""",
+x=["Connected worker is the front door. MOM is the house behind it.\n\nStart with the door if you like. Just make sure it's attached to a house."],
+ig_format="Quote graphic",
+slides=[("quote", "Connected worker is the front door. MOM is the house behind it.", "Make sure your door is attached to a house.")],
+ig="Connected worker is the front door. MOM is the house behind it.\n\nStart with the door if you like. Just make sure it's attached to a house.\n\n" + IGTAGS),
 
-The better question isn't "which connected worker app?". It's "what does the operator need on one screen?"
+dict(id="w1-fri", day="Fri 13 Nov", type="Written", title="Their second day, not their second year", li_media=None,
+li="""72% of industrial organisations say frontline workforce issues have hurt their operational performance. That's from LNS Research.
 
-Start there and the architecture usually sorts itself out.
+The pressure isn't going away. Deloitte and the Manufacturing Institute estimate US manufacturing could need as many as 3.8 million new employees between 2024 and 2033, and that 1.9 million of those jobs could go unfilled.
 
-Agree, or am I being unfair to standalone tools?""",
-x=["A connected worker app that duplicates your MES isn't transformation. It's a new silo with a nicer UI.\n\nBetter question: what does the operator need on one screen?"],
+Meanwhile the experienced people who keep the lines running are getting closer to retirement, and a lot of what they know isn't written down anywhere.
+
+That changes the job of shopfloor software. Recording what happened is no longer enough. It has to guide someone through the work so they get it right on their second day, not their second year.
+
+In practice that means instructions at the point of work, and checks that stop the wrong person starting the wrong job.
+
+How long does it take a new operator in your factory to work without someone looking over their shoulder?
+
+#ConnectedWorker #Manufacturing""",
+x=["72% of industrial organisations say frontline workforce issues have hurt their performance (LNS Research).\n\nShopfloor software now has to guide a new starter to get it right on their second day, not their second year."],
 ig_format="Carousel, 5 slides",
-slides=[("cover","A connected worker app that duplicates your MES…","…isn't digital transformation."),
-        ("quote","It's a new silo with a nicer UI.",""),
-        ("point","Two versions of the truth","Quality sees one thing. Production sees another. Same shift."),
-        ("point","The bill arrives later","Someone has to integrate them, and it usually lands on IT a year in."),
-        ("cta","Ask a better question","What does the operator need on one screen?")],
-ig="Good UI matters. But a second system that duplicates your MES gives you two versions of the truth about the same shift.\n\nAgree or disagree?\n\n"+IGTAGS),
+slides=[("stat", "72%", "of industrial organisations say frontline workforce issues have hurt their performance"),
+        ("stat", "1.9m", "US manufacturing jobs that could go unfilled between 2024 and 2033"),
+        ("point", "Recording what happened isn't enough any more", "Shopfloor software has to guide people through the work."),
+        ("quote", "Get it right on their second day, not their second year.", ""),
+        ("cta", "How long until a new operator works without someone watching?", "Sources: LNS Research 2023; Deloitte and the Manufacturing Institute 2024")],
+ig="Frontline workforce issues are hurting performance in most industrial businesses, and the gap is getting wider. Shopfloor software has to help new starters get it right on their second day.\n\nHow long does it take where you work?\n\n" + IGTAGS),
 ]}

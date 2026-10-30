@@ -133,6 +133,14 @@ class LinkedIn:
             time.sleep(4)
         return urn
 
+    def upload_image(self, path):
+        r = check(requests.post("https://api.linkedin.com/rest/images?action=initializeUpload", headers=self.h,
+                                json={"initializeUploadRequest": {"owner": self.urn()}}, timeout=30), "LinkedIn image init")
+        v = r.json()["value"]
+        with open(os.path.join(ROOT, path), "rb") as f:
+            check(requests.put(v["uploadUrl"], data=f, headers={"Authorization": f"Bearer {self.token}"}, timeout=120), "LinkedIn image upload")
+        return v["image"]
+
     def post(self, item):
         li = item["linkedin"]
         body = {"author": None, "commentary": li_text(li["text"]), "visibility": "PUBLIC",
@@ -146,6 +154,8 @@ class LinkedIn:
             body["author"] = "urn:li:person:DRYRUN"
             if li.get("document") and not li.get("poll"):
                 body["content"] = {"media": {"title": li.get("document_title", item["title"]), "id": "urn:li:document:DRYRUN"}}
+            elif li.get("image"):
+                body["content"] = {"media": {"altText": item["title"], "id": "urn:li:image:DRYRUN"}}
             print("  [LinkedIn] POST /rest/posts", json.dumps(body)[:300], "...")
             if li.get("comment"):
                 print("  [LinkedIn] first comment:", li["comment"])
@@ -153,6 +163,8 @@ class LinkedIn:
         body["author"] = self.urn()
         if li.get("document") and not li.get("poll"):
             body["content"] = {"media": {"title": li.get("document_title", item["title"]), "id": self.upload_document(li["document"])}}
+        elif li.get("image") and not li.get("poll"):
+            body["content"] = {"media": {"altText": item["title"], "id": self.upload_image(li["image"])}}
         r = check(requests.post("https://api.linkedin.com/rest/posts", headers=self.h, json=body, timeout=60), "LinkedIn post")
         post_urn = r.headers.get("x-restli-id")
         result = {"id": post_urn}
@@ -296,7 +308,7 @@ def main():
             continue
         for platform in ("linkedin", "x", "instagram"):
             spec = item.get(platform)
-            if not spec or spec.get("needs_text") or spec.get("kind") == "manual_reel" or spec.get("skip"):
+            if not spec or spec.get("needs_text") or spec.get("manual") or spec.get("kind") == "manual_reel" or spec.get("skip"):
                 continue
             if state.get(item["id"], {}).get(platform, {}).get("id"):
                 continue

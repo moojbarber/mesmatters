@@ -1,0 +1,69 @@
+id: w1-mon
+week: 1
+date: '2026-11-09'
+type: Carousel
+title: Four jobs that still run on paper
+approved: false
+article: https://www.shopfloormatters.com/post/connected-worker-one-app-not-five
+linkedin:
+  at: 08:15
+  text: 'Walk onto most shopfloors and you''ll still find four jobs running on paper, whiteboards or memory.
+
+
+    Checklists on a clipboard.
+
+    Shift handover as a quick chat at the door.
+
+    A skills matrix in a spreadsheet that nobody checks before a job starts.
+
+    Work instructions printed months ago, and possibly out of date.
+
+
+    Each one is a small risk on its own. Together they decide whether a new starter gets it right on their second day or their second year.
+
+
+    This is what connected worker is for. I''ve put the four side by side in the carousel, with what changes when each one goes digital.
+
+
+    Which of the four is still on paper in your factory?
+
+
+    #ConnectedWorker #SmartManufacturing'
+  needs_text: false
+  document: marketing/social/weeks-01-04/w1-mon/w1-mon-linkedin.pdf
+  document_title: Four jobs that still run on paper
+x:
+  at: 08:30
+  posts:
+  - 'Four jobs that still run on paper in most factories:
+
+
+    Checklists on a clipboard
+
+    Handover as a chat at the door
+
+    A skills matrix nobody checks
+
+    Work instructions printed months ago
+
+
+    Which one is still on paper where you work?'
+  needs_text: false
+instagram:
+  at: '18:30'
+  kind: carousel
+  caption: 'Four jobs that still run on paper in most factories, and what changes when each one goes digital. Swipe through.
+
+
+    Which one is still on paper where you work?
+
+
+    #connectedworker #smartmanufacturing #manufacturing #MES #shopfloor #frontlineworkers #digitaltransformation #industry40'
+  media:
+  - marketing/social/weeks-01-04/w1-mon/w1-mon-01.jpg
+  - marketing/social/weeks-01-04/w1-mon/w1-mon-02.jpg
+  - marketing/social/weeks-01-04/w1-mon/w1-mon-03.jpg
+  - marketing/social/weeks-01-04/w1-mon/w1-mon-04.jpg
+  - marketing/social/weeks-01-04/w1-mon/w1-mon-05.jpg
+  - marketing/social/weeks-01-04/w1-mon/w1-mon-06.jpg
+  - marketing/social/weeks-01-04/w1-mon/w1-mon-07.jpg

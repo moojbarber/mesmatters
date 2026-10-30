@@ -67,15 +67,19 @@ def article(slug):
     return html.unescape(fm["title"]), fm.get("description", ""), intro
 
 
-def email_html(slug, title, description, intro):
+def email_html(slug, title, description, intro, note="", ps=""):
     url = f"{SITE}/post/{slug}?utm_source=newsletter&utm_medium=email"
     img = f"{SITE}/images/og/{slug}.png"
-    return f"""<p><a href="{url}"><img src="{img}" alt="{html.escape(title)}" width="600" style="width:100%;max-width:600px;height:auto;border-radius:12px"></a></p>
+    fix = lambda t: re.sub(r'href="/', f'href="{SITE}/', markdown.markdown(t))
+    lead = fix(note) + '<hr style="border:none;border-top:1px solid #ddd;margin:24px 0">' if note else ""
+    tail = f'<p style="margin-top:24px">{fix(ps)[3:-4]}</p>' if ps else ""
+    return f"""{lead}<p><a href="{url}"><img src="{img}" alt="{html.escape(title)}" width="600" style="width:100%;max-width:600px;height:auto;border-radius:12px"></a></p>
 <h1 style="margin:24px 0 12px">{html.escape(title)}</h1>
 {intro}
 <p style="margin:28px 0"><a href="{url}" style="display:inline-block;padding:14px 24px;border-radius:12px;background:#8b6cff;color:#ffffff;font-weight:700;text-decoration:none">Read the full article →</a></p>
-<p>As always, I'd love to hear what you think. Just hit reply.</p>
-<p>Matt</p>"""
+<p>If you have a question about your own project, just hit reply.</p>
+<p>Matt</p>{tail}
+<p style="margin-top:32px;font-size:13px;color:#888">Forwarded this email? You can <a href="{SITE}/subscribe?utm_source=newsletter&utm_medium=email">subscribe here</a> to get one article every Tuesday.</p>"""
 
 
 def main():
@@ -96,8 +100,9 @@ def main():
         slug = due[0]
 
     title, description, intro = article(slug)
-    content = email_html(slug, title, description, intro)
     cfg = yaml.safe_load((ROOT / "content" / "schedule.yaml").read_text(encoding="utf-8")) or {}
+    extra = (cfg.get("notes") or {}).get(slug) or {}
+    content = email_html(slug, title, description, intro, extra.get("note", ""), extra.get("ps", ""))
     hh, mm = (cfg.get("send_time") or "08:00").split(":")
     try:
         from zoneinfo import ZoneInfo

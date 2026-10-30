@@ -1,91 +1,107 @@
-URL="https://www.shopfloormatters.com/post/ai-ml-genai-on-the-shopfloor"
-IGTAGS="#shopfloorAI #AIinmanufacturing #machinelearning #generativeAI #smartmanufacturing #manufacturing #MES #industry40"
-WEEK={"n":3,"title":"Week 3 (9–13 Nov): AI, ML and GenAI on the shopfloor","article":"AI, ML and GenAI on the shopfloor: what each one actually does","url":URL,"posts":[
-dict(id="w3-mon",day="Mon 9 Nov",type="Analogy",title="Machine learning is older than you think",
-li="""Machine learning has been on the shopfloor for decades. It just wasn't called that.
+URL = "https://www.shopfloormatters.com/post/ai-ml-genai-on-the-shopfloor"
+IGTAGS = "#shopfloorAI #AIinmanufacturing #machinelearning #generativeAI #agenticAI #smartmanufacturing #manufacturing #industry40"
+WEEK = {"n": 3, "title": "Week 3 (23–27 Nov): AI, ML and GenAI on the shopfloor", "article": "AI, ML and GenAI on the shopfloor: what each one actually does", "url": URL, "posts": [
 
-Statistical process control does something very simple. It learns what normal looks like, then flags what isn't.
+dict(id="w3-mon", day="Mon 23 Nov", type="Carousel", title="Which kind of AI?", li_media="document",
+li=""""We're doing AI on the shopfloor."
 
-That's the same family of thinking behind a lot of the "AI" being sold today.
+The first question I'd ask is: which kind?
 
-I'm not saying nothing has changed. The models are better and the compute is cheap. Predictive quality and vision inspection are genuinely new.
+AI is the broad category: any system doing tasks that would normally need human intelligence.
 
-But it's worth remembering when a vendor presents anomaly detection as a revolution. Ask what data it learns from, and how that's different from the control charts you already run.
+Machine learning predicts outcomes from your own operational data. Predictive maintenance, predictive quality, anomaly detection and vision inspection all sit here, and you train and test the model before you trust it.
 
-What's the oldest "AI" running in your factory that nobody calls AI?
+Generative AI arrives already trained. Its sweet spot is helping people: plain-English questions, shift summaries, help configuring systems and a knowledge assistant on every screen.
+
+Agentic AI plans and carries out tasks through other software. It prepares the work, and a person approves it.
+
+They all need data, but not the same data or at the same time. The carousel walks through what each one does and what it needs.
+
+When someone in your business says "we're doing AI", which kind do they mean?
 
 #ShopfloorAI #SmartManufacturing""",
-x=["Machine learning has been on the shopfloor for decades. It was called SPC.\n\nLearn what normal looks like. Flag what isn't.\n\nWorth remembering next time someone sells you anomaly detection as brand new."],
-ig_format="Quote graphic",
-slides=[("quote","SPC has been doing machine learning on the shopfloor for decades.","It just wasn't called AI.")],
-ig="Learn what normal looks like, then flag what isn't. That's SPC, and it's been running on production lines for decades.\n\nWhat's the oldest 'AI' in your factory?\n\n"+IGTAGS),
-dict(id="w3-tue",day="Tue 10 Nov",type="Article",title="AI, ML and GenAI are not the same thing",
-li="""AI, ML and GenAI get used interchangeably. If you're about to spend money on any of them, they shouldn't be.
-
-Let's align on some terminology.
-
-Machine learning predicts outcomes from your own operational data. You train and test it before you trust it. Predictive maintenance, predictive quality, anomaly detection and vision inspection all live here.
-
-Generative AI creates text and answers. Its sweet spot is helping people, not controlling machines. Plain-English questions, shift summaries, help configuring systems and a knowledge assistant on every screen.
-
-Agentic AI plans and carries out tasks through other software. Exciting, and the top of the maturity curve.
-
-The common thread is data, but not always the same data. ML learns from your own history, so it can't learn from shift totals typed in at 6am. GenAI arrives already trained, so it can start now on your procedures, manuals, maintenance notes and shift logs, however messy. It just can't summarise a shift scattered across paper and Excel.
-
-So for AI that predicts or acts, the data foundation comes first. For GenAI on your documents and know-how, start now, in parallel.
-
-Full article in the first comment.
-
-When someone in your business says "we're doing AI", do they know which kind?""",
-li_comment="Full article: "+URL+"?utm_source=linkedin&utm_medium=social",
-x=["AI, ML and GenAI get used interchangeably. They shouldn't be, especially if you're spending money.\n\nA quick guide for people who run factories:",
-   "Machine learning predicts outcomes from your operational data.\n\nPredictive maintenance, predictive quality, anomaly detection, vision inspection. You train it and test it before you trust it.",
-   "Generative AI creates text and answers.\n\nIts sweet spot is helping people, not controlling machines.",
-   "Agentic AI plans and carries out tasks through other software.\n\nExciting. Also the top of the maturity curve.",
-   "The common thread is data. ML can't learn from shift totals typed in at 6am.\n\nGenAI can start sooner on your documents. Predictive AI needs the foundation first.",
-   "Full article: "+URL+"?utm_source=x&utm_medium=social"],
+x=["\"We're doing AI on the shopfloor.\"\n\nWhich kind?\n\nMachine learning predicts from your own data. GenAI helps people with answers and summaries.\n\nThey need different data, at different times."],
 ig_format="Carousel, 7 slides",
-slides=[("cover","AI, ML and GenAI are not the same thing","What each one actually does on the shopfloor"),
-        ("point","Machine learning","Predicts outcomes from your data: maintenance, quality, anomalies and defects."),
-        ("point","Generative AI","Creates text and answers. Helps people, doesn't control machines."),
-        ("point","Agentic AI","Plans and carries out tasks through other software. The top of the maturity curve."),
-        ("point","What they need","ML and agents need good operational data. GenAI can start on your documents now."),
-        ("quote","Predictive AI needs the foundation first. GenAI can start alongside it.",""),
-        ("cta","Read the full article","Link in bio · shopfloormatters.com")],
-ig="AI, ML and GenAI get used as if they mean the same thing. They don't. What each one does in a factory, and what each of them needs.\n\nFull article: link in bio.\n\n"+IGTAGS),
-dict(id="w3-thu",day="Thu 12 Nov",type="Poll",title="Which AI use case would you fund first?",
-li="""If you had budget for one AI project on the shopfloor next year, which would it be?
+slides=[("cover", "We're doing AI on the shopfloor", "The first question: which kind?"),
+        ("point", "Machine learning", "Predicts outcomes from your own data: failures, quality, anomalies and defects."),
+        ("point", "Generative AI", "Arrives already trained. Helps people with plain-English answers and shift summaries."),
+        ("point", "Agentic AI", "Plans and carries out tasks through other software, with a person approving."),
+        ("point", "What ML needs", "Your own history, captured automatically and with context. Built up alongside the model."),
+        ("point", "What GenAI needs", "The documents and know-how you already have. It can start now."),
+        ("cta", "When your business says \"we're doing AI\", which kind?", "")],
+ig="AI, machine learning, GenAI and agentic AI get used as if they mean the same thing. What each one does in a factory, and what it needs. Swipe through.\n\n" + IGTAGS),
 
-I ask because the answer usually tells me more about a factory's data than its ambitions.
+dict(id="w3-tue", day="Tue 24 Nov", type="Article", title="AI, ML and GenAI on the shopfloor", li_media=None,
+li="""AI is on every conference agenda and every executive's wish list. And the terms get used as if they all mean the same thing.
 
-Predictive maintenance needs failure history. Predictive quality needs results linked to process data. A GenAI assistant needs trusted, contextualised information to answer from. Plain-English reporting needs a clean data model underneath.
+If you're going to spend money on any of them, it's worth knowing which is which.
 
-Tell me in the comments, and what's stopping you.""",
-li_poll=["Predictive maintenance","Predictive quality","GenAI for operators","Plain-English reporting"],
-x=["One AI project on your shopfloor next year. Which do you fund first?"],
-x_poll=["Predictive maintenance","Predictive quality","GenAI for operators","Plain-English reports"],
-ig_format="Story poll, plus a quote graphic in the feed",
-ig_story="Which AI project would you fund first?  Options: Predictive maintenance / GenAI assistant",
-slides=[("quote","The AI project you choose says more about your data than your ambitions.","shopfloormatters.com")],
-ig="If you could fund one AI project on the shopfloor next year, what would it be? Vote in my story and tell me what's stopping you.\n\n"+IGTAGS),
-dict(id="w3-fri",day="Fri 13 Nov",type="Contrarian",title="An expensive guess",
-li="""If your shopfloor data is typed in at the end of the shift, your AI project is a very expensive guess.
+Machine learning has been in MES/MOM for longer than most people realise. Statistical process control has been spotting drifting processes for decades, and predictive maintenance is paying back in factories today. Newer applications like predictive quality and vision inspection are opening up much more.
 
-Models learn from what you feed them. Estimated scrap, rounded downtime, manual counts and backflushed consumption give you confident-looking predictions built on sand.
+Generative AI is useful in different ways. Ask for a one-page summary of OEE on Line 4 for the CI manager. Get the shift summary written for the incoming crew. Ask "what is this screen telling me?" and get a straight answer. Ask it to set up a new packing line, and it tells you what it needs to know.
 
-I understand the pressure. Every board wants an AI story. But the factories getting real value from AI started somewhere much less exciting: capturing data automatically, with context, as it happens.
+Agentic AI goes further, planning and carrying out tasks through other software. On the shopfloor I'd start with agents that prepare the work and act only when a person approves, and build towards more automation as trust grows.
 
-Fix that first. The AI conversation gets a lot more productive afterwards.
+They all depend on data, and the best way to build it is alongside the AI. Each use case shows you which data to capture next, and each improvement in the data makes the model better.
 
-Is your leadership asking for AI before the data is ready?
+The full article explains each one, and a practical way to start. Link in the first comment.
+
+Which kind of AI is your business asking for right now?""",
+li_comment="Full article: " + URL + "?utm_source=linkedin&utm_medium=social",
+x=["AI, ML and GenAI get used as if they mean the same thing. If you're spending money on any of them, it's worth knowing which is which.\n\nA quick guide for people who run factories:",
+   "Machine learning predicts outcomes from your own operational data.\n\nSPC has done a version of this for decades. Predictive maintenance pays back today, and predictive quality and vision inspection are opening up more.",
+   "Generative AI arrives already trained. Its sweet spot is helping people.\n\nPlain-English questions, shift summaries, help configuring systems and a knowledge assistant on every screen.",
+   "Agentic AI plans and carries out tasks through other software.\n\nStart with agents that prepare the work and act only when a person approves. Build towards automation as trust grows.",
+   "They all depend on data, and the best way to build it is alongside the AI. Each use case shows you which data to capture next.\n\nFull article: " + URL + "?utm_source=x&utm_medium=social"],
+ig_format="Carousel, 7 slides",
+slides=[("cover", "AI, ML and GenAI on the shopfloor", "What each one actually does"),
+        ("point", "Machine learning is older than you think", "SPC has been spotting drifting processes for decades."),
+        ("point", "And it's paying back today", "Predictive maintenance, predictive quality, anomaly detection and vision inspection."),
+        ("point", "GenAI helps people", "Shift summaries and plain-English answers, on every screen."),
+        ("point", "Agentic AI prepares the work", "A person approves. Automation grows as trust does."),
+        ("quote", "Build the AI and the data together. Each use case shows you what to capture next.", ""),
+        ("cta", "Read the full article", "Link in bio · shopfloormatters.com")],
+ig="AI, ML and GenAI on the shopfloor: what each one does, and why the AI and the data are best built together.\n\nFull article: link in bio.\n\n" + IGTAGS),
+
+dict(id="w3-thu", day="Thu 26 Nov", type="Quote", title="Your factory's internet", li_media="image",
+li="""Large language models are an amazing technology. But without the internet to learn from, they'd be useless.
+
+AI in your factory works the same way. Its internet is your shopfloor data: what happened and why, with the order, material, machine and operator attached.
+
+That's why I see AI and data as one plan rather than two. Every AI use case you start shows you which data to capture next.
 
 #ShopfloorAI #ManufacturingData""",
-x=["If your shopfloor data is typed in at the end of the shift, your AI project is a very expensive guess.\n\nFix data capture first. Then talk about models."],
-ig_format="Carousel, 5 slides",
-slides=[("cover","Typed-in shopfloor data + AI","= a very expensive guess"),
-        ("point","Models learn from what you feed them","Estimated scrap and rounded downtime give confident-looking nonsense."),
-        ("point","Every board wants an AI story","The factories getting value started somewhere less exciting."),
-        ("point","Capture data automatically","With context, as it happens. Then the models have something to learn from."),
-        ("cta","Is your leadership asking for AI before the data is ready?","shopfloormatters.com")],
-ig="Every board wants an AI story. The factories getting real value started with something much less exciting: good data.\n\nIs your data ready?\n\n"+IGTAGS),
+x=["Large language models would be useless without the internet to learn from.\n\nAI in your factory needs its own internet: shopfloor data, with context."],
+ig_format="Quote graphic",
+slides=[("quote", "AI in your factory needs its own internet: shopfloor data, with context.", "")],
+ig="Large language models would be useless without the internet. AI in your factory needs its own internet too: shopfloor data, with the context attached.\n\n" + IGTAGS),
+
+dict(id="w3-fri", day="Fri 27 Nov", type="Written", title="Start with a decision", li_media=None,
+li="""The most useful AI projects I hear about don't start with a technology. They start with a decision someone would like to make better.
+
+Four questions to find yours:
+
+Which failure would you most like to see coming?
+Which quality defect costs you most?
+Which report do people spend hours building every week?
+Which question do new starters ask most often?
+
+Then ask whether you have the data that decision needs, at the right granularity and with the right context.
+
+If you do, you've probably found an AI use case worth starting. If you don't, you've found the data to build, and the AI use case that justifies building it.
+
+Either way, you can start now. GenAI can work on the procedures, manuals, maintenance notes and shift logs you already have, while the operational data builds up underneath.
+
+Which of the four would make the biggest difference in your factory?
+
+#ShopfloorAI #SmartManufacturing""",
+x=["Four questions to find your first shopfloor AI use case:\n\nWhich failure would you most like to see coming?\nWhich defect costs you most?\nWhich report takes hours every week?\nWhich question do new starters ask most?\n\nThen check you have the data it needs."],
+ig_format="Carousel, 6 slides",
+slides=[("cover", "Start with a decision", "Four questions to find your first AI use case"),
+        ("num", "1", "Which failure would you most like to see coming?"),
+        ("num", "2", "Which quality defect costs you most?"),
+        ("num", "3", "Which report do people spend hours building every week?"),
+        ("num", "4", "Which question do new starters ask most often?"),
+        ("cta", "Then check you have the data that decision needs", "If not, you've found what to build, and why.")],
+ig="Good shopfloor AI projects start with a decision you'd like to make better. Four questions to find yours.\n\n" + IGTAGS),
 ]}

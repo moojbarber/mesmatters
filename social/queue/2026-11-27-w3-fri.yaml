@@ -1,0 +1,69 @@
+id: w3-fri
+week: 3
+date: '2026-11-27'
+type: Written
+title: Start with a decision
+approved: false
+article: https://www.shopfloormatters.com/post/ai-ml-genai-on-the-shopfloor
+linkedin:
+  at: 08:15
+  text: 'The most useful AI projects I hear about don''t start with a technology. They start with a decision someone would like to make better.
+
+
+    Four questions to find yours:
+
+
+    Which failure would you most like to see coming?
+
+    Which quality defect costs you most?
+
+    Which report do people spend hours building every week?
+
+    Which question do new starters ask most often?
+
+
+    Then ask whether you have the data that decision needs, at the right granularity and with the right context.
+
+
+    If you do, you''ve probably found an AI use case worth starting. If you don''t, you''ve found the data to build, and the AI use case that justifies building it.
+
+
+    Either way, you can start now. GenAI can work on the procedures, manuals, maintenance notes and shift logs you already have, while the operational data builds up underneath.
+
+
+    Which of the four would make the biggest difference in your factory?
+
+
+    #ShopfloorAI #SmartManufacturing'
+  needs_text: false
+x:
+  at: 08:30
+  posts:
+  - 'Four questions to find your first shopfloor AI use case:
+
+
+    Which failure would you most like to see coming?
+
+    Which defect costs you most?
+
+    Which report takes hours every week?
+
+    Which question do new starters ask most?
+
+
+    Then check you have the data it needs.'
+  needs_text: false
+instagram:
+  at: '18:30'
+  kind: carousel
+  caption: 'Good shopfloor AI projects start with a decision you''d like to make better. Four questions to find yours.
+
+
+    #shopfloorAI #AIinmanufacturing #machinelearning #generativeAI #agenticAI #smartmanufacturing #manufacturing #industry40'
+  media:
+  - marketing/social/weeks-01-04/w3-fri/w3-fri-01.jpg
+  - marketing/social/weeks-01-04/w3-fri/w3-fri-02.jpg
+  - marketing/social/weeks-01-04/w3-fri/w3-fri-03.jpg
+  - marketing/social/weeks-01-04/w3-fri/w3-fri-04.jpg
+  - marketing/social/weeks-01-04/w3-fri/w3-fri-05.jpg
+  - marketing/social/weeks-01-04/w3-fri/w3-fri-06.jpg

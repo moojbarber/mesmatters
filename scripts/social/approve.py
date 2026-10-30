@@ -33,9 +33,9 @@ def main():
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     if "--list" in sys.argv or not args:
         for f, d in items():
-            blocked = [p for p in ("linkedin", "x", "instagram") if d.get(p, {}).get("needs_text")]
+            blocked = [p for p in ("linkedin", "x", "instagram") if d.get(p, {}).get("needs_text") or d.get(p, {}).get("manual") or d.get(p, {}).get("kind") == "manual_reel"]
             print(f"{d['date']}  {d['id']:<8} {'APPROVED' if d.get('approved') else 'waiting ':<8}  {d['title'][:50]}"
-                  + (f"  (needs your words: {', '.join(blocked)})" if blocked else ""))
+                  + (f"  (you post yourself: {', '.join(blocked)})" if blocked else ""))
         return
     value = "--undo" not in sys.argv
     n = 0

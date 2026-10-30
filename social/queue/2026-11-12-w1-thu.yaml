@@ -1,0 +1,44 @@
+id: w1-thu
+week: 1
+date: '2026-11-12'
+type: Quote
+title: The front door and the house
+approved: false
+article: https://www.shopfloormatters.com/post/connected-worker-one-app-not-five
+linkedin:
+  at: 08:15
+  text: 'Connected worker is the front door. MOM is the house behind it.
+
+
+    The front door is what operators see every day: the checklist, the handover, the skills check and the instruction on the screen. It''s often the best place to start, because going paperless there delivers value in weeks.
+
+
+    The house is what makes it useful for years: the orders, materials, quality and maintenance data the door opens onto.
+
+
+    Start with the end in mind, and make sure the door you buy is attached to a house.
+
+
+    #ConnectedWorker #MES'
+  needs_text: false
+  image: marketing/social/weeks-01-04/w1-thu/w1-thu-01.png
+x:
+  at: 08:30
+  posts:
+  - 'Connected worker is the front door. MOM is the house behind it.
+
+
+    Start with the door if you like. Just make sure it''s attached to a house.'
+  needs_text: false
+instagram:
+  at: '18:30'
+  kind: image
+  caption: 'Connected worker is the front door. MOM is the house behind it.
+
+
+    Start with the door if you like. Just make sure it''s attached to a house.
+
+
+    #connectedworker #smartmanufacturing #manufacturing #MES #shopfloor #frontlineworkers #digitaltransformation #industry40'
+  media:
+  - marketing/social/weeks-01-04/w1-thu/w1-thu-01.jpg

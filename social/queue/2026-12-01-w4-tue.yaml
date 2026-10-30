@@ -1,0 +1,77 @@
+id: w4-tue
+week: 4
+date: '2026-12-01'
+type: Article
+title: Time to truth
+approved: false
+article: https://www.shopfloormatters.com/post/time-to-truth
+linkedin:
+  at: 08:15
+  text: 'The first question in any transformation is simple: where are you today?
+
+
+    The trouble is that most ways of answering it invite flattery. Ask a leadership team to rate its own maturity and the answer usually matches the last board presentation, not the shopfloor.
+
+
+    So I prefer a real example. A line stops at 02:14. When does the right person find out, and do they know why?
+
+
+    I call that time to truth. In a paper-based factory it''s "eventually", if the downtime sheet ever gets typed up. With ERP on the shopfloor it''s the end of the hour or shift, with accurate totals and nobody able to explain them. With automatic data capture it''s "right now", with the order and material already attached. And from there it moves to warnings before the failure, and agents that prepare the fix for a person to approve.
+
+
+    AI adds value at every stage, and the value climbs much faster once the truth arrives right now. Your factory has a shape rather than a single score: machine stops can be logged instantly while quality checks still arrive on paper.
+
+
+    The full article walks through all seven stages. Link in the first comment.
+
+
+    If Line 3 stopped at 02:14 tonight, when would you know?'
+  needs_text: false
+  comment: 'Full article: https://www.shopfloormatters.com/post/time-to-truth?utm_source=linkedin&utm_medium=social'
+x:
+  at: 08:30
+  posts:
+  - 'Ask a leadership team to rate its own maturity and the answer usually matches the last board presentation, not the shopfloor.
+
+
+    So I use a different question:'
+  - 'A line stops at 02:14.
+
+
+    When does the right person find out, and do they know why?
+
+
+    I call that time to truth.'
+  - 'Paper: eventually.
+
+    ERP on the shopfloor: end of the hour or shift.
+
+    Digitalised point solutions: after the fact.
+
+    Automatic data capture: right now.'
+  - 'Then: warnings before it happens, and agents that prepare the fix for a person to approve.
+
+
+    AI adds value at every stage. The value climbs much faster from "right now".'
+  - 'If Line 3 stopped at 02:14 tonight, when would you know?
+
+
+    https://www.shopfloormatters.com/post/time-to-truth?utm_source=x&utm_medium=social'
+  needs_text: false
+instagram:
+  at: '18:30'
+  kind: carousel
+  caption: 'How long does your factory take to know what happened? Time to truth, from paper to agents that prepare the fix for a person to approve.
+
+
+    Full article: link in bio.
+
+
+    #smartmanufacturing #manufacturing #digitaltransformation #MES #shopfloor #shopfloorAI #industry40 #operationalexcellence'
+  media:
+  - marketing/social/weeks-01-04/w4-tue/w4-tue-01.jpg
+  - marketing/social/weeks-01-04/w4-tue/w4-tue-02.jpg
+  - marketing/social/weeks-01-04/w4-tue/w4-tue-03.jpg
+  - marketing/social/weeks-01-04/w4-tue/w4-tue-04.jpg
+  - marketing/social/weeks-01-04/w4-tue/w4-tue-05.jpg
+  - marketing/social/weeks-01-04/w4-tue/w4-tue-06.jpg

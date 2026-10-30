@@ -1,109 +1,105 @@
-URL="https://www.shopfloormatters.com/post/smart-manufacturing-maturity-model"
-IGTAGS="#smartmanufacturing #digitaltransformation #manufacturing #industry40 #MES #shopfloor #maturitymodel #shopfloorAI"
-WEEK={"n":4,"title":"Week 4 (16–20 Nov): the smart manufacturing maturity model","article":"The smart manufacturing maturity model: you can't skip a level","url":URL,"posts":[
-dict(id="w4-mon",day="Mon 16 Nov",type="Checklist",title="Four questions to find your real maturity level",
-li="""Four questions to find your factory's real maturity level. Not the one in the last board presentation.
+URL = "https://www.shopfloormatters.com/post/time-to-truth"
+IGTAGS = "#smartmanufacturing #manufacturing #digitaltransformation #MES #shopfloor #shopfloorAI #industry40 #operationalexcellence"
+WEEK = {"n": 4, "title": "Week 4 (30 Nov–4 Dec): time to truth", "article": "Time to truth: how long does your factory take to know what happened?", "url": URL, "posts": [
 
-1. Is production data captured automatically, or typed in later?
+dict(id="w4-mon", day="Mon 30 Nov", type="Carousel", title="Line 3 stops at 02:14", li_media="document",
+li="""Line 3 stops at 02:14. A bearing has been running hot.
 
-2. Do production, quality, inventory and maintenance work from the same data?
+When does the right person find out, and do they know why?
 
-3. Could you trace a lot from raw material to customer in minutes?
+I call it time to truth: how long it takes your factory to know what really happened, with enough context to act on it. Following one event like this tells you more about where you are than most maturity frameworks.
 
-4. Does the morning meeting start with real-time data, or someone reading out yesterday's numbers?
+The carousel walks the same stoppage through seven stages, from a downtime sheet in a tray to an agent that books the repair into the next planned stop for a supervisor to approve.
 
-If you answered "typed in", "no", "days" and "yesterday's numbers", you're at Level 1 or 2. That's very common, and nothing to be embarrassed about.
-
-The embarrassing bit is planning an AI programme without admitting it.
-
-Tomorrow I'll share the five levels in full, and where AI actually starts to pay back.
+Where would your factory find out about it?
 
 #SmartManufacturing #DigitalTransformation""",
-x=["Four questions to find your factory's real maturity level:\n\n1. Is data captured automatically?\n2. Do all departments use the same data?\n3. Can you trace a lot in minutes?\n4. Does the morning meeting start with live data?\n\nBe honest."],
-ig_format="Carousel, 7 slides",
-slides=[("cover","Where is your factory really?","Four honest questions"),
-        ("num","1","Is production data captured automatically, or typed in later?"),
-        ("num","2","Do production, quality, inventory and maintenance use the same data?"),
-        ("num","3","Could you trace a lot from raw material to customer in minutes?"),
-        ("num","4","Does the morning meeting start with real-time data?"),
-        ("point","Mostly no?","You're at Level 1 or 2. Very common. Nothing to be embarrassed about."),
-        ("cta","Admit it before you plan the AI programme","shopfloormatters.com")],
-ig="Four questions to find your factory's real maturity level. Not the one in the board presentation.\n\nHow did you score?\n\n"+IGTAGS),
-dict(id="w4-tue",day="Tue 17 Nov",type="Article",title="You can't skip a level",
-li="""You can't skip a level of smart manufacturing maturity. Plenty of factories are trying to.
+x=["Line 3 stops at 02:14. A bearing has been running hot.\n\nWhen does the right person find out, and do they know why?\n\nThat gap is what I call time to truth."],
+ig_format="Carousel, 10 slides",
+slides=[("cover", "Line 3 stops at 02:14", "When does the right person find out, and do they know why?"),
+        ("level", "1", "Eventually. A downtime sheet goes in a tray, and gets typed up if it's lucky."),
+        ("level", "2", "End of hour or shift. ERP knows how many were good, but not why the line stopped."),
+        ("level", "3", "After the fact. Keyed into a tablet once the stop is over, rounded and late."),
+        ("level", "4", "Right now. Logged at 02:14 from the machine, with the order already attached."),
+        ("level", "5", "Before it happens. The temperature trend raises a warning at 23:40."),
+        ("level", "6", "Before anyone asks. An agent books the repair, and a supervisor approves it."),
+        ("level", "7", "Without asking. Routine decisions made inside limits the business agreed."),
+        ("point", "AI adds value at every stage", "And the value climbs much faster once the truth arrives right now."),
+        ("cta", "Where would your factory find out?", "")],
+ig="Line 3 stops at 02:14. When does the right person find out, and do they know why? Seven stages of time to truth. Swipe through.\n\n" + IGTAGS),
 
-The model I use has five levels:
+dict(id="w4-tue", day="Tue 1 Dec", type="Article", title="Time to truth", li_media=None,
+li="""The first question in any transformation is simple: where are you today?
 
-Level 1, Initial: paper travellers, and downtime on a whiteboard.
+The trouble is that most ways of answering it invite flattery. Ask a leadership team to rate its own maturity and the answer usually matches the last board presentation, not the shopfloor.
 
-Level 2, Managed: a few digital tools that each solve one problem, and a weekly report built by copying between them.
+So I prefer a real example. A line stops at 02:14. When does the right person find out, and do they know why?
 
-Level 3, Defined: integrated systems and automatic data capture, so operators work from one screen.
+I call that time to truth. In a paper-based factory it's "eventually", if the downtime sheet ever gets typed up. With ERP on the shopfloor it's the end of the hour or shift, with accurate totals and nobody able to explain them. With automatic data capture it's "right now", with the order and material already attached. And from there it moves to warnings before the failure, and agents that prepare the fix for a person to approve.
 
-Level 4, Quantified: a connected business, with maintenance scheduled because the data says so.
+AI adds value at every stage, and the value climbs much faster once the truth arrives right now. Your factory has a shape rather than a single score: machine stops can be logged instantly while quality checks still arrive on paper.
 
-Level 5, Optimised: AI-enabled. Very few factories are genuinely here, whatever their marketing says.
+The full article walks through all seven stages. Link in the first comment.
 
-In my experience most factories sit between Level 1 and Level 3. And the jump from 2 to 3 is usually the biggest step in value, because that's where data becomes trustworthy.
+If Line 3 stopped at 02:14 tonight, when would you know?""",
+li_comment="Full article: " + URL + "?utm_source=linkedin&utm_medium=social",
+x=["Ask a leadership team to rate its own maturity and the answer usually matches the last board presentation, not the shopfloor.\n\nSo I use a different question:",
+   "A line stops at 02:14.\n\nWhen does the right person find out, and do they know why?\n\nI call that time to truth.",
+   "Paper: eventually.\nERP on the shopfloor: end of the hour or shift.\nDigitalised point solutions: after the fact.\nAutomatic data capture: right now.",
+   "Then: warnings before it happens, and agents that prepare the fix for a person to approve.\n\nAI adds value at every stage. The value climbs much faster from \"right now\".",
+   "If Line 3 stopped at 02:14 tonight, when would you know?\n\n" + URL + "?utm_source=x&utm_medium=social"],
+ig_format="Carousel, 6 slides",
+slides=[("cover", "Time to truth", "How long does your factory take to know what happened?"),
+        ("quote", "Ask a leadership team to rate its maturity and you get the last board presentation.", ""),
+        ("point", "So use a real event", "A line stops at 02:14. When does the right person find out, and do they know why?"),
+        ("point", "Your factory has a shape", "Machine stops can arrive right now while quality checks still arrive on paper."),
+        ("point", "AI adds value at every stage", "And it climbs much faster once the truth arrives right now."),
+        ("cta", "Read the full article", "Link in bio · shopfloormatters.com")],
+ig="How long does your factory take to know what happened? Time to truth, from paper to agents that prepare the fix for a person to approve.\n\nFull article: link in bio.\n\n" + IGTAGS),
 
-It's also where predictive and optimising AI finally has something to learn from. GenAI working on your procedures, manuals, maintenance notes and shift logs can start sooner, alongside the foundation work.
+dict(id="w4-thu", day="Thu 3 Dec", type="Quote", title="The slowest area sets the pace", li_media="image",
+li="""The slowest area sets the pace.
 
-Full article in the first comment.
+Fast machine data doesn't help much if the reason, the quality result, the material record or the person who should act on it arrives a day later.
 
-Where would you put your factory today, and where would your leadership team put it?""",
-li_comment="Full article: "+URL+"?utm_source=linkedin&utm_medium=social",
-x=["You can't skip a level of smart manufacturing maturity. Plenty of factories are trying to.\n\nThe five levels:",
-   "1 Initial: paper and whiteboards.\n2 Managed: a few digital tools that don't talk.\n3 Defined: integrated systems, automatic data capture.\n4 Quantified: a connected business.\n5 Optimised: AI-enabled.",
-   "Most factories sit between Level 1 and Level 3.\n\nThe jump from 2 to 3 is usually the biggest step in value. It's where data becomes trustworthy.",
-   "It's also where predictive AI finally has something to learn from. GenAI on your documents can start sooner.\n\nEveryone wants Level 5. The path goes through 3 and 4.",
-   "Full article: "+URL+"?utm_source=x&utm_medium=social"],
-ig_format="Carousel, 9 slides",
-slides=[("cover","You can't skip a level","The smart manufacturing maturity model"),
-        ("level","1","Initial. Paper travellers and whiteboards."),
-        ("level","2","Managed. A few digital tools that each solve one problem."),
-        ("level","3","Defined. Integrated systems and automatic data capture."),
-        ("level","4","Quantified. A connected business. Maintenance scheduled by data."),
-        ("level","5","Optimised. AI-enabled. Very few factories are really here."),
-        ("point","Most factories are between 1 and 3","The jump from 2 to 3 is usually the biggest step in value."),
-        ("quote","Predictive AI starts paying back at Level 3.","GenAI on your documents and know-how can start sooner."),
-        ("cta","Read the full article","Link in bio · shopfloormatters.com")],
-ig="Five levels from paper to AI-enabled, and why there are no shortcuts for your data. Where would you put your factory?\n\nFull article: link in bio.\n\n"+IGTAGS),
-dict(id="w4-thu",day="Thu 19 Nov",type="Poll",title="What level is your factory at?",
-li="""Be honest. What maturity level is your factory at today?
+That's why I ask the time to truth question area by area, rather than looking for one score for the whole factory. The gaps between the answers are usually where the work is.
 
-Level 1: mostly paper.
-Level 2: spreadsheets and a few tools that don't talk.
-Level 3: integrated systems with automatic data capture.
-Level 4: joined-up data across the business.
+#SmartManufacturing #MES""",
+x=["The slowest area sets the pace.\n\nFast machine data doesn't help much if the reason or the quality result arrives a day later."],
+ig_format="Quote graphic",
+slides=[("quote", "The slowest area sets the pace.", "Fast machine data doesn't help if the reason arrives a day later.")],
+ig="The slowest area sets the pace. Fast machine data doesn't help much if everything else arrives a day later.\n\n" + IGTAGS),
 
-(I've left Level 5 off on purpose.)
+dict(id="w4-fri", day="Fri 4 Dec", type="Video", title="Video: when would you know?", li_media="video",
+video="""TALKING TO CAMERA, 60–90 SECONDS. Same setup as the week 2 video.
 
-Tell me in the comments which level, and what's blocking the next step.""",
-li_poll=["1: Mostly paper","2: Spreadsheets & tools","3: Integrated systems","4: Joined-up data"],
-x=["Be honest: what maturity level is your factory at?"],
-x_poll=["1: Mostly paper","2: Spreadsheets","3: Integrated systems","4: Joined-up data"],
-ig_format="Story poll, plus a quote graphic in the feed",
-ig_story="Is your factory still mostly on paper and spreadsheets?  Options: Yes / No",
-slides=[("quote","You can't plan a route if you're lying to yourself about the starting point.","shopfloormatters.com")],
-ig="Be honest: what level is your factory at? Vote in my story.\n\n"+IGTAGS),
-dict(id="w4-fri",day="Fri 20 Nov",type="Contrarian",title="A turbo on flat tyres",
-li="""Buying predictive AI before you've fixed your data is like fitting a turbo to a car with flat tyres.
+[0–5s, hook]
+"Line 3 stops at two-fourteen in the morning. When would you know?"
 
-It's an impressive purchase. It just won't get you anywhere faster.
+[5–25s]
+"I ask this instead of asking people to rate their maturity, because a rating usually matches the last board presentation. A real event tells you much more. When does the right person find out, and do they know why?"
 
-Every level of maturity builds on the one before. Skip a level and you usually end up paying twice: once for the shiny thing, and again for the foundations it needed.
+[25–50s]
+"On paper, the answer is 'eventually'. With ERP on the shopfloor, it's the end of the shift, and you know how many were good but not why it stopped. With tablets and point solutions, it's 'after the fact', typed in once the stop is over. Once the data's captured automatically, it's 'right now', with the order and the material already attached. That's usually the biggest single step in value."
 
-(GenAI on your documents and know-how is the exception. That can start now, alongside the tyres.)
+[50–70s]
+"And AI helps at every stage. But once the truth arrives right now, the value climbs much faster: spotting the trend before the bearing fails, and preparing the fix for someone to approve."
 
-So the question I'd ask any leadership team is simple. Where would your money go further this year: the turbo, or the tyres?
+[70–85s, close]
+"So, if your line stopped at two-fourteen tonight, when would you know? Tell me in the comments."
 
-#ShopfloorAI #SmartManufacturing""",
-x=["Buying predictive AI before you've fixed your data is like fitting a turbo to a car with flat tyres.\n\nImpressive purchase. Not much faster."],
-ig_format="Carousel, 5 slides",
-slides=[("cover","Buying predictive AI before fixing your data…","…is like fitting a turbo to a car with flat tyres."),
-        ("point","Impressive purchase","It just won't get you anywhere faster."),
-        ("point","Each level builds on the last","Skip one and you pay twice: for the shiny thing, then the foundations."),
-        ("point","Fix the tyres first","Automatic data capture, with context. Then the turbo is worth having."),
-        ("cta","Where would your money go further this year?","shopfloormatters.com")],
-ig="A turbo on flat tyres is still an impressive purchase. It just won't get you anywhere faster.\n\nWhere would your money go further: AI, or the data underneath it?\n\n"+IGTAGS),
+ON-SCREEN TEXT (optional): "Line 3 stops at 02:14" at the start; "Eventually / End of shift / Right now" as captions in the middle section.""",
+li="""Line 3 stops at 02:14. When would you know?
+
+I recorded a short video on why I ask this question instead of asking people to rate their maturity, and what changes when the truth arrives "right now".
+
+The full article, with all seven stages, is on shopfloormatters.com.
+
+So, if your line stopped at 02:14 tonight, when would you know?
+
+#SmartManufacturing #DigitalTransformation""",
+x=["Line 3 stops at 02:14. When would you know?\n\nI ask this instead of asking people to rate their maturity. A real event tells you much more than a score.\n\n" + URL + "?utm_source=x&utm_medium=social"],
+ig_format="Reel: 60–90 seconds talking to camera",
+slides=[],
+ig="Line 3 stops at 02:14. When would you know? Why I ask this instead of asking people to rate their maturity.\n\n" + IGTAGS),
 ]}

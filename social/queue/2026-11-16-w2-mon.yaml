@@ -1,0 +1,77 @@
+id: w2-mon
+week: 2
+date: '2026-11-16'
+type: Carousel
+title: Five things that define a smart factory
+approved: false
+article: https://www.shopfloormatters.com/post/what-is-a-smart-factory
+linkedin:
+  at: 08:15
+  text: 'Ask ten people what a smart factory is and you''ll get ten answers, most of them involving robots.
+
+
+    This is the definition I use: a manufacturing environment where people, processes and technology work together, supported by data, to maximise efficiency, flexibility and quality.
+
+
+    In practice, five things define one:
+
+
+    1. Defined processes, rather than "ask Dave, he knows how it works".
+
+    2. Planning connected to execution, so the planner knows the moment a machine goes down.
+
+    3. Real-time data at the point of work, so the operator doesn''t have to go looking.
+
+    4. Decisions made from a single source of truth.
+
+    5. People backed to make the call, instead of firefighting.
+
+
+    Only one of the five is really about technology. The other four are why the technology works.
+
+
+    Which of the five does your factory struggle with most?
+
+
+    #SmartFactory #SmartManufacturing'
+  needs_text: false
+  document: marketing/social/weeks-01-04/w2-mon/w2-mon-linkedin.pdf
+  document_title: Five things that define a smart factory
+x:
+  at: 08:30
+  posts:
+  - 'Five things that define a smart factory:
+
+
+    1. Defined processes
+
+    2. Planning connected to execution
+
+    3. Real-time data at the point of work
+
+    4. One source of truth
+
+    5. People backed to make the call
+
+
+    Only one is really about technology.'
+  needs_text: false
+instagram:
+  at: '18:30'
+  kind: carousel
+  caption: 'Five things define a smart factory, and only one of them is really about technology. Swipe through.
+
+
+    Which one does your factory struggle with most?
+
+
+    #smartfactory #smartmanufacturing #manufacturing #industry40 #MES #shopfloor #digitaltransformation #operationalexcellence'
+  media:
+  - marketing/social/weeks-01-04/w2-mon/w2-mon-01.jpg
+  - marketing/social/weeks-01-04/w2-mon/w2-mon-02.jpg
+  - marketing/social/weeks-01-04/w2-mon/w2-mon-03.jpg
+  - marketing/social/weeks-01-04/w2-mon/w2-mon-04.jpg
+  - marketing/social/weeks-01-04/w2-mon/w2-mon-05.jpg
+  - marketing/social/weeks-01-04/w2-mon/w2-mon-06.jpg
+  - marketing/social/weeks-01-04/w2-mon/w2-mon-07.jpg
+  - marketing/social/weeks-01-04/w2-mon/w2-mon-08.jpg

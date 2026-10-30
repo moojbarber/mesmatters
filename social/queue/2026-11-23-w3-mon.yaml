@@ -1,0 +1,66 @@
+id: w3-mon
+week: 3
+date: '2026-11-23'
+type: Carousel
+title: Which kind of AI?
+approved: false
+article: https://www.shopfloormatters.com/post/ai-ml-genai-on-the-shopfloor
+linkedin:
+  at: 08:15
+  text: '"We''re doing AI on the shopfloor."
+
+
+    The first question I''d ask is: which kind?
+
+
+    AI is the broad category: any system doing tasks that would normally need human intelligence.
+
+
+    Machine learning predicts outcomes from your own operational data. Predictive maintenance, predictive quality, anomaly detection and vision inspection all sit here, and you train and test the model before you trust it.
+
+
+    Generative AI arrives already trained. Its sweet spot is helping people: plain-English questions, shift summaries, help configuring systems and a knowledge assistant on every screen.
+
+
+    Agentic AI plans and carries out tasks through other software. It prepares the work, and a person approves it.
+
+
+    They all need data, but not the same data or at the same time. The carousel walks through what each one does and what it needs.
+
+
+    When someone in your business says "we''re doing AI", which kind do they mean?
+
+
+    #ShopfloorAI #SmartManufacturing'
+  needs_text: false
+  document: marketing/social/weeks-01-04/w3-mon/w3-mon-linkedin.pdf
+  document_title: Which kind of AI?
+x:
+  at: 08:30
+  posts:
+  - '"We''re doing AI on the shopfloor."
+
+
+    Which kind?
+
+
+    Machine learning predicts from your own data. GenAI helps people with answers and summaries.
+
+
+    They need different data, at different times.'
+  needs_text: false
+instagram:
+  at: '18:30'
+  kind: carousel
+  caption: 'AI, machine learning, GenAI and agentic AI get used as if they mean the same thing. What each one does in a factory, and what it needs. Swipe through.
+
+
+    #shopfloorAI #AIinmanufacturing #machinelearning #generativeAI #agenticAI #smartmanufacturing #manufacturing #industry40'
+  media:
+  - marketing/social/weeks-01-04/w3-mon/w3-mon-01.jpg
+  - marketing/social/weeks-01-04/w3-mon/w3-mon-02.jpg
+  - marketing/social/weeks-01-04/w3-mon/w3-mon-03.jpg
+  - marketing/social/weeks-01-04/w3-mon/w3-mon-04.jpg
+  - marketing/social/weeks-01-04/w3-mon/w3-mon-05.jpg
+  - marketing/social/weeks-01-04/w3-mon/w3-mon-06.jpg
+  - marketing/social/weeks-01-04/w3-mon/w3-mon-07.jpg

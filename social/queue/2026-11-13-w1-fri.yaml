@@ -1,0 +1,53 @@
+id: w1-fri
+week: 1
+date: '2026-11-13'
+type: Written
+title: Their second day, not their second year
+approved: false
+article: https://www.shopfloormatters.com/post/connected-worker-one-app-not-five
+linkedin:
+  at: 08:15
+  text: '72% of industrial organisations say frontline workforce issues have hurt their operational performance. That''s from LNS Research.
+
+
+    The pressure isn''t going away. Deloitte and the Manufacturing Institute estimate US manufacturing could need as many as 3.8 million new employees between 2024 and 2033, and that 1.9 million of those jobs could go unfilled.
+
+
+    Meanwhile the experienced people who keep the lines running are getting closer to retirement, and a lot of what they know isn''t written down anywhere.
+
+
+    That changes the job of shopfloor software. Recording what happened is no longer enough. It has to guide someone through the work so they get it right on their second day, not their second year.
+
+
+    In practice that means instructions at the point of work, and checks that stop the wrong person starting the wrong job.
+
+
+    How long does it take a new operator in your factory to work without someone looking over their shoulder?
+
+
+    #ConnectedWorker #Manufacturing'
+  needs_text: false
+x:
+  at: 08:30
+  posts:
+  - '72% of industrial organisations say frontline workforce issues have hurt their performance (LNS Research).
+
+
+    Shopfloor software now has to guide a new starter to get it right on their second day, not their second year.'
+  needs_text: false
+instagram:
+  at: '18:30'
+  kind: carousel
+  caption: 'Frontline workforce issues are hurting performance in most industrial businesses, and the gap is getting wider. Shopfloor software has to help new starters get it right on their second day.
+
+
+    How long does it take where you work?
+
+
+    #connectedworker #smartmanufacturing #manufacturing #MES #shopfloor #frontlineworkers #digitaltransformation #industry40'
+  media:
+  - marketing/social/weeks-01-04/w1-fri/w1-fri-01.jpg
+  - marketing/social/weeks-01-04/w1-fri/w1-fri-02.jpg
+  - marketing/social/weeks-01-04/w1-fri/w1-fri-03.jpg
+  - marketing/social/weeks-01-04/w1-fri/w1-fri-04.jpg
+  - marketing/social/weeks-01-04/w1-fri/w1-fri-05.jpg

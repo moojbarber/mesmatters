@@ -1,0 +1,100 @@
+id: w4-fri
+week: 4
+date: '2026-12-04'
+type: Video
+title: 'Video: when would you know?'
+approved: false
+article: https://www.shopfloormatters.com/post/time-to-truth
+linkedin:
+  at: 08:15
+  text: 'Line 3 stops at 02:14. When would you know?
+
+
+    I recorded a short video on why I ask this question instead of asking people to rate their maturity, and what changes when the truth arrives "right now".
+
+
+    The full article, with all seven stages, is on shopfloormatters.com.
+
+
+    So, if your line stopped at 02:14 tonight, when would you know?
+
+
+    #SmartManufacturing #DigitalTransformation'
+  needs_text: false
+  manual: true
+  video_script: 'TALKING TO CAMERA, 60–90 SECONDS. Same setup as the week 2 video.
+
+
+    [0–5s, hook]
+
+    "Line 3 stops at two-fourteen in the morning. When would you know?"
+
+
+    [5–25s]
+
+    "I ask this instead of asking people to rate their maturity, because a rating usually matches the last board presentation. A real event tells you much more. When does the right person find out, and do they know why?"
+
+
+    [25–50s]
+
+    "On paper, the answer is ''eventually''. With ERP on the shopfloor, it''s the end of the shift, and you know how many were good but not why it stopped. With tablets and point solutions, it''s ''after the fact'', typed in once the stop is over. Once the data''s captured automatically, it''s ''right now'', with the order and the material already attached. That''s usually the biggest single step in value."
+
+
+    [50–70s]
+
+    "And AI helps at every stage. But once the truth arrives right now, the value climbs much faster: spotting the trend before the bearing fails, and preparing the fix for someone to approve."
+
+
+    [70–85s, close]
+
+    "So, if your line stopped at two-fourteen tonight, when would you know? Tell me in the comments."
+
+
+    ON-SCREEN TEXT (optional): "Line 3 stops at 02:14" at the start; "Eventually / End of shift / Right now" as captions in the middle section.'
+x:
+  at: 08:30
+  posts:
+  - 'Line 3 stops at 02:14. When would you know?
+
+
+    I ask this instead of asking people to rate their maturity. A real event tells you much more than a score.
+
+
+    https://www.shopfloormatters.com/post/time-to-truth?utm_source=x&utm_medium=social'
+  needs_text: false
+instagram:
+  at: '18:30'
+  kind: manual_reel
+  caption: 'Line 3 stops at 02:14. When would you know? Why I ask this instead of asking people to rate their maturity.
+
+
+    #smartmanufacturing #manufacturing #digitaltransformation #MES #shopfloor #shopfloorAI #industry40 #operationalexcellence'
+  script: 'TALKING TO CAMERA, 60–90 SECONDS. Same setup as the week 2 video.
+
+
+    [0–5s, hook]
+
+    "Line 3 stops at two-fourteen in the morning. When would you know?"
+
+
+    [5–25s]
+
+    "I ask this instead of asking people to rate their maturity, because a rating usually matches the last board presentation. A real event tells you much more. When does the right person find out, and do they know why?"
+
+
+    [25–50s]
+
+    "On paper, the answer is ''eventually''. With ERP on the shopfloor, it''s the end of the shift, and you know how many were good but not why it stopped. With tablets and point solutions, it''s ''after the fact'', typed in once the stop is over. Once the data''s captured automatically, it''s ''right now'', with the order and the material already attached. That''s usually the biggest single step in value."
+
+
+    [50–70s]
+
+    "And AI helps at every stage. But once the truth arrives right now, the value climbs much faster: spotting the trend before the bearing fails, and preparing the fix for someone to approve."
+
+
+    [70–85s, close]
+
+    "So, if your line stopped at two-fourteen tonight, when would you know? Tell me in the comments."
+
+
+    ON-SCREEN TEXT (optional): "Line 3 stops at 02:14" at the start; "Eventually / End of shift / Right now" as captions in the middle section.'

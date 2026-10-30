@@ -1,0 +1,13 @@
+id: w2-x2
+week: 2
+date: '2026-11-21'
+type: X only
+title: 'When the morning meeting starts, the data should already be '
+approved: false
+x:
+  at: '12:30'
+  posts:
+  - 'When the morning meeting starts, the data should already be there.
+
+
+    Nobody should spend two hours pulling it together from spreadsheets first.'

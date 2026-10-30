@@ -100,7 +100,7 @@ def content(kind,a,b,i,n):
         return f'<div class="big">{int(a):02d}</div><p class="h2" style="font-size:58px">{esc(b)}</p>'
     if kind=="level":
         name,rest=(b.split(". ",1)+[""])[:2]
-        return f'<div class="lab">Level</div><div class="levelrow"><div class="big">{esc(a)}</div><p class="h2" style="padding-bottom:30px">{esc(name)}</p></div><p class="p">{esc(rest)}</p>'
+        return f'<div class="lab">Stage</div><div class="levelrow"><div class="big">{esc(a)}</div><p class="h2" style="padding-bottom:30px">{esc(name)}</p></div><p class="p">{esc(rest)}</p>'
     if kind=="list":
         items="".join(f"<li>{esc(x)}</li>" for x in b.split("|"))
         return f'<h2 class="h2">{esc(a)}</h2><ul class="list">{items}</ul>'

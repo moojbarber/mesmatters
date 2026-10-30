@@ -1,0 +1,75 @@
+id: w3-tue
+week: 3
+date: '2026-11-24'
+type: Article
+title: AI, ML and GenAI on the shopfloor
+approved: false
+article: https://www.shopfloormatters.com/post/ai-ml-genai-on-the-shopfloor
+linkedin:
+  at: 08:15
+  text: 'AI is on every conference agenda and every executive''s wish list. And the terms get used as if they all mean the same thing.
+
+
+    If you''re going to spend money on any of them, it''s worth knowing which is which.
+
+
+    Machine learning has been in MES/MOM for longer than most people realise. Statistical process control has been spotting drifting processes for decades, and predictive maintenance is paying back in factories today. Newer applications like predictive quality and vision inspection are opening up much more.
+
+
+    Generative AI is useful in different ways. Ask for a one-page summary of OEE on Line 4 for the CI manager. Get the shift summary written for the incoming crew. Ask "what is this screen telling me?" and get a straight answer. Ask it to set up a new packing line, and it tells you what it needs to know.
+
+
+    Agentic AI goes further, planning and carrying out tasks through other software. On the shopfloor I''d start with agents that prepare the work and act only when a person approves, and build towards more automation as trust grows.
+
+
+    They all depend on data, and the best way to build it is alongside the AI. Each use case shows you which data to capture next, and each improvement in the data makes the model better.
+
+
+    The full article explains each one, and a practical way to start. Link in the first comment.
+
+
+    Which kind of AI is your business asking for right now?'
+  needs_text: false
+  comment: 'Full article: https://www.shopfloormatters.com/post/ai-ml-genai-on-the-shopfloor?utm_source=linkedin&utm_medium=social'
+x:
+  at: 08:30
+  posts:
+  - 'AI, ML and GenAI get used as if they mean the same thing. If you''re spending money on any of them, it''s worth knowing which is which.
+
+
+    A quick guide for people who run factories:'
+  - 'Machine learning predicts outcomes from your own operational data.
+
+
+    SPC has done a version of this for decades. Predictive maintenance pays back today, and predictive quality and vision inspection are opening up more.'
+  - 'Generative AI arrives already trained. Its sweet spot is helping people.
+
+
+    Plain-English questions, shift summaries, help configuring systems and a knowledge assistant on every screen.'
+  - 'Agentic AI plans and carries out tasks through other software.
+
+
+    Start with agents that prepare the work and act only when a person approves. Build towards automation as trust grows.'
+  - 'They all depend on data, and the best way to build it is alongside the AI. Each use case shows you which data to capture next.
+
+
+    Full article: https://www.shopfloormatters.com/post/ai-ml-genai-on-the-shopfloor?utm_source=x&utm_medium=social'
+  needs_text: false
+instagram:
+  at: '18:30'
+  kind: carousel
+  caption: 'AI, ML and GenAI on the shopfloor: what each one does, and why the AI and the data are best built together.
+
+
+    Full article: link in bio.
+
+
+    #shopfloorAI #AIinmanufacturing #machinelearning #generativeAI #agenticAI #smartmanufacturing #manufacturing #industry40'
+  media:
+  - marketing/social/weeks-01-04/w3-tue/w3-tue-01.jpg
+  - marketing/social/weeks-01-04/w3-tue/w3-tue-02.jpg
+  - marketing/social/weeks-01-04/w3-tue/w3-tue-03.jpg
+  - marketing/social/weeks-01-04/w3-tue/w3-tue-04.jpg
+  - marketing/social/weeks-01-04/w3-tue/w3-tue-05.jpg
+  - marketing/social/weeks-01-04/w3-tue/w3-tue-06.jpg
+  - marketing/social/weeks-01-04/w3-tue/w3-tue-07.jpg

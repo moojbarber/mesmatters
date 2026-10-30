@@ -7,7 +7,7 @@
 # To reorder, just move lines around. Set publish_all_now to false to go back to
 # releasing one article a week on the site as well.
 publish_all_now: true
-start: 2026-10-27        # a Tuesday
+start: 2026-11-10        # a Tuesday
 send_time: "08:00"       # UK time the email goes out
 weekly:
   - connected-worker-one-app-not-five
@@ -75,3 +75,17 @@ weekly:
   - mtbf-vs-mttr-vs-mttf
   - first-pass-yield-vs-rolled-throughput-yield
   - industry-4-0-vs-industry-5-0
+
+# Optional personal note (above the article) and P.S. (after the sign-off) for each
+# newsletter, keyed by article slug. Markdown links are fine; site links can start with /.
+notes:
+  connected-worker-one-app-not-five:
+    note: "Welcome to the first Shopfloor Matters newsletter. Every Tuesday I'll send you one article from the site, on the smart factory, shopfloor AI and the MES/MOM foundations underneath them.\n\nWe're starting with the people on the shopfloor, and the tools we give them."
+  what-is-a-smart-factory:
+    note: "This week is my definition of a smart factory, and the five things that define one. Only one of the five is really about technology."
+    ps: "P.S. If you'd like to put a number on it, the [1% OEE calculator](/tools/oee-one-percent) on the site works from two figures in your annual report."
+  ai-ml-genai-on-the-shopfloor:
+    note: "This week is a plain-English guide to the different kinds of AI on the shopfloor, where each one earns its keep, and what each one needs."
+  time-to-truth:
+    note: "This week is the question I'd ask instead of a maturity score, and why AI adds value at every stage of the answer."
+    ps: "P.S. To see how your systems fit together today, try the [systems landscape builder](/tools/systems-landscape) on the site."

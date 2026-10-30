@@ -1,0 +1,38 @@
+id: w2-thu
+week: 2
+date: '2026-11-19'
+type: Quote
+title: Two things
+approved: false
+article: https://www.shopfloormatters.com/post/what-is-a-smart-factory
+linkedin:
+  at: 08:15
+  text: 'Everything a smart factory delivers comes back to two things: selling more, or improving margin. Ideally both.
+
+
+    More capacity from the equipment you already have. Less scrap. Lower inventory, because you trust the data enough to stop carrying buffers. Traceability in minutes rather than days.
+
+
+    Each one shows up in one of those two numbers. If a project can''t show which one it moves, it''s worth asking why you''re doing it.
+
+
+    #SmartFactory #Manufacturing'
+  needs_text: false
+  image: marketing/social/weeks-01-04/w2-thu/w2-thu-01.png
+x:
+  at: 08:30
+  posts:
+  - 'Everything a smart factory delivers comes back to two things: selling more, or improving margin.
+
+
+    Ideally both.'
+  needs_text: false
+instagram:
+  at: '18:30'
+  kind: image
+  caption: 'Every smart factory benefit shows up in one of two numbers: selling more, or improving margin. Ideally both.
+
+
+    #smartfactory #smartmanufacturing #manufacturing #industry40 #MES #shopfloor #digitaltransformation #operationalexcellence'
+  media:
+  - marketing/social/weeks-01-04/w2-thu/w2-thu-01.jpg

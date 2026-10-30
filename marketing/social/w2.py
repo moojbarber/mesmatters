@@ -1,110 +1,112 @@
-URL="https://www.shopfloormatters.com/post/what-is-a-smart-factory"
-IGTAGS="#smartfactory #smartmanufacturing #manufacturing #industry40 #MES #shopfloor #digitaltransformation #manufacturingexcellence"
-WEEK={"n":2,"title":"Week 2 (2–6 Nov): what is a smart factory?","article":"What is a smart factory? No version number required","url":URL,"posts":[
-dict(id="w2-mon",day="Mon 2 Nov",type="Myth vs reality",title="Full of robots, empty of people",
-li="""Myth: a smart factory is full of robots and empty of people.
+URL = "https://www.shopfloormatters.com/post/what-is-a-smart-factory"
+IGTAGS = "#smartfactory #smartmanufacturing #manufacturing #industry40 #MES #shopfloor #digitaltransformation #operationalexcellence"
+WEEK = {"n": 2, "title": "Week 2 (16–20 Nov): what is a smart factory?", "article": "What is a smart factory? A practical definition", "url": URL, "posts": [
 
-Reality: the smart factories worth copying are full of people making better decisions.
+dict(id="w2-mon", day="Mon 16 Nov", type="Carousel", title="Five things that define a smart factory", li_media="document",
+li="""Ask ten people what a smart factory is and you'll get ten answers, most of them involving robots.
 
-Automation has its place. But when I think about what actually separates a smart factory from a struggling one, robots are rarely top of the list.
+This is the definition I use: a manufacturing environment where people, processes and technology work together, supported by data, to maximise efficiency, flexibility and quality.
 
-What matters more:
+In practice, five things define one:
 
-Defined processes, not "ask Dave, he knows how it works".
-Planning connected to execution, so the schedule reflects reality.
-The right information at the point of work.
-People backed to make the call, instead of firefighting.
+1. Defined processes, rather than "ask Dave, he knows how it works".
+2. Planning connected to execution, so the planner knows the moment a machine goes down.
+3. Real-time data at the point of work, so the operator doesn't have to go looking.
+4. Decisions made from a single source of truth.
+5. People backed to make the call, instead of firefighting.
 
-Only one of those is really about technology.
+Only one of the five is really about technology. The other four are why the technology works.
 
-What's the biggest misconception about smart factories you hear?
+Which of the five does your factory struggle with most?
 
 #SmartFactory #SmartManufacturing""",
-x=["Myth: a smart factory is full of robots and empty of people.\n\nReality: it's full of people making better decisions, because the right information reaches them at the right time."],
-ig_format="Carousel, 6 slides",
-slides=[("cover","Smart factory myths","And what's actually true"),
-        ("myth","Full of robots, empty of people","Reality: full of people making better decisions."),
-        ("myth","It's a technology project","Reality: process and people decide whether the technology works."),
-        ("myth","It needs Industry 5.0 or 6.0","Reality: no version number required. Just good data, used well."),
-        ("myth","It makes manufacturing simpler","Reality: it doesn't reduce complexity. It helps you handle it."),
-        ("cta","Which myth do you hear most?","shopfloormatters.com")],
-ig="Four smart factory myths I hear all the time, and what's actually true.\n\nWhich one do you hear most?\n\n"+IGTAGS),
-dict(id="w2-tue",day="Tue 3 Nov",type="Article",title="A smart factory doesn't need a version number",
-li="""I saw "Industry 6.0" on LinkedIn recently. It made my blood boil.
+x=["Five things that define a smart factory:\n\n1. Defined processes\n2. Planning connected to execution\n3. Real-time data at the point of work\n4. One source of truth\n5. People backed to make the call\n\nOnly one is really about technology."],
+ig_format="Carousel, 8 slides",
+slides=[("cover", "What makes a factory smart?", "Five things, and only one is about technology"),
+        ("num", "1", "Defined processes, rather than “ask Dave, he knows how it works”."),
+        ("num", "2", "Planning connected to execution. When a machine goes down, the planner knows."),
+        ("num", "3", "Real-time data at the point of work. The operator shouldn't have to go looking."),
+        ("num", "4", "One source of truth. The morning meeting starts with the facts."),
+        ("num", "5", "People backed to make the call, instead of firefighting."),
+        ("point", "Only one of the five is really about technology", "The other four are why the technology works."),
+        ("cta", "Which of the five does your factory struggle with most?", "")],
+ig="Five things define a smart factory, and only one of them is really about technology. Swipe through.\n\nWhich one does your factory struggle with most?\n\n" + IGTAGS),
 
-We shouldn't need a version number to describe something's value. We should be able to say what it actually does.
+dict(id="w2-tue", day="Tue 17 Nov", type="Article", title="What is a smart factory?", li_media=None,
+li="""Industry 4.0. Smart manufacturing. The digital factory. The connected enterprise.
 
-So this is the definition I use:
+I genuinely saw "Industry 6.0" on LinkedIn recently. We shouldn't need a version number to describe something's value. We should be able to say what it actually does.
 
-A smart factory is a manufacturing environment where people, processes and technology work together, supported by data, to maximise efficiency, flexibility and quality.
+So, labels aside, this is the definition I use. A smart factory is a manufacturing environment where people, processes and technology work together, supported by data, to maximise efficiency, flexibility and quality.
 
-No magic. The right information reaches the right person at the right time, and decisions are based on facts rather than gut feel.
+The right information reaches the right person at the right time, and decisions are based on facts rather than gut feel.
 
-In the article I break down the five things that define one. Notice that only one of the five is really about technology. That's deliberate.
+The old way of managing a factory worked because the environment was stable: fewer products, predictable demand, reliable supply and a workforce that stayed for decades. That stability has gone. The complexity hasn't changed much, but the capacity to cope with it informally has run out.
 
-I also cover something that gets overlooked. A smart factory doesn't reduce complexity. It increases your capacity to handle it.
+A smart factory won't make manufacturing simpler, but it increases your capacity to handle the complexity you already have.
 
-Full article in the first comment.
+The full article covers the five things that define one, and where MES/MOM fits. Link in the first comment.
 
-So, which of the five does your factory struggle with most?""",
-li_comment="Full article: "+URL+"?utm_source=linkedin&utm_medium=social",
-x=["I saw \"Industry 6.0\" on LinkedIn recently.\n\nWe shouldn't need a version number to describe a smart factory. This is what it actually is:",
-   "A smart factory is where people, processes and technology work together, supported by data.\n\nThe right information reaches the right person at the right time. Decisions run on facts, not gut feel.",
-   "Five things define it: defined processes, planning connected to execution, real-time data at the point of work, a single source of truth, and people backed to make the call.",
-   "Only one of those five is really about technology. That's deliberate.",
-   "And it doesn't make manufacturing simpler. The complexity is what it is.\n\nA smart factory increases your capacity to handle it.",
-   "Full article: "+URL+"?utm_source=x&utm_medium=social"],
-ig_format="Carousel, 9 slides",
-slides=[("cover","What is a smart factory?","No version number required."),
-        ("quote","People, processes and technology, working together on good data.","That's the whole definition."),
-        ("num","1","Defined processes. Not \"ask Dave, he knows how it works\"."),
-        ("num","2","Planning connected to execution. When a machine stops, the planner knows."),
-        ("num","3","Real-time data at the point of work. The operator shouldn't go looking."),
-        ("num","4","One source of truth. The morning meeting starts with facts."),
-        ("num","5","People backed to make the call. Less firefighting, more improving."),
-        ("point","Only one of the five is really about technology","That's deliberate."),
-        ("cta","Read the full article","Link in bio · shopfloormatters.com")],
-ig="Industry 4.0, 5.0, 6.0… A smart factory doesn't need a version number. Here are the five things that actually define one.\n\nFull article: link in bio.\n\n"+IGTAGS),
-dict(id="w2-thu",day="Thu 5 Nov",type="Stat",title="What 600 manufacturers reported",
-li="""Deloitte asked 600 large manufacturers what smart manufacturing has actually delivered.
+Where does your factory find it hardest to keep up?""",
+li_comment="Full article: " + URL + "?utm_source=linkedin&utm_medium=social",
+x=["Industry 4.0. 5.0. I recently saw 6.0.\n\nWe shouldn't need a version number to describe a smart factory. This is the definition I use:",
+   "A smart factory is where people, processes and technology work together, supported by data, to maximise efficiency, flexibility and quality.\n\nThe right information reaches the right person at the right time.",
+   "The old way worked because the environment was stable. Fewer products, predictable demand, reliable supply and people who stayed for decades.\n\nThat stability has gone.",
+   "A smart factory won't make manufacturing simpler, but it increases your capacity to handle the complexity you already have.",
+   "The five things that define one, and where MES/MOM fits: " + URL + "?utm_source=x&utm_medium=social"],
+ig_format="Carousel, 7 slides",
+slides=[("cover", "What is a smart factory?", "A practical definition, without the version numbers"),
+        ("quote", "People, processes and technology working together, supported by data.", ""),
+        ("point", "The old way relied on stability", "Fewer products, predictable demand, reliable supply and people who stayed for decades."),
+        ("point", "That stability has gone", "More variety, higher costs, full traceability and experienced people retiring."),
+        ("point", "The complexity is what it is", "A smart factory increases your capacity to handle it."),
+        ("point", "Where MES/MOM fits", "It runs the processes, connects planning to the floor and creates one source of truth."),
+        ("cta", "Read the full article", "Link in bio · shopfloormatters.com")],
+ig="A smart factory, without the version numbers: people, processes and technology working together, supported by data.\n\nFull article: link in bio.\n\n" + IGTAGS),
 
-The headline: production output up 10% to 20% on average. Employee productivity up 7% to 20%.
+dict(id="w2-thu", day="Thu 19 Nov", type="Quote", title="Two things", li_media="image",
+li="""Everything a smart factory delivers comes back to two things: selling more, or improving margin. Ideally both.
 
-Two caveats before anyone puts those in a business case. These are large companies with over $500 million in revenue, and the numbers are self-reported.
+More capacity from the equipment you already have. Less scrap. Lower inventory, because you trust the data enough to stop carrying buffers. Traceability in minutes rather than days.
 
-But the direction is clear. When the basics are in place, the returns are real.
-
-The basics being clean data and defined processes. Not the shiny bit on top.
-
-Do those numbers match what you've seen?
-
-#SmartManufacturing #Industry40""",
-x=["Deloitte surveyed 600 large manufacturers on smart manufacturing.\n\nAverage reported gains: output up 10–20%, productivity up 7–20%.\n\nSelf-reported, large companies only. But the direction is clear."],
-ig_format="Carousel, 5 slides",
-slides=[("cover","What 600 manufacturers reported","Deloitte 2025 Smart Manufacturing Survey"),
-        ("stat","10–20%","average improvement in production output"),
-        ("stat","7–20%","average improvement in employee productivity"),
-        ("point","Read the small print","Large companies, self-reported. Use it for context, then build your own case."),
-        ("cta","Does this match what you've seen?","Source: Deloitte, 2025")],
-ig="What smart manufacturing actually delivered, according to 600 large manufacturers. Swipe for the numbers, and the small print.\n\n"+IGTAGS),
-dict(id="w2-fri",day="Fri 6 Nov",type="Story",title="When you knew a factory was smart (or wasn't)",
-li="""[Your story. Write 150–250 words from your own experience, using this prompt.]
-
-Prompt: the moment you realised a factory was genuinely smart, or wasn't.
-
-- Set the scene in one line: a site visit, a project kick-off, a morning meeting.
-- What gave it away? Live data on screens, or people chasing paper and arguing about whose numbers were right?
-- The one detail that stuck with you.
-- What it taught you about what "smart" really means.
-
-End with: What's the first thing you look for when you walk onto a shopfloor?
+Each one shows up in one of those two numbers. If a project can't show which one it moves, it's worth asking why you're doing it.
 
 #SmartFactory #Manufacturing""",
-x=["[Short version of your story: 2–3 posts.]\n\nEnd with: What's the first thing you look for when you walk onto a shopfloor?"],
-ig_format="Reel: 30–45 seconds talking to camera",
-reel="""Open (0–3s): "You can tell if a factory is smart in the first five minutes."
-Middle (3–35s): tell the story from your LinkedIn post in three or four short beats. Keep it to one site and one moment.
-Close (35–45s): "What's the first thing you look for when you walk onto a shopfloor? Tell me below." """,
+x=["Everything a smart factory delivers comes back to two things: selling more, or improving margin.\n\nIdeally both."],
+ig_format="Quote graphic",
+slides=[("quote", "Everything comes back to two things: selling more, or improving margin.", "Ideally both.")],
+ig="Every smart factory benefit shows up in one of two numbers: selling more, or improving margin. Ideally both.\n\n" + IGTAGS),
+
+dict(id="w2-fri", day="Fri 20 Nov", type="Video", title="Video: a smart factory in 60 seconds", li_media="video",
+video="""TALKING TO CAMERA, 60–75 SECONDS. Plain background or your office. One take is fine.
+
+[0–5s, hook]
+"Industry 4.0, 5.0... I even saw 6.0 the other day. So what actually makes a factory smart?"
+
+[5–20s]
+"For me it's simple. People, processes and technology working together, supported by data. The right information gets to the right person at the right time, and decisions are made on facts rather than gut feel."
+
+[20–45s]
+"And when you break it down, there are five things: defined processes, planning connected to what's actually happening on the floor, real-time data where the work happens, one source of truth, and people who are backed to make the call. Only one of those is really about technology."
+
+[45–60s]
+"A smart factory won't make manufacturing simpler. It gives you the capacity to handle the complexity you've already got."
+
+[60–70s, close]
+"So which of those five does your factory struggle with most? Let me know in the comments."
+
+ON-SCREEN TEXT (optional): "5 things that make a factory smart" at the start; the five items as captions while you list them.""",
+li="""What actually makes a factory smart? I recorded a minute on it.
+
+People, processes and technology working together, supported by data. Five things define it, and only one of them is really about technology.
+
+The full article is on shopfloormatters.com if you want the long version.
+
+Which of the five does your factory struggle with most?
+
+#SmartFactory #SmartManufacturing""",
+x=["What actually makes a factory smart?\n\nPeople, processes and technology working together, supported by data. Five things define it, and only one is really about technology.\n\n" + URL + "?utm_source=x&utm_medium=social"],
+ig_format="Reel: 60–75 seconds talking to camera",
 slides=[],
-ig="You can tell a lot about a factory in the first five minutes. What's the first thing you look for?\n\n"+IGTAGS),
+ig="What actually makes a factory smart? Five things, and only one of them is about technology.\n\nWhich one does your factory struggle with most?\n\n" + IGTAGS),
 ]}

@@ -1,0 +1,38 @@
+id: w3-thu
+week: 3
+date: '2026-11-26'
+type: Quote
+title: Your factory's internet
+approved: false
+article: https://www.shopfloormatters.com/post/ai-ml-genai-on-the-shopfloor
+linkedin:
+  at: 08:15
+  text: 'Large language models are an amazing technology. But without the internet to learn from, they''d be useless.
+
+
+    AI in your factory works the same way. Its internet is your shopfloor data: what happened and why, with the order, material, machine and operator attached.
+
+
+    That''s why I see AI and data as one plan rather than two. Every AI use case you start shows you which data to capture next.
+
+
+    #ShopfloorAI #ManufacturingData'
+  needs_text: false
+  image: marketing/social/weeks-01-04/w3-thu/w3-thu-01.png
+x:
+  at: 08:30
+  posts:
+  - 'Large language models would be useless without the internet to learn from.
+
+
+    AI in your factory needs its own internet: shopfloor data, with context.'
+  needs_text: false
+instagram:
+  at: '18:30'
+  kind: image
+  caption: 'Large language models would be useless without the internet. AI in your factory needs its own internet too: shopfloor data, with the context attached.
+
+
+    #shopfloorAI #AIinmanufacturing #machinelearning #generativeAI #agenticAI #smartmanufacturing #manufacturing #industry40'
+  media:
+  - marketing/social/weeks-01-04/w3-thu/w3-thu-01.jpg
