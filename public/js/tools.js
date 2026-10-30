@@ -156,36 +156,47 @@
     var of = $('#oc-form');
     var defaults = {};
     $$('input,select', of).forEach(function (i) { defaults[i.name] = i.value; });
-    var s = store('oee2') || {};
+    var s = store('oee3') || {};
     $$('input,select', of).forEach(function (i) { if (s[i.name] != null) i.value = s[i.name]; });
     var last;
     function money(v, cur) { var a = Math.abs(v); var t = a >= 1e9 ? (a / 1e9).toFixed(2) + 'bn' : a >= 1e6 ? (a / 1e6).toFixed(a >= 1e8 ? 0 : a >= 1e7 ? 1 : 2) + 'm' : a >= 1e4 ? Math.round(a / 1e3) + 'k' : Math.round(a).toLocaleString('en-GB'); return (v < 0 ? '−' : '') + cur + t; }
     function num(v) { var n = parseFloat(v); return isNaN(n) ? null : Math.max(0, n); }
+    // accepts 1000000, 1,000,000, 750k, 2.5m, 1bn, £1.2 billion
+    function amt(v) {
+      var t = String(v || '').toLowerCase().replace(/[£$€,\s]/g, '');
+      var m = t.match(/^(\d*\.?\d+)(k|m|mn|million|b|bn|billion)?$/); if (!m) return null;
+      var n = parseFloat(m[1]), u = m[2] || '';
+      return n * (u === 'k' ? 1e3 : /^m/.test(u) ? 1e6 : /^b/.test(u) ? 1e9 : 1);
+    }
     function val(o, pct) {
       var x = pct / 100, made = o.rev * o.made / 100;
-      var margin = o.cm != null ? o.cm / 100 : (o.rev ? o.gp / o.rev : 0);
+      var gm = o.rev ? o.gp / o.rev : 0;
+      var margin = o.cm != null ? o.cm / 100 : gm;
       var cap = made * x;
       var sold = cap * (o.sell / 100) * margin;
-      var conv = o.conv != null ? o.conv : Math.max(0, (o.rev - o.gp) - o.rev * o.mat / 100);
+      var conv = o.conv != null ? o.conv : made * Math.max(0, 1 - gm - o.mat / 100) * o.var / 100;
       var save = conv * (x / (1 + x)) * (1 - o.sell / 100);
       return { cap: cap, sold: sold, save: save, total: sold + save, margin: margin, conv: conv };
     }
     function read() {
       var o = { cur: of.cur.value };
-      ['rev', 'gp', 'imp', 'made', 'sell', 'mat'].forEach(function (k) { o[k] = num(of[k].value) || 0; });
-      o.cm = num(of.cm.value); o.conv = num(of.conv.value);
-      o.made = Math.min(100, o.made); o.sell = Math.min(100, o.sell); o.imp = Math.min(25, Math.max(1, o.imp || 1));
+      o.rev = amt(of.rev.value) || 0; o.gp = Math.min(amt(of.gp.value) || 0, o.rev); o.conv = amt(of.conv.value);
+      ['imp', 'made', 'sell', 'mat', 'var'].forEach(function (k) { o[k] = num(of[k].value) || 0; });
+      o.cm = num(of.cm.value);
+      o.made = Math.min(100, o.made); o.sell = Math.min(100, o.sell); o.mat = Math.min(100, o.mat); o.var = Math.min(100, o.var); o.imp = Math.min(25, Math.max(1, o.imp || 1));
       return o;
     }
     function calc() {
       var o = read(), raw = {};
       $$('input,select', of).forEach(function (i) { raw[i.name] = i.value; });
-      store('oee2', raw);
+      store('oee3', raw);
+      ['rev', 'gp', 'conv'].forEach(function (k) { var a = amt(of[k].value), f = $('[data-fmt=' + k + ']'); f.textContent = of[k].value && a == null ? 'check' : a != null && a >= 1e3 ? money(a, o.cur) : ''; of[k].setAttribute('aria-invalid', of[k].value && a == null ? 'true' : 'false'); });
       var v = val(o, o.imp);
       last = { o: o, v: v };
       $('[data-oc=impv]').textContent = o.imp + '%';
       $('[data-oc=impt]').textContent = o.imp + '%';
-      $('[data-oc=point]').textContent = money(v.total, o.cur);
+      var ok = o.rev && o.gp; $('[data-oc=point]').textContent = ok ? money(v.total, o.cur) : '–';
+      $('[data-oc=mini]').innerHTML = ok ? 'A ' + o.imp + '% improvement is worth <b>' + money(v.total, o.cur) + '</b> a year' : 'Enter revenue and gross profit';
       $('[data-oc=revt]').textContent = money(o.rev, o.cur);
       $('[data-oc=sell]').textContent = money(v.sold, o.cur);
       $('[data-oc=cap]').textContent = money(v.cap, o.cur);
@@ -199,10 +210,14 @@
       }).join('');
     }
     csvRows = function () {
-      var o = last.o, rows = [['Shopfloor Matters: what is 1% of OEE worth?', new Date().toISOString().slice(0, 10)], ['Annual revenue', o.rev], ['Gross profit', o.gp], ['Share of revenue from products you make %', o.made], ['Share of extra output you could sell %', o.sell], ['Contribution margin %', o.cm == null ? 'not entered (gross margin used)' : o.cm], ['Materials as % of revenue', o.mat], ['Annual conversion costs', o.conv == null ? 'estimated: ' + Math.round(last.v.conv) : o.conv], [], ['Improvement %', 'Extra capacity (sales value)', 'From selling more', 'From costs no longer incurred', 'Total per year']];
+      var o = last.o, ind = of.ind.options[of.ind.selectedIndex].text;
+      var rows = [['Shopfloor Matters: what is 1% of OEE worth?', new Date().toISOString().slice(0, 10)], ['Annual revenue', o.rev], ['Gross profit', o.gp], ['Industry', ind], ['Materials as % of revenue', o.mat], ['Share of revenue from products you make %', o.made], ['Share of extra output you could sell %', o.sell], ['Contribution margin %', o.cm == null ? 'not entered (gross margin used)' : o.cm], ['Share of conversion costs that fall with fewer hours %', o.var], ['Annual conversion costs you would save', o.conv == null ? 'estimated: ' + Math.round(last.v.conv) : o.conv], [], ['Improvement %', 'Extra capacity (sales value)', 'From selling more', 'From costs no longer incurred', 'Total per year']];
       [1, 5, 10, 25].concat([1, 5, 10, 25].indexOf(o.imp) < 0 ? [o.imp] : []).sort(function (a, b) { return a - b; }).forEach(function (p) { var v = val(o, p); rows.push([p, Math.round(v.cap), Math.round(v.sold), Math.round(v.save), Math.round(v.total)]); });
       return rows;
     };
+    var mini = $('[data-oc=mini]'), outEl = $('.oc-out');
+    if ('IntersectionObserver' in window) new IntersectionObserver(function (e) { mini.classList.toggle('hide', e[0].isIntersecting); }).observe(outEl);
+    of.ind.addEventListener('change', function () { of.mat.value = of.ind.options[of.ind.selectedIndex].dataset.mat; });
     of.addEventListener('input', calc);
     of.addEventListener('change', calc);
     $$('[data-reset]').forEach(function (b) { b.addEventListener('click', function () { $$('input,select', of).forEach(function (i) { i.value = defaults[i.name]; }); calc(); }); });

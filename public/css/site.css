@@ -1037,6 +1037,11 @@ form.signup p.fine{font:400 13px/1.5 var(--body);letter-spacing:0;max-width:none
 .oc-in input[type=range]{width:100%;accent-color:#33d4e0;margin-top:6px}
 .oc-imp-val{position:absolute;right:0;top:0;font:700 18px var(--disp);color:var(--b)}
 .oc-table tr.on td{color:var(--b)}
+.oc-in input[aria-invalid=true]{border-color:#ff9b9b}
+.oc-in [data-fmt]{font-size:13px}
+.oc-mini{display:none}
+@media(max-width:880px){.oc-mini{display:block;position:fixed;left:12px;right:12px;bottom:12px;z-index:40;padding:12px 16px;border-radius:14px;border:1px solid rgba(51,212,224,.5);background:rgba(10,8,32,.94);backdrop-filter:blur(8px);font-size:14.5px;text-align:center;transition:opacity .2s,transform .2s}.oc-mini b{color:var(--b);font-family:var(--disp)}.oc-mini.hide{opacity:0;transform:translateY(20px);pointer-events:none}}
+@media print{.oc-mini{display:none!important}}
 .oc-hint{margin:4px 0 0;font-size:13px;color:var(--dim)}
 
 /* systems picker */

@@ -2,41 +2,62 @@
   <div>
     <h2>Why this question</h2>
     <p>What would a 1% improvement in OEE be worth to your business? Most people have never worked it out. For most manufacturers it's a very significant number.</p>
-    <p>You only need two figures from your annual report to start. Then add what you know to make the estimate sharper.</p>
+    <p>You only need two figures from the annual report to start. Then pick your industry and add what you know to make the estimate sharper.</p>
     <p class="dimmed">The defaults describe an example manufacturer with £1bn of revenue, so you can see how it works. They're not a forecast.</p>
   </div>
   <div class="oc-how">
     <b>You don't need to know your OEE</b>
     <p>Here, a 1% improvement means 1% more good output from the same equipment and hours. That's deliberately cautious. At 50% OEE, one extra point of OEE is actually 2% more output.</p>
     <p>If you do have an OEE figure and it's captured by hand, treat it with care. Manual OEE usually misses short stops and slow running, so it tends to look better than it really is.</p>
+    <p>The improvement needs to land on the equipment that limits your output. Gains on a machine that's waiting for the one before it don't add output.</p>
   </div>
 </div>
 
 <div class="oc">
   <form class="oc-in rv" id="oc-form" novalidate>
     <fieldset>
-      <legend>From your annual report</legend>
+      <legend>From the annual report</legend>
       <label>Currency
         <select name="cur"><option value="£">£ GBP</option><option value="$">$ USD</option><option value="€">€ EUR</option></select></label>
-      <label>Annual revenue <input name="rev" type="number" inputmode="decimal" min="0" step="any" value="1000000000"><small>Also called turnover or sales. It's the first line of the income statement.</small></label>
-      <label>Gross profit <input name="gp" type="number" inputmode="decimal" min="0" step="any" value="300000000"><small>Revenue minus cost of sales, on the income statement.</small></label>
+      <label>Annual revenue <input name="rev" type="text" inputmode="decimal" autocomplete="off" value="1bn"><span class="u" data-fmt="rev"></span><small>Also called turnover or sales, the first line of the income statement. You can type 750m or 2.5bn. For a group with several divisions, use the manufacturing divisions from the segment notes.</small></label>
+      <label>Gross profit <input name="gp" type="text" inputmode="decimal" autocomplete="off" value="300m"><span class="u" data-fmt="gp"></span><small>Revenue minus cost of sales. Some companies, often in Europe, show costs by type instead and have no gross profit line. If so, ask finance, or use the gross margin of a similar company that does report it.</small></label>
     </fieldset>
     <fieldset>
       <legend>OEE improvement</legend>
       <label for="oc-imp">Improvement in OEE <b class="oc-imp-val" data-oc="impv">1%</b>
-        <input id="oc-imp" name="imp" type="range" min="1" max="25" step="1" value="1"><small>Slide from 1% to 25%. More good output from the equipment and people you already have.</small></label>
+        <input id="oc-imp" name="imp" type="range" min="1" max="25" step="1" value="1"><small>Slide from 1% to 25%. Each 1% is 1% more good output from the equipment and people you already have.</small></label>
     </fieldset>
     <fieldset>
       <legend>Make it more accurate</legend>
       <p class="oc-hint">These start at typical values. Change any you know.</p>
-      <label>Share of revenue from products you make <span class="u">%</span><input name="made" type="number" min="0" max="100" step="any" value="100"><small>Default 100%. Leave out services and goods you buy in and resell. The segment notes in the annual report often show the split.</small></label>
+      <label>Industry
+        <select name="ind">
+          <option value="i1" data-mat="51">All manufacturing, or a mix</option>
+          <option value="i2" data-mat="64">Automotive and transport equipment</option>
+          <option value="i3" data-mat="61">Food</option>
+          <option value="i4" data-mat="38">Beverages</option>
+          <option value="i5" data-mat="45">Chemicals and pharmaceuticals</option>
+          <option value="i6" data-mat="50">Plastics and rubber</option>
+          <option value="i7" data-mat="55">Paper and packaging</option>
+          <option value="i8" data-mat="45">Metal fabrication</option>
+          <option value="i9" data-mat="64">Primary metals</option>
+          <option value="i10" data-mat="51">Industrial machinery</option>
+          <option value="i11" data-mat="51">Electrical equipment</option>
+          <option value="i12" data-mat="43">Electronics</option>
+          <option value="i13" data-mat="37">Medical devices and other</option>
+          <option value="i14" data-mat="43">Building materials</option>
+          <option value="i15" data-mat="57">Wood products</option>
+        </select><small>Sets the typical materials share below, from US Census Bureau manufacturing data.</small></label>
+      <label>Materials as a share of revenue <span class="u">%</span><input name="mat" type="number" min="0" max="100" step="any" value="51"><small>Set by your industry. If the accounts show "raw materials and consumables used", divide it by revenue for your own figure. The Census figure includes purchased energy, so it errs on the cautious side.</small></label>
+      <label>Share of revenue from products you make <span class="u">%</span><input name="made" type="number" min="0" max="100" step="any" value="100"><small>Default 100%. Leave out services and goods you buy in and resell. The segment notes often show the split.</small></label>
       <label>Share of the extra output you could sell <span class="u">%</span><input name="sell" type="number" min="0" max="100" step="any" value="50"><small>Default 50%, a neutral starting point. Use 100% if demand outstrips capacity, and 0% if you can't sell another unit. Sales will have a view.</small></label>
-      <label>Contribution margin <span class="u">%</span><input name="cm" type="number" min="0" max="100" step="any" placeholder="Uses your gross margin" data-ph="gm"><small>Defaults to your gross margin, which is cautious. Contribution margin (revenue minus variable costs) is usually higher, because gross margin includes fixed factory costs. Finance will have it.</small></label>
-      <label>Materials as a share of revenue <span class="u">%</span><input name="mat" type="number" min="0" max="100" step="any" value="55"><small>Default 55%. In US Census data, materials run from about 44% of shipments in chemicals to about 66% in transport equipment, with food around 61%. It's used to estimate your conversion costs: cost of sales minus materials.</small></label>
-      <label>Annual conversion costs <input name="conv" type="number" inputmode="decimal" min="0" step="any" placeholder="Estimated" data-ph="conv"><small>Production labour, energy, maintenance and factory overheads, excluding materials. Estimated from the figures above unless you enter your own. Finance can give you the real number.</small></label>
+      <label>Contribution margin <span class="u">%</span><input name="cm" type="number" min="0" max="100" step="any" placeholder="Uses your gross margin"><small>Defaults to your gross margin, which is cautious. Contribution margin (revenue minus variable costs) is usually higher, because gross margin includes fixed factory costs. Finance will have it.</small></label>
+      <label>Costs that fall with fewer hours <span class="u">%</span><input name="var" type="number" min="0" max="100" step="any" value="50"><small>Default 50%, a cautious assumption. Overtime, extra shifts, energy and consumables go down when you run less. Depreciation, rent and salaried staff mostly don't.</small></label>
+      <label>Annual conversion costs you'd save <input name="conv" type="text" inputmode="decimal" autocomplete="off" placeholder="Estimated"><span class="u" data-fmt="conv"></span><small>Estimated as cost of sales minus materials, on the products you make, times the share above. If finance can give you the real figure, enter it here and it replaces the estimate.</small></label>
     </fieldset>
   </form>
 
+  <div class="oc-mini" data-oc="mini" aria-hidden="true"></div>
   <div class="oc-out rv" aria-live="polite">
     <span class="micro">A <span data-oc="impt">1%</span> improvement in OEE is worth</span>
     <p class="oc-big" data-oc="point">–</p>
@@ -55,11 +76,12 @@
 </div>
 
 <details class="tk-maths rv">
-  <summary>How it's calculated</summary>
-  <p>An improvement of X% in OEE gives X% more good output from the same equipment and hours.</p>
+  <summary>How it's calculated, and where the defaults come from</summary>
+  <p>An improvement of X% in OEE gives X% more good output from the same equipment and hours, as long as it's on the equipment that limits output.</p>
   <p><b>Selling more:</b> revenue × share you make × X% × share you could sell × margin. It uses contribution margin if you enter it, and gross margin if you don't.</p>
-  <p><b>Costs you no longer incur:</b> the output you can't sell is made in less time instead. That saves conversion costs × X ÷ (100 + X), on the share you can't sell. If you don't enter conversion costs, they're estimated as cost of sales (revenue minus gross profit) minus materials.</p>
-  <p>The value is the sum of the two. It counts nothing for inventory, scrap or quality escapes avoided, so the real number is usually bigger.</p>
+  <p><b>Costs you no longer incur:</b> the output you can't sell is made in less time instead, which saves conversion costs × X ÷ (100 + X) on that share. If you don't enter conversion costs, they're estimated as cost of sales minus materials, on the products you make, times the share that falls with fewer hours.</p>
+  <p>The value is the sum of the two. It counts nothing for inventory, scrap or quality escapes avoided, which usually make the real number bigger.</p>
+  <p><b>Industry materials shares</b> are cost of materials divided by value of shipments, from the <a href="https://www.census.gov/programs-surveys/asm.html" target="_blank" rel="noopener">US Census Bureau Annual Survey of Manufactures</a> (2019 by industry; 2021 for all manufacturing). Census cost of materials includes purchased fuel and electricity. Shares in the UK and Europe will differ, so use your own accounts where you can.</p>
 </details>
 <div class="tk-actions">
   <button class="btn ghost sm" type="button" data-print>Print or save as PDF</button>
